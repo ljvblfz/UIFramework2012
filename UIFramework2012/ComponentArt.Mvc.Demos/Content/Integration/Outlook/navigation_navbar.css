@@ -1,0 +1,62 @@
+.NavigationNavBar
+{
+  width:100%;
+  background-color:#6593CF;
+  border-left:solid 1px #6593CF;
+}
+
+.NavigationNavBarItem
+{
+  color:#204D84;
+  background-color:#C0DBFF;
+  background-image:url(navigation_navbar_images/item_bg.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  font-weight: bold;
+  cursor:hand;
+}
+
+.NavigationNavBarItemHover
+{
+  color:#204D84;
+  background-color:#FFE69E;
+  background-image: url(navigation_navbar_images/item_bg_hover.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  font-weight: bold;
+  cursor:hand;
+}
+
+.NavigationNavBarSelectedItem
+{
+  color:#204D84;
+  background-color:#FEE17A;
+  background-image:url(navigation_navbar_images/item_bg_selected.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  font-weight: bold;
+  cursor:hand;
+}
+
+.NavigationNavBarSelectedItemHover
+{
+  color:#204D84;
+  background-color:#FED364;
+  background-image: url(navigation_navbar_images/item_bg_selected_hover.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  font-weight: bold;
+  cursor:hand;
+}
+
+
+/* overrid the outlook theme */
+.cart-navbar-top-item { border-width:0 0 1px !important; }

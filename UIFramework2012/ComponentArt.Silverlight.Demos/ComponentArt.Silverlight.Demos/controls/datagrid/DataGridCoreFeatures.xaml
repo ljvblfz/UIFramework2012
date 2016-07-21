@@ -1,0 +1,269 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.DataGridCoreFeatures" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ComponentArt.Silverlight.Demos"
+    xmlns:cartCommon="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"
+    xmlns:cartNav="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:cart="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data">
+  
+  <UserControl.Resources>
+    <local:RatingToImageSourceConverter x:Key="RatingToImageSourceConverter" />
+    
+    <cartCommon:Theme x:Key="DataGridFeedBrowserTheme"
+			BaseSource="/ComponentArt.Silverlight.UI.Data;component/Themes/generic.xaml"
+			Source="/ComponentArt.Silverlight.Demos;component/Assets/DataGrid/FeedBrowser/DataGridFeedBrowserTheme.xaml"/>
+    
+  </UserControl.Resources>
+  
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Core Features" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This sample demonstrates DataGrid's core features like paging, sorting, filtering and grouping, in various paging and running mode scenarios." />
+    <TextBlock
+    x:Name="DemoCodeFiles"
+    Visibility = "Collapsed"
+    Text="\source\controls\datagrid\DataGridCoreFeatures.xaml,
+            \source\controls\datagrid\DataGridCoreFeatures.xaml.cs" />
+
+    <Border Margin="5" BorderBrush="#FFB0B0B0" Background="#FFF8F8F8" BorderThickness="1" CornerRadius="2" HorizontalAlignment="Stretch">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1.3*"/>
+          <ColumnDefinition Width="1.7*"/>
+          <ColumnDefinition Width="1.2*"/>
+          <ColumnDefinition Width="0.9*"/>
+          <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4" Grid.Column="0">
+          <cartNav:Menu Margin="2" Width="130" ItemCheckedChanged="Menu_ItemCheckedChanged" ExpandOnClick="True">
+            <cartNav:MenuItem Text="Column Settings" Width="110">
+              <cartNav:MenuItem Text="Feed Name" Tag="FeedName">
+                <cartNav:MenuItem Text="Allow Sorting" Tag="AllowSorting" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Grouping" Tag="AllowGrouping" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Filtering" Tag="ShowFilter" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Resizing" Tag="AllowResizing" IsCheckable="True" IsChecked="True"/>
+              </cartNav:MenuItem>
+              <cartNav:MenuItem Text="Post Title" Tag="Title">
+                <cartNav:MenuItem Text="Allow Sorting" Tag="AllowSorting" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Grouping" Tag="AllowGrouping" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Filtering" Tag="ShowFilter" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Resizing" Tag="AllowResizing" IsCheckable="True" IsChecked="True"/>
+              </cartNav:MenuItem>
+              <cartNav:MenuItem Text="Date Posted" Tag="DatePosted">
+                <cartNav:MenuItem Text="Allow Sorting" Tag="AllowSorting" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Grouping" Tag="AllowGrouping" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Filtering" Tag="ShowFilter" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Resizing" Tag="AllowResizing" IsCheckable="True" IsChecked="True"/>
+              </cartNav:MenuItem>
+              <cartNav:MenuItem Text="Visits" Tag="Visits">
+                <cartNav:MenuItem Text="Allow Sorting" Tag="AllowSorting" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Grouping" Tag="AllowGrouping" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Filtering" Tag="ShowFilter" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Resizing" Tag="AllowResizing" IsCheckable="True" IsChecked="True"/>
+              </cartNav:MenuItem>
+              <cartNav:MenuItem Text="Rating" Tag="Rating">
+                <cartNav:MenuItem Text="Allow Sorting" Tag="AllowSorting" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Grouping" Tag="AllowGrouping" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Filtering" Tag="ShowFilter" IsCheckable="True" IsChecked="True"/>
+                <cartNav:MenuItem Text="Allow Resizing" Tag="AllowResizing" IsCheckable="True" IsChecked="True"/>
+              </cartNav:MenuItem>
+            </cartNav:MenuItem>            
+          </cartNav:Menu>
+        </StackPanel>
+        <Border Height="30" Width="2" BorderThickness="1,0,1,0" HorizontalAlignment="Right">
+          <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+              <GradientStop Color="#FFB1B1B1" />
+              <GradientStop Color="#FFFFFFFF" Offset="1" />
+            </LinearGradientBrush>
+          </Border.BorderBrush>
+        </Border>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4" Grid.Column="1">
+          <TextBlock Text="Running Mode: " VerticalAlignment="Center"/>
+          <ComboBox x:Name="RunningModeCombo" VerticalAlignment="Center" Width="100" SelectionChanged="RunningModeCombo_SelectionChanged">
+            <ComboBoxItem Content="Web Service" IsSelected="True"/>
+            <ComboBoxItem Content="Client" />
+          </ComboBox>
+        </StackPanel>
+        <Border Grid.Column="1" Height="30" Width="2" BorderThickness="1,0,1,0" HorizontalAlignment="Right">
+          <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+              <GradientStop Color="#FFB1B1B1" />
+              <GradientStop Color="#FFFFFFFF" Offset="1" />
+            </LinearGradientBrush>
+          </Border.BorderBrush>
+        </Border>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4" Grid.Column="2">
+          <TextBlock Text="Paging: " VerticalAlignment="Center"/>
+          <ComboBox x:Name="PagingCombo" VerticalAlignment="Center" Width="80" SelectionChanged="PagingCombo_SelectionChanged">
+            <ComboBoxItem Content="Pager" IsSelected="True"/>
+            <ComboBoxItem Content="Scroller" />
+          </ComboBox>
+        </StackPanel>
+        <Border Grid.Column="2" Height="30" Width="2" BorderThickness="1,0,1,0" HorizontalAlignment="Right">
+          <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+              <GradientStop Color="#FFB1B1B1" />
+              <GradientStop Color="#FFFFFFFF" Offset="1" />
+            </LinearGradientBrush>
+          </Border.BorderBrush>
+        </Border>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4" Grid.Column="3">
+          <CheckBox x:Name="ShowFilterCheckBox" Click="ShowFilterCheckBox_Click" IsChecked="true" VerticalAlignment="Center"/>
+          <TextBlock Text="Show Filters" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Border Grid.Column="3" Height="30" Width="2" BorderThickness="1,0,1,0" HorizontalAlignment="Right">
+          <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+              <GradientStop Color="#FFB1B1B1" />
+              <GradientStop Color="#FFFFFFFF" Offset="1" />
+            </LinearGradientBrush>
+          </Border.BorderBrush>
+        </Border>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="4" Grid.Column="4">
+          <CheckBox x:Name="ShowSearchCheckBox" Click="ShowSearchCheckBox_Click" IsChecked="true" VerticalAlignment="Center"/>
+          <TextBlock Text="Show Search Box" VerticalAlignment="Center"/>
+        </StackPanel>
+        
+      </Grid>
+    </Border>
+    
+    <cart:DataGrid x:Name="DataGrid1" Margin="5" Grid.Row="1"
+                   Theme="{StaticResource DataGridFeedBrowserTheme}"
+                   Width="790" Height="520"
+                   PageSize="14"
+                   RunningMode="Callback"
+                   SoaServiceUrl="../SoaDataGridFeedService.svc"
+                   EnableVirtualization="true"
+                   GroupingMode="ConstantRows"                    
+                   PreExpandGroups="True" 
+                   ShowColumnFilters="true" 
+                   SearchBoxVisibility="Visible"
+                   AllowGrouping="True" 
+                   AllowColumnResizing="True"
+                   ColumnResizingMode="Distribute"
+                   AllowColumnReordering="True">
+      <cart:DataGrid.ColumnHeaderStyle>
+        <Style TargetType="cart:DataGridColumnHeader">
+          <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+      </cart:DataGrid.ColumnHeaderStyle>
+      <cart:DataGrid.RowStyle>
+        <Style TargetType="cart:DataGridRow">
+          <Setter Property="Background" Value="White" />
+        </Style>
+      </cart:DataGrid.RowStyle>
+      <cart:DataGrid.Columns>
+        <cart:DataGridTemplateColumn Binding="{Binding FeedName}" AllowSearching="True" Width="150">
+          <cart:DataGridTemplateColumn.Header>
+            <StackPanel Orientation="Horizontal">
+              <Image Stretch="None" Source="/ComponentArt.Silverlight.Demos;component/Assets/DataGrid/FeedBrowser/FeedName_icon.png" />
+              <TextBlock Text="Feed Name" Margin="5,0,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+          </cart:DataGridTemplateColumn.Header>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Background" Value="#101098FF" />
+              <Setter Property="Padding" Value="4" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <StackPanel Orientation="Horizontal">
+                <Image Stretch="None" Source="/ComponentArt.Silverlight.Demos;component/Assets/DataGrid/FeedBrowser/FeedName_icon.png" />
+                <TextBlock Text="{Binding}" Margin="5,0,0,0" VerticalAlignment="Center"/>
+              </StackPanel>
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTextColumn Binding="{Binding Title}" AllowSearching="True" Width="5*">
+          <cart:DataGridTextColumn.Header>
+            <StackPanel Orientation="Horizontal">
+              <Image Stretch="None" Source="/ComponentArt.Silverlight.Demos;component/Assets/DataGrid/FeedBrowser/FeedTitle_icon.png" />
+              <TextBlock Text="Item Title" Margin="5,0,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+          </cart:DataGridTextColumn.Header>
+          <cart:DataGridTextColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Background">
+                <Setter.Value>
+                  <ImageBrush Stretch="None" AlignmentX="Left" ImageSource="/ComponentArt.Silverlight.Demos;component/Assets/DataGrid/FeedBrowser/FeedTitle_icon.png">
+                    <ImageBrush.Transform>
+                      <TranslateTransform X="5" />
+                    </ImageBrush.Transform>
+                  </ImageBrush>
+                </Setter.Value>
+              </Setter>
+              <Setter Property="Padding" Value="25,4,4,4" />
+            </Style>
+          </cart:DataGridTextColumn.CellStyle>
+        </cart:DataGridTextColumn>        
+        <cart:DataGridTextColumn Binding="{Binding DatePosted}" Header="Date Posted" Width="2*" DefaultSortDirection="Descending">
+          <cart:DataGridTextColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Background" Value="#101098FF" />
+              <Setter Property="Padding" Value="4" />
+            </Style>
+          </cart:DataGridTextColumn.CellStyle>
+        </cart:DataGridTextColumn>
+        <cart:DataGridTextColumn Binding="{Binding Visits}" Header="Visits" Width="1*">
+          <cart:DataGridTextColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="4" />
+            </Style>
+          </cart:DataGridTextColumn.CellStyle>
+        </cart:DataGridTextColumn>        
+        <cart:DataGridTemplateColumn Binding="{Binding Rating}" Header="Rating" Width="70" HeaderHorizontalAlignment="Center" DefaultSortDirection="Descending" AllowResizing="false">
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Background" Value="#101098FF" />
+              <Setter Property="Padding" Value="4" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding Converter={StaticResource RatingToImageSourceConverter}}" Stretch="None"/>
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTemplateColumn Binding="{Binding ItemURL}" Header="Site" Width="50" ShowFilter="False" HeaderHorizontalAlignment="Center" AllowSorting="false" AllowResizing="false">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Button IsTabStop="false" BorderThickness="0" Tag="{Binding}">
+                <Button.Template>
+                  <ControlTemplate TargetType="Button">
+                    <Grid>
+                      <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                          <VisualState x:Name="Normal" />
+                          <VisualState x:Name="MouseOver">
+                            <Storyboard>
+                              <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GoImage" Storyboard.TargetProperty="Source">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="/ComponentArt.Silverlight.Demos;component/Assets/DataGrid/FeedBrowser/Go_hover.png" />
+                              </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                          </VisualState>
+                        </VisualStateGroup>
+                      </VisualStateManager.VisualStateGroups>
+                      <Image x:Name="GoImage" Stretch="None" Source="/ComponentArt.Silverlight.Demos;component/Assets/DataGrid/FeedBrowser/Go.png" />
+                    </Grid>
+                  </ControlTemplate>
+                </Button.Template>
+              </Button>
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+        </cart:DataGridTemplateColumn>   
+      </cart:DataGrid.Columns>
+    </cart:DataGrid>   
+    
+  </Grid>
+</UserControl>

@@ -1,0 +1,61 @@
+﻿
+/*
+.ComponentArt_input_container
+{
+  position:relative;
+}
+
+
+
+.ComponentArt_input_container input
+{
+  position:absolute;
+  left:0px;
+  top:0px;
+}
+*/
+
+
+
+
+
+/*
+.ComponentArt_input
+{
+  position:relative;
+}
+
+.ComponentArt_input input
+{
+  position:absolute;
+  left:0px;
+  top:0px;
+  font-family:'Bitstream Vera Sans Mono';
+  font-weight:bold;
+  font-size:30px;
+}
+
+.ComponentArt_foreground
+{
+  z-index:2000;
+  color:#333333;
+  background-color:transparent;
+}
+
+.ComponentArt_background
+{
+  z-index:1000;
+}
+
+.ComponentArt_background
+{
+  z-index:1000;
+}
+*/
+/* It is very difficult to elegantly set the text color of a disabled input, especially in non-mozillas. Will handle it later. */
+/*input[disabled].ComponentArt_background
+{
+  color:#DDDDDD;
+  background-color:#FFFFFF;
+}
+*/

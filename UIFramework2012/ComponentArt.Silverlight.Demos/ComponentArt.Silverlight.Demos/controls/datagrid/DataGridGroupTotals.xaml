@@ -1,0 +1,217 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.DataGridGroupTotals"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:locals="clr-namespace:ComponentArt.Silverlight.Demos"
+    xmlns:cart="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data">
+  
+  <UserControl.Resources>
+    <locals:GroupTotalViewsConverter x:Key="GroupTotalViewsConverter" />
+  </UserControl.Resources>
+
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Group Subtotals" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This sample demonstrates the templating of group headings and the inclusion of computed data in the templates." />
+    <TextBlock
+    x:Name="DemoCodeFiles"
+    Visibility = "Collapsed"
+    Text="\source\controls\datagrid\DataGridGroupTotals.xaml,
+            \source\controls\datagrid\DataGridGroupTotals.xaml.cs" />
+
+    <cart:DataGrid x:Name="DataGrid1"
+                   Width="800" Height="500"
+                   ItemsSource="{Binding}"
+                   PageSize="16"
+                   RunningMode="Client"
+                   VerticalScrollBarVisibility="Hidden"
+                   GroupingMode="ConstantRows"
+                   PreExpandGroups="True"
+                   AllowGrouping="True"
+                   AllowColumnResizing="True" 
+                   ColumnResizingMode="Distribute"
+                   AllowColumnReordering="True">
+      <cart:DataGrid.GroupHeadingTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Column.ColumnName}" />
+            <TextBlock Text=": " />
+            <TextBlock Text="{Binding Value}" FontWeight="Bold" />
+            <TextBlock Text=", Total Views: " />
+            <TextBlock Text="{Binding Converter={StaticResource GroupTotalViewsConverter}}" FontWeight="Bold" />
+          </StackPanel>
+        </DataTemplate>
+      </cart:DataGrid.GroupHeadingTemplate>
+      <cart:DataGrid.Columns>
+        <cart:DataGridTemplateColumn Binding="{Binding PriorityIcon}" Width="22" AllowResizing="False">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding}" Stretch="None" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="icon_priority.png" Stretch="None" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTemplateColumn Binding="{Binding EmailIcon}" Width="22" AllowResizing="False">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding}" Stretch="None" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="icon_icon.png" Stretch="None" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTemplateColumn Binding="{Binding AttachmentIcon}" Width="22" AllowResizing="False">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding}" Stretch="None" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="icon_attachment.png" Stretch="None" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTextColumn Binding="{Binding Subject}" Header="Subject" Width="4*" />
+        <cart:DataGridTextColumn Binding="{Binding LastPostDate}" Header="Last Post" Width="2*" FormatString="yyyy/MM/dd"/>
+        <cart:DataGridTextColumn Binding="{Binding StartedBy}" Header="Started By" Width="1*"/>
+        <cart:DataGridTextColumn Binding="{Binding Replies}" Header="Replies" Width="1*"/>
+        <cart:DataGridTextColumn Binding="{Binding TotalViews}" Header="Total Views" Width="1*"/>
+        <cart:DataGridTemplateColumn Binding="{Binding FlagIcon}" Width="22" AllowResizing="False">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding}" Stretch="None" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="icon_flag.png" Stretch="None" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+      </cart:DataGrid.Columns>
+      <cart:DataGrid.SliderPopupTemplate>
+        <DataTemplate>
+          <Grid Height="90" Width="300">
+            <Border Margin="2,2,-2,-2" Background="#1A000000" CornerRadius="4" />
+            <Border BorderBrush="Black" BorderThickness="1" Height="90" Width="300" Background="Black" CornerRadius="4">
+              <StackPanel Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Border CornerRadius="3" Background="White" Margin="3,3,3,1" HorizontalAlignment="Stretch">
+                  <Grid HorizontalAlignment="Stretch" Height="60">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="40" />
+                      <ColumnDefinition Width="*" />
+                      <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="*"/>
+                      <RowDefinition Height="28"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="{Binding DataItem.LargeEmailIcon}" Margin="1" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="None"/>
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="5">
+                      <Image Source="{Binding DataItem.PriorityIcon}" Stretch="None" Margin="3"/>
+                      <Image Source="{Binding DataItem.AttachmentIcon}" Stretch="None" Margin="3"/>
+                      <Image Source="{Binding DataItem.FlagIcon}" Stretch="None" Margin="3"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Grid.Column="1" Margin="2,3,0,0">
+                      <TextBlock Text="{Binding DataItem.StartedBy}" FontSize="10" />
+                      <TextBlock Text="{Binding DataItem.LastPostDate}" FontSize="10" />
+                    </StackPanel>
+
+                    <TextBlock Margin="10,5,7,3" FontWeight="Bold" TextWrapping="NoWrap" Text="{Binding DataItem.Subject}" Grid.ColumnSpan="3" Grid.Row="1" />
+                    <Rectangle Grid.ColumnSpan="3" Grid.Row="1" HorizontalAlignment="Right" Width="40" Margin="7">
+                      <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                          <GradientStop Color="#00FFFFFF" Offset="0"/>
+                          <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                        </LinearGradientBrush>
+                      </Rectangle.Fill>
+                    </Rectangle>
+                  </Grid>
+                </Border>
+
+                <Grid HorizontalAlignment="Stretch" Height="20">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                  </Grid.ColumnDefinitions>
+
+                  <Grid.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                      <GradientStop Color="#FF777777" />
+                      <GradientStop Color="#FF555555" Offset=".4"/>
+                      <GradientStop Color="#FF000000" Offset=".45"/>
+                    </LinearGradientBrush>
+                  </Grid.Background>
+
+                  <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="3">
+                    <TextBlock Foreground="White" Text="Page "/>
+                    <TextBlock Foreground="White" Text="{Binding PageNumber}" FontWeight="Bold" />
+                    <TextBlock Foreground="White" Text=" of "/>
+                    <TextBlock Foreground="White" Text="{Binding Owner.PageCount}" FontWeight="Bold" />
+                  </StackPanel>
+
+                  <Border HorizontalAlignment="Right" Width="2" BorderThickness="1,0,1,0" Margin="0,2,0,2">
+                    <Border.BorderBrush>
+                      <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#FF444444" Offset="0"/>
+                        <GradientStop Color="#FFAAAAAA" Offset="1"/>
+                      </LinearGradientBrush>
+                    </Border.BorderBrush>
+                  </Border>
+
+                  <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1" Margin="3">
+                    <TextBlock Foreground="White" Text="Message "/>
+                    <TextBlock Foreground="White" Text="{Binding RecordNumber}" FontWeight="Bold" />
+                    <TextBlock Foreground="White" Text=" of "/>
+                    <TextBlock Foreground="White" Text="{Binding Owner.RecordCount}" FontWeight="Bold" />
+                  </StackPanel>
+                </Grid>
+              </StackPanel>
+            </Border>
+          </Grid>
+        </DataTemplate>
+      </cart:DataGrid.SliderPopupTemplate>
+      <cart:DataGrid.CellStyle>
+        <Style TargetType="cart:DataGridCell">
+          <Setter Property="Padding" Value="3" />
+        </Style>
+      </cart:DataGrid.CellStyle>
+      <cart:DataGrid.ColumnHeaderStyle>
+        <Style TargetType="cart:DataGridColumnHeader">
+          <Setter Property="Padding" Value="3" />
+          <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+      </cart:DataGrid.ColumnHeaderStyle>
+    </cart:DataGrid>
+    
+    <Border Grid.Row="1" HorizontalAlignment="Left" Width="800" Margin="0,30,0,0" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+      <TextBlock Margin="10" Text="Group heading templates include programmatic logic for computing subtotals. Try dragging column headings to change the grouping. " />
+    </Border>
+  </Grid>
+</UserControl>

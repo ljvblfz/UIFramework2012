@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.HtmlEditorExternalToolBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArtInput="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common">
+  <Grid x:Name="LayoutRoot">
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="HtmlEditor" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="HtmlEditor External ToolBar" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo shows how a simple external toolbar may be used with the HtmlEditor." />
+    <TextBlock x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\htmleditor\HtmlEditorExternalToolBar.xaml,\source\controls\htmleditor\HtmlEditorExternalToolBar.xaml.cs" />
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="1" Click="Button_Click" Tag="Bold" Width="20">
+                    <TextBlock FontWeight="Bold"  Text="B" />
+                </Button>
+                <Button Margin="1" Click="Button_Click" Tag="Italic" Width="20">
+                    <TextBlock FontStyle="Italic" Text="I" />
+                </Button>
+                <Button Margin="1" Click="Button_Click" Tag="Underline" Width="20">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="U" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                        <Rectangle Width="9" Margin="0,-3,0,0" Height="1" Fill="Black"  VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="1" Click="Button_Click" Content="&lt;OL&gt;" Tag="InsertOrderedList" />
+                <Button Margin="1" Click="Button_Click" Content="&lt;UL&gt;" Tag="InsertUnorderedList" />
+                <Button Margin="1" Click="Button_Click" Content="&lt;HR&gt;" Tag="InsertHorizontalRule" />
+                <Button Margin="1" Click="Button_Click" Content="&lt;SUB&gt;" Tag="Subscript" />
+                <Button Margin="1" Click="Button_Click" Content="&lt;SUP&gt;" Tag="Superscript" />
+                <Button Margin="1" Click="Button_Click" Content="Indent" Tag="Indent" />
+                <Button Margin="1" Click="Button_Click" Content="Outdent" Tag="Outdent" />
+            </StackPanel>
+            <ComponentArtInput:HtmlEditor 
+            Width="385"
+            Height="500"
+            x:Name="HtmlEditor5" 
+            ShowFooter="false"
+            HtmlContent="&lt;h2&gt;ComponentArt HtmlEditor for Silverlight&lt;/h2&gt;&lt;h3&gt;The New Lightweight, Feature-packed and Easy to Configure Web Editing Control &lt;/h3&gt;&lt;div&gt;We are excited to announce the imminent release of ComponentArt HtmlEditor for Silverlight. Major features include:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Supports the most commonly used Html formatting options&lt;/li&gt;&lt;li&gt;Smooth, responsive and highly customizable UI&lt;/li&gt;&lt;li&gt;Powerful client-side API&lt;/li&gt;&lt;li&gt;And much more...&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;For more information check &lt;a title=&quot;http://www.componentart.com/&quot; href=&quot;http://www.componentart.com/&quot;&gt;ComponentArt.com&lt;/a&gt; or subscribe to the ComponentArt &lt;a title=&quot;http://www.componentart.com/publish/news.xml&quot; href=&quot;http://www.componentart.com/publish/news.xml&quot;&gt;news RSS feed&lt;/a&gt;.&lt;/div&gt;"
+           >
+            </ComponentArtInput:HtmlEditor>
+        </StackPanel>
+    </Grid>
+</UserControl>

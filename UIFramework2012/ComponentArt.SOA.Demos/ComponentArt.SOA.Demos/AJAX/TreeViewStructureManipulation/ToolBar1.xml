@@ -1,0 +1,7 @@
+<SiteMap>
+  <item ImageUrl="addroot.gif" ID="AddRootNode" ClientSideCommand="Command_AddTopNode();" ToolTip="Add New Root Node" />
+  <item ImageUrl="addnode.gif" DisabledImageUrl="disabled_addnode.gif" ID="AddChildNode" ClientSideCommand="Command_AddChildNode();" ToolTip="Add New Child Node" />
+  <item ImageUrl="break.gif" ImageWidth="2" ImageHeight="16" ItemType="Separator" />
+  <item ImageUrl="rename.gif" DisabledImageUrl="disabled_rename.gif" ID="EditNode" ClientSideCommand="Command_EditNode();" ToolTip="Edit Node Text" />
+  <item ImageUrl="delete.gif" DisabledImageUrl="disabled_delete.gif" ID="RemoveNode" ClientSideCommand="Command_RemoveNode();" ToolTip="Remove Node" />
+</SiteMap>

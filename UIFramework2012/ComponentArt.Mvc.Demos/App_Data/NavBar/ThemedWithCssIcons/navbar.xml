@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<items>
+	<item Text="Mail" IconCssClass="mail"  Expanded="true">
+		<item Text="Mailbox - Scott Guest" IconCssClass="mailbox" />
+		<item Text="Inbox" IconCssClass="inbox" />
+		<item Text="Drafts" IconCssClass="drafts" />
+		<item Text="Outbox" IconCssClass="outbox" />
+		<item Text="Junk E-mail" IconCssClass="junk" />
+		<item Text="Deleted Items" IconCssClass="deleted" />
+		<item Text="Search Folders" IconCssClass="search" />
+		<item Text="Sent Items" IconCssClass="sent" />
+	</item>
+
+	<item Text="Notes" IconCssClass="notes" >
+		<item Text="Icons" IconCssClass="note" />
+		<item Text="Note List" IconCssClass="note" />
+		<item Text="Last Seven Days" IconCssClass="note" />
+		<item Text="By Category" IconCssClass="note" />
+		<item Text="By Color" IconCssClass="note" />
+	</item>
+
+	<item Text="Contacts" IconCssClass="contacts" >
+		<item Text="Address Cards" IconCssClass="contact" />
+		<item Text="Detailed Address List" IconCssClass="contact" />
+		<item Text="By Category" IconCssClass="contact" />
+		<item Text="By Company" IconCssClass="contact" />
+		<item Text="By Follow-up Flag" IconCssClass="contact" />
+	</item>
+</items>

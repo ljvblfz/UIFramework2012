@@ -1,0 +1,149 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+
+@{
+  ViewData["DemoType"] = "ClientSideAPI";
+  ViewData["DemoTitle"] = "Full Client-side App";
+  ViewData["BodyClass"] = "full";
+  ViewData["CodeFiles"] = "/Views/ClientSideAPI/FullApp.aspx,/Controllers/ClientSideAPIController.cs,/Content/ClientSideAPI/FullApp/ClientCode.js";    
+  ViewData["AboutText"] = @"
+<ul>
+<li>The ability to create the entire structure of a UI control on the client is a key feature of ComponentArt's web user interface technology.</li>
+<li>The client-side APIs for all ComponentArt Web.UI controls are fully compliant with Microsoft's ASP.NET AJAX client-side syntax. </li>
+<li>All client-side changes are persisted to server-side object state on postbacks or callbacks. </li>
+<li>Having these capabilities on the client greatly reduces the need for roundtrips to the server and adds a new level of richness to web programming.</li>
+<li>All controls are using AutoTheming.  ToolBar's icons are defined using IconUrl; disabled items' appearances are specified in IconCssClass.</li>
+</ul>
+";
+}
+
+@section HeadContent {
+  <script src="../../Content/ClientSideAPI/FullApp/ClientCode.js" type="text/javascript" ></script>
+  <link type="text/css" rel="stylesheet" href="../../Content/Themes/Outlook2007/icons.css" />
+  <link href="@Url.Content("~/Content/Themes/Outlook2007/theme.css")" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .cart-toolbar
+    {
+      border: 1px solid #6593CF !important;
+      border-bottom: none !important;
+    }
+    .cart-icon-custom-addnode
+    {
+      background:url(../../Content/ClientSideAPI/FullApp/images/addnode.gif) no-repeat !important; background-position:0px 2px !important;
+    }
+    .cart-item-disabled .cart-icon-custom-addnode
+    {
+      background:url(../../Content/ClientSideAPI/FullApp/images/disabled_addnode.gif) no-repeat !important; background-position:0px 2px !important;
+    }
+    .cart-icon-custom-rename
+    {
+      background:url(../../Content/ClientSideAPI/FullApp/images/rename.gif) no-repeat !important; background-position:0px 2px !important;
+    }
+    .cart-item-disabled .cart-icon-custom-rename
+    {
+      background:url(../../Content/ClientSideAPI/FullApp/images/disabled_rename.gif) no-repeat !important; background-position:0px 2px !important;
+    }
+    .cart-icon-custom-delete
+    {
+      background:url(../../Content/ClientSideAPI/FullApp/images/delete.gif) no-repeat !important; background-position:0px 2px !important;
+    }
+    .cart-item-disabled .cart-icon-custom-delete
+    {
+      background:url(../../Content/ClientSideAPI/FullApp/images/disabled_delete.gif) no-repeat !important; background-position:0px 2px !important;
+    }
+    
+  </style>
+}
+  <br/>
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-left:100px;">
+  <tr valign="top">
+    <td style="width:223px;">
+      <span class="hint">Use the toolbar to create the <br/>TreeView structure on the client: </span>
+      <br/><br/>
+      
+        @(Html.ComponentArt().ToolBar()
+          .Width(188)
+          .ID("ToolBar1")
+          .AutoTheming(true)
+          .ImagesBaseUrl("~/Content/ClientSideAPI/FullApp/images/")
+          .DefaultItemTextImageRelation(ToolBarTextImageRelation.ImageOnly)
+          .SiteMapXmlFile("~/App_Data/ClientSideAPI/FullApp/ToolBar1.xml")          
+)
+
+        @(Html.ComponentArt().Menu()
+          .ID("Menu1")
+          .ImagesBaseUrl("~/Content/ClientSideAPI/FullApp/images/")
+          .TopGroupExpandDirection(GroupExpandDirection.BelowLeft)
+          .Orientation(GroupOrientation.Vertical)
+          .ContextMenu(ContextMenuType.Custom)
+          .SiteMapXmlFile("~/App_Data/ClientSideAPI/FullApp/Menu1.xml")
+          .AutoTheming(true)
+          .ClientEvents(ce =>
+          {
+            ce.ItemSelect("Menu1_onItemSelect");
+          })
+)
+
+        @(Html.ComponentArt().TreeView()
+          .ID("TreeView1")
+          .Height(338)
+          .Width(188)
+          .AutoTheming(true)
+          .AutoAssignNodeIDs(true)
+          .ShowLines(true)
+          .ImagesBaseUrl("~/Content/ClientSideAPI/FullApp/images/")
+          .DragAndDropEnabled(true)
+          .NodeEditingEnabled(false)
+          .KeyboardEnabled(true)
+          .ClientEvents(ce =>
+          {
+            ce.Load("TreeView1_onLoad");
+            ce.NodeSelect("TreeView1_onNodeSelect");
+            ce.NodeRename("TreeView1_onNodeRename");
+            ce.NodeExpand("TreeView1_onNodeExpand");
+            ce.NodeCollapse("TreeView1_onNodeCollapse");
+          })
+)
+
+        <br /><br />
+        </td>
+        <td style="width:20px;">&nbsp;</td>
+        <td id="PropertyGridTD" style="width:375px" valign="top">
+        <div id="SnapGridContainer" style="width:375px;height:292px;display:none;">
+        View the state of the selected TreeViewNode object:
+        <br/><br /><br/>
+        @(Html.ComponentArt().DataGrid()
+          .ID("Grid1")
+          .AutoTheming(true)
+          .Width(275)
+          .Height(292)
+          .RunningMode(GridRunningMode.Client)
+          .ShowFooter(false)
+          .PageSize(14)
+          .ScrollBar(GridScrollBarMode.On)
+          .ScrollTopBottomImagesEnabled(true)
+          .ScrollTopBottomImageHeight(2)
+          .ScrollTopBottomImageWidth(16)
+          .ScrollImagesFolderUrl("~/Content/ClientSideAPI/FullApp/images/scroller/")
+          .ScrollButtonWidth(16)
+          .ScrollButtonHeight(17)
+          .ScrollBarCssClass("ScrollBar")
+          .ScrollGripCssClass("ScrollGrip")
+          .ScrollBarWidth(16)
+          .Levels( l =>
+          {
+            l.Add().DataKeyField("PropertyName")
+              .Columns( c =>
+              {
+                c.Add().DataField("PropertyName").Width(140);
+                c.Add().DataField("PropertyValue").Width(235);
+              }
+            );
+          })
+)
+</div>
+    </td>
+  </tr>
+  </table>
+
+

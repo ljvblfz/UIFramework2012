@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93F3FDC0-FAC6-4D37-9BE1-308E2F13ED0A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComponentArt.Silverlight.Demos.Web</RootNamespace>
+    <AssemblyName>ComponentArt.Silverlight.Demos.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightApplicationList>{688BABC3-B1C2-4579-AE6A-8E4C427A1B45}|..\ComponentArt.Silverlight.Demos\ComponentArt.Silverlight.Demos.csproj|ClientBin|False</SilverlightApplicationList>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentArt.Silverlight.Server">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\assembly\silverlight\ComponentArt.Silverlight.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.SOA.UI">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\ComponentArt.SOA.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\demodata.mdb">
+    </Content>
+    <Content Include="App_Data\demodata.mdf">
+    </Content>
+    <Content Include="App_Data\demodata_log.ldf">
+      <DependentUpon>demodata.mdf</DependentUpon>
+    </Content>
+    <Content Include="ClientBin\ComponentArt.Silverlight.Demos.xap" />
+    <Content Include="ClientBin\controls\breadcrumb\xml\BreadcrumbBindingDemo.xml" />
+    <Content Include="ClientBin\controls\combobox\flags\ad.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ae.png" />
+    <Content Include="ClientBin\controls\combobox\flags\af.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ag.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ai.png" />
+    <Content Include="ClientBin\controls\combobox\flags\al.png" />
+    <Content Include="ClientBin\controls\combobox\flags\am.png" />
+    <Content Include="ClientBin\controls\combobox\flags\an.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ao.png" />
+    <Content Include="ClientBin\controls\combobox\flags\aq.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ar.png" />
+    <Content Include="ClientBin\controls\combobox\flags\as.png" />
+    <Content Include="ClientBin\controls\combobox\flags\at.png" />
+    <Content Include="ClientBin\controls\combobox\flags\au.png" />
+    <Content Include="ClientBin\controls\combobox\flags\aw.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ax.png" />
+    <Content Include="ClientBin\controls\combobox\flags\az.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ba.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bb.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bd.png" />
+    <Content Include="ClientBin\controls\combobox\flags\be.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bf.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bg.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bh.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bi.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bj.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bo.png" />
+    <Content Include="ClientBin\controls\combobox\flags\br.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bs.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bt.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bv.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bw.png" />
+    <Content Include="ClientBin\controls\combobox\flags\by.png" />
+    <Content Include="ClientBin\controls\combobox\flags\bz.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ca.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cc.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cd.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cf.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cg.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ch.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ci.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ck.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cl.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\co.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cs.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cu.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cv.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cx.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cy.png" />
+    <Content Include="ClientBin\controls\combobox\flags\cz.png" />
+    <Content Include="ClientBin\controls\combobox\flags\de.png" />
+    <Content Include="ClientBin\controls\combobox\flags\dj.png" />
+    <Content Include="ClientBin\controls\combobox\flags\dk.png" />
+    <Content Include="ClientBin\controls\combobox\flags\dm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\do.png" />
+    <Content Include="ClientBin\controls\combobox\flags\dz.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ec.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ee.png" />
+    <Content Include="ClientBin\controls\combobox\flags\eg.png" />
+    <Content Include="ClientBin\controls\combobox\flags\eh.png" />
+    <Content Include="ClientBin\controls\combobox\flags\er.png" />
+    <Content Include="ClientBin\controls\combobox\flags\es.png" />
+    <Content Include="ClientBin\controls\combobox\flags\et.png" />
+    <Content Include="ClientBin\controls\combobox\flags\fam.png" />
+    <Content Include="ClientBin\controls\combobox\flags\fi.png" />
+    <Content Include="ClientBin\controls\combobox\flags\fj.png" />
+    <Content Include="ClientBin\controls\combobox\flags\fk.png" />
+    <Content Include="ClientBin\controls\combobox\flags\fm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\fo.png" />
+    <Content Include="ClientBin\controls\combobox\flags\fr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ga.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gb.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gd.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ge.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gf.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gh.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gi.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gl.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gp.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gq.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gs.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gt.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gu.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gw.png" />
+    <Content Include="ClientBin\controls\combobox\flags\gy.png" />
+    <Content Include="ClientBin\controls\combobox\flags\hk.png" />
+    <Content Include="ClientBin\controls\combobox\flags\hm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\hn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\hr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ht.png" />
+    <Content Include="ClientBin\controls\combobox\flags\hu.png" />
+    <Content Include="ClientBin\controls\combobox\flags\id.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ie.png" />
+    <Content Include="ClientBin\controls\combobox\flags\il.png" />
+    <Content Include="ClientBin\controls\combobox\flags\in.png" />
+    <Content Include="ClientBin\controls\combobox\flags\io.png" />
+    <Content Include="ClientBin\controls\combobox\flags\iq.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ir.png" />
+    <Content Include="ClientBin\controls\combobox\flags\is.png" />
+    <Content Include="ClientBin\controls\combobox\flags\it.png" />
+    <Content Include="ClientBin\controls\combobox\flags\jm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\jo.png" />
+    <Content Include="ClientBin\controls\combobox\flags\jp.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ke.png" />
+    <Content Include="ClientBin\controls\combobox\flags\kg.png" />
+    <Content Include="ClientBin\controls\combobox\flags\kh.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ki.png" />
+    <Content Include="ClientBin\controls\combobox\flags\km.png" />
+    <Content Include="ClientBin\controls\combobox\flags\kn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\kp.png" />
+    <Content Include="ClientBin\controls\combobox\flags\kr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\kw.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ky.png" />
+    <Content Include="ClientBin\controls\combobox\flags\kz.png" />
+    <Content Include="ClientBin\controls\combobox\flags\la.png" />
+    <Content Include="ClientBin\controls\combobox\flags\lb.png" />
+    <Content Include="ClientBin\controls\combobox\flags\lc.png" />
+    <Content Include="ClientBin\controls\combobox\flags\li.png" />
+    <Content Include="ClientBin\controls\combobox\flags\lk.png" />
+    <Content Include="ClientBin\controls\combobox\flags\lr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ls.png" />
+    <Content Include="ClientBin\controls\combobox\flags\lt.png" />
+    <Content Include="ClientBin\controls\combobox\flags\lu.png" />
+    <Content Include="ClientBin\controls\combobox\flags\lv.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ly.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ma.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mc.png" />
+    <Content Include="ClientBin\controls\combobox\flags\md.png" />
+    <Content Include="ClientBin\controls\combobox\flags\me.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mg.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mh.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mk.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ml.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mo.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mp.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mq.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ms.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mt.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mu.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mv.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mw.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mx.png" />
+    <Content Include="ClientBin\controls\combobox\flags\my.png" />
+    <Content Include="ClientBin\controls\combobox\flags\mz.png" />
+    <Content Include="ClientBin\controls\combobox\flags\na.png" />
+    <Content Include="ClientBin\controls\combobox\flags\nc.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ne.png" />
+    <Content Include="ClientBin\controls\combobox\flags\nf.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ng.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ni.png" />
+    <Content Include="ClientBin\controls\combobox\flags\nl.png" />
+    <Content Include="ClientBin\controls\combobox\flags\no.png" />
+    <Content Include="ClientBin\controls\combobox\flags\np.png" />
+    <Content Include="ClientBin\controls\combobox\flags\nr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\nu.png" />
+    <Content Include="ClientBin\controls\combobox\flags\nz.png" />
+    <Content Include="ClientBin\controls\combobox\flags\om.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pa.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pe.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pf.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pg.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ph.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pk.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pl.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ps.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pt.png" />
+    <Content Include="ClientBin\controls\combobox\flags\pw.png" />
+    <Content Include="ClientBin\controls\combobox\flags\py.png" />
+    <Content Include="ClientBin\controls\combobox\flags\qa.png" />
+    <Content Include="ClientBin\controls\combobox\flags\re.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ro.png" />
+    <Content Include="ClientBin\controls\combobox\flags\rs.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ru.png" />
+    <Content Include="ClientBin\controls\combobox\flags\rw.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sa.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sb.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sc.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sd.png" />
+    <Content Include="ClientBin\controls\combobox\flags\se.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sg.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sh.png" />
+    <Content Include="ClientBin\controls\combobox\flags\si.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sj.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sk.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sl.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\so.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\st.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sv.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sy.png" />
+    <Content Include="ClientBin\controls\combobox\flags\sz.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tc.png" />
+    <Content Include="ClientBin\controls\combobox\flags\td.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tf.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tg.png" />
+    <Content Include="ClientBin\controls\combobox\flags\th.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tj.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tk.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tl.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\to.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tr.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tt.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tv.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tw.png" />
+    <Content Include="ClientBin\controls\combobox\flags\tz.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ua.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ug.png" />
+    <Content Include="ClientBin\controls\combobox\flags\um.png" />
+    <Content Include="ClientBin\controls\combobox\flags\us.png" />
+    <Content Include="ClientBin\controls\combobox\flags\uy.png" />
+    <Content Include="ClientBin\controls\combobox\flags\uz.png" />
+    <Content Include="ClientBin\controls\combobox\flags\va.png" />
+    <Content Include="ClientBin\controls\combobox\flags\vc.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ve.png" />
+    <Content Include="ClientBin\controls\combobox\flags\vg.png" />
+    <Content Include="ClientBin\controls\combobox\flags\vi.png" />
+    <Content Include="ClientBin\controls\combobox\flags\vn.png" />
+    <Content Include="ClientBin\controls\combobox\flags\vu.png" />
+    <Content Include="ClientBin\controls\combobox\flags\wf.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ws.png" />
+    <Content Include="ClientBin\controls\combobox\flags\ye.png" />
+    <Content Include="ClientBin\controls\combobox\flags\yt.png" />
+    <Content Include="ClientBin\controls\combobox\flags\za.png" />
+    <Content Include="ClientBin\controls\combobox\flags\zm.png" />
+    <Content Include="ClientBin\controls\combobox\flags\zw.png" />
+    <Content Include="ClientBin\controls\combobox\misc\ComboBoxBindingDemo.xml" />
+    <Content Include="ClientBin\controls\combobox\misc\tt.png" />
+    <Content Include="ClientBin\controls\contextmenu\assets\dolphin.jpg" />
+    <Content Include="ClientBin\controls\contextmenu\assets\elephant.jpg" />
+    <Content Include="ClientBin\controls\contextmenu\assets\margins_custom.png" />
+    <Content Include="ClientBin\controls\contextmenu\assets\margins_narrow.png" />
+    <Content Include="ClientBin\controls\contextmenu\assets\margins_normal.png" />
+    <Content Include="ClientBin\controls\contextmenu\assets\margins_wide.png" />
+    <Content Include="ClientBin\controls\contextmenu\assets\parrots.jpg" />
+    <Content Include="ClientBin\controls\contextmenu\assets\tiger.jpg" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Attachment.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\chevron.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Copy.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Cut.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\FileSearch.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Find.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\FormatFont.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\LeftArrow.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\LightningBolt.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Lines.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\List.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\New.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\OfficeClipboard.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Open.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\PaperAndPictures.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Paste.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Print.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\PrintPreview.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\QuestionMark.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\RedFlagMail.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\RevealFormatting.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Save.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\SaveAsWebPage.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\Send.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\StickyPin.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\StylesAndFormatting.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\TableOfContents.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\ToDoListEnvelope.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\ViewDocumentMap.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\ViewHeaderAndFooter.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\ViewNormal.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\ViewOutline.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\ViewThumbnails.png" />
+    <Content Include="ClientBin\controls\contextmenu\menuicons\ViewWebLayout.png" />
+    <Content Include="ClientBin\controls\datagrid\attachment.png" />
+    <Content Include="ClientBin\controls\datagrid\cars\bob.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\bro.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\danza.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\dorlan_mx.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\edson_s.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\king_miller.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\magnetti_808.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\miller.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\miller_jr.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\portland.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\saguaro.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\vamoni.jpg" />
+    <Content Include="ClientBin\controls\datagrid\cars\z1.jpg" />
+    <Content Include="ClientBin\controls\datagrid\flag_blue.png" />
+    <Content Include="ClientBin\controls\datagrid\flag_none.png" />
+    <Content Include="ClientBin\controls\datagrid\flag_red.png" />
+    <Content Include="ClientBin\controls\datagrid\icon_attachment.png" />
+    <Content Include="ClientBin\controls\datagrid\icon_flag.png" />
+    <Content Include="ClientBin\controls\datagrid\icon_icon.png" />
+    <Content Include="ClientBin\controls\datagrid\icon_priority.png" />
+    <Content Include="ClientBin\controls\datagrid\msg_forwarded.png" />
+    <Content Include="ClientBin\controls\datagrid\msg_forwarded_large.png" />
+    <Content Include="ClientBin\controls\datagrid\msg_read.png" />
+    <Content Include="ClientBin\controls\datagrid\msg_read_large.png" />
+    <Content Include="ClientBin\controls\datagrid\msg_replied.png" />
+    <Content Include="ClientBin\controls\datagrid\msg_replied_large.png" />
+    <Content Include="ClientBin\controls\datagrid\msg_unread.png" />
+    <Content Include="ClientBin\controls\datagrid\msg_unread_large.png" />
+    <Content Include="ClientBin\controls\datagrid\priority_high.png" />
+    <Content Include="ClientBin\controls\datagrid\priority_low.png" />
+    <Content Include="ClientBin\controls\datagrid\spacer.png" />
+    <Content Include="ClientBin\controls\dragdrop\attachment.png" />
+    <Content Include="ClientBin\controls\dragdrop\flag_blue.png" />
+    <Content Include="ClientBin\controls\dragdrop\flag_none.png" />
+    <Content Include="ClientBin\controls\dragdrop\flag_red.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\calendar.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\contacts.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\deleted.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\deletedFolder.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\drafts.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\folder.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\folders.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\inbox.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\junk.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\minus.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\notes.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\outbox.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\plus.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\root.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\search.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\searchFolder.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\sentItems.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\tasks.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\access.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\admin.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\autoplay.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\backup.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\computer.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\controlpanel.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\defaults.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\desktop.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\drive.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\dvd.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\encryption.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\folder.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\fonts.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\network.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\networks.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\os.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\parentalcontrols.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\performancetools.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\personalization.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\power.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\printers.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\programs.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\recyclebin.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\removable.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\sideshow.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\speech.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\sync.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\system.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\update.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\users.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\usersfolder.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\welcome.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\_minus.png" />
+    <Content Include="ClientBin\controls\dragdrop\icons\windows7\_plus.png" />
+    <Content Include="ClientBin\controls\dragdrop\icon_attachment.png" />
+    <Content Include="ClientBin\controls\dragdrop\icon_flag.png" />
+    <Content Include="ClientBin\controls\dragdrop\icon_icon.png" />
+    <Content Include="ClientBin\controls\dragdrop\icon_priority.png" />
+    <Content Include="ClientBin\controls\dragdrop\msg_forwarded.png" />
+    <Content Include="ClientBin\controls\splitter\attachment.png" />
+    <Content Include="ClientBin\controls\splitter\feed.png" />
+    <Content Include="ClientBin\controls\splitter\flag_blue.png" />
+    <Content Include="ClientBin\controls\splitter\flag_none.png" />
+    <Content Include="ClientBin\controls\splitter\flag_red.png" />
+    <Content Include="ClientBin\controls\splitter\folder.png" />
+    <Content Include="ClientBin\controls\splitter\folders.png" />
+    <Content Include="ClientBin\controls\splitter\folder_open.png" />
+    <Content Include="ClientBin\controls\menu\xml\MenuExpandoDemo.xml" />
+    <Content Include="ClientBin\controls\menu\xml\MenuXMLBindingDemo.xml" />
+    <Content Include="ClientBin\controls\splitter\icon_attachment.png" />
+    <Content Include="ClientBin\controls\splitter\icon_flag.png" />
+    <Content Include="ClientBin\controls\splitter\icon_icon.png" />
+    <Content Include="ClientBin\controls\splitter\icon_priority.png" />
+    <Content Include="ClientBin\controls\splitter\msg_forwarded.png" />
+    <Content Include="ClientBin\controls\splitter\msg_forwarded_large.png" />
+    <Content Include="ClientBin\controls\splitter\msg_read.png" />
+    <Content Include="ClientBin\controls\splitter\msg_read_large.png" />
+    <Content Include="ClientBin\controls\splitter\msg_replied.png" />
+    <Content Include="ClientBin\controls\splitter\msg_replied_large.png" />
+    <Content Include="ClientBin\controls\splitter\msg_unread.png" />
+    <Content Include="ClientBin\controls\splitter\msg_unread_large.png" />
+    <Content Include="ClientBin\controls\splitter\priority_high.png" />
+    <Content Include="ClientBin\controls\splitter\priority_low.png" />
+    <Content Include="ClientBin\controls\splitter\spacer.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\minus_18x21.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\plus_16x16.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\icon-featuredFeed.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\icon-feed.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Images\txt_featuredFeeds.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\featuredFeed-100000.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\featuredFeed-5Star.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\featuredFeed-MSDevs.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\featuredFeed-userCreated.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\feedBrowserMenu.xml" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\Header.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\icon-checkbox-checked.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\icon-checkbox-disabled.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\icon-checkbox-unchecked.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\icon-featuredFeed.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\Menu\icon-feed.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\Cnet.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\ComponentArtBlogs.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\GiantBomb.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\Gigaom.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\Gizmodo.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\Infragistics.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\Jalopnik.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\kotaku.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\LifeHacker.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\Microsoft.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\OReilly.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\ReadWriteWeb.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\Silverlight.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\TechCrunch.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\Telerik.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssItemFlowIcons\WindowsAzure.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssToolBarIcons\cancel.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssToolBarIcons\home.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssToolBarIcons\nextView.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssToolBarIcons\previousView.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssToolBarIcons\refresh.png" />
+    <Content Include="ClientBin\integration\FeedBrowser\RssToolBarIcons\splitArrow.png" />
+    <Content Include="ClientBin\integration\outlook2007\attachment.png" />
+    <Content Include="ClientBin\integration\outlook2007\calendar.png" />
+    <Content Include="ClientBin\integration\outlook2007\contacts.png" />
+    <Content Include="ClientBin\integration\outlook2007\feed.png" />
+    <Content Include="ClientBin\integration\outlook2007\flag_blue.png" />
+    <Content Include="ClientBin\integration\outlook2007\flag_none.png" />
+    <Content Include="ClientBin\integration\outlook2007\flag_red.png" />
+    <Content Include="ClientBin\integration\outlook2007\folder.png" />
+    <Content Include="ClientBin\integration\outlook2007\folderlist.png" />
+    <Content Include="ClientBin\integration\outlook2007\folders.png" />
+    <Content Include="ClientBin\integration\outlook2007\folder_open.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\calendar.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\contacts.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\deleted.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\deletedFolder.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\drafts.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\folder.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\folders.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\inbox.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\junk.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\mail.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\minus.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\notes.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\outbox.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\plus.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\root.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\search.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\searchFolder.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\sentItems.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\shortcuts.png" />
+    <Content Include="ClientBin\integration\outlook2007\icons\tasks.png" />
+    <Content Include="ClientBin\integration\outlook2007\icon_attachment.png" />
+    <Content Include="ClientBin\integration\outlook2007\icon_flag.png" />
+    <Content Include="ClientBin\integration\outlook2007\icon_icon.png" />
+    <Content Include="ClientBin\integration\outlook2007\icon_priority.png" />
+    <Content Include="ClientBin\integration\outlook2007\mail.png" />
+    <Content Include="ClientBin\integration\outlook2007\menu_end_left.png" />
+    <Content Include="ClientBin\integration\outlook2007\msg_forwarded.png" />
+    <Content Include="ClientBin\integration\outlook2007\msg_forwarded_large.png" />
+    <Content Include="ClientBin\integration\outlook2007\msg_read.png" />
+    <Content Include="ClientBin\integration\outlook2007\msg_read_large.png" />
+    <Content Include="ClientBin\integration\outlook2007\msg_replied.png" />
+    <Content Include="ClientBin\integration\outlook2007\msg_replied_large.png" />
+    <Content Include="ClientBin\integration\outlook2007\msg_unread.png" />
+    <Content Include="ClientBin\integration\outlook2007\msg_unread_large.png" />
+    <Content Include="ClientBin\integration\outlook2007\NewAppointment.png" />
+    <Content Include="ClientBin\integration\outlook2007\NewContact.png" />
+    <Content Include="ClientBin\integration\outlook2007\NewJournalEntry.png" />
+    <Content Include="ClientBin\integration\outlook2007\NewMeetingRequest.png" />
+    <Content Include="ClientBin\integration\outlook2007\NewMessage.png" />
+    <Content Include="ClientBin\integration\outlook2007\NewPost.png" />
+    <Content Include="ClientBin\integration\outlook2007\NewTask.png" />
+    <Content Include="ClientBin\integration\outlook2007\notes.png" />
+    <Content Include="ClientBin\integration\outlook2007\priority_high.png" />
+    <Content Include="ClientBin\integration\outlook2007\priority_low.png" />
+    <Content Include="ClientBin\integration\outlook2007\search.png" />
+    <Content Include="ClientBin\integration\outlook2007\shortcuts.png" />
+    <Content Include="ClientBin\integration\outlook2007\spacer.png" />
+    <Content Include="ClientBin\integration\outlook2007\splitterbar_vertical.png" />
+    <Content Include="ClientBin\integration\outlook2007\tasks.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\addressbook.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\categorize.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\createrule.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\delete.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\followup.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\forward.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\help.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\movetofolder.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\print.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\reply.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\replyall.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\sendreceive.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\toolbar_end_left.png" />
+    <Content Include="ClientBin\integration\outlook2007\toolbaricons\toolbar_end_right.png" />
+    <Content Include="ClientBin\msg_forwarded_large.png" />
+    <Content Include="ClientBin\controls\dragdrop\msg_read.png" />
+    <Content Include="ClientBin\msg_read_large.png" />
+    <Content Include="ClientBin\controls\dragdrop\msg_replied.png" />
+    <Content Include="ClientBin\msg_replied_large.png" />
+    <Content Include="ClientBin\controls\dragdrop\msg_unread.png" />
+    <Content Include="ClientBin\msg_unread_large.png" />
+    <Content Include="ClientBin\controls\dragdrop\priority_high.png" />
+    <Content Include="ClientBin\controls\dragdrop\priority_low.png" />
+    <Content Include="ClientBin\controls\dragdrop\spacer.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_001L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_002L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_003L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_004L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_005L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_006L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_007L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_008L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_009L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_010L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_011L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_012L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_013L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_014L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_015L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_016L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_017L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_018L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_019L.png" />
+    <Content Include="ClientBin\controls\itemflow\ALI_020L.png" />
+    <Content Include="ClientBin\controls\itemflow\c13947521.jpg" />
+    <Content Include="ClientBin\controls\itemflow\c14581611.jpg" />
+    <Content Include="ClientBin\controls\itemflow\c14624651.jpg" />
+    <Content Include="ClientBin\controls\itemflow\c14837491.jpg" />
+    <Content Include="ClientBin\controls\itemflow\c14998311.jpg" />
+    <Content Include="ClientBin\controls\itemflow\c15037981.jpg" />
+    <Content Include="ClientBin\controls\itemflow\c15075711.jpg" />
+    <Content Include="ClientBin\controls\itemflow\c15165581.jpg" />
+    <Content Include="ClientBin\controls\itemflow\calendar.png" />
+    <Content Include="ClientBin\controls\itemflow\calendar_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\colorPicker.png" />
+    <Content Include="ClientBin\controls\itemflow\colorPicker_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\contextMenu.png" />
+    <Content Include="ClientBin\controls\itemflow\dataGrid.png" />
+    <Content Include="ClientBin\controls\itemflow\dataGrid_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\dialog.png" />
+    <Content Include="ClientBin\controls\itemflow\dialog_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\editor.png" />
+    <Content Include="ClientBin\controls\itemflow\editor_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\ItemFlowData.xml" />
+    <Content Include="ClientBin\controls\itemflow\menu.png" />
+    <Content Include="ClientBin\controls\itemflow\menu_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\multiPage.png" />
+    <Content Include="ClientBin\controls\itemflow\multiPage_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\rotator.png" />
+    <Content Include="ClientBin\controls\itemflow\rotator_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\siteMap.png" />
+    <Content Include="ClientBin\controls\itemflow\siteMap_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\slider.png" />
+    <Content Include="ClientBin\controls\itemflow\slider_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\snap.png" />
+    <Content Include="ClientBin\controls\itemflow\snap_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\splitter.png" />
+    <Content Include="ClientBin\controls\itemflow\splitter_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\tabStrip.png" />
+    <Content Include="ClientBin\controls\itemflow\tabStrip_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\treeView.png" />
+    <Content Include="ClientBin\controls\itemflow\treeView_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\upload.png" />
+    <Content Include="ClientBin\controls\itemflow\upload_thumb.png" />
+    <Content Include="ClientBin\controls\itemflow\w14848081.jpg" />
+    <Content Include="ClientBin\controls\itemflow\w15006561.jpg" />
+    <Content Include="ClientBin\controls\itemflow\w15033861.jpg" />
+    <Content Include="ClientBin\controls\itemflow\w15046111.jpg" />
+    <Content Include="ClientBin\controls\itemflow\w15076301.jpg" />
+    <Content Include="ClientBin\controls\itemflow\w15084981.jpg" />
+    <Content Include="ClientBin\controls\itemflow\w15089261.jpg" />
+    <Content Include="ClientBin\controls\itemflow\w15136191.jpg" />
+    <Content Include="ClientBin\controls\menu\assets\dolphin.jpg" />
+    <Content Include="ClientBin\controls\menu\assets\elephant.jpg" />
+    <Content Include="ClientBin\controls\menu\assets\margins_custom.png" />
+    <Content Include="ClientBin\controls\menu\assets\margins_narrow.png" />
+    <Content Include="ClientBin\controls\menu\assets\margins_normal.png" />
+    <Content Include="ClientBin\controls\menu\assets\margins_wide.png" />
+    <Content Include="ClientBin\controls\menu\assets\parrots.jpg" />
+    <Content Include="ClientBin\controls\menu\assets\tiger.jpg" />
+    <Content Include="ClientBin\controls\menu\menuicons\Attachment.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\chevron.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\Copy.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\Cut.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\FileSearch.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\Find.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\FormatFont.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\LeftArrow.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\LightningBolt.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\Lines.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\List.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\New.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\OfficeClipboard.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\Open.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\PaperAndPictures.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\Paste.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\Print.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\PrintPreview.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\QuestionMark.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\RedFlagMail.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\RevealFormatting.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\Save.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\SaveAsWebPage.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\Send.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\StickyPin.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\StylesAndFormatting.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\TableOfContents.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\ToDoListEnvelope.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\ViewDocumentMap.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\ViewHeaderAndFooter.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\ViewNormal.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\ViewOutline.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\ViewThumbnails.png" />
+    <Content Include="ClientBin\controls\menu\menuicons\ViewWebLayout.png" />
+    <Content Include="ClientBin\controls\toolbar\AlignCenter.png" />
+    <Content Include="ClientBin\controls\toolbar\AlignCenterDark.png" />
+    <Content Include="ClientBin\controls\toolbar\AlignJustify.png" />
+    <Content Include="ClientBin\controls\toolbar\AlignJustifyDark.png" />
+    <Content Include="ClientBin\controls\toolbar\AlignLeft.png" />
+    <Content Include="ClientBin\controls\toolbar\AlignLeftDark.png" />
+    <Content Include="ClientBin\controls\toolbar\AlignRight.png" />
+    <Content Include="ClientBin\controls\toolbar\AlignRightDark.png" />
+    <Content Include="ClientBin\controls\toolbar\BrowserBack.png" />
+    <Content Include="ClientBin\controls\toolbar\BrowserForward.png" />
+    <Content Include="ClientBin\controls\toolbar\BrowserHome.png" />
+    <Content Include="ClientBin\controls\toolbar\BrowserReload.png" />
+    <Content Include="ClientBin\controls\toolbar\BrowserStop.png" />
+    <Content Include="ClientBin\controls\toolbar\BulletsNumbering.png" />
+    <Content Include="ClientBin\controls\toolbar\BulletsNumberingDark.png" />
+    <Content Include="ClientBin\controls\toolbar\BulletsSymbols.png" />
+    <Content Include="ClientBin\controls\toolbar\BulletsSymbolsDark.png" />
+    <Content Include="ClientBin\controls\toolbar\EditCopy.png" />
+    <Content Include="ClientBin\controls\toolbar\EditCopyDark.png" />
+    <Content Include="ClientBin\controls\toolbar\EditCut.png" />
+    <Content Include="ClientBin\controls\toolbar\EditCutDark.png" />
+    <Content Include="ClientBin\controls\toolbar\EditPaste.png" />
+    <Content Include="ClientBin\controls\toolbar\FormatBold.png" />
+    <Content Include="ClientBin\controls\toolbar\FormatBoldDark.png" />
+    <Content Include="ClientBin\controls\toolbar\FormatItalic.png" />
+    <Content Include="ClientBin\controls\toolbar\FormatItalicDark.png" />
+    <Content Include="ClientBin\controls\toolbar\FormatUnderline.png" />
+    <Content Include="ClientBin\controls\toolbar\FormatUnderlineDark.png" />
+    <Content Include="ClientBin\controls\toolbar\NewAppointment.png" />
+    <Content Include="ClientBin\controls\toolbar\NewContact.png" />
+    <Content Include="ClientBin\controls\toolbar\NewJournalEntry.png" />
+    <Content Include="ClientBin\controls\toolbar\NewMeetingRequest.png" />
+    <Content Include="ClientBin\controls\toolbar\NewMessage.png" />
+    <Content Include="ClientBin\controls\toolbar\NewPost.png" />
+    <Content Include="ClientBin\controls\toolbar\NewTask.png" />
+    <Content Include="ClientBin\controls\treeview\icons\calendar.png" />
+    <Content Include="ClientBin\controls\treeview\icons\contacts.png" />
+    <Content Include="ClientBin\controls\treeview\icons\deleted.png" />
+    <Content Include="ClientBin\controls\treeview\icons\deletedFolder.png" />
+    <Content Include="ClientBin\controls\treeview\icons\drafts.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\ascx.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\aspx.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\config.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\cs.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\css.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\dll.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\file.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\folder.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\image.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\js.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\minus.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\plus.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\root.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\vb.png" />
+    <Content Include="ClientBin\controls\treeview\icons\FileBrowser\xml.png" />
+    <Content Include="ClientBin\controls\treeview\icons\folder.png" />
+    <Content Include="ClientBin\controls\treeview\icons\folders.png" />
+    <Content Include="ClientBin\controls\treeview\icons\inbox.png" />
+    <Content Include="ClientBin\controls\treeview\icons\junk.png" />
+    <Content Include="ClientBin\controls\treeview\icons\minus.png" />
+    <Content Include="ClientBin\controls\treeview\icons\notes.png" />
+    <Content Include="ClientBin\controls\treeview\icons\outbox.png" />
+    <Content Include="ClientBin\controls\treeview\icons\plus.png" />
+    <Content Include="ClientBin\controls\treeview\icons\root.png" />
+    <Content Include="ClientBin\controls\treeview\icons\search.png" />
+    <Content Include="ClientBin\controls\treeview\icons\searchFolder.png" />
+    <Content Include="ClientBin\controls\treeview\icons\sentItems.png" />
+    <Content Include="ClientBin\controls\treeview\icons\tasks.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\access.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\admin.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\autoplay.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\backup.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\computer.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\controlpanel.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\defaults.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\desktop.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\drive.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\dvd.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\encryption.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\folder.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\fonts.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\network.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\networks.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\os.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\parentalcontrols.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\performancetools.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\personalization.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\power.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\printers.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\programs.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\recyclebin.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\removable.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\sideshow.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\speech.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\sync.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\system.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\update.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\users.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\usersfolder.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\welcome.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\_minus.png" />
+    <Content Include="ClientBin\controls\treeview\icons\windows7\_plus.png" />
+    <Content Include="ClientBin\layout\background-solid.png" />
+    <Content Include="ClientBin\layout\background.png" />
+    <Content Include="ClientBin\layout\btn-search-h.png" />
+    <Content Include="ClientBin\layout\btn-search.png" />
+    <Content Include="ClientBin\layout\logo-componentart.png" />
+    <Content Include="ClientBin\layout\logo-contextmenu.png" />
+    <Content Include="ClientBin\layout\logo-datagrid.png" />
+    <Content Include="ClientBin\layout\logo-itemflow.png" />
+    <Content Include="ClientBin\layout\logo-menu.png" />
+    <Content Include="ClientBin\layout\logo-slider.png" />
+    <Content Include="ClientBin\layout\logo-toolbar.png" />
+    <Content Include="ClientBin\layout\logo-treeview.png" />
+    <Content Include="ClientBin\layout\logo-webui.png" />
+    <Content Include="ClientBin\layout\node-collapsed.png" />
+    <Content Include="ClientBin\layout\node-contextmenu.png" />
+    <Content Include="ClientBin\layout\node-datagrid.png" />
+    <Content Include="ClientBin\layout\node-demo.png" />
+    <Content Include="ClientBin\layout\node-design.png" />
+    <Content Include="ClientBin\layout\node-dragdrop.png" />
+    <Content Include="ClientBin\layout\node-editing.png" />
+    <Content Include="ClientBin\layout\node-expanded.png" />
+    <Content Include="ClientBin\layout\node-features.png" />
+    <Content Include="ClientBin\layout\node-grouping.png" />
+    <Content Include="ClientBin\layout\node-itemflow.png" />
+    <Content Include="ClientBin\layout\node-menu.png" />
+    <Content Include="ClientBin\layout\node-programming.png" />
+    <Content Include="ClientBin\layout\node-slider.png" />
+    <Content Include="ClientBin\layout\node-sorting.png" />
+    <Content Include="ClientBin\layout\node-toolbar.png" />
+    <Content Include="ClientBin\layout\node-treeview.png" />
+    <Content Include="ClientBin\layout\node-welcome.png" />
+    <Content Include="ClientBin\overview\btn-purchase.png" />
+    <Content Include="ClientBin\overview\btn-trial.png" />
+    <Content Include="ClientBin\overview\demo-contextmenu.png" />
+    <Content Include="ClientBin\overview\demo-datagrid.png" />
+    <Content Include="ClientBin\overview\demo-itemflow.png" />
+    <Content Include="ClientBin\overview\demo-menu.png" />
+    <Content Include="ClientBin\overview\demo-treeview.png" />
+    <Content Include="ClientBin\overview\featured.png" />
+    <Content Include="ClientBin\overview\grid.png" />
+    <Content Include="ClientBin\overview\itemFlow.png" />
+    <Content Include="ClientBin\overview\logo.png" />
+    <Content Include="ClientBin\overview\menu.png" />
+    <Content Include="ClientBin\overview\visuals.png" />
+    <Content Include="DataGridFileBrowserService.svc" />
+    <Content Include="WCFCarService.svc" />
+    <Content Include="SoaDataGridFeedService.svc" />
+    <Content Include="SalesDataService.svc" />
+    <Content Include="SoaFeedReaderTreeViewService.svc" />
+    <Content Include="SoaSimpleToolBarService.svc" />
+    <Content Include="SoaDataGridProductService.svc" />
+    <Content Include="ManualComboBoxLocationsService.svc" />
+    <Content Include="ManualNavBarService.svc" />
+    <Content Include="ManualTreeViewFileExplorerService.svc" />
+    <Content Include="Silverlight.js" />
+    <Content Include="default.aspx" />
+    <Content Include="SoaComboBoxLocationService.svc" />
+    <Content Include="SoaDataGridMessageService.svc" />
+    <Content Include="SoaMenuDemoService.svc" />
+    <Content Include="SoaNavBar.svc" />
+    <Content Include="SoaSimpleTabStripService.svc" />
+    <Content Include="SoaTreeViewEdit.svc" />
+    <Content Include="TreeViewFileBrowserService.svc" />
+    <Content Include="WCFMessageService.svc" />
+    <Content Include="WCFProductService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataGridFileBrowserService.svc.cs">
+      <DependentUpon>DataGridFileBrowserService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IComponentArtProductService.cs" />
+    <Compile Include="PostsDomainService.cs" />
+    <Compile Include="WCFCarService.svc.cs">
+      <DependentUpon>WCFCarService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SoaDataGridFeedService.svc.cs">
+      <DependentUpon>SoaDataGridFeedService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="PostsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesDataService.svc.cs">
+      <DependentUpon>SalesDataService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SoaFeedReaderTreeViewService.svc.cs">
+      <DependentUpon>SoaFeedReaderTreeViewService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SoaSimpleToolBarService.svc.cs">
+      <DependentUpon>SoaSimpleToolBarService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SoaDataGridProductService.svc.cs">
+      <DependentUpon>SoaDataGridProductService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IComponentArtMessageService.cs" />
+    <Compile Include="IComponentArtCarService.cs" />
+    <Compile Include="ManualComboBoxLocationsService.svc.cs">
+      <DependentUpon>ManualComboBoxLocationsService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ManualNavBarService.svc.cs">
+      <DependentUpon>ManualNavBarService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ManualTreeViewFileExplorerService.svc.cs">
+      <DependentUpon>ManualTreeViewFileExplorerService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SoaComboBoxLocationService.svc.cs">
+      <DependentUpon>SoaComboBoxLocationService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SoaDataGridMessageService.svc.cs">
+      <DependentUpon>SoaDataGridMessageService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SoaMenuDemoService.svc.cs">
+      <DependentUpon>SoaMenuDemoService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SoaNavBar.svc.cs">
+      <DependentUpon>SoaNavBar.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SoaSimpleTabStripService.svc.cs">
+      <DependentUpon>SoaSimpleTabStripService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SoaTreeViewEdit.svc.cs">
+      <DependentUpon>SoaTreeViewEdit.svc</DependentUpon>
+    </Compile>
+    <Compile Include="TreeViewFileBrowserService.svc.cs">
+      <DependentUpon>TreeViewFileBrowserService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WCFMessageService.svc.cs">
+      <DependentUpon>WCFMessageService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WCFProductService.svc.cs">
+      <DependentUpon>WCFProductService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="PostsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PostsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClientBin\images\" />
+    <Folder Include="uploadtemp\" />
+    <Folder Include="upload\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2002</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ComponentArt.Silverlight.Demos.Web</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

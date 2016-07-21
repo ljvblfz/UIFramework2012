@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="WizardgroupBoxReverseSideStyle">
+		<value>Choose ReverseSideStyle</value>
+	</data>
+	<data name="WizardgroupBoxReverseDirectionStyle">
+		<value>Choose ReverseDirectionStyle</value>
+	</data>
+	<data name="WizardFlipReverseDirection">
+		<value>Select FlipReverseDirection</value>
+	</data>
+	<data name="WizardCollectionAdd">
+		<value>Add an item to the collection</value>
+	</data>
+	<data name="Wizard.wizardChartOptionsDialog.wizardLineStylesDialog.lineStyleCollection.Add">
+		<value>My special Add</value>
+	</data>
+	<data name="WizardCollectionRemove">
+		<value>Remove an item from the collection</value>
+	</data>
+	<data name="WizardCollectionCopy">
+		<value>Copy the selected collection item</value>
+	</data>
+	<data name="WizardCollectionListBox">
+		<value>Collection</value>
+	</data>
+	<data name="LightsCollectioLightsCollection">
+		<value>Lights Collection</value>
+	</data>
+	<data name="FrameExtraSpace">
+		<value>Set extra frame space</value>
+	</data>
+	<data name="FrameShade">
+		<value>Control the shade of the frame</value>
+	</data>
+	<data name="FrameCornerRounding">
+		<value>Choose corners to round</value>
+	</data>
+	<data name="FrameKindAndColor">
+		<value>Choose frame kind and color</value>
+	</data>
+	<data name="FrameTextProperties">
+		<value>Set text properties</value>
+	</data>
+	<data name="Wizard3DOptionsDirection">
+		<value>Drag the chart image to change the viewing direction.</value>
+	</data>
+	<data name="WizardCurrentChart">
+		<value>Drag the chart image to change the viewing direction.</value>
+	</data>
+	<data name="Vector3DTextBoxesControlHorizontalX">
+		<value>X coordinate of the viewing direction 3D vector.</value>
+	</data>
+	<data name="Vector3DTextBoxesControlHorizontalY">
+		<value>Y coordinate of the viewing direction 3D vector.</value>
+	</data>
+	<data name="Vector3DTextBoxesControlHorizontalZ">
+		<value>Z coordinate of the viewing direction 3D vector.</value>
+	</data>
+	<data name="FrameTextPositionGroupBox"></data>
+	<data name="SeriesTree">
+		<value>Build the series structure. Select the root node (or any other composite series node) to add a new series.</value>
+	</data>
+	<data name="SeriesStyle">
+		<value>Series style.</value>
+	</data>
+	<data name="SeriesDataPointLabelStyle">
+		<value>Select the data point label style from the list. Choose “Edit DataPointLabel Styles” for more settings.</value>
+	</data>
+	<data name="DataSource">
+		<value>Choose an existing data source or create a new data source.</value>
+	</data>
+	<data name="DataBindingPairs">
+		<value>Bind data members to individual series.</value>
+	</data>
+	<data name="AxisAnnotations">
+		<value>Location of the annotation.</value>
+	</data>
+</root>

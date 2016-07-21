@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.ToolBarEvents"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:ComponentArtTheme="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    Width="760" Height="450">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ToolBar" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Event Handling" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo shows the Event Handling of the ToolBar control." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\ToolBar\ToolBarEvents.xaml,
+            \source\controls\ToolBar\ToolBarEvents.xaml.cs"/>
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
+            <ComponentArt:ToolBar
+            ItemClick="ToolBar1_Click"
+                HorizontalAlignment="Left"
+			Orientation="Horizontal"
+            Width="475"
+			x:Name="ToolBar1"
+		>
+                <ComponentArt:ToolBar.HorizontalSeparatorItemTemplate>
+                    <DataTemplate>
+                        <Border Height="24">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="1" Fill="#FF333333" Height="20" />
+                                <Rectangle Width="1" Fill="#FFCCCCCC" Height="20" />
+                                <Rectangle Width="1" Fill="#FF333333" Height="20" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ComponentArt:ToolBar.HorizontalSeparatorItemTemplate>
+
+                <ComponentArt:ToolBar.VerticalSeparatorItemTemplate>
+                    <DataTemplate>
+                        <Border Height="5">
+                            <StackPanel Orientation="Vertical">
+                                <Rectangle Width="20" Fill="#FF333333" Height="1" />
+                                <Rectangle Width="20" Fill="#FFCCCCCC" Height="1" />
+                                <Rectangle Width="20" Fill="#FF333333" Height="1" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ComponentArt:ToolBar.VerticalSeparatorItemTemplate>
+
+                <ComponentArt:ToolBarSplitItem DropDownClick="New_DropDownClick" MouseEnter="Item_MouseEnter" ItemContextMenu="SimpleMenu" MenuClick="New_MenuClick" Click="ToolBarItem_Click" x:Name="New" DropDownIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BlackIce/ddn.png" ItemTextImageRelation="ImageBeforeText" DisabledIconSource="Disabled/NewMessage.png" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/NewMessage.png" Text="New">
+                    <ComponentArt:ToolBarSplitItem.Content>
+                        <ComponentArt:ContextMenu
+						x:Name="SimpleMenu"
+						Orientation="Vertical" 
+						HorizontalAlignment="Left" 
+						VerticalAlignment="Top"
+						ContextType="Custom"
+					>
+                            <ComponentArt:MenuItem Text="Mail Message" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/NewMessage.png" />
+                            <ComponentArt:MenuItem Text="Post in This Folder" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/NewPost.png" />
+
+                            <ComponentArt:MenuItem IsSeparator="True" IsEnabled="True" />
+
+                            <ComponentArt:MenuItem Text="Appointment" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/NewAppointment.png" />
+                            <ComponentArt:MenuItem Text="Meeting Request" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/NewMeetingRequest.png" />
+                            <ComponentArt:MenuItem Text="Contact" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/NewContact.png" />
+
+                            <ComponentArt:MenuItem IsSeparator="True" IsEnabled="True" />
+
+                            <ComponentArt:MenuItem Text="Task" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/NewTask.png" />
+                            <ComponentArt:MenuItem Text="Journal Entry" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/NewJournalEntry.png" />
+                        </ComponentArt:ContextMenu>
+                    </ComponentArt:ToolBarSplitItem.Content>
+                </ComponentArt:ToolBarSplitItem>
+
+                <ComponentArt:ToolBarSeparatorItem />
+
+                <ComponentArt:ToolBarItem MouseEnter="Item_MouseEnter" Click="ToolBarItem_Click" x:Name="EditCut" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/EditCutDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/EditCutDark.png" Text="Cut" />
+                <ComponentArt:ToolBarItem MouseEnter="Item_MouseEnter" Click="ToolBarItem_Click" x:Name="EditCopy" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/EditCopyDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/EditCopyDark.png" Text="Copy"  />
+                <ComponentArt:ToolBarItem MouseEnter="Item_MouseEnter" Click="ToolBarItem_Click" x:Name="EditPaste" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/EditPaste.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/EditPaste.png" Text="Paste" />
+
+                <ComponentArt:ToolBarSeparatorItem />
+
+                <ComponentArt:ToolBarToggleItem MouseEnter="Item_MouseEnter" Checked="Item_Checked" Unchecked="Item_Unchecked" Click="ToolBarItem_Click" x:Name="FormatBold" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/FormatBoldDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/FormatBoldDark.png" Text="Bold" />
+                <ComponentArt:ToolBarToggleItem MouseEnter="Item_MouseEnter" Checked="Item_Checked" Unchecked="Item_Unchecked" Click="ToolBarItem_Click" x:Name="FormatItalic" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/FormatItalicDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/FormatUnderlineDark.png" Text="Italic" />
+                <ComponentArt:ToolBarToggleItem MouseEnter="Item_MouseEnter" Checked="Item_Checked" Unchecked="Item_Unchecked" Click="ToolBarItem_Click" x:Name="FormatUnderline" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/FormatUnderlineDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/FormatUnderlineDark.png" Text="Underline" />
+
+                <ComponentArt:ToolBarSeparatorItem />
+
+                <ComponentArt:ToolBarRadioItem MouseEnter="Item_MouseEnter" Checked="Item_Checked" Unchecked="Item_Unchecked" Click="ToolBarItem_Click" x:Name="AlignLeft" GroupName="AlignGroup" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/AlignLeftDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/AlignLeftDark.png" Text="Align Left"  />
+                <ComponentArt:ToolBarRadioItem MouseEnter="Item_MouseEnter" Checked="Item_Checked" Unchecked="Item_Unchecked" Click="ToolBarItem_Click" x:Name="AlignCenter" GroupName="AlignGroup" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/AlignCenterDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/AlignCenterDark.png" Text="Align Center" />
+                <ComponentArt:ToolBarRadioItem MouseEnter="Item_MouseEnter" Checked="Item_Checked" Unchecked="Item_Unchecked" Click="ToolBarItem_Click" x:Name="AlignRight" GroupName="AlignGroup" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/AlignRightDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/AlignRightDark.png" Text="Align Right" />
+                <ComponentArt:ToolBarRadioItem MouseEnter="Item_MouseEnter" Checked="Item_Checked" Unchecked="Item_Unchecked" Click="ToolBarItem_Click" x:Name="AlignJustify" GroupName="AlignGroup" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/AlignJustifyDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/AlignJustifyDark.png" Text="Align Justify" />
+
+                <ComponentArt:ToolBarSeparatorItem />
+
+                <ComponentArt:ToolBarRadioItem MouseEnter="Item_MouseEnter" Checked="Item_Checked" Unchecked="Item_Unchecked" Click="ToolBarItem_Click" x:Name="BulletsNumbering" GroupName="BulletsGroup" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BulletsNumberingDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/BulletsNumberingDark.png" Text="Numbering" />
+                <ComponentArt:ToolBarRadioItem MouseEnter="Item_MouseEnter" Checked="Item_Checked" Unchecked="Item_Unchecked" Click="ToolBarItem_Click" x:Name="BulletsSymbols" GroupName="BulletsGroup" IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BulletsSymbolsDark.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/Disabled/BulletsSymbolsDark.png" Text="Bullets" />
+
+            </ComponentArt:ToolBar>
+            <StackPanel Orientation="Horizontal">
+                <Border Margin="0 50 0 0" HorizontalAlignment="Left" Height="300" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Click Events" Margin="5"/>
+                        <ScrollViewer Background="White" Margin="5" Height="255" VerticalAlignment="Stretch" HorizontalAlignment="Center" x:Name="output_viewer" Width="235">
+                            <TextBlock x:Name="output" />
+                        </ScrollViewer>
+                    </StackPanel>
+                </Border>
+                <Border Margin="20 50 0 0" HorizontalAlignment="Left" Width="250" Height="300" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Over Events" Margin="5" />
+                        <ScrollViewer Background="White" Margin="5" Height="255" VerticalAlignment="Stretch" HorizontalAlignment="Center" x:Name="overoutput_viewer" Width="235">
+                            <TextBlock x:Name="overoutput" />
+                        </ScrollViewer>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

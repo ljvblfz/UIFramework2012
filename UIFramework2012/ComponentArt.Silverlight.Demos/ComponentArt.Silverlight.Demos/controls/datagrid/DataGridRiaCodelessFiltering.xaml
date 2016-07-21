@@ -1,0 +1,143 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.DataGridRiaCodelessFiltering"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:cart="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data"
+    xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices" 
+    xmlns:riaData="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices"
+    xmlns:domain="clr-namespace:ComponentArt.Silverlight.Demos.Web"
+    >
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Filtering with DomainDataSource" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This sample demonstrates DataGrid's filtering functionality when used with a DomainDataSource." />
+        <TextBlock
+      x:Name="DemoCodeFiles"
+      Visibility = "Collapsed"
+      Text="\source\controls\datagrid\DataGridRiaCodelessFiltering.xaml,
+            \source\controls\datagrid\DataGridRiaCodelessFiltering.xaml.cs" />
+
+        <riaControls:DomainDataSource x:Name="PostsDomainDataSource" QueryName="GetPosts" AutoLoad="True" PageSize="16">
+            <riaControls:DomainDataSource.SortDescriptors>
+                <riaData:SortDescriptor PropertyPath="PostID" Direction="Descending" />
+            </riaControls:DomainDataSource.SortDescriptors>
+            <riaControls:DomainDataSource.DomainContext>
+                <domain:PostsDomainContext />
+            </riaControls:DomainDataSource.DomainContext>
+        </riaControls:DomainDataSource>
+
+        <cart:DataGrid x:Name="DataGrid1" Width="800" Height="500"
+                     AllowGrouping="False" 
+                     AllowColumnReordering="True"                      
+                     AllowColumnResizing="True" 
+                     ColumnResizingMode="Distribute"
+                     ShowColumnFilters="True"
+                     EnableRiaCodeless="True"
+                     FilterChanged="DataGrid1_FilterChanged"
+                     ItemsSource="{Binding Data, ElementName=PostsDomainDataSource}" 
+                     PageSize="15">
+            <cart:DataGrid.Columns>
+                <cart:DataGridTemplateColumn Binding="{Binding PriorityIcon}" Width="22" AllowResizing="false" ShowFilter="False">
+                    <cart:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="cart:DataGridColumnHeader">
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </cart:DataGridTemplateColumn.HeaderStyle>
+                    <cart:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Stretch="None" />
+                        </DataTemplate>
+                    </cart:DataGridTemplateColumn.CellTemplate>
+                    <cart:DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="cart:DataGridCell">
+                            <Setter Property="Padding" Value="1" />
+                            <Setter Property="BorderThickness" Value="0,0,0,1" />
+                            <Setter Property="BorderBrush" Value="#FFC8ECF7" />
+                        </Style>
+                    </cart:DataGridTemplateColumn.CellStyle>
+                    <cart:DataGridTemplateColumn.Header>
+                        <Image Source="icon_priority.png" Stretch="None" />
+                    </cart:DataGridTemplateColumn.Header>
+                </cart:DataGridTemplateColumn>
+                <cart:DataGridTemplateColumn Binding="{Binding EmailIcon}" Width="22" AllowResizing="false" ShowFilter="False">
+                    <cart:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="cart:DataGridColumnHeader">
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </cart:DataGridTemplateColumn.HeaderStyle>
+                    <cart:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Stretch="None" />
+                        </DataTemplate>
+                    </cart:DataGridTemplateColumn.CellTemplate>
+                    <cart:DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="cart:DataGridCell">
+                            <Setter Property="Padding" Value="1" />
+                        </Style>
+                    </cart:DataGridTemplateColumn.CellStyle>
+                    <cart:DataGridTemplateColumn.Header>
+                        <Image Source="icon_icon.png" Stretch="None" />
+                    </cart:DataGridTemplateColumn.Header>
+                </cart:DataGridTemplateColumn>
+                <cart:DataGridTemplateColumn Binding="{Binding AttachmentIcon}" Width="22" AllowResizing="false" ShowFilter="False">
+                    <cart:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="cart:DataGridColumnHeader">
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </cart:DataGridTemplateColumn.HeaderStyle>
+                    <cart:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Stretch="None" />
+                        </DataTemplate>
+                    </cart:DataGridTemplateColumn.CellTemplate>
+                    <cart:DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="cart:DataGridCell">
+                            <Setter Property="Padding" Value="1" />
+                        </Style>
+                    </cart:DataGridTemplateColumn.CellStyle>
+                    <cart:DataGridTemplateColumn.Header>
+                        <Image Source="icon_attachment.png" Stretch="None" />
+                    </cart:DataGridTemplateColumn.Header>
+                </cart:DataGridTemplateColumn>
+                <cart:DataGridTextColumn Binding="{Binding Subject}" Header="Subject" Width="4*" AllowSearching="True"/>
+                <cart:DataGridTextColumn Binding="{Binding LastPostDate}" Header="Last Post" Width="2*" />
+                <cart:DataGridTextColumn Binding="{Binding StartedBy}" Header="Started By" Width="1*" AllowSearching="True"/>
+                <cart:DataGridTextColumn Binding="{Binding Replies}" Header="Replies" Width="1*" />
+                <cart:DataGridTextColumn Binding="{Binding TotalViews}" Header="Total Views" Width="1*" />
+                <cart:DataGridTemplateColumn Binding="{Binding FlagIcon}" Width="22" AllowResizing="False" ShowFilter="False">
+                    <cart:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Stretch="None" />
+                        </DataTemplate>
+                    </cart:DataGridTemplateColumn.CellTemplate>
+                    <cart:DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="cart:DataGridCell">
+                            <Setter Property="Padding" Value="3" />
+                        </Style>
+                    </cart:DataGridTemplateColumn.CellStyle>
+                    <cart:DataGridTemplateColumn.Header>
+                        <Image Source="icon_flag.png" Stretch="None" />
+                    </cart:DataGridTemplateColumn.Header>
+                </cart:DataGridTemplateColumn>
+            </cart:DataGrid.Columns>
+            <cart:DataGrid.CellStyle>
+                <Style TargetType="cart:DataGridCell">
+                    <Setter Property="Padding" Value="3" />
+                </Style>
+            </cart:DataGrid.CellStyle>
+            <cart:DataGrid.ColumnHeaderStyle>
+                <Style TargetType="cart:DataGridColumnHeader">
+                    <Setter Property="Padding" Value="5,3,3,3" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </cart:DataGrid.ColumnHeaderStyle>
+        </cart:DataGrid>
+
+    </Grid>
+</UserControl>

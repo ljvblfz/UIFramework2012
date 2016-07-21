@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Nodes>
+	<Node CssClass="nav-top feat" HoverCssClass="nav-top feat nav-top-h" ActiveCssClass="nav-top feat nav-top-a" ExpandedCssClass="nav-top feat nav-top-x" RowCssClass="nav-row-top" Text="Feature Examples" Selectable="false">
+		<Node Text="Core Features" NavigateUrl="~/calendar/coreFeatures/" />
+		<Node Text="Selected Dates" NavigateUrl="~/calendar/selectedDates/" />
+    <Node Text="Date Range Picker" NavigateUrl="~/calendar/dateRangePicker/" />
+    <Node Text="Multi-month Calendar" NavigateUrl="~/calendar/multiMonthCalendar/" />
+    <Node Text="Disabled Days Calendar" NavigateUrl="~/calendar/disabledDates/" />
+    <Node Text="Theme Switching" NavigateUrl="~/calendar/themeSwitching/" CssClass="nav-itm nav-itm-last" HoverCssClass="nav-itm-h nav-itm-last-h" SelectedCssClass="nav-itm-s nav-itm-last-s" />
+
+    <!--
+		<Node Text="Date/Time Range Picker" NavigateUrl="~/control-specific/calendar/features/datetime_rangePicker/WebForm1.aspx" />
+		<Node Text="CustomDays Collection" NavigateUrl="~/control-specific/calendar/features/custom_days/WebForm1.aspx" />
+		<Node Text="Calendar Header &amp; Footer" NavigateUrl="~/control-specific/calendar/features/header_andFooter/WebForm1.aspx" />
+		<Node Text="Server-side Events" NavigateUrl="~/control-specific/calendar/features/server_events/WebForm1.aspx" />
+		<Node Text="Calendar &amp; Picker" NavigateUrl="~/control-specific/calendar/features/calendar_picker/WebForm1.aspx" />
+		<Node Text="Standalone Calendar" NavigateUrl="~/control-specific/calendar/features/standalone_calendar/WebForm1.aspx" />
+		<Node Text="Standalone Picker" NavigateUrl="~/control-specific/calendar/features/standalone_picker/WebForm1.aspx" />
+		<Node Text="Popup Calendar" NavigateUrl="~/control-specific/calendar/features/popup_calendar/WebForm1.aspx" />
+		<Node Text="Localization" NavigateUrl="~/control-specific/calendar/features/localization/WebForm1.aspx" />
+		<Node Text="Calendar User Control" NavigateUrl="~/control-specific/calendar/features/picker_calendarUserControl/WebForm1.aspx" CssClass="nav-itm nav-itm-last" HoverCssClass="nav-itm-h nav-itm-last-h" SelectedCssClass="nav-itm-s nav-itm-last-s" />
+    -->
+	</Node>
+  <!--
+	<Node CssClass="nav-top app" HoverCssClass="nav-top app nav-top-h" ActiveCssClass="nav-top app nav-top-a" ExpandedCssClass="nav-top app nav-top-x" Text="Design Examples" Selectable="false" ChildSelectedCssClass="nil">
+		<Node Text="Black Ice Skin" NavigateUrl="~/control-specific/calendar/design/blackice/default.aspx" />
+		<Node Text="Arctic White Skin" NavigateUrl="~/control-specific/calendar/design/arcticwhite/default.aspx" />
+		<Node Text="Office 2003 Skin" NavigateUrl="~/control-specific/calendar/design/office2003/default.aspx" CssClass="nav-itm nav-itm-last" HoverCssClass="nav-itm-h nav-itm-last-h" SelectedCssClass="nav-itm-s nav-itm-last-s" />
+	</Node>
+  -->
+</Nodes>

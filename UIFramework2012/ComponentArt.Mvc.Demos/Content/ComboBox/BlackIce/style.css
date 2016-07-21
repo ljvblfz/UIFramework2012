@@ -1,0 +1,24 @@
+﻿.ddn { cursor:default;color:#666;font-family:Tahoma,"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;font-size:11px;border:1px solid #000;z-index:20000 !important; }
+.ddn-ftr { width:190px;height:8px;background:transparent url("images/static.png") no-repeat 50% -82px;overflow:hidden; } /* overflow:hidden allows IE6 to render the element's height correctly */
+
+.ddn-con { width:188px;height:auto;background-color:#f6f6f6; }
+.ddn-item { width:182px;padding-left:8px;line-height:22px;background:none; }
+.ddn-item-hover { background:transparent url("images/static.png") no-repeat;width:182px;padding-left:8px;line-height:22px;color:#000; }
+
+.cmb { padding-left:4px;background-color:#f6f6f6;border:1px solid #454545;border-right-color:#000;border-bottom-color:#000; }
+.cmb-hover { background-color:#fff; }
+.txt { background:none;border:none;margin:0;padding:0;font-family:Tahoma,"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;font-size:11px;color:#333; }
+.cmb-hover .txt { color:#000; }
+
+
+.style { background:#f6f6f6 url("images/vertical.png") repeat-y; }
+	.style .ddn-item { width:190px;height:34px;line-height:34px; }
+	.style .ddn-item-hover { width:190px;height:34px;line-height:34px;color:#333333;background:transparent url("images/static.png") no-repeat 0 -44px; }
+	.style .brk { width:190px;height:4px;background:transparent url("images/static.png") no-repeat 0 -78px; }
+
+.font { background:#f6f6f6 url("images/vertical.png") repeat-y; }
+	.font .ddn-item { width:190px;height:22px;line-height:22px; }
+	.font .ddn-item-hover { width:190px;height:22px;color:#333333;background:transparent url("images/static.png") no-repeat 0 -22px; }
+	.font .icon { width:12px;height:12px;float:left;padding:5px 16px 0 4px; }
+
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="ComponentArt.SOA.UI" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="ComponentArt.SOA.UI" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="ComponentArt.SOA.UI/Imports">
+      <xsd:import schemaLocation="http://localhost:3069/SoaDataGridMessageService.svc?xsd=xsd0" namespace="ComponentArt.SOA.UI" />
+      <xsd:import schemaLocation="http://localhost:3069/SoaDataGridMessageService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3069/SoaDataGridMessageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" />
+      <xsd:import schemaLocation="http://localhost:3069/SoaDataGridMessageService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISoaDataGridService_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="ISoaDataGridService_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoaDataGridService_Group_InputMessage">
+    <wsdl:part name="parameters" element="tns:Group" />
+  </wsdl:message>
+  <wsdl:message name="ISoaDataGridService_Group_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoaDataGridService_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="ISoaDataGridService_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoaDataGridService_Select_InputMessage">
+    <wsdl:part name="parameters" element="tns:Select" />
+  </wsdl:message>
+  <wsdl:message name="ISoaDataGridService_Select_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISoaDataGridService_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="ISoaDataGridService_Update_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISoaDataGridService">
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/Delete" message="tns:ISoaDataGridService_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/DeleteResponse" message="tns:ISoaDataGridService_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Group">
+      <wsdl:input wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/Group" message="tns:ISoaDataGridService_Group_InputMessage" />
+      <wsdl:output wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/GroupResponse" message="tns:ISoaDataGridService_Group_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/Insert" message="tns:ISoaDataGridService_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/InsertResponse" message="tns:ISoaDataGridService_Insert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Select">
+      <wsdl:input wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/Select" message="tns:ISoaDataGridService_Select_InputMessage" />
+      <wsdl:output wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/SelectResponse" message="tns:ISoaDataGridService_Select_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <wsdl:input wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/Update" message="tns:ISoaDataGridService_Update_InputMessage" />
+      <wsdl:output wsaw:Action="ComponentArt.SOA.UI/ISoaDataGridService/UpdateResponse" message="tns:ISoaDataGridService_Update_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

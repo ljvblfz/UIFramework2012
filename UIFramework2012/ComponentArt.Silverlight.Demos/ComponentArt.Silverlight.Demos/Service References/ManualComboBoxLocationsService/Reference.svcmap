@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c1398287-c0ce-4e79-92cf-4b5e16b4c7f4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3069/ManualComboBoxLocationsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ManualComboBoxLocationsService1.disco" MetadataType="Disco" ID="590f0527-829a-4377-89a6-9d8c62132d87" SourceId="1" SourceUrl="http://localhost:3069/ManualComboBoxLocationsService.svc?disco" />
+    <MetadataFile FileName="ManualComboBoxLocationsService3.xsd" MetadataType="Schema" ID="7d65c4e8-e4f5-4715-87fe-8e4743fd2441" SourceId="1" SourceUrl="http://localhost:3069/ManualComboBoxLocationsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ManualComboBoxLocationsService31.xsd" MetadataType="Schema" ID="1ac5ac74-3198-4ab8-a374-d7345fd56457" SourceId="1" SourceUrl="http://localhost:3069/ManualComboBoxLocationsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ManualComboBoxLocationsService32.xsd" MetadataType="Schema" ID="bf16d3ae-f397-400d-aef5-3464ec8b1fba" SourceId="1" SourceUrl="http://localhost:3069/ManualComboBoxLocationsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ManualComboBoxLocationsService2.wsdl" MetadataType="Wsdl" ID="2f533c21-9ff9-4df1-8a8a-1fa9332b4101" SourceId="1" SourceUrl="http://localhost:3069/ManualComboBoxLocationsService.svc?wsdl" />
+    <MetadataFile FileName="ManualComboBoxLocationsService21.wsdl" MetadataType="Wsdl" ID="a1d9d515-97c0-4f85-a974-3e802aed8f50" SourceId="1" SourceUrl="http://localhost:3069/ManualComboBoxLocationsService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

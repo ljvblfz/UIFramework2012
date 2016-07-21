@@ -1,0 +1,16 @@
+/* Icons */
+.cart-navbar-top-item .mail { background-image:url("images/mail.png") !important;background-repeat:no-repeat !important; background-position: 0 7px !important;}
+.cart-navbar-top-item .notes { background-image:url("images/notes.gif") !important; background-repeat:no-repeat !important; background-position:0 7px !important;}
+.cart-navbar-top-item .contacts { background-image:url("images/contacts.gif") !important; background-repeat:no-repeat !important; background-position:0 7px !important;}
+
+.cart-navbar-sub-item .mailbox { background-image:url("images/mailbox.gif") !important; background-repeat:no-repeat !important; }
+.cart-navbar-sub-item .inbox { background-image:url("images/inbox.gif") !important; background-repeat:no-repeat !important; }
+.cart-navbar-sub-item .drafts { background-image:url("images/drafts.gif") !important; background-repeat:no-repeat !important; }
+.cart-navbar-sub-item .outbox { background-image:url("images/outbox.gif") !important; background-repeat:no-repeat !important; }
+.cart-navbar-sub-item .junk { background-image:url("images/junk.gif") !important; background-repeat:no-repeat !important; }
+.cart-navbar-sub-item .deleted { background-image:url("images/deleted.gif") !important; background-repeat:no-repeat !important; }
+.cart-navbar-sub-item .search { background-image:url("images/search.gif") !important; background-repeat:no-repeat !important; }
+.cart-navbar-sub-item .sent { background-image:url("images/sentItems.gif") !important; background-repeat:no-repeat !important; }
+
+.cart-navbar-sub-item .contact { background-image:url("images/contacts.gif") !important; background-repeat:no-repeat !important; }
+.cart-navbar-sub-item .note { background-image:url("images/notes.gif") !important; background-repeat:no-repeat !important; }

@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data"
+	xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+>
+
+
+	<!-- BEGIN VALUE CONVERTERS-->
+	<ComponentArt:DataGridNumberFormatter x:Key="NumberToFormattedNumber" />
+	<ComponentArtCommon:ConvertToThickness x:Key="DataGridStringToThickness" />
+	<sys:String x:Key="ComponentArt_DataGrid_NumberFormat">{0:#,###,###,###,###,###,###,###,###,##0}</sys:String>
+	<!-- END VALUE CONVERTERS-->
+
+	<sys:String x:Key="ComponentArt_DataGrid_RowPadding">0</sys:String>
+
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_UnloadedBackground" Color="{StaticResource Palette_Secondary}" />
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_LoadedBackground" Color="{StaticResource Palette_Foreground}" />
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_BorderBrush" Color="{StaticResource Palette_Dark}" />
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_Background" MappingMode="Absolute" StartPoint="0,0" EndPoint="0,100">
+		<GradientStop Color="{StaticResource Palette_Light}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="0.21" />
+		<GradientStop Color="{StaticResource Palette_Dark}" Offset="0.21" />
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="0.42" />
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="0.42" /> <!-- this should not be visible but there's too much padding arounf the content & footer areas -->
+	</LinearGradientBrush>
+
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_SearchBoxBackground" Color="White" />
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_SearchBoxForeground" Color="Black" />
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_SearchBoxWatermarkForeground" Color="#FFE0E0E0" />
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_GroupBoxBackground" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_Light}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Dark}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="1" />
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_GroupHeadingBorderBrush" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_Foreground}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Light}" Offset="1" />
+	</LinearGradientBrush>
+
+	<sys:String x:Key="ComponentArt_DataGrid_GroupHeadingNameValueSeparatorText">:</sys:String>
+
+	<sys:String x:Key="ComponentArt_DataGrid_GroupHeadingMargin">5,0,0,0</sys:String>
+
+	<sys:String x:Key="ComponentArt_DataGrid_GroupingHeadingBorderThickness">0,1,0,1</sys:String>
+
+	<sys:Double x:Key="ComponentArt_DataGrid_GroupHeadingHeight">23</sys:Double>
+
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_GroupHeadingBackground" Color="{StaticResource Palette_Secondary}" />
+
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_GroupBackground" Color="{StaticResource Palette_Foreground}" />
+
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_PagerButtonBorderBrush" Color="{StaticResource Palette_Dark}" />
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_PagerButtonBackground" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_Light}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Dark}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="1" />
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_ColumnHeaderBorderBrush" StartPoint="0,0" EndPoint="1,0">
+		<GradientStop Color="{StaticResource Palette_Extralight}" Offset="0"/>
+		<GradientStop Color="{StaticResource Palette_SecondaryExtralight}" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_ColumnHeaderBackground" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_SecondaryLight}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Secondary}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_SecondaryDark}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Secondary}" Offset="1" />
+	</LinearGradientBrush>
+
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_DefaultEditCellBackground" Color="#FFF0F0F0" />
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_ColumnHeaderHoverBorderBrush" StartPoint="0,0" EndPoint="1,0">
+		<GradientStop Color="{StaticResource Palette_Extralight}" Offset="0"/>
+		<GradientStop Color="{StaticResource Palette_SecondaryExtralight}" Offset="1"/>
+	</LinearGradientBrush>
+
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_ColumnHeaderHoverBackground" Color="{StaticResource Palette_SecondaryLight}" Opacity="0.75" />
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_ColumnDragBackground" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_SecondaryLight}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Secondary}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_SecondaryDark}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Secondary}" Offset="1" />
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_ColumnResizeBackground" StartPoint="0,0" EndPoint="1,0" Opacity="0.3">
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="0"/>
+		<GradientStop Color="{StaticResource Palette_Transparent}" Offset="0.3"/>
+		<GradientStop Color="{StaticResource Palette_Transparent}" Offset="0.7"/>
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="1.0"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_FooterBackground" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_Light}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Dark}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Base}" Offset="1" />
+	</LinearGradientBrush>
+
+	<Style TargetType="Rectangle" x:Key="ComponentArt_DataGrid_RowHoverBackgroundRectangle">
+		<Setter Property="Fill" Value="{StaticResource Palette_SecondaryDark}" />
+	</Style>
+
+	<Style TargetType="Rectangle" x:Key="ComponentArt_DataGrid_RowSelectedBackgroundRectangle">
+		<Setter Property="Fill" Value="{StaticResource Palette_Extralight}" />
+	</Style>
+
+	<Style TargetType="Rectangle" x:Key="ComponentArt_DataGrid_RowBottomLineRectangle">
+		<Setter Property="Height" Value="1" />
+		<Setter Property="Fill" Value="{StaticResource Palette_SecondaryDark}" />
+	</Style>
+
+	<Style TargetType="Border" x:Key="ComponentArt_DataGrid_HeaderBorder">
+		<Setter Property="Padding" Value="3" />
+		<Setter Property="Height" Value="36" />
+	</Style>
+
+	<Style TargetType="Border" x:Key="ComponentArt_DataGrid_FooterBorder">
+		<Setter Property="Height" Value="50" />
+		<Setter Property="Padding" Value="7" />
+		<Setter Property="CornerRadius" Value="0,0,2,2" />
+		<Setter Property="Background" Value="{StaticResource ComponentArt_DataGrid_FooterBackground}" />
+		<Setter Property="Margin" Value="0" />
+	</Style>
+
+
+
+	<SolidColorBrush x:Key="ComponentArt_DataGrid_Foreground" Color="{StaticResource Palette_Dark}" />
+
+	<Style x:Key="ComponentArt_DataGrid_PagerInfoTextStyle" TargetType="TextBlock">
+		<Setter Property="Foreground" Value="{StaticResource Palette_Foreground}" />
+	</Style>
+
+	<sys:String x:Key="ComponentArt_DataGrid_PagerButtonBorderThickness">1</sys:String>
+
+	<sys:String x:Key="ComponentArt_DataGrid_PagerButtonCornerRadius">2</sys:String>
+
+
+	<LinearGradientBrush x:Key="ComponentArt_DataGrid_TextOverflowToolTipBorderBackground" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#FFFFFF" Offset=".3854"/>
+		<GradientStop Color="#000000" Offset=".3855"/>
+		<GradientStop Color="#000000" Offset=".3875"/>
+		<GradientStop Color="#F6F6F6" Offset=".38786"/>
+	</LinearGradientBrush>
+
+    <!-- BEGIN NEWLY ADDED RESOURCES -->
+
+    <ControlTemplate x:Key="ComponentArt_DataGrid_ColumnHeadingAscendingArrow">
+        <Grid>
+            <Image Margin="1" Source="/ComponentArt.Silverlight.UI.Data;component/Assets/sort_ascending.png" Stretch="None" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ComponentArt_DataGrid_ColumnHeadingDescendingArrow">
+        <Grid>
+            <Image Margin="1" Source="/ComponentArt.Silverlight.UI.Data;component/Assets/sort_descending.png" Stretch="None" />
+        </Grid>
+    </ControlTemplate>
+
+    <SolidColorBrush x:Key="ComponentArt_DataGrid_ExpandCollapseGlyphForeground" Color="{StaticResource Palette_Base}" />
+    <SolidColorBrush x:Key="ComponentArt_DataGrid_ExpandCollapseGlyphBackground" Color="{StaticResource Palette_SecondaryExtralight}" />
+
+		<Style TargetType="Button" x:Key="ComponentArt_DataGrid_GroupingDescendingArrowButton">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Canvas Height="5" Width="9" Background="Transparent">
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="Arrow" Storyboard.TargetProperty="(Path.Fill).Color" To="{StaticResource Palette_SecondaryExtralight}" Duration="0:0:0.2" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+
+                        <Path x:Name="Arrow" Fill="#FFDDDDDD" Data="M0,0 L5,5 L9,0 L0,0" />
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button" x:Key="ComponentArt_DataGrid_GroupingAscendingArrowButton">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Canvas Height="5" Width="9" Background="Transparent">
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal" />
+                                <vsm:VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="Arrow" Storyboard.TargetProperty="(Path.Fill).Color" To="{StaticResource Palette_SecondaryExtralight}" Duration="0:0:0.2" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+
+                        <Path x:Name="Arrow" Fill="#FFDDDDDD" Data="M5,0 L9,5 L0,5 L5,0" />
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button" x:Key="ComponentArt_DataGrid_GroupBoxClose">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="Image" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2" />
+                                        <DoubleAnimation Storyboard.TargetName="ImageHover" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.2" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="Image" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.2" />
+                                        <DoubleAnimation Storyboard.TargetName="ImageHover" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+
+                        <Canvas Width="12" Height="11" x:Name="Image">
+                            <Border CornerRadius="2" Width="12" Height="11" Margin="1">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="{StaticResource Palette_Dark}" Offset="0" />
+                                        <GradientStop Color="{StaticResource Palette_Base}" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+
+                                <Border CornerRadius="2" Width="10" Height="8.5" Margin="1">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="{StaticResource Palette_AccentLight}" Offset="0" /><!-- accent_light -->
+                                            <GradientStop Color="{StaticResource Palette_AccentLight}" Offset="0.5" /><!-- accent_light -->
+                                            <GradientStop Color="{StaticResource Palette_Accent}" Offset="0.5" /><!-- accent -->
+                                            <GradientStop Color="{StaticResource Palette_Accent}" Offset="1" /><!-- accent -->
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+
+                                    <Canvas Width="10" Height="8.5">
+                                        <Path Fill="#eeeeee" Data="F1 M 8.611,6.371 L 7.495,7.319 L 1.389,2.129 L 2.505,1.181 L 8.611,6.371 Z" />
+                                        <Path Fill="#eeeeee" Data="F1 M 2.505,7.319 L 1.389,6.371 L 7.495,1.181 L 8.611,2.129 L 2.505,7.319 Z" />
+                                    </Canvas>
+                                </Border>
+                            </Border>
+                        </Canvas>
+
+                        <Canvas Width="12" Height="11" x:Name="ImageHover">
+                            <Border CornerRadius="2" Width="12" Height="11" Margin="1">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="{StaticResource Palette_Dark}" Offset="0" />
+                                        <GradientStop Color="{StaticResource Palette_Dark}" Offset="0.5" />
+                                        <GradientStop Color="{StaticResource Palette_Base}" Offset="1" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+
+                                <Border CornerRadius="2" Width="10" Height="8.5" Margin="1">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#ff704c" Offset="0" /><!-- accent_extralight -->
+                                            <GradientStop Color="#ff704c" Offset="0.5" /><!-- accent_extralight -->
+                                            <GradientStop Color="#ff3300" Offset="0.5" /><!-- accent_light -->
+                                            <GradientStop Color="#ff3300" Offset="1" /><!-- accent_light -->
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+
+                                    <Canvas Width="10" Height="8.5">
+                                        <Path Fill="#ffffff" Data="F1 M 8.611,6.371 L 7.495,7.319 L 1.389,2.129 L 2.505,1.181 L 8.611,6.371 Z" />
+                                        <Path Fill="#ffffff" Data="F1 M 2.505,7.319 L 1.389,6.371 L 7.495,1.181 L 8.611,2.129 L 2.505,7.319 Z" />
+                                    </Canvas>
+                                </Border>
+                            </Border>
+                        </Canvas>
+
+                        <!--<Path x:Name="Image" Fill="#ff00ff" Data="M5,0 L9,5 L0,5 L5,0" />-->
+                        <!--<Image x:Name="Image" Source="/ComponentArt.Silverlight.UI.Data;component/Assets/groupbox_close.png" Stretch="None"/>-->
+                        <!--<Image x:Name="ImageHover" Source="/ComponentArt.Silverlight.UI.Data;component/Assets/groupbox_close_hover.png" Opacity="0" Stretch="None"/>-->
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

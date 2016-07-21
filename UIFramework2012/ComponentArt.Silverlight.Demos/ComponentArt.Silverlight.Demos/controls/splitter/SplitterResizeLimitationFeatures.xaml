@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.SplitterResizeLimitationFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:CArt_Layout="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:CArt_Nav="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+             xmlns:CArt_Data="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data"
+    >
+    <Grid>
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Splitter" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Limited Resizing" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases Splitter's minimum grid cell size support." />
+            <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\Splitter\SplitterResizeLimitationFeatures.xaml" />
+
+        <Grid Height="500" Width="760">
+            <Border CornerRadius="2" Background="Black" Padding="3" >
+                <Grid x:Name="LayoutRoot">
+                    <Grid.ColumnDefinitions>
+                        
+                        <!-- Splitter respects the MiWidth and MaxWidth properties of columns, 
+                             and MinHeight and MaxHeight properties of the rows. -->
+                        
+                        <ColumnDefinition Width="*" MinWidth="60"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Vertical Splitter -->
+                    <CArt_Layout:Splitter CollapseDirection="Left" Grid.Column="1"/>
+
+                    <Grid Background="LightGreen" Grid.Column="0" >
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Run>Left Side</Run><LineBreak/><Run>MinWidth = 60</Run>
+                        </TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Column="2" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" MinHeight="20"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*" MinHeight="100"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="LightBlue">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Run>Top Right</Run><LineBreak/><Run>MinHeight = 20</Run>
+                            </TextBlock>
+                        </Grid>
+
+                        <!-- Horizontal Splitter -->
+                        <CArt_Layout:Splitter CollapseDirection="Up" Grid.Row="1"/>
+
+                        <Grid Background="LightYellow" Grid.Row="2">
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Run>Bottom Right</Run><LineBreak/><Run>MinHeight = 100</Run>
+                            </TextBlock>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

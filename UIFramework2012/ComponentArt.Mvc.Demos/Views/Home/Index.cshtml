@@ -1,0 +1,154 @@
+﻿@{
+  Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["DemoTitle"] = "";
+	ViewData["BodyClass"] = "full";
+	ViewData["DemoType"] = "Index";
+}
+
+@section HeadContent {
+
+  <link href="@Url.Content("~/Content/common/css/override.css")" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+#idx { width:1076px;height:auto;background:none;padding:16px 0 0;color:#333;float:left; }
+
+	#idx div.bob { margin:9px 0 0;background:transparent url("content/common/img/20101/idx/bob/bg.png") no-repeat;height:261px !important;padding:25px 0 0 292px; }
+
+		#idx div.bob h2 { width:312px;height:20px;line-height:20px;text-indent:-10000px;background:transparent url("content/common/img/20101/idx/static.png") no-repeat;margin:0;padding:0; }
+		#idx div.bob h3 { width:440px;height:20px;line-height:20px;text-indent:-10000px;background:transparent url("content/common/img/20101/idx/static.png") no-repeat 0 -20px;margin:2px 0 15px;padding:0; }
+
+		#idx div.bob ul { list-style:none;margin:0;padding:12px 0 0;width:702px;height:130px;border-top:1px solid #ddd; }
+			#idx div.bob ul li { width:168px;height:56px;float:left;margin:0 8px 7px 0; }
+			#idx div.bob ul li.end { margin-right:0; }
+				#idx div.bob ul li a { display:block;width:100%;height:100%;background:transparent url("content/common/img/20101/idx/static.png") no-repeat 0 -40px;cursor:pointer; }
+				#idx div.bob ul li a:hover { background-position:-168px -40px; }
+
+					#idx div.bob ul li a span { display:block;width:100%;height:100%;background:transparent url("content/common/img/20101/idx/static.png") no-repeat 0 -96px;text-indent:-10000px; }
+					#idx div.bob ul li a span { background-position:0 -96px; }
+					#idx div.bob ul li a.nav span { background-position:-168px -96px; }
+					#idx div.bob ul li a.tb span { background-position:-336px -96px; }
+					#idx div.bob ul li a.cmb span { background-position:-504px -96px; }
+
+					#idx div.bob ul li a.tv span { background-position:0 -152px; }
+					#idx div.bob ul li a.tab span { background-position:-168px -152px; }
+					#idx div.bob ul li a.dg span { background-position:-336px -152px; }
+					#idx div.bob ul li a.cal span { background-position:-504px -152px; }
+
+
+	#idx div.int { width:460px;height:223px !important;float:left;padding:0 0 0 7px; }
+		#idx div.int h2 { width:190px;height:18px;margin:0 0 0 5px;padding:0;line-height:18px;font-size:14px;text-transform:uppercase;background:transparent url("content/common/img/20101/idx/static.png") no-repeat 0 -208px;text-indent:-10000px; }
+		#idx div.int p { padding:0 0 5px 5px;margin:0;height:23px;line-height:13px; }
+
+		#idx div.int ul { float:left;margin:0;padding:0;list-style:none; }
+			#idx div.int ul li { float:left;padding:0 10px 0 0; }
+				#idx div.int ul li a { display:block;width:210px;height:164px;padding:5px;text-decoration:none;color:#333; }
+					#idx div.int ul li a span.h2 { display:block;margin:0;padding:2px 0 0;line-height:20px;height:20px;color:#608600;font-weight:bold;font-size:12px;cursor:pointer; }
+					#idx div.int ul li a span.txt { display:block;margin:0;padding:0;line-height:13px;color:#333;font-size:11px;cursor:pointer; }
+
+				#idx div.int ul li a:hover { background:transparent url("content/common/img/20101/idx/static.png") no-repeat 0 -226px;text-decoration:none; }
+
+	#idx div.tech { width:235px;height:223px !important;float:left;margin:0 0 0 45px;padding:0; }
+		#idx div.tech h2 { width:223px;height:18px;margin:0;padding:0;line-height:18px;font-size:14px;text-transform:uppercase;background:transparent url("content/common/img/20101/idx/static.png") no-repeat -220px -208px;text-indent:-10000px; }
+		#idx div.tech p { padding:0;margin:0;line-height:14px; }
+
+		#idx div.tech h4 { font-size:12px;font-weight:bold;color:#333;line-height:16px;margin:0;padding:15px 0 0; }
+
+		#idx div.tech ul { margin:0;padding:0;list-style:none;width:250px; }
+			#idx div.tech ul li { height:16px;line-height:16px;background:transparent url("content/common/img/20101/idx/static.png") no-repeat -220px -376px;padding:0 0 0 10px; }
+
+
+
+	#idx div.des { width:220px;height:223px !important;float:left;padding:0 0 0 50px; }
+		#idx div.des h2 { width:171px;height:18px;margin:0 0 0 5px;padding:0;line-height:18px;font-size:14px;text-transform:uppercase;background:transparent url("content/common/img/20101/idx/static.png") no-repeat -443px -208px;text-indent:-10000px; }
+		#idx div.des p { padding:0 0 3px 5px;margin:0;line-height:13px; }
+
+		#idx div.des ul { float:left;margin:0;padding:0;list-style:none; }
+			#idx div.des ul li { float:left;padding:0; }
+				#idx div.des ul li a { display:block;width:210px;height:164px;padding:5px;text-decoration:none;color:#333; }
+					#idx div.des ul li a span.h2 { display:block;margin:0;padding:2px 0 0;line-height:20px;height:20px;color:#608600;font-weight:bold;font-size:12px;cursor:pointer; }
+					#idx div.des ul li a span.txt { display:block;margin:0;padding:0;line-height:13px;color:#333;font-size:11px;cursor:pointer; }
+
+				#idx div.des ul li a:hover { background:transparent url("content/common/img/20101/idx/static.png") no-repeat 0 -226px;text-decoration:none; }
+
+#txt { display:none; }
+</style>
+}
+
+<!-- <Asp:Content Id="indexContent" ContentPlaceHolderId="MainContent" RunAt="server"> -->
+@*----------------------------------------------------------------------------------*@
+<div id="idx">
+	<div class="bob">
+		<h2>Best-of-Breed ASP.NET MVC UI</h2>
+		<h3>The Finest Line of Business Controls for ASP.NET MVC in One Box.</h3>
+
+		<ul>
+			<li><a href="datagrid/coreFeatures/" onclick="this.blur();" class="dg"><span>DataGrid for ASP.NET MVC</span></a></li>
+			<li><a href="treeview/coreFeatures/" onclick="this.blur();" class="tv"><span>TreeView for ASP.NET MVC</span></a></li>
+			<li><a href="menu/coreFeatures/" onclick="this.blur();" class="mnu"><span>Menu for ASP.NET MVC</span></a></li>
+			<li class="end"><a href="combobox/coreFeatures/" onclick="this.blur();" class="cmb"><span>ComboBox for ASP.NET MVC</span></a></li>
+
+			<li><a href="navbar/ThemeSwitching/" onclick="this.blur();" class="nav"><span>NavBar for ASP.NET MVC</span></a></li>
+			<li><a href="tabstrip/coreFeatures/" onclick="this.blur();" class="tab"><span>TabStrip for ASP.NET MVC</span></a></li>
+			<li><a href="toolbar/coreFeatures/" onclick="this.blur();" class="tb"><span>ToolBar for ASP.NET MVC</span></a></li>
+			<li class="end"><a href="calendar/coreFeatures/" onclick="this.blur();" class="cal"><span>Calendar for ASP.NET MVC</span></a></li>
+		</ul>
+	</div>@* /best-of-breed *@
+
+	<div class="int">
+		<h2>Integration Demos</h2>
+		<p>Incorporating multiple controls to demonstrate complex, real-life scenarios.</p>
+
+		<ul>
+			<li class="out">
+				<a href="integration/outlook/" onclick="this.blur();">
+					<img src="content/common/img/20101/idx/int/outlook.jpg" width="210" height="110" alt="Outlook 2007" border="0" />
+					<span class="h2">Outlook 2007</span>
+					<span class="txt">Built using DataGrid, Menu, NavBar, TreeView, ToolBar &amp; Splitter.</span>
+				</a>
+			</li>
+
+			<li class="feed">
+				<a href="integration/feedbrowser/" onclick="this.blur();">
+					<img src="content/common/img/20101/idx/int/feedbrowser.jpg" width="210" height="110" alt="Feed Browser" border="0" />
+					<span class="h2">Feed Browser</span>
+					<span class="txt">Built using DataGrid, TreeView, Menu, ToolBar, &amp; TabStrip.</span>
+				</a>
+			</li>
+		</ul>
+	</div>@* /integration demos *@
+
+	<div class="tech">
+		<h2>Technology Showcase</h2>
+		<p>Examples demonstrating technologically exceptional features and functionality.</p>
+
+		<h4>Client-Side API</h4>
+		<ul>
+			<li><a href="clientSideAPI/creation/" onclick="this.blur();">Client-side Creation</a></li>
+			<li><a href="clientSideAPI/fullApp/" onclick="this.blur();">Full Client-side App</a></li>
+		</ul>
+
+		<h4>MVC-Specific Features</h4>
+		<ul>
+			<li><a href="datagrid/CallbackRunningMode/" onclick="this.blur();">DataGrid AJAX Paging, Sorting, Grouping</a></li>
+			<li><a href="datagrid/coreFeatures/" onclick="this.blur();">DataGrid Automatic Binding to Model</a></li>
+			<li><a href="combobox/coreFeaturesAjax/" onclick="this.blur();">ComboBox AJAX Auto-Complete</a></li>
+      <li><a href="comboBox/coreFeatures/" onclick="this.blur();">ComboBox Selection Posting</a></li>
+		</ul>
+	</div>@* /besttechnology showcase*@
+
+	<div class="des">
+		<h2>Design Showcase</h2>
+		<p>See the richness and flexibility of Web.UI's ready-to-use designs.</p>
+
+		<ul>
+			<li>
+				<a href="design/themes/" onclick="this.blur();">
+					<img src="content/common/img/20101/idx/des/themes.jpg" width="210" height="110" alt="Themes" border="0" />
+					<span class="h2">Themes</span>
+					<span class="txt">Built-in visual styles &ndash; Office 2010, Outlook 2007, Black Ice and more.</span>
+				</a>
+			</li>
+		</ul>
+	</div>@* /design showcase *@
+</div>
+@*----------------------------------------------------------------------------------*@

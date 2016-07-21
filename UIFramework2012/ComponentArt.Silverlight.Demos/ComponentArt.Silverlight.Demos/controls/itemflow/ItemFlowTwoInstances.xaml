@@ -1,0 +1,118 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.ItemFlowTwoInstances"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common">
+    <Grid x:Name="LayoutRoot">
+    	<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ItemFlow" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Two ItemFlow Instances" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo uses one instance of ItemFlow as an index of static thumbnails to control another instance through its API." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\itemflow\ItemFlowTwoInstances.xaml,
+            \source\controls\itemflow\ItemFlowTwoInstances.xaml.cs" />
+        <StackPanel>
+            <Border Background="#DDFFFFFF"
+            BorderThickness="5"
+            BorderBrush="Black"
+            CornerRadius="10"
+            Padding="20">
+                <StackPanel>
+
+                    <ComponentArt:ItemFlow
+                          x:Name="myItemFlow"
+                          Height="250"
+                          Width="800"
+                          ItemHeight="120"
+                          ItemWidth="120"
+                          ItemSpacing="1.4"
+                          Zoom=".75"
+                          SelectedOffsetY="-22"
+                          HorizontalPerspective="1"
+                          VerticalPerspective="0"
+                          SelectedIndex="7"
+                          SlowAnimationDuration="750"
+                          InstantAnimationDuration="5"
+                          ItemOverTransformOffsetY="25"
+                          ItemOffTransformDuration="500"
+                          ScrollOnClick="True"
+                          TransformSelectedItem="False"
+                          ReflectionAlphaStart="75"
+                          ReflectionAlphaEnd="0"
+                          ReflectionAlphaOffset=".5"
+                          CompositeImageOverlap=".5"
+                          >
+                        <ComponentArt:ItemFlow.Items>
+                            <ComponentArt:ItemFlowItem ImageSource="dataGrid.PNG" Text="Grid" />
+                            <ComponentArt:ItemFlowItem ImageSource="dialog.PNG" Text="Dialog"/>
+                            <ComponentArt:ItemFlowItem ImageSource="editor.PNG" Text="Editor" />
+                            <ComponentArt:ItemFlowItem ImageSource="menu.PNG" Text="Menu"/>
+                            <ComponentArt:ItemFlowItem ImageSource="multiPage.PNG" Text="MultiPage"/>
+                            <ComponentArt:ItemFlowItem ImageSource="rotator.PNG" Text="Rotator"/>
+                            <ComponentArt:ItemFlowItem ImageSource="slider.PNG" Text="Slider"/>
+                            <ComponentArt:ItemFlowItem ImageSource="siteMap.PNG" Text="SiteMap"/>
+                            <ComponentArt:ItemFlowItem ImageSource="snap.PNG" Text="Snap"/>
+                            <ComponentArt:ItemFlowItem ImageSource="splitter.PNG" Text="Splitter"/>
+                            <ComponentArt:ItemFlowItem ImageSource="tabStrip.PNG" Text="TabStrip"/>
+                            <ComponentArt:ItemFlowItem ImageSource="treeView.PNG" Text="TreeView"/>
+                            <ComponentArt:ItemFlowItem ImageSource="upload.PNG" Text="Upload"/>
+                            <ComponentArt:ItemFlowItem ImageSource="calendar.PNG" Text="Calendar"/>
+                            <ComponentArt:ItemFlowItem ImageSource="colorPicker.PNG" Text="ColorPicker"/>
+                        </ComponentArt:ItemFlow.Items>
+                        <ComponentArt:ItemFlow.SelectedItemTemplate>
+                            <DataTemplate>
+                                <Grid Height="150" Width="120" >
+                                        <TextBlock Padding=".5,0,.5,0" FontFamily="Verdana" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="#555555" FontSize="20" Text="{Binding Path=Item.Text}"></TextBlock>
+                                </Grid>
+                            </DataTemplate>
+                        </ComponentArt:ItemFlow.SelectedItemTemplate>
+                    </ComponentArt:ItemFlow>
+                    <StackPanel Margin="0,-50,0,0">
+                    <ComponentArt:ItemFlow
+                          x:Name="myItemFlowIndex"
+                          ItemClick="myItemFlowIndex_ItemClick"
+                          Height="75"
+                          Width="800"
+                          ItemHeight="35"
+                          ItemWidth="35"
+                          ItemSpacing="1.5"
+                          Zoom="1"
+                          SelectedIndex="7"
+                          HorizontalPerspective="1"
+                          VerticalPerspective="0"
+                          ScrollOnClick="False"
+                          ScrollOnDrag="False"
+                          TransformSelectedItem="True"
+                          ShowReflections="True"
+                          ReflectionAlphaStart="75"
+                          ReflectionAlphaEnd="0"
+                          ReflectionAlphaOffset=".5"
+                          CompositeImageOverlap=".15"
+                          MouseWheelEnabled="False"
+                          >
+                        <ComponentArt:ItemFlow.Items>
+                                <ComponentArt:ItemFlowItem ImageSource="dataGrid_thumb.PNG" Text="Grid" />
+                                <ComponentArt:ItemFlowItem ImageSource="dialog_thumb.PNG" Text="Dialog"/>
+                                <ComponentArt:ItemFlowItem ImageSource="editor_thumb.PNG" Text="Editor" />
+                                <ComponentArt:ItemFlowItem ImageSource="menu_thumb.PNG" Text="Menu"/>
+                                <ComponentArt:ItemFlowItem ImageSource="multiPage_thumb.PNG" Text="MultiPage"/>
+                                <ComponentArt:ItemFlowItem ImageSource="rotator_thumb.PNG" Text="Rotator"/>
+                                <ComponentArt:ItemFlowItem ImageSource="slider_thumb.PNG" Text="Slider"/>
+                                <ComponentArt:ItemFlowItem ImageSource="siteMap_thumb.PNG" Text="SiteMap"/>
+                                <ComponentArt:ItemFlowItem ImageSource="snap_thumb.PNG" Text="Snap"/>
+                                <ComponentArt:ItemFlowItem ImageSource="splitter_thumb.PNG" Text="Splitter"/>
+                                <ComponentArt:ItemFlowItem ImageSource="tabStrip_thumb.PNG" Text="TabStrip"/>
+                                <ComponentArt:ItemFlowItem ImageSource="treeView_thumb.PNG" Text="TreeView"/>
+                                <ComponentArt:ItemFlowItem ImageSource="upload_thumb.PNG" Text="Upload"/>
+                                <ComponentArt:ItemFlowItem ImageSource="calendar_thumb.PNG" Text="Calendar"/>
+                                <ComponentArt:ItemFlowItem ImageSource="colorPicker_thumb.PNG" Text="ColorPicker"/>
+                            </ComponentArt:ItemFlow.Items>
+                    </ComponentArt:ItemFlow>
+                   </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

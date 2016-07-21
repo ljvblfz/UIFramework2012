@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="ComponentArt.SOA.Demos.ComboBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"             
+    xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+    >
+  <Grid>
+
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ComboBox" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="ComboBox SOA Simple Loading" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" >
+            <Run>• On load, the ComboBox control instance automatically downloads its item data from a SOA.UI web service.</Run><LineBreak/>
+        </TextBlock>
+
+        <ComponentArt:ComboBox x:Name="MyComboBox"
+                                   Margin="40" IsReadOnly="True" MaxPopupHeight="350"
+                                   Height="24" Width="170"
+                                   Foreground="Indigo"
+                                   SoaServiceUrl="../Services/SoaSimpleComboBoxService.svc"
+                                   DataFieldName="LocationName"
+                                   OperationType="SOA"
+                                   SoaPageSize="50"
+                                   MaxItemsDuringPaging="50"
+                                   ExpandDuration="1"
+                                   CollapseDuration="1"
+                                   MinPrefixLength="1" />
+    
+  </Grid>
+</UserControl>

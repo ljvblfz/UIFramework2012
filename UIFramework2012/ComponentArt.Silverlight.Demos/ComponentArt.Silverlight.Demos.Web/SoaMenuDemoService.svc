@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ComponentArt.Silverlight.Demos.Web.SoaMenuDemoService" CodeBehind="SoaMenuDemoService.svc.cs" %>

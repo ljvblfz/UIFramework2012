@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.SplitterDesignWindows7"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common" 
+>
+	<UserControl.Resources>
+		<ComponentArtTheming:Theme
+			x:Key="Windows7SplitterTheme" 
+			BaseSource="/ComponentArt.Silverlight.UI.Layout;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Silverlight.Themes.Windows7;component/Splitter.xaml"
+		/>
+		
+		<!-- Paths cannot be directly used as resources, and need to be wrapped into DataTemplates -->
+		<DataTemplate x:Key="dtLeftArrow">
+			<Canvas Width="11" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Path Fill="#ffffff" Data="F1 M 8.096,16 L 9,15.760 L 9,13.458 L 8.888,13.219 L 5.484,10.001 L 8.888,6.785 L 9,6.545 L 9,4.240 L 8.096,4 L 2,9.761 L 2,10.240 L 8.096,16 Z"/>
+				<Path Fill="#00339a" Data="F1 M 4.834,10 L 8.491,6.544 L 8.491,4.239 L 2.396,10 L 8.491,15.760 L 8.491,13.457 L 4.834,10 Z"/>
+			</Canvas>
+		</DataTemplate>
+		<DataTemplate x:Key="dtRightArrow">
+			<Canvas Width="11" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Path Fill="#ffffff" Data="F1 M 2.904,4 L 2,4.240 L 2,6.542 L 2.112,6.781 L 5.516,9.999 L 2.112,13.215 L 2,13.455 L 2,15.760 L 2.904,16 L 9,10.239 L 9,9.760 L 2.904,4 Z"/>
+				<Path Fill="#00339a" Data="F1 M 6.166,10 L 2.509,13.456 L 2.509,15.761 L 8.604,10 L 2.509,4.240 L 2.509,6.543 L 6.166,10 Z"/>
+			</Canvas>
+		</DataTemplate>
+		<DataTemplate x:Key="dtUpArrow">
+			<Canvas Width="20" Height="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Path Fill="#ffffff" Data="F1 M 4,8.096 L 4.240,9 L 6.542,9 L 6.782,8.888 L 10,5.484 L 13.215,8.888 L 13.455,9 L 15.760,9 L 16,8.096 L 10.240,2 L 9.760,2 L 4,8.096 Z"/>
+				<Path Fill="#00339a" Data="F1 M 10,4.834 L 13.456,8.491 L 15.761,8.491 L 10,2.396 L 4.240,8.491 L 6.542,8.491 L 10,4.834 Z"/>
+			</Canvas>
+		</DataTemplate>
+		<DataTemplate x:Key="dtDownArrow">
+			<Canvas Width="20" Height="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Path Fill="#ffffff" Data="F1 M 16,2.904 L 15.760,2 L 13.458,2 L 13.219,2.112 L 10.001,5.516 L 6.785,2.112 L 6.545,2 L 4.240,2 L 4,2.904 L 9.761,9 L 10.240,9 L 16,2.904 Z"/>
+				<Path Fill="#00339a" Data="F1 M 10,6.166 L 6.544,2.509 L 4.239,2.509 L 10,8.604 L 15.760,2.509 L 13.457,2.509 L 10,6.166 Z"/>
+			</Canvas>
+		</DataTemplate>
+	</UserControl.Resources>
+
+	<Grid>
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Splitter" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Windows 7 Splitter" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="A Windows 7-styled Splitter." />
+		<TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\Splitter\SplitterDesignWindows7.xaml" />
+
+		<Grid Height="500" Width="760">
+			<Border CornerRadius="0" Background="#ffffff" Padding="3" BorderBrush="#acb8c5" BorderThickness="1">
+				<Grid x:Name="LayoutRoot">
+					<Grid.RowDefinitions>
+						<RowDefinition />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+
+					<!-- Vertical Splitter -->
+					<ComponentArt:Splitter CollapseDirection="Left" ShowsPreview="False" Grid.Column="1" Theme="{ StaticResource Windows7SplitterTheme }">
+						<ComponentArt:Splitter.CollapseButtonContent>
+							<ContentControl ContentTemplate="{StaticResource dtLeftArrow}"/>
+						</ComponentArt:Splitter.CollapseButtonContent>
+						<ComponentArt:Splitter.CollapseButtonCollapsedContent>
+							<ContentControl ContentTemplate="{StaticResource dtRightArrow}"/>
+						</ComponentArt:Splitter.CollapseButtonCollapsedContent>
+					</ComponentArt:Splitter>
+
+					<Grid Background="#ffffff" Grid.Column="0" >
+						<Border BorderBrush="#acb8c5" BorderThickness="1">
+							<TextBlock Text="Left Side" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontSize="13" />
+						</Border>
+					</Grid>
+
+					<Grid Grid.Column="2" >
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+
+						<Grid Background="#ffffff">
+							<Border BorderBrush="#acb8c5" BorderThickness="1">
+								<TextBlock Text="Top Right" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontSize="13" />
+							</Border>
+						</Grid>
+
+						<!-- Horizontal Splitter -->
+						<ComponentArt:Splitter CollapseDirection="Up" ShowsPreview="True" Grid.Row="1" Theme="{ StaticResource Windows7SplitterTheme }">
+							<ComponentArt:Splitter.CollapseButtonContent>
+								<ContentControl ContentTemplate="{StaticResource dtUpArrow}"/>
+							</ComponentArt:Splitter.CollapseButtonContent>
+							<ComponentArt:Splitter.CollapseButtonCollapsedContent>
+								<ContentControl ContentTemplate="{StaticResource dtDownArrow}"/>
+							</ComponentArt:Splitter.CollapseButtonCollapsedContent>
+						</ComponentArt:Splitter>
+
+						<Grid Background="#ffffff" Grid.Row="2">
+							<Border BorderBrush="#acb8c5" BorderThickness="1">
+								<TextBlock Text="Bottom Right" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontSize="13" />
+							</Border>
+						</Grid>
+					</Grid>
+				</Grid>
+			</Border>
+		</Grid>
+
+	</Grid>
+</UserControl>

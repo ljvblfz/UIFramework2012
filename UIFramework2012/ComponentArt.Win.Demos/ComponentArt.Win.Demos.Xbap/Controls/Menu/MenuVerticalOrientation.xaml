@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.MenuVerticalOrientation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:ComponentArtTheme="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    Width="760" Height="450">
+    <UserControl.Resources>
+        <ComponentArtTheme:Theme x:Key="VerticalMenuTheme" 
+			BaseSource="/ComponentArt.Win.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Win.Demos;component/Assets/Menu/VerticalMenuTheme.xaml"/>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Menu" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Vertical Orientation" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo shows a Vertically oriented Menu." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\menu\MenuVerticalOrientation.xaml,
+            \source\controls\menu\MenuVerticalOrientation.xaml.cs"/>
+        <ComponentArt:Menu x:Name="muDemo" Theme="{StaticResource VerticalMenuTheme}"
+          Initialized="muDemo_Initialized"
+          Orientation="Vertical" 
+          HorizontalAlignment="Left" 
+          VerticalAlignment="Top">
+			<ComponentArt:MenuItem Text="Products &amp; Services" >
+				<ComponentArt:MenuItem Text="Overview"  />
+				<ComponentArt:MenuItem Text="Consulting"  />
+				<ComponentArt:MenuItem Text="Internet Services"  />
+				<ComponentArt:MenuItem Text="Technology Centres"  />
+			</ComponentArt:MenuItem>
+
+			<ComponentArt:MenuItem Text="Technology Solutions" >
+				<ComponentArt:MenuItem Text="Overview"  />
+				<ComponentArt:MenuItem Text="Business Intelligence"  />
+				<ComponentArt:MenuItem Text="Customer Relationship Management"  />
+				<ComponentArt:MenuItem Text="Infrastructure Management"  />
+				<ComponentArt:MenuItem Text="Mobility &amp;  Wireless"  />
+				<ComponentArt:MenuItem Text="Online Retail"  />
+				<ComponentArt:MenuItem Text="Supplier Enablement"  />
+			</ComponentArt:MenuItem>
+
+			<ComponentArt:MenuItem Text="Industry Perspectives" >
+				<ComponentArt:MenuItem Text="Overview"  />
+				<ComponentArt:MenuItem Text="For-Profit" >
+					<ComponentArt:MenuItem Text="Government"  />
+					<ComponentArt:MenuItem Text="Healthcare"  />
+				</ComponentArt:MenuItem>
+				<ComponentArt:MenuItem Text="Non-Profit" >
+					<ComponentArt:MenuItem Text="Engineering"  />
+					<ComponentArt:MenuItem Text="Financial Services"  />
+					<ComponentArt:MenuItem Text="Hospitality"  />
+					<ComponentArt:MenuItem Text="Manufacturing"  />
+					<ComponentArt:MenuItem Text="Retail"  />
+				</ComponentArt:MenuItem>
+			</ComponentArt:MenuItem>
+
+			<ComponentArt:MenuItem Text="Purchasing Information" >
+				<ComponentArt:MenuItem Text="Overview"  />
+				<ComponentArt:MenuItem Text="Licensing"  />
+				<ComponentArt:MenuItem Text="Acquire Volume Licenses"  />
+			</ComponentArt:MenuItem>
+
+			<ComponentArt:MenuItem Text="Find a Partner"  />
+
+			<ComponentArt:MenuItem Text="Support"  />
+		</ComponentArt:Menu>
+    </Grid>
+</UserControl>

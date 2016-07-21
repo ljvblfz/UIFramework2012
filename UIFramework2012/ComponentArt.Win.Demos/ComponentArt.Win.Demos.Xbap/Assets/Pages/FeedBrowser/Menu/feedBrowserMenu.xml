@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+	<!-- Menu Browse -->
+	<item Text="Browse" Height="32">
+		<item Text="All Feeds" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_allfeeds" Tag="All Feeds"/>
+		<item Text="Featured Feeds" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-featuredFeed.png" Id="browse_featuredfeeds">
+			<item Text="CNET.com Blogs" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_cnet" />
+			<item Text="ComponentArt Blogs" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_componentartblogs"/>
+			<item Text="Giant Bomb" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_giantbomb"/>
+			<item Text="GigaOm" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_gigaom"/>
+			<item Text="Gizmodo" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_gizmodo"/>
+			<item Text="Infragistics Blogs" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_infragistics"/>
+			<item Text="Kotaku" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_kotaku"/>
+			<item Text="lifehack.org" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_lifehacker"/>
+			<item Text="MSDN Blogs" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_visualstudio"/>
+			<item Text="O'Reilly Radar" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_oreilly"/>
+			<item Text="Read Write Web" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_readwriteweb"/>
+			<item Text="Silverlight Team" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_silverlight"/>
+			<item Text="TechCrunch" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_techcrunch"/>
+			<item Text="Telerik Blogs" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_telerik"/>
+			<item Text="Microsoft Azure Services" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/icon-feed.png" Id="filter_windowsazure"/>
+		</item>
+		<item IsSeparator="True"/>
+		<item Text="Featured (pre-set) Views">
+			<item CustomTemplate="MenuViews" BannerSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/featuredFeed-100000.png" Heading="All 100,000+ Items"
+				  Feeds="Feeds: All feeds" Grouping="Grouping: Date posted" Fields="Fields: All Fields" Filter="Filter: None"
+				  Sorting="Sorting: Rating" LoadAll="Load All: No" CustomTemplateHighlight="False" Id="feature_1"/>
+			<item CustomTemplate="MenuViews" BannerSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/featuredFeed-5Star.png" Heading="5 Star Web 2.0 Items"
+				  Feeds="Feeds: All Web 2.0 feeds" Grouping="Grouping: Feed Name" Fields="Fields: All Fields" Filter="Filter: rated 5 stars"
+				  Sorting="Sorting: Date posted" LoadAll="Load All: No" CustomTemplateHighlight="False" Id="feature_2"/>
+			<item CustomTemplate="MenuViews" BannerSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/featuredFeed-MSDevs.png" Heading="Most Viewed MS Dev Items"
+				  Feeds="Feeds: Microsoft Dev Feeds" Grouping="Grouping: Visits" Fields="Fields: All Fields" Filter="Filter: 1000+ visits"
+				  Sorting="Sorting: Date posted" LoadAll="Load All: Yes" CustomTemplateHighlight="False" Id="feature_3"/>
+		</item>
+	</item>
+	<!-- /Menu Browse -->
+
+	<!-- Menu Group -->
+	<item Text="Group" Height="32" >
+		<item IsCheckable="True" Text="1st Column" Id="group_1" >
+			<item IsCheckable="True" RadioGroupName="GroupFirst" Text="Feed Name" Id="group_1_1">
+				<item IsCheckable="True" RadioGroupName="GroupFirstFeedName" Text="Ascending" Id="group_1_1_a"/>
+				<item IsCheckable="True" RadioGroupName="GroupFirstFeedName" Text="Descending" Id="group_1_1_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="GroupFirst" Text="Item Title" Id="group_1_2">
+				<item IsCheckable="True" RadioGroupName="GroupFirstItemTitle" Text="Ascending" Id="group_1_2_a"/>
+				<item IsCheckable="True" RadioGroupName="GroupFirstItemTitle" Text="Descending" Id="group_1_2_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="GroupFirst" Text="Date Posted" Id="group_1_3">
+				<item IsCheckable="True" RadioGroupName="GroupFirstDatePosted" Text="Ascending" Tag="Sort" Id="group_1_3_a"/>
+				<item IsCheckable="True" RadioGroupName="GroupFirstDatePosted" Text="Descending" Tag="Sort" Id="group_1_3_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="GroupFirst" Text="Visits" Id="group_1_4"/>
+			<item IsCheckable="True" RadioGroupName="GroupFirst" Text="Rating" Id="group_1_5"/>
+		</item>
+
+		<item IsCheckable="True" Text="2nd Column" Id="group_2" >
+			<item IsCheckable="True" RadioGroupName="GroupSecond" Text="Feed Name" Id="group_2_1">
+				<item IsCheckable="True" RadioGroupName="GroupSecondFeedName" Text="Ascending" Id="group_2_1_a"/>
+				<item IsCheckable="True" RadioGroupName="GroupSecondFeedName" Text="Descending" Id="group_2_1_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="GroupSecond" Text="Item Title" Id="group_2_2">
+				<item IsCheckable="True" RadioGroupName="GroupSecondItemTitle" Text="Ascending" Id="group_2_2_a"/>
+				<item IsCheckable="True" RadioGroupName="GroupSecondItemTitle" Text="Descending" Id="group_2_2_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="GroupSecond" Text="Date Posted" Id="group_2_3">
+				<item IsCheckable="True" RadioGroupName="GroupSecondDatePosted" Text="Ascending" Id="group_2_3_a"/>
+				<item IsCheckable="True" RadioGroupName="GroupSecondDatePosted" Text="Descending" Id="group_2_3_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="GroupSecond" Text="Visits" Id="group_2_4"/>
+			<item IsCheckable="True" RadioGroupName="GroupSecond" Text="Rating" Id="group_2_5"/>
+		</item>
+
+		<item IsCheckable="True" Text="3rd Column" Id="group_3" >
+			<item IsCheckable="True" RadioGroupName="GroupThird" Text="Feed Name" Id="group_3_1">
+				<item IsCheckable="True" RadioGroupName="GroupThirdFeedName" Text="Ascending" Id="group_3_1_a"/>
+				<item IsCheckable="True" RadioGroupName="GroupThirdFeedName" Text="Descending" Id="group_3_1_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="GroupThird" Text="Item Title" Id="group_3_2">
+				<item IsCheckable="True" RadioGroupName="GroupThirdItemTitle" Text="Ascending" Id="group_3_2_a"/>
+				<item IsCheckable="True" RadioGroupName="GroupThirdItemTitle" Text="Descending" Id="group_3_2_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="GroupThird" Text="Date Posted" Id="group_3_3">
+				<item IsCheckable="True" RadioGroupName="GroupThirdDatePosted" Text="Ascending" Id="group_3_3_a"/>
+				<item IsCheckable="True" RadioGroupName="GroupThirdDatePosted" Text="Descending" Id="group_3_3_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="GroupThird" Text="Visits" Id="group_3_4"/>
+			<item IsCheckable="True" RadioGroupName="GroupThird" Text="Rating" Id="group_3_5"/>
+		</item>
+		<item IsSeparator="True"/>
+		<item Text="Clear Grouping" Id="clear_group"/>
+	</item>
+	<!-- /Menu Group -->
+	<!-- Menu Sort -->
+	<item Text="Sort" Height="32" >
+		<item IsCheckable="True" Text="1st Column" Id="sort_1">
+			<item IsCheckable="True" RadioGroupName="SortFirst" Text="Feed Name" Id="sort_1_1">
+				<item IsCheckable="True" RadioGroupName="SortFirstFeedName" Text="Ascending" Id="sort_1_1_a"/>
+				<item IsCheckable="True" RadioGroupName="SortFirstFeedName" Text="Descending" Id="sort_1_1_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="SortFirst" Text="Item Title" Id="sort_1_2">
+				<item IsCheckable="True" RadioGroupName="SortFirstItemTitle" Text="Ascending" Id="sort_1_2_a"/>
+				<item IsCheckable="True" RadioGroupName="SortFirstItemTitle" Text="Descending" Id="sort_1_2_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="SortFirst" Text="Date Posted" Id="sort_1_3">
+				<item IsCheckable="True" RadioGroupName="SortFirstDatePosted" Text="Ascending" Id="sort_1_3_a"/>
+				<item IsCheckable="True" RadioGroupName="SortFirstDatePosted" Text="Descending" Id="sort_1_3_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="SortFirst" Text="Visits" Id="sort_1_4"/>
+			<item IsCheckable="True" RadioGroupName="SortFirst" Text="Rating" Id="sort_1_5"/>
+		</item>
+
+		<item IsCheckable="True" Text="2nd Column" Id="sort_2">
+			<item IsCheckable="True" RadioGroupName="SortSecond" Text="Feed Name" Id="sort_2_1">
+				<item IsCheckable="True" RadioGroupName="SortSecondFeedName" Text="Ascending" Id="sort_2_1_a"/>
+				<item IsCheckable="True" RadioGroupName="SortSecondFeedName" Text="Descending" Id="sort_2_1_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="SortSecond" Text="Item Title" Id="sort_2_2">
+				<item IsCheckable="True" RadioGroupName="SortSecondItemTitle" Text="Ascending" Id="sort_2_2_a"/>
+				<item IsCheckable="True" RadioGroupName="SortSecondItemTitle" Text="Descending" Id="sort_2_2_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="SortSecond" Text="Date Posted" Id="sort_2_3">
+				<item IsCheckable="True" RadioGroupName="SortSecondDatePosted" Text="Ascending" Id="sort_2_3_a"/>
+				<item IsCheckable="True" RadioGroupName="SortSecondDatePosted" Text="Descending" Id="sort_2_3_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="SortSecond" Text="Visits" Id="sort_2_4"/>
+			<item IsCheckable="True" RadioGroupName="SortSecond" Text="Rating" Id="sort_2_5"/>
+		</item>
+
+		<item IsCheckable="True" Text="3rd Column" Id="sort_3">
+			<item IsCheckable="True" RadioGroupName="SortThird" Text="Feed Name" Id="sort_3_1">
+				<item IsCheckable="True" RadioGroupName="SortThirdFeedName" Text="Ascending" Id="sort_3_1_a"/>
+				<item IsCheckable="True" RadioGroupName="SortThirdFeedName" Text="Descending" Id="sort_3_1_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="SortThird" Text="Item Title" Id="sort_3_2">
+				<item IsCheckable="True" RadioGroupName="SortThirdItemTitle" Text="Ascending" Id="sort_3_2_a"/>
+				<item IsCheckable="True" RadioGroupName="SortThirdItemTitle" Text="Descending" Id="sort_3_2_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="SortThird" Text="Date Posted" Id="sort_3_3">
+				<item IsCheckable="True" RadioGroupName="SortThirdDatePosted" Text="Ascending" Id="sort_3_3_a"/>
+				<item IsCheckable="True" RadioGroupName="SortThirdDatePosted" Text="Descending" Id="sort_3_3_d"/>
+			</item>
+			<item IsCheckable="True" RadioGroupName="SortThird" Text="Visits" Id="sort_3_4"/>
+			<item IsCheckable="True" RadioGroupName="SortThird" Text="Rating" Id="sort_3_5"/>
+		</item>
+		<item IsSeparator="True"/>
+		<item Text="Clear Sorting" Id="clear_sort"/>
+	</item>
+	<!-- /Menu Sort -->
+
+	<!-- Menu Show -->
+	<item Text="Show" Height="32" >
+		<item IsCheckable="True" IsChecked="True" Text="Feed Name" Id="show_FeedName"/>
+		<item IsCheckable="True" IsChecked="True" Text="Item Title" Id="show_Title"/>
+		<item IsCheckable="True" IsChecked="True" Text="Date Posted" Id="show_DatePosted"/>
+		<item IsCheckable="True" IsChecked="True" Text="Rating" Id="show_Rating"/>
+		<item IsCheckable="True" IsChecked="True" Text="Visits" Id="show_Visits"/>
+		<item IsCheckable="True" IsChecked="True" Text="Site" Id="show_ItemURL"/>
+	</item>
+	<!-- /Menu Show -->
+</menu>

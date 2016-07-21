@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.TreeViewDesignOffice2003"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:cartCommon="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+>
+	<UserControl.Resources>
+		<cartCommon:Theme
+			x:Key="Office2003TreeViewTheme" 
+			BaseSource="/ComponentArt.Win.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Win.Themes.Office2003;component/TreeView.xaml"
+		/>
+	</UserControl.Resources>
+
+
+    <Grid x:Name="LayoutRoot">
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TreeView" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Office 2003 TreeView" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An Office 2003-styled treeview." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\treeview\TreeViewDesignOffice2003.xaml,
+            \source\controls\treeview\TreeViewDesignOffice2003.xaml.cs" />
+        
+        <ComponentArt:TreeView
+			x:Name="Office2007TreeView"
+			Height="400"
+			Width="275"
+			
+			TreeLineStyle="None"
+			FontFamily="Arial"
+			FontSize="11"
+			Header="Folder List"
+			Foreground="#000000"
+			CornerRadius="0"
+			InnerCornerRadius="0"
+			BorderBrush="#6e6d8f"
+			Padding="0"
+			Theme="{ StaticResource Office2003TreeViewTheme }"
+		>
+			<ComponentArt:TreeViewNode Header="Mailbox" IconSource="/Assets/TreeView/Core/root.png" IsExpanded="True">
+				<ComponentArt:TreeViewNode Header="Calendar" IconSource="/Assets/TreeView/Core/calendar.png" IsExpanded="False" />
+				<ComponentArt:TreeViewNode Header="Contacts" IconSource="/Assets/TreeView/Core/contacts.png" />
+				<ComponentArt:TreeViewNode Header="Deleted Items" IconSource="/Assets/TreeView/Core/deleted.png">
+					<ComponentArt:TreeViewNode Header="Today" IconSource="/Assets/TreeView/Core/deletedFolder.png" />
+					<ComponentArt:TreeViewNode Header="Last Week" IconSource="/Assets/TreeView/Core/deletedFolder.png" />
+					<ComponentArt:TreeViewNode Header="Last Month" IconSource="/Assets/TreeView/Core/deletedFolder.png" />
+				</ComponentArt:TreeViewNode>
+				<ComponentArt:TreeViewNode Header="Drafts" IconSource="/Assets/TreeView/Core/drafts.png" />
+				<ComponentArt:TreeViewNode Header="Inbox" IconSource="/Assets/TreeView/Core/inbox.png" IsExpanded="True">
+					<ComponentArt:TreeViewNode Header="ComponentArt" IconSource="/Assets/TreeView/Core/folders.png" />
+					<ComponentArt:TreeViewNode Header="Personal" IconSource="/Assets/TreeView/Core/folders.png" />
+					<ComponentArt:TreeViewNode Header="Miscellaneous" IconSource="/Assets/TreeView/Core/folders.png" />
+				</ComponentArt:TreeViewNode>
+				<ComponentArt:TreeViewNode Header="Junk E-mail" IconSource="/Assets/TreeView/Core/junk.png" />
+				<ComponentArt:TreeViewNode Header="Notes" IconSource="/Assets/TreeView/Core/notes.png" />
+				<ComponentArt:TreeViewNode Header="Outbox" IconSource="/Assets/TreeView/Core/outbox.png" />
+				<ComponentArt:TreeViewNode Header="Sent Items" IconSource="/Assets/TreeView/Core/sentItems.png" />
+				<ComponentArt:TreeViewNode Header="Tasks" IconSource="/Assets/TreeView/Core/tasks.png" />
+				<ComponentArt:TreeViewNode Header="Search Folders" IconSource="/Assets/TreeView/Core/search.png" />
+			</ComponentArt:TreeViewNode>
+			<ComponentArt:TreeViewNode Header="Mailbox - News" IconSource="/Assets/TreeView/Core/folders.png" IsExpanded="True">
+				<ComponentArt:TreeViewNode Header="World" IconSource="/Assets/TreeView/Core/folder.png" />
+				<ComponentArt:TreeViewNode Header="Business" IconSource="/Assets/TreeView/Core/folder.png" />
+				<ComponentArt:TreeViewNode Header="Science" IconSource="/Assets/TreeView/Core/folder.png" />
+				<ComponentArt:TreeViewNode Header="Weather" IconSource="/Assets/TreeView/Core/folder.png" />
+			</ComponentArt:TreeViewNode>
+		</ComponentArt:TreeView>
+	</Grid>
+</UserControl>

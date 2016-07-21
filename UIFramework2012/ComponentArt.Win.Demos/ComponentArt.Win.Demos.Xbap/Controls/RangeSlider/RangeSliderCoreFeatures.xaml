@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.RangeSliderCoreFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    Height="450">
+    <UserControl.Resources>
+
+        <ComponentArtCommon:Theme x:Key="windowRangeSlider" 
+                      BaseSource="/ComponentArt.Win.UI.Input;component/Themes/generic.xaml" 
+                      Source="/ComponentArt.Win.UI.Input;component/RangeSlider_Window.xaml"  />
+        <ComponentArtCommon:Theme x:Key="BlackIceRangeSlider" 
+                      BaseSource="/ComponentArt.Win.UI.Input;component/Themes/generic.xaml" 
+                      Source="/ComponentArt.Win.UI.Input;component/RangeSlider_ThumbedWindow.xaml"  />
+
+    </UserControl.Resources>
+    
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="75"/>
+        </Grid.ColumnDefinitions>
+            <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="RangeSlider" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Core Features" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases RangeSlider's core features." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\rangeslider\RangeSliderCoreFeatures.xaml, \source\controls\rangeslider\RangeSliderCoreFeatures.xaml.cs" />
+        <TextBlock Text="Default style" Margin="0 0 0 8" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <ComponentArt:RangeSlider Grid.Row="1" Grid.Column="1" Width="600" Height="50" SelectionStart="25" SelectionEnd="40" ShowTooltip="False">
+            <ComponentArt:RangeSlider.Axis>
+                <ComponentArt:NumericAxis Minimum="0" Maximum="50" TickMarkInterval="10" TickMarkPosition="BottomRight"/>
+            </ComponentArt:RangeSlider.Axis>
+        </ComponentArt:RangeSlider>
+
+        <ComponentArt:RangeSlider Orientation="Vertical" Grid.Row="0" Grid.Column="2" Grid.RowSpan="6" Height="400" VerticalAlignment="Top" Margin="0 45 0 0"
+                                  SelectionStart="25" SelectionEnd="40" ShowTooltip="False" HorizontalAlignment="Right">
+            <ComponentArt:RangeSlider.Axis>
+                <ComponentArt:NumericAxis Minimum="0" Maximum="50" TickMarkInterval="5" TickMarkPosition="BothSides" BeforeTickMarkShown="NumericAxis_BeforeTickMarkShown"/>
+            </ComponentArt:RangeSlider.Axis>
+        </ComponentArt:RangeSlider>
+
+        <TextBlock Text="Custom RangeSliders with a window" Margin="0 30 0 12" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <ComponentArt:RangeSlider Grid.Row="3" Grid.Column="1" x:Name="MyRangeSlider" Theme="{StaticResource windowRangeSlider}" ShowTooltip="False" SnapThreshold="0">
+            <ComponentArt:RangeSlider.Axis>
+                <ComponentArt:PixelMapAxis Tickmarks="51 95 140 185 231 277 323 369 414 459 502 547 592">
+                    <ComponentArt:PixelMapAxis.Content>
+                        <Image Source="/Assets/RangeSlider/customWindowChart.png" Stretch="None" HorizontalAlignment="Left" />
+                    </ComponentArt:PixelMapAxis.Content>
+                </ComponentArt:PixelMapAxis>
+            </ComponentArt:RangeSlider.Axis>
+        </ComponentArt:RangeSlider>
+
+        <ComponentArt:RangeSlider Grid.Row="4" Grid.Column="1" x:Name="WaveformRangeSlider" ShowTooltip="False" 
+                                  BeforeTooltipShown="WaveformRangeSlider_BeforeTooltipShown" Width="600" 
+                                  SelectionStart="100" SelectionEnd="200" Theme="{StaticResource BlackIceRangeSlider}" Margin="0 40 0 0">
+            <ComponentArt:RangeSlider.Axis>
+                <ComponentArt:NumericAxis Maximum="300">
+                    <ComponentArt:NumericAxis.Content>
+                        <Image Source="/Assets/RangeSlider/waveform.png" Stretch="Fill" />
+                    </ComponentArt:NumericAxis.Content>
+                </ComponentArt:NumericAxis>
+            </ComponentArt:RangeSlider.Axis>
+        </ComponentArt:RangeSlider>
+    </Grid>
+</UserControl>

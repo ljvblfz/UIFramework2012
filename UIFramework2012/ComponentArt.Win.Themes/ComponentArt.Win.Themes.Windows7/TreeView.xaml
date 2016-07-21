@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vsm="clr-namespace:ComponentArt.Win.UI.VSM;assembly=ComponentArt.Win.UI.Common"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+>
+    <ResourceDictionary x:Key="ComponentArtScrollBarStyle" Source="/ComponentArt.Win.Themes.Windows7;component/ScrollBar.xaml" />
+    <!-- TreeView Resources -->
+    <sys:String x:Key="ComponentArt_TreeView_BorderThickness">1</sys:String>
+    <sys:String x:Key="ComponentArt_TreeView_CornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_TreeView_Padding">0</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_TreeView_Background" Color="White" />
+    <SolidColorBrush x:Key="ComponentArt_TreeView_BorderBrush" Color="Black"/>
+    <sys:String x:Key="ComponentArt_TreeView_HeaderMargin">5.5,5,5.5,5</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_TreeView_HeaderForeground" Color="#ffffff"/>
+    <sys:String x:Key="ComponentArt_TreeView_HeaderFontSize">12</sys:String>
+    <sys:String x:Key="ComponentArt_TreeView_HeaderFontWeight">Bold</sys:String>
+    <sys:String x:Key="ComponentArt_TreeView_ExpanderOpenIconSource">/ComponentArt.Win.Themes.Windows7;component/Assets/TreeView/minus.png</sys:String>
+    <sys:String x:Key="ComponentArt_TreeView_ExpanderClosedIconSource">/ComponentArt.Win.Themes.Windows7;component/Assets/TreeView/plus.png</sys:String>
+    <!-- ComponentArt_TreeView_HeaderBackground -->
+    <LinearGradientBrush x:Key="ComponentArt_TreeView_HeaderBackground" StartPoint="0,0" EndPoint="0,30" MappingMode="Absolute" SpreadMethod="Pad">
+        <GradientStop Color="#A8C4D2" Offset="0" />
+        <GradientStop Color="#A8C4D2" Offset="0.03" />
+        <GradientStop Color="#7DA6BB" Offset="0.03" />
+        <GradientStop Color="#417D9C" Offset="0.48" />
+        <GradientStop Color="#246789" Offset="0.5" />
+        <GradientStop Color="#0E567A" Offset="0.5" />
+        <GradientStop Color="#4C91A7" Offset="0.93" />
+        <GradientStop Color="#80B5C3" Offset="0.93" />
+        <GradientStop Color="#80B5C3" Offset="1" />
+    </LinearGradientBrush>
+    <!-- /ComponentArt_TreeView_HeaderBackground -->
+    <!-- ComponentArt_TreeView_ViewPortBorder -->
+    <Style TargetType="Border" x:Key="ComponentArt_TreeView_ViewPortBorder">
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="BorderThickness" Value="0,1,0,0" />
+    </Style>
+    <!-- /ComponentArt_TreeView_ViewPortBorder -->
+    <sys:String x:Key="ComponentArt_TreeViewNode_Margin">2,2,4,2</sys:String>
+    <sys:String x:Key="ComponentArt_TreeViewNode_IconMargin">2,0,0,0</sys:String>
+    <!-- ComponentArt_TreeViewNode_Background -->
+    <Style TargetType="Border" x:Key="ComponentArt_TreeViewNode_Background">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Background" Value="#00ffffff" />
+        <Setter Property="Padding" Value="10,0" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="Grid.Column" Value="0" />
+        <Setter Property="Grid.ColumnSpan" Value="3" />
+    </Style>
+    <!-- /ComponentArt_TreeViewNode_Background -->
+    <Color x:Key="ComponentArt_TreeViewNode_ForegroundHover">#000000</Color>
+    <!-- ComponentArt_TreeViewNode_Background_Hover -->
+    <Style TargetType="Border" x:Key="ComponentArt_TreeViewNode_Background_Hover">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#99a8d8eb" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#33a5e2fa" Offset="0" />
+                    <GradientStop Color="#3300aeef" Offset="1" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Padding" Value="10,0"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="Grid.Column" Value="0" />
+        <Setter Property="Grid.ColumnSpan" Value="3" />
+    </Style>
+    <!-- /ComponentArt_TreeViewNode_Background_Hover -->
+    <Color x:Key="ComponentArt_TreeViewNode_ForegroundSelected">#000000</Color>
+    <!-- ComponentArt_TreeViewNode_Background_Selected -->
+    <Style TargetType="Border" x:Key="ComponentArt_TreeViewNode_Background_Selected">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="#cca8d8eb" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#66a5e2fa" Offset="0" />
+                    <GradientStop Color="#6600aeef" Offset="1" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="Grid.Column" Value="0" />
+        <Setter Property="Grid.ColumnSpan" Value="3" />
+    </Style>
+    <!-- /ComponentArt_TreeViewNode_Background_Selected -->
+    <!-- ComponentArt_ToolTipBorderBackground -->
+    <LinearGradientBrush x:Key="ComponentArt_ToolTipBorderBackground" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#FFFFFF" Offset=".3854" />
+        <GradientStop Color="#000000" Offset=".3855" />
+        <GradientStop Color="#000000" Offset=".3875" />
+        <GradientStop Color="#F6F6F6" Offset=".38786" />
+    </LinearGradientBrush>
+    <!-- /ComponentArt_ToolTipBorderBackground -->
+    <!-- ComponentArt_TreeView_BetweenNodesDragDropIndicator -->
+    <ControlTemplate x:Key="ComponentArt_TreeView_BetweenNodesDragDropIndicator">
+        <Grid x:Name="DropIndicatorContainer" Margin="0,0,0,0" Width="{TemplateBinding Width}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="Grid.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard x:Name="Animation">
+                            <DoubleAnimation Storyboard.TargetName="LeftTranslateTransform" Storyboard.TargetProperty="X" From="0" To="-10" Duration="0:0:0.35" AutoReverse="True" RepeatBehavior="Forever" />
+                            <DoubleAnimation Storyboard.TargetName="RightTranslateTransform" Storyboard.TargetProperty="X" From="0" To="10" Duration="0:0:0.35" AutoReverse="True" RepeatBehavior="Forever" />
+                            <DoubleAnimation Storyboard.TargetName="DropIndicatorContainer" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.35" AutoReverse="True" RepeatBehavior="Forever" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+            <Path Fill="Red" StrokeThickness="0" Data="M1,1 L1,9 L5,5" Margin="-5 0 0 0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" IsHitTestVisible="False">
+                <Path.RenderTransform>
+                    <TranslateTransform x:Name="LeftTranslateTransform" X="0" />
+                </Path.RenderTransform>
+            </Path>
+            <Rectangle Fill="Red" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Stretch" Height="1" Margin="5 0" />
+            <Path Fill="Red" StrokeThickness="0" Data="M1,5 L5,1 L5,9" Margin="0 0 -5 0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" IsHitTestVisible="False">
+                <Path.RenderTransform>
+                    <TranslateTransform x:Name="RightTranslateTransform" X="0" />
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+    </ControlTemplate>
+    <!-- /ComponentArt_TreeView_BetweenNodesDragDropIndicator -->
+    <!-- ComponentArt_TreeView_OnNodeDragDropIndicator -->
+    <ControlTemplate x:Key="ComponentArt_TreeView_OnNodeDragDropIndicator">
+        <Grid x:Name="DropIndicatorContainer" Margin="0,0,0,0" Width="{TemplateBinding Width}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="Grid.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard x:Name="Animation">
+                            <DoubleAnimation Storyboard.TargetName="LeftTranslateTransform" Storyboard.TargetProperty="X" From="0" To="-10" Duration="0:0:0.35" AutoReverse="True" RepeatBehavior="Forever" />
+                            <DoubleAnimation Storyboard.TargetName="RightTranslateTransform" Storyboard.TargetProperty="X" From="0" To="10" Duration="0:0:0.35" AutoReverse="True" RepeatBehavior="Forever" />
+                            <DoubleAnimation Storyboard.TargetName="DropIndicatorContainer" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.35" AutoReverse="True" RepeatBehavior="Forever" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+            <Path Fill="Red" StrokeThickness="0" Data="M1,1 L1,9 L5,5" Margin="-5 0 0 0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" IsHitTestVisible="False">
+                <Path.RenderTransform>
+                    <TranslateTransform x:Name="LeftTranslateTransform" X="0" />
+                </Path.RenderTransform>
+            </Path>
+            <Path Fill="Red" StrokeThickness="0" Data="M1,5 L5,1 L5,9" Margin="0 0 -5 0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" IsHitTestVisible="False">
+                <Path.RenderTransform>
+                    <TranslateTransform x:Name="RightTranslateTransform" X="0" />
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+    </ControlTemplate>
+    <!-- /ComponentArt_TreeView_OnNodeDragDropIndicator -->
+    <!-- ComponentArt_TreeView_TextOverflowToolTip -->
+    <ControlTemplate x:Key="ComponentArt_TreeView_TextOverflowToolTip" TargetType="ContentControl">
+        <Grid x:Name="TooltipBorder">
+            <Border x:Name="ToolTipShadow" Background="#29000000" Margin="2 2 0 0" BorderThickness="0" CornerRadius="2"/>
+            <Border x:Name="ToolTip" Background="{StaticResource ComponentArt_ToolTipBorderBackground}" BorderThickness="1" 
+                    BorderBrush="#aaaaaa" CornerRadius="2" Margin="0 0 2 2" Padding="3 2">
+                <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Left" />
+            </Border>
+        </Grid>
+    </ControlTemplate>
+    <!-- /ComponentArt_TreeView_TextOverflowToolTip -->
+    <!-- /TreeView Resources -->
+</ResourceDictionary>

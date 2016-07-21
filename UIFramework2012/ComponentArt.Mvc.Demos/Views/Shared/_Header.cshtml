@@ -1,0 +1,188 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+
+@* body *@
+<div id="bd" class="@ViewBag.BodyClass">
+
+@* Preload the images referenced by CSS *@
+<div id="image-preloader" style="position:absolute;z-index:98765;top:-10000px;left:-10000px;overflow:hidden;"></div>
+<script type="text/javascript">
+function get_root(item)
+{
+  var root = "/";
+  root = "@HttpContext.Current.Request.ApplicationPath";
+  if (root == "/") return "";
+  return root;
+}
+function get_version() { return "20101"; }
+</script>
+
+@* header *@
+	<div id="hd">
+
+  @* product links *@
+		<ul id="prod" class="@ViewBag.ProductListClass">
+			<li class="uif"><a href="http://www.componentart.com/products/uiframework/" target="_blank">UI Framework for .NET</a></li>
+			<li class="sl"><a href="http://silverlight.componentart.com/" target="_blank">Silverlight</a></li>
+			<li class="ajax"><a href="http://aspnetajax.componentart.com/" target="_blank">ASP.NET AJAX</a></li>
+			<li class="wpf"><a href="http://wpf.componentart.com/" target="_blank">WPF</a></li>
+			<li class="mvc">ASP.NET MVC</li>
+			<li class="soa"><a href="http://soaui.componentart.com/" target="_blank">SOA.UI</a></li>
+			<li class="dl"><a href="http://www.componentart.com/download/" target="_blank">Download</a></li>
+			<li class="lnk"><a href="http://www.componentart.com/" target="_blank">www.componentart.com</a></li>
+		</ul>
+    
+    @* /demo index *@
+    <a href="@Url.Content("~/")" class="logo">Web.UI for ASP.NET MVC</a>
+
+    @* main menu *@
+		<div id="mnu">
+			<div class="l"></div>
+			<div class="m">
+			@(Html.ComponentArt().Menu()
+      .ID("DemoMenu")
+      .OutputCustomAttributes(true)
+      .SiteMapXmlFile("~/App_Data/common/xml/demos.xml")
+      .ExpandOnClick(false)
+      .ShadowEnabled(false)
+      .ExpandSlide(SlideType.ExponentialDecelerate)
+      .CollapseSlide(SlideType.ExponentialAccelerate)
+      .DefaultGroupExpandOffsetY(10)
+      .KeyboardEnabled(false)
+      .AutoTheming(true)
+      .AutoThemingCssClassPrefix("")
+  .ClientTemplates(ct =>
+  {
+    ct.Add().ID("TopLevelItemTemplate").Content("<div class=\"## DataItem.getProperty('Value'); ##\"><a href=\"javascript:void(0);\" onclick=\"this.blur();\">## DataItem.getProperty('Text'); ##</a></div>");
+    ct.Add().ID("SeparatorTemplate").Content("<div class=\"## DataItem.getProperty('Value'); ##\"><span></span></div>");
+    ct.Add().ID("BreedTemplate").Content("  <div class=\"itm-bob\">"
++ "    <a href=\"## DataItem.getProperty('NavigateUrl'); ##\" onclick=\"this.blur();return false;\" class=\"## DataItem.getProperty('Class'); ##\">"
++ "      <img src=\"## String(get_root() + '/Content/common/img/' + get_version() + '/ddn/bob/' + DataItem.getProperty('Image')); ##\" width=\"110\" height=\"75\" border=\"0\" alt=\"## DataItem.getProperty('Text'); ##\" />"
++ "      <span class=\"h2\">## DataItem.getProperty('Text'); ##</span>"
++ "      <span class=\"txt\">## DataItem.getProperty('Description'); ##</span>"
++ "    </a>"
++ "  </div>");
+    ct.Add().ID("IntegrationTemplate").Content("  <div class=\"itm-int\">"
++ "    <a href=\"## DataItem.getProperty('NavigateUrl'); ##\" onclick=\"this.blur();return false;\" class=\"## DataItem.getProperty('Class'); ##\">"
++ "      <img src=\"## String(get_root() + '/Content/common/img/' + get_version() + '/ddn/int/' + DataItem.getProperty('Image')); ##\" width=\"110\" height=\"75\" border=\"0\" alt=\"## DataItem.getProperty('Text'); ##\" />"
++ "      <span class=\"h2\">## DataItem.getProperty('Text'); ##</span>"
++ "      <span class=\"txt\">## DataItem.getProperty('Description'); ##</span>"
++ "    </a>"
++ "  </div>");
+    ct.Add().ID("TechnologyTemplateTitle").Content("<div class=\"ttl-tech\">"
++ "    <h3 class=\"## DataItem.getProperty('Value'); ##\">## DataItem.getProperty('Text'); ##</h3>"
++ "  </div>");
+    ct.Add().ID("TechnologyTemplate").Content("  <div class=\"itm-tech\">"
++ "    <a href=\"## DataItem.getProperty('NavigateUrl'); ##\" onclick=\"this.blur();return false;\">## DataItem.getProperty('Text'); ##</a>"
++ "  </div>");
+    ct.Add().ID("DesignTemplate").Content("  <div class=\"itm-des\">"
++ "    <a href=\"## DataItem.getProperty('NavigateUrl'); ##\" onclick=\"this.blur();return false;\" class=\"## DataItem.getProperty('Class'); ##\">"
++ "      <img src=\"## String(get_root() + '/Content/common/img/' + get_version() + '/ddn/des/' + DataItem.getProperty('Image')); ##\" width=\"110\" height=\"75\" border=\"0\" alt=\"## DataItem.getProperty('Text'); ##\" />"
++ "      <span class=\"h2\">## DataItem.getProperty('Text'); ##</span>"
++ "      <span class=\"txt\">## DataItem.getProperty('Description'); ##</span>"
++ "    </a>"
++ "  </div>");
+    ct.Add().ID("ControlTemplate").Content(
+    "  <div class=\"itm-hlp\">"
+    + "    <ul>"
+    + "      <li>"
+    + "        <a href=\"## String(get_root() + '/calendar/coreFeatures/'); ##\" onclick=\"this.blur();\" class=\"hlp-cal\">"
+    + "          <span>Calendar</span>"
+    + "        </a>"
+    + "      </li>"
+    + "      <li>"
+    + "        <a href=\"## String(get_root() + '/combobox/coreFeatures/'); ##\" onclick=\"this.blur();\" class=\"hlp-cmb\">"
+    + "          <span>ComboBox</span>"
+    + "        </a>"
+    + "      </li>"
+    + "      <li>"
+    + "        <a href=\"## String(get_root() + '/datagrid/coreFeatures/'); ##\" onclick=\"this.blur();\" class=\"hlp-grd\">"
+    + "          <span>DataGrid</span>"
+    + "        </a>"
+    + "      </li>"
+    + "      <li>"
+    + "        <a href=\"## String(get_root() + '/menu/coreFeatures/'); ##\" onclick=\"this.blur();\" class=\"hlp-mnu\">"
+    + "          <span>Menu</span>"
+    + "        </a>"
+    + "      </li>"
+    + "      <li>"
+    + "        <a href=\"## String(get_root() + '/navbar/ThemeSwitching/'); ##\" onclick=\"this.blur();\" class=\"hlp-nav\">"
+    + "          <span>NavBar</span>"
+    + "        </a>"
+    + "      </li>"
+    + "      <li>"
+    + "        <a href=\"## String(get_root() + '/tabstrip/coreFeatures/'); ##\" onclick=\"this.blur();\" class=\"hlp-tab\">"
+    + "          <span>TabStrip</span>"
+    + "        </a>"
+    + "      </li>"
+    + "      <li>"
+    + "        <a href=\"## String(get_root() + '/toolbar/coreFeatures/'); ##\" onclick=\"this.blur();\" class=\"hlp-tb\">"
+    + "          <span>ToolBar</span>"
+    + "        </a>"
+    + "      </li>"
+    + "      <li>"
+    + "        <a href=\"## String(get_root() + '/treeview/coreFeatures/'); ##\" onclick=\"this.blur();\" class=\"hlp-tv\">"
+    + "          <span>TreeView</span>"
+    + "        </a>"
+    + "      </li>"
+    + "    </ul>"
+    + "  </div>");
+  })
+)
+				</div>
+			<div class="r"></div>
+		</div>@* /main menu *@
+	</div>@* /header *@
+
+	<div id="ttl">@* demo title *@
+		<div class="l"></div>
+		<div class="m">
+			@{ HtmlString codeButtonHTML = new HtmlString(ViewData["CodeButtonHtml"].ToString()); }
+      @codeButtonHTML
+			<div id="ctrl" class="ctrl-@ViewData["DemoType"].ToString().ToLower()">
+   			<h2>@ViewData["DemoType"].ToString()</h2>
+			</div>
+			<h1>@ViewData["DemoTitle"].ToString()</h1>
+		</div>
+		<div class="r"></div>
+	</div>@* /demo title *@
+
+
+	<div id="con">@* /page content *@
+		<div id="mn">@* /main content *@
+			<div class="mn-l" id="mn-l">
+				<div id="nav">@* demo treeview *@
+
+@(Html
+.ComponentArt().TreeView()
+.ID("DemoTreeView")
+.CssClass("tv")
+.KeyboardEnabled(false)
+.ShowLines(false)
+.NodeRowCssClass("nav-row")
+.AutoScroll(true)
+.Visible(ViewData["BodyClass"] == "full" ? false : true)
+.SiteMapXmlFile("~/App_Data/common/xml/" + ViewData["DemoType"].ToString().ToLower() + "Demos.xml")
+.NodeCssClass("nav-itm")
+.HoverNodeCssClass("nav-itm-h")
+.SelectedNodeCssClass("nav-itm-s")
+.ExtendNodeCells(true)
+.NodeIndent(0)
+.Height(Unit.Percentage(100))
+.ExpandCollapseImageWidth(16)
+.ExpandCollapseImageHeight(27)
+.CollapseImageUrl("~/Content/common/img/20101/nav/exp.png")
+.ExpandSlide(SlideType.ExponentialAccelerate)
+.ExpandDuration(350)
+.ExpandSinglePath(true)
+.ExpandImageUrl("~/Content/common/img/20101/nav/col.png")
+)
+
+
+				</div>@* demo treeview *@
+			</div>
+
+			<div class="mn-r" id="mn-r">
+				<div id="dem">@* demo wrapper *@
+					<div class="DemoContainer" id="DemoArea">@* /demo proper *@
+						<div>

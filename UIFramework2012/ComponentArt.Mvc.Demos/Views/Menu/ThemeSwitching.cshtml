@@ -1,0 +1,30 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{
+  ViewData["DemoType"] = "Menu";
+  ViewData["DemoTitle"] = "Theme Switching";
+  ViewData["CodeFiles"] = "/Views/Menu/ThemeSwitching.aspx,/Controllers/MenuController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>Menu's theming functionality is showcased here, which is activated via its AutoTheming property.</li>
+<li>The changing of the CSS definitions is done by resetting the active stylesheet.</li>
+</ul>
+";    
+}
+@section HeadContent {
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+}
+<table>
+  <tr valign="top">
+    <td>@(Html.ComponentArt().Menu()
+      .ID("Menu1")
+      .SiteMapXmlFile("~/App_Data/Menu/ThemeSwitching/menuData.xml")
+      .AutoTheming(true)
+      .Width(Unit.Parse("340px"))
+)
+    </td>
+    <td>
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml") 
+    </td>
+  </tr>
+</table>

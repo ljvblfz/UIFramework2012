@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfCarCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarCategory" nillable="true" type="tns:CarCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarCategory" nillable="true" type="tns:ArrayOfCarCategory" />
+  <xs:complexType name="CarCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarCategory" nillable="true" type="tns:CarCategory" />
+  <xs:complexType name="ArrayOfCarModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarModel" nillable="true" type="tns:CarModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarModel" nillable="true" type="tns:ArrayOfCarModel" />
+  <xs:complexType name="CarModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LastOrderedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ListPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitsInStock" type="xs:int" />
+      <xs:element minOccurs="0" name="UnitsOnOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarModel" nillable="true" type="tns:CarModel" />
+  <xs:complexType name="ArrayOfCarSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CarSale" nillable="true" type="tns:CarSale" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCarSale" nillable="true" type="tns:ArrayOfCarSale" />
+  <xs:complexType name="CarSale">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateOfSale" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="SalesPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CarSale" nillable="true" type="tns:CarSale" />
+</xs:schema>

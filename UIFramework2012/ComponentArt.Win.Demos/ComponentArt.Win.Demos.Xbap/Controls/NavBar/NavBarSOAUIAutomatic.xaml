@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.NavBarSOAUIAutomatic"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    >
+  <Grid>
+  	<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="NavBar" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="SOA.UI Automatic Web Service" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases SOA.UI data binding automation in NavBar." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\NavBar\NavBarSOAUIAutomatic.xaml,\source\controls\NavBar\NavBarSOAUIAutomatic.xaml.cs" />
+
+      <my:NavBar x:Name="MyNavBar" Height="400" Width="250" 
+                   IsLoadOnDemandEnabled="True"
+                   TextImageRelation="ImageBeforeText" 
+                   GroupItemHeaderHorizontalAlignment="Left"
+                   ItemHeaderHorizontalAlignment="Left"
+                   />
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,31 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoType"] = "Menu";
+  ViewData["DemoTitle"] = "Themed With Icons";
+  ViewData["CodeFiles"] = "/Views/Menu/ThemedWithIcons.aspx,/Controllers/MenuController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>Custom icon images are defined on MenuItems by a 'IconUrl' property. </li>
+</ul>
+";    
+}
+@section HeadContent {
+  <style type="text/css">
+    /* override a couple theme settings */
+    .cart-menu-group
+    {
+      background-image: url(../../Content/Menu/ThemedWithCssIcons/images/group_background.gif) !important;
+    }
+    .cart-menu-sub-item a:hover
+    {
+      background: transparent !important;
+    }
+  </style>
+  <link href="@Url.Content("~/Content/Themes/Outlook2007/theme.css")" rel="stylesheet" type="text/css" />
+}
+@(Html.ComponentArt().Menu()
+    .ID("Menu1")
+    .SiteMapXmlFile("~/App_Data/Menu/ThemedWithIcons/menuData.xml")
+    .AutoTheming(true)
+    .ImagesBaseUrl("~/Content/Menu/ThemedWithCssIcons/images/")
+)

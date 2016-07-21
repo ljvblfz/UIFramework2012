@@ -1,0 +1,3002 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{688BABC3-B1C2-4579-AE6A-8E4C427A1B45}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComponentArt.Silverlight.Demos</RootNamespace>
+    <AssemblyName>ComponentArt.Silverlight.Demos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>ComponentArt.Silverlight.Demos.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>ComponentArt.Silverlight.Demos.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ExpressionBlendVersion>3.0.1927.0</ExpressionBlendVersion>
+    <LinkedServerProject>..\ComponentArt.Silverlight.Demos.Web\ComponentArt.Silverlight.Demos.Web.csproj</LinkedServerProject>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/ComponentArt.Silverlight.Demos/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>
+    </ReferencePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentArt.Silverlight.Themes.ArcticWhite">
+      <HintPath>..\..\..\..\assembly\silverlight\ComponentArt.Silverlight.Themes.ArcticWhite.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.Themes.Office2003">
+      <HintPath>..\..\..\..\assembly\silverlight\ComponentArt.Silverlight.Themes.Office2003.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.Themes.Office2007">
+      <HintPath>..\..\..\..\assembly\silverlight\ComponentArt.Silverlight.Themes.Office2007.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.Themes.Windows7">
+      <HintPath>..\..\..\..\assembly\silverlight\ComponentArt.Silverlight.Themes.Windows7.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.UI.Common">
+      <HintPath>..\DLLs\ComponentArt.Silverlight.UI.Common.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.UI.Data">
+      <HintPath>..\DLLs\ComponentArt.Silverlight.UI.Data.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.UI.Input">
+      <HintPath>..\DLLs\ComponentArt.Silverlight.UI.Input.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.UI.Layout">
+      <HintPath>..\DLLs\ComponentArt.Silverlight.UI.Layout.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.UI.Navigation">
+      <HintPath>..\DLLs\ComponentArt.Silverlight.UI.Navigation.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Client.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceModel.Web.Extensions, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.DomainServices, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Demo\Intro\IntroContent.xaml.cs">
+      <DependentUpon>IntroContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Demo\Intro\IntroLogo.xaml.cs">
+      <DependentUpon>IntroLogo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Demo\Intro\IntroMenuBar.xaml.cs">
+      <DependentUpon>IntroMenuBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DemoList.xaml.cs">
+      <DependentUpon>DemoList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\HorizontalNav.xaml.cs">
+      <DependentUpon>HorizontalNav.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\SmallIndexDemoButton.cs" />
+    <Compile Include="Classes\ImageButton.cs" />
+    <Compile Include="BestOfBreed_DataGrid.xaml.cs">
+      <DependentUpon>BestOfBreed_DataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BestOfBreed_Editors.xaml.cs">
+      <DependentUpon>BestOfBreed_Editors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BestOfBreed_Navigation.xaml.cs">
+      <DependentUpon>BestOfBreed_Navigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\breadcrumb\BreadCrumbSimple.xaml.cs">
+      <DependentUpon>BreadCrumbSimple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\breadcrumb\BreadCrumbDesignArcticWhite.xaml.cs">
+      <DependentUpon>BreadCrumbDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\breadcrumb\BreadCrumbDesignOffice2003.xaml.cs">
+      <DependentUpon>BreadCrumbDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\breadcrumb\BreadCrumbDesignOffice2007.xaml.cs">
+      <DependentUpon>BreadCrumbDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\breadcrumb\BreadCrumbDesignWindows7.xaml.cs">
+      <DependentUpon>BreadCrumbDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\breadcrumb\BreadCrumbDesignBlackIce.xaml.cs">
+      <DependentUpon>BreadCrumbDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\breadcrumb\BreadCrumbCoreFeatures.xaml.cs">
+      <DependentUpon>BreadCrumbCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\breadcrumb\BreadCrumbResizing.xaml.cs">
+      <DependentUpon>BreadCrumbResizing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\breadcrumb\BreadCrumbXmlBinding.xaml.cs">
+      <DependentUpon>BreadCrumbXmlBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxInPopup.xaml.cs">
+      <DependentUpon>ComboBoxInPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridHorizontalScrolling.xaml.cs">
+      <DependentUpon>DataGridHorizontalScrolling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridSoaFiltering.xaml.cs">
+      <DependentUpon>DataGridSoaFiltering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridClientFiltering.xaml.cs">
+      <DependentUpon>DataGridClientFiltering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmleditor\HtmlEditorArcticWhite.xaml.cs">
+      <DependentUpon>HtmlEditorArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmleditor\HtmlEditorOffice2007.xaml.cs">
+      <DependentUpon>HtmlEditorOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\itemflow\ItemFlowXamlContent.xaml.cs">
+      <DependentUpon>ItemFlowXamlContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuSelectedItemTemplate.xaml.cs">
+      <DependentUpon>MenuSelectedItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxDesignArcticWhite.xaml.cs">
+      <DependentUpon>ComboBoxDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxDesignBlackIce.xaml.cs">
+      <DependentUpon>ComboBoxDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxDesignOffice2003.xaml.cs">
+      <DependentUpon>ComboBoxDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxDesignOffice2007.xaml.cs">
+      <DependentUpon>ComboBoxDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxDesignWindows7.xaml.cs">
+      <DependentUpon>ComboBoxDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxLayoutAndResize.xaml.cs">
+      <DependentUpon>ComboBoxLayoutAndResize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxLoadOnDemand.xaml.cs">
+      <DependentUpon>ComboBoxLoadOnDemand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxCoreFeatures.xaml.cs">
+      <DependentUpon>ComboBoxCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxSoaAutoPilot.xaml.cs">
+      <DependentUpon>ComboBoxSoaAutoPilot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxTemplateCategories.xaml.cs">
+      <DependentUpon>ComboBoxTemplateCategories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxCodingBinding.xaml.cs">
+      <DependentUpon>ComboBoxCodingBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxTemplateColumns.xaml.cs">
+      <DependentUpon>ComboBoxTemplateColumns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxCodingCsv.xaml.cs">
+      <DependentUpon>ComboBoxCodingCsv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\combobox\ComboBoxCodingXml.xaml.cs">
+      <DependentUpon>ComboBoxCodingXml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuAPIControl.xaml.cs">
+      <DependentUpon>ContextMenuAPIControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuDesignArcticWhite.xaml.cs">
+      <DependentUpon>ContextMenuDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuDesignBlackIce.xaml.cs">
+      <DependentUpon>ContextMenuDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuDesignOffice2003.xaml.cs">
+      <DependentUpon>ContextMenuDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuDesignOffice2007.xaml.cs">
+      <DependentUpon>ContextMenuDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuCoreFeatures.xaml.cs">
+      <DependentUpon>ContextMenuCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuCustom.xaml.cs">
+      <DependentUpon>ContextMenuCustom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuDesignWindows7.xaml.cs">
+      <DependentUpon>ContextMenuDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuShowTypes.xaml.cs">
+      <DependentUpon>ContextMenuShowTypes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\contextmenu\ContextMenuSimple.xaml.cs">
+      <DependentUpon>ContextMenuSimple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridLargeClientDataset.xaml.cs">
+      <DependentUpon>DataGridLargeClientDataset.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridRiaCodelessFiltering.xaml.cs">
+      <DependentUpon>DataGridRiaCodelessFiltering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridClientOperation.xaml.cs">
+      <DependentUpon>DataGridClientOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridColumnReordering.xaml.cs">
+      <DependentUpon>DataGridColumnReordering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridColumnResizing.xaml.cs">
+      <DependentUpon>DataGridColumnResizing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridCoreFeatures.xaml.cs">
+      <DependentUpon>DataGridCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridDataCellTemplates.xaml.cs">
+      <DependentUpon>DataGridDataCellTemplates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridDesignArcticWhite.xaml.cs">
+      <DependentUpon>DataGridDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridDesignBlackIce.xaml.cs">
+      <DependentUpon>DataGridDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridDesignOffice2003.xaml.cs">
+      <DependentUpon>DataGridDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridDesignOffice2007.xaml.cs">
+      <DependentUpon>DataGridDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridDesignWindows7.xaml.cs">
+      <DependentUpon>DataGridDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridEditing.xaml.cs">
+      <DependentUpon>DataGridEditing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridExternalEditing.xaml.cs">
+      <DependentUpon>DataGridExternalEditing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridGrouping.xaml.cs">
+      <DependentUpon>DataGridGrouping.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridGroupTotals.xaml.cs">
+      <DependentUpon>DataGridGroupTotals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridHierarchy.xaml.cs">
+      <DependentUpon>DataGridHierarchy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridHierarchyHighlight.xaml.cs">
+      <DependentUpon>DataGridHierarchyHighlight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridObservableCollection.xaml.cs">
+      <DependentUpon>DataGridObservableCollection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridProgrammaticCreation.xaml.cs">
+      <DependentUpon>DataGridProgrammaticCreation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridRiaCodeless.xaml.cs">
+      <DependentUpon>DataGridRiaCodeless.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridRowDetails.xaml.cs">
+      <DependentUpon>DataGridRowDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridScrolling.xaml.cs">
+      <DependentUpon>DataGridScrolling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridSoaAutoPilot.xaml.cs">
+      <DependentUpon>DataGridSoaAutoPilot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridSoaCustom.xaml.cs">
+      <DependentUpon>DataGridSoaCustom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridSoaEditing.xaml.cs">
+      <DependentUpon>DataGridSoaEditing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridSoaScrolling.xaml.cs">
+      <DependentUpon>DataGridSoaScrolling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\datagrid\DataGridWebServiceOperation.xaml.cs">
+      <DependentUpon>DataGridWebServiceOperation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\dragdrop\DragDropCoreFeatures.xaml.cs">
+      <DependentUpon>DragDropCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\dragdrop\DragDropVisualFeatures.xaml.cs">
+      <DependentUpon>DragDropVisualFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\dragdrop\DragDropListboxToTreeView.xaml.cs">
+      <DependentUpon>DragDropListboxToTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\dragdrop\DragDropSimpleFeatures.xaml.cs">
+      <DependentUpon>DragDropSimpleFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmleditor\HtmlEditorAPI.xaml.cs">
+      <DependentUpon>HtmlEditorAPI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmleditor\HtmlEditorCoreFeatures.xaml.cs">
+      <DependentUpon>HtmlEditorCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmleditor\HtmlEditorCustomizingToolBars.xaml.cs">
+      <DependentUpon>HtmlEditorCustomizingToolBars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmleditor\HtmlEditorExternalToolBar.xaml.cs">
+      <DependentUpon>HtmlEditorExternalToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmlpanel\BoundDouble.cs" />
+    <Compile Include="controls\htmlpanel\HtmlPanelScrolling.xaml.cs">
+      <DependentUpon>HtmlPanelScrolling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmlpanel\HtmlPanelOpacity.xaml.cs">
+      <DependentUpon>HtmlPanelOpacity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmlpanel\HtmlPanelManualLayout.xaml.cs">
+      <DependentUpon>HtmlPanelManualLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmlpanel\HtmlPanelAutomaticLayout.xaml.cs">
+      <DependentUpon>HtmlPanelAutomaticLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmlpanel\HtmlPanelCoreFeatures.xaml.cs">
+      <DependentUpon>HtmlPanelCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\htmlpanel\HtmlPanelHtmlSource.xaml.cs">
+      <DependentUpon>HtmlPanelHtmlSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\itemflow\ItemFlowAPI.xaml.cs">
+      <DependentUpon>ItemFlowAPI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\itemflow\ItemFlowCoreFeatures.xaml.cs">
+      <DependentUpon>ItemFlowCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\itemflow\ItemFlowEvents.xaml.cs">
+      <DependentUpon>ItemFlowEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\itemflow\ItemFlowSelectedItemTemplate.xaml.cs">
+      <DependentUpon>ItemFlowSelectedItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\itemflow\ItemFlowTwoInstances.xaml.cs">
+      <DependentUpon>ItemFlowTwoInstances.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\itemflow\ItemFlowWrap.xaml.cs">
+      <DependentUpon>ItemFlowWrap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\maskedinput\MaskedInputCustomTransform.xaml.cs">
+      <DependentUpon>MaskedInputCustomTransform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\maskedinput\MaskedInputDesignWindows7.xaml.cs">
+      <DependentUpon>MaskedInputDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\maskedinput\MaskedInputDesignOffice2007.xaml.cs">
+      <DependentUpon>MaskedInputDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\maskedinput\MaskedInputDesignOffice2003.xaml.cs">
+      <DependentUpon>MaskedInputDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\maskedinput\MaskedInputDesignBlackIce.xaml.cs">
+      <DependentUpon>MaskedInputDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\maskedinput\MaskedInputDesignArcticWhite.xaml.cs">
+      <DependentUpon>MaskedInputDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\maskedinput\MaskedInputCoreFeatures.xaml.cs">
+      <DependentUpon>MaskedInputCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuSoaAutoPilot.xaml.cs">
+      <DependentUpon>MenuSoaAutoPilot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuXMLExpandoItems.xaml.cs">
+      <DependentUpon>MenuXMLExpandoItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuXMLStringBinding.xaml.cs">
+      <DependentUpon>MenuXMLStringBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuXMLFileBinding.xaml.cs">
+      <DependentUpon>MenuXMLFileBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuAddRemoveDisableItems.xaml.cs">
+      <DependentUpon>MenuAddRemoveDisableItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuBoundaryDetection.xaml.cs">
+      <DependentUpon>MenuBoundaryDetection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuCoreFeatures.xaml.cs">
+      <DependentUpon>MenuCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuDesignArcticWhite.xaml.cs">
+      <DependentUpon>MenuDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuDesignBlackIce.xaml.cs">
+      <DependentUpon>MenuDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuDesignOffice2003.xaml.cs">
+      <DependentUpon>MenuDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuDesignOffice2007.xaml.cs">
+      <DependentUpon>MenuDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuDesignWindows7.xaml.cs">
+      <DependentUpon>MenuDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuDropShadowFeatures.xaml.cs">
+      <DependentUpon>MenuDropShadowFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuProgrammaticCreation.xaml.cs">
+      <DependentUpon>MenuProgrammaticCreation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuTemplatedItems.xaml.cs">
+      <DependentUpon>MenuTemplatedItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\menu\MenuVerticalOrientation.xaml.cs">
+      <DependentUpon>MenuVerticalOrientation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarEvents.xaml.cs">
+      <DependentUpon>NavBarEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarDesignWindows7.xaml.cs">
+      <DependentUpon>NavBarDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarDesignOffice2007.xaml.cs">
+      <DependentUpon>NavBarDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarDesignOffice2003.xaml.cs">
+      <DependentUpon>NavBarDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarDesignArcticWhite.xaml.cs">
+      <DependentUpon>NavBarDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarSOAUICustom.xaml.cs">
+      <DependentUpon>NavBarSOAUICustom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarSOAUIAutomatic.xaml.cs">
+      <DependentUpon>NavBarSOAUIAutomatic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarLoadOnDemandFeatures.xaml.cs">
+      <DependentUpon>NavBarLoadOnDemandFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarRichContentFeatures.xaml.cs">
+      <DependentUpon>NavBarRichContentFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarDesignBlackIce.xaml.cs">
+      <DependentUpon>NavBarDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\navbar\NavBarCoreFeatures.xaml.cs">
+      <DependentUpon>NavBarCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\rangeslider\RangeSliderAPI.xaml.cs">
+      <DependentUpon>RangeSliderAPI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\rangeslider\RangeSliderAxisTypes.xaml.cs">
+      <DependentUpon>RangeSliderAxisTypes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\rangeslider\RangeSliderCoreFeatures.xaml.cs">
+      <DependentUpon>RangeSliderCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\rangeslider\RangeSliderDatabindingFeatures.xaml.cs">
+      <DependentUpon>RangeSliderDatabindingFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\rangeslider\RangeSliderEvents.xaml.cs">
+      <DependentUpon>RangeSliderEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\spinner\SpinnerCoreFeatures.xaml.cs">
+      <DependentUpon>SpinnerCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterAPI.xaml.cs">
+      <DependentUpon>SplitterAPI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterDesignArcticWhite.xaml.cs">
+      <DependentUpon>SplitterDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterDesignBlackIce.xaml.cs">
+      <DependentUpon>SplitterDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterDesignOffice2003.xaml.cs">
+      <DependentUpon>SplitterDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterDesignOffice2007.xaml.cs">
+      <DependentUpon>SplitterDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterDesignWindows7.xaml.cs">
+      <DependentUpon>SplitterDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterEvents.xaml.cs">
+      <DependentUpon>SplitterEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterResizeLimitationFeatures.xaml.cs">
+      <DependentUpon>SplitterResizeLimitationFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterBasicFeatures.xaml.cs">
+      <DependentUpon>SplitterBasicFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\numberinput\NumberInputDesignWindows7.xaml.cs">
+      <DependentUpon>NumberInputDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\numberinput\NumberInputDesignOffice2007.xaml.cs">
+      <DependentUpon>NumberInputDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\numberinput\NumberInputDesignOffice2003.xaml.cs">
+      <DependentUpon>NumberInputDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\numberinput\NumberInputDesignBlackIce.xaml.cs">
+      <DependentUpon>NumberInputDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\numberinput\NumberInputDesignArcticWhite.xaml.cs">
+      <DependentUpon>NumberInputDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\numberinput\NumberInputCultureSettings.xaml.cs">
+      <DependentUpon>NumberInputCultureSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\splitter\SplitterCoreFeatures.xaml.cs">
+      <DependentUpon>SplitterCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\numberinput\NumberInputCoreFeatures.xaml.cs">
+      <DependentUpon>NumberInputCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripSOAUIAutomatic.xaml.cs">
+      <DependentUpon>TabStripSOAUIAutomatic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripAlignment.xaml.cs">
+      <DependentUpon>TabStripAlignment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripCoreFeatures.xaml.cs">
+      <DependentUpon>TabStripCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripDesignArcticWhite.xaml.cs">
+      <DependentUpon>TabStripDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripDesignBlackIce.xaml.cs">
+      <DependentUpon>TabStripDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripDesignOffice2003.xaml.cs">
+      <DependentUpon>TabStripDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripDesignOffice2007.xaml.cs">
+      <DependentUpon>TabStripDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripDesignWindows7.xaml.cs">
+      <DependentUpon>TabStripDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripEvents.xaml.cs">
+      <DependentUpon>TabStripEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripReorder.xaml.cs">
+      <DependentUpon>TabStripReorder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripScroll.xaml.cs">
+      <DependentUpon>TabStripScroll.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tabstrip\TabStripWrap.xaml.cs">
+      <DependentUpon>TabStripWrap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarSOAUIAutomatic.xaml.cs">
+      <DependentUpon>ToolBarSOAUIAutomatic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarButtonAppearances.xaml.cs">
+      <DependentUpon>ToolBarButtonAppearances.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarCoreFeatures.xaml.cs">
+      <DependentUpon>ToolBarCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarDesignArcticWhite.xaml.cs">
+      <DependentUpon>ToolBarDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarDesignBlackIce.xaml.cs">
+      <DependentUpon>ToolBarDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarDesignOffice2003.xaml.cs">
+      <DependentUpon>ToolBarDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarDesignOffice2007.xaml.cs">
+      <DependentUpon>ToolBarDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarDesignWindows7.xaml.cs">
+      <DependentUpon>ToolBarDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarEnableDisableFeatures.xaml.cs">
+      <DependentUpon>ToolBarEnableDisableFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarEvents.xaml.cs">
+      <DependentUpon>ToolBarEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\toolbar\ToolBarOrientation.xaml.cs">
+      <DependentUpon>ToolBarOrientation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewEditing.xaml.cs">
+      <DependentUpon>TreeViewEditing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewSOAUIEditing.xaml.cs">
+      <DependentUpon>TreeViewSOAUIEditing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewCheckboxFeatures.xaml.cs">
+      <DependentUpon>TreeViewCheckboxFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewSOAUICustom.xaml.cs">
+      <DependentUpon>TreeViewSOAUICustom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewSOAUIAutomatic.xaml.cs">
+      <DependentUpon>TreeViewSOAUIAutomatic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewLoadOnDemandFeatures.xaml.cs">
+      <DependentUpon>TreeViewLoadOnDemandFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewDesignBlackIce.xaml.cs">
+      <DependentUpon>TreeViewDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewAddRemoveFeatures.xaml.cs">
+      <DependentUpon>TreeViewAddRemoveFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewCoreFeatures.xaml.cs">
+      <DependentUpon>TreeViewCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewDesignArcticWhite.xaml.cs">
+      <DependentUpon>TreeViewDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewDesignOffice2003.xaml.cs">
+      <DependentUpon>TreeViewDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewDesignOffice2007.xaml.cs">
+      <DependentUpon>TreeViewDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewDesignWindows7.xaml.cs">
+      <DependentUpon>TreeViewDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewDragDropFeatures.xaml.cs">
+      <DependentUpon>TreeViewDragDropFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewEditingFeatures.xaml.cs">
+      <DependentUpon>TreeViewEditingFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewLinesFeatures.xaml.cs">
+      <DependentUpon>TreeViewLinesFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\treeview\TreeViewMultiSelectFeatures.xaml.cs">
+      <DependentUpon>TreeViewMultiSelectFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\upload\UploadCoreFeatures.xaml.cs">
+      <DependentUpon>UploadCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\upload\UploadDesignArcticWhite.xaml.cs">
+      <DependentUpon>UploadDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\upload\UploadDesignBlackIce.xaml.cs">
+      <DependentUpon>UploadDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\upload\UploadDesignOffice2003.xaml.cs">
+      <DependentUpon>UploadDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\upload\UploadDesignOffice2007.xaml.cs">
+      <DependentUpon>UploadDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\upload\UploadDesignWindows7.xaml.cs">
+      <DependentUpon>UploadDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowAnimation.xaml.cs">
+      <DependentUpon>WindowAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowAlignment.xaml.cs">
+      <DependentUpon>WindowAlignment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowAPI.xaml.cs">
+      <DependentUpon>WindowAPI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowCoreFeatures.xaml.cs">
+      <DependentUpon>WindowCoreFeatures.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowDesignArcticWhite.xaml.cs">
+      <DependentUpon>WindowDesignArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowDesignBlackIce.xaml.cs">
+      <DependentUpon>WindowDesignBlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowDesignOffice2003.xaml.cs">
+      <DependentUpon>WindowDesignOffice2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowDesignOffice2007.xaml.cs">
+      <DependentUpon>WindowDesignOffice2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowDesignWindows7.xaml.cs">
+      <DependentUpon>WindowDesignWindows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowEvents.xaml.cs">
+      <DependentUpon>WindowEvents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowModal.xaml.cs">
+      <DependentUpon>WindowModal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowMultiple.xaml.cs">
+      <DependentUpon>WindowMultiple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\window\WindowResize.xaml.cs">
+      <DependentUpon>WindowResize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="design\ArcticWhite.xaml.cs">
+      <DependentUpon>ArcticWhite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="design\BlackIce.xaml.cs">
+      <DependentUpon>BlackIce.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="design\Windows7.xaml.cs">
+      <DependentUpon>Windows7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="design\Office2007.xaml.cs">
+      <DependentUpon>Office2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="design\Office2003.xaml.cs">
+      <DependentUpon>Office2003.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generated_Code\ComponentArt.Silverlight.Demos.Web.g.cs" />
+    <Compile Include="IDisableable.cs" />
+    <Compile Include="integration\FeedBrowser\FeedBrowser.xaml.cs">
+      <DependentUpon>FeedBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="integration\FileExplorer\FileExplorer.xaml.cs">
+      <DependentUpon>FileExplorer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="integration\outlook2007\Outlook2007.xaml.cs">
+      <DependentUpon>Outlook2007.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageNew.xaml.cs">
+      <DependentUpon>PageNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ManualComboBoxLocationsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ManualNavBarService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ManualTreeViewFileExplorerService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NavBarService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SalesDataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SoaComboBoxLocationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SoaDataGridMessageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SoaMenuDemoService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TreeViewFileBrowserService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WCFCarService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\MessageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProductService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="controls\breadcrumb\BreadCrumbCoreFeatures.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\breadcrumb\BreadCrumbResizing.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\breadcrumb\BreadCrumbXmlBinding.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxDesignArcticWhite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxDesignBlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxDesignOffice2003.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxDesignOffice2007.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxDesignWindows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxLayoutAndResize.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxLoadOnDemand.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxSoaAutoPilot.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxTemplateCategories.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxCodingBinding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxTemplateColumns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxCodingCsv.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxCodingXml.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuAPIControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuDesignArcticWhite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuDesignBlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuDesignOffice2003.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuDesignOffice2007.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuCustom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuDesignWindows7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuShowTypes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\contextmenu\ContextMenuSimple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridColumnReordering.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridColumnResizing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridDataCellTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridDesignArcticWhite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridDesignBlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridDesignOffice2003.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridDesignOffice2007.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridDesignWindows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridEditing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridExternalEditing.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridGrouping.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridGroupTotals.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridHierarchy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridObservableCollection.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridProgrammaticCreation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridRowDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridScrolling.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridSoaAutoPilot.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridSoaCustom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridSoaEditing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridSoaScrolling.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridWebServiceOperation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\dragdrop\DragDropCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\dragdrop\DragDropVisualFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\dragdrop\DragDropListboxToTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\dragdrop\DragDropSimpleFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmleditor\HtmlEditorAPI.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmleditor\HtmlEditorCoreFeatures.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmleditor\HtmlEditorCustomizingToolBars.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmleditor\HtmlEditorExternalToolBar.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmlpanel\HtmlPanelScrolling.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmlpanel\HtmlPanelOpacity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmlpanel\HtmlPanelManualLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmlpanel\HtmlPanelAutomaticLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmlpanel\HtmlPanelCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmlpanel\HtmlPanelHtmlSource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\itemflow\ItemFlowAPI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\itemflow\ItemFlowCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\itemflow\ItemFlowEvents.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\itemflow\ItemFlowSelectedItemTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\itemflow\ItemFlowTwoInstances.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\itemflow\ItemFlowWrap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\maskedinput\MaskedInputCustomTransform.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\maskedinput\MaskedInputDesignWindows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\maskedinput\MaskedInputDesignOffice2007.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\maskedinput\MaskedInputDesignOffice2003.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\maskedinput\MaskedInputDesignBlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\maskedinput\MaskedInputDesignArcticWhite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\maskedinput\MaskedInputCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuSoaAutoPilot.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuXMLExpandoItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuXMLStringBinding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuXMLFileBinding.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuAddRemoveDisableItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuBoundaryDetection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuDesignArcticWhite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuDesignBlackIce.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuDesignOffice2003.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuDesignOffice2007.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuDesignWindows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuDropShadowFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuProgrammaticCreation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuTemplatedItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuVerticalOrientation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarEvents.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarDesignWindows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarDesignOffice2007.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarDesignOffice2003.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarDesignArcticWhite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarSOAUICustom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarSOAUIAutomatic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarLoadOnDemandFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarRichContentFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarDesignBlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\navbar\NavBarCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\numberinput\NumberInputDesignWindows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\numberinput\NumberInputDesignOffice2007.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\numberinput\NumberInputDesignOffice2003.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\numberinput\NumberInputDesignBlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\numberinput\NumberInputDesignArcticWhite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\numberinput\NumberInputCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\numberinput\NumberInputCultureSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterAPI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterDesignArcticWhite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterDesignBlackIce.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterDesignOffice2003.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterDesignOffice2007.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterDesignWindows7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterEvents.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterResizeLimitationFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterBasicFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\splitter\SplitterCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripSOAUIAutomatic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripAlignment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripDesignArcticWhite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripDesignBlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripDesignOffice2003.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripDesignOffice2007.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripDesignWindows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripEvents.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripReorder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripScroll.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\tabstrip\TabStripWrap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarSOAUIAutomatic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarButtonAppearances.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarCoreFeatures.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarDesignArcticWhite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarDesignBlackIce.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarDesignOffice2003.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarDesignOffice2007.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarDesignWindows7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarEnableDisableFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarEvents.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\toolbar\ToolBarOrientation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewEditing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewSOAUIEditing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewCheckboxFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewSOAUICustom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewSOAUIAutomatic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewLoadOnDemandFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewDesignBlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewAddRemoveFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewDesignArcticWhite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewDesignOffice2003.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewDesignOffice2007.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewDesignWindows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewDragDropFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewEditingFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewLinesFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\treeview\TreeViewMultiSelectFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\upload\UploadCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\upload\UploadDesignArcticWhite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\upload\UploadDesignBlackIce.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\upload\UploadDesignOffice2003.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\upload\UploadDesignOffice2007.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\upload\UploadDesignWindows7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowAnimation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowAlignment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowAPI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowCoreFeatures.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowDesignArcticWhite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowDesignBlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowDesignOffice2003.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowDesignOffice2007.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowDesignWindows7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowEvents.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowModal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowMultiple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\window\WindowResize.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="design\ArcticWhite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="design\BlackIce.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="design\Windows7.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="design\Office2007.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="design\Office2003.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\FileExplorer\FileExplorer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Welcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Service References\ManualNavBarService\ComponentArt.Silverlight.Demos.ManualNavBarService.MyNavBarData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProductService\configuration91.svcinfo" />
+    <None Include="Service References\ProductService\configuration.svcinfo" />
+    <None Include="Service References\ProductService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Assets\Demo\CornerGlow.png" />
+    <Resource Include="Assets\Demo\TreeViewImages\node-demo.png" />
+    <Resource Include="Assets\Demo\TreeViewImages\node-design.png" />
+    <Resource Include="Assets\Demo\TreeViewImages\node-features.png" />
+    <Resource Include="Assets\Demo\TreeViewImages\node-programming.png" />
+    <Resource Include="Assets\Pages\Welcome\WebUiBox.png" />
+    <None Include="Service References\SoaDataGridMessageService\configuration91.svcinfo" />
+    <None Include="Service References\SoaDataGridMessageService\configuration.svcinfo" />
+    <None Include="Service References\SoaDataGridMessageService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TreeViewFileBrowserService\configuration91.svcinfo" />
+    <None Include="Service References\TreeViewFileBrowserService\configuration.svcinfo" />
+    <None Include="Service References\TreeViewFileBrowserService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ManualTreeViewFileExplorerService\configuration91.svcinfo" />
+    <None Include="Service References\ManualTreeViewFileExplorerService\configuration.svcinfo" />
+    <None Include="Service References\ManualTreeViewFileExplorerService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Assets\ToolBar\AlignCenter.png" />
+    <Resource Include="Assets\ToolBar\AlignCenterDark.png" />
+    <Resource Include="Assets\ToolBar\AlignJustify.png" />
+    <Resource Include="Assets\ToolBar\AlignJustifyDark.png" />
+    <Resource Include="Assets\ToolBar\AlignLeft.png" />
+    <Resource Include="Assets\ToolBar\AlignLeftDark.png" />
+    <Resource Include="Assets\ToolBar\AlignRight.png" />
+    <Resource Include="Assets\ToolBar\AlignRightDark.png" />
+    <Resource Include="Assets\ToolBar\BrowserBack.png" />
+    <Resource Include="Assets\ToolBar\BrowserForward.png" />
+    <Resource Include="Assets\ToolBar\BrowserHome.png" />
+    <Resource Include="Assets\ToolBar\BrowserReload.png" />
+    <Resource Include="Assets\ToolBar\BrowserStop.png" />
+    <Resource Include="Assets\ToolBar\BulletsNumbering.png" />
+    <Resource Include="Assets\ToolBar\BulletsNumberingDark.png" />
+    <Resource Include="Assets\ToolBar\BulletsSymbols.png" />
+    <Resource Include="Assets\ToolBar\BulletsSymbolsDark.png" />
+    <Resource Include="Assets\ToolBar\EditCopy.png" />
+    <Resource Include="Assets\ToolBar\EditCopyDark.png" />
+    <Resource Include="Assets\ToolBar\EditCut.png" />
+    <Resource Include="Assets\ToolBar\EditCutDark.png" />
+    <Resource Include="Assets\ToolBar\EditPaste.png" />
+    <Resource Include="Assets\ToolBar\FormatBold.png" />
+    <Resource Include="Assets\ToolBar\FormatBoldDark.png" />
+    <Resource Include="Assets\ToolBar\FormatItalic.png" />
+    <Resource Include="Assets\ToolBar\FormatItalicDark.png" />
+    <Resource Include="Assets\ToolBar\FormatUnderline.png" />
+    <Resource Include="Assets\ToolBar\FormatUnderlineDark.png" />
+    <Resource Include="Assets\ToolBar\NewAppointment.png" />
+    <Resource Include="Assets\ToolBar\NewContact.png" />
+    <Resource Include="Assets\ToolBar\NewJournalEntry.png" />
+    <Resource Include="Assets\ToolBar\NewMeetingRequest.png" />
+    <Resource Include="Assets\ToolBar\NewMessage.png" />
+    <Resource Include="Assets\ToolBar\NewPost.png" />
+    <Resource Include="Assets\ToolBar\NewTask.png" />
+    <Resource Include="Assets\ToolBar\ArcticWhite\ddn.png" />
+    <Resource Include="Assets\ToolBar\BlackIce\ddn.png" />
+    <Resource Include="Assets\ToolBar\Office2003\ddn.png" />
+    <Resource Include="Assets\ToolBar\Office2007\ddn.png" />
+    <Resource Include="Assets\ToolBar\Windows7\ddn.png" />
+    <Resource Include="Assets\DragDrop\generic_dragdrop.png" />
+    <None Include="Service References\ManualComboBoxLocationsService\configuration91.svcinfo" />
+    <None Include="Service References\ManualComboBoxLocationsService\configuration.svcinfo" />
+    <None Include="Service References\ManualComboBoxLocationsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Assets\NavBar\Big\calendar.png" />
+    <Resource Include="Assets\NavBar\Big\contacts.png" />
+    <Resource Include="Assets\NavBar\Big\deleted.png" />
+    <Resource Include="Assets\NavBar\Big\drafts.png" />
+    <Resource Include="Assets\NavBar\Big\folder.png" />
+    <Resource Include="Assets\NavBar\Big\inbox.png" />
+    <Resource Include="Assets\NavBar\Big\journal.png" />
+    <Resource Include="Assets\NavBar\Big\notes.png" />
+    <Resource Include="Assets\NavBar\Big\outbox.png" />
+    <Resource Include="Assets\NavBar\Big\outlook_today.png" />
+    <Resource Include="Assets\NavBar\Big\sent_items.png" />
+    <Resource Include="Assets\NavBar\Big\tasks.png" />
+    <None Include="Service References\ManualNavBarService\configuration91.svcinfo" />
+    <None Include="Service References\ManualNavBarService\configuration.svcinfo" />
+    <None Include="Service References\ManualNavBarService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\NavBarService\configuration91.svcinfo" />
+    <None Include="Service References\NavBarService\configuration.svcinfo" />
+    <None Include="Service References\NavBarService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Assets\NavBar\small\contacts.png" />
+    <Resource Include="Assets\NavBar\small\deleted.png" />
+    <Resource Include="Assets\NavBar\small\drafts.png" />
+    <Resource Include="Assets\NavBar\small\inbox.png" />
+    <Resource Include="Assets\NavBar\small\junk.png" />
+    <Resource Include="Assets\NavBar\small\mail.png" />
+    <Resource Include="Assets\NavBar\small\mailbox.png" />
+    <Resource Include="Assets\NavBar\small\notes.png" />
+    <Resource Include="Assets\NavBar\small\outbox.png" />
+    <Resource Include="Assets\NavBar\small\search.png" />
+    <Resource Include="Assets\NavBar\small\sent.png" />
+    <Resource Include="Assets\NavBar\small\24x24-contacts.png" />
+    <Resource Include="Assets\NavBar\small\24x24-mail.png" />
+    <Resource Include="Assets\NavBar\small\24x24-notes.png" />
+    <None Include="Service References\SoaComboBoxLocationService\configuration91.svcinfo" />
+    <None Include="Service References\SoaComboBoxLocationService\configuration.svcinfo" />
+    <None Include="Service References\SoaComboBoxLocationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SoaMenuDemoService\configuration91.svcinfo" />
+    <None Include="Service References\SoaMenuDemoService\configuration.svcinfo" />
+    <None Include="Service References\SoaMenuDemoService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TreeViewFileBrowserService\TreeViewFileBrowserService1.disco" />
+    <Resource Include="Assets\TreeView\TreeViewSOAUIEditing\addnode.png" />
+    <Resource Include="Assets\TreeView\TreeViewSOAUIEditing\addroot.png" />
+    <Resource Include="Assets\TreeView\TreeViewSOAUIEditing\disabled_addnode.png" />
+    <Resource Include="Assets\TreeView\TreeViewSOAUIEditing\disabled_rename.png" />
+    <Resource Include="Assets\TreeView\TreeViewSOAUIEditing\rename.png" />
+    <Resource Include="Assets\TreeView\TreeViewSOAUIEditing\disabled_delete.png" />
+    <Resource Include="Assets\TreeView\TreeViewSOAUIEditing\delete.png" />
+    <Resource Include="Assets\TreeView\TreeViewSOAUIEditing\folder.png" />
+    <Resource Include="Assets\TreeView\TreeViewSOAUIEditing\folder_open.png" />
+    <None Include="Service References\SoaMenuDemoService\SoaMenuDemoService1.disco" />
+    <None Include="Service References\ManualComboBoxLocationsService\ManualComboBoxLocationsService1.disco" />
+    <None Include="Service References\ManualNavBarService\ManualNavBarService1.disco" />
+    <None Include="Service References\ManualTreeViewFileExplorerService\ManualTreeViewFileExplorerService1.disco" />
+    <None Include="Service References\MessageService\WCFMessageService1.disco" />
+    <None Include="Service References\NavBarService\SoaNavBar1.disco" />
+    <None Include="Service References\ProductService\WCFProductService2.disco" />
+    <None Include="Service References\SoaComboBoxLocationService\SoaComboBoxLocationService1.disco" />
+    <None Include="Service References\SoaDataGridMessageService\SoaDataGridMessageService1.disco" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\CheckMarkFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\CollapsedIndicator.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\Desktop.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\DocumentFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\FavouritesStar.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\FloppyDrive.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\FontsFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\GenericFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\HardDrive.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\ImagesFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\InternetOptions.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\MiscFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\MusicFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\MyComputer.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\MyComputerNew.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\NetworkFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\OpticalDrive.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\RecycleBin.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\SearchFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\SharedFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\StarFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\Themeing.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\VideoFolder.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\WarholFolder.png" />
+    <Resource Include="Assets\Menu\Attachment.png" />
+    <Resource Include="Assets\Menu\chevron.png" />
+    <Resource Include="Assets\Menu\Copy.png" />
+    <Resource Include="Assets\Menu\Cut.png" />
+    <Resource Include="Assets\Menu\FileSearch.png" />
+    <Resource Include="Assets\Menu\Find.png" />
+    <Resource Include="Assets\Menu\FormatFont.png" />
+    <Resource Include="Assets\Menu\LeftArrow.png" />
+    <Resource Include="Assets\Menu\LightningBolt.png" />
+    <Resource Include="Assets\Menu\Lines.png" />
+    <Resource Include="Assets\Menu\List.png" />
+    <Resource Include="Assets\Menu\New.png" />
+    <Resource Include="Assets\Menu\OfficeClipboard.png" />
+    <Resource Include="Assets\Menu\Open.png" />
+    <Resource Include="Assets\Menu\PaperAndPictures.png" />
+    <Resource Include="Assets\Menu\Paste.png" />
+    <Resource Include="Assets\Menu\Print.png" />
+    <Resource Include="Assets\Menu\PrintPreview.png" />
+    <Resource Include="Assets\Menu\QuestionMark.png" />
+    <Resource Include="Assets\Menu\RedFlagMail.png" />
+    <Resource Include="Assets\Menu\RevealFormatting.png" />
+    <Resource Include="Assets\Menu\Save.png" />
+    <Resource Include="Assets\Menu\SaveAsWebPage.png" />
+    <Resource Include="Assets\Menu\Send.png" />
+    <Resource Include="Assets\Menu\StickyPin.png" />
+    <Resource Include="Assets\Menu\StylesAndFormatting.png" />
+    <Resource Include="Assets\Menu\TableOfContents.png" />
+    <Resource Include="Assets\Menu\ToDoListEnvelope.png" />
+    <Resource Include="Assets\Menu\ViewDocumentMap.png" />
+    <Resource Include="Assets\Menu\ViewHeaderAndFooter.png" />
+    <Resource Include="Assets\Menu\ViewNormal.png" />
+    <Resource Include="Assets\Menu\ViewOutline.png" />
+    <Resource Include="Assets\Menu\ViewThumbnails.png" />
+    <Resource Include="Assets\Menu\ViewWebLayout.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-breadcrumb.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-chart.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-combobox.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-contextmenu.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-datagrid.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-dragdrop.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-gauge.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-htmleditor.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-htmlpanel.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-input.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-itemflow.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-maskedinput.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-menu.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-navbar.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-numberinput.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-rangeslider.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-splitter.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-tabstrip.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-toolbar.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-treeview.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-upload.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-welcome.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-window.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-breadcrumb.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-chart.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-combobox.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-contextmenu.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-datagrid.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-dragdrop.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-gauge.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-htmleditor.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-htmlpanel.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-itemflow.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-maskedinput.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-menu.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-navbar.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-numberinput.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-rangeslider.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-spinner.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-splitter.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-tabstrip.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-toolbar.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-treeview.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-upload.png" />
+    <Resource Include="Assets\Demo\ControlLogos\silverlight-logo-window.png" />
+    <Resource Include="Assets\Demo\footer-componentArt-hover.png" />
+    <Resource Include="Assets\Demo\footer-componentArt.png" />
+    <Resource Include="Assets\Demo\footer.png" />
+    <Resource Include="Assets\Demo\lensFlare.png" />
+    <Resource Include="Assets\Demo\Logo-Hover.png" />
+    <Resource Include="Assets\Demo\Logo-Normal.png" />
+    <Resource Include="Assets\Demo\Menu\Best-of-Breed-UI.png" />
+    <Resource Include="Assets\Demo\Menu\Best-of-Breed-UI_over.png" />
+    <Resource Include="Assets\Demo\Menu\bob-img-DataGrid.png" />
+    <Resource Include="Assets\Demo\Menu\bob-img-Editors.png" />
+    <Resource Include="Assets\Demo\Menu\bob-img-Navigation.png" />
+    <Resource Include="Assets\Demo\Menu\bob-txt-DataGrid.png" />
+    <Resource Include="Assets\Demo\Menu\bob-txt-Editors.png" />
+    <Resource Include="Assets\Demo\Menu\bob-txt-Navigation.png" />
+    <Resource Include="Assets\Demo\Menu\Design-Showcase.png" />
+    <Resource Include="Assets\Demo\Menu\Design-Showcase_over.png" />
+    <Resource Include="Assets\Demo\Menu\Individual-Controls.png" />
+    <Resource Include="Assets\Demo\Menu\Individual-Controls_over.png" />
+    <Resource Include="Assets\Demo\Menu\Integration-Demos.png" />
+    <Resource Include="Assets\Demo\Menu\Integration-Demos_over.png" />
+    <Resource Include="Assets\Demo\Menu\integration-img-FeedBrowser.png" />
+    <Resource Include="Assets\Demo\Menu\integration-img-Outlook.png" />
+    <Resource Include="Assets\Demo\Menu\integration-txt-FeedBrowser.png" />
+    <Resource Include="Assets\Demo\Menu\integration-txt-Outlook.png" />
+    <Resource Include="Assets\Demo\Menu\integration-img-Dashboard.png" />
+    <Resource Include="Assets\Demo\Menu\integration-txt-Dashboard.png" />
+    <Resource Include="Assets\DataGrid\datagrid_editing_delete.png" />
+    <Resource Include="Assets\DataGrid\datagrid_editing_edit.png" />
+    <Resource Include="Assets\DataGrid\datagrid_editing_accept.png" />
+    <Resource Include="Assets\DataGrid\datagrid_editing_cancel.png" />
+    <Resource Include="Assets\DataGrid\datagrid_editing_accept_hover.png" />
+    <Resource Include="Assets\DataGrid\datagrid_editing_cancel_hover.png" />
+    <Resource Include="Assets\DataGrid\datagrid_editing_delete_hover.png" />
+    <Resource Include="Assets\DataGrid\datagrid_editing_edit_hover.png" />
+    <Resource Include="Assets\Demo\ControlLogos\node-spinner.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\FeedName_icon.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\FeedTitle_icon.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Go.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\0-5.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\0.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\1-5.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\1.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\2-5.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\2.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\3-5.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\3.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\4-5.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\4.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Rating\5.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\Go_hover.png" />
+    <Resource Include="Assets\breadcrumb\filesystemicons\ControlPanel.png" />
+    <Resource Include="Assets\Demo\Menu\integration-img-DdDashboard.png" />
+    <Resource Include="Assets\Demo\Menu\integration-txt-DdDashboard.png" />
+    <Resource Include="Assets\Demo\Menu\design-txt-Themes.png" />
+    <Resource Include="Assets\Demo\Menu\design-img-Themes.jpg" />
+    <Resource Include="Assets\Demo\Menu\integration-img-Explorer.png" />
+    <Resource Include="Assets\Demo\Menu\integration-txt-Explorer.png" />
+    <Content Include="Assets\Demo\Menu\Menu.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Resource Include="Assets\Demo\Menu\Technology-Showcase.png" />
+    <Resource Include="Assets\Demo\Menu\Technology-Showcase_over.png" />
+    <Resource Include="Assets\Demo\Menu\technology-webservices.png" />
+    <Resource Include="Assets\Demo\PageTitle-Arrow.png" />
+    <Resource Include="Assets\Demo\PageTitle-SilverlightLiveDemos.png" />
+    <Resource Include="Assets\Demo\ShowCode-Normal.png" />
+    <Resource Include="Assets\Demo\silverlight-flare.png" />
+    <Resource Include="Assets\Demo\splitter-horiz-closed.png" />
+    <Resource Include="Assets\Demo\splitter-horiz-opened.png" />
+    <Resource Include="Assets\Demo\splitter-vert-closed.png" />
+    <Resource Include="Assets\Demo\splitter-vert-opened.png" />
+    <Resource Include="Assets\Demo\Tabs\AspNetAjax.png" />
+    <Resource Include="Assets\Demo\Tabs\Download.png" />
+    <Resource Include="Assets\Demo\Tabs\Silverlight.png" />
+    <Resource Include="Assets\Demo\Tabs\SoaUi.png" />
+    <Resource Include="Assets\Demo\TreeViewImages\node-collapsed.png" />
+    <Resource Include="Assets\Demo\TreeViewImages\node-expanded.png" />
+    <Resource Include="Assets\Demo\Tabs\AspNetAjax-hover.png" />
+    <Resource Include="Assets\Demo\Tabs\Download-hover.png" />
+    <Resource Include="Assets\Demo\Tabs\Silverlight-hover.png" />
+    <Resource Include="Assets\Demo\Tabs\SoaUi-hover.png" />
+    <Resource Include="Assets\Demo\Menu\technology-riaservices.png" />
+    <Resource Include="Assets\Demo\Menu\technology-soaui.png" />
+    <Resource Include="Assets\Demo\Tabs\AspNetMvc-hover.png" />
+    <Resource Include="Assets\Demo\Tabs\AspNetMvc.png" />
+    <Resource Include="Assets\Demo\Tabs\WPF-hover.png" />
+    <Resource Include="Assets\Demo\Tabs\WPF.png" />
+    <Content Include="Assets\Demo\TreeViewXml\BreadCrumb.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\ComboBox.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\ContextMenu.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\Spinner.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\DataGrid.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\DragDrop.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\HtmlEditor.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\HtmlPanel.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\ItemFlow.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\MaskedInput.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\Menu.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\NavBar.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\NumberInput.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\RangeSlider.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\Splitter.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\TabStrip.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\ToolBar.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\TreeView.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\Upload.xml" />
+    <Content Include="Assets\Demo\TreeViewXml\Window.xml" />
+    <Resource Include="Assets\Demo\UIFramework.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\button_datagrid_demos.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\heading_bob_datagrid.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\heading_fullyfeatured.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\heading_highlighted_demos.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\heading_tech_showcase.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\sl_dg_idx_core.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\sl_dg_idx_edit.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\sl_dg_idx_hier.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_combobox.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_htmleditor.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_maskedinput.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_numberinput.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_rangeslider.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_upload.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\heading_bob_editors.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\heading_inputcontrols.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\heading_richtextediting.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\logo_combobox.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\logo_maskedinput.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\logo_numberinput.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\logo_rangeslider.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\logo_upload.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\sl_ed_idx_htmleditor.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_breadcrumb.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_contextmenu.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_itemflow.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_menu.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_navbar.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_tabstrip.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_toolbar.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_treeview.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\heading_bob_navigation.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\heading_navigationheavyweights.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\heading_othercontrols.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\logo_breadcrumb.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\logo_contextmenu.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\logo_itemflow.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\logo_navbar.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\logo_tabstrip.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\logo_toolbar.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\sl_nav_idx_menu.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\sl_nav_idx_treeview.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\button_chart.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\button_gauge.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\heading_bob_visualization.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\heading_integrateddemos.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\logo_charthigh.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\logo_gaugehigh.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\sl_vis_idx_gaugehigh.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\sl_vis_idx_charthigh.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\sl_vis_idx_drillboard.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\sl_vis_idx_execboard.png" />
+    <Resource Include="Assets\Pages\Welcome\outline.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r10_c11.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r12_c11.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r15_c13.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r15_c18.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r16_c2.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r19_c2.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r19_c5.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r19_c9.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r1_c1.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r20_c13.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r22_c13.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r2_c18.png" />
+    <Resource Include="Assets\Pages\Welcome\outline_r5_c11.png" />
+    <Resource Include="Assets\RangeSlider\areaChart-01a.png" />
+    <Resource Include="Assets\RangeSlider\waveform.png" />
+    <None Include="Service References\SalesDataService\configuration91.svcinfo" />
+    <None Include="Service References\SalesDataService\configuration.svcinfo" />
+    <None Include="Service References\SalesDataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="Assets\Pages\EditorsIndex\button_combobox_over.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_htmleditor_over.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_maskedinput_over.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_numberinput_over.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_rangeslider_over.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\button_upload_over.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_breadcrumb_over.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_contextmenu_over.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_itemflow_over.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_menu_over.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_navbar_over.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_tabstrip_over.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_toolbar_over.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\button_treeview_over.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\button_datagrid_demos_over.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\button_chart_over.png" />
+    <Resource Include="Assets\Pages\VisualizationIndex\button_gauge_over.png" />
+    <Resource Include="Assets\Pages\Common\mainVisual-DataGrid.png" />
+    <Resource Include="Assets\Pages\Common\mainVisual-Navigation.png" />
+    <Resource Include="Assets\Pages\Common\mainVisual-Editors.png" />
+    <None Include="Service References\WCFCarService\WCFCarService.disco" />
+    <None Include="Service References\WCFCarService\configuration91.svcinfo" />
+    <None Include="Service References\WCFCarService\configuration.svcinfo" />
+    <None Include="Service References\WCFCarService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Resource Include="Assets\Pages\VisualizationIndex\list_header.png" />
+    <Resource Include="Assets\Pages\NavigationIndex\list_header.png" />
+    <Resource Include="Assets\Pages\EditorsIndex\list_header.png" />
+    <Resource Include="Assets\Pages\DataGridIndex\list_header.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\item_body.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\item_body_over.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\item_first_tail.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\item_first_tail_over.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\item_head.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\item_head_over.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\item_tail.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\item_tail_over.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\reset.png" />
+    <Resource Include="Assets\Pages\ExecutiveDashboard\BreadCrumb\reset_over.png" />
+    <None Include="Service References\SalesDataService\SalesDataService1.disco" />
+    <Resource Include="Assets\RangeSlider\customWindowChart.png" />
+    <Resource Include="Assets\Pages\Welcome\themes.jpg" />
+    <Content Include="ServiceReferences.ClientConfig" />
+    <Resource Include="integration\FeedBrowser\Assets\TreeView\cantDrop.png" />
+    <Resource Include="integration\FeedBrowser\Assets\TreeView\collapse.png" />
+    <Resource Include="integration\FeedBrowser\Assets\TreeView\expand.png" />
+    <Resource Include="integration\FeedBrowser\Assets\TreeView\folder-closed.png" />
+    <Resource Include="integration\FeedBrowser\Assets\TreeView\folder-open.png" />
+    <Resource Include="integration\FeedBrowser\Assets\TreeView\leaf.png" />
+    <Resource Include="Assets\DataGrid\FeedBrowser\DataGridFeedBrowserTheme.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Page Include="Assets\breadcrumb\BreadCrumbCustomTheme.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\DataGrid\Hierarchy\DataGridHierarchy1Theme.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\DataGrid\Hierarchy\DataGridHierarchy2Theme.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\Intro\IntroContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\Intro\IntroLogo.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\Intro\IntroMenuBar.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\Menu\MenuHeaderTheme_IC.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\Menu\MenuHeaderTheme_DS.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\Menu\MenuHeaderTheme_TS.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\Menu\MenuHeaderTheme_ID.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\Menu\MenuHeaderTheme_BB.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\Menu\customMenuItemTheme.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Demo\customMenuTheme.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Demo\customSplitterTheme.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Menu\VerticalMenuTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BestOfBreed_DataGrid.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BestOfBreed_Editors.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BestOfBreed_Navigation.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Classes\DemoList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Classes\HorizontalNav.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\breadcrumb\BreadCrumbSimple.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\breadcrumb\BreadCrumbDesignArcticWhite.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\breadcrumb\BreadCrumbDesignOffice2003.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\breadcrumb\BreadCrumbDesignOffice2007.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\breadcrumb\BreadCrumbDesignWindows7.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\breadcrumb\BreadCrumbDesignBlackIce.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\combobox\ComboBoxInPopup.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridHorizontalScrolling.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridSoaFiltering.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridClientFiltering.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmleditor\HtmlEditorArcticWhite.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\htmleditor\HtmlEditorOffice2007.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\itemflow\ItemFlowXamlContent.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\menu\MenuSelectedItemTemplate.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridLargeClientDataset.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridRiaCodelessFiltering.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridClientOperation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridHierarchyHighlight.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\rangeslider\RangeSliderAPI.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\rangeslider\RangeSliderAxisTypes.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\rangeslider\RangeSliderCoreFeatures.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\rangeslider\RangeSliderDatabindingFeatures.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\datagrid\DataGridRiaCodeless.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\rangeslider\RangeSliderEvents.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="controls\spinner\SpinnerCoreFeatures.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\FeedBrowser\Assets\Menu\FeedBrowserMenuTheme.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\FeedBrowser\Assets\TreeView\TreeViewTheme.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\FeedBrowser\FeedBrowser.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\outlook2007\DataGridThemeOutlook2007.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\outlook2007\MenuThemeOutlook2007.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\outlook2007\NavBarThemeOutlook2007.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\outlook2007\Outlook2007.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\outlook2007\SplitterThemeOutlook2007.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\outlook2007\ToolBarThemeOutlook2007.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="integration\outlook2007\TreeViewThemeOutlook2007.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ManualComboBoxLocationsService\" />
+    <WCFMetadataStorage Include="Service References\ManualNavBarService\" />
+    <WCFMetadataStorage Include="Service References\ManualTreeViewFileExplorerService\" />
+    <WCFMetadataStorage Include="Service References\MessageService\" />
+    <WCFMetadataStorage Include="Service References\NavBarService\" />
+    <WCFMetadataStorage Include="Service References\ProductService\" />
+    <WCFMetadataStorage Include="Service References\SalesDataService\" />
+    <WCFMetadataStorage Include="Service References\SoaComboBoxLocationService\" />
+    <WCFMetadataStorage Include="Service References\SoaDataGridMessageService\" />
+    <WCFMetadataStorage Include="Service References\SoaMenuDemoService\" />
+    <WCFMetadataStorage Include="Service References\TreeViewFileBrowserService\" />
+    <WCFMetadataStorage Include="Service References\WCFCarService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaComboBoxInsertResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaComboBoxSelectResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridDeleteResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridGroupResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridInsertResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridSelectResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridUpdateResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaMenuGetItemsResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaMenuSelectResponse1.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaNavBarGetItemsResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaTreeViewAddResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaTreeViewDeleteResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaTreeViewEditResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaTreeViewGetNodesResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaTreeViewMoveResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaTreeViewUpdateResponse.datasource" />
+    <None Include="Service References\ManualComboBoxLocationsService\ManualComboBoxLocationsService2.wsdl" />
+    <None Include="Service References\ManualComboBoxLocationsService\ManualComboBoxLocationsService21.wsdl" />
+    <None Include="Service References\ManualComboBoxLocationsService\ManualComboBoxLocationsService3.xsd" />
+    <None Include="Service References\ManualComboBoxLocationsService\ManualComboBoxLocationsService31.xsd" />
+    <None Include="Service References\ManualComboBoxLocationsService\ManualComboBoxLocationsService32.xsd" />
+    <None Include="Service References\ManualNavBarService\ManualNavBarService2.wsdl" />
+    <None Include="Service References\ManualNavBarService\ManualNavBarService21.wsdl" />
+    <None Include="Service References\ManualNavBarService\ManualNavBarService3.xsd" />
+    <None Include="Service References\ManualNavBarService\ManualNavBarService31.xsd" />
+    <None Include="Service References\ManualNavBarService\ManualNavBarService32.xsd" />
+    <None Include="Service References\ManualTreeViewFileExplorerService\ManualTreeViewFileExplorerService2.wsdl" />
+    <None Include="Service References\ManualTreeViewFileExplorerService\ManualTreeViewFileExplorerService21.wsdl" />
+    <None Include="Service References\ManualTreeViewFileExplorerService\ManualTreeViewFileExplorerService3.xsd" />
+    <None Include="Service References\ManualTreeViewFileExplorerService\ManualTreeViewFileExplorerService31.xsd" />
+    <None Include="Service References\ManualTreeViewFileExplorerService\ManualTreeViewFileExplorerService32.xsd" />
+    <None Include="Service References\MessageService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MessageService\WCFMessageService1.wsdl" />
+    <None Include="Service References\MessageService\WCFMessageService3.xsd" />
+    <None Include="Service References\MessageService\WCFMessageService31.xsd" />
+    <None Include="Service References\MessageService\WCFMessageService32.xsd" />
+    <None Include="Service References\NavBarService\SoaNavBar2.wsdl" />
+    <None Include="Service References\NavBarService\SoaNavBar21.wsdl" />
+    <None Include="Service References\NavBarService\SoaNavBar3.xsd" />
+    <None Include="Service References\NavBarService\SoaNavBar31.xsd" />
+    <None Include="Service References\NavBarService\SoaNavBar32.xsd" />
+    <None Include="Service References\ProductService\WCFProductService2.wsdl" />
+    <None Include="Service References\ProductService\WCFProductService4.xsd" />
+    <None Include="Service References\ProductService\WCFProductService5.xsd" />
+    <None Include="Service References\ProductService\WCFProductService6.xsd" />
+    <None Include="Service References\SalesDataService\ComponentArt.Silverlight.Demos.SalesDataService.DashboardData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesDataService\ComponentArt.Silverlight.Demos.SalesDataService.ProductSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesDataService\ComponentArt.Silverlight.Demos.SalesDataService.SalesRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesDataService\ComponentArt.Silverlight.Demos.SalesDataService.StringSalesRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SalesDataService\SalesDataService2.wsdl" />
+    <None Include="Service References\SalesDataService\SalesDataService21.wsdl" />
+    <None Include="Service References\SalesDataService\SalesDataService3.xsd" />
+    <None Include="Service References\SalesDataService\SalesDataService31.xsd" />
+    <None Include="Service References\SalesDataService\SalesDataService32.xsd" />
+    <None Include="Service References\SalesDataService\SalesDataService4.wsdl" />
+    <None Include="Service References\SalesDataService\SalesDataService6.xsd" />
+    <None Include="Service References\SalesDataService\SalesDataService7.xsd" />
+    <None Include="Service References\SoaComboBoxLocationService\SoaComboBoxLocationService2.wsdl" />
+    <None Include="Service References\SoaComboBoxLocationService\SoaComboBoxLocationService21.wsdl" />
+    <None Include="Service References\SoaComboBoxLocationService\SoaComboBoxLocationService4.xsd" />
+    <None Include="Service References\SoaComboBoxLocationService\SoaComboBoxLocationService41.xsd" />
+    <None Include="Service References\SoaComboBoxLocationService\SoaComboBoxLocationService42.xsd" />
+    <None Include="Service References\SoaComboBoxLocationService\SoaComboBoxLocationService43.xsd" />
+    <None Include="Service References\SoaDataGridMessageService\SoaDataGridMessageService2.wsdl" />
+    <None Include="Service References\SoaDataGridMessageService\SoaDataGridMessageService21.wsdl" />
+    <None Include="Service References\SoaDataGridMessageService\SoaDataGridMessageService4.xsd" />
+    <None Include="Service References\SoaDataGridMessageService\SoaDataGridMessageService41.xsd" />
+    <None Include="Service References\SoaDataGridMessageService\SoaDataGridMessageService42.xsd" />
+    <None Include="Service References\SoaDataGridMessageService\SoaDataGridMessageService43.xsd" />
+    <None Include="Service References\SoaMenuDemoService\SoaMenuDemoService2.wsdl" />
+    <None Include="Service References\SoaMenuDemoService\SoaMenuDemoService21.wsdl" />
+    <None Include="Service References\SoaMenuDemoService\SoaMenuDemoService3.xsd" />
+    <None Include="Service References\SoaMenuDemoService\SoaMenuDemoService31.xsd" />
+    <None Include="Service References\SoaMenuDemoService\SoaMenuDemoService32.xsd" />
+    <None Include="Service References\TreeViewFileBrowserService\TreeViewFileBrowserService2.wsdl" />
+    <None Include="Service References\TreeViewFileBrowserService\TreeViewFileBrowserService21.wsdl" />
+    <None Include="Service References\TreeViewFileBrowserService\TreeViewFileBrowserService3.xsd" />
+    <None Include="Service References\TreeViewFileBrowserService\TreeViewFileBrowserService31.xsd" />
+    <None Include="Service References\TreeViewFileBrowserService\TreeViewFileBrowserService32.xsd" />
+    <None Include="Service References\WCFCarService\ComponentArt.Silverlight.Demos.WCFCarService.CarCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFCarService\ComponentArt.Silverlight.Demos.WCFCarService.CarModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFCarService\ComponentArt.Silverlight.Demos.WCFCarService.CarSale.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WCFCarService\WCFCarService.wsdl" />
+    <None Include="Service References\WCFCarService\WCFCarService.xsd" />
+    <None Include="Service References\WCFCarService\WCFCarService1.xsd" />
+    <None Include="Service References\WCFCarService\WCFCarService2.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

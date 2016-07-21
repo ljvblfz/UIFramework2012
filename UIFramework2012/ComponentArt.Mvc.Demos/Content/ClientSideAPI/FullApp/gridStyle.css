@@ -1,0 +1,106 @@
+.Grid 
+{ 
+  border: 1px solid #7C7C94; 
+  background-color: #FFFFFF; 
+  cursor: default; 
+}
+
+.HeadingRow 
+{ 
+  background-color: #E2E2E2; 
+}
+
+.HeadingCell 
+{ 
+  background-color:#E1E2EC; 
+  background-image:url(images/toolbar_bg.gif);
+  border: 1px solid #FFFFFF; 
+  border-right-color: #B5B5B5; 
+  border-bottom-color: #7C7C94; 
+  padding: 6px;
+  padding-left: 2px;
+}
+
+.HeadingCellText
+{
+  font-family: verdana; 
+  font-size: 10px; 
+  font-weight: bold; 
+  text-align: left;
+  color: #5A5A5A;
+}
+
+.DataRow 
+{ 
+  background-color: #FFFFFF; 
+}
+
+.DataCell 
+{ 
+  cursor: default;
+  padding: 3px; 
+  border-right: 1px solid #EAE9E1; 
+  border-bottom: 1px solid #EAE9E1; 
+  font-family: verdana; 
+  font-size: 10px; 
+} 
+
+.DataRow td.FirstDataCell 
+{ 
+  padding-left: 3px; 
+} 
+
+.SelectedRow 
+{ 
+  background-color: #FFEEC2; 
+}
+
+.SelectedRow td.DataCell 
+{ 
+  cursor: default; 
+  padding: 2px; 
+  padding-left: 3px; 
+  padding-bottom: 3px; 
+  font-family: verdana; 
+  font-size: 10px; 
+  border-bottom: 1px solid #4B4B6F; 
+  border-top: 1px solid #4B4B6F; 
+  border-right: 0px; 
+}
+
+.GridFooter
+{
+  cursor: default;
+  padding: 5px;
+}
+
+.GridFooter a 
+{
+  color: Black;
+  font-weight: bold;
+}
+
+.PagerText
+{ 
+  font-family: verdana; 
+  font-size: 11px; 
+} 
+
+.ScrollBar
+{
+  background-image: url(images/scroller/scroller_bg.gif); 
+}
+
+.ScrollGrip
+{
+  background-image: url(images/scroller/scroll_gripBg.gif); 
+}
+
+.ScrollPopup
+{
+  background-color: #FFFFFF; 
+  border: 1px solid #666666;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  height: 23px;
+}

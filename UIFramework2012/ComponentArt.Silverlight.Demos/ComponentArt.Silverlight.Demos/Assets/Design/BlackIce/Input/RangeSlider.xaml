@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+  xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"
+  xmlns:primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+
+    <!-- Repeat Button -->
+
+    <!-- Black Ice -->
+    <LinearGradientBrush x:Key="ComponentArt_RepeatButton_Background" StartPoint=".7,0" EndPoint=".7,1">
+        <GradientStop Color="#FFC2C2C2" Offset="0" />
+        <GradientStop Color="#FF6F6F6F" Offset="0.375" />
+        <GradientStop Color="#FF000000" Offset="0.625" />
+        <GradientStop Color="#FF000000" Offset="1" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="ComponentArt_RepeatButton_BorderBackground" Color="Black"/>
+    <sys:String x:Key="ComponentArt_RepeatButton_CornerRadius">3</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_RepeatButton_BackgroundAnimationBackground" Color="LightGray" />
+
+    <Color x:Key="ComponentArt_RepeatButton_FocusBackgroundStop0">#FFC2C2C2</Color>
+    <Color x:Key="ComponentArt_RepeatButton_FocusBackgroundStop1">#FF6F6F6F</Color>
+    <Color x:Key="ComponentArt_RepeatButton_FocusBackgroundStop2">#FF000000</Color>
+    <Color x:Key="ComponentArt_RepeatButton_FocusBackgroundStop3">#FF000000</Color>
+
+    <Color x:Key="ComponentArt_RepeatButton_PressBackgroundStop0">#FFE1542F</Color>
+    <Color x:Key="ComponentArt_RepeatButton_PressBackgroundStop1">#FF892C14</Color>
+    <Color x:Key="ComponentArt_RepeatButton_PressBackgroundStop2">#FF230B05</Color>
+    <Color x:Key="ComponentArt_RepeatButton_PressBackgroundStop3">#FF621F0E</Color>
+
+</ResourceDictionary>

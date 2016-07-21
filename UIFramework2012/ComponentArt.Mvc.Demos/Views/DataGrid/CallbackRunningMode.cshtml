@@ -1,0 +1,162 @@
+﻿@using ComponentArt.Web.UI
+
+@{ 
+  ViewData["DemoType"] = "DataGrid";
+  ViewData["DemoTitle"] = "Callback Running Mode";
+  ViewData["CodeFiles"] = "/Views/DataGrid/CallbackRunningMode.aspx,/Controllers/DataGridController.cs,/Controllers/DataGrid/CallbackRunningModeController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+  <li>Paging, sorting, filtering, and grouping are performed through AJAX-style HTTP callbacks; </li>
+  <li>Each action retrieves the required set of records from the server without reloading the entire page; </li>
+  <li>The Controller handles a DataGridActionRequest, returning a populated DataGridActionResponse;</li>
+  <li>This running mode can be used to handle millions of records.</li>
+</ul>
+";   
+}
+
+@section HeadContent {
+  <link type="text/css" href="../../Content/DataGrid/FeedBrowserContent/gridStyle.css" rel="stylesheet" />
+  <style type="text/css">
+    .cart-datagrid-grouping-text { color: #444 !important; font:10pt normal Helvetica,Arial,sans-serif !important; }
+    .cart-datagrid-pager-text  { color: #555 !important; font:8pt normal Helvetica,Arial,sans-serif !important; }
+  </style>
+  <script type="text/javascript">
+    var sortedDataField = '';
+    var sortedDescending = false;    
+    function Grid1_onSortChange(sender, e)
+    {
+      sortedDataField = e.get_column().get_dataField();
+      sortedDescending = e.get_descending();
+    }
+  </script>  
+  <link href="@Url.Content("~/Content/Themes/ArcticWhite/theme.css")" rel="stylesheet" type="text/css" />
+}
+
+@(Html
+  .ComponentArt().DataGrid()
+  .ID("Grid1")  
+  .Width(780)
+  .Height(446)
+  .PageSize(15)
+  .AutoTheming(true)
+  .AllowColumnResizing(true)
+  .ShowHeader(true)
+  .HeaderHeight(36)
+  .RunningMode(GridRunningMode.Callback)
+  .GroupingPageSize(15)
+  .PreExpandOnGroup(true)
+  .GroupingMode(GridGroupingMode.ConstantRecords)
+  .SliderHeight(26)
+  .SliderWidth(150)
+  .SliderGripWidth(9)
+  .SliderPopupOffsetX(5)
+  .ImagesBaseUrl("~/Content/DataGrid/FeedBrowserContent/images/")
+  .PagerImagesFolderUrl("~/Content/DataGrid/FeedBrowserContent/images/pager/")
+  .LoadingPanelClientTemplateId("LoadingFeedbackTemplate")
+  .LoadingPanelPosition(GridRelativePosition.MiddleCenter)
+  .LoadingPanelFadeMaximumOpacity(60)
+  .LoadingPanelFadeDuration(500)
+  .Levels(l =>
+  {
+    l.Add().Columns(c =>
+    {
+      c.Add().DataField("FeedName").DataCellCssClass("DarkerDataCell").Width(120).DataCellClientTemplateId("feedNameTemplate").HeadingCellClientTemplateId("feedNameHeadingTemplate");
+      c.Add().DataField("Title").DataCellCssClass("LighterDataCell").DataCellClientTemplateId("feedTitleTemplate").HeadingCellClientTemplateId("feedTitleHeadingTemplate");
+      c.Add().DataField("DatePosted").DataType(typeof(DateTime)).DataCellCssClass("DarkerDataCell").Width(150).DataCellClientTemplateId("dateCellTemplate");
+      c.Add().DataField("Visits").DataCellCssClass("LighterDataCell").Width(60).DataCellClientTemplateId("dataCellTemplate");
+      c.Add().DataField("Rating").DataCellCssClass("DarkerDataCell").Width(65).DataCellClientTemplateId("ratingTemplate").FixedWidth(true);
+      c.Add().HeadingText("Site").DataCellCssClass("LighterDataCell").Width(40).DataCellClientTemplateId("siteTemplate").AllowSorting(InheritBool.False).FixedWidth(true);
+      c.Add().DataField("ItemURL").Visible(false);
+    });
+  })
+  .ClientTemplates(ct =>
+  {
+    ct.Add().ID("scrollerTemplate").Content(@"
+          <div style=""background-color: #404040; padding: 12px; color: #e0e0e0; font-family: arial, verdana; font-size: 12px;
+            font-weight: bold;"">## DataItem.Index ##</div>
+            ");
+    ct.Add().ID("siteTemplate").Content(@"
+          <div style=""height:20px; padding: 0px; font-weight: bold; text-align: center;""><a style=""color: Red; text-decoration: none;"" target=""_blank"" href=""## DataItem.getMember('ItemURL').get_value() ##""><img alt="" "" border=""0"" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/go.png"" /></a></div>
+          ");
+    ct.Add().ID("ratingTemplate").Content(@"
+          <img alt="" "" border="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/Rating/## Math.round(Math.min(5, DataItem.getCurrentMember().get_value())) ##.png"" style=""padding: 0px 0px 0px 6px;""/>      
+");
+    ct.Add().ID("dateCellTemplate").Content(@"
+            <div style=""padding:0px 0px 0px 6px; text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 6) ##px;overflow:hidden;""><nobr>## DataItem.getMember('DatePosted').get_text() ##</nobr></div>
+");
+    ct.Add().ID("dataCellTemplate").Content(@"
+          <div style=""padding:0px 0px 0px 6px; text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 6) ##px;overflow:hidden;""><nobr>## DataItem.getCurrentMember().get_text() ##</nobr></div>      
+");
+    ct.Add().ID("feedNameTemplate").Content(@"
+<table cellspacing=""0"" cellpadding=""0"" border=""0"">
+<tr>
+  <td valign=""middle"" style=""padding: 0px 0px 0px 6px;"">
+    <img border=""0"" alt="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/feedName-icon.png"" />
+  </td>
+  <td style=""padding: 0px 0px 0px 6px;"">
+    <div style=""text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 30) ##px;overflow:hidden;""><nobr>## DataItem.getCurrentMember().get_text() ##</nobr></div>
+  </td>
+</tr>
+</table>     
+");
+    ct.Add().ID("feedNameHeadingTemplate").Content(@"
+<table cellspacing=""0"" cellpadding=""0"" border=""0"">
+<tr>
+  <td valign=""middle"" style=""padding: 0px 0px 0px 6px;"">
+    <img border=""0"" alt="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/feedName-icon.png"" />
+  </td>
+  <td style=""font: 11px Tahoma,Verdana,Arial,Helvetica,sans-serif; padding: 0px 0px 0px 6px;width:65px"">
+    Feed&nbsp;Name
+  </td>
+  <td class=""##
+if (sortedDataField == DataItem.get_dataField())
+{
+(sortedDescending ? 'cart-datagrid-sort-desc' : 'cart-datagrid-sort-asc');
+}
+##"" >&nbsp;&nbsp;
+  </td>    
+</tr>
+</table>      
+");
+    ct.Add().ID("feedTitleTemplate").Content(@"
+      <table cellspacing=""0"" cellpadding=""0"" border=""0""><tr><td style=""padding: 0px 0px 0px 6px;""><img border=""0"" alt="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/feedTitle-icon.png"" /></td><td style=""padding: 0px 0px 0px 6px;""><div style=""text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 30) ##px;overflow:hidden;""><nobr>## DataItem.getCurrentMember().get_text() ##</nobr></div></td></tr></table>      
+");
+    ct.Add().ID("feedTitleHeadingTemplate").Content(@"
+<table cellspacing=""0"" cellpadding=""0"" border=""0"">
+<tr>
+  <td style=""padding: 0px 0px 0px 6px;"">
+    <img border=""0"" alt="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/feedTitle-icon.png"" />
+  </td>
+  <td style=""font: 11px Tahoma,Verdana,Arial,Helvetica,sans-serif; padding: 0px 0px 0px 6px;width:340px"">
+    Item&nbsp;Title
+  </td>
+  <td class=""##
+if (sortedDataField == DataItem.get_dataField())
+{
+(sortedDescending ? 'cart-datagrid-sort-desc' : 'cart-datagrid-sort-asc');
+}
+##"">&nbsp;&nbsp;
+  </td>    
+</tr>
+</table>      
+");
+    ct.Add().ID("LoadingFeedbackTemplate").Content(@"
+<table height=""## document.getElementById('Grid1_dom').offsetHeight + 2 ##"" width=""## document.getElementById('Grid1_dom').offsetWidth ##"" bgcolor=""#e0e0e0"">
+<tr><td valign=""center"" align=""center"">
+	<table cellspacing=""0"" cellpadding=""0"" border=""0"">
+				<tr>
+					<td style=""font-size:11px;font-family:'Segoe UI','Lucida Grande',Tahoma;"">Loading...&nbsp;</td>
+					<td><img src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/spinner.gif"" width=""16"" height=""16"" border=""0""></td>
+				</tr>
+				</table>
+				</td></tr></table>
+        ");
+  })
+  .ClientEvents( ce =>
+  {
+    ce.SortChange("Grid1_onSortChange");
+  })
+)
+
+
+

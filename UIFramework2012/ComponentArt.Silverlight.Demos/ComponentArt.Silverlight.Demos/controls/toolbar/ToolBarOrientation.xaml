@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.ToolBarOrientation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"    
+>
+
+    <UserControl.Resources>
+        <ComponentArtTheming:Theme
+			x:Key="ArcticWhiteToolBarTheme" 
+			BaseSource="/ComponentArt.Silverlight.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Silverlight.Themes.ArcticWhite;component/ToolBar.xaml"
+		/>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ToolBar" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="ToolBar Orientation" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="ToolBar orientation can be easily changed." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\toolbar\ToolBarOrientation.xaml,\source\controls\toolbar\ToolBarOrientation.xaml.cs" />
+        <StackPanel Orientation="Vertical">
+            <ComponentArt:ToolBar
+            HorizontalAlignment="Left"
+			Orientation="Horizontal"
+			x:Name="ToolBar1"
+			FontFamily="Arial"
+			Theme="{ StaticResource ArcticWhiteToolBarTheme }"
+		>
+            <ComponentArt:ToolBar.HorizontalSeparatorItemTemplate>
+                <DataTemplate>
+                    <Border Height="24">
+                        <StackPanel Orientation="Horizontal">
+							<Rectangle Width="1" Fill="#dddddd" Height="20" />
+							<Rectangle Width="1" Fill="#ffffff" Height="20" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ComponentArt:ToolBar.HorizontalSeparatorItemTemplate>
+
+            <ComponentArt:ToolBar.VerticalSeparatorItemTemplate>
+                <DataTemplate>
+                    <Border Height="5">
+                        <StackPanel Orientation="Vertical">
+								<Rectangle Width="20" Fill="#dddddd" Height="1" />
+								<Rectangle Width="20" Fill="#ffffff" Height="1" />
+							</StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ComponentArt:ToolBar.VerticalSeparatorItemTemplate>      
+      
+            <ComponentArt:ToolBarItem x:Name="EditCut" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditCut.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditCut.png" DisabledIconSource="Disabled/EditCut.png" Text="Cut" />
+            <ComponentArt:ToolBarItem x:Name="EditCopy" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditCopy.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditCopy.png" DisabledIconSource="Disabled/EditCopy.png" Text="Copy"  />
+            <ComponentArt:ToolBarItem x:Name="EditPaste" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditPaste.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditPaste.png" DisabledIconSource="Disabled/EditPaste.png" Text="Paste" />
+
+            <ComponentArt:ToolBarSeparatorItem />
+
+            <ComponentArt:ToolBarToggleItem x:Name="FormatBold" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/FormatBold.png" DisabledIconSource="Disabled/FormatBold.png" Text="Bold" />
+            <ComponentArt:ToolBarToggleItem x:Name="FormatItalic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/FormatItalic.png" DisabledIconSource="Disabled/FormatUnderline.png" Text="Italic" />
+            <ComponentArt:ToolBarToggleItem x:Name="FormatUnderline" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/FormatUnderline.png" DisabledIconSource="Disabled/FormatUnderline.png" Text="Underline" />
+
+            <ComponentArt:ToolBarSeparatorItem />
+
+            <ComponentArt:ToolBarRadioItem x:Name="AlignLeft" GroupName="AlignGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/AlignLeft.png" DisabledIconSource="Disabled/AlignLeft.png" Text="Align Left" />
+            <ComponentArt:ToolBarRadioItem x:Name="AlignCenter" GroupName="AlignGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/AlignCenter.png" DisabledIconSource="Disabled/AlignCenter.png" Text="Align Center" />
+            <ComponentArt:ToolBarRadioItem x:Name="AlignRight" GroupName="AlignGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/AlignRight.png" DisabledIconSource="Disabled/AlignRight.png" Text="Align Right" />
+            <ComponentArt:ToolBarRadioItem x:Name="AlignJustify" GroupName="AlignGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/AlignJustify.png" DisabledIconSource="Disabled/AlignJustify.png" Text="Align Justify" />
+
+            <ComponentArt:ToolBarSeparatorItem />
+
+            <ComponentArt:ToolBarToggleItem x:Name="BulletsNumbering" GroupName="BulletsGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BulletsNumbering.png" DisabledIconSource="Disabled/BulletsNumbering.png" Text="Numbering" />
+            <ComponentArt:ToolBarToggleItem x:Name="BulletsSymbols" GroupName="BulletsGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BulletsSymbols.png" DisabledIconSource="Disabled/BulletsSymbols.png" Text="Bullets" />
+
+        </ComponentArt:ToolBar>
+
+        <StackPanel Margin="0,50,0,0" HorizontalAlignment="Left" Orientation="Horizontal">
+        <RadioButton x:Name="HorizontalOrientation" Checked="HorizontalOrientation_Checked" GroupName="Orientation" Content="Horizontal ToolBar" IsChecked="True" />
+        <RadioButton x:Name="VerticalOrientation" Margin="20,0,0,0" Checked="VerticalOrientation_Checked" GroupName="Orientation" Content="Vertical ToolBar" />
+        </StackPanel>
+</StackPanel> 
+
+    </Grid>
+</UserControl>

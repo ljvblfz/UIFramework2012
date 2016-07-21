@@ -1,0 +1,33 @@
+<ToolBars>
+	 <ToolBar>
+		<ToolBarItem Name="bold" />
+		<ToolBarItem Name="italic" />
+		<ToolBarItem Name="underline" />
+		<ToolBarItem Name="strikethrough" />
+		<ToolBarItem Name="forecolor" />
+		<ToolBarItem Name="backcolor" />
+		<ToolBarItem Name="fontname" />
+		<ToolBarItem Name="fontsize" />
+		<ToolBarItem Name="superscript" />
+		<ToolBarItem Name="subscript" />
+	</ToolBar>
+	<ToolBar>
+		<ToolBarItem Name="undo" />
+		<ToolBarItem Name="redo" />
+		<ToolBarSeparatorItem />
+		<ToolBarItem Name="justifyleft" />
+		<ToolBarItem Name="justifyright" />
+		<ToolBarItem Name="justifycenter" />
+		<ToolBarItem Name="justifyfull" />
+	 	<ToolBarSeparatorItem />
+	 	<ToolBarItem Name="insertunorderedlist" />
+	 	<ToolBarItem Name="insertorderedlist" />
+	 	<ToolBarItem Name="inserthorizontalrule" />
+	 	<ToolBarItem Name="indent" />
+	 	<ToolBarItem Name="outdent" />
+	 	<ToolBarSeparatorItem />
+	 	<ToolBarItem Name="insertlink" />
+	 	<ToolBarItem Name="unlink" />
+	 	<ToolBarItem Name="insertimage" />
+	</ToolBar>
+</ToolBars> 	

@@ -1,0 +1,1105 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62A5C28E-92F2-44F8-8D84-97E5B1227AB4}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>ComponentArt.Web.Visualization.Charting</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ComponentArt.Web.Visualization.Charting</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;__BuildingWebChart__</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>__BuildingWebChart__;FWAJAX;__COMPILING_FOR_2_0_AND_ABOVE__;NET20</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentArt.Web.Visualization.Charting.Shader">
+      <Name>ComponentArt.Web.Visualization.Charting.Shader</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Name>System.Drawing.Design</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CachedImageService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChartClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClientEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Clientside.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClientTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\AutoIntervals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Axis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\AxisAnnotation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\AxisConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\BoolVariable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Chart2DLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Chart2DObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Chart2DText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartCloner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartColorConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartFrameDropShade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartFrameEffect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartFrameInner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartFrameShadePrimitive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartProcessingAttributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartRectangularFrameInner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartShadeFrameInner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ChartTitle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CollectionWithType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CollectionWithTypeEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ColorArrayControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\ColorArrayConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ColorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\ColorControlWithDots.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ColorPalette.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ColorPaletteEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ColorVariable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CommaSeparatedArrayConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CommonFunctions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CompositeSeries.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ConstantLines.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ConstantPlane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ContextMenuHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CoordinatePlane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CoordinatePlaneConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CoordinateSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CoordinateSetConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CoordinateSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CoordinateSystemBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CoordinateSystemConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataBindingPair.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataDimension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataPointCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataPointLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataPointLabelStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataPointLabelStyleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataPointLabelStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DataSourceConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DateTimeAutoIntervals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DateTimeCoordinateSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DateTimeDataDimension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DateTimeVariable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\DebugTimer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\EnhancedCollectionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\EnumDescConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\EnumeratedCoordinateSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\EnumeratedDataDimension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ExpandableWithBrowsingControlObjectConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Expression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ExpressionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\FlatChartLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\GenericAlignmentEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\GenericCloner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\GenericExpandableObjectConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\GenericType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\GradientStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\IChart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\IChartLegendItemProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\IndexCoordinateSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\IndexDataDimension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\InputVariable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\InputVariableCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\InputVariableConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Intervals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LabelStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Legend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LegendConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LegendItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Light.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LightConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LightingSetup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LineSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LineStyle2D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\LineStyleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MapArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Mapping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MappingMargines.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MarkerStyleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MarkerStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Matrix3x3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\MissingPointHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NamedCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NamedCollectionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NamedConstCollectionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NamedStyleBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NamedStyleBaseConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NonResizableControlDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NumericCoordinatSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NumericDataDimension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\NumericVariable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ObjectMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ObjectVariable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Parameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ParameterDescriptorCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\PropertyValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\RunTimeCompiledSourceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedDataDimensionConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedDataPointLabelStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedDataPointPresentationStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedGradientStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedIndexDimensionConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedLabelStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedLineStyle2DConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedLineStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedLineStyleWithNoLineConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedMarkerStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedNameComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedNameConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedPaletteConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedPaletteEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedSeriesStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SelectedTickMarkStyleConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Series.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesBaseConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesCollectionConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesLabels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesLabelsCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesStyleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesStyleCollectionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesStyleEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesStylesCollectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\SeriesStyleTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Space.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SpecializedCollections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SRCategoryAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SRDescriptionAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\StringVariable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Strips.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\StripsConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\StyleCloner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\TargetArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\TextAnchor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\TextStyleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\TickMark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\TickMarkStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Variable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Vector3D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Vector3DConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Vector3DTextBoxesControlHorizontal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ViewPointTrackballControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ViewPointTrackballEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\WebChartDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\WinChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\WinChartCodeDomSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\WinChartControlDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\WinChartDataSourceConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\WinChartObjectConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\XmlCustomSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\ListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\ProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\Separator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WaterMark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardSkin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardTabControlDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponentArt.Win.UI.Internal\WizardUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\Wizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\WizardAppearanceDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardChartStyleDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardCollectionListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\WizardCoordSystemDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardDataBindingDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\WizardElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardElementWithHint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardFrameControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\WizardImageGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\WizardLegendDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardMappingDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardPaletteDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardPlaneDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardPresentationDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardPropertyGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\WizardSeriesAdvancedDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardTitlesDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Design\WizardTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DynamicImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Area.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\AreaPartition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Block.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\BlockLineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Box.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Canvace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\ChartLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\ChartObjects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\ChartText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\ChartTextBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Cone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Cylinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\CylindricSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\DashLineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\DashLineStyleCollectionEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\DotLineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\DrawingBoard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Ellipse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Ellipsoid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\FlatLineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\GDICanvace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\GDIGeometricEngine\DrawingBoardOB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\GDIGeometricEngine\GeometricEngineBasedOnRenderingOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\GDIGeometricEngine\PieWallSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\GeometricEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\GeometricObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\HighQualityGeometricEngine\DrawingBoardHQ.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\HighQualityGeometricEngine\HighQualityGeometricEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\HighQualityGeometricEngine\LineDirectrice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\HighQualityGeometricEngine\LineGeneratrice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\LabelStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\LineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Marker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\MarkerStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\MultiLineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\MultiLineStyleCollectionEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\NoLineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Paraboloid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\ParametricFacet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\PieSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\PipeLineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Polygon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Prism.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Pyramid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Quadrilateral.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\SimpleLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\SimpleLineCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\StripLineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\TextBoxStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\TextStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\ThickLineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\TorusSegment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometry\Wall.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IScrollControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Licensing\RedistributableLicenseProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Chart.bmp" />
+    <EmbeddedResource Include="client_scripts\B317b.js" />
+    <EmbeddedResource Include="client_scripts\B317k.js" />
+    <EmbeddedResource Include="client_scripts\B317u.js" />
+    <EmbeddedResource Include="client_scripts\B317z.js" />
+    <EmbeddedResource Include="Common\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Charting.resx" />
+    <EmbeddedResource Include="Common\ColorArrayControl.resx">
+      <DependentUpon>ColorArrayControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ColorControl.resx">
+      <DependentUpon>ColorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ColorControlWithDots.resx">
+      <DependentUpon>ColorControlWithDots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\GenericAlignmentEditor.resx">
+      <DependentUpon>GenericAlignmentEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Resource.resx" />
+    <EmbeddedResource Include="Common\RunTimeCompiledSourceView.resx">
+      <DependentUpon>RunTimeCompiledSourceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SelectedNameComboBox.resx">
+      <DependentUpon>SelectedNameComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SeriesStylesCollectionDialog.resx">
+      <DependentUpon>SeriesStylesCollectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\SeriesStyleTreeView.resx">
+      <DependentUpon>SeriesStyleTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Vector3DTextBoxesControlHorizontal.resx">
+      <DependentUpon>Vector3DTextBoxesControlHorizontal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ViewPointTrackballControl.resx">
+      <DependentUpon>ViewPointTrackballControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\WinChart.resx">
+      <DependentUpon>WinChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\WizardPresentationIconComposite.png" />
+    <EmbeddedResource Include="Common\WizardPresentationIconSimple.png" />
+    <EmbeddedResource Include="ComponentArt.Win.UI.Internal\ListBox.resx">
+      <DependentUpon>ListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentArt.Win.UI.Internal\ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentArt.Win.UI.Internal\Separator.resx">
+      <DependentUpon>Separator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentArt.Win.UI.Internal\WizardButton.resx">
+      <DependentUpon>WizardButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentArt.Win.UI.Internal\WizardCheckBox.resx">
+      <DependentUpon>WizardCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentArt.Win.UI.Internal\WizardGroupBox.resx">
+      <DependentUpon>WizardGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentArt.Win.UI.Internal\WizardTabControl.resx">
+      <DependentUpon>WizardTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentArt.Win.UI.Internal\WizardTabPage.resx">
+      <DependentUpon>WizardTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentArt.Win.UI.Internal\WizardUserControl.resx">
+      <DependentUpon>WizardUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Wizard.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardAppearanceDialog.resx">
+      <DependentUpon>WizardAppearanceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardChartStyleDialog.resx">
+      <DependentUpon>WizardChartStyleDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardCollectionListBox.resx">
+      <DependentUpon>WizardCollectionListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardCoordSystemDialog.resx">
+      <DependentUpon>WizardCoordSystemDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardDataBindingDialog.resx">
+      <DependentUpon>WizardDataBindingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardDialog.resx">
+      <DependentUpon>WizardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardElement.resx">
+      <DependentUpon>WizardElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardElementWithHint.resx">
+      <DependentUpon>WizardElementWithHint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardFrameControl.resx">
+      <DependentUpon>WizardFrameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardLegendDialog.resx">
+      <DependentUpon>WizardLegendDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardMappingDialog.resx">
+      <DependentUpon>WizardMappingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardPaletteDialog.resx">
+      <DependentUpon>WizardPaletteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardPlaneDialog.resx">
+      <DependentUpon>WizardPlaneDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardPresentationDialog.resx">
+      <DependentUpon>WizardPresentationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardPropertyGridForm.resx">
+      <DependentUpon>WizardPropertyGridForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardSeriesAdvancedDialog.resx">
+      <DependentUpon>WizardSeriesAdvancedDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardTitlesDialog.resx">
+      <DependentUpon>WizardTitlesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\WizardTreeView.resx">
+      <DependentUpon>WizardTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\bubble.PNG" />
+    <EmbeddedResource Include="Resources\chart-About.png" />
+    <EmbeddedResource Include="Resources\Palettes.xml" />
+    <EmbeddedResource Include="Resources\spacer.gif" />
+    <EmbeddedResource Include="Resources\TrackBallCursor.cur" />
+    <EmbeddedResource Include="Resources\TrackBallDown.cur" />
+    <EmbeddedResource Include="Resources\TrackBallUp.cur" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\area.png" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\barGanttCube.png" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\bubbleMarker.png" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\combination.png" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\complexComposite.png" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\financial.png" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\line.png" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\pieDoughnut.png" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\radar.png" />
+    <EmbeddedResource Include="WizardImages\ChartTypeListImages\scatter.png" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-apply-hover.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-apply-up.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-cancel-hover.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-cancel-up.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-finish-hover.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-finish-up.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-next-disabled.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-next-hover.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-next-up.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-previous-disabled.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-previous-hover.gif" />
+    <EmbeddedResource Include="WizardImages\ControlButtonIcons\icon-previous-up.gif" />
+    <EmbeddedResource Include="WizardImages\Frame\FrameBottom.png" />
+    <EmbeddedResource Include="WizardImages\Frame\FrameLeft.png" />
+    <EmbeddedResource Include="WizardImages\Frame\FrameRight.png" />
+    <EmbeddedResource Include="WizardImages\Frame\FrameTop.png" />
+    <EmbeddedResource Include="WizardImages\icon-chart-wizard.ico" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\3DOptions-hover.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\3DOptions-selected.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\3DOptions-up.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\appearance-hover.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\appearance-selected.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\appearance-up.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\chartType-hover.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\chartType-selected.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\chartType-up.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\coordSystem-disabled.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\coordSystem-hover.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\coordSystem-selected.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\coordSystem-up.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\NavigationSpacer.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\other-hover.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\other-selected.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\other-up.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\series-hover.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\series-selected.gif" />
+    <EmbeddedResource Include="WizardImages\NavigationButtons\series-up.gif" />
+    <EmbeddedResource Include="WizardImages\wizard-banner-chart.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

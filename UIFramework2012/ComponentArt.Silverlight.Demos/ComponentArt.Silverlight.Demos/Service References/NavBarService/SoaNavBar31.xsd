@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SoaNavBarGetItemsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaNavBarRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ParentGroup" nillable="true" type="tns:SoaNavBarItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaNavBarGetItemsRequest" nillable="true" type="tns:SoaNavBarGetItemsRequest" />
+  <xs:complexType name="SoaNavBarRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaNavBarRequest" nillable="true" type="tns:SoaNavBarRequest" />
+  <xs:complexType name="SoaNavBarItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowDrag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AllowDrop" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IconSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDisabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSelected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfSoaNavBarItem" />
+      <xs:element minOccurs="0" name="ParentGroup" nillable="true" type="tns:SoaNavBarItem" />
+      <xs:element minOccurs="0" name="ParentNavBar" nillable="true" type="tns:SoaNavBar" />
+      <xs:element minOccurs="0" name="SelectedIconSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoaServiceUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaNavBarItem" nillable="true" type="tns:SoaNavBarItem" />
+  <xs:complexType name="ArrayOfSoaNavBarItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SoaNavBarItem" nillable="true" type="tns:SoaNavBarItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoaNavBarItem" nillable="true" type="tns:ArrayOfSoaNavBarItem" />
+  <xs:complexType name="SoaNavBar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowDrag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AllowDrop" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BaseIconSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpandSingleGroup" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FullExpand" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfSoaNavBarItem" />
+      <xs:element minOccurs="0" name="SoaServiceUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaNavBar" nillable="true" type="tns:SoaNavBar" />
+  <xs:complexType name="SoaNavBarGetItemsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaNavBarResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfSoaNavBarItem" />
+          <xs:element minOccurs="0" name="ParentGroup" nillable="true" type="tns:SoaNavBarItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaNavBarGetItemsResponse" nillable="true" type="tns:SoaNavBarGetItemsResponse" />
+  <xs:complexType name="SoaNavBarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaNavBarResponse" nillable="true" type="tns:SoaNavBarResponse" />
+</xs:schema>

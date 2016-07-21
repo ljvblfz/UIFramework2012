@@ -1,0 +1,33 @@
+﻿.MenuGroup
+{
+  background-image:url(images/group_background.gif);
+  background-color:white;
+  border:solid 1px #7E7E81; 
+  cursor:default; 
+}
+
+.MenuItem
+{
+  color:black; 
+  font-family:tahoma; 
+  font-size:11px; 
+  margin:1px; 
+  cursor:default; 
+}
+
+.MenuItemHover 
+{
+  background-color:#FFEEC2; 
+  color:black; 
+  font-family:tahoma; 
+  font-size:11px; 
+  border:solid 1px #4B4B6F; 
+  cursor:default; 
+}
+
+.MenuBreak
+{
+  background-image:url(images/break_bg.gif);
+  width:100%;
+  height:1px;
+}

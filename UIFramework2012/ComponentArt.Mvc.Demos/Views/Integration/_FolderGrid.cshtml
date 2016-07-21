@@ -1,0 +1,105 @@
+﻿@using ComponentArt.Web.UI
+<script type="text/javascript">
+  function FolderGrid_Load(sender, eventArgs)
+  {
+    var firstItem = FolderGrid.get_table().getRow(0);
+    FolderGrid.select(firstItem);
+  }
+  function FolderGrid_ItemClick(sender, e)
+  {
+    var item = e.get_item();
+
+    var subjectLabel = document.getElementById('MessageSubjectLabel');
+    if (subjectLabel != null)
+    {
+      subjectLabel.innerHTML = item.getMemberAt(3).get_text();
+    }
+    var fromLabel = document.getElementById('MessageFromLabel');
+    if (fromLabel != null)
+    {
+      fromLabel.innerHTML = item.getMemberAt(5).get_text();
+    }
+    var dateLabel = document.getElementById('MessageDateLabel');
+    if (dateLabel != null)
+    {
+      dateLabel.innerHTML = item.getMemberAt(4).get_text();
+    }
+
+  }
+</script>
+<table border="0" cellpadding="0" cellspacing="0" style="border: solid 1px #6593CF;
+  border-right: none; border-left: none;">
+  <tr>
+    <td class="h1" style="border-bottom: 1px solid #6593CF;">
+      <div style="width: 100%;">
+        <nobr><img id="FolderGridHeadingImage" src="../../Content/Integration/Outlook/images/inbox.gif" alt="Inbox" /><div id="FolderGridHeadingText" style="display:inline;padding-left:6px;">Inbox</div></nobr>
+      </div>
+    </td>
+  </tr>
+  <tr style="height: 484px">
+    <td style="width: 474px;">
+      @(Html.ComponentArt().DataGrid()
+          .ID("FolderGrid")
+          .AutoTheming(true)
+          .Width(474)
+          .RunningMode(GridRunningMode.Client)
+          .PageSize(12)
+          .ShowHeader(false)
+          .ShowFooter(false)
+          .ScrollBar(GridScrollBarMode.On)
+          .ImagesBaseUrl("~/Content/Integration/Outlook/folder_grid_images/")
+          .Levels(l =>
+          {
+            l.Add().AllowGrouping(false)
+            .DataKeyField("PostId")
+            .Columns(c =>
+            {
+              c.Add().DataField("PriorityIcon").Visible(false);
+              c.Add().DataField("EmailIcon").Visible(false);
+              c.Add().DataField("AttachmentIcon").Visible(false);
+              c.Add().DataCellClientTemplateId("ThreadTemplate").DataField("Subject").HeadingText("Thread").Width(280);
+              c.Add().DataCellClientTemplateId("LastPostTemplate").DataField("LastPostDate").HeadingText("Last Post").FormatString("dd/MM hh:mm tt").Width(160);
+              c.Add().DataField("StartedBy").Visible(false);
+              c.Add().DataField("FlagIcon").Visible(false);
+              c.Add().DataField("PostId").Visible(false);
+            });
+          })
+          .ClientTemplates(ct =>
+          {
+            ct.Add().ID("ThreadTemplate").Content(@"
+              <table width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" style=""margin:none;padding:none;"">
+              <tr>
+                <td style=""width:30px;padding-left:5px;padding-right:5px;padding-top:5px;"" valign=""top""><img src=""../../Content/Integration/Outlook/folder_grid_images/## DataItem.getMember('EmailIcon').get_value() ##"" width=""20"" height=""15""></td>
+                <td width=""100%"">
+                  <table width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"" style=""margin:none;padding:none;"">
+                  <tr>
+                    <td style=""color:#000000;"" ## (DataItem.getMember('EmailIcon').get_value() == 'msg_unread.gif'? 'style=""font-weight:bold;""' : '') ##><div style=""text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 30) ##px;overflow:hidden;""><nobr>## DataItem.getMember('StartedBy').get_text() ##</nobr></div></td>
+                  </tr>
+                  <tr>
+                    <td style=""color:#808080;""><div style=""text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 30) ##px;overflow:hidden;""><nobr>## DataItem.getMember('Subject').get_text() ##</nobr></div></td>
+                  </tr>
+                  </table>
+                </td>
+              </tr>
+              </table>");
+            ct.Add().ID("LastPostTemplate").Content(@"
+              <table width=""100%"" cellspacing=""0"" cellpadding=""1"" border=""0"" ## (DataItem.getMember('EmailIcon').get_value() == 'msg_unread.gif'? 'style=""font-weight:bold;""' : '') ##>
+              <tr>
+                <td class=""FolderGridCellText"" align=""left"" style=""color:#595959;""><div style=""text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 40) ##px;overflow:hidden;""><nobr>## DataItem.getMember('LastPostDate').get_text() ##</nobr></div></td>
+                <td rowspan=""2"" style=""width:20px;"" align=""center""><img src=""../../Content/Integration/Outlook/folder_grid_images/category_blank.gif"" width=""13"" height=""13""></td>
+                <td rowspan=""2"" style=""width:20px;"" align=""center""><img src=""../../Content/Integration/Outlook/folder_grid_images/## DataItem.getMember('FlagIcon').get_value() ##"" width=""12"" height=""12""></td>
+              </tr>
+              <tr>
+                <td class=""FolderGridCellText"" align=""right""><img src=""../../Content/Integration/Outlook/folder_grid_images/## DataItem.getMember('PriorityIcon').get_value() ##"" width=""8"" height=""10""><img ## (DataItem.getMember('AttachmentIcon').get_value() == 'spacer.gif'? 'style=""display:none;""' : '') ## src=""../../Content/Integration/Outlook/folder_grid_images/## DataItem.getMember('AttachmentIcon').get_value() ##"" width=""8"" height=""10""></td>
+              </tr>
+              </table>");
+          })
+          .ClientEvents(ce =>
+          {
+            ce.Load("FolderGrid_Load");
+            ce.ItemClick("FolderGrid_ItemClick");
+          })
+)
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,36 @@
+﻿<script type="text/javascript">
+  function setActiveStyleSheet(title) {
+    var i, a, main;
+    for (i = 0; (a = document.getElementsByTagName("link")[i]); i++) {
+      if (a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+        a.disabled = true;
+        if (a.getAttribute("title") == title) a.disabled = false;
+      }
+    }
+    if (window["Grid1"]) {
+      Grid1.render();
+    }
+    if (window["TreeView1"]) {
+      TreeView1.render();
+    }
+  }
+  function radioClick(theme) {
+    $('#activeStyleSheet_' + theme)[0].click();
+    $('#activeStyleSheet_' + theme)[0].focus();
+  }
+</script>
+
+Choose a theme:
+<br />
+<div style="color:Black;cursor:pointer">
+  <input type="radio" id="activeStyleSheet_ArcticWhite" name="activeStyleSheet" onclick="setActiveStyleSheet(this.value)" value="ArcticWhite" /><a onclick="radioClick('ArcticWhite');">Arctic White</a><br />
+  <input type="radio" id="activeStyleSheet_BlackIce" name="activeStyleSheet" onclick="setActiveStyleSheet(this.value)" checked="checked" value="BlackIce" /><a onclick="radioClick('BlackIce');">Black Ice</a><br />
+  <input type="radio" id="activeStyleSheet_Office2010Black" name="activeStyleSheet" onclick="setActiveStyleSheet(this.value)" value="Office2010Black" /><a onclick="radioClick('Office2010Black');">Office 2010 Black</a><br />
+  <input type="radio" id="activeStyleSheet_Office2010Blue" name="activeStyleSheet" onclick="setActiveStyleSheet(this.value)" value="Office2010Blue" /><a onclick="radioClick('Office2010Blue');">Office 2010 Blue</a><br />
+  <input type="radio" id="activeStyleSheet_Office2010Silver" name="activeStyleSheet" onclick="setActiveStyleSheet(this.value)" value="Office2010Silver" /><a onclick="radioClick('Office2010Silver');">Office 2010 Silver</a><br />
+  <input type="radio" id="activeStyleSheet_Outlook2007" name="activeStyleSheet" onclick="setActiveStyleSheet(this.value)" value="Outlook2007" /><a onclick="radioClick('Outlook2007');">Outlook 2007</a><br />
+  <input type="radio" id="activeStyleSheet_Windows7" name="activeStyleSheet" onclick="setActiveStyleSheet(this.value)" value="Windows7" /><a onclick="radioClick('Windows7');">Windows 7</a><br />
+</div>
+<script type="text/javascript">
+  setActiveStyleSheet('BlackIce');
+</script>

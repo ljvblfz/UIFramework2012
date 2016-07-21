@@ -1,0 +1,26 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoType"] = "NavBar";
+  ViewData["DemoTitle"] = "Themed With Icons";
+  ViewData["CodeFiles"] = "/Views/NavBar/ThemedWithIcons.aspx,/Controllers/NavBarController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>NavBar's built-in theme-switching functionality is showcased here, which is activated via its AutoTheming property.</li>
+<li>Custom icon images are defined inside CSS classes, which are applied to NavBarItems by an 'IconCssClass' property. </li>
+</ul>
+";    
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/NavBar/ThemedWithCssIcons/style.css")" rel="stylesheet" type="text/css" />
+  <link href="@Url.Content("~/Content/Themes/Outlook2007/theme.css")" rel="stylesheet" type="text/css" />
+}
+<div style="height: 355px; width: 240px">
+  @(Html.ComponentArt().NavBar()
+    .ID("NavBar1")
+    .SiteMapXmlFile("~/App_Data/NavBar/ThemedWithIcons/navbar.xml")
+    .AutoTheming(true)
+    .ImagesBaseUrl("~/Content/NavBar/ThemedWithCssIcons/images")
+    .FullExpand(true)
+    .FillContainer(true)
+)
+</div>

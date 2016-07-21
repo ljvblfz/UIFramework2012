@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:ComponentArt.Win.UI.VSM;assembly=ComponentArt.Win.UI.Common" 
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <!-- Arctic White -->
+    <ResourceDictionary x:Key="ComponentArtScrollBarStyle" Source="/ComponentArt.Win.Themes.ArcticWhite;component/ScrollBar.xaml" />
+    <!-- ComboBox-->
+    <!-- ComboBox ControlTemplate -->
+    <SolidColorBrush x:Key="ComponentArt_ComboBox_BorderBackground" Color="White"/>
+    <SolidColorBrush x:Key="ComponentArt_ComboBox_BorderBrush" Color="#222222"/>
+    <sys:String x:Key="ComponentArt_ComboBox_BorderMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_BorderCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_BorderPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_BorderThickness">1</sys:String>
+    <!-- NEW -->
+    <sys:String x:Key="ComponentArt_ComboBox_SpinnerMargin">0,0,2,0</sys:String>
+    <!-- /NEW -->
+    <!-- /ComboBox ControlTemplate -->
+    <!-- ComboBox Popup -->
+    <sys:String x:Key="ComponentArt_ComboBox_ItemsPopupBorderMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_ItemsPopupBorderPadding">1,0,5,20</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_ComboBox_ItemsBorderBackground" Color="#ffffff"/>
+    <SolidColorBrush x:Key="ComponentArt_ComboBox_ItemsBorderBrush" Color="#999999"/>
+    <sys:String x:Key="ComponentArt_ComboBox_ItemsBorderMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_ItemsBorderCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_ItemsBorderPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_ItemsBorderThickness">1</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_ComboBox_ItemsShadowBorderBackground" Color="#29000000"/>
+    <sys:String x:Key="ComponentArt_ComboBox_ItemsShadowBorderMargin">0,0,2,2</sys:String>
+    <!-- /ComboBox Popup -->
+    <!-- ComboBox TextBox -->
+	<SolidColorBrush x:Key="ComponentArt_ComboBox_TextBoxBackground" Color="#ffffffff"/>
+	<SolidColorBrush x:Key="ComponentArt_ComboBox_TextBoxForeground" Color="#ff000000"/>
+	<sys:String x:Key="ComponentArt_ComboBox_TextBoxPadding">2,1,2,0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_TextBoxMargin">0,0,0,0</sys:String>
+    <!-- /ComboBox TextBox -->
+    <!-- ComboBox ToggleButton -->
+    <sys:String x:Key="ComponentArt_ComboBox_ToggleButtonPadding">1</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_ComboBox_Border" Color="#00ffffff"/>
+    <LinearGradientBrush x:Key="ComponentArt_ComboBox_Background" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#f3f3f3" Offset="0"/>
+		<GradientStop Color="#eeeeee" Offset="1"/>
+	</LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_ComboBox_BackgroundOver" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#eeeeee" Offset="0" />
+		<GradientStop Color="#eeeeee" Offset="0.03" />
+		<GradientStop Color="#cccccc" Offset="0.03" />
+		<GradientStop Color="#ffffff" Offset="0.5" />
+		<GradientStop Color="#cccccc" Offset="0.97" />
+		<GradientStop Color="#eeeeee" Offset="0.97" />
+		<GradientStop Color="#eeeeee" Offset="1" />
+	</LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_ComboBox_BackgroundActive" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#ffffffff" Offset="0"/>
+        <GradientStop Color="#ffffffff" Offset="0.5"/>
+        <GradientStop Color="#ffffffff" Offset="0.504"/>
+        <GradientStop Color="#ffffffff" Offset="0.975"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_ComboBox_BackgroundBorder" Color="#00ffffff"/>
+    <Color x:Key="ComponentArt_ComboBox_NormalItemBorder">#00e3e3e3</Color>
+    <Color x:Key="ComponentArt_ComboBox_NormalItemInnerBorder">#bbbbbb</Color>
+    <Color x:Key="ComponentArt_ComboBox_PressedItemBorder">#00e3e3e3</Color>
+    <Color x:Key="ComponentArt_ComboBox_PressedItemInnerBorder">#999999</Color>
+    <Color x:Key="ComponentArt_ComboBox_OverItemBorder">#e3e3e3</Color>
+    <Color x:Key="ComponentArt_ComboBox_OverItemInnerBorder">#999999</Color>
+    <Color x:Key="ComponentArt_ComboBox_CheckedItemBorder">#45e3e3e3</Color>
+    <Color x:Key="ComponentArt_ComboBox_CheckedItemInnerBorder">#999999</Color>
+    <ControlTemplate x:Key="ComponentArt_ComboBox_ToggleButtonContent" >
+        <Path Fill="#333333"
+        Stroke="#99ffffff"
+        StrokeThickness="1"
+        Data="M 0 0 L 4 5 L 8 0 L 0 0 z" />
+    </ControlTemplate>
+    <!-- NEW -->
+    <sys:String x:Key="ComponentArt_ComboBox_ToggleButtonCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_ToggleButtonRadiusX">0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBox_ToggleButtonRadiusY">0</sys:String>
+    <!-- /NEW -->
+    <!-- /ComboBox ToggleButton -->
+    <!-- /ComboBox-->
+    <!-- ComboBoxItem -->
+    <sys:String x:Key="ComponentArt_ComboBoxItem_BorderMargin">2,2,2,2</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBoxItem_BorderCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBoxItem_BorderPadding">2,3,2,3</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBoxItem_BorderThickness">1,1,1,1</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBoxItem_TextPadding">.5,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_ComboBoxItem_TextMargin">0</sys:String>
+    <Color x:Key="ComponentArt_ComboBoxItem_TextForegroundColor">#555555</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStop1" >#00E3E3E3</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStop2" >#00FEFEFE</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStop3" >#00F1F1F1</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStop4" >#00F6F6F6</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_TextForegroundColorOver">#3c7e9d</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStopOver1" >#60E3E3E3</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStopOver2" >#60FEFEFE</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStopOver3" >#60F1F1F1</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStopOver4" >#60F6F6F6</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_TextForegroundColorSelected">#333333</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStopSelected1" >#ffE3E3E3</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStopSelected2" >#ffFEFEFE</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStopSelected3" >#ffF1F1F1</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBackgroundColorStopSelected4" >#ffF6F6F6</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBrushColor" >#00bbbbbb</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBrushColorOver" >#ff999999</Color>
+    <Color x:Key="ComponentArt_ComboBoxItem_BorderBrushColorSelected" >#ff000000</Color>
+    <!-- /ComboBoxItem  -->
+    <!-- InputTextBox -->
+    <Color x:Key="ComponentArt_InputTextBox_TextBoxBorderMouseOver">#454545</Color>
+    <SolidColorBrush x:Key="ComponentArt_InputTextBox_TextBoxBorderFocus" Color="#00333333"/>
+    <SolidColorBrush x:Key="ComponentArt_InputTextBox_TextBoxBackgroundReadOnly" Color="#23333333"/>
+    <SolidColorBrush x:Key="ComponentArt_InputTextBox_TextBoxBackgroundDisabled" Color="#23333333"/>
+    <SolidColorBrush x:Key="ComponentArt_InputTextBox_TextBoxBorderDisabled" Color="Red" />
+    <sys:String x:Key="ComponentArt_InputTextBox_TextBoxCornerRadius">0</sys:String>
+    <!-- /InputTextBox -->
+    <!-- Resizer -->
+    <ControlTemplate x:Key="ComponentArt_ComboBox_TopResizer" >
+        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="8" CornerRadius="0" Background="Transparent">
+            <!--<Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1542F" Offset="0"/>
+                    <GradientStop Color="#FF892C14" Offset="0.5"/>
+                    <GradientStop Color="#FF230B05" Offset="0.504"/>
+                    <GradientStop Color="#FF621F0E" Offset="0.975"/>
+                </LinearGradientBrush>
+            </Border.Background>-->
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Path Data="M 0 6 L 40 6 L 33 0 L 6 0 L 0 6 z" Fill="#ffffff" Stroke="#000000" StrokeThickness=".25" 
+                      HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Path Margin="0,0,2,0" Data="M 0 0 L 0 2 L 2 2 L 2 0 L 0 0 z" Fill="#999999" StrokeThickness="0" />
+                    <Path Margin="0,0,2,0" Data="M 0 0 L 0 2 L 2 2 L 2 0 L 0 0 z" Fill="#999999" StrokeThickness="0" />
+                    <Path Margin="0,0,2,0" Data="M 0 0 L 0 2 L 2 2 L 2 0 L 0 0 z" Fill="#999999" StrokeThickness="0" />
+                    <Path Margin="0,0,2,0" Data="M 0 0 L 0 2 L 2 2 L 2 0 L 0 0 z" Fill="#999999" StrokeThickness="0" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </ControlTemplate>
+    <sys:String x:Key="ComponentArt_ComboBox_TopResizerMargin">0,4,0,0</sys:String>
+    <ControlTemplate x:Key="ComponentArt_ComboBox_BottomResizer" >
+        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="8" CornerRadius="0" Background="Transparent">
+            <!--<Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE1542F" Offset="0"/>
+                    <GradientStop Color="#FF892C14" Offset="0.5"/>
+                    <GradientStop Color="#FF230B05" Offset="0.504"/>
+                    <GradientStop Color="#FF621F0E" Offset="0.975"/>
+                </LinearGradientBrush>
+            </Border.Background>-->
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Path Data="M 0 0 L 40 0 L 33 6 L 6 6 L 0 0 z" Fill="#ffffff" Stroke="#000000" StrokeThickness=".3" 
+                      HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-2,0,0">
+                    <Path Margin="0,0,2,0" Data="M 0 0 L 0 2 L 2 2 L 2 0 L 0 0 z" Fill="#999999" StrokeThickness="0" />
+                    <Path Margin="0,0,2,0" Data="M 0 0 L 0 2 L 2 2 L 2 0 L 0 0 z" Fill="#999999" StrokeThickness="0" />
+                    <Path Margin="0,0,2,0" Data="M 0 0 L 0 2 L 2 2 L 2 0 L 0 0 z" Fill="#999999" StrokeThickness="0" />
+                    <Path Margin="0,0,2,0" Data="M 0 0 L 0 2 L 2 2 L 2 0 L 0 0 z" Fill="#999999" StrokeThickness="0" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </ControlTemplate>
+    <sys:String x:Key="ComponentArt_ComboBox_BottomResizerMargin">0,-3,0,0</sys:String>
+    <!-- /Resizer -->
+    <!-- /Arctic White -->
+</ResourceDictionary>

@@ -1,0 +1,993 @@
+﻿<Themes>
+	<Theme Name="Black Ice" ImagesFolder="images">
+		<Skin GaugeKind="HalfCircleE">
+			<Layer Role="Background"
+				Image="backgrounds/halfcirclee/bg001.png"
+				Region="backgrounds/halfcirclee/bg-region.png"
+				Shadow="backgrounds/halfcirclee/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/halfcirclee/frame001.png"
+				Region="frames/halfcirclee/frame-region.png"
+				Shadow="frames/halfcirclee/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/halfcirclee/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleN">
+			<Layer Role="Background"
+				Image="backgrounds/halfcirclen/bg001.png"
+				Region="backgrounds/halfcirclen/bg-region.png"
+				Shadow="backgrounds/halfcirclen/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/halfcirclen/frame001.png"
+				Region="frames/halfcirclen/frame-region.png"
+				Shadow="frames/halfcirclen/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/halfcirclen/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleS">
+			<Layer Role="Background"
+				Image="backgrounds/halfcircles/bg001.png"
+				Region="backgrounds/halfcircles/bg-region.png"
+				Shadow="backgrounds/halfcircles/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/halfcircles/frame001.png"
+				Region="frames/halfcircles/frame-region.png"
+				Shadow="frames/halfcircles/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/halfcircles/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleW">
+			<Layer Role="Background"
+				Image="backgrounds/halfcirclew/bg001.png"
+				Region="backgrounds/halfcirclew/bg-region.png"
+				Shadow="backgrounds/halfcirclew/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/halfcirclew/frame001.png"
+				Region="frames/halfcirclew/frame-region.png"
+				Shadow="frames/halfcirclew/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/halfcirclew/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleE">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclee/bg001.png"
+				Region="backgrounds/quartercirclee/bg-region.png"
+				Shadow="backgrounds/quartercirclee/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclee/frame001.png"
+				Region="frames/quartercirclee/frame-region.png"
+				Shadow="frames/quartercirclee/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclee/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleNE">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclene/bg001.png"
+				Region="backgrounds/quartercirclene/bg-region.png"
+				Shadow="backgrounds/quartercirclene/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclene/frame001.png"
+				Region="frames/quartercirclene/frame-region.png"
+				Shadow="frames/quartercirclene/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclene/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleN">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclen/bg001.png"
+				Region="backgrounds/quartercirclen/bg-region.png"
+				Shadow="backgrounds/quartercirclen/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclen/frame001.png"
+				Region="frames/quartercirclen/frame-region.png"
+				Shadow="frames/quartercirclen/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclen/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleNW">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclenw/bg001.png"
+				Region="backgrounds/quartercirclenw/bg-region.png"
+				Shadow="backgrounds/quartercirclenw/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclenw/frame001.png"
+				Region="frames/quartercirclenw/frame-region.png"
+				Shadow="frames/quartercirclenw/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclenw/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleW">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclew/bg001.png"
+				Region="backgrounds/quartercirclew/bg-region.png"
+				Shadow="backgrounds/quartercirclew/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclew/frame001.png"
+				Region="frames/quartercirclew/frame-region.png"
+				Shadow="frames/quartercirclew/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclew/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleSW">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclesw/bg001.png"
+				Region="backgrounds/quartercirclesw/bg-region.png"
+				Shadow="backgrounds/quartercirclesw/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclesw/frame001.png"
+				Region="frames/quartercirclesw/frame-region.png"
+				Shadow="frames/quartercirclesw/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclesw/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleS">
+			<Layer Role="Background"
+				Image="backgrounds/quartercircles/bg001.png"
+				Region="backgrounds/quartercircles/bg-region.png"
+				Shadow="backgrounds/quartercircles/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercircles/frame001.png"
+				Region="frames/quartercircles/frame-region.png"
+				Shadow="frames/quartercircles/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercircles/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleSE">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclese/bg001.png"
+				Region="backgrounds/quartercirclese/bg-region.png"
+				Shadow="backgrounds/quartercirclese/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclese/frame001.png"
+				Region="frames/quartercirclese/frame-region.png"
+				Shadow="frames/quartercirclese/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclese/cover001.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator0003.png"
+				Region="indicators/indicator-region.png"
+				Shadow="indicators/indicator-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="LinearHorizontal">
+			<Layer Role="Background"
+				Image="backgrounds/linearh/bg-contour.png"
+				Region="backgrounds/linearh/bg-area.png"
+				CornerSize="48,48"
+			/>
+			<Layer Role="Frame"
+				Image="frames/linearh/frame-contour.png"
+				Region="frames/linearh/frame-area.png"
+				CornerSize="48,48"
+			/>
+		</Skin>
+
+
+		<Skin GaugeKind="LinearVertical">
+			<Layer Role="Background"
+				Image="backgrounds/linearv/bg-contour.png"
+				Region="backgrounds/linearv/bg-area.png"
+				CornerSize="48,48"
+			/>
+			<Layer Role="Frame"
+				Image="frames/linearv/frame-contour.png"
+				Region="frames/linearv/frame-area.png"
+				CornerSize="48,48"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="Numeric">
+			<Layer Role="Background"
+				Image="backgrounds/linearh/bg-contour.png"
+				Region="backgrounds/linearh/bg-area.png"
+				CornerSize="48,48"
+			/>
+			<Layer Role="Frame"
+				Image="frames/linearh/frame-contour.png"
+				Region="frames/linearh/frame-area.png"
+				CornerSize="48,48"
+			/>
+		</Skin>
+	</Theme>
+
+<Theme Name="Monochrome" ImagesFolder="images">
+		<Skin GaugeKind="Circular">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleE">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleN">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleS">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleW">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleE">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleNE">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleN">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleNW">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleW">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleSW">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleS">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleSE">
+			<Layer Role="Pointer"
+				Image="blank.png"
+				Region="indicators/monochrome-region.png"
+				Shadow="indicators/monochrome-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="blank.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="LinearHorizontal">
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+
+		<Skin GaugeKind="LinearVertical">
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="Numeric">
+			<Layer Role="Cover"
+				Image="covers/scanlines02.png"
+			/>
+		</Skin>
+	</Theme>
+
+	<Theme Name="Arctic White" ImagesFolder="images">
+		<Skin GaugeKind="Circular">
+			<Layer Role="Background"
+				Image="backgrounds/circular/arcticwhite-bg01.png"
+				Region="backgrounds/circular/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/circular/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/circular/arcticwhite-frame01.png"
+				Region="frames/circular/arcticwhite-frame-region.png"
+				Shadow="frames/circular/frame-shadow.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator01-contour.png"
+				Region="indicators/indicator01.png"
+				Shadow="indicators/indicator01-shadow.png"
+			/>
+			<Layer Role="Hub"
+				Image="hubs/hub0006.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleE">
+			<Layer Role="Background"
+				Image="backgrounds/halfcirclee/arcticwhite-bg01.png"
+				Region="backgrounds/halfcirclee/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/halfcirclee/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/halfcirclee/arcticwhite-frame01.png"
+				Region="frames/halfcirclee/arcticwhite-frame-region.png"
+				Shadow="frames/halfcirclee/frame-shadow.png"
+			/>
+
+
+			<Layer Role="Pointer"
+				Image="indicators/indicator01-contour.png"
+				Region="indicators/indicator01.png"
+				Shadow="indicators/indicator01-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleN">
+			<Layer Role="Background"
+				Image="backgrounds/halfcirclen/arcticwhite-bg01.png"
+				Region="backgrounds/halfcirclen/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/halfcirclen/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/halfcirclen/arcticwhite-frame01.png"
+				Region="frames/halfcirclen/arcticwhite-frame-region.png"
+				Shadow="frames/halfcirclen/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/halfcirclen/arcticwhite-cover01.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleS">
+			<Layer Role="Background"
+				Image="backgrounds/halfcircles/arcticwhite-bg01.png"
+				Region="backgrounds/halfcircles/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/halfcircles/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/halfcircles/arcticwhite-frame01.png"
+				Region="frames/halfcircles/arcticwhite-frame-region.png"
+				Shadow="frames/halfcircles/frame-shadow.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="HalfCircleW">
+			<Layer Role="Background"
+				Image="backgrounds/halfcirclew/arcticwhite-bg01.png"
+				Region="backgrounds/halfcirclew/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/halfcirclew/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/halfcirclew/arcticwhite-frame01.png"
+				Region="frames/halfcirclew/arcticwhite-frame-region.png"
+				Shadow="frames/halfcirclew/frame-shadow.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleE">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclee/arcticwhite-bg01.png"
+				Region="backgrounds/quartercirclee/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/quartercirclee/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclee/arcticwhite-frame01.png"
+				Region="frames/quartercirclee/arcticwhite-frame-region.png"
+				Shadow="frames/quartercirclee/frame-shadow.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleNE">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclene/arcticwhite-bg01.png"
+				Region="backgrounds/quartercirclene/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/quartercirclene/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclene/arcticwhite-frame01.png"
+				Region="frames/quartercirclene/arcticwhite-frame-region.png"
+				Shadow="frames/quartercirclene/frame-shadow.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleN">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclen/arcticwhite-bg01.png"
+				Region="backgrounds/quartercirclen/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/quartercirclen/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclen/arcticwhite-frame01.png"
+				Region="frames/quartercirclen/arcticwhite-frame-region.png"
+				Shadow="frames/quartercirclen/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclen/arcticwhite-cover01.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleNW">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclenw/arcticwhite-bg01.png"
+				Region="backgrounds/quartercirclenw/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/quartercirclenw/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclenw/arcticwhite-frame01.png"
+				Region="frames/quartercirclenw/arcticwhite-frame-region.png"
+				Shadow="frames/quartercirclenw/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclenw/arcticwhite-cover01.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleW">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclew/arcticwhite-bg01.png"
+				Region="backgrounds/quartercirclew/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/quartercirclew/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclew/arcticwhite-frame01.png"
+				Region="frames/quartercirclew/arcticwhite-frame-region.png"
+				Shadow="frames/quartercirclew/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclew/arcticwhite-cover01.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleSW">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclesw/arcticwhite-bg01.png"
+				Region="backgrounds/quartercirclesw/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/quartercirclesw/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclesw/arcticwhite-frame01.png"
+				Region="frames/quartercirclesw/arcticwhite-frame-region.png"
+				Shadow="frames/quartercirclesw/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclesw/arcticwhite-cover01.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleS">
+			<Layer Role="Background"
+				Image="backgrounds/quartercircles/arcticwhite-bg01.png"
+				Region="backgrounds/quartercircles/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/quartercircles/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercircles/arcticwhite-frame01.png"
+				Region="frames/quartercircles/arcticwhite-frame-region.png"
+				Shadow="frames/quartercircles/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercircles/arcticwhite-cover01.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="QuarterCircleSE">
+			<Layer Role="Background"
+				Image="backgrounds/quartercirclese/arcticwhite-bg01.png"
+				Region="backgrounds/quartercirclese/arcticwhite-bgRegion.png"
+				Shadow="backgrounds/quartercirclese/bg-shadow.png"
+			/>
+			<Layer Role="Frame"
+				Image="frames/quartercirclese/arcticwhite-frame01.png"
+				Region="frames/quartercirclese/arcticwhite-frame-region.png"
+				Shadow="frames/quartercirclese/frame-shadow.png"
+			/>
+			<Layer Role="Cover"
+				Image="covers/quartercirclese/arcticwhite-cover01.png"
+			/>
+
+			<Layer Role="Pointer"
+				Image="indicators/arcticwhite.png"
+				Region="indicators/arcticwhite-region.png"
+				Shadow="indicators/arcticwhite-shadow.png"
+			/>
+
+			<Layer Role="Hub"
+				Image="hubs/hub0003.png"
+				Region="hubs/hub-region.png"
+				Shadow="hubs/hub-shadow.png"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="LinearHorizontal">
+			<Layer Role="Background"
+				Image="backgrounds/linearh/arcticwhite-bg01.png"
+				Region="backgrounds/linearh/arcticwhite-bg-region.png"
+				CornerSize="48,48"
+			/>
+			<Layer Role="Frame"
+				Image="frames/linearh/arcticwhite-frame01.png"
+				Region="frames/linearh/arcticwhite-frame-region.png"
+				CornerSize="48,48"
+			/>
+		</Skin>
+
+
+		<Skin GaugeKind="LinearVertical">
+			<Layer Role="Background"
+				Image="backgrounds/linearv/arcticwhite-bg01.png"
+				Region="backgrounds/linearv/arcticwhite-bg-region.png"
+				CornerSize="48,48"
+			/>
+			<Layer Role="Frame"
+				Image="frames/linearv/arcticwhite-frame01.png"
+				Region="frames/linearv/arcticwhite-frame-region.png"
+				CornerSize="48,48"
+			/>
+		</Skin>
+
+		<Skin GaugeKind="Numeric">
+			<Layer Role="Background"
+				Image="backgrounds/linearh/arcticwhite-bg01.png"
+				Region="backgrounds/linearh/arcticwhite-bg-region.png"
+				CornerSize="48,48"
+			/>
+			<Layer Role="Frame"
+				Image="frames/linearh/arcticwhite-frame01.png"
+				Region="frames/linearh/arcticwhite-frame-region.png"
+				CornerSize="48,48"
+			/>
+		</Skin>
+
+	</Theme>
+	<Layer Name="Book" Role="DigitMask"
+		Image="numeric/Flipclock-image.png"
+		Region="numeric/Flipclock-region.png"
+	/>
+	<Layer Name="Mechanical" Role="DigitMask"
+		Image="numeric/Mechanical-image.png"
+		Region="numeric/Mechanical-region.png"
+	/>
+</Themes>

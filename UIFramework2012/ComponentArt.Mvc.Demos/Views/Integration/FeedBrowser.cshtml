@@ -1,0 +1,158 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{
+  ViewData["DemoType"] = "Integration";
+  ViewData["DemoTitle"] = "Feed Browser";
+  ViewData["BodyClass"] = "full";
+  ViewData["CodeFiles"] = "/Views/Integration/FeedBrowser.aspx,/Controllers/IntegrationController.cs,/Views/Shared/ThemeSwitchingCss.ascx,/Views/Shared/ThemeSwitchingInterface.ascx";
+  ViewData["AboutText"] = @"
+<ul>
+  <li>This integrated demo uses ComponentArt TreeView and DataGrid; both are using WebServices to load their data dynamically.</li>  
+  <li>Their theming functionality is showcased here, which is activated via the AutoTheming property.</li>
+  <li>The changing of the CSS definitions is done by resetting the active stylesheet.</li>  
+</ul>
+";    
+}
+@section HeadContent {
+  <link href="../../Content/Integration/FeedBrowser/Grid1/gridStyle.css" rel="stylesheet"
+    type="text/css" />
+  <link href="../../Content/Integration/FeedBrowser/TreeView/StyleSheet.css" rel="stylesheet"
+    type="text/css" />
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+  <!--// Manually add MS-AJAX, SOA definitions -->
+  <script type="text/javascript" src="../../Scripts/MicrosoftAjax.debug.js"></script>
+  <script type="text/javascript" src="../../Services/SoaFeedReaderDataGridService.svc/json/jsdebug"></script>
+  <script type="text/javascript" src="../../Services/SoaFeedReaderTreeViewService.svc/json/jsdebug"></script>
+  <!--// Force CA to recognize MS-AJAX-mode -->
+  <script type="text/javascript">
+    //<![CDATA[
+    window.ComponentArt_Atlas = 1; window.ComponentArt_Fw35 = 1;
+    //]]>
+  </script>
+  <script type="text/javascript" src="../../Content/Integration/FeedBrowser/TheLogic.js"></script>
+  <style type="text/css">
+    .cart-datagrid-grouping-text
+    {
+      font-size: 8pt !important;
+      font-weight: normal !important;
+    }
+  </style>
+}
+<table border="0" cellpadding="4" cellspacing="4">
+  <tr valign="top">
+    <td style="width: 130px; height: 435px">
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml")
+    </td>
+    <td style="width: 220px; height: 435px;">
+      @(Html.ComponentArt().TreeView()
+  .ID("TreeView1")
+  .AutoTheming(true)
+  .Height(Unit.Parse("435px"))
+  .Width(Unit.Parse("220px"))
+  .DefaultImageWidth(25)
+  .DefaultImageHeight(20)
+  .LeafNodeImageUrl("leaf.png")
+  .ExpandCollapseImageWidth(25)
+  .ExpandCollapseImageHeight(20)
+  .ImagesBaseUrl("~/Content/Integration/FeedBrowser/TreeView/images_/")
+  .SoaService("ComponentArt.SOA.UI.ISoaTreeViewService")
+  .LineImagesFolderUrl("TreeView/images_/lines/")
+  .Nodes(o =>
+  {
+    o.Add().Text("All Feeds").UseWebService(true);
+    o.Add().Text("Favorite Posts");
+  })
+  .ClientEvents(o =>
+  {
+    o.Load("TreeView2_Load");
+    o.NodeSelect("TreeView2_NodeSelect");
+  })
+)
+    </td>
+    <td style="width: 640px; height: 438px">
+      @(Html.ComponentArt().DataGrid()
+  .ID("Grid1")
+  .AllowColumnResizing(true)
+  .AutoTheming(true)
+  .AutoThemingCssClassPrefix("cart-")
+  .AllowColumnResizing(true)
+  .LoadingPanelFadeMaximumOpacity(90)
+  .ShowHeader(true)
+  .RunningMode(GridRunningMode.WebService)
+  .SoaService("ComponentArt.SOA.UI.ISoaDataGridService")
+  .PageSize(15)
+  .GroupingMode(GridGroupingMode.ConstantRows)
+  .PreExpandOnGroup(true)
+  .ImagesBaseUrl("~/Content/Integration/FeedBrowser/Grid1/images/")
+  .Width(640)
+  .Height(438)
+  .ShowFooter(false)
+  .ScrollBar(GridScrollBarMode.On)
+  .LoadingPanelClientTemplateId("loadingTemplate")
+  .LoadingPanelFadeDuration(2000)
+  .LoadingPanelFadeMaximumOpacity(90)
+  .LoadingPanelOffsetX(9)
+  .LoadingPanelOffsetY(-16)
+  .Levels(l =>
+  {
+    l.Add()
+      .Columns(c =>
+      {
+        c.Add().DataField("FeedName").DataCellCssClass("DarkerDataCell").Width(110).DataCellClientTemplateId("feedNameTemplate").HeadingCellClientTemplateId("feedNameHeadingTemplate");
+        c.Add().DataField("Title").DataCellCssClass("LighterDataCell").DataCellClientTemplateId("feedTitleTemplate").HeadingCellClientTemplateId("feedTitleHeadingTemplate").Width(255);
+        c.Add().DataField("DatePosted").DataCellCssClass("DarkerDataCell").Width(70).DataCellClientTemplateId("dateCellTemplate");
+        c.Add().DataField("Visits").DataCellCssClass("LighterDataCell").Width(35).DataCellClientTemplateId("dataCellTemplate");
+        c.Add().DataField("Rating").DataCellCssClass("DarkerDataCell").Width(55).DataCellClientTemplateId("ratingTemplate");
+        c.Add().HeadingText("Site").DataCellCssClass("LighterDataCell").Width(35).DataCellClientTemplateId("siteTemplate").FixedWidth(true);
+        c.Add().DataField("ItemURL").Visible(false);
+      }
+    );
+  })
+  .ClientTemplates(ct =>
+  {
+    ct.Add().ID("siteTemplate").Content(@"
+  <div style=""padding: 0px 0px 0px 4px; font-weight: bold;""><a style=""color: Red; text-decoration: none;"" target=""_blank"" href=""## DataItem.getMember('ItemURL').get_value() ##""><img alt="" "" border=""0"" src=""../../Content/Integration/FeedBrowser/Grid1/images/go.png"" /></a></div>
+");
+    ct.Add().ID("ratingTemplate").Content(@"
+  <img alt="" "" border="" "" src=""../../Content/Integration/FeedBrowser/Grid1/images/Rating/## Math.round(Math.min(5, DataItem.getCurrentMember().get_value())) ##.png""/>
+");
+    ct.Add().ID("dateCellTemplate").Content(@"
+  <div style=""padding:0px 0px 0px 6px; text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 6) ##px;overflow:hidden;""><nobr>## GridDateFormatter.toString(DataItem.getMember('DatePosted').get_value(), 'MMMM d yyyy, HH:mm:ss') ##</nobr></div>
+");
+    ct.Add().ID("dataCellTemplate").Content(@"
+  <div style=""padding:0px 0px 0px 6px; text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 6) ##px;overflow:hidden;""><nobr>## DataItem.getCurrentMember().get_text() ##</nobr></div>
+");
+    ct.Add().ID("feedNameTemplate").Content(@"
+  <table cellspacing=""0"" cellpadding=""0"" border=""0""><tr><td style=""padding: 0px 0px 0px 6px;""><img border=""0"" alt="" "" src=""../../Content/Integration/FeedBrowser/Grid1/images/feedName-icon.png"" /></td><td style=""padding: 0px 0px 0px 6px;""><div style=""text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 30) ##px;overflow:hidden;""><nobr>## DataItem.getCurrentMember().get_text() ##</nobr></div></td></tr></table>
+");
+    ct.Add().ID("feedNameHeadingTemplate").Content(@"
+  <table cellspacing=""0"" cellpadding=""0"" border=""0""><tr><td style=""padding: 0px 0px 0px 6px;""><img border=""0"" alt="" "" src=""../../Content/Integration/FeedBrowser/Grid1/images/feedName-icon.png"" /></td><td style=""padding: 0px 0px 0px 6px;"">Feed Name</td></tr></table>
+");
+    ct.Add().ID("feedTitleTemplate").Content(@"
+  <table cellspacing=""0"" cellpadding=""0"" border=""0""><tr><td style=""padding: 0px 0px 0px 6px;""><img border=""0"" alt="" "" src=""../../Content/Integration/FeedBrowser/Grid1/images/feedTitle-icon.png"" /></td><td style=""padding: 0px 0px 0px 6px;""><div style=""text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 30) ##px;overflow:hidden;""><nobr>## DataItem.getCurrentMember().get_text() ##</nobr></div></td></tr></table>
+");
+    ct.Add().ID("feedTitleHeadingTemplate").Content(@"
+  <table cellspacing=""0"" cellpadding=""0"" border=""0""><tr><td style=""padding: 0px 0px 0px 6px;""><img border=""0"" alt="" "" src=""../../Content/Integration/FeedBrowser/Grid1/images/feedTitle-icon.png"" /></td><td style=""padding: 0px 0px 0px 6px;"">Item Title</td></tr></table>
+");
+    ct.Add().ID("loadingTemplate").Content(@"
+<table height=""## document.getElementById('Grid1').offsetHeight + 2 ##"" width=""## document.getElementById('Grid1').offsetWidth ##"" bgcolor=""#e0e0e0"">
+  <tr><td valign=""center"" align=""center""> 					
+		<table cellspacing=""0"" cellpadding=""0"" border=""0"">
+			<tr>
+				<td style=""font-size:11px;font-family:'Segoe UI','Lucida Grande',Tahoma;"">Loading...&nbsp;</td>
+				<td><img src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/spinner.gif"" width=""16"" height=""16"" border=""0""></td>
+			</tr>
+		</table>
+  </td></tr>
+</table>
+");
+  })
+  .ClientEvents(ce =>
+  {
+    ce.WebServiceBeforeInvoke("Grid1_WebServiceBeforeInvoke");
+    ce.WebServiceBeforeComplete("Grid1_WebServiceBeforeComplete");
+  })
+)
+    </td>
+  </tr>
+</table>

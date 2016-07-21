@@ -1,0 +1,209 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.DataGridDesignOffice2003"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:cartCommon="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data"
+>
+	<UserControl.Resources>
+		<Style TargetType="TextBlock" x:Key="ComponentArt_DataGrid_TextBlock">
+			<Setter Property="FontFamily" Value="Arial" />
+			<Setter Property="FontSize" Value="11" />
+		</Style>
+
+
+		<!-- Grouped Header Prefix TextBlock Style -->
+		<Style TargetType="TextBlock" x:Key="ComponentArt_DataGrid_GroupedHeaderPrefix_TextBlock">
+			<Setter Property="Foreground" Value="#ffffff" />
+			<Setter Property="FontWeight" Value="SemiBold" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+			<Setter Property="Padding" Value="4.5,0,0,0" />
+			<Setter Property="FontSize" Value="14" />
+		</Style>
+		<!-- /Grouped Header Prefix TextBlock Style -->
+
+		<cartCommon:Theme x:Key="Office2003DataGridTheme" 
+			BaseSource="/ComponentArt.Silverlight.UI.Data;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Silverlight.Themes.Office2003;component/DataGrid.xaml"
+		/>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Office 2003 DataGrid" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An Office 2003-styled datagrid." />
+    <TextBlock
+      x:Name="DemoCodeFiles"
+      Visibility = "Collapsed"
+      Text="\source\controls\datagrid\DataGridDesignOffice2003.xaml,
+              \source\controls\datagrid\DataGridDesignOffice2003.xaml.cs" />
+
+    <ComponentArt:DataGrid
+			x:Name="DataGrid1"
+			Theme="{ StaticResource Office2003DataGridTheme }"
+			PageSize="18"
+			VerticalScrollBarVisibility="Hidden"
+			RunningMode="Client"
+			ItemsSource="{Binding}"
+			Width="800"
+			Height="518"
+			AllowColumnResizing="True"
+			ColumnResizingMode="Distribute"
+			AllowColumnReordering="True"
+			AllowGrouping="True"
+			GroupingMode="ConstantRows"
+      PreExpandGroups="True"
+			FontFamily="Arial"
+			CornerRadius="2"
+			Padding="0"
+		>
+			<ComponentArt:DataGrid.Columns>
+				<ComponentArt:DataGridTemplateColumn Binding="{Binding PriorityIcon}" Width="22" AllowResizing="False">
+					<ComponentArt:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Source="{Binding}" Stretch="None" Margin="-4,0,0,0" />
+						</DataTemplate>
+					</ComponentArt:DataGridTemplateColumn.CellTemplate>
+					<ComponentArt:DataGridTemplateColumn.CellStyle>
+						<Style TargetType="ComponentArt:DataGridCell">
+							<Setter Property="Foreground" Value="#000000" />
+							<Setter Property="Padding" Value="1" />
+						</Style>
+					</ComponentArt:DataGridTemplateColumn.CellStyle>
+					<ComponentArt:DataGridTemplateColumn.Header>
+						<Image Source="icon_priority.png" Stretch="None" Margin="-4,0,0,0" />
+					</ComponentArt:DataGridTemplateColumn.Header>
+				</ComponentArt:DataGridTemplateColumn>
+				<ComponentArt:DataGridTemplateColumn Binding="{Binding EmailIcon}" Width="22" AllowResizing="False">
+					<ComponentArt:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Source="{Binding}" Stretch="None" Margin="-4,0,0,0" />
+						</DataTemplate>
+					</ComponentArt:DataGridTemplateColumn.CellTemplate>
+					<ComponentArt:DataGridTemplateColumn.CellStyle>
+						<Style TargetType="ComponentArt:DataGridCell">
+							<Setter Property="Foreground" Value="#000000" />
+							<Setter Property="Padding" Value="1" />
+						</Style>
+					</ComponentArt:DataGridTemplateColumn.CellStyle>
+					<ComponentArt:DataGridTemplateColumn.Header>
+						<Image Source="icon_icon.png" Stretch="None" Margin="-4,0,0,0" />
+					</ComponentArt:DataGridTemplateColumn.Header>
+				</ComponentArt:DataGridTemplateColumn>
+				<ComponentArt:DataGridTemplateColumn Binding="{Binding AttachmentIcon}" Width="22" AllowResizing="False">
+					<ComponentArt:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Source="{Binding}" Stretch="None" Margin="-4,0,0,0" />
+						</DataTemplate>
+					</ComponentArt:DataGridTemplateColumn.CellTemplate>
+					<ComponentArt:DataGridTemplateColumn.CellStyle>
+						<Style TargetType="ComponentArt:DataGridCell">
+							<Setter Property="Padding" Value="1" />
+						</Style>
+					</ComponentArt:DataGridTemplateColumn.CellStyle>
+					<ComponentArt:DataGridTemplateColumn.Header>
+						<Image Source="icon_attachment.png" Stretch="None" Margin="-4,0,0,0" />
+					</ComponentArt:DataGridTemplateColumn.Header>
+				</ComponentArt:DataGridTemplateColumn>
+				<ComponentArt:DataGridTextColumn Binding="{Binding Subject}" Header="Subject" Width="4*" />
+				<ComponentArt:DataGridTextColumn Binding="{Binding LastPostDate}" Header="Last Post" Width="2*"  />
+				<ComponentArt:DataGridTextColumn Binding="{Binding StartedBy}" Header="Started By" Width="1*"  />
+				<ComponentArt:DataGridTextColumn Binding="{Binding Replies}" Header="Replies" Width="1*"  />
+				<ComponentArt:DataGridTextColumn Binding="{Binding TotalViews}" Header="Total Views" Width="1*"  />
+				<ComponentArt:DataGridTemplateColumn Binding="{Binding FlagIcon}" Width="22" AllowResizing="False">
+					<ComponentArt:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Source="{Binding}" Stretch="None" />
+						</DataTemplate>
+					</ComponentArt:DataGridTemplateColumn.CellTemplate>
+					<ComponentArt:DataGridTemplateColumn.CellStyle>
+						<Style TargetType="ComponentArt:DataGridCell">
+							<Setter Property="Padding" Value="1" />
+						</Style>
+					</ComponentArt:DataGridTemplateColumn.CellStyle>
+					<ComponentArt:DataGridTemplateColumn.Header>
+						<Image Source="icon_flag.png" Stretch="None" Margin="-4,0,0,0" />
+					</ComponentArt:DataGridTemplateColumn.Header>
+				</ComponentArt:DataGridTemplateColumn>
+			</ComponentArt:DataGrid.Columns>
+
+			<ComponentArt:DataGrid.GroupedHeaderPrefixContent>
+				<TextBlock Style="{ StaticResource ComponentArt_DataGrid_GroupedHeaderPrefix_TextBlock }" Text="Grouped by: " />
+			</ComponentArt:DataGrid.GroupedHeaderPrefixContent>
+
+			<ComponentArt:DataGrid.SliderPopupTemplate>
+				<DataTemplate>
+
+					<Grid Height="64" Width="300" Margin="0,5,0,0">
+
+						<Border Margin="2,2,-2,-2" Background="#1a101f32" CornerRadius="2">
+						</Border>
+
+						<Border BorderThickness="1" Width="300" Height="60" Background="#fff4d7" CornerRadius="2">
+							<Border.BorderBrush>
+								<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+									<GradientStop Color="#9495a2" Offset="0" />
+									<GradientStop Color="#4b4b6f" Offset="1" />
+								</LinearGradientBrush>
+							</Border.BorderBrush>
+
+							<Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="24" />
+									<ColumnDefinition Width="100" />
+									<ColumnDefinition Width="*"/>
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition Height="20"/>
+									<RowDefinition Height="20"/>
+									<RowDefinition Height="18"/>
+								</Grid.RowDefinitions>
+
+								<Border Background="#cac6d4">
+									<Image Source="{Binding DataItem.EmailIcon}" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="None"/>
+								</Border>
+
+								<Border Background="#cac6d4" Grid.Row="1">
+									<StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+										<Image Source="{Binding DataItem.PriorityIcon}" Stretch="None"/>
+										<Image Source="{Binding DataItem.AttachmentIcon}" Stretch="None"/>
+									</StackPanel>
+								</Border>
+
+								<TextBlock Padding="3" Text="{Binding DataItem.StartedBy}" Grid.Column="1" Grid.Row="0" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+								<TextBlock Padding="3" HorizontalAlignment="Right" Text="{Binding DataItem.LastPostDate}" Grid.Column="2" Grid.Row="0" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+								<TextBlock Padding="3" FontWeight="Bold" TextWrapping="NoWrap" Text="{Binding DataItem.Subject}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+
+								<Grid Grid.Row="2" Grid.ColumnSpan="3" Background="#757598" HorizontalAlignment="Stretch">
+
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="1*"/>
+										<ColumnDefinition Width="1*"/>
+									</Grid.ColumnDefinitions>
+
+									<Border BorderThickness="0,1,0,0" Grid.Column="0">
+										<StackPanel Orientation="Horizontal" Margin="6,3,3,0" VerticalAlignment="Stretch">
+											<TextBlock Foreground="White" Text="Page " Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+											<TextBlock Foreground="White" Text="{Binding PageNumber}" FontWeight="Bold" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+											<TextBlock Foreground="White" Text=" of " Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+											<TextBlock Foreground="White" Text="{Binding Owner.PageCount}" FontWeight="Bold" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+										</StackPanel>
+									</Border>
+
+									<Border BorderThickness="0,1,0,0" Grid.Column="1">
+										<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="3,2,6,0">
+											<TextBlock Foreground="White" Text="Message " Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+											<TextBlock Foreground="White" Text="{Binding RecordNumber}" FontWeight="Bold" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+											<TextBlock Foreground="White" Text=" of " Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+											<TextBlock Foreground="White" Text="{Binding Owner.RecordCount}" FontWeight="Bold" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+										</StackPanel>
+									</Border>
+								</Grid>
+
+							</Grid>
+						</Border>
+					</Grid>
+				</DataTemplate>
+			</ComponentArt:DataGrid.SliderPopupTemplate>
+		</ComponentArt:DataGrid>
+	</Grid>
+</UserControl>

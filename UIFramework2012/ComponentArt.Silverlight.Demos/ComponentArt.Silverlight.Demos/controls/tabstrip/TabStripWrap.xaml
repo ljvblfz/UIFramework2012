@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.TabStripWrap"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+>
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TabStrip" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="TabStrip Wrap" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An example of a TabStrip in Wrap mode." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\TabStrip\TabStripWrap.xaml,\source\controls\tabstrip\TabStripWrap.xaml.cs" />
+        <StackPanel Orientation="Vertical">
+            <ComponentArt:TabStrip 
+            Width="200"
+            Height="44"
+            Overflow="Wrap"
+            Alignment="top"
+            VerticalAlignment="top"
+            Margin="0,0,0,-1"
+            >
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Seven" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Eight" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Nine" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Ten" />
+                <ComponentArt:TabStripTab Padding="8,3,8,3" Text="Eleven" />
+            </ComponentArt:TabStrip>
+            <Border
+                Width="200" 
+                Height="200" 
+                BorderThickness="1" 
+                BorderBrush="Black" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>
+

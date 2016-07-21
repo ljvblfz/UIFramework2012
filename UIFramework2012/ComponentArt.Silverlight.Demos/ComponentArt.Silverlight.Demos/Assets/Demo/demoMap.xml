@@ -1,0 +1,578 @@
+			<TreeView>
+				<!-- Welcome -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-welcome.png" Tag="Welcome">
+					<TreeViewNode.Header>
+						<StackPanel Orientation="Horizontal">
+							<TextBlock FontWeight="Bold">Welcome <Run FontSize="9" Foreground="#aaaaaa">Web.UI for Silverlight</Run></TextBlock>
+						</StackPanel>
+					</TreeViewNode.Header>
+				</TreeViewNode>
+				<!-- /Welcome -->
+
+				<!-- Breadcrumb -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-breadcrumb.png" Tag="BreadCrumb">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">BreadCrumb <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="BreadCrumbCoreFeatures" />
+						<TreeViewNode Header="Resizing" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="BreadCrumbResizing" />
+						<TreeViewNode Header="XML Binding" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="BreadCrumbXmlBinding" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /Breadcrumb -->
+
+				<!-- ComboBox -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-combobox.png" Tag="ComboBox">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">ComboBox <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxCoreFeatures" />
+						<TreeViewNode Header="Templates" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxTemplateCategories" />
+						<TreeViewNode Header="Column Data" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxTemplateColumns" />
+						<TreeViewNode Header="Layout &amp; Resize" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxLayoutAndResize" />                                
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4" >
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxDesignWindows7" />
+					</TreeViewNode>
+					
+					<TreeViewNode Header="Operation Modes" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxSoaAutoPilot" />
+						<TreeViewNode Header="Manual Web Service" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxLoadOnDemand" />
+					 </TreeViewNode>
+					
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Bind to Collection" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxCodingBinding" />
+						<TreeViewNode Header="Create from CSV" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxCodingCsv" />
+						<TreeViewNode Header="Create from XML" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ComboBoxCodingXml" />                                    
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /ComboBox -->
+
+				<!-- ContextMenu -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-contextmenu.png" Tag="ContextMenu">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">ContextMenu <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Simple Context Menu" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuSimple" />
+						<TreeViewNode Header="Control-based Context Menu" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuCoreFeatures" />
+						<TreeViewNode Header="Custom Context Menu" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuCustom" />
+						<TreeViewNode Header="Context Menu Effects" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuShowTypes" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4" >
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuDesignWindows7" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ContextMenuAPIControl" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /ContextMenu -->
+
+				<!-- DataGrid -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-datagrid.png" Tag="DataGrid">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">DataGrid <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridCoreFeatures"  />
+						<TreeViewNode Header="Grouping" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridGrouping" />
+						<TreeViewNode Header="Scrolling (Client)" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridScrolling" />
+						<TreeViewNode Header="Scrolling (Web Service)" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridSoaScrolling"  />
+						<TreeViewNode Header="Row Details" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridRowDetails" />
+						<TreeViewNode Header="Hierarchy" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridHierarchy" />
+						<TreeViewNode Header="Column Resizing" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridColumnResizing" />
+						<TreeViewNode Header="Column Reordering" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridColumnReordering" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignWindows7" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Operation Modes" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Client (Load Once)" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridCoreFeatures"  />
+						<TreeViewNode Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridSoaAutoPilot"  />
+						<TreeViewNode Header="SOA.UI Custom" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridSoaCustom"  />
+						<TreeViewNode Header="Manual Web Service" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridWebServiceOperation"  />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Editing" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Basic Editing" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridEditing"  />
+						<TreeViewNode Header="SOA.UI Editing" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridSoaEditing"  />
+						<TreeViewNode Header="External Editing Form" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridExternalEditing"  />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Programmatic Creation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridProgrammaticCreation"  />
+						<TreeViewNode Header="Modifying the Source Collection" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridObservableCollection"  />
+						<TreeViewNode Header="Data Cell Templates" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDataCellTemplates"  />
+						<TreeViewNode Header="Group Heading Templates" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridGroupTotals"  />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- DataGrid -->
+
+				<!-- DragDrop -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-dragdrop.png" Tag="DragDrop">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">DragDrop <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DragDropCoreFeatures" />
+						<TreeViewNode Header="ListBox-to-TreeView" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DragDropListboxToTreeView" />
+						<TreeViewNode Header="Using Built-in Controls" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DragDropSimpleFeatures" />
+						<TreeViewNode Header="Custom Visual Indicators" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DragDropVisualFeatures" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /DragDrop -->
+
+				<!-- Chart -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-chart.png" Tag="Chart">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">Chart <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Overview" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartOverview"  />
+					
+					<TreeViewNode Header="Bar and Column Charts" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="3D Rounded Block Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartRoundedBlock"  />
+						<TreeViewNode Header="3D Cylinder Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="CylinderChart3D"  />
+						<TreeViewNode Header="3D Block Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartBlock3D"  />
+						<TreeViewNode Header="2D Rectangle Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartRectangle2D"  />
+						<TreeViewNode Header="Multi-Series Bar Charts" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MultiSeriesBar"  />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Pie and Doughnut Charts" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="3D Pie Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartPie3D"  />
+						<TreeViewNode Header="3D Doughnut Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartDoughnut3D"  />
+						<TreeViewNode Header="2D Pie Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartPie2D"  />
+						<TreeViewNode Header="2D Doughnut Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartDoughnut2D"  />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Line and Area Charts" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="3D Area: Smooth" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="AreaSmooth3D"  />
+						<TreeViewNode Header="3D Area: Polygon" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="AreaPolygon3D"  />
+						<TreeViewNode Header="3D Area: Step" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="AreaStep3D"  />
+						<TreeViewNode Header="2D Area: Smooth" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="AreaSmooth2D"  />
+						<TreeViewNode Header="2D Area: Polygon" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="AreaPolygon2D"  />
+						<TreeViewNode Header="2D Area: Step" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="AreaStep2D"  />
+						<TreeViewNode Header="2D Line: Smooth" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="LineSmooth2D"  />
+						<TreeViewNode Header="2D Line: Polygon" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="LinePolygon2D"  />
+						<TreeViewNode Header="2D Line: Step" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="LineStep2D"  />
+						<TreeViewNode Header="2D Lines With Markers" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="Lines2DMarkers"  />
+						<TreeViewNode Header="Multi-Series Area Charts" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MultiSeriesAreas"  />
+						<TreeViewNode Header="Multi-Series Line Charts" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MultiSeriesLines"  />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Bubble and Marker Charts" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="3D Bubble Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartBubble3D"  />
+						<TreeViewNode Header="2D Bubble Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartBubble2D"  />
+						<TreeViewNode Header="3D Marker Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartMarker3D"  />
+						<TreeViewNode Header="2D Marker Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ChartMarker2D"  />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Financial and Stock Charts" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Open-Low-High-Close Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="OpenLowHighClose"  />
+						<TreeViewNode Header="Candlestick Chart" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="Candlestick"  />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Combination Charts" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Stacked Bars With Marker Line" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="StackedBarsMarkerLine"  />
+						<TreeViewNode Header="2D Area with Merged Bars" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="Area2DWithMergedBars"  />
+						<TreeViewNode Header="Open-Low-High-Close Chart With Volume" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="OpenLowHighCloseVolume"  />
+						<TreeViewNode Header="Candlestick Chart With Volume" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="CandlestickVolume"  />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Composite Series" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="CompositeSeries"  />
+						<TreeViewNode Header="Range Values" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="RangeValues"  />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /Chart -->
+
+				<!-- Gauge -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-gauge.png" Tag="Gauge">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">Gauge <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Overview" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="GaugeOverview"  />
+
+					<TreeViewNode Header="Radial Gauge" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="RadialGaugeCoreFeatures"  />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Linear Gauge" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="LinearGaugeCoreFeatures"  />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /Gauge -->
+
+				<!-- HtmlEditor -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-htmleditor.png" Tag="HtmlEditor">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">HtmlEditor <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="HtmlEditorCoreFeatures"  />
+					</TreeViewNode>
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="HtmlEditorAPI" />
+					</TreeViewNode>
+				 </TreeViewNode>
+				<!-- /HtmlEditor -->
+
+
+				<!-- HtmlPanel -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-htmlpanel.png" Tag="HtmlPanel">
+				  <TreeViewNode.Header>
+					<TextBlock FontWeight="Bold">HtmlPanel <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+				  </TreeViewNode.Header>
+
+				  <TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+													<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="HtmlPanelCoreFeatures"  />
+													<TreeViewNode Header="HTML Source" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="HtmlPanelHtmlSource" />
+													<TreeViewNode Header="Opacity" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="HtmlPanelOpacity" />
+													<TreeViewNode Header="Automatic Layout" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="HtmlPanelAutomaticLayout" />
+					<TreeViewNode Header="Manual Layout" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="HtmlPanelManualLayout" />
+				  </TreeViewNode>
+
+				  <TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+													<TreeViewNode Header="Scrolling" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="HtmlPanelScrolling" />
+												</TreeViewNode>
+				</TreeViewNode>
+				<!-- /HtmlPanel -->
+				
+				<!-- ItemFlow -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-itemflow.png" Tag="ItemFlow">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">ItemFlow <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowCoreFeatures" />
+						<TreeViewNode Header="ItemFlow Events" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowEvents" />
+						<TreeViewNode Header="Wrap FlowMode" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowWrap" />
+						<TreeViewNode Header="Selected Item Template" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowSelectedItemTemplate" />
+					</TreeViewNode>
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowAPI" />
+						<TreeViewNode Header="Two Instances" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowTwoInstances" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /ItemFlow -->
+
+				<!-- MaskedInput -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-maskedinput.png" Tag="MaskedInput">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">MaskedInput <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MaskedInputCoreFeatures" />
+						<TreeViewNode Header="Custom Transform" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MaskedInputCustomTransform" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MaskedInputDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MaskedInputDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MaskedInputDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MaskedInputDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MaskedInputDesignWindows7" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- MaskedInput -->
+				
+				<!-- Menu -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-menu.png" Tag="Menu">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">Menu <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuCoreFeatures" />
+						<TreeViewNode Header="Templated Items" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuTemplatedItems" />
+						<TreeViewNode Header="Boundary Detection" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuBoundaryDetection" />
+						<TreeViewNode Header="Vertical Orientation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuVerticalOrientation" />
+						<TreeViewNode Header="Drop Shadow" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDropShadowFeatures" />
+						<TreeViewNode Header="XML File Binding" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuXMLFileBinding" />
+						<TreeViewNode Header="XML String Binding" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuXMLStringBinding" />
+						<TreeViewNode Header="XML Expando Items" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuXMLExpandoItems" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignWindows7" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Programmatic Creation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuProgrammaticCreation" />
+						<TreeViewNode Header="Add/Remove/Disable Items" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuAddRemoveDisableItems" />
+						<TreeViewNode Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuSoaAutoPilot" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /Menu -->
+
+				<!-- NavBar -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-navbar.png" Tag="NavBar">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">NavBar <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarCoreFeatures" />
+						<TreeViewNode Header="Rich Content Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarRichContentFeatures" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarDesignWindows7" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Load on Demand" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarSOAUIAutomatic" />
+						<TreeViewNode Header="SOA.UI Custom" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarSOAUICustom" />
+						<TreeViewNode Header="Manual Web Service" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarLoadOnDemandFeatures" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="NavBar Events" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NavBarEvents" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /NavBar -->
+
+				<!-- NumberInput -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-numberinput.png" Tag="NumberInput">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">NumberInput <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NumberInputCoreFeatures" />
+						<TreeViewNode Header="Culture Settings" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NumberInputCultureSettings" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NumberInputDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NumberInputDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NumberInputDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NumberInputDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="NumberInputDesignWindows7" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /NumberInput -->
+
+				<!-- RangeSlider -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-rangeslider.png" Tag="RangeSlider">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">RangeSlider <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="RangeSliderCoreFeatures" />
+						<TreeViewNode Header="Data Binding" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="RangeSliderDatabindingFeatures" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Events" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="RangeSliderEvents" />
+						<!--<TreeViewNode Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="RangeSliderAPI" />-->
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /RangeSlider -->
+				
+				<!-- Splitter -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-splitter.png" Tag="Splitter">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">Splitter <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterCoreFeatures" />
+						<TreeViewNode Header="Basic Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterBasicFeatures" />
+						<TreeViewNode Header="Minimum Size Limitation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterResizeLimitationFeatures" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterDesignWindows7" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Events" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterEvents" />
+						<TreeViewNode Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="SplitterAPI" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /Splitter -->
+				
+				<!-- TabStrip -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-tabstrip.png" Tag="TabStrip">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">TabStrip <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripCoreFeatures" />
+						<TreeViewNode Header="Scrolling" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripScroll" />
+						<TreeViewNode Header="Wrapping" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripWrap" />
+						<TreeViewNode Header="Re-Ordering" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripReorder" />
+						<TreeViewNode Header="Alignment" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripAlignment" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripDesignWindows7" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="TabStrip Events" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripEvents" />
+						<TreeViewNode Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TabStripSOAUIAutomatic"  />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /TabStrip -->
+
+				<!-- ToolBar -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-toolbar.png" Tag="ToolBar">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">ToolBar <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarCoreFeatures" />
+						<TreeViewNode Header="Enable / Disable Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarEnableDisableFeatures" />
+						<TreeViewNode Header="Button Appearances" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarButtonAppearances" />
+						<TreeViewNode Header="ToolBar Orientation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarOrientation" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignWindows7" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="ToolBar Events" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarEvents" />
+						<TreeViewNode Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarSOAUIAutomatic"  />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /ToolBar -->
+
+				<!-- TreeView -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-treeview.png" Tag="TreeView">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">TreeView <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewCoreFeatures" />
+						<TreeViewNode Header="Drag &#x26; Drop" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDragDropFeatures" />
+						<TreeViewNode Header="Node Editing" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewEditingFeatures" />
+						<TreeViewNode Header="Node Checkboxes" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewCheckboxFeatures" />
+						<TreeViewNode Header="TreeView Lines" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewLinesFeatures" />
+						<TreeViewNode Header="Multiple Selection" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewMultiSelectFeatures" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignWindows7" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Load on Demand" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewSOAUIAutomatic" />
+						<TreeViewNode Header="SOA.UI Custom" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewSOAUICustom" />
+						<TreeViewNode Header="Manual Web Service" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewLoadOnDemandFeatures" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewEditing"  />
+						<TreeViewNode Header="SOA.UI Editing" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewSOAUIEditing"  />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /TreeView -->
+
+				<!-- Upload -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-upload.png" Tag="Upload">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">Upload <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="UploadCoreFeatures" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="UploadDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="UploadDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="UploadDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="UploadDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="UploadDesignWindows7" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /Upload -->
+
+				<!-- Window -->
+				<TreeViewNode IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-window.png" Tag="Window">
+					<TreeViewNode.Header>
+						<TextBlock FontWeight="Bold">Window <Run FontSize="9" Foreground="#aaaaaa">for Silverlight</Run></TextBlock>
+					</TreeViewNode.Header>
+
+					<TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowCoreFeatures" />
+						<TreeViewNode Header="Modal Window" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowModal" />
+						<TreeViewNode Header="Window Animations" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowAnimation" />
+						<TreeViewNode Header="Resizable Window" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowResize" />
+						<TreeViewNode Header="Multiple Windows" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowMultiple" />
+						<TreeViewNode Header="Window Alignment" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowAlignment" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowDesignBlackIce" />
+						<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowDesignArcticWhite" />
+						<TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowDesignOffice2003" />
+						<TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowDesignOffice2007" />
+						<TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowDesignWindows7" />
+					</TreeViewNode>
+
+					<TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+						<TreeViewNode Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowAPI" />
+						<TreeViewNode Header="Window Events" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="WindowEvents" />
+					</TreeViewNode>
+				</TreeViewNode>
+				<!-- /Window -->
+		    </TreeView>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3069/SoaDataGridMessageService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SoaDataGridDeleteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaDataGridRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:ArrayOfSoaDataGridColumn" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Values" nillable="true" type="q1:ArrayOfanyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaDataGridDeleteRequest" nillable="true" type="tns:SoaDataGridDeleteRequest" />
+  <xs:complexType name="SoaDataGridRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaDataGridRequest" nillable="true" type="tns:SoaDataGridRequest" />
+  <xs:complexType name="ArrayOfSoaDataGridColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SoaDataGridColumn" nillable="true" type="tns:SoaDataGridColumn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoaDataGridColumn" nillable="true" type="tns:ArrayOfSoaDataGridColumn" />
+  <xs:complexType name="SoaDataGridColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaDataGridColumn" nillable="true" type="tns:SoaDataGridColumn" />
+  <xs:complexType name="SoaDataGridDeleteResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaDataGridResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cancel" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaDataGridDeleteResponse" nillable="true" type="tns:SoaDataGridDeleteResponse" />
+  <xs:complexType name="SoaDataGridResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaDataGridResponse" nillable="true" type="tns:SoaDataGridResponse" />
+  <xs:complexType name="SoaDataGridGroupRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaDataGridRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Count" type="xs:int" />
+          <xs:element minOccurs="0" name="Filters" nillable="true" type="tns:ArrayOfSoaDataGridDataCondition" />
+          <xs:element minOccurs="0" name="Groupings" nillable="true" type="tns:ArrayOfSoaDataGridGrouping" />
+          <xs:element minOccurs="0" name="Offset" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaDataGridGroupRequest" nillable="true" type="tns:SoaDataGridGroupRequest" />
+  <xs:complexType name="ArrayOfSoaDataGridDataCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SoaDataGridDataCondition" nillable="true" type="tns:SoaDataGridDataCondition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoaDataGridDataCondition" nillable="true" type="tns:ArrayOfSoaDataGridDataCondition" />
+  <xs:complexType name="SoaDataGridDataCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataFieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataFieldValue" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Operand" type="tns:SoaDataGridDataConditionOperand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaDataGridDataCondition" nillable="true" type="tns:SoaDataGridDataCondition" />
+  <xs:simpleType name="SoaDataGridDataConditionOperand">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Equals" />
+      <xs:enumeration value="LessThan" />
+      <xs:enumeration value="LessThanOrEqual" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="GreaterThanOrEqual" />
+      <xs:enumeration value="Contains" />
+      <xs:enumeration value="StartsWith" />
+      <xs:enumeration value="NotEqualTo" />
+      <xs:enumeration value="In" />
+      <xs:enumeration value="NotIn" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SoaDataGridDataConditionOperand" nillable="true" type="tns:SoaDataGridDataConditionOperand" />
+  <xs:complexType name="ArrayOfSoaDataGridGrouping">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SoaDataGridGrouping" nillable="true" type="tns:SoaDataGridGrouping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoaDataGridGrouping" nillable="true" type="tns:ArrayOfSoaDataGridGrouping" />
+  <xs:complexType name="SoaDataGridGrouping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Column" nillable="true" type="tns:SoaDataGridColumn" />
+      <xs:element minOccurs="0" name="Direction" type="tns:SoaSortDirection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaDataGridGrouping" nillable="true" type="tns:SoaDataGridGrouping" />
+  <xs:simpleType name="SoaSortDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ascending" />
+      <xs:enumeration value="Descending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SoaSortDirection" nillable="true" type="tns:SoaSortDirection" />
+  <xs:complexType name="SoaDataGridGroupResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaDataGridResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GroupCount" type="xs:int" />
+          <xs:element minOccurs="0" name="Groups" nillable="true" type="tns:ArrayOfSoaDataGridGroup" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaDataGridGroupResponse" nillable="true" type="tns:SoaDataGridGroupResponse" />
+  <xs:complexType name="ArrayOfSoaDataGridGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SoaDataGridGroup" nillable="true" type="tns:SoaDataGridGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoaDataGridGroup" nillable="true" type="tns:ArrayOfSoaDataGridGroup" />
+  <xs:complexType name="SoaDataGridGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Column" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupValue" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Groups" nillable="true" type="tns:ArrayOfSoaDataGridGroup" />
+      <xs:element minOccurs="0" name="IsExpanded" type="xs:boolean" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Items" nillable="true" type="q2:ArrayOfanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaDataGridGroup" nillable="true" type="tns:SoaDataGridGroup" />
+  <xs:complexType name="SoaDataGridInsertRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaDataGridRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:ArrayOfSoaDataGridColumn" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Values" nillable="true" type="q3:ArrayOfanyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaDataGridInsertRequest" nillable="true" type="tns:SoaDataGridInsertRequest" />
+  <xs:complexType name="SoaDataGridInsertResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaDataGridResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cancel" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaDataGridInsertResponse" nillable="true" type="tns:SoaDataGridInsertResponse" />
+  <xs:complexType name="SoaDataGridSelectRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaDataGridRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:ArrayOfSoaDataGridColumn" />
+          <xs:element minOccurs="0" name="Count" type="xs:int" />
+          <xs:element minOccurs="0" name="Filters" nillable="true" type="tns:ArrayOfSoaDataGridDataCondition" />
+          <xs:element minOccurs="0" name="Offset" type="xs:int" />
+          <xs:element minOccurs="0" name="Sortings" nillable="true" type="tns:ArrayOfSoaDataGridSorting" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaDataGridSelectRequest" nillable="true" type="tns:SoaDataGridSelectRequest" />
+  <xs:complexType name="ArrayOfSoaDataGridSorting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SoaDataGridSorting" nillable="true" type="tns:SoaDataGridSorting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoaDataGridSorting" nillable="true" type="tns:ArrayOfSoaDataGridSorting" />
+  <xs:complexType name="SoaDataGridSorting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Column" nillable="true" type="tns:SoaDataGridColumn" />
+      <xs:element minOccurs="0" name="Direction" type="tns:SoaSortDirection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaDataGridSorting" nillable="true" type="tns:SoaDataGridSorting" />
+  <xs:complexType name="SoaDataGridSelectResponse">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Data" nillable="true" type="q4:ArrayOfArrayOfanyType" />
+      <xs:element minOccurs="0" name="ItemCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaDataGridSelectResponse" nillable="true" type="tns:SoaDataGridSelectResponse" />
+  <xs:complexType name="SoaDataGridUpdateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaDataGridRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:ArrayOfSoaDataGridColumn" />
+          <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Values" nillable="true" type="q5:ArrayOfanyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaDataGridUpdateRequest" nillable="true" type="tns:SoaDataGridUpdateRequest" />
+  <xs:complexType name="SoaDataGridUpdateResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaDataGridResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cancel" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaDataGridUpdateResponse" nillable="true" type="tns:SoaDataGridUpdateResponse" />
+</xs:schema>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+	xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+>
+
+	<!-- Palette definitions -->
+	<Color x:Key="Palette_Test1">#ff00ff</Color>
+	<Color x:Key="Palette_Test2">#00ffff</Color>
+	<Color x:Key="Palette_Test3">#ffff00</Color>
+
+	<Color x:Key="Palette_Transparent">Transparent</Color>
+
+	<Color x:Key="Palette_Background">#000000</Color>
+	<Color x:Key="Palette_Foreground">#ffffff</Color>
+
+	<Color x:Key="Palette_Base">#444444</Color>
+	<Color x:Key="Palette_Dark">#000000</Color>
+	<Color x:Key="Palette_Light">#888888</Color>
+	<Color x:Key="Palette_Extralight">#bbbbbb</Color>
+
+	<Color x:Key="Palette_Accent">#dd3409</Color>
+	<Color x:Key="Palette_AccentDark">#b32b08</Color>
+	<Color x:Key="Palette_AccentLight">#ff3300</Color>
+	<Color x:Key="Palette_AccentExtralight">#ff704c</Color>
+
+	<Color x:Key="Palette_Secondary">#eeeeee</Color>
+	<Color x:Key="Palette_SecondaryDark">#dddddd</Color>
+	<Color x:Key="Palette_SecondaryLight">#f6f6f6</Color>
+	<Color x:Key="Palette_SecondaryExtralight">#ffffff</Color>
+	<!-- /Palette definitions -->
+
+	<!-- Gradient definitions -->
+	<!--
+	grad1: $base > $darken
+	grad2: $lighten > $base, $darken > $base
+	grad3: $accent_lighten > $accent, $accent_darken > $accent
+	grad4: $secondary_lighten > $secondary, $secondary_darken > $secondary
+	grad5: $lighten > $base, $darken > $base
+	grad6: $accent_lighten > $accent, $accent_darken > $accent
+	grad7: $accent_extralight > $accent_lighten, $accent > $accent_lighten
+	-->
+	<!-- /Gradient definitions -->
+
+
+	<!-- BEGIN TABSTRIP -->
+	<!-- TABSTRIP RESOURCES 
+	<LinearGradientBrush x:Key="ComponentArt_TabStripTab_Background" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_SecondaryLight}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Secondary}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_SecondaryDark}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Secondary}" Offset="1" />
+	</LinearGradientBrush>
+
+
+
+	<LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundOver" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_Test1}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Test2}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Test2}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Test3}" Offset="1" />
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundActive" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_Test1}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Test2}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Test2}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Test3}" Offset="1" />
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundDown" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#999999" Offset="0" />
+		<GradientStop Color="#5f5f5f" Offset="0.5" />
+		<GradientStop Color="#000000" Offset="0.5" />
+	</LinearGradientBrush>
+	-->
+
+
+	<LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundOuter" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="{StaticResource Palette_SecondaryLight}" Offset="0" />
+		<GradientStop Color="{StaticResource Palette_Secondary}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_SecondaryDark}" Offset="0.5" />
+		<GradientStop Color="{StaticResource Palette_Secondary}" Offset="1" />
+	</LinearGradientBrush>
+	
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BackgroundOuterOver" Color="{StaticResource Palette_SecondaryExtralight}" />
+
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BackgroundOuterActive" Color="{StaticResource Palette_SecondaryExtralight}" />
+
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BackgroundOuterDown" Color="{StaticResource Palette_SecondaryExtralight}" />
+
+
+	<sys:String x:Key="ComponentArt_TabStripTab_CornerRadiusOuter">0</sys:String>
+	<sys:String x:Key="ComponentArt_TabStripTab_CornerRadiusInner">0</sys:String>
+	<sys:String x:Key="ComponentArt_TabStripTab_BorderThicknessOuter">1</sys:String>
+	<sys:String x:Key="ComponentArt_TabStripTab_BorderThicknessInner">1,1,1,1</sys:String>
+	
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushOuter" Color="{StaticResource Palette_Light}" />
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushInner" Color="{StaticResource Palette_Transparent}" />
+	
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushOuterOver" Color="{StaticResource Palette_Light}" />
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushInnerOver" Color="{StaticResource Palette_Transparent}" />
+	
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushOuterActive" Color="{StaticResource Palette_Dark}" />
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushInnerActive" Color="{StaticResource Palette_Transparent}" />
+	
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushOuterDown" Color="{StaticResource Palette_Dark}" />
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushInnerDown" Color="{StaticResource Palette_Transparent}" />
+	
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_Foreground" Color="{StaticResource Palette_Base}" />
+	<SolidColorBrush x:Key="ComponentArt_TabStripTab_BackgroundInner" Color="{StaticResource Palette_Transparent}" />
+
+
+</ResourceDictionary>
+                         

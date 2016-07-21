@@ -1,0 +1,18 @@
+﻿<ItemFlow>
+	<Item Text="C1394752" ImageSource="c13947521.jpg" Type="Single Family"  Price="$1,029,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="5" Lat="43.7099" Long="-79.4396" />
+	<Item Text="W1500656" ImageSource="w15006561.jpg" Type="Single Family"  Price="$1,039,000.00"  City="TORONTO" Bedrooms="3" Bathrooms="4" Lat="43.6781" Long="-79.5158" />
+	<Item Text="C1483749" ImageSource="c14837491.jpg" Type="Single Family"  Price="$1,049,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="6" Lat="43.7512" Long="-79.4389" />
+	<Item Text="C1499831" ImageSource="c14998311.jpg" Type="Single Family"  Price="$1,090,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="5" Lat="43.7385" Long="-79.437" />
+	<Item Text="C1503798" ImageSource="c15037981.jpg" Type="Single Family"  Price="$1,095,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="6" Lat="43.7106" Long="-79.4407" />
+	<Item Text="C1458161" ImageSource="c14581611.jpg" Type="Single Family"  Price="$1,098,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="4" Lat="43.7544" Long="-79.4387" />
+	<Item Text="W1484808" ImageSource="w14848081.jpg" Type="Single Family"  Price="$1,099,000.00"  City="TORONTO" Bedrooms="3" Bathrooms="5" Lat="43.6978" Long="-79.5228" />
+	<Item Text="W1504611" ImageSource="w15046111.jpg" Type="Single Family"  Price="$1,188,900.00"  City="TORONTO" Bedrooms="3" Bathrooms="4" Lat="43.6681" Long="-79.532" />
+	<Item Text="W1508498" ImageSource="w15084981.jpg" Type="Single Family"  Price="$1,199,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="5" Lat="43.6608" Long="-79.5535" />
+	<Item Text="C1516558" ImageSource="c15165581.jpg" Type="Single Family"  Price="$1,250,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="3" Lat="43.7101" Long="-79.4429" />
+	<Item Text="C1462465" ImageSource="c14624651.jpg" Type="Single Family"  Price="$1,289,000.00"  City="TORONTO" Bedrooms="5" Bathrooms="6" Lat="43.7222" Long="-79.4388" />
+	<Item Text="C1507571" ImageSource="c15075711.jpg" Type="Single Family"  Price="$1,297,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="5" Lat="43.7676" Long="-79.4375" />
+	<Item Text="W1513619" ImageSource="w15136191.jpg" Type="Single Family"  Price="$3,290,000.00"  City="TORONTO" Bedrooms="3" Bathrooms="3" Lat="43.6641" Long="-79.5436" />
+	<Item Text="W1503386" ImageSource="w15033861.jpg" Type="Single Family"  Price="$3,395,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="4" Lat="43.7091" Long="-79.4576" />
+	<Item Text="W1508926" ImageSource="w15089261.jpg" Type="Single Family"  Price="$3,898,000.00"  City="TORONTO" Bedrooms="3" Bathrooms="3" Lat="43.6735" Long="-79.5417" />
+	<Item Text="C1511489" ImageSource="w15076301.jpg" Type="Single Family"  Price="$5,300,000.00"  City="TORONTO" Bedrooms="4" Bathrooms="5" Lat="43.7512" Long="-79.4537" />
+</ItemFlow>

@@ -1,0 +1,155 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=WPFToolkit"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="ComponentArt.Win.Demos.BestOfBreed_Navigation"
+	xmlns:local="clr-namespace:ComponentArt.Win.Demos" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <Storyboard x:Key="DataGridCoreFeatures_animation"/>
+
+        <Storyboard x:Key="ItemFlowCoreFeatures_animation"/>
+
+        <Storyboard x:Key="MenuCoreFeatures_animation"/>
+
+        <Storyboard x:Key="ContextMenuSimple_animation"/>
+
+        <Storyboard x:Key="TreeViewCoreFeatures_animation"/>
+
+        <Storyboard x:Key="overview_intro_animation"/>
+
+        <LinearGradientBrush x:Key="ButtonBackground" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#7fd6f7" Offset="0" />
+            <GradientStop Color="#7fd6f7" Offset="0.04" />
+            <GradientStop Color="#8edbf8" Offset="0.04" />
+            <GradientStop Color="#37bff2" Offset="0.5" />
+            <GradientStop Color="#0093c9" Offset="0.5" />
+            <GradientStop Color="#3bc1f3" Offset="1" />
+        </LinearGradientBrush>
+        <SolidColorBrush Color="#3bc1f3" x:Key="ButtonBorder" />
+
+        <LinearGradientBrush x:Key="ButtonBackgroundHover" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#87f5fd" Offset="0" />
+            <GradientStop Color="#29e2f5" Offset="0.5" />
+            <GradientStop Color="#12d9ef" Offset="0.5" />
+            <GradientStop Color="#00c0e7" Offset="0.75" />
+            <GradientStop Color="#00afef" Offset="1" />
+        </LinearGradientBrush>
+        <SolidColorBrush Color="#3bc1f3" x:Key="ButtonBorderHover" />
+
+        <LinearGradientBrush x:Key="ButtonReflection" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#b3e7fb" Offset="0" />
+            <GradientStop Color="#ffffff" Offset="0.5" />
+            <GradientStop Color="#00ffffff" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="Demo_Overlay_Fill" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#00ffffff" Offset="0" />
+            <GradientStop Color="#00ffffff" Offset="1" />
+        </LinearGradientBrush>
+
+        <SolidColorBrush x:Key="Demo_Text" Color="#000000" />
+        <SolidColorBrush x:Key="Demo_Text_Hover" Color="#58188D" />
+        <!-- /Demo button styles -->
+
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent" Width="1076" Height="652">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Index" Margin="0,0,-134,220" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="" Margin="0,0,-134,220" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Groundbreaking UI controls for enterprise line-of-business applications." Margin="0,0,-134,220" />
+        <Grid Width="1076" Height="652">
+            <Image HorizontalAlignment="Left" Margin="17,59,0,268" Source="Assets/Pages/Common/mainVisual-Navigation.png" Width="435.5" Height="325.5"/>
+            <TextBlock Height="67" Margin="475,98,354,0" FontFamily="Verdana" VerticalAlignment="Top" TextWrapping="Wrap" LineHeight="16"  FontSize="11"
+                       Text="Navigation controls are the cornerstone of any user interface.  They can make or break your application; choose them wisely."/>
+            <TextBlock Height="26" Margin="474,74,342,0" VerticalAlignment="Top" Text="Experience the Live Demos" TextWrapping="Wrap" FontFamily="Verdana" FontSize="14.667" FontWeight="SemiBold"/>
+            <TextBlock Height="22" FontFamily="Verdana" HorizontalAlignment="Left" Margin="20,42,0,0" VerticalAlignment="Top" FontSize="11"
+				Width="473" Text="Extreme Flexibility, Powerful APIs, a Balance of Function and Style." 
+				TextWrapping="Wrap" FontStretch="Expanded" FontWeight="Medium"/>
+            <TextBlock FontFamily="Verdana" HorizontalAlignment="Left" Margin="26,0,0,226" FontSize="11"
+				Width="320" 
+				TextWrapping="Wrap" FontStretch="Expanded" Height="22" VerticalAlignment="Bottom" FontWeight="Medium" Text="The essential navigation controls: Menu &amp; TreeView."/>
+            <Path Fill="#FFCCCCCC" Stretch="Fill" Stroke="#FFCCCCCC" HorizontalAlignment="Right" Margin="0,0,266,0" Width="1" Data="M809,0 L809,652"/>
+            <Path Fill="White" Stretch="Fill" Stroke="White" HorizontalAlignment="Right" Margin="0,0,265,0" Width="1" Data="M809,0 L809,652"/>
+            <TextBlock FontFamily="Verdana" Margin="406,0,350,226" FontSize="11" 
+				TextWrapping="Wrap" FontStretch="Expanded" Height="22" VerticalAlignment="Bottom" FontWeight="Medium" Text="The 2nd Tier navigation controls:"/>
+            <StackPanel Margin="476,149,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <local:ImageButton Height="31.15" Width="145.5" Margin="0,0,0,10" ImageNormal="Assets/Pages/NavigationIndex/button_menu.png"
+                               ImageHover="Assets/Pages/NavigationIndex/button_menu_over.png" Tag="control Menu" Click="ControlButton_Click" Style="{StaticResource Button_ControlButtons}"/>
+                <local:ImageButton Height="31.15" Width="145.5" Margin="0,0,0,10" ImageNormal="Assets/Pages/NavigationIndex/button_treeview.png"
+                               ImageHover="Assets/Pages/NavigationIndex/button_treeview_over.png" Tag="control TreeView" Click="ControlButton_Click" Style="{StaticResource Button_ControlButtons}"/>
+                <local:ImageButton Height="31.15" Width="145.5" Margin="0,0,0,10" ImageNormal="Assets/Pages/NavigationIndex/button_itemflow.png"
+                               ImageHover="Assets/Pages/NavigationIndex/button_itemflow_over.png" Tag="control ItemFlow" Click="ControlButton_Click" Style="{StaticResource Button_ControlButtons}"/>
+                <local:ImageButton Height="31.07" Width="145.5" Margin="0,0,0,10" ImageNormal="Assets/Pages/NavigationIndex/button_tabstrip.png"
+                               ImageHover="Assets/Pages/NavigationIndex/button_tabstrip_over.png" Tag="control TabStrip" Click="ControlButton_Click" Style="{StaticResource Button_ControlButtons}"/>
+            </StackPanel>
+            <StackPanel Margin="630,149,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <local:ImageButton Height="31.15" Width="145.5" Margin="0,0,0,10" ImageNormal="Assets/Pages/NavigationIndex/button_navbar.png"
+                               ImageHover="Assets/Pages/NavigationIndex/button_navbar_over.png" Tag="control NavBar" Click="ControlButton_Click" Style="{StaticResource Button_ControlButtons}"/>
+                <local:ImageButton Height="31.15" Width="145.5" Margin="0,0,0,10" ImageNormal="Assets/Pages/NavigationIndex/button_breadcrumb.png"
+                               ImageHover="Assets/Pages/NavigationIndex/button_breadcrumb_over.png" Tag="control BreadCrumb" Click="ControlButton_Click" Style="{StaticResource Button_ControlButtons}"/>
+                <local:ImageButton Height="31.15" Width="145.5" Margin="0,0,0,10" ImageNormal="Assets/Pages/NavigationIndex/button_contextmenu.png"
+                               ImageHover="Assets/Pages/NavigationIndex/button_contextmenu_over.png" Tag="control ContextMenu" Click="ControlButton_Click" Style="{StaticResource Button_ControlButtons}"/>
+                <local:ImageButton Height="31.15" Width="145.5" ImageNormal="Assets/Pages/NavigationIndex/button_toolbar.png"
+                               ImageHover="Assets/Pages/NavigationIndex/button_toolbar_over.png" Tag="control ToolBar" Click="ControlButton_Click" Style="{StaticResource Button_ControlButtons}"/>
+            </StackPanel>
+            <Image Height="18" HorizontalAlignment="Left" Margin="18,18,0,0" VerticalAlignment="Top" Width="287" Source="Assets/Pages/NavigationIndex/heading_bob_navigation.png" Stretch="Fill"/>
+            <Image Height="13" HorizontalAlignment="Left" Margin="25,0,0,251" VerticalAlignment="Bottom" Width="257" Source="Assets/Pages/NavigationIndex/heading_navigationheavyweights.png" Stretch="Fill"/>
+            <Image Height="13" Margin="404,0,397,251" VerticalAlignment="Bottom" Source="Assets/Pages/NavigationIndex/heading_othercontrols.png" Stretch="Fill"/>
+            <StackPanel Margin="406,430,534,20" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <local:ImageButton Tag="control ItemFlow" Click="ControlButton_Click" Style="{StaticResource Button_Controls_EdNav}" Text="ItemFlow"
+							ImageNormal="Assets/Pages/NavigationIndex/logo_itemflow.png" Height="40"  Width="136" />
+            <local:ImageButton Tag="control ToolBar" Click="ControlButton_Click" Style="{StaticResource Button_Controls_EdNav}" Text="ToolBar"
+							ImageNormal="Assets/Pages/NavigationIndex/logo_toolbar.png" Height="40" Width="136" />
+            <local:ImageButton Tag="control TabStrip" Click="ControlButton_Click" Style="{StaticResource Button_Controls_EdNav}" Text="TabStrip"
+							ImageNormal="Assets/Pages/NavigationIndex/logo_tabstrip.png" Height="40" Width="136" />
+            <local:ImageButton Tag="control NavBar" Click="ControlButton_Click" Style="{StaticResource Button_Controls_EdNav}" Text="NavBar"
+							ImageNormal="Assets/Pages/NavigationIndex/logo_navbar.png" Height="40" Width="136" />
+            </StackPanel>
+            <StackPanel Margin="552,430,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <local:ImageButton Tag="control BreadCrumb" Click="ControlButton_Click" Style="{StaticResource Button_Controls_EdNav}" Text="BreadCrumb"
+							ImageNormal="Assets/Pages/NavigationIndex/logo_breadcrumb.png" Height="40" Width="136" />
+                <local:ImageButton Tag="control ContextMenu" Click="ControlButton_Click" Style="{StaticResource Button_Controls_EdNav}" Text="ContextMenu"
+        					ImageNormal="Assets/Pages/NavigationIndex/logo_contextmenu.png" Height="40" Width="136" />
+            </StackPanel>
+            <local:SmallIndexDemoButton Tag="control MenuCoreFeatures" Click="DemoButton_Click" Width="160" Height="216" 
+                                        Margin="20,0,0,20" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}" HeaderText="Menu" ImgHeight="124" ImgWidth="149"
+                                        ButtonImage="Assets/Pages/NavigationIndex/sl_nav_idx_menu.png">
+                <TextBlock FontFamily="Verdana" TextWrapping="Wrap" VerticalAlignment="Bottom"
+				HorizontalAlignment="Left" Width="149" FontSize="11"
+				FontStretch="Expanded"><Run Text="Fast, lightweight, versatile, featuring fluid animation and comfortable feel."/></TextBlock>
+            </local:SmallIndexDemoButton>
+
+            <local:SmallIndexDemoButton Tag="control TreeViewCoreFeatures" Click="DemoButton_Click" Width="160" Height="216" 
+                                        Margin="189,0,0,20" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}" HeaderText="TreeView" ImgHeight="124" ImgWidth="149"
+                                        ButtonImage="Assets/Pages/NavigationIndex/sl_nav_idx_treeview.png">
+                <TextBlock FontFamily="Verdana" TextWrapping="Wrap" VerticalAlignment="Bottom"
+				HorizontalAlignment="Left" Width="149" FontSize="11"
+				FontStretch="Expanded"><Run Text="Powerful, flexible, feautring the ability to handle a large number of nodes."/></TextBlock>
+            </local:SmallIndexDemoButton>
+
+            <local:DemoList HorizontalAlignment="Right" Width="242" Margin="13,0,8,0" Header="../Assets/Pages/NavigationIndex/list_header.png">
+                <local:DemoList.Controls>
+                    <sys:String>Menu</sys:String>
+                    <sys:String>TreeView</sys:String>
+                    <sys:String>ItemFlow</sys:String>
+                    <sys:String>ToolBar</sys:String>
+                    <sys:String>TabStrip</sys:String>
+                    <sys:String>NavBar</sys:String>
+                    <sys:String>BreadCrumb</sys:String>
+                    <sys:String>ContextMenu</sys:String>
+                </local:DemoList.Controls>
+            </local:DemoList>
+
+        </Grid>
+    </Grid>
+</UserControl>

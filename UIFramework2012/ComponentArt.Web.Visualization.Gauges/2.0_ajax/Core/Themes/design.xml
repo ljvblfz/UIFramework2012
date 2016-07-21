@@ -1,0 +1,300 @@
+﻿<Gauge>
+  <Themes>
+    <Theme Name="Default" TextStyleName="Default" PaletteName="Default">
+      <Skins>
+        <Skin Name="Circular" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Default" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="73" />
+        </Skin>
+        <Skin Name="HalfCircleE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Default" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="68" EndingMargin="0" StartingMargin="0" RelativeCenter="19,50" />
+        </Skin>
+        <Skin Name="HalfCircleN" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="69" EndingMargin="0" StartingMargin="0" RelativeCenter="50,19" />
+        </Skin>
+        <Skin Name="HalfCircleW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="69" EndingMargin="0" StartingMargin="0" RelativeCenter="81,50" />
+        </Skin>
+        <Skin Name="HalfCircleS" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="69" EndingMargin="0" StartingMargin="0" RelativeCenter="50,82" />
+        </Skin>
+        <Skin Name="QuarterCircleE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Default" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="72" EndingMargin="0" StartingMargin="0" RelativeCenter="23,50" />
+        </Skin>
+        <Skin Name="QuarterCircleNE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" RelativeCenter="14,14" />
+        </Skin>
+        <Skin Name="QuarterCircleN" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="72" EndingMargin="0" StartingMargin="0" RelativeCenter="50,23" />
+        </Skin>
+        <Skin Name="QuarterCircleNW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="72" EndingMargin="0" StartingMargin="0" RelativeCenter="86,14" />
+        </Skin>
+        <Skin Name="QuarterCircleW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="72" EndingMargin="0" StartingMargin="0" RelativeCenter="77,50" />
+        </Skin>
+        <Skin Name="QuarterCircleSW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="72" EndingMargin="0" StartingMargin="0" RelativeCenter="86,86" />
+        </Skin>
+        <Skin Name="QuarterCircleS" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="72" EndingMargin="0" StartingMargin="0" RelativeCenter="50,77" />
+        </Skin>
+        <Skin Name="QuarterCircleSE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" RelativeCenter="14,86" />
+        </Skin>
+        <Skin Name="LinearHorizontal" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" PointerStyleName="Black Ice Linear" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="54" />
+        </Skin>
+        <Skin Name="LinearVertical" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" PointerStyleName="Black Ice Linear" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="48" StartingAngle="0" />
+        </Skin>
+        <Skin Name="Numeric" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" NumericDisplayKind="LCD" NumericFormattingString="00.00" CoverName="Black Ice" FrameName="Black Ice" />
+      </Skins>
+    </Theme>
+    <Theme Name="Black Ice" TextStyleName="Black Ice" PaletteName="Black Ice">
+      <Skins>
+        <Skin Name="Circular" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="87" EndingMargin="10" StartingMargin="10" StartingAngle="270" RelativeCenter="50,50" />
+        </Skin>
+        <Skin Name="HalfCircleE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="82" EndingMargin="0" StartingMargin="0" StartingAngle="90" RelativeCenter="19,50" />
+        </Skin>
+        <Skin Name="HalfCircleN" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="82" EndingMargin="0" StartingMargin="0" StartingAngle="180" RelativeCenter="50,19" />
+        </Skin>
+        <Skin Name="HalfCircleW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="82" EndingMargin="0" StartingMargin="0" StartingAngle="270" RelativeCenter="81,50" />
+        </Skin>
+        <Skin Name="HalfCircleS" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="82" EndingMargin="0" StartingMargin="0" StartingAngle="180" RelativeCenter="50,82" />
+        </Skin>
+        <Skin Name="QuarterCircleE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="82" EndingMargin="0" StartingMargin="0" StartingAngle="315" RelativeCenter="23,50" />
+        </Skin>
+        <Skin Name="QuarterCircleNE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice 2" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="78" EndingMargin="0" StartingMargin="0" StartingAngle="90" RelativeCenter="14,14" />
+        </Skin>
+        <Skin Name="QuarterCircleN" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="82" EndingMargin="0" StartingMargin="0" StartingAngle="135" RelativeCenter="50,23" />
+        </Skin>
+        <Skin Name="QuarterCircleNW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice 2" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="78" EndingMargin="0" StartingMargin="0" StartingAngle="180" RelativeCenter="86,14" />
+        </Skin>
+        <Skin Name="QuarterCircleW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="82" EndingMargin="0" StartingMargin="0" StartingAngle="225" RelativeCenter="77,50" />
+        </Skin>
+        <Skin Name="QuarterCircleSW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice 2" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="78" EndingMargin="0" StartingMargin="0" StartingAngle="180" RelativeCenter="86,86" />
+        </Skin>
+        <Skin Name="QuarterCircleS" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="82" EndingMargin="0" StartingMargin="0" StartingAngle="225" RelativeCenter="50,77" />
+        </Skin>
+        <Skin Name="QuarterCircleSE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice 2" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="78" EndingMargin="0" StartingMargin="0" StartingAngle="270" RelativeCenter="14,86" />
+        </Skin>
+        <Skin Name="LinearHorizontal" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice Linear" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="47" EndingMargin="10" StartingMargin="10" StartingAngle="270" RelativeCenter="0,0" />
+          <RangeLayout Offset="1" />
+        </Skin>
+        <Skin Name="LinearVertical" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" ScaleAnnotationStyleName="Black Ice" PointerStyleName="Black Ice Linear" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="48" EndingMargin="10" StartingMargin="10" StartingAngle="0" RelativeCenter="0,0" />
+        </Skin>
+        <Skin Name="Numeric" NumericGaugeRectangle="10,10,80,80" BackgroundName="Black Ice" NumericDisplayKind="LCD" NumericTextStyleName="Black Ice Numeric Mechanical" NumericFormattingString="00.00" CoverName="Black Ice" FrameName="Black Ice">
+          <ScaleLayout Position="50" EndingMargin="10" StartingMargin="10" StartingAngle="0" RelativeCenter="0,0" />
+        </Skin>
+        <Skin Name="Indicator" NumericGaugeRectangle="10,10,80,80">
+          <ScaleLayout Position="50" EndingMargin="10" StartingMargin="10" StartingAngle="0" RelativeCenter="0,0" />
+        </Skin>
+      </Skins>
+    </Theme>
+    <Theme Name="Arctic White" TextStyleName="Arctic White" PaletteName="Arctic White">
+      <Skins>
+        <Skin Name="Circular" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" NumericTextStyleName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="68" EndingMargin="10" StartingMargin="10" StartingAngle="270" RelativeCenter="50,50" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="HalfCircleE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" StartingAngle="90" RelativeCenter="18,50" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="HalfCircleN" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" NumericTextStyleName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="72" EndingMargin="0" StartingMargin="0" StartingAngle="180" RelativeCenter="50,18" />
+          <RangeLayout EndWidth="0.75" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="HalfCircleW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" StartingAngle="270" RelativeCenter="82,50" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="HalfCircleS" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="72" EndingMargin="0" StartingMargin="0" StartingAngle="180" RelativeCenter="50,82" />
+          <RangeLayout EndWidth="0.75" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="QuarterCircleE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="65" EndingMargin="0" StartingMargin="0" StartingAngle="315" RelativeCenter="18,50" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="QuarterCircleNE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="68" EndingMargin="0" StartingMargin="0" StartingAngle="90" RelativeCenter="14,14" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="QuarterCircleN" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="65" EndingMargin="0" StartingMargin="0" StartingAngle="135" RelativeCenter="50,18" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="QuarterCircleNW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="68" EndingMargin="0" StartingMargin="0" StartingAngle="180" RelativeCenter="86,14" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="QuarterCircleW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="65" EndingMargin="0" StartingMargin="0" StartingAngle="225" RelativeCenter="82,50" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="QuarterCircleSW" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="68" EndingMargin="0" StartingMargin="0" StartingAngle="180" RelativeCenter="86,86" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="QuarterCircleS" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="65" EndingMargin="0" StartingMargin="0" StartingAngle="225" RelativeCenter="50,82" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="QuarterCircleSE" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White" PointerStyleName="Arctic White 2" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="68" EndingMargin="0" StartingMargin="0" StartingAngle="270" RelativeCenter="14,86" />
+          <RangeLayout EndWidth="0.75" Offset="2.2" StartWidth="0.75" SideKind="Left" />
+        </Skin>
+        <Skin Name="LinearHorizontal" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White Linear" PointerStyleName="BarPointer" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="47" EndingMargin="10" StartingMargin="10" StartingAngle="0" RelativeCenter="0,0" />
+          <RangeLayout Offset="5.2" />
+        </Skin>
+        <Skin Name="LinearVertical" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" ScaleAnnotationStyleName="Arctic White Linear" PointerStyleName="BarPointer" CoverName="Arctic White" FrameName="Arctic White">
+          <ScaleLayout Position="52" EndingMargin="10" StartingMargin="10" StartingAngle="0" RelativeCenter="0,0" />
+          <RangeLayout Offset="5.4" />
+        </Skin>
+        <Skin Name="Numeric" NumericGaugeRectangle="10,10,80,80" BackgroundName="Arctic White" NumericDisplayKind="LCD" NumericTextStyleName="Arctic White Numeric LCD" NumericFormattingString="00.00" CoverName="None" FrameName="Arctic White">
+          <ScaleLayout Position="50" EndingMargin="10" StartingMargin="10" StartingAngle="0" RelativeCenter="0,0" />
+        </Skin>
+        <Skin Name="Indicator" NumericGaugeRectangle="10,10,80,80">
+          <ScaleLayout Position="50" EndingMargin="10" StartingMargin="10" StartingAngle="0" RelativeCenter="0,0" />
+        </Skin>
+      </Skins>
+    </Theme>
+    <Theme Name="Monochrome" TextStyleName="Monochrome" NeedleShadowOffset="0,0" PaletteName="Monochrome Green">
+      <Skins>
+        <Skin Name="Circular" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <RangeLayout EndWidth="0" Offset="-2" StartWidth="0" />
+        </Skin>
+        <Skin Name="HalfCircleE" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="HalfCircleN" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="HalfCircleW" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="HalfCircleS" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" StartingAngle="180" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="QuarterCircleE" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="QuarterCircleNE" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="QuarterCircleN" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="QuarterCircleNW" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="QuarterCircleW" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="QuarterCircleSW" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="QuarterCircleS" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout Position="80" EndingMargin="0" StartingMargin="0" StartingAngle="225" RelativeCenter="50,80" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="QuarterCircleSE" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome" PointerStyleName="Monochrome" CoverName="None" FrameName="None">
+          <ScaleLayout Position="70" EndingMargin="0" StartingMargin="0" />
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="LinearHorizontal" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome Linear" PointerStyleName="Monochrome Linear" CoverName="None" FrameName="None">
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="LinearVertical" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" ScaleAnnotationStyleName="Monochrome Linear" PointerStyleName="Monochrome Linear" CoverName="None" FrameName="None">
+          <RangeLayout EndWidth="0" StartWidth="0" />
+        </Skin>
+        <Skin Name="Numeric" NumericGaugeRectangle="10,10,80,80" BackgroundName="None" NumericDisplayKind="LCD" NumericTextStyleName="Monochrome" NumericFormattingString="00.00" CoverName="None" FrameName="None" />
+      </Skins>
+    </Theme>
+  </Themes>
+  <PointerStyles>
+    <PointerStyle Name="Default" NeedleStyleName="Default" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerBackColor="False,Empty" HubStyleName="Default" />
+    <PointerStyle Name="Black Ice Linear" NeedleStyleName="Black Ice Linear" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerKind="Marker" PointerBackColor="False,Empty" MarkerOffset="10" MarkerSize="3,6" HubStyleName="Default" MarkerStyleName="TriangleInverted" />
+    <PointerStyle Name="Procedural" NeedleStyleName="Procedural" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerBackColor="False,Empty" HubStyleName="Procedural" />
+    <PointerStyle Name="Black Ice" NeedleStyleName="Black Ice" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerBackColor="False,Empty" HubStyleName="Black Ice" />
+    <PointerStyle Name="Arctic White" NeedleStyleName="Arctic White" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerBackColor="False,Empty" HubStyleName="Arctic White" />
+    <PointerStyle Name="MarkerPointer" NeedleStyleName="Default" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerKind="Marker" PointerBackColor="False,Empty" HubStyleName="Default" />
+    <PointerStyle Name="BarPointer" NeedleStyleName="Default" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerKind="Bar" PointerBackColor="False,Empty" HubStyleName="Default" />
+    <PointerStyle Name="Monochrome" NeedleStyleName="Monochrome" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerBackColor="False,Empty" HubStyleName="Monochrome" />
+    <PointerStyle Name="Arctic White 2" RelativeHubRadius="6" NeedleStyleName="Arctic White" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerBackColor="False,Empty" HubStyleName="Arctic White" />
+    <PointerStyle Name="Black Ice 2" RelativeHubRadius="8" NeedleStyleName="Black Ice" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerBackColor="False,Empty" HubStyleName="Black Ice" />
+    <PointerStyle Name="Monochrome Linear" NeedleStyleName="Default" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerKind="Marker" PointerBackColor="False,Empty" MarkerOffset="-5" MarkerSize="3,5" HubStyleName="Default" MarkerStyleName="Triangle" />
+    <PointerStyle Name="Colour Blind" NeedleStyleName="Colour Blind" RelativeCenterPoint="0,50" HubBackColor="" RelativeEndPoint="100,50" PointerBackColor="False,Empty" HubStyleName="Colour Blind" />
+  </PointerStyles>
+  <Palettes>
+    <GaugePalette Name="Default" AnnotationBaseColor="False,0=#FFE0E0E0,1=#FFE0E0E0" FrameBaseColor="Silver" RangeBaseColor="False,0=#20FFFFFF,1=#20FFFFFF" NumericDecimalBackColor="False,0=#C0FFFFFF,1=#C0FFFFFF" MajorTickmarkBaseColor="False,0=#C0FFFFFF,1=#C0FFFFFF" NumericDecimalColor="False,0=#C0800000,1=#C0800000" BackgroundBaseColor="Silver" PointerBaseColor="False,0=#FFC04040,1=#FFC04040" MinorTickmarkBaseColor="False,0=#C0FFFFFF,1=#C0FFFFFF" NumericColor="False,0=#C0000000,1=#C0000000" HubBaseColor="Silver" NumericBackColor="False,0=#C0FFFFFF,1=#C0FFFFFF" />
+    <GaugePalette Name="Black Ice" AnnotationBaseColor="False,0=#FFFFFFFF,1=#FFFFFFFF" FrameBaseColor="40, 40, 40" RangeBaseColor="False,0=#00FFFFFF,1=#00FFFFFF" NumericDecimalBackColor="False,0=#C0FFFFFF,1=#C0FFFFFF" MajorTickmarkBaseColor="True,0=#FFFFFFFF,1=#FFFFFFFF" NumericDecimalColor="False,0=#C0800000,1=#C0800000" BackgroundBaseColor="64, 64, 64" PointerBaseColor="True,0=#FFFF0000,1=#FFFF0000" MinorTickmarkBaseColor="True,0=#FFFFFFFF,1=#FFFFFFFF" NumericColor="False,0=#C0000000,1=#C0000000" HubBaseColor="40, 40, 40" NumericBackColor="False,0=#C0FFFFFF,1=#C0FFFFFF" />
+    <GaugePalette Name="Arctic White" AnnotationBaseColor="False,0=#69000000,1=#69000000" FrameBaseColor="Gainsboro" RangeBaseColor="False,0=#FF77A0DD,1=#FF77A0DD" NumericDecimalBackColor="False,0=#C0FFFFFF,1=#C0FFFFFF" MajorTickmarkBaseColor="False,0=#C0FFFFFF,1=#C0FFFFFF" NumericDecimalColor="False,0=#C0800000,1=#C0800000" BackgroundBaseColor="White" PointerBaseColor="False,0=#FF696969,1=#FF696969" MinorTickmarkBaseColor="False,0=#C0FFFFFF,1=#C0FFFFFF" NumericColor="False,0=#C0000000,1=#C0000000" HubBaseColor="DimGray" NumericBackColor="False,0=#C0FFFFFF,1=#C0FFFFFF" />
+    <GaugePalette Name="Monochrome Green" AnnotationBaseColor="True,0=#FF18D424,1=#FF18D424" FrameBaseColor="24, 212, 36" RangeBaseColor="False,0=#C0FFFFFF,1=#C0FFFFFF" NumericDecimalBackColor="False,0=#FF004000,1=#FF004000" MajorTickmarkBaseColor="True,0=#FF18D424,1=#FF18D424" NumericDecimalColor="False,0=#FF18D424,1=#FF18D424" BackgroundBaseColor="24, 212, 36" PointerBaseColor="True,0=#FF18D424,1=#FF18D424" MinorTickmarkBaseColor="True,0=#FF18D424,1=#FF18D424" NumericColor="True,0=#FF18D424,1=#FF18D424" HubBaseColor="24, 212, 36" NumericBackColor="False,0=#FF004000,1=#FF004000" />
+    <GaugePalette Name="Monochrome Amber" AnnotationBaseColor="False,0=#FFD67400,1=#FFD67400" FrameBaseColor="214, 116, 0" RangeBaseColor="True,0=#FFD67400,1=#FFD67400" NumericDecimalBackColor="False,0=#FF402000,1=#FF402000" MajorTickmarkBaseColor="True,0=#FFD67400,1=#FFD67400" NumericDecimalColor="False,0=#FFD67400,1=#FFD67400" BackgroundBaseColor="214, 116, 0" PointerBaseColor="True,0=#FFD67400,1=#FFD67400" MinorTickmarkBaseColor="True,0=#FFD67400,1=#FFD67400" NumericColor="False,0=#FFD67400,1=#FFD67400" HubBaseColor="214, 116, 0" NumericBackColor="False,0=#FF402000,1=#FF402000" />
+    <GaugePalette Name="Monochrome White" AnnotationBaseColor="False,0=#FFC8C8C8,1=#FFC8C8C8" FrameBaseColor="200, 200, 200" RangeBaseColor="False,0=#C0FFFFFF,1=#C0FFFFFF" NumericDecimalBackColor="False,0=#FF202020,1=#FF202020" MajorTickmarkBaseColor="True,0=#FFC8C8C8,1=#FFC8C8C8" NumericDecimalColor="False,0=#FFC8C8C8,1=#FFC8C8C8" BackgroundBaseColor="200, 200, 200" PointerBaseColor="True,0=#FFC8C8C8,1=#FFC8C8C8" MinorTickmarkBaseColor="False,0=#FFC8C8C8,1=#FFC8C8C8" NumericColor="False,0=#FFC8C8C8,1=#FFC8C8C8" HubBaseColor="200, 200, 200" NumericBackColor="False,0=#FF202020,1=#FF202020" />
+    <GaugePalette Name="Monochrome Blue" AnnotationBaseColor="False,0=#C0FFFFFF,1=#C0FFFFFF" FrameBaseColor="180, 225, 225" RangeBaseColor="False,0=#C0FFFFFF,1=#C0FFFFFF" NumericDecimalBackColor="False,0=#FF101020,1=#FF101020" MajorTickmarkBaseColor="True,0=#FFB4E1E1,1=#FFB4E1E1" NumericDecimalColor="False,0=#FFB4E1E1,1=#FFB4E1E1" BackgroundBaseColor="180, 225, 225" PointerBaseColor="False,0=#FFB4E1E1,1=#FFB4E1E1" MinorTickmarkBaseColor="True,0=#FFB4E1E1,1=#FFB4E1E1" NumericColor="False,0=#FFB4E1E1,1=#FFB4E1E1" HubBaseColor="180, 225, 225" NumericBackColor="False,0=#FF101020,1=#FF101020" />
+  </Palettes>
+  <MarkerStyles>
+    <MarkerStyle Name="Default" LineColor="128, 0, 0, 0" Kind="Default" BaseColor="" />
+    <MarkerStyle Name="Rectangle" LineColor="128, 0, 0, 0" Kind="Rectangle" BaseColor="" />
+    <MarkerStyle Name="Circle" LineColor="128, 0, 0, 0" Kind="Circle" BaseColor="" />
+    <MarkerStyle Name="Ellipse" LineColor="128, 0, 0, 0" Kind="Ellipse" BaseColor="" />
+    <MarkerStyle Name="Diamond" LineColor="128, 0, 0, 0" Kind="Diamond" BaseColor="" />
+    <MarkerStyle Name="Trapeze" LineColor="128, 0, 0, 0" Kind="Trapeze" BaseColor="" />
+    <MarkerStyle Name="TrapezeInverted" LineColor="128, 0, 0, 0" Kind="TrapezeInverted" BaseColor="" />
+    <MarkerStyle Name="Triangle" LineColor="128, 0, 0, 0" Kind="Triangle" BaseColor="" />
+    <MarkerStyle Name="TriangleInverted" LineColor="128, 0, 0, 0" Kind="TriangleInverted" BaseColor="" />
+    <MarkerStyle Name="Arctic White Major" Effect3D="False" LineWidth="0" LineColor="128, 0, 0, 0" HasShadow="False" Kind="Triangle" BaseColor="119, 160, 221" />
+    <MarkerStyle Name="Arctic White Minor" Effect3D="False" LineWidth="0" LineColor="128, 0, 0, 0" HasShadow="False" Kind="Default" BaseColor="DarkGray" />
+    <MarkerStyle Name="Arctic White Major Inverted" Effect3D="False" LineWidth="0" LineColor="128, 0, 0, 0" HasShadow="False" Kind="TriangleInverted" BaseColor="119, 160, 221" />
+    <MarkerStyle Name="Monochrome" Effect3D="False" LineWidth="0" LineColor="128, 0, 0, 0" HasShadow="False" Kind="Default" BaseColor="" />
+  </MarkerStyles>
+  <TextStyles>
+    <TextStyle Name="Default" ShadeOffsetPerc="5" DrawShadow="False" ShadowColor="128, 0, 0, 0" DecimalFontColor="" FontStyle="Bold" OutlineWidth="1" FontSizePerc="5.5" FontColor="" FontBackColor="" OutlineColor="Black" DecimalFontBackColor="" DrawOutline="False" FontName="Arial" />
+    <TextStyle Name="DefaultIndicatorLabelStyle" ShadeOffsetPerc="5" DrawShadow="True" ShadowColor="128, 0, 0, 0" DecimalFontColor="" FontStyle="Bold" OutlineWidth="1" FontSizePerc="4" FontColor="128, 128, 128, 128" FontBackColor="" OutlineColor="Black" DecimalFontBackColor="" DrawOutline="False" FontName="Arial" />
+    <TextStyle Name="Black Ice" ShadeOffsetPerc="5" DrawShadow="False" ShadowColor="128, 0, 0, 0" DecimalFontColor="" FontStyle="Bold" OutlineWidth="1" FontSizePerc="5.5" FontColor="White" FontBackColor="" OutlineColor="Black" DecimalFontBackColor="" DrawOutline="False" FontName="Arial" />
+    <TextStyle Name="Default2" ShadeOffsetPerc="5" DrawShadow="True" ShadowColor="128, 0, 0, 0" DecimalFontColor="" FontStyle="Bold" OutlineWidth="1" FontSizePerc="6" FontColor="" FontBackColor="" OutlineColor="Black" DecimalFontBackColor="" DrawOutline="False" FontName="Arial" />
+    <TextStyle Name="Arctic White" ShadeOffsetPerc="5" DrawShadow="False" ShadowColor="128, 0, 0, 0" DecimalFontColor="" FontStyle="Regular" OutlineWidth="1" FontSizePerc="4.5" FontColor="" FontBackColor="" OutlineColor="Black" DecimalFontBackColor="" DrawOutline="False" FontName="Tahoma" />
+    <TextStyle Name="Arctic White Numeric Book" ShadeOffsetPerc="1" DrawShadow="False" ShadowColor="Black" DecimalFontColor="White" FontStyle="Bold" OutlineWidth="1" FontSizePerc="4.5" FontColor="Gray" FontBackColor="White" OutlineColor="Black" DecimalFontBackColor="119, 160, 221" DrawOutline="False" FontName="Tahoma" />
+    <TextStyle Name="Black Ice Numeric Book" ShadeOffsetPerc="5" DrawShadow="False" ShadowColor="128, 0, 0, 0" DecimalFontColor="Red" FontStyle="Bold" OutlineWidth="0" FontSizePerc="6" FontColor="White" FontBackColor="64, 64, 64" OutlineColor="Black" DecimalFontBackColor="64, 64, 64" DrawOutline="False" FontName="Arial" />
+    <TextStyle Name="Black Ice Numeric Mechanical" ShadeOffsetPerc="5" DrawShadow="False" ShadowColor="128, 0, 0, 0" DecimalFontColor="Red" FontStyle="Bold" OutlineWidth="10" FontSizePerc="6" FontColor="White" FontBackColor="64, 64, 64" OutlineColor="Black" DecimalFontBackColor="64, 64, 64" DrawOutline="False" FontName="Arial" />
+    <TextStyle Name="Arctic White Numeric LCD" ShadeOffsetPerc="5" DrawShadow="True" ShadowColor="128, 0, 0, 0" DecimalFontColor="119, 160, 221" FontStyle="Bold" OutlineWidth="1" FontSizePerc="6" FontColor="Gray" FontBackColor="Transparent" OutlineColor="Black" DecimalFontBackColor="Transparent" DrawOutline="False" FontName="Arial" />
+    <TextStyle Name="Monochrome" ShadeOffsetPerc="5" DrawShadow="False" ShadowColor="128, 0, 0, 0" DecimalFontColor="" FontStyle="Regular" OutlineWidth="1" FontSizePerc="4" FontColor="" FontBackColor="" OutlineColor="Black" DecimalFontBackColor="" DrawOutline="False" FontName="Arial Narrow" />
+  </TextStyles>
+  <ScaleAnnotationStyles>
+    <ScaleAnnotationStyle Name="Default" MajorTickmarkOffset="-1" MinorTickmarkSize="0.5,5" MajorTickmarkSize="0.5,7" LabelSideKind="ToTheLeft" LabelOrientation="Horizontal" />
+    <ScaleAnnotationStyle Name="Black Ice" TextStyleName="Black Ice" MajorTickmarkOffset="-1" Offset="3.5" MajorTickmarkSize="0.5,5" LabelOrientation="Horizontal" />
+    <ScaleAnnotationStyle Name="Arctic White" TextStyleName="Arctic White" MajorTickmarkOffset="-3.3" MinorTickmarkSize="0.25,3" MajorTickMarkStyleName="Arctic White Major" Offset="2" MajorTickmarkSize="2.5,8" LabelSideKind="ToTheLeft" MinorTickmarkOffset="-1" LabelOrientation="Horizontal" MinorTickMarkStyleName="Arctic White Minor" />
+    <ScaleAnnotationStyle Name="Arctic White Linear" TextStyleName="Arctic White" MajorTickmarkOffset="2.8" MinorTickmarkSize="0.25,3" MajorTickMarkStyleName="Arctic White Major Inverted" Offset="0" MajorTickmarkSize="2.5,8" LabelSideKind="ToTheLeft" MinorTickmarkOffset="2.75" LabelOrientation="Horizontal" MinorTickMarkStyleName="Arctic White Minor" />
+    <ScaleAnnotationStyle Name="Monochrome" TextStyleName="Monochrome" MajorTickMarkStyleName="Monochrome" Offset="2.5" MajorTickmarkSize="0.5,4" LabelSideKind="ToTheLeft" LabelOrientation="Horizontal" MinorTickMarkStyleName="Monochrome" />
+    <ScaleAnnotationStyle Name="Monochrome Linear" TextStyleName="Monochrome" MajorTickMarkStyleName="Monochrome" MajorTickmarkSize="0.5,4" LabelSideKind="ToTheLeft" MinorTickmarkOffset="-0.5" MinorTickMarkStyleName="Monochrome" />
+  </ScaleAnnotationStyles>
+</Gauge>

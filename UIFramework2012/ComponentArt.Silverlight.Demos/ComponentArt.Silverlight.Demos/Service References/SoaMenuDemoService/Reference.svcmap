@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8228f14e-83d4-403d-8ba9-1184ff77d056" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3069/SoaMenuDemoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SoaMenuDemoService3.xsd" MetadataType="Schema" ID="5122789f-da2b-4129-9f51-f8ca094a1d2f" SourceId="1" SourceUrl="http://localhost:3069/SoaMenuDemoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SoaMenuDemoService31.xsd" MetadataType="Schema" ID="2189265a-442a-43ba-81bf-53a121c1628a" SourceId="1" SourceUrl="http://localhost:3069/SoaMenuDemoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SoaMenuDemoService2.wsdl" MetadataType="Wsdl" ID="1b655239-826c-4fbb-8c60-aaf8e1e294a8" SourceId="1" SourceUrl="http://localhost:3069/SoaMenuDemoService.svc?wsdl" />
+    <MetadataFile FileName="SoaMenuDemoService21.wsdl" MetadataType="Wsdl" ID="d1e2d1b8-c8ad-442c-96fc-65f04c0cbcbf" SourceId="1" SourceUrl="http://localhost:3069/SoaMenuDemoService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SoaMenuDemoService1.disco" MetadataType="Disco" ID="bb4b4cbc-f56c-4ff4-a96d-2c31b5042df2" SourceId="1" SourceUrl="http://localhost:3069/SoaMenuDemoService.svc?disco" />
+    <MetadataFile FileName="SoaMenuDemoService32.xsd" MetadataType="Schema" ID="e38267a8-616f-492e-8320-e34a5755940a" SourceId="1" SourceUrl="http://localhost:3069/SoaMenuDemoService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

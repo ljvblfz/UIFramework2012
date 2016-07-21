@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Menu -->
+<TreeView>
+
+    <TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuCoreFeatures" />
+      <TreeViewNode Header="Templated Items" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuTemplatedItems" />
+      <TreeViewNode Header="Boundary Detection" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuBoundaryDetection" />
+      <TreeViewNode Header="Vertical Orientation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuVerticalOrientation" />
+      <TreeViewNode Header="Drop Shadow" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuDropShadowFeatures" />
+      <TreeViewNode Header="XML File Binding" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuXMLFileBinding" />
+      <TreeViewNode Header="XML String Binding" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuXMLStringBinding" />
+      <TreeViewNode Header="XML Expando Items" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuXMLExpandoItems" />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-design.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuDesignBlackIce" />
+      <TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuDesignArcticWhite" />
+      <TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuDesignOffice2003" />
+      <TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuDesignOffice2007" />
+      <TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuDesignWindows7" />
+    </TreeViewNode>
+  
+  <TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-programming.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Programmatic Creation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuProgrammaticCreation" />
+      <TreeViewNode Header="Add/Remove/Disable Items" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuAddRemoveDisableItems" />
+      <TreeViewNode Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuSoaAutoPilot" />
+    <TreeViewNode Header="Dynamic Item Templates" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MenuSelectedItemTemplate" />
+    </TreeViewNode>
+</TreeView>
+<!-- /Menu -->

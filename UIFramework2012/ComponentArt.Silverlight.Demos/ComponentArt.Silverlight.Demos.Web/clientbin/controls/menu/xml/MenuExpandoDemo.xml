@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+  <item label="File" foo="bar" Height="32">
+    <item label="New..." icon="MenuIcons/New.png"/>
+    <item label="Open..." icon="MenuIcons/Open.png" />
+    <item separator="true"/>
+    <item label="Calendar" >
+      <calendar treatAsButton="false" DisplayDate="1970/10/07"></calendar>
+      <separator/>
+      <item label="Microsoft Office Offline" ></item>
+    </item>
+  </item>
+  <item label="Edit" Height="32">
+    <item label="Cut" icon="MenuIcons/Cut.png"/>
+    <item label="Copy" icon="MenuIcons/Copy.png"/>
+    <separator/>
+    <item label="Office Clipboard..." icon="MenuIcons/OfficeClipboard.png"/>
+    <item label="Paste" icon="MenuIcons/Paste.png"/>
+  </item>
+  <item label="View" Height="32">
+    <item label="Normal" icon="MenuIcons/ViewNormal.png"/>
+    <item label="Web Layout" icon="MenuIcons/ViewWebLayout.png" />
+    <item separator="true"/>
+    <item label="Outline" icon="MenuIcons/ViewOutline.png" IsEnabled="False"/>
+    <item Text="Stop"/>
+    <item Text="Refresh"/>
+    <item IsSeparator="True"/>
+    <item Text="Client Templates">
+      <item label="custom1" title="Last Custom Setting" template="ClientTemplates_Generic" image="assets/margins_custom.png" left="2" top="2" right="2" bottom="2"/>
+      <item label="custom2" title="Normal" template="ClientTemplates_Generic" image="assets/margins_normal.png" left="3" top="3" right="3" bottom="3"/>
+      <item label="custom3" title="Narrow" template="ClientTemplates_Generic" image="assets/margins_narrow.png" left="1" top="1" right="1" bottom="1"/>
+      <item label="custom4" title="Wide" template="ClientTemplates_Generic" image="assets/margins_wide.png" left="4&quot;" top="4" right="4" bottom="4"/>
+    </item>
+    <item IsSeparator="True"/>
+    <item Text="Privacy Report..." />
+    <item Text="Full Screen" />
+  </item>
+</menu>

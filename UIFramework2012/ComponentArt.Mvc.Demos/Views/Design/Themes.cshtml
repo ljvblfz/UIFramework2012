@@ -1,0 +1,199 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{
+  ViewData["DemoType"] = "Design";
+  ViewData["DemoTitle"] = "Themes";
+  ViewData["BodyClass"] = "full";
+  ViewData["CodeFiles"] = "/Views/Design/Themes.aspx,/Controllers/DesignController.cs,/Views/Shared/ThemeSwitchingCss.ascx,/Views/Shared/ThemeSwitchingInterface.ascx";    
+}
+@section HeadContent {
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+  <style type="text/css">
+    .toolbar-spacer-right
+    {
+      width: 220px;
+    }
+    .controlArea
+    {
+      padding: 6px 6px 6px 6px;
+    }
+  </style>
+  <script type="text/javascript">
+    function TabStrip1_onLoad(sender, e)
+    {
+      // Pre-select "News"
+      sender.setSelectedTab(sender.get_tabs().getTab(0));
+      sender.render();
+    }
+    function TreeView1_onLoad(sender, e)
+    {
+      // Pre-select "Calendar"
+      sender.selectNodeById("nCalendar");
+    }
+    function Grid1_onLoad(sender, e)
+    {
+      // Pre-select the second row
+      sender.select(sender.get_table().getRow(1));
+    }     
+  </script>
+}
+<table cellpadding="0" border="0" cellspacing="0" width="1006">
+  <tr valign="top">
+    <td style="width: 185px; height: 250px" class="controlArea">
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml")
+    </td>
+    <td style="width: 185px; height: 260px" class="controlArea">
+      @(Html.ComponentArt().TreeView()
+        .ID("TreeView1")
+        .Width(185)
+        .Height(238)
+        .AutoScroll(true)
+        .SiteMapXmlFile("~/App_Data/TreeView/sampleThemeData.xml")
+        .AutoTheming(true)
+        .ClientEvents(ce => { ce.Load("TreeView1_onLoad"); })
+)
+    </td>
+    <td>
+      <table cellpadding="0" border="0" cellspacing="0">
+        <tr valign="top">
+          <td colspan="2" style="width: 525px; height: 37px" class="controlArea">
+            @(Html.ComponentArt().Menu()
+              .ID("Menu1")
+              .SiteMapXmlFile("~/App_Data/Menu/ThemeSwitching/menuData.xml")
+              .AutoTheming(true)
+              .Width(Unit.Pixel(525))
+)
+          </td>
+        </tr>
+        <tr valign="top">
+          <td colspan="2" style="width: 525px; height: 24px" class="controlArea">
+            @(Html.ComponentArt().ToolBar()
+              .ID("ToolBar1")
+              .AutoTheming(true)
+              .Width(Unit.Pixel(525))
+              .Items(i =>
+              {
+                i.Add().ItemType(ToolBarItemType.SplitDropDown).Text("New").DropDownId("ToolBar1_DropDown_New").IconCssClass("icon-file-new");
+                i.Add().ItemType(ToolBarItemType.Separator);
+                i.Add().ItemType(ToolBarItemType.ToggleRadioCheck).ToggleGroupId("TextAlign").ToolTip("Align Left").IconCssClass("icon-format-alignleft").Checked(true);
+                i.Add().ItemType(ToolBarItemType.ToggleRadioCheck).ToggleGroupId("TextAlign").ToolTip("Center").IconCssClass("icon-format-center");
+                i.Add().ItemType(ToolBarItemType.ToggleRadioCheck).ToggleGroupId("TextAlign").ToolTip("Align Right").IconCssClass("icon-format-alignright");
+                i.Add().ItemType(ToolBarItemType.ToggleRadioCheck).ToggleGroupId("TextAlign").ToolTip("Justify").IconCssClass("icon-format-justify");
+                i.Add().ItemType(ToolBarItemType.Separator);
+                i.Add().ToolTip("Copy").IconCssClass("icon-edit-copy");
+                i.Add().ToolTip("Cut").IconCssClass("icon-edit-cut");
+                i.Add().ToolTip("Paste").IconCssClass("icon-edit-paste").Enabled(false);
+                i.Add().ItemType(ToolBarItemType.Separator);
+                i.Add().Text("Undo").IconCssClass("icon-edit-undo");
+                i.Add().Text("Redo").IconCssClass("icon-edit-redo");
+                i.Add().ItemType(ToolBarItemType.Separator).CssClass("toolbar-spacer-right");
+              })
+)
+            @(Html.ComponentArt().Menu()
+              .ID("ToolBar1_DropDown_New")
+              .ContextMenu(ContextMenuType.Custom)
+              .Orientation(GroupOrientation.Vertical)
+              .DefaultGroupCssClass("MenuGroup")
+              .SiteMapXmlFile("~/App_Data/ToolBar/CoreFeatures/menuData.xml")
+              .DefaultGroupItemSpacing(1)
+              .TopGroupExpandDirection(GroupExpandDirection.BelowLeft)
+              .TopGroupExpandOffsetY(-1)
+              .ImagesBaseUrl("~/Content/ToolBar/CoreFeatures/images/")
+              .AutoTheming(true)
+)
+          </td>
+        </tr>
+        <tr valign="top">
+          <td style="width: 190px; height: 160px;" class="controlArea">
+            @(Html.ComponentArt().Calendar()
+              .ID("Calendar1")
+              .AutoTheming(true)
+              .SelectedDate(DateTime.Parse("2010-02-09"))
+)
+          </td>
+          <td style="width: 320px; height: 160px; min-height: 160px;" class="controlArea">
+            <div class="cart-tabstrip-inner-wrapper" style="width: 320px; height: 160px; min-height: 160px;">
+              @(Html.ComponentArt().TabStrip()
+                .ID("TabStrip1")
+                .AutoTheming(true)
+                .Width(Unit.Parse("320px"))
+                .Tabs(t =>
+                {
+                  t.Add().Text("News");
+                  t.Add().Text("Markets");
+                  t.Add().Text("Showbiz");
+                  t.Add().Text("Travel").Enabled(false);
+                })
+                .ClientEvents(ce =>
+                {
+                  ce.Load("TabStrip1_onLoad");
+                })
+)
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr valign="top">
+    <td>
+      <table cellpadding="0" border="0" cellspacing="0">
+        <tr valign="top">
+          <td class="controlArea" style="width: 200px">
+            @(Html.ComponentArt().ComboBox()
+                .ID("ComboBox1")
+                .AutoTheming(true)
+                .Width(Unit.Parse("200px"))
+                .DropDownHeight(100)
+                .Items(i =>
+                  {
+                    i.Add().Text("Item 1");
+                    i.Add().Text("Item 2");
+                    i.Add().Text("Item 3");
+                    i.Add().Text("Item 4").Enabled(false);
+                  })
+)
+          </td>
+        </tr>
+        <tr valign="top">
+          <td class="controlArea" style="width: 200px; height: 315px">
+            @(Html.ComponentArt().NavBar()
+              .ID("NavBar1")
+              .SiteMapXmlFile("~/App_Data/NavBar/ThemeSwitching/navData.xml")
+              .AutoTheming(true)
+              .FullExpand(true)
+)
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td colspan="2" class="controlArea" style="width: 729px; height: 345px">
+      @(Html
+        .ComponentArt().DataGrid()
+        .ID("Grid1")
+        .FillContainer(true)
+        .PageSize(9)
+        .GroupingPageSize(9)
+        .GroupingMode(GridGroupingMode.ConstantRows)
+        .PreExpandOnGroup(true)
+        .ShowHeader(true)
+        .RunningMode(GridRunningMode.Client)
+        .AutoTheming(true)
+        .Levels(l =>
+        {
+          l.Add()
+            .Columns(c =>
+            {
+              c.Add().DataField("Subject").SortedDataCellCssClass("SortedDataCell");
+              c.Add().DataField("LastPostDate").HeadingText("Received").SortedDataCellCssClass("SortedDataCell").FixedWidth(true).Width(115);
+              c.Add().DataField("StartedBy").SortedDataCellCssClass("SortedDataCell").Width(100).FixedWidth(true);
+              c.Add().DataField("TotalViews").SortedDataCellCssClass("SortedDataCell").Width(85).FixedWidth(true);
+              c.Add().DataField("PostId").Visible(false);
+            }
+          );
+        })
+        .ClientEvents(ce => { ce.Load("Grid1_onLoad"); })
+)
+    </td>
+  </tr>
+</table>

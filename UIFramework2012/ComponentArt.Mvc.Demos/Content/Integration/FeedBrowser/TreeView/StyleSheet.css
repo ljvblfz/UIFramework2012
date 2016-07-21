@@ -1,0 +1,61 @@
+﻿.treeView
+{
+  background-color:white;
+  scrollbar-arrow-color:#FFFFFF;
+  scrollbar-face-color:#222222;
+  scrollbar-highlight-color:#777777;
+  scrollbar-3dlight-color:#000000;
+  scrollbar-shadow-color:#000000;
+  scrollbar-darkshadow-color:#777777;
+  scrollbar-track-color:#EEEEEE;
+  width:243px;
+  height:100%;
+  cursor:default;
+  overflow:auto;
+  overflow-y:auto;
+  -ms-overflow-y:auto;
+  overflow-x:hidden;
+  -ms-overflow-x:hidden;
+}
+
+.treeViewNode
+{
+  font-family:Verdana;
+  font-size:7pt;
+  font-weight:normal;
+  color:black;
+  margin:3px;
+  border:none;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+
+.treeViewNodeHover
+{
+  font-family:Verdana;
+  font-size:7pt;
+  font-weight:normal;
+  color:black;
+  margin:0;
+  padding:2px;
+  border:solid 1px #FFB875;
+  background-image:url(images_/TreeViewNodeBG.png);
+  background-repeat:repeat-x;
+  background-position:center center;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+
+.treeViewNodeSelected
+{
+  font-family:Verdana;
+  font-size:7pt;
+  font-weight:normal;
+  color:white;
+  margin:0;
+  padding:2px;
+  border:solid 1px #F26623;
+  background-color:#F26623;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}

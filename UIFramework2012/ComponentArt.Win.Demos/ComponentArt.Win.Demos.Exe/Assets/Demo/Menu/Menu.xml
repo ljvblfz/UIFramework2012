@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+  <MenuItem Id="Best-of-Breed UI" Width="167" Theme="MenuHeaderTheme_BB" >
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/bob-img-DataGrid.png" ImgText="../Assets/Demo/Menu/bob-txt-DataGrid.png"
+              Text="Performance, Technical Sophistication, Enterprise Features and Raw Power" Id="bob DataGrid" Width="303" Margin="0,0,1,0">
+    </MenuItem>
+    <MenuItem IsSeparator="True" />
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/bob-img-Visualization.png" ImgText="../Assets/Demo/Menu/bob-txt-Visualization.png" Margin="0,0,1,0"
+              Text="Brilliant Rendering, Unmatched Interactivity, Smooth Animation  &amp; Pure Elegance" Id="bob Visualization" Width="303">
+    </MenuItem>
+    <MenuItem IsSeparator="True" />
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/bob-img-Navigation.png" ImgText="../Assets/Demo/Menu/bob-txt-Navigation.png" Margin="0,0,1,0"
+              Text="Extreme Flexibility, Powerful APIs, a Balance of Function and Style" Id="bob Navigation" Width="303">
+    </MenuItem>
+    <MenuItem IsSeparator="True" />
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/bob-img-Editors.png" ImgText="../Assets/Demo/Menu/bob-txt-Editors.png" Margin="0,0,1,0"
+              Text="WYSIWYG Experience, Real-time User Feedback and Built-in Validation" Id="bob Editors" Width="303">
+    </MenuItem>
+  </MenuItem>
+
+  <MenuItem IsSeparator="True" Height="45" />
+
+  <MenuItem Id="Integration Demos" Width="165" Theme="MenuHeaderTheme_ID" >
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/integration-img-Dashboard.png" ImgText="../Assets/Demo/Menu/integration-txt-Dashboard.png" Margin="0,0,1,0"
+              Text="Executive Dashboard, using Chart, Gauge and RangeSlider controls." Id="integration ExecutiveDashboard" Width="303">
+    </MenuItem>
+    <MenuItem IsSeparator="True" />
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/integration-img-DdDashboard.png" ImgText="../Assets/Demo/Menu/integration-txt-DdDashboard.png" Margin="0,0,1,0"
+      Text="Drill-down Dashboard, using Chart, Gauge and DataGrid controls." Id="integration DrilldownDashboard" Width="303">
+    </MenuItem>
+    <MenuItem IsSeparator="True" />
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/integration-img-Outlook.png" ImgText="../Assets/Demo/Menu/integration-txt-Outlook.png" Margin="0,0,1,0"
+              Text="Built using DataGrid, Menu TreeView, NavBar, ToolBar and Splitter controls." Id="integration Outlook2007" Width="303">
+    </MenuItem>
+    <MenuItem IsSeparator="True" />
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/integration-img-FeedBrowser.png" ImgText="../Assets/Demo/Menu/integration-txt-FeedBrowser.png" Margin="0,0,1,0"
+              Text="Built using DataGrid, Menu, TreeView, ToolBar, and TabStrip controls." Id="integration FeedBrowser" Width="303">
+    </MenuItem>
+  </MenuItem>
+
+  <MenuItem IsSeparator="True" Height="45" />
+
+  <MenuItem Id="Technology Showcase" Width="165" Theme="MenuHeaderTheme_TS" >
+    <MenuItem CustomTemplate="MenuSubHeading" CustomTemplateHighlight="False" IsEnabled="False" Tag="../Assets/Demo/Menu/technology-riaservices.png" />
+    <MenuItem CustomTemplate="MenuBulleted" CustomTemplateHighlight="True" Id="technology DataGridRiaCodeless" Text="DataGrid Paging, Sorting, Grouping" Width="260"/>
+    <MenuItem CustomTemplate="MenuBulleted" CustomTemplateHighlight="True" Id="technology DataGridRiaCodelessFiltering" Text="DataGrid Filtering"/>
+    <MenuItem IsSeparator="True" Margin="0,3,0,0"/>
+    <MenuItem CustomTemplate="MenuSubHeading" CustomTemplateHighlight="False" IsEnabled="False" Tag="../Assets/Demo/Menu/technology-soaui.png" />
+    <MenuItem CustomTemplate="MenuBulleted" CustomTemplateHighlight="True" Id="technology DataGridCoreFeatures" Text="DataGrid Paging, Sorting, Grouping"/>
+    <MenuItem CustomTemplate="MenuBulleted" CustomTemplateHighlight="True" Id="technology DataGridSoaScrolling" Text="DataGrid Deferred Scrolling"/>
+    <MenuItem CustomTemplate="MenuBulleted" CustomTemplateHighlight="True" Id="technology DataGridSoaEditing" Text="DataGrid Editing"/>
+    <MenuItem CustomTemplate="MenuBulleted" CustomTemplateHighlight="True" Id="technology TreeViewSOAUIAutomatic" Text="TreeView Load on Demand"/>
+    <MenuItem CustomTemplate="MenuBulleted" CustomTemplateHighlight="True" Id="technology ComboBoxSoaAutoPilot" Text="ComboBox Auto-complete"/>
+  </MenuItem>
+
+  <MenuItem IsSeparator="True" Height="45" />
+
+  <MenuItem Id="Design Showcase" Width="165" Theme="MenuHeaderTheme_DS" >
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/design-img-Rendering.png" ImgText="../Assets/Demo/Menu/design-txt-ChartRendering.png" Margin="0,0,1,0"
+              Text="ComponentArt's 3D pixel shading, producing brilliant visualization UI." Id="integration ChartRendering" Width="303">
+    </MenuItem>
+    <MenuItem IsSeparator="True" />
+    <MenuItem CustomTemplate="MenuSubImageBlock" Img="../Assets/Demo/Menu/design-img-Gauge.png" ImgText="../Assets/Demo/Menu/design-txt-GaugeSkins.png" Margin="0,0,1,0"
+              Text="Built-in, ready-to-use designs for line of business applications. " Id="integration GaugeSkins" Width="303">
+    </MenuItem>
+  </MenuItem>
+
+  <MenuItem IsSeparator="True" Height="45" />
+
+  <MenuItem Id="Individual Controls" Width="166" Theme="MenuHeaderTheme_IC" >
+
+    <MenuItem CustomTemplate="MenuAllControls" CustomTemplateHighlight="False" Id="All Controls"/>
+
+  </MenuItem>
+</Menu>

@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.SplitterBasicFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:CArt_Layout="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    >
+    <UserControl.Resources>
+        <!-- Paths cannot be directly used as resources, and need to be wrapped into DataTemplates -->
+        <DataTemplate x:Key="dtLeftArrow">
+            <Path Data="M4,0 L0,5 4,9" Fill="Tomato" Stretch="None" Margin="1"/>
+        </DataTemplate>
+        <DataTemplate x:Key="dtRightArrow">
+            <Path Data="M0,0 L4,5 0,9 Z" Fill="Tomato" Stretch="None" Margin="1"/>
+        </DataTemplate>
+        <DataTemplate x:Key="dtUpArrow">
+            <Path Data="M0,4 L5,0 9,4 Z" Fill="Tomato" Stretch="None" Margin="1"/>
+        </DataTemplate>
+        <DataTemplate x:Key="dtDownArrow">
+            <Path Data="M0,0 L5,4 9,0 Z" Fill="Tomato" Stretch="None" Margin="1"/>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid>
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Splitter" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Basic Features" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases a bare-bone Splitter layout." />
+            <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\Splitter\SplitterBasicFeatures.xaml" />
+
+        <Grid Height="500" Width="760">
+            <Border CornerRadius="2" Background="Black" Padding="5" >
+                <Grid x:Name="LayoutRoot">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Vertical Splitter -->
+                    <CArt_Layout:Splitter CollapseDirection="Left" ShowsPreview="False" Grid.Column="1">
+                        <CArt_Layout:Splitter.CollapseButtonContent>
+                            <ContentControl ContentTemplate="{StaticResource dtLeftArrow}"/>
+                        </CArt_Layout:Splitter.CollapseButtonContent>
+                        <CArt_Layout:Splitter.CollapseButtonCollapsedContent>
+                            <ContentControl ContentTemplate="{StaticResource dtRightArrow}"/>
+                        </CArt_Layout:Splitter.CollapseButtonCollapsedContent>
+                    </CArt_Layout:Splitter>
+
+                    <Grid Background="LightGreen" Grid.Column="0" >
+                        <TextBlock Text="Left Side" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Grid>
+
+                    <Grid Grid.Column="2" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Background="LightBlue">
+                            <TextBlock Text="Top Right" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+
+                        <!-- Horizontal Splitter -->
+                        <CArt_Layout:Splitter CollapseDirection="Up" ShowsPreview="True" Grid.Row="1">
+                            <CArt_Layout:Splitter.CollapseButtonContent>
+                                <ContentControl ContentTemplate="{StaticResource dtUpArrow}"/>
+                            </CArt_Layout:Splitter.CollapseButtonContent>
+                            <CArt_Layout:Splitter.CollapseButtonCollapsedContent>
+                                <ContentControl ContentTemplate="{StaticResource dtDownArrow}"/>
+                            </CArt_Layout:Splitter.CollapseButtonCollapsedContent>
+                        </CArt_Layout:Splitter>
+
+                        <Grid Background="LightYellow" Grid.Row="2">
+                            <TextBlock Text="Bottom Right" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+
+    </Grid>
+</UserControl>

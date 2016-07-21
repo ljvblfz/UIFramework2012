@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.BreadCrumbXmlBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"             
+    xmlns:input="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+    Width="760" Height="450">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="BreadCrumb" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Core Features" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases BreadCrumb's XML loading features." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\menu\BreadCrumbXmlBinding.xaml,
+            \source\controls\menu\BreadCrumbXmlBinding.xaml.cs,
+            \clientbin\controls\BreadCrumb\xml\BreadCrumbBindingDemo.xml"/>
+        <ComponentArt:BreadCrumb x:Name="bcDemo" PopupHorizontalOffset="-15" EnableScrolling="True" UseRootIcon="True" Margin="0,15,0,0"
+                                 Height="30" BaseIconSource="/ComponentArt.Win.Demos;component/Assets/BreadCrumb/filesystemicons/"
+                                 DefaultRootIcon="Desktop.png" DefaultIcon="GenericFolder.png" 
+                                 XmlBindingSource="/ComponentArt.Win.Demos;component/Assets/BreadCrumb/xml/BreadCrumbBindingDemo.xml" 
+                                 CustomAttributeMapping="demoAttributeMap" CustomNodeMapping="demoNodeMap" BreadCrumbClick="bcDemo_BreadCrumbClick">
+            <ComponentArt:BreadCrumb.Resources>
+                <ComponentArtCommon:CustomAttributeMappingCollection x:Key="demoAttributeMap">
+                    <ComponentArtCommon:AttributeMap From="separator" To="IsSeparator"/>
+                    <ComponentArtCommon:AttributeMap From="icon" To="IconSource"/>
+                    <ComponentArtCommon:AttributeMap From="image" To="IconSource"/>
+                    <ComponentArtCommon:AttributeMap From="label" To="Text"/>
+                </ComponentArtCommon:CustomAttributeMappingCollection>
+                <ComponentArtCommon:CustomNodeMappingCollection x:Key="demoNodeMap">
+                    <ComponentArtCommon:NodeMap From="sitemap" To="ComponentArt.Win.UI.Navigation.BreadCrumb"/>
+                    <ComponentArtCommon:NodeMap From="item" To="ComponentArt.Win.UI.Navigation.BreadCrumbItem"/>
+                    <ComponentArtCommon:NodeMap From="separator" To="ComponentArt.Win.UI.Navigation.BreadCrumbItem,IsSeparator=True"/>
+                </ComponentArtCommon:CustomNodeMappingCollection>
+            </ComponentArt:BreadCrumb.Resources>
+        </ComponentArt:BreadCrumb>
+    </Grid>
+</UserControl>

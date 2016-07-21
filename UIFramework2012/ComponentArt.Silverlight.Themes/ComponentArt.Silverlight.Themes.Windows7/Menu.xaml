@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows">
+<!-- Windows 7 -->
+    <!-- TOP-LEVEL -->
+    <!-- Group -->
+    <LinearGradientBrush x:Key="ComponentArt_Menu_TopGroupBackground" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#b2cbd8" Offset="0" />
+        <GradientStop Color="#b2cbd8" Offset="0.03" />
+        <GradientStop Color="#82aabf" Offset="0.03" />
+        <GradientStop Color="#3d7c9c" Offset="0.48" />
+        <GradientStop Color="#3d7c9c" Offset="0.5" />
+        <GradientStop Color="#085075" Offset="0.5" />
+        <GradientStop Color="#4d95aa" Offset="0.97" />
+        <GradientStop Color="#95c3ce" Offset="0.97" />
+        <GradientStop Color="#95c3ce" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopGroupBorder" Color="#515e6a" />
+    <!-- /Group -->
+    <!-- Item: Default state -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemForeground" Color="#ffffff" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBackground" Color="#00f1f1f1" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBorder" Color="#00ffffff" />
+    <!-- /Item: Default state -->
+    <!-- Item: Over state -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemForegroundOver" Color="#ffffff" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBackgroundOver" Color="#33ffffff" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBorderOver" Color="#aaa5e2fa" />
+    <!-- /Item: Over state -->
+    <!-- Item: Selected state -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemForegroundSelected" Color="#ffffff" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBackgroundSelected" Color="#33ffffff" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBorderSelected" Color="#aaa5e2fa" />
+    <!-- /Item: Over state -->
+    <!-- /TOP-LEVEL -->
+    <!-- SUB-LEVEL -->
+    <!-- Group -->
+    <LinearGradientBrush x:Key="ComponentArt_Menu_SubGroupBackground" StartPoint="0,0" EndPoint="100,0" SpreadMethod="Pad" MappingMode="Absolute">
+        <GradientStop Color="#f1f1f1" Offset="0.01"/>
+        <GradientStop Color="#f1f1f1" Offset="0.29"/>
+        <GradientStop Color="#dadada" Offset="0.29"/>
+        <GradientStop Color="#dadada" Offset="0.30"/>
+        <GradientStop Color="#ffffff" Offset="0.30"/>
+        <GradientStop Color="#ffffff" Offset="0.311"/>
+        <GradientStop Color="#f1f1f1" Offset="0.312"/>
+        <GradientStop Color="#f1f1f1" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_SubGroupBorder" Color="#979797" />
+    <!-- /Group -->
+    <!-- Item: Default state -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForeground" Color="#000000" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBackground" Color="#00f1f1f1" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorder" Color="#00ffffff" />
+    <!-- /Item: Default state -->
+    <!-- Item: Over state -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForegroundOver" Color="#000000" />
+    <LinearGradientBrush x:Key="ComponentArt_Menu_ItemBackgroundOver" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#10a5e2fa" Offset="0" />
+        <GradientStop Color="#1000aeef" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorderOver" Color="#a8d8eb" />
+    <!-- /Item: Over state -->
+    <!-- Item: Selected state -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForegroundSelected" Color="#000000" />
+    <LinearGradientBrush x:Key="ComponentArt_Menu_ItemBackgroundSelected" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#45a5e2fa" Offset="0" />
+        <GradientStop Color="#4500aeef" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorderSelected" Color="#8dc8e3" />
+    <!-- /Item: Over state -->
+    <!-- Separator -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorLineTop" Color="#e0e0e0" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorLineBottom" Color="#ffffff" />
+    <!-- /Separator -->
+    <!-- /SUB-LEVEL -->
+    <!-- MenuControl ControlTemplate -->
+    <sys:String x:Key="ComponentArt_Menu_MenuBorderMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_MenuBorderThickness">1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_MenuBorderPadding">5,2,20,2</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_MenuBorderCornerRadius">8</sys:String>
+    <!-- /MenuControl ControlTemplate -->
+    <!-- MenuItem LevelTop VisualState-->
+    <sys:String x:Key="ComponentArt_Menu_TopLevelItemBorderThickness">.5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelItemCornerRadius">3</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelItemPadding">10,0,10,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelItemMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_TopLevelFontSize">13</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelFontWeight">Normal</sys:String>
+    <!-- /MenuItem LevelTop VisualState-->
+    <!-- MenuItem ItemGrid -->
+    <sys:String x:Key="ComponentArt_Menu_ItemGridMargin">3,0,2,0</sys:String>
+    <syswin:GridLength x:Key="ComponentArt_Menu_ItemGridColumnOneWidth">27</syswin:GridLength>
+    <syswin:GridLength x:Key="ComponentArt_Menu_ItemGridColumnTwoWidth">*</syswin:GridLength>
+    <syswin:GridLength x:Key="ComponentArt_Menu_ItemGridColumnThreeWidth">15</syswin:GridLength>
+    <!-- /MenuItem ItemGrid -->
+    <sys:String x:Key="ComponentArt_Menu_RectLeftPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftMargin">1,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftBorderThickness">1,1,0,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftCornerRadius">4,0,0,4</sys:String>
+    <!-- MenuItem RectMiddle -->
+    <sys:Double x:Key="ComponentArt_Menu_MenuItemMinWidth">30</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddlePadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleBorderThickness">0,1,0,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleStackMargin">5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleTextBlockPadding">.5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleTextBlockMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_SubLevelFontSize">11</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_SubLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_SubLevelFontWeight">Normal</sys:String>
+    <!-- /MenuItem RectMiddle -->
+    <!-- MenuItem RectRight -->
+    <sys:String x:Key="ComponentArt_Menu_RectRightPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightMargin">0,0,1,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightBorderThickness">0,1,1,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightCornerRadius">0,4,4,0</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_SeparatorLineHeight">1</sys:Double>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorLineColumnSpan">3</sys:Int32>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorLineColumn">0</sys:Int32>
+    <sys:String x:Key="ComponentArt_Menu_SeparatorLineMargin">0,1,0,0</sys:String>
+    <!-- /MenuItem RectRight -->
+    <!-- MenuItem Popup -->
+    <sys:String x:Key="ComponentArt_Menu_PopupBorderThickness">1</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_PopupMinWidth">60</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_PopupCornerRadius">3</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_PopupMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopGroupPopupMargin">0</sys:String>
+    <!-- /MenuItem Popup -->
+<!-- /Windows 7 -->
+</ResourceDictionary>

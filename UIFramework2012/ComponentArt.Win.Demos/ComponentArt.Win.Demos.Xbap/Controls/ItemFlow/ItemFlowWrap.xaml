@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.ItemFlowWrap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:ComponentArtTheme="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    Width="760" Height="450">
+ 
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ItemFlow" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Wrap Mode" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo displays the Wrap FlowMode of the ItemFlow control." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\itemflow\itemflowwrap.xaml,
+            \source\controls\itemflow\itemflowwrap.xaml.cs"/>
+
+            <ComponentArt:ItemFlow Margin="0,50,0,0" x:Name="myItemFlow"
+                          FlowMode="Wrap"
+                          CompositeImageOverlap=".80"
+                          BackgroundColor="#FFFFFFFF"
+                          SelectedIndex="6"
+                          ShadingAlphaStart="195"
+                          ShadingAlphaEnd="0"
+                          ShadingAlphaOffset=".5"
+                          ShowReflections="True"
+                          Height="325"
+                          Width="800"
+                          SlowAnimationDuration="250"
+                          MediumAnimationDuration="125"
+                          FastAnimationDuration="75"
+                          DecelerationEnabled="True"
+                          MouseWheelEnabled="True"
+                          ScrollOnDrag="True"
+                          ScrollOnClick="True"
+                          InstantAnimationDuration="5"
+                          ReflectionAlphaStart="150"
+                          ReflectionAlphaEnd="0"
+                          ReflectionAlphaOffset=".5"
+                          ItemSpacing=".5"
+                          Zoom=".75">
+                <ComponentArt:ItemFlow.Items>
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/7.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/8.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/9.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/10.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/11.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/12.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/1.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/2.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/3.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/4.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/5.PNG" />
+                    <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/Assets/ItemFlow/Wrap/6.PNG" />
+                </ComponentArt:ItemFlow.Items>
+                <ComponentArt:ItemFlow.ItemLoadingTemplate>
+                    <DataTemplate>
+                        <Grid Width="{Binding Width}" Height="{Binding Height}">
+                            <TextBlock Text="Loading..." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Silver" FontFamily="Verdana" FontSize="16">
+                            </TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ComponentArt:ItemFlow.ItemLoadingTemplate>
+            </ComponentArt:ItemFlow>
+    </Grid>
+</UserControl>

@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.DataGridExternalEditing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:cart="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data"
+    xmlns:cartInput="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input">
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition />
+    </Grid.ColumnDefinitions>
+
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="External Editing Form" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This sample demonstrates the editing of DataGrid's underlying data using an external form and two-way binding." />
+    <TextBlock
+    x:Name="DemoCodeFiles"
+    Visibility = "Collapsed"
+    Text="\source\controls\datagrid\DataGridExternalEditing.xaml,
+            \source\controls\datagrid\DataGridExternalEditing.xaml.cs" />
+    
+    <cart:DataGrid x:Name="DataGrid1" PageSize="16" AllowEditing="True" VerticalScrollBarVisibility="Hidden" RunningMode="Client" 
+                   ItemsSource="{Binding}" Width="500" Height="470" HeaderVisibility="Collapsed" Background="Black" PagerMode="SliderOnly"
+                   SelectionChanged="DataGrid1_SelectionChanged">
+      <cart:DataGrid.Columns>
+        <cart:DataGridTextColumn Binding="{Binding Name}" Header="Product Name" Width="5*"/>
+        <cart:DataGridTextColumn Binding="{Binding CategoryName}" Header="Category" Width="4*" />
+        <cart:DataGridTextColumn Binding="{Binding QuantityPerUnit}" Header="Quantity Per Unit" Width="4*"/>
+        <cart:DataGridTextColumn Binding="{Binding UnitPrice}" Header="Unit Price" Width="3*"/>
+        <cart:DataGridTextColumn Binding="{Binding UnitsInStock}" Header="Units In Stock" Width="3*"/>        
+      </cart:DataGrid.Columns>      
+    </cart:DataGrid>
+
+    <Border x:Name="EditForm" Grid.Column="1" Margin="30,0,0,0" Background="#eeeeee" VerticalAlignment="Top"
+            BorderBrush="#cccccc" BorderThickness="1" CornerRadius="5" Height="270" Width="200"> 
+      <StackPanel Orientation="Vertical" Margin="10">
+        
+        <TextBlock Text="Name:" Margin="0,10,0,0"/>
+        <cartInput:InputTextBox Text="{Binding Name, Mode=TwoWay}" TextChanged="InputTextBox_TextChanged"/>       
+        
+        <TextBlock Text="Category:" Margin="0,10,0,0"/>
+        <ComboBox x:Name="CategoryComboBox" SelectionChanged="CategoryComboBox_SelectionChanged">
+          <ComboBoxItem Content="Beverages" Tag="1" />
+          <ComboBoxItem Content="Condiments" Tag="2"/>
+          <ComboBoxItem Content="Confections" Tag="3"/>
+          <ComboBoxItem Content="Dairy Products" Tag="4"/>
+          <ComboBoxItem Content="Grains/Cereals" Tag="5"/>
+          <ComboBoxItem Content="Meat/Poultry" Tag="6"/>
+          <ComboBoxItem Content="Produce" Tag="7"/>
+          <ComboBoxItem Content="Seafood" Tag="8"/>
+        </ComboBox>
+
+        <TextBlock Text="Quantity per unit:" Margin="0,10,0,0"/>
+        <cartInput:InputTextBox Text="{Binding QuantityPerUnit, Mode=TwoWay}" TextChanged="InputTextBox_TextChanged"/>
+        
+        <TextBlock Text="Unit price:" Margin="0,10,0,0"/>
+        <cartInput:InputTextBox Text="{Binding UnitPrice, Mode=TwoWay}" Restrict="Numeric" AllowDecimal="True" TextChanged="InputTextBox_TextChanged"/>
+        
+        <TextBlock Text="Units in stock:" Margin="0,10,0,0"/>
+        <cartInput:InputTextBox Text="{Binding UnitsInStock, Mode=TwoWay}" Restrict="Numeric" TextChanged="InputTextBox_TextChanged"/>        
+        
+      </StackPanel>      
+    </Border>
+    
+  </Grid>
+</UserControl>

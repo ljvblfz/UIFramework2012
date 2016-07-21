@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fb7fee36-0170-4ff8-82c5-a5f02229e183" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3069/SoaComboBoxLocationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SoaComboBoxLocationService4.xsd" MetadataType="Schema" ID="d5cd525d-2081-40af-a018-291e7e1ebe80" SourceId="1" SourceUrl="http://localhost:3069/SoaComboBoxLocationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SoaComboBoxLocationService2.wsdl" MetadataType="Wsdl" ID="ebdbfd9e-fd8f-4a43-bce9-5c3929805f89" SourceId="1" SourceUrl="http://localhost:3069/SoaComboBoxLocationService.svc?wsdl" />
+    <MetadataFile FileName="SoaComboBoxLocationService1.disco" MetadataType="Disco" ID="6756264d-76cb-464f-b551-72fe6601f68e" SourceId="1" SourceUrl="http://localhost:3069/SoaComboBoxLocationService.svc?disco" />
+    <MetadataFile FileName="SoaComboBoxLocationService21.wsdl" MetadataType="Wsdl" ID="38a8adae-55a2-4fcb-be65-4e67c8437430" SourceId="1" SourceUrl="http://localhost:3069/SoaComboBoxLocationService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SoaComboBoxLocationService41.xsd" MetadataType="Schema" ID="8becb5db-8066-4a98-88af-e5e0076c21d5" SourceId="1" SourceUrl="http://localhost:3069/SoaComboBoxLocationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SoaComboBoxLocationService42.xsd" MetadataType="Schema" ID="e259b7c7-6960-41ad-909d-3b59f7b7920e" SourceId="1" SourceUrl="http://localhost:3069/SoaComboBoxLocationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SoaComboBoxLocationService43.xsd" MetadataType="Schema" ID="0b6bd313-440a-4f81-92f2-0f7856f9d930" SourceId="1" SourceUrl="http://localhost:3069/SoaComboBoxLocationService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

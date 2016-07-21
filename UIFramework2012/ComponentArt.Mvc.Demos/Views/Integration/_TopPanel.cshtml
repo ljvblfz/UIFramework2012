@@ -1,0 +1,193 @@
+﻿@using ComponentArt.Web.UI
+<table style="width: 100%; height: 51px;" cellpadding="0" cellspacing="1" border="0">
+  <tr>
+    <td style="height: 23px;">
+      <script type="text/javascript">
+        window.TopMenu_ItemSelect = function (sender, eventArgs)
+        {
+          if (eventArgs.get_item().get_parentItem() != null)
+          {
+            eventArgs.set_cancel(false);
+            return false;
+          }
+          else
+          {
+            eventArgs.set_cancel(true);
+            return true;
+          }
+        }
+        window.ToolBarPopUpMenu_ItemSelect = function (sender, eventArgs)
+        {
+          eventArgs.set_cancel(false);
+          return false;
+        }        
+      </script>
+      @(Html.ComponentArt().Menu()
+        .ID("TopMenu")
+        .CssClass("TopMenuTopGroup")
+        .DefaultGroupCssClass("TopMenuGroup")
+        .ExpandDisabledItems(false)
+        .ExpandOnClick(true)
+        .ImagesBaseUrl("~/Content/Integration/Outlook/top_panel_images/")
+        .Orientation(GroupOrientation.Horizontal)
+        .SiteMapXmlFile("~/App_Data/Integration/Outlook/top_panel.xml")
+        .TopGroupItemSpacing(0)
+        .OverlayWindowedElements(false)
+        .HideSelectElements(false)
+        .AutoTheming(true)
+        .ClientEvents(c =>
+        {
+          c.ItemSelect("TopMenu_ItemSelect");
+        })
+)
+    </td>
+  </tr>
+  <tr>
+    <td style="height: 25px; padding-left: 1px;">
+      @(Html.ComponentArt().ToolBar()
+        .ID("TopToolBar")
+        .DefaultItemTextImageRelation(ToolBarTextImageRelation.ImageBeforeText)
+        .DefaultItemImageHeight(16)
+        .DefaultItemImageWidth(16)
+        .ImagesBaseUrl("~/Content/Integration/Outlook/top_panel_images/")
+        .ItemSpacing(0)
+        .Orientation(GroupOrientation.Horizontal)
+        .UseFadeEffect(false)
+        .AutoTheming(true)
+        .Items(i =>
+        {
+          i.Add().CssClass("TopToolBarCustomItem").ItemType(ToolBarItemType.Separator).IconUrl("toolbar_end_left.gif").ImageWidth(7).ImageHeight(25);
+          i.Add().ToolTip("Create a new mail message.").Text("<u>N</u>ew").KeyboardShortcut("Ctrl+N").ItemType(ToolBarItemType.SplitDropDown).IconUrl("newmailmessage.gif").DropDownImageUrl("dropdown.gif").DropDownImageHeight(3).DropDownImageWidth(5).DropDownId("TopToolBar_Menu1").ID("SplitDropDownItem1").Value("Create a new mail message.");
+          i.Add().ItemType(ToolBarItemType.Separator).IconUrl("break.gif").ImageHeight(15).ImageWidth(2);
+          i.Add().ToolTip("Print").IconUrl("print.gif");
+          i.Add().ItemType(ToolBarItemType.DropDown).DropDownId("TopToolBar_Menu2").ToolTip("Move to Folder").IconUrl("movetofolder.gif");
+          i.Add().ToolTip("Delete").IconUrl("delete.gif");
+          i.Add().ItemType(ToolBarItemType.Separator).IconUrl("break.gif").ImageHeight(15).ImageWidth(2);
+          i.Add().Text("<u>R</u>eply").ToolTip("Reply").KeyboardShortcut("Ctrl+R").IconUrl("reply.gif");
+          i.Add().Text("Reply to A<u>l</u>l").ToolTip("Reply to All").KeyboardShortcut("Ctrl+A").IconUrl("replyall.gif");
+          i.Add().Text("For<u>w</u>ard").ToolTip("Forward").KeyboardShortcut("Ctrl+W").IconUrl("forward.gif");
+          i.Add().ItemType(ToolBarItemType.Separator).IconUrl("break.gif").ImageHeight(15).ImageWidth(2);
+          i.Add().ItemType(ToolBarItemType.DropDown).DropDownId("TopToolBar_Menu3").ToolTip("Categorize").IconUrl("categorize.gif");
+          i.Add().ItemType(ToolBarItemType.DropDown).DropDownId("TopToolBar_Menu4").ToolTip("Follow up").IconUrl("followup.gif");
+          i.Add().ItemType(ToolBarItemType.Separator).IconUrl("break.gif").ImageHeight(15).ImageWidth(2);
+          i.Add().ToolTip("Send/Receive").Text("Send/Re<u>c</u>eive").KeyboardShortcut("Ctrl+C").ItemType(ToolBarItemType.SplitDropDown).IconUrl("sendreceive.gif").DropDownImageUrl("dropdown.gif").DropDownImageHeight(3).DropDownImageWidth(5).DropDownId("TopToolBar_Menu5").Value("Create a new mail message.");
+          i.Add().ToolTip("Create Rule").IconUrl("createrule.gif");
+          i.Add().ItemType(ToolBarItemType.Separator).IconUrl("break.gif").ImageHeight(15).ImageWidth(2);
+          i.Add().ToolTip("Address Book").IconUrl("addressbook.gif");
+          i.Add().ItemType(ToolBarItemType.Separator).IconUrl("break.gif").ImageHeight(15).ImageWidth(2);
+          i.Add().ToolTip("Microsoft Office Outlook Help").IconUrl("help.gif");
+          i.Add().CssClass("TopToolBarCustomItem").ItemType(ToolBarItemType.Separator).IconUrl("toolbar_end_right.gif").ImageWidth(13).ImageHeight(25);
+        })
+)
+    </td>
+  </tr>
+</table>
+@* TopToolBar's pop-up menus *@
+@(Html.ComponentArt().Menu()
+  .ID("TopToolBar_Menu1")
+  .AutoTheming(true)
+  .ContextMenu(ContextMenuType.Custom)
+  .DefaultGroupCssClass("TopMenuGroup")
+  .DefaultGroupExpandOffsetX(1)
+  .DefaultGroupItemSpacing(1)
+  .ImagesBaseUrl("~/Content/Integration/Outlook/top_panel_images/")
+  .Orientation(GroupOrientation.Vertical)
+  .OverlayWindowedElements(false)
+  .HideSelectElements(false)
+  .RenderRootItemId("New")
+  .SiteMapXmlFile("~/App_Data/Integration/Outlook/top_panel.xml")
+  .TopGroupExpandDirection(GroupExpandDirection.BelowLeft)
+  .TopGroupExpandOffsetX(0)
+  .TopGroupExpandOffsetY(-3)
+  .ClientEvents(c =>
+    {
+      c.ItemSelect("ToolBarPopUpMenu_ItemSelect");
+    })
+)
+@(Html.ComponentArt().Menu()
+  .ID("TopToolBar_Menu2")
+  .AutoTheming(true)
+  .ContextMenu(ContextMenuType.Custom)
+  .DefaultGroupCssClass("TopMenuGroup")
+  .DefaultGroupExpandOffsetX(1)
+  .DefaultGroupItemSpacing(1)
+  .ImagesBaseUrl("~/Content/Integration/Outlook/top_panel_images/")
+  .Orientation(GroupOrientation.Vertical)
+  .OverlayWindowedElements(false)
+  .HideSelectElements(false)
+  .TopGroupExpandDirection(GroupExpandDirection.BelowLeft)
+  .TopGroupExpandOffsetX(0)
+  .TopGroupExpandOffsetY(-3)
+  .Items(i =>
+  {
+    i.Add().Text("Move to Folder").IconUrl("movetofolder.gif");
+  })
+  .ClientEvents(c =>
+  {
+    c.ItemSelect("ToolBarPopUpMenu_ItemSelect");
+  })
+)
+@(Html.ComponentArt().Menu()
+  .ID("TopToolBar_Menu3")
+  .AutoTheming(true)
+  .ContextMenu(ContextMenuType.Custom)
+  .DefaultGroupCssClass("TopMenuGroup")
+  .DefaultGroupExpandOffsetX(1)
+  .DefaultGroupItemSpacing(1)
+  .ImagesBaseUrl("~/Content/Integration/Outlook/top_panel_images/")
+  .Orientation(GroupOrientation.Vertical)
+  .OverlayWindowedElements(false)
+  .HideSelectElements(false)
+  .RenderRootItemId("Categorize")
+  .SiteMapXmlFile("~/App_Data/Integration/Outlook/top_panel.xml")
+  .TopGroupExpandDirection(GroupExpandDirection.BelowLeft)
+  .TopGroupExpandOffsetX(0)
+  .TopGroupExpandOffsetY(-3)
+  .ClientEvents(c =>
+  {
+    c.ItemSelect("ToolBarPopUpMenu_ItemSelect");
+  })
+)
+@(Html.ComponentArt().Menu()
+  .ID("TopToolBar_Menu4")
+  .AutoTheming(true)
+  .ContextMenu(ContextMenuType.Custom)
+  .DefaultGroupCssClass("TopMenuGroup")
+  .DefaultGroupExpandOffsetX(1)
+  .DefaultGroupItemSpacing(1)
+  .ImagesBaseUrl("~/Content/Integration/Outlook/top_panel_images/")
+  .Orientation(GroupOrientation.Vertical)
+  .OverlayWindowedElements(false)
+  .HideSelectElements(false)
+  .RenderRootItemId("FollowUp")
+  .SiteMapXmlFile("~/App_Data/Integration/Outlook/top_panel.xml")
+  .TopGroupExpandDirection(GroupExpandDirection.BelowLeft)
+  .TopGroupExpandOffsetX(0)
+  .TopGroupExpandOffsetY(-3)
+  .ClientEvents(c =>
+  {
+    c.ItemSelect("ToolBarPopUpMenu_ItemSelect");
+  })
+)
+@(Html.ComponentArt().Menu()
+  .ID("TopToolBar_Menu5")
+  .AutoTheming(true)
+  .ContextMenu(ContextMenuType.Custom)
+  .DefaultGroupCssClass("TopMenuGroup")
+  .DefaultGroupExpandOffsetX(1)
+  .DefaultGroupItemSpacing(1)
+  .ExpandDisabledItems(false)
+  .ImagesBaseUrl("~/Content/Integration/Outlook/top_panel_images/")
+  .Orientation(GroupOrientation.Vertical)
+  .OverlayWindowedElements(false)
+  .HideSelectElements(false)
+  .RenderRootItemId("FollowUp")
+  .SiteMapXmlFile("~/App_Data/Integration/Outlook/top_panel.xml")
+  .TopGroupExpandDirection(GroupExpandDirection.BelowLeft)
+  .TopGroupExpandOffsetX(0)
+  .TopGroupExpandOffsetY(-3)
+  .ClientEvents(c =>
+  {
+    c.ItemSelect("ToolBarPopUpMenu_ItemSelect");
+  })
+)

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <!DOCTYPE html /> -->
+@{
+  // Init demo-specific ViewData settings
+  if (ViewData["DemoSettings"] == null) { ViewData["DemoSettings"] = "Welcome to ASP.NET MVC!"; }
+  if (ViewData["DemoTitle"] == null) { ViewData["DemoTitle"] = ""; }
+  if (ViewData["DemoType"] == null) { ViewData["DemoType"] = ""; }
+  if (ViewData["BodyClass"] == null) { ViewData["BodyClass"] = ""; }
+  if (ViewData["ProductListClass"] == null) { ViewData["ProductListClass"] = ""; }
+  if (ViewData["AboutText"] == null) { ViewData["AboutText"] = ""; }
+  if (ViewData["DemoFolder"] == null) { ViewData["DemoFolder"] = ""; }
+  if (ViewData["CodeButtonHtml"] == null) { ViewData["CodeButtonHtml"]= ""; }
+}
+<html>
+  <head>
+
+  <link href="@Url.Content("~/Content/Common/css/demos.css?201001")" rel="stylesheet" type="text/css" />
+
+  @RenderSection("HeadContent", required:false)
+  
+
+  @{
+    // Title
+    if (ViewData["DemoType"] != "Index")
+    {
+      <title>@ViewData["DemoType"].ToString() : @ViewData["DemoTitle"].ToString()</title>
+    }
+    else
+    {
+      <title>ASP.NET MVC Live Demos</title>
+    }
+
+    // IE6 specific CSS
+    if (Request.ServerVariables["HTTP_USER_AGENT"].ToString().IndexOf("MSIE 6") != -1)
+    {
+      <link href="@Url.Content("~/Content/Common/css/ie6.css?201001")" rel="stylesheet" type="text/css" />
+    }
+
+    // BEGIN "Show Code" button
+    if (ViewData["CodeFiles"] != null)
+    {
+      HttpContext context = HttpContext.Current;
+
+      string _codeviewerDevPath = "http://v5.corp.componentart.com/common/codeviewer/?site=ASPNETMVC&files=";
+      string _codeviewerLivePath = "http://www.componentart.com/common/codeviewer/?site=ASPNETMVC&files=";
+
+      // temp codeviewer redirect
+      _codeviewerDevPath = _codeviewerLivePath;
+
+      string _viewerPath = _codeviewerDevPath;
+      string _filePath = ViewData["CodeFiles"].ToString().Replace(" ", "").Replace("\n", "");
+
+      if (context.Request.Url.AbsoluteUri.Contains(".componentart.com"))
+      {
+        _viewerPath = _codeviewerLivePath;
+      }
+
+      if ((context.Request.Url.Host != null) && (context.Request.Url.Host.IndexOf(".componentart.com") >= 0 || context.Request.Url.Host.IndexOf("app01") >= 0))
+      {
+        ViewData["CodeButtonHtml"] = "<a href=\"javascript:void(0);\" onclick=\"javascript:var codeviewer=window.open('" + _viewerPath + _filePath + "','codeviewer','height=680,width=950,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes');\" title=\"View Code\" id=\"code\">View Code</a>";
+      }
+    }
+    // END "Show Code" button    
+  }
+  <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.3.2.min.js")"></script>
+  </head>
+  <body>
+  @RenderPage("~/Views/Shared/_Header.cshtml")
+  
+  @RenderBody()
+    
+  @RenderPage("~/Views/Shared/_About.cshtml")
+  
+  @RenderPage("~/Views/Shared/_Footer.cshtml")
+  </body>
+</html>

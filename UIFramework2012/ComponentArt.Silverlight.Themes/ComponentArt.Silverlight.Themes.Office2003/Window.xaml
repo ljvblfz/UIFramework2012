@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+>
+	<!-- BEGIN WINDOW -->
+	<LinearGradientBrush x:Key="ComponentArt_Window_Background" StartPoint="0,0" EndPoint="0,28" MappingMode="Absolute">
+		<GradientStop Color="#a8a7bf" Offset="0" />
+		<GradientStop Color="#717091" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_Window_BackgroundOver" StartPoint="0,0" EndPoint="1,1">
+		<GradientStop Color="#ffaea5" Offset="0"/>
+		<GradientStop Color="#f32a13" Offset="1"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_Window_BackgroundActive" StartPoint="0,0" EndPoint="1,1">
+		<GradientStop Color="#efa390" Offset="0"/>
+		<GradientStop Color="#d23406" Offset="1"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_Window_BackgroundDown" StartPoint="0,0" EndPoint="1,1">
+		<GradientStop Color="#8d2c14" Offset="0"/>
+		<GradientStop Color="#c74520" Offset="1"/>
+	</LinearGradientBrush>
+	<Style x:Key="ComponentArt_Window_ButtonStyle" TargetType="Button">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid x:Name="RootElement" HorizontalAlignment="Left" VerticalAlignment="Top">
+						<vsm:VisualStateManager.VisualStateGroups>
+							<vsm:VisualStateGroup x:Name="CommonStates">
+								<vsm:VisualState x:Name="Pressed" >
+									<Storyboard>
+										<DoubleAnimation Duration="0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="1"/>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="MouseOver" >
+									<Storyboard>
+										<DoubleAnimation Duration="0" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1"/>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Normal" >
+									<Storyboard>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Disabled" >
+									<Storyboard>
+									</Storyboard>
+								</vsm:VisualState>
+							</vsm:VisualStateGroup>
+							<vsm:VisualStateGroup x:Name="FocusStates">
+								<vsm:VisualState x:Name="Unfocused">
+									<Storyboard>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Focused">
+									<Storyboard>
+									</Storyboard>
+								</vsm:VisualState>
+							</vsm:VisualStateGroup>
+						</vsm:VisualStateManager.VisualStateGroups>
+						<Border x:Name="_OuterBorder" VerticalAlignment="Top" HorizontalAlignment="Left" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+							<Grid>
+								<Border CornerRadius="3" BorderThickness="1" x:Name="NormalRect" Opacity="1" Background="{StaticResource ComponentArt_Window_BackgroundActive}">
+									<Border.BorderBrush>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+											<GradientStop Color="#8d2c14" Offset="0" />
+											<GradientStop Color="#ae2400" Offset="0" />
+										</LinearGradientBrush>
+									</Border.BorderBrush>
+								</Border>
+								<Border CornerRadius="3" BorderThickness="1" x:Name="MouseOverRect" Opacity="0" Background="{StaticResource ComponentArt_Window_BackgroundOver}">
+									<Border.BorderBrush>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+											<GradientStop Color="#ff9386" Offset="0" />
+											<GradientStop Color="#d6402a" Offset="0" />
+										</LinearGradientBrush>
+									</Border.BorderBrush>
+								</Border>
+								<Border CornerRadius="3" BorderThickness="1" x:Name="PressedRect" Opacity="0" Background="{StaticResource ComponentArt_Window_BackgroundDown}">
+									<Border.BorderBrush>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+											<GradientStop Color="#591c0d" Offset="0" />
+											<GradientStop Color="#c3411e" Offset="0" />
+										</LinearGradientBrush>
+									</Border.BorderBrush>
+								</Border>
+								<Border x:Name="_InnerBorder" Padding="{TemplateBinding Padding}">
+									<ContentPresenter Content="{TemplateBinding Content}" />
+								</Border>
+							</Grid>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="ComponentArt:Window">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ComponentArt:Window">
+					<Canvas x:Name="_LayoutRoot">
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="Custom">
+                                <vsm:VisualState x:Name="Open">
+                                    <Storyboard Duration="00:00:00" SpeedRatio=".75">
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_RootBorder" Storyboard.TargetProperty="Opacity" To="1"/>
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_ScaleTransform" Storyboard.TargetProperty="ScaleX" To="1"/>
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_ScaleTransform" Storyboard.TargetProperty="ScaleY" To="1"/>
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_TranslateTransform" Storyboard.TargetProperty="X" To="0"/>
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_TranslateTransform" Storyboard.TargetProperty="Y" To="0"/>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Closed">
+                                    <Storyboard Duration="00:00:00" SpeedRatio="1.25">
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_RootBorder" Storyboard.TargetProperty="Opacity" To="0"/>
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_ScaleTransform" Storyboard.TargetProperty="ScaleX" To="1"/>
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_ScaleTransform" Storyboard.TargetProperty="ScaleY" To="1"/>
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_TranslateTransform" Storyboard.TargetProperty="X" To="0"/>
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="_TranslateTransform" Storyboard.TargetProperty="Y" To="0"/>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+                        <Border RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <RotateTransform x:Name="_RotateTransform" Angle="0" />
+                                    <TranslateTransform x:Name="_TranslateTransform" X="0" Y="0" />
+                                </TransformGroup>
+                            </Border.RenderTransform>
+                            <Border RenderTransformOrigin="0.5,0.5" x:Name="_RootBorder" CornerRadius="3" Padding="2" BorderBrush="#6e6d8f" BorderThickness="1" 
+                            Background="{StaticResource ComponentArt_Window_Background}" 
+                                Height="{TemplateBinding Height}" 
+                                Width="{TemplateBinding Width}"
+                                >
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform x:Name="_ScaleTransform" ScaleX="1" ScaleY="1" />
+                                    </TransformGroup>
+                                </Border.RenderTransform>
+							<Grid x:Name="_WindowGrid"
+                            HorizontalAlignment="Stretch" 
+                            VerticalAlignment="Stretch"
+                            Background="#ffffff"
+                            >
+								<Grid.RowDefinitions>
+									<RowDefinition Height="28"/>
+									<RowDefinition Height="*" />
+								</Grid.RowDefinitions>
+								<Grid x:Name="_HeaderGrid" Margin="0,0,0,0" Grid.Row="0" Background="{StaticResource ComponentArt_Window_Background}">
+									<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+										<Button Visibility="Collapsed" Height="22" Width="21" Style="{StaticResource ComponentArt_Window_ButtonStyle}" Foreground="#000000" x:Name="_IconButton">
+											<Image Source="{TemplateBinding EffectiveIconSource}" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" />
+										</Button>
+										<TextBlock Foreground="#ffffff" FontWeight="Bold" x:Name="_TitleTextBlock" Padding="4,0,0,0" Text="{TemplateBinding Title}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+									</StackPanel>
+									<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+										<Button x:Name="_PinButton" Margin="1" Height="22" Width="21" Visibility="Collapsed" Style="{StaticResource ComponentArt_Window_ButtonStyle}" Foreground="White" />
+										<Button x:Name="_MinimizeButton" Margin="1" Height="22" Width="21" Style="{StaticResource ComponentArt_Window_ButtonStyle}" Foreground="White">
+											<Image Source="/ComponentArt.Silverlight.UI.Layout;component/Assets/Window/window-min.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" />
+										</Button>
+										<Button x:Name="_MaximizeButton" Margin="1" Height="22" Width="21" Style="{StaticResource ComponentArt_Window_ButtonStyle}" Foreground="White">
+											<Image Source="/ComponentArt.Silverlight.UI.Layout;component/Assets/Window/window-max.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" />
+										</Button>
+										<Button x:Name="_CloseButton" Margin="1" Height="22" Width="21" Style="{StaticResource ComponentArt_Window_ButtonStyle}" Foreground="White">
+											<Image Source="/ComponentArt.Silverlight.UI.Layout;component/Assets/Window/window-close.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" />
+										</Button>
+									</StackPanel>
+								</Grid>
+								<Border x:Name="_ContentBorder" BorderBrush="#6e6d8f" BorderThickness="1" Background="White" 
+                                    Grid.Row="1"
+                                    HorizontalAlignment="Stretch" 
+                                    VerticalAlignment="Stretch"
+                                    >
+									<ContentPresenter Content="{TemplateBinding Content}" 
+                                    HorizontalAlignment="Stretch" 
+                                    VerticalAlignment="Stretch"              
+                                    />
+								</Border>
+							</Grid>
+						</Border>
+						</Border>
+					</Canvas>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!-- END WINDOW -->
+</ResourceDictionary>

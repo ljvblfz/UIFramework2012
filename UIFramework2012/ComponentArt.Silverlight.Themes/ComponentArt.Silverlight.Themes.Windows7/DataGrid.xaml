@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data"
+>
+    <!-- Foreground -->
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_Foreground" Color="#666666" />
+  <!-- /Foreground -->
+  <!-- Background -->
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_Background" Color="#ffffff" />
+  <!-- /Background -->
+  <!-- Border -->
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_Border" Color="#515e6a" />
+  <!-- /Border -->
+  <!-- Header Background -->
+  <!-- /Header Background-->
+  <!-- Header Border -->
+  <Style TargetType="Border" x:Key="ComponentArt_DataGrid_HeaderBorder">
+    <Setter Property="BorderBrush">
+      <Setter.Value>
+        <SolidColorBrush Color="#042c41" />
+      </Setter.Value>
+    </Setter>
+    <Setter Property="Padding" Value="5" />
+    <Setter Property="Background">
+      <Setter.Value>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="#b2cbd8" Offset="0" />
+          <GradientStop Color="#b2cbd8" Offset="0.03" />
+          <GradientStop Color="#82aabf" Offset="0.03" />
+          <GradientStop Color="#3d7c9c" Offset="0.48" />
+          <GradientStop Color="#3d7c9c" Offset="0.5" />
+          <GradientStop Color="#085075" Offset="0.5" />
+          <GradientStop Color="#4d95aa" Offset="0.97" />
+          <GradientStop Color="#95c3ce" Offset="0.97" />
+          <GradientStop Color="#95c3ce" Offset="1" />
+        </LinearGradientBrush>
+      </Setter.Value>
+    </Setter>
+  </Style>  
+  <!-- /Header Border -->
+  <!-- GroupBy Glyph -->
+  <ControlTemplate x:Key="ComponentArt_DataGrid_GroupByGlyph">
+    <Canvas Width="14" Height="16">
+      <Canvas>
+        <Path Fill="#c5c6c7" Data="F1 M 14.0,16.0 L 6.0,16.0 L 6.0,6.0 L 14.0,6.0 L 14.0,16.0 Z" />
+        <Path Fill="#ffffff" Data="F1 M 13.0,15.0 L 7.0,15.0 L 7.0,7.0 L 13.0,7.0 L 13.0,15.0 Z" />
+        <Path Fill="#e2f0fb" Data="F1 M 13.0,14.0 L 8.0,14.0 L 8.0,7.0 L 13.0,7.0 L 13.0,14.0 Z" />
+      </Canvas>
+      <Canvas>
+        <Path Fill="#c5c6c7" Data="F1 M 12.0,14.0 L 4.0,14.0 L 4.0,4.0 L 12.0,4.0 L 12.0,14.0 Z" />
+        <Path Fill="#ffffff" Data="F1 M 11.0,13.0 L 5.0,13.0 L 5.0,5.0 L 11.0,5.0 L 11.0,13.0 Z" />
+        <Path Fill="#e2f0fb" Data="F1 M 11.0,12.0 L 6.0,12.0 L 6.0,5.0 L 11.0,5.0 L 11.0,12.0 Z" />
+      </Canvas>
+      <Canvas>
+        <Path Fill="#c5c6c7" Data="F1 M 10.0,12.0 L 2.0,12.0 L 2.0,2.0 L 10.0,2.0 L 10.0,12.0 Z" />
+        <Path Fill="#ffffff" Data="F1 M 9.0,11.0 L 3.0,11.0 L 3.0,3.0 L 9.0,3.0 L 9.0,11.0 Z" />
+        <Path Fill="#e2f0fb" Data="F1 M 9.0,10.0 L 4.0,10.0 L 4.0,3.0 L 9.0,3.0 L 9.0,10.0 Z" />
+      </Canvas>
+      <Canvas>
+        <Path Fill="#c5c6c7" Data="F1 M 8.0,10.0 L 0.0,10.0 L 0.0,0.0 L 8.0,0.0 L 8.0,10.0 Z" />
+        <Path Fill="#ffffff" Data="F1 M 7.0,9.0 L 1.0,9.0 L 1.0,1.0 L 7.0,1.0 L 7.0,9.0 Z" />
+        <Path Fill="#e2f0fb" Data="F1 M 7.0,8.0 L 2.0,8.0 L 2.0,1.0 L 7.0,1.0 L 7.0,8.0 Z" />
+      </Canvas>
+    </Canvas>
+  </ControlTemplate>
+  <!-- /GroupBy Glyph -->
+  <!-- Content Background -->
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_ContentBackground" Color="#ffffff" />
+  <!-- /Content Background -->
+  <!-- Pager Button Elements -->
+  <!-- Button Outer Border -->
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_PagerButtonOuterBackground" Color="#ffffff" />
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_PagerButtonOuterBorder" Color="#000000" />
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_PagerButtonOuterBackgroundHover" Color="#ffffff" />
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_PagerButtonOuterBorderHover" Color="#3c7fb1" />
+  <!-- /Button Outer Border -->
+  <!-- Button -->
+  <LinearGradientBrush x:Key="ComponentArt_DataGrid_PagerButtonBackground" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop Color="#f2f2f2" Offset="0" />
+    <GradientStop Color="#ebecec" Offset="0.5" />
+    <GradientStop Color="#dddddd" Offset="0.5" />
+    <GradientStop Color="#d0d0d0" Offset="1" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_PagerButtonBorder" Color="#ffffff" />
+  <LinearGradientBrush x:Key="ComponentArt_DataGrid_PagerButtonBackgroundHover" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop Color="#eaf6fd" Offset="0" />
+    <GradientStop Color="#daf0fc" Offset="0.5" />
+    <GradientStop Color="#bee6fd" Offset="0.5" />
+    <GradientStop Color="#a7d9f5" Offset="1" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_PagerButtonBorderHover" Color="#ffffff" />
+  <!-- /Button -->
+  <!-- Button Glyph -->
+  <LinearGradientBrush x:Key="ComponentArt_DataGrid_PagerButtonGlyphFill" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop Color="#444444" Offset="0" />
+    <GradientStop Color="#333333" Offset="0.56" />
+    <GradientStop Color="#000000" Offset="0.56" />
+    <GradientStop Color="#000000" Offset="1" />
+  </LinearGradientBrush>
+  <LinearGradientBrush x:Key="ComponentArt_DataGrid_PagerButtonGlyphFillHover" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop Color="#45748e" Offset="0" />
+    <GradientStop Color="#3c657c" Offset="0.56" />
+    <GradientStop Color="#223945" Offset="0.56" />
+    <GradientStop Color="#223945" Offset="1" />
+  </LinearGradientBrush>
+  <!-- /Button Glyph -->
+  <Style x:Key="ComponentArt_DataGrid_PagerButton_First" TargetType="Button">
+    <Setter Property="Margin" Value="3" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Height" Value="27" />
+    <Setter Property="Width" Value="44" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Canvas Width="44" Height="27">
+            <vsm:VisualStateManager.VisualStateGroups>
+              <vsm:VisualStateGroup x:Name="CommonStates">
+                <vsm:VisualState x:Name="Normal" />
+                <vsm:VisualState x:Name="MouseOver">
+                  <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonOuterBorder" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBackgroundHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonOuterBorder" Storyboard.TargetProperty="BorderBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBorderHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonBackgroundHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="BorderBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonBorderHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Glyph1" Storyboard.TargetProperty="Fill">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFillHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Glyph2" Storyboard.TargetProperty="Fill">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFillHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                  </Storyboard>
+                </vsm:VisualState>
+              </vsm:VisualStateGroup>
+            </vsm:VisualStateManager.VisualStateGroups>
+            <Border
+                                x:Name="ButtonOuterBorder"
+                                Width="44"
+                                Height="27"
+                                Background="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBackground }"
+                                BorderBrush="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBorder }"
+                                BorderThickness="1"
+                                CornerRadius="4"
+																>
+              <Border
+                                  x:Name="ButtonBorder"
+                                  Background="{ StaticResource ComponentArt_DataGrid_PagerButtonBackground }"
+                                  BorderBrush="{ StaticResource ComponentArt_DataGrid_PagerButtonBorder }"
+                                  BorderThickness="1"
+                                  CornerRadius="4"
+																	/>
+            </Border>
+            <Canvas Width="9" Height="9" Margin="17,9,0,0">
+              <Path Data="F1 M 2.0,9.0 L 0.0,9.0 L 0.0,0.0 L 2.0,0.0 L 2.0,9.0 Z" x:Name="Glyph1" Fill="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFill }" />
+              <Path Data="F1 M 9.0,9.0 L 4.0,4.500000 L 9.0,0.0 L 9.0,9.0 Z" x:Name="Glyph2" Fill="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFill }" />
+            </Canvas>
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ComponentArt_DataGrid_PagerButton_Last" TargetType="Button">
+    <Setter Property="Margin" Value="3" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Height" Value="27" />
+    <Setter Property="Width" Value="44" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="Button">
+          <Grid Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+            <vsm:VisualStateManager.VisualStateGroups>
+              <vsm:VisualStateGroup x:Name="CommonStates">
+                <vsm:VisualState x:Name="Normal" />
+                <vsm:VisualState x:Name="MouseOver">
+                  <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonOuterBorder" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBackgroundHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonOuterBorder" Storyboard.TargetProperty="BorderBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBorderHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonBackgroundHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="BorderBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonBorderHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Glyph1" Storyboard.TargetProperty="Fill">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFillHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Glyph2" Storyboard.TargetProperty="Fill">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFillHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                  </Storyboard>
+                </vsm:VisualState>
+              </vsm:VisualStateGroup>
+            </vsm:VisualStateManager.VisualStateGroups>
+            <Border x:Name="ButtonOuterBorder" Width="44" Height="27" Background="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBackground }" BorderBrush="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBorder }" BorderThickness="1" CornerRadius="4">
+              <Border x:Name="ButtonBorder" Background="{ StaticResource ComponentArt_DataGrid_PagerButtonBackground }" BorderBrush="{ StaticResource ComponentArt_DataGrid_PagerButtonBorder }" BorderThickness="1" CornerRadius="4" />
+            </Border>
+            <Canvas Width="9" Height="9" Margin="0">
+              <Path Data="F1 M 7.0,9.0 L 9.0,9.0 L 9.0,0.0 L 7.0,0.0 L 7.0,9.0 Z" x:Name="Glyph1" Fill="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFill }" />
+              <Path Data="F1 M 0.0,9.0 L 5.0,4.5 L 0.0,0.0 L 0.0,9.0 Z" x:Name="Glyph2" Fill="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFill }" />
+            </Canvas>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ComponentArt_DataGrid_PagerButton_Next" TargetType="Button">
+    <Setter Property="Margin" Value="3" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Height" Value="27" />
+    <Setter Property="Width" Value="44" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Canvas Width="44" Height="27">
+            <vsm:VisualStateManager.VisualStateGroups>
+              <vsm:VisualStateGroup x:Name="CommonStates">
+                <vsm:VisualState x:Name="Normal" />
+                <vsm:VisualState x:Name="MouseOver">
+                  <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonOuterBorder" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBackgroundHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonOuterBorder" Storyboard.TargetProperty="BorderBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBorderHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonBackgroundHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="BorderBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonBorderHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Glyph1" Storyboard.TargetProperty="Fill">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFillHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                  </Storyboard>
+                </vsm:VisualState>
+              </vsm:VisualStateGroup>
+            </vsm:VisualStateManager.VisualStateGroups>
+            <Border
+                                x:Name="ButtonOuterBorder"
+                                Width="44"
+                                Height="27"
+                                Background="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBackground }"
+                                BorderBrush="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBorder }"
+                                BorderThickness="1"
+                                CornerRadius="4"
+																>
+              <Border
+                                  x:Name="ButtonBorder"
+                                  Background="{ StaticResource ComponentArt_DataGrid_PagerButtonBackground }"
+                                  BorderBrush="{ StaticResource ComponentArt_DataGrid_PagerButtonBorder }"
+                                  BorderThickness="1"
+                                  CornerRadius="4"
+																	/>
+            </Border>
+            <Canvas Width="5" Height="9" Margin="19,9,0,0">
+              <Path Data="F1 M 0.0,9.0 L 5.0,4.5 L 0.0,0.0 L 0.0,9.0 Z" x:Name="Glyph1" Fill="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFill }" />
+            </Canvas>
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ComponentArt_DataGrid_PagerButton_Previous" TargetType="Button">
+    <Setter Property="Margin" Value="3" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Height" Value="27" />
+    <Setter Property="Width" Value="44" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Canvas Width="44" Height="27">
+            <vsm:VisualStateManager.VisualStateGroups>
+              <vsm:VisualStateGroup x:Name="CommonStates">
+                <vsm:VisualState x:Name="Normal" />
+                <vsm:VisualState x:Name="MouseOver">
+                  <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonOuterBorder" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBackgroundHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonOuterBorder" Storyboard.TargetProperty="BorderBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBorderHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="Background">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonBackgroundHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="BorderBrush">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonBorderHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Glyph1" Storyboard.TargetProperty="Fill">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFillHover }" />
+                    </ObjectAnimationUsingKeyFrames>
+                  </Storyboard>
+                </vsm:VisualState>
+              </vsm:VisualStateGroup>
+            </vsm:VisualStateManager.VisualStateGroups>
+            <Border
+                                x:Name="ButtonOuterBorder"
+                                Width="44"
+                                Height="27"
+                                Background="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBackground }"
+                                BorderBrush="{ StaticResource ComponentArt_DataGrid_PagerButtonOuterBorder }"
+                                BorderThickness="1"
+                                CornerRadius="4"
+																>
+              <Border
+                                  x:Name="ButtonBorder"
+                                  Background="{ StaticResource ComponentArt_DataGrid_PagerButtonBackground }"
+                                  BorderBrush="{ StaticResource ComponentArt_DataGrid_PagerButtonBorder }"
+                                  BorderThickness="1"
+                                  CornerRadius="4"
+																	/>
+            </Border>
+            <Canvas Width="5" Height="9" Margin="19,9,0,0">
+              <Path Data="F1 M 5.0,9.0 L 0.0,4.5 L 5.0,0.0 L 5.0,9.0 Z" x:Name="Glyph1" Fill="{ StaticResource ComponentArt_DataGrid_PagerButtonGlyphFill }" />
+            </Canvas>
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <!-- /Pager Button Elements -->
+  <!-- Footer Text -->
+  <Style TargetType="StackPanel" x:Key="ComponentArt_DataGrid_FooterInfo">
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+  </Style>
+  <!-- /Footer Text -->
+  <!-- Column Header -->
+  <LinearGradientBrush x:Key="ComponentArt_DataGrid_ColumnHeaderBackground" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop Color="#ffffff" Offset="0" />
+    <GradientStop Color="#ffffff" Offset="0.45" />
+    <GradientStop Color="#f7f8fa" Offset="0.45" />
+    <GradientStop Color="#f1f2f4" Offset="1" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_ColumnHeaderBorderBrush" Color="#d5d5d5" />
+  <!-- /Column Header -->
+  <!-- Column Header: Hover -->
+  <LinearGradientBrush x:Key="ComponentArt_DataGrid_ColumnHeaderHoverBackground" StartPoint="0,0" EndPoint="0,1">
+    <GradientStop Color="#e3f7ff" Offset="0" />
+    <GradientStop Color="#e3f7ff" Offset="0.45" />
+    <GradientStop Color="#bdedff" Offset="0.45" />
+    <GradientStop Color="#b7e7fb" Offset="1" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_ColumnHeaderHoverBorderBrush" Color="#93c9e3" />
+  <!-- /Column Header: Hover -->
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_UnloadedBackground" Color="#ffffff" />
+  <LinearGradientBrush x:Key="ComponentArt_DataGrid_FooterBackground" StartPoint="0,0" EndPoint="1,0">
+    <GradientStop Color="#f8fdff" Offset="0" />
+    <GradientStop Color="#bbd9f0" Offset="1" />
+  </LinearGradientBrush>
+  <ControlTemplate x:Key="ComponentArt_DataGrid_ColumnHeadingAscendingArrow">
+    <Canvas Width="7" Height="12" Margin="0,0,4,0">
+      <Path Fill="#333333" Data="F1 M 3.5,0.0 L 7.0,3.5 L 0.0,3.5 L 3.5,0.0 Z"/>
+      <Path Fill="#333333" Data="F1 M 3.0,2.5 L 4.0,2.5 L 4.0,11.5 L 3.0,11.5 L 3.0,2.5 Z"/>
+    </Canvas>
+    <!--<Canvas Margin="0,0,6,0" Height="5" Width="9">
+				<Path Stroke="#FF505050" StrokeThickness="1" Data="M5,0 L9,5 L0,5 L5,0" />
+			</Canvas>-->
+  </ControlTemplate>
+  <ControlTemplate x:Key="ComponentArt_DataGrid_ColumnHeadingDescendingArrow">
+    <Canvas Width="7" Height="12" Margin="0,0,4,0">
+      <Path Fill="#333333" Data="F1 M 3.5,11.5 L 0.0,8.0 L 7.0,8.0 L 3.5,11.5 Z"/>
+      <Path Fill="#333333" Data="F1 M 4.0,9.0 L 3.0,9.0 L 3.0,0.0 L 4.0,0.0 L 4.0,9.0 Z"/>
+    </Canvas>
+  </ControlTemplate>
+  <Style TargetType="Border" x:Key="ComponentArt_DataGrid_RowHover">
+    <Setter Property="Background">
+      <Setter.Value>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="#f8fcfe" Offset="0.0" />
+          <GradientStop Color="#f8fcfe" Offset="0.05" />
+          <GradientStop Color="#f6fafd" Offset="0.05" />
+          <GradientStop Color="#e9f5fd" Offset="0.95" />
+          <GradientStop Color="#eff9fe" Offset="0.95" />
+          <GradientStop Color="#eff9fe" Offset="1" />
+        </LinearGradientBrush>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="BorderThickness" Value="0,1,0,1" />
+    <Setter Property="BorderBrush" Value="#d9f0fa" />
+    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="Margin" Value="0" />
+  </Style>
+  <Style TargetType="Border" x:Key="ComponentArt_DataGrid_RowSelected">
+    <Setter Property="Background">
+      <Setter.Value>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="#f6fbfd" Offset="0" />
+          <GradientStop Color="#f6fbfd" Offset="0.05" />
+          <GradientStop Color="#f1f8fd" Offset="0.05" />
+          <GradientStop Color="#d5effc" Offset="0.95" />
+          <GradientStop Color="#e7f5fd" Offset="0.95" />
+          <GradientStop Color="#e7f5fd" Offset="1" />
+        </LinearGradientBrush>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="BorderThickness" Value="0,1,0,1" />
+    <Setter Property="BorderBrush" Value="#99defd" />
+    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="Margin" Value="0" />
+  </Style>
+  <Style TargetType="Border" x:Key="ComponentArt_DataGrid_RowSelectedHover">
+    <Setter Property="Background">
+      <Setter.Value>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="#f1f9fc" Offset="0" />
+          <GradientStop Color="#f1f9fc" Offset="0.05" />
+          <GradientStop Color="#eaf4fc" Offset="0.05" />
+          <GradientStop Color="#c9e7fa" Offset="0.95" />
+          <GradientStop Color="#def0fc" Offset="0.95" />
+          <GradientStop Color="#def0fc" Offset="1" />
+        </LinearGradientBrush>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="BorderThickness" Value="0,1,0,1" />
+    <Setter Property="BorderBrush" Value="#90d1fc" />
+    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="Margin" Value="0" />
+  </Style>
+  <Style TargetType="Rectangle" x:Key="ComponentArt_DataGrid_RowBottomLineRectangle">
+    <Setter Property="Height" Value="1" />
+    <Setter Property="Fill" Value="#00ffffff" />
+  </Style>
+  <Style TargetType="Button" x:Key="ComponentArt_DataGrid_RowExpandButton">
+    <Setter Property="Padding" Value="7" />
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Canvas Height="9" Width="9" Background="Transparent">
+            <Rectangle Stroke="#FF505050" StrokeThickness="1" Width="9" Height="9" />
+            <Rectangle Fill="#FF505050" Height="1" Width="5" Canvas.Left="2" Canvas.Top="4" />
+            <Rectangle Fill="#FF505050" Height="5" Width="1" Canvas.Left="4" Canvas.Top="2" />
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="Button" x:Key="ComponentArt_DataGrid_RowCollapseButton">
+    <Setter Property="Padding" Value="7" />
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Canvas Height="9" Width="9" Background="Transparent">
+            <Rectangle Stroke="#FF505050" StrokeThickness="1" Width="9" Height="9" />
+            <Rectangle Fill="#FF505050" Height="1" Width="5" Canvas.Left="2" Canvas.Top="4" />
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="Button" x:Key="ComponentArt_DataGrid_GroupExpandButton">
+    <Setter Property="Padding" Value="7" />
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Canvas Width="9" Height="9">
+            <Path Fill="#919191" Data="F1 M 9.0,8.0 C 9.0,8.552734 8.552246,9.0 8.0,9.0 L 1.0,9.0 C 0.447754,9.0 0.0,8.552734 0.0,8.0 L 0.0,1.0 C 0.0,0.447266 0.447754,0.0 1.0,0.0 L 8.0,0.0 C 8.552246,0.0 9.0,0.447266 9.0,1.0 L 9.0,8.0 Z" />
+            <Path Data="F1 M 8.0,7.0 C 8.0,7.552734 7.552246,8.0 7.0,8.0 L 2.0,8.0 C 1.447754,8.0 1.0,7.552734 1.0,7.0 L 1.0,2.0 C 1.0,1.447266 1.447754,1.0 2.0,1.0 L 7.0,1.0 C 7.552246,1.0 8.0,1.447266 8.0,2.0 L 8.0,7.0 Z">
+              <Path.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                  <GradientStop Color="#fcfcfc" Offset="0" />
+                  <GradientStop Color="#fcfcfc" Offset="0.5" />
+                  <GradientStop Color="#ededec" Offset="0.5" />
+                  <GradientStop Color="#e3e3e3" Offset="1" />
+                </LinearGradientBrush>
+              </Path.Fill>
+            </Path>
+            <Path Fill="#294272" Data="F1 M 5.0,7.0 L 4.0,7.0 L 4.0,2.0 L 5.0,2.0 L 5.0,7.0 Z"/>
+            <Path Fill="#4b63a7" Data="F1 M 7.0,5.0 L 2.0,5.0 L 2.0,4.0 L 7.0,4.0 L 7.0,5.0 Z" />
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="Button" x:Key="ComponentArt_DataGrid_GroupCollapseButton">
+    <Setter Property="Background" Value="#ffffff" />
+    <Setter Property="Padding" Value="7" />
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Canvas Width="9" Height="9">
+            <Path Fill="#919191" Data="F1 M 9.0,8.0 C 9.0,8.552734 8.552246,9.0 8.0,9.0 L 1.0,9.0 C 0.447754,9.0 0.0,8.552734 0.0,8.0 L 0.0,1.0 C 0.0,0.447266 0.447754,0.0 1.0,0.0 L 8.0,0.0 C 8.552246,0.0 9.0,0.447266 9.0,1.0 L 9.0,8.0 Z" />
+            <Path Data="F1 M 8.0,7.0 C 8.0,7.552734 7.552246,8.0 7.0,8.0 L 2.0,8.0 C 1.447754,8.0 1.0,7.552734 1.0,7.0 L 1.0,2.0 C 1.0,1.447266 1.447754,1.0 2.0,1.0 L 7.0,1.0 C 7.552246,1.0 8.0,1.447266 8.0,2.0 L 8.0,7.0 Z">
+              <Path.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                  <GradientStop Color="#fcfcfc" Offset="0" />
+                  <GradientStop Color="#fcfcfc" Offset="0.5" />
+                  <GradientStop Color="#ededec" Offset="0.5" />
+                  <GradientStop Color="#e3e3e3" Offset="1" />
+                </LinearGradientBrush>
+              </Path.Fill>
+            </Path>
+            <Path Fill="#4b63a7" Data="F1 M 7.0,5.0 L 2.0,5.0 L 2.0,4.0 L 7.0,4.0 L 7.0,5.0 Z" />
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="Button" x:Key="ComponentArt_DataGrid_GroupingDescendingArrowButton">
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Canvas Height="5" Width="9" Background="Transparent">
+            <Path Fill="White" Data="M0,0 L5,5 L9,0 L0,0" />
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="Button" x:Key="ComponentArt_DataGrid_GroupingAscendingArrowButton">
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Canvas Height="5" Width="9" Background="Transparent">
+            <Path Fill="White" Data="M5,0 L9,5 L0,5 L5,0" />
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style TargetType="TextBlock" x:Key="ComponentArt_DataGrid_TextBlock">
+    <Setter Property="FontFamily" Value="Trebuchet MS" />
+    <Setter Property="FontSize" Value="12" />
+  </Style>
+    <Style TargetType="ComponentArt:DataGridGroupBoxSeparator">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="ComponentArt:DataGridGroupBoxSeparator">
+          <Canvas Width="5" Height="9" Margin="-2,0,2,0">
+            <Path Data="F1 M 0.0,9.0 L 5.0,4.5 L 0.0,0.0 L 0.0,9.0 Z" Fill="#ffffff" />
+          </Canvas>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="ComponentArt_DataGrid_ScrollBar" TargetType="ScrollBar">
+    <Setter Property="IsTabStop" Value="False"/>
+  </Style>
+    <Style TargetType="ComponentArt:DataGridColumnResizeElement">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="ComponentArt:DataGridColumnResizeElement">
+          <Border BorderBrush="Black" BorderThickness="1,0,1,0" Background="#10F0F0F0" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}"/>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+<!-- ComponentArt:DataGridGroup -->
+    <Style TargetType="ComponentArt:DataGridGroup">
+    <Setter Property="Indent" Value="20" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="ComponentArt:DataGridGroup">
+          <Grid x:Name="RootElement" HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+              <RowDefinition />
+              <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20"/>
+              <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Padding="0" Height="23" BorderBrush="#00ffffff" BorderThickness="0,1,0,1" Grid.ColumnSpan="2">
+              <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                  <GradientStop Color="#ffffff" Offset="0"/>
+                  <GradientStop Color="#ffffff" Offset="0.47" />
+                  <GradientStop Color="#b0bfde" Offset="0.47" />
+                  <GradientStop Color="#b0bfde" Offset="0.5" />
+                  <GradientStop Color="#ffffff" Offset="0.5" />
+                  <GradientStop Color="#ffffff" Offset="1"/>
+                </LinearGradientBrush>
+              </Border.Background>
+            </Border>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0" Grid.Column="1" >
+              <StackPanel Orientation="Horizontal" Background="#ffffff">
+                <TextBlock Text="{ TemplateBinding Field }" Foreground="#003399" Padding="4,0,0,0" />
+                <TextBlock Text=": " Foreground="#003399" />
+                <TextBlock Text="{TemplateBinding ValueText}" Foreground="#003399" Padding="0,0,4,0" />
+              </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="GroupRows" Orientation="Vertical" Background="#ffffff" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" />
+            <Border BorderThickness="0" Background="#ffffff" />
+            <!-- A solid white block behind the following buttons -->
+            <Button x:Name="ExpandButton" Visibility="Collapsed" Style="{StaticResource ComponentArt_DataGrid_GroupExpandButton}" />
+            <Button x:Name="CollapseButton" Visibility="Collapsed" Style="{StaticResource ComponentArt_DataGrid_GroupCollapseButton}" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+<!-- ComponentArt:DataGridColumnHeader -->
+    <Style TargetType="ComponentArt:DataGridColumnHeader">
+    <Setter Property="Height" Value="22" />
+    <Setter Property="BorderThickness" Value="1,0,0,1" />
+    <Setter Property="Cursor" Value="Arrow" />
+    <Setter Property="BorderBrush" Value="{ StaticResource ComponentArt_DataGrid_ColumnHeaderBorderBrush }" />
+    <Setter Property="Background" Value="{ StaticResource ComponentArt_DataGrid_ColumnHeaderBackground }" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Padding" Value="4,0,0,0" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="ComponentArt:DataGridColumnHeader">
+          <Grid x:Name="RootElement" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Cursor="{ TemplateBinding Cursor }" Height="{ TemplateBinding Height }">
+            <Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+            </Grid.RowDefinitions>
+            <vsm:VisualStateManager.VisualStateGroups>
+              <vsm:VisualStateGroup x:Name="CommonStates">
+                <vsm:VisualState x:Name="Normal" />
+                <vsm:VisualState x:Name="MouseOver">
+                  <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="ColumnHeaderHoverBorder" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.1" />
+                  </Storyboard>
+                </vsm:VisualState>
+              </vsm:VisualStateGroup>
+            </vsm:VisualStateManager.VisualStateGroups>
+            <Border
+              Height="{ TemplateBinding Height }"
+              BorderBrush="{ TemplateBinding BorderBrush }"
+              Background="{ TemplateBinding Background }"
+              x:Name="ColumnHeaderBorder"
+              BorderThickness="{ TemplateBinding BorderThickness }"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+							/>
+            <Border
+              Height="{TemplateBinding Height}"
+              BorderBrush="{ StaticResource ComponentArt_DataGrid_ColumnHeaderHoverBorderBrush }"
+              Background="{ StaticResource ComponentArt_DataGrid_ColumnHeaderHoverBackground }"
+              x:Name="ColumnHeaderHoverBorder"
+              BorderThickness="{ TemplateBinding BorderThickness }"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              Opacity="0"
+							/>
+            <ContentPresenter
+              Content="{TemplateBinding Content}"
+              ContentTemplate="{TemplateBinding ContentTemplate}"
+              Margin="{TemplateBinding Padding}"
+              VerticalAlignment="{TemplateBinding VerticalAlignment}"
+              HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+              />
+            <ContentControl x:Name="AscendingArrow" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Top" Template="{StaticResource ComponentArt_DataGrid_ColumnHeadingAscendingArrow}" />
+            <ContentControl x:Name="DescendingArrow" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Top" Template="{StaticResource ComponentArt_DataGrid_ColumnHeadingDescendingArrow}" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+<!-- ComponentArt:DataGridGroupBox -->    
+  <Style TargetType="ComponentArt:DataGridGroupBox">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Grid x:Name="RootElement" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="24"/>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="28"/>
+            </Grid.ColumnDefinitions>
+            <Border Padding="0" BorderBrush="#45ffffff" BorderThickness="1,1,0,0" Grid.ColumnSpan="3" CornerRadius="0" Margin="0,0,4,0">
+              <Border Padding="5,5,8,5" BorderBrush="#45000000" BorderThickness="0,0,1,1" CornerRadius="0" />
+            </Border>
+            <ContentControl x:Name="GroupByGlyph" Template="{ StaticResource ComponentArt_DataGrid_GroupByGlyph }" Margin="0" Grid.Column="0" />
+            <TextBlock Padding="0,6,0,6" FontWeight="Bold" Foreground="White" Text="{Binding ColumnName}" Grid.Column="1" />
+            <Button Padding="0,7,7,7" Grid.Column="2" x:Name="AscendingArrow" Visibility="Collapsed" Style="{StaticResource ComponentArt_DataGrid_GroupingAscendingArrowButton}" />
+            <Button Padding="0,7,7,7" Grid.Column="2" x:Name="DescendingArrow" Visibility="Collapsed" Style="{StaticResource ComponentArt_DataGrid_GroupingDescendingArrowButton}" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

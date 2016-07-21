@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tree>
+  <node Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarCoreFeatures" />
+    <node Header="Enable / Disable Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarEnableDisableFeatures" />
+    <node Header="Button Appearances" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarButtonAppearances" />
+    <node Header="ToolBar Orientation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarOrientation" />
+  </node>
+
+  <node Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignBlackIce" />
+    <node Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignArcticWhite" />
+    <node Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignOffice2003" />
+    <node Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignOffice2007" />
+    <node Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarDesignWindows7" />
+  </node>
+
+  <node Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="ToolBar Events" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ToolBarEvents" />
+  </node>
+</tree>

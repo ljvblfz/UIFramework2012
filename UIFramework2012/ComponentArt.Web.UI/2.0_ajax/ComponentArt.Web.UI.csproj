@@ -1,0 +1,742 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BF2152B-1475-4230-BEDF-7E2BDD65BB93}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>ComponentArt.Web.UI</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ComponentArt.Web.UI</RootNamespace>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>ComponentArt.Web.UI.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>3</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>ComponentArt.Web.UI.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AspNet2|AnyCPU' ">
+    <OutputPath>bin\AspNet2\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>ASPNET2;NET20</DefineConstants>
+    <DocumentationFile>ComponentArt.Web.UI.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Atlas|AnyCPU' ">
+    <OutputPath>bin\Atlas\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>ASPNET2;ATLAS;NET20</DefineConstants>
+    <DocumentationFile>ComponentArt.Web.UI.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ASPNET35|AnyCPU' ">
+    <OutputPath>bin\ASPNET35\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>ASPNET2;ATLAS;ASPNET35</DefineConstants>
+    <DocumentationFile>ComponentArt.Web.UI.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ASPNET4|AnyCPU' ">
+    <OutputPath>bin\ASPNET4\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>ASPNET2;ATLAS;ASPNET35;ASPNET4</DefineConstants>
+    <DocumentationFile>ComponentArt.Web.UI.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MVC|AnyCPU' ">
+    <OutputPath>bin\MVC\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>ASPNET2;ATLAS;ASPNET35;ASPNET4;MVC</DefineConstants>
+    <DocumentationFile>ComponentArt.Web.UI.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\BaseMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\BaseMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\BaseMenuItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\BaseNavigator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\ItemLook.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\ItemLookCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\NavigationNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\NavigationNodeCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseClasses\WebControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Calendar\Calendar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Calendar\CalendarClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Calendar\CalendarDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Callback\Callback.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Callback\CallbackClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Callback\CallbackDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPicker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPickerClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPickerColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPickerColorCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPickerDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComboBox\ComboBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComboBox\ComboBoxClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComboBox\ComboBoxDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComboBox\ComboBoxEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComboBox\ComboBoxItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ComboBox\ComboBoxItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dialog\Dialog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dialog\DialogClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dialog\DialogDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Editor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\EditorClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\EditorDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\EditorToolBarCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\Grid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridColumnCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridLevel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridLevelCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Grid\GridWebService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\BaseInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\BaseInputClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\MaskedInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\MaskedInputClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\NumberInput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\NumberInputClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Licensing\RedistributableLicenseProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\Menu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuItemsDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuItemsEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuItemsEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiPage\MultiPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MultiPage\MultiPageDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MultiPage\PageView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MultiPage\PageViewCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavBar\NavBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavBar\NavBarClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavBar\NavBarItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavBar\NavBarItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavBar\NavBarItemsDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavBar\NavBarItemsEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavBar\NavBarItemsEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rotator\Rotator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rotator\RotatorDesign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rotator\Ticker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scheduler\Scheduler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scheduler\SchedulerAppointments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scheduler\SchedulerClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scheduler\SchedulerView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SiteMap\SiteMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SiteMap\SiteMapNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SiteMap\SiteMapNodeCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SiteMap\SiteMapNodesDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SiteMap\SiteMapTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Slider\Slider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Slider\SliderClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Slider\SliderDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Snap\Snap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Snap\SnapClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Snap\SnapDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SpellCheck\SpellCallback.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpellCheck\SpellCheck.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SpellCheck\SpellCheckClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SpellCheck\SpellCheckDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SpellCheck\SpellChecker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\Splitter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\SplitterClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\SplitterDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\SplitterLayout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\SplitterLayoutCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\SplitterPane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\SplitterPaneClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\SplitterPaneContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\SplitterPaneContentCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Splitter\SplitterPaneGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TabStrip\TabStrip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TabStrip\TabStripClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TabStrip\TabStripTab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TabStrip\TabStripTabCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TabStrip\TabStripTabsDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TabStrip\TabStripTabsEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TabStrip\TabStripTabsEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToolBar\ToolBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ToolBar\ToolBarClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ToolBar\ToolBarItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ToolBar\ToolBarItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ToolBar\ToolBarItemsDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ToolBar\ToolBarItemsEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ToolBar\ToolBarItemsEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreeView\TreeView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TreeView\TreeViewClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TreeView\TreeViewNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TreeView\TreeViewNodeCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TreeView\TreeViewNodesDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TreeView\TreeViewNodesEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TreeView\TreeViewNodesEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upload\Upload.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Upload\UploadClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Upload\UploadDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Upload\UploadModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Upload\UploadParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Upload\UploadProgressHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\CallbackHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\ClientEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\ClientTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\ScriptHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils\Utils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Calendar.bmp" />
+    <EmbeddedResource Include="Calendar\client_scripts\A573Q148.js" />
+    <EmbeddedResource Include="Calendar\client_scripts\A573W128.js" />
+    <EmbeddedResource Include="CallBack.bmp" />
+    <EmbeddedResource Include="Callback\client_scripts\A573P191.js" />
+    <EmbeddedResource Include="client_scripts\A573G988.js" />
+    <EmbeddedResource Include="client_scripts\A573L991.js" />
+    <EmbeddedResource Include="client_scripts\A573P290.js" />
+    <EmbeddedResource Include="client_scripts\A573P291.js" />
+    <EmbeddedResource Include="client_scripts\A573S188.js" />
+    <EmbeddedResource Include="client_scripts\A573T069.js" />
+    <EmbeddedResource Include="client_scripts\A573Z388.js" />
+    <EmbeddedResource Include="ColorPicker.bmp" />
+    <EmbeddedResource Include="ColorPicker\client_scripts\A573C779.js" />
+    <EmbeddedResource Include="ColorPicker\images\blank.gif" />
+    <EmbeddedResource Include="ColorPicker\images\crosshair.gif" />
+    <EmbeddedResource Include="ColorPicker\images\grip.gif" />
+    <EmbeddedResource Include="ColorPicker\images\hsvbloom.png" />
+    <EmbeddedResource Include="ColorPicker\images\hsvwheel.png" />
+    <EmbeddedResource Include="ColorPicker\images\hue.png" />
+    <EmbeddedResource Include="ColorPicker\images\saturation.png" />
+    <EmbeddedResource Include="ComboBox.bmp" />
+    <EmbeddedResource Include="ComboBox\client_scripts\A573P123.js" />
+    <EmbeddedResource Include="ComboBox\client_scripts\A573P124.js" />
+    <EmbeddedResource Include="ComboBox\client_scripts\A573P456.js" />
+    <EmbeddedResource Include="DataGrid.bmp" />
+    <EmbeddedResource Include="Dialog.bmp" />
+    <EmbeddedResource Include="Dialog\client_scripts\A573G130.js" />
+    <EmbeddedResource Include="Dialog\client_scripts\A573G999.js" />
+    <EmbeddedResource Include="Editor.bmp" />
+    <EmbeddedResource Include="Editor\client_scripts\A572GI43.js" />
+    <EmbeddedResource Include="Editor\client_scripts\A572GI44.js" />
+    <EmbeddedResource Include="Editor\client_scripts\A572GI45.js" />
+    <EmbeddedResource Include="Editor\client_scripts\A572GI46.js" />
+    <EmbeddedResource Include="Grid.bmp" />
+    <EmbeddedResource Include="Grid\client_scripts\A573G188.js" />
+    <EmbeddedResource Include="Grid\client_scripts\A573J198.js" />
+    <EmbeddedResource Include="Grid\client_scripts\A573L238.js" />
+    <EmbeddedResource Include="Grid\client_scripts\A573R178.js" />
+    <EmbeddedResource Include="Grid\client_scripts\A573R378.js" />
+    <EmbeddedResource Include="Input\client_scripts\A570I431.js" />
+    <EmbeddedResource Include="Input\client_scripts\A570I432.js" />
+    <EmbeddedResource Include="Input\client_scripts\A570I433.js" />
+    <EmbeddedResource Include="Input\client_scripts\A579I432.js" />
+    <EmbeddedResource Include="Input\client_scripts\A579I433.js" />
+    <EmbeddedResource Include="MaskedInput.bmp" />
+    <EmbeddedResource Include="Menu.bmp" />
+    <EmbeddedResource Include="Menu\accessibleStyle.css" />
+    <EmbeddedResource Include="Menu\client_scripts\A573Q288.js" />
+    <EmbeddedResource Include="Menu\client_scripts\A573R388.js" />
+    <EmbeddedResource Include="Menu\client_scripts\A573W888.js" />
+    <EmbeddedResource Include="Menu\defaultStyle.css" />
+    <EmbeddedResource Include="Menu\MenuItemsEditorForm.resx">
+      <DependentUpon>MenuItemsEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiPage.bmp" />
+    <EmbeddedResource Include="MultiPage\client_scripts\A573A488.js" />
+    <EmbeddedResource Include="NavBar.bmp" />
+    <EmbeddedResource Include="NavBar\client_scripts\A573D588.js" />
+    <EmbeddedResource Include="NavBar\client_scripts\A573E888.js" />
+    <EmbeddedResource Include="NavBar\client_scripts\A573M488.js" />
+    <EmbeddedResource Include="NavBar\defaultStyle.css" />
+    <EmbeddedResource Include="NavBar\NavBarItemsEditorForm.resx">
+      <DependentUpon>NavBarItemsEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumberInput.bmp" />
+    <EmbeddedResource Include="Rotator.bmp" />
+    <EmbeddedResource Include="Rotator\client_scripts\A573G788.js" />
+    <EmbeddedResource Include="Rotator\client_scripts\A573Z288.js" />
+    <EmbeddedResource Include="Scheduler.bmp" />
+    <EmbeddedResource Include="SchedulerDaysView.bmp" />
+    <EmbeddedResource Include="Scheduler\client_scripts\A577AB33.js" />
+    <EmbeddedResource Include="Scheduler\client_scripts\A577AB34.js" />
+    <EmbeddedResource Include="Scheduler\client_scripts\A577AB36.js" />
+    <EmbeddedResource Include="Scheduler\schedulerView.css" />
+    <EmbeddedResource Include="SiteMap.bmp" />
+    <EmbeddedResource Include="Slider.bmp" />
+    <EmbeddedResource Include="Slider\client_scripts\A573HR343.js" />
+    <EmbeddedResource Include="Snap.bmp" />
+    <EmbeddedResource Include="Snap\client_scripts\A573J988.js" />
+    <EmbeddedResource Include="Snap\client_scripts\A573K688.js" />
+    <EmbeddedResource Include="Snap\client_scripts\A573P288.js" />
+    <EmbeddedResource Include="Snap\client_scripts\A573T388.js" />
+    <EmbeddedResource Include="Snap\client_scripts\A573U699.js" />
+    <EmbeddedResource Include="Snap\client_scripts\A573V588.js" />
+    <EmbeddedResource Include="Snap\client_scripts\A573W988.js" />
+    <EmbeddedResource Include="Snap\client_scripts\A573X288.js" />
+    <EmbeddedResource Include="SpellCheck.bmp" />
+    <EmbeddedResource Include="SpellCheck\client_scripts\A573O912.js" />
+    <EmbeddedResource Include="Splitter.bmp" />
+    <EmbeddedResource Include="Splitter\client_scripts\A573J482.js" />
+    <EmbeddedResource Include="TabStrip.bmp" />
+    <EmbeddedResource Include="TabStrip\client_scripts\A573B188.js" />
+    <EmbeddedResource Include="TabStrip\client_scripts\A573C488.js" />
+    <EmbeddedResource Include="TabStrip\client_scripts\A573I688.js" />
+    <EmbeddedResource Include="TabStrip\defaultStyle.css" />
+    <EmbeddedResource Include="TabStrip\TabStripTabsEditorForm.resx">
+      <DependentUpon>TabStripTabsEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolBar.bmp" />
+    <EmbeddedResource Include="ToolBar\client_scripts\A573B288.js" />
+    <EmbeddedResource Include="ToolBar\client_scripts\A573H988.js" />
+    <EmbeddedResource Include="ToolBar\client_scripts\A573I788.js" />
+    <EmbeddedResource Include="ToolBar\defaultStyle.css" />
+    <EmbeddedResource Include="ToolBar\ToolBarItemsEditorForm.resx">
+      <DependentUpon>ToolBarItemsEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeView.bmp" />
+    <EmbeddedResource Include="TreeView\client_scripts\A573O788.js" />
+    <EmbeddedResource Include="TreeView\client_scripts\A573R288.js" />
+    <EmbeddedResource Include="TreeView\client_scripts\A573S388.js" />
+    <EmbeddedResource Include="TreeView\defaultStyle.css" />
+    <EmbeddedResource Include="TreeView\TreeViewNodesEditorForm.resx">
+      <DependentUpon>TreeViewNodesEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Upload.bmp" />
+    <EmbeddedResource Include="Upload\client_scripts\A573P101.js" />
+    <None Include="key\ComponentArt.Web.UI.key" />
+    <None Include="Menu\ComponentArt.Menu.xsx">
+      <DependentUpon>ComponentArt.Menu.xsd</DependentUpon>
+    </None>
+    <None Include="NavBar\ComponentArt.NavBar.xsx">
+      <DependentUpon>ComponentArt.NavBar.xsd</DependentUpon>
+    </None>
+    <None Include="SiteMap\ComponentArt.SiteMap.xsx">
+      <DependentUpon>ComponentArt.SiteMap.xsd</DependentUpon>
+    </None>
+    <None Include="TabStrip\ComponentArt.TabStrip.xsx">
+      <DependentUpon>ComponentArt.TabStrip.xsd</DependentUpon>
+    </None>
+    <None Include="TreeView\ComponentArt.TreeView.xsx">
+      <DependentUpon>ComponentArt.TreeView.xsd</DependentUpon>
+    </None>
+    <Content Include="Menu\ComponentArt.Menu.xsd" />
+    <Content Include="NavBar\ComponentArt.NavBar.xsd" />
+    <Content Include="SiteMap\ComponentArt.SiteMap.xsd" />
+    <Content Include="TabStrip\ComponentArt.TabStrip.xsd" />
+    <Content Include="TreeView\ComponentArt.TreeView.xsd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

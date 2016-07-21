@@ -1,0 +1,88 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.TreeViewDesignWindows7"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:cartCommon="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+>
+
+	<UserControl.Resources>
+		<cartCommon:Theme x:Key="windows7TreeViewTheme" 
+                      BaseSource="/ComponentArt.Win.UI.Navigation;component/Themes/generic.xaml" 
+                      Source="/ComponentArt.Win.Themes.Windows7;component/TreeView.xaml"  />
+	</UserControl.Resources>
+
+
+	<Grid>
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TreeView" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Windows 7 TreeView" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="A Windows 7-styled treeview." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\treeview\TreeViewDesignWindows7.xaml,
+            \source\controls\treeview\TreeViewDesignWindows7.xaml.cs" />
+        
+        <ComponentArt:TreeView
+			x:Name="Navigation"
+			Height="400"
+			Width="275"
+			
+			TreeLineStyle="None"
+			FontFamily="Trebuchet MS"
+			FontSize="12"
+			Header="Folder List"
+			CornerRadius="1"
+			InnerCornerRadius="1"
+			Padding="0"
+			Theme="{ StaticResource windows7TreeViewTheme }"
+		>
+			<ComponentArt:TreeViewNode Header="Desktop" IconSource="/Assets/TreeView/windows7/desktop.png" IsExpanded="True">
+				<ComponentArt:TreeViewNode Header="Computer" IconSource="/Assets/TreeView/windows7/computer.png" IsExpanded="True">
+					<ComponentArt:TreeViewNode Header="OS (C:)" IconSource="/Assets/TreeView/windows7/os.png" IsExpanded="True">
+						<ComponentArt:TreeViewNode Header="Downloads" IconSource="/Assets/TreeView/windows7/folder.png" />
+						<ComponentArt:TreeViewNode Header="Drivers" IconSource="/Assets/TreeView/windows7/folder.png" />
+						<ComponentArt:TreeViewNode Header="Inetpub" IconSource="/Assets/TreeView/windows7/folder.png" />
+						<ComponentArt:TreeViewNode Header="Program Files" IconSource="/Assets/TreeView/windows7/folder.png" />
+						<ComponentArt:TreeViewNode Header="ProgramData" IconSource="/Assets/TreeView/windows7/folder.png" />
+						<ComponentArt:TreeViewNode Header="Users" IconSource="/Assets/TreeView/windows7/usersfolder.png" />
+						<ComponentArt:TreeViewNode Header="Windows" IconSource="/Assets/TreeView/windows7/folder.png" />
+					</ComponentArt:TreeViewNode>
+
+					<ComponentArt:TreeViewNode Header="Storage (D:)" IconSource="/Assets/TreeView/windows7/drive.png" />
+
+					<ComponentArt:TreeViewNode Header="DVD Drive (E:)" IconSource="/Assets/TreeView/windows7/dvd.png" />
+
+					<ComponentArt:TreeViewNode Header="Removable Drive (F:)" IconSource="/Assets/TreeView/windows7/removable.png" />
+
+					<ComponentArt:TreeViewNode Header="Network" IconSource="/Assets/TreeView/windows7/network.png" />
+				</ComponentArt:TreeViewNode>
+
+				<ComponentArt:TreeViewNode Header="Control Panel" IconSource="/Assets/TreeView/windows7/controlpanel.png" IsExpanded="True">
+					<ComponentArt:TreeViewNode Header="Adminstrative Tools" IconSource="/Assets/TreeView/windows7/admin.png" />
+					<ComponentArt:TreeViewNode Header="AutoPlay" IconSource="/Assets/TreeView/windows7/autoplay.png" />
+					<ComponentArt:TreeViewNode Header="Backup and Restore Center" IconSource="/Assets/TreeView/windows7/backup.png" />
+					<ComponentArt:TreeViewNode Header="BitLocker Drive Encryption" IconSource="/Assets/TreeView/windows7/folder.png" />
+					<ComponentArt:TreeViewNode Header="Default Programs" IconSource="/Assets/TreeView/windows7/defaults.png" />
+					<ComponentArt:TreeViewNode Header="Ease of Access Center" IconSource="/Assets/TreeView/windows7/access.png" />
+					<ComponentArt:TreeViewNode Header="Fonts" IconSource="/Assets/TreeView/windows7/fonts.png" />
+					<ComponentArt:TreeViewNode Header="Network and Sharing Center" IconSource="/Assets/TreeView/windows7/networks.png" />
+					<ComponentArt:TreeViewNode Header="Parent Controls" IconSource="/Assets/TreeView/windows7/parentalcontrols.png" />
+					<ComponentArt:TreeViewNode Header="Performance Information" IconSource="/Assets/TreeView/windows7/performancetools.png" />
+					<ComponentArt:TreeViewNode Header="Personalization" IconSource="/Assets/TreeView/windows7/personalization.png" />
+					<ComponentArt:TreeViewNode Header="Power Options" IconSource="/Assets/TreeView/windows7/power.png" />
+					<ComponentArt:TreeViewNode Header="Printers" IconSource="/Assets/TreeView/windows7/printers.png" />
+					<ComponentArt:TreeViewNode Header="Programs and Features" IconSource="/Assets/TreeView/windows7/programs.png" />
+					<ComponentArt:TreeViewNode Header="Speech Recognition Center" IconSource="/Assets/TreeView/windows7/speech.png" />
+					<ComponentArt:TreeViewNode Header="Sync Center" IconSource="/Assets/TreeView/windows7/sync.png" />
+					<ComponentArt:TreeViewNode Header="System" IconSource="/Assets/TreeView/windows7/system.png" />
+					<ComponentArt:TreeViewNode Header="User Accounts" IconSource="/Assets/TreeView/windows7/users.png" />
+					<ComponentArt:TreeViewNode Header="Welcome Center" IconSource="/Assets/TreeView/windows7/welcome.png" />
+					<ComponentArt:TreeViewNode Header="Windows SideShow" IconSource="/Assets/TreeView/windows7/sideshow.png" />
+					<ComponentArt:TreeViewNode Header="Windows Update" IconSource="/Assets/TreeView/windows7/update.png" />
+				</ComponentArt:TreeViewNode>
+			</ComponentArt:TreeViewNode>
+		</ComponentArt:TreeView>
+
+	</Grid>
+</UserControl>

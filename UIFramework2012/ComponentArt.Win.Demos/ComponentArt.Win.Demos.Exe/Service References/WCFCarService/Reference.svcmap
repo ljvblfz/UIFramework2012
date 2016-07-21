@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d6ced209-dbff-48ca-9bbc-c6bc47972b7d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1337/Services/WCFCarService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFCarService.xsd" MetadataType="Schema" ID="44a68696-958f-4a5c-b4f8-f3da0e0b3a90" SourceId="1" SourceUrl="http://localhost:1337/Services/WCFCarService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCFCarService1.xsd" MetadataType="Schema" ID="accacb6c-b123-4f7b-b4f0-88166fa60b8f" SourceId="1" SourceUrl="http://localhost:1337/Services/WCFCarService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCFCarService2.xsd" MetadataType="Schema" ID="c2bbef7a-a28b-4577-9c61-adfa794d1aad" SourceId="1" SourceUrl="http://localhost:1337/Services/WCFCarService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCFCarService.disco" MetadataType="Disco" ID="1c42e335-8de3-48d1-975f-dcb79c216a47" SourceId="1" SourceUrl="http://localhost:1337/Services/WCFCarService.svc?disco" />
+    <MetadataFile FileName="WCFCarService.wsdl" MetadataType="Wsdl" ID="2cb08a89-4a27-44c5-9c1f-f580a2dcdeab" SourceId="1" SourceUrl="http://localhost:1337/Services/WCFCarService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,79 @@
+<SiteMap>
+  <item Text="File" IconCssClass="icon_new" >
+    <item Text="New..." IconCssClass="icon_new" />
+    <item Text="Open..." IconCssClass="icon_open" />
+    <item />
+    <item Text="Send To">
+      <item Text="Mail Recipient" IconCssClass="icon_mailRecipient" />
+      <item Text="Mail Recipient (for Review)..." IconCssClass="icon_mailRecipientReview" />
+      <item Text="Mail Recipient (As Attachment)..." NoWrap="true" IconCssClass="icon_mailRecipientAttachment" />
+      <item Text="Routing Recipient..." IconCssClass="icon_routingRecipient" />
+      <item Text="Exchange Folder..." IconCssClass="icon_exchangeFolder" />
+      <item />
+      <item Text="Microsoft Office PowerPoint..." IconCssClass="icon_powerPoint" />
+    </item>
+    <item />
+    <item Text="Save" IconCssClass="icon_save" />
+    <item Text="Save As" />
+    <item Text="Save as Web Page" IconCssClass="icon_saveAsWebPage" />
+    <item Text="File Search" IconCssClass="icon_fileSearch" />
+    <item />
+    <item Text="Page Setup..." />
+    <item Text="Print Preview" IconCssClass="icon_printPreview" />
+    <item Text="Print..." IconCssClass="icon_print" />
+    <item />
+    <item Text="Exit" />
+  </item>
+  <item Text="Edit" >
+    <item Text="Cut" IconCssClass="icon_cut" />
+    <item Text="Copy" IconCssClass="icon_copy" />
+    <item Text="Office Clipboard..." NoWrap="true" IconCssClass="icon_clipboard" />
+    <item Text="Paste" IconCssClass="icon_paste" />
+    <item />
+    <item Text="Find..." IconCssClass="icon_find" />
+    <item Text="Clear" >
+      <item Text="Formats" />
+      <item Text="Contents" />
+    </item>
+  </item>
+  <item Text="View" >
+    <item Text="Normal" IconCssClass="icon_normal" />
+    <item Text="Web Layout" IconCssClass="icon_webLayout" />
+    <item Text="Reading Layout" NoWrap="true" IconCssClass="icon_readingLayout" />
+    <item Text="Outline" IconCssClass="icon_outline" />
+    <item />
+    <item Text="Document Map" IconCssClass="icon_documentMap" />
+    <item Text="Thumbnails" IconCssClass="icon_thumbnails" />
+    <item Text="Header and Footer" NoWrap="true" IconCssClass="icon_headerFooter" />
+  </item>
+  <item Text="Format">
+    <item Text="Font..." IconCssClass="icon_font" />
+    <item Text="Paragraph..." IconCssClass="icon_paragraph" />
+    <item Text="Bullets and Numbering..." NoWrap="true" IconCssClass="icon_bullets"  />
+    <item Text="Borders and Shading..." NoWrap="true" />
+    <item />
+    <item Text="Frames"  >
+      <item Text="Table of Contents in Frame" NoWrap="true" IconCssClass="icon_tableOfContents" />
+      <item Text="New Frames Page" />
+    </item>
+    <item Text="Auto Format..." IconCssClass="icon_autoFormat" />
+    <item Text="Styles and Formatting..." IconCssClass="icon_stylesAndFormatting" />
+    <item Text="Reveal Formatting..." NoWrap="true" IconCssClass="icon_revealFormatting" />
+  </item>
+  <item Text="Help">
+    <item Text="Microsoft Office Word Help" NoWrap="true" IconCssClass="icon_help" />
+    <item Text="Show the Office Assistant" />
+    <item />
+    <item Text="Microsoft Office Online" />
+    <item Text="Contact Us" />
+    <item />
+    <item Text="Word Perfect Help" />
+    <item />
+    <item Text="Check for Updates" />
+    <item Text="Detect and Repair" />
+    <item Text="Activate Product..." />
+    <item Text="Customer Feedback Options..." />
+    <item />
+    <item Text="About Microsoft Office Word" />
+  </item>
+</SiteMap>

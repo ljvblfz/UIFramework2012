@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3069/SalesDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" minOccurs="0" name="range" nillable="true" type="q1:DateRange" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" minOccurs="0" name="dataPointPeriod" type="q2:TimePeriod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" minOccurs="0" name="GetDataResult" nillable="true" type="q3:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductSummaryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" minOccurs="0" name="range" nillable="true" type="q4:DateRange" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductSummaryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" minOccurs="0" name="GetProductSummaryDataResult" nillable="true" type="q5:ArrayOfProductSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDashboardData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" minOccurs="0" name="range" nillable="true" type="q6:DateRange" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" minOccurs="0" name="dataPointPeriod" type="q7:TimePeriod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDashboardDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ComponentArt.Silverlight.Demos.Web" minOccurs="0" name="GetDashboardDataResult" nillable="true" type="q8:DashboardData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

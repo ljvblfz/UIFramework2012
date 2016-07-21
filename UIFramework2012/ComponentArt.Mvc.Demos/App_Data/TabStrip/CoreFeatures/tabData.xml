@@ -1,0 +1,37 @@
+<items>
+  <item Text="News" NavigateUrl="~/TabStrip/CoreFeatures/" >
+    <!--
+    <item Text="Top Stories" NavigateUrl="?page=top_stories" />
+    <item Text="Breaking News" NavigateUrl="?page=breaking_news" />
+    <item Text="World News" NavigateUrl="?page=world_news" />
+    -->
+  </item>
+
+  <item Text="Markets" NavigateUrl="?page=Markets" >
+    <!--
+    <item Text="Commentary" NavigateUrl="?page=commentary" />
+    <item Text="Technology" NavigateUrl="?page=technology" />
+    <item Text="Personal Finance" NavigateUrl="?page=personal_finance" />
+    <item Text="Mutual Funds" NavigateUrl="?page=mutual_funds" />
+    -->
+  </item>
+
+  <item Text="Showbiz" NavigateUrl="?page=Showbiz" >
+    <!--
+    <item Text="Movies" NavigateUrl="?page=movies" />
+    <item Text="Music" NavigateUrl="?page=music" />
+    <item Text="Television" NavigateUrl="?page=television" />
+    <item Text="Books" NavigateUrl="?page=books" />
+    <item Text="Video | Audio" NavigateUrl="?page=video_audio" />
+    -->
+  </item>
+
+  <item Text="Travel" NavigateUrl="?page=Travel" >
+    <!--
+    <item Text="Destinations" NavigateUrl="?page=destinations" />
+    <item Text="Agencies" NavigateUrl="?page=agencies" />
+    <item Text="Photo of the Day" NavigateUrl="?page=photo_of_the_day" />
+    -->
+  </item>
+
+</items>

@@ -1,0 +1,4 @@
+.ctv_TreeView {background-color:#F6F6F6;border:1px solid black;padding:2px;padding-left:5px;}
+.ctv_Node {background-color:#3F3F3F;color:white;font-family:verdana;font-size:11px;padding:2px;padding-left:10px;border:1px;border-color:black;border-top-color:#808080;border-left-color:#808080;border-style:solid;cursor:pointer;} 
+.ctv_HoverNode {background-color:#8D8F95;color:white;font-family:verdana;font-size:11px;padding:2px;padding-left:10px;border:1px;border-color:#555555;border-top-color:#B8B8B9;border-left-color:#B8B8B9;border-style:solid;cursor:pointer;} 
+.ctv_SelectedNode {background-color:#8D8F95;color:white;font-family:verdana;font-size:11px;padding:2px;padding-left:10px;border:1px;border-color:#B8B8B9;border-top-color:#555555;border-left-color:#555555;border-style:solid;cursor:default;} 

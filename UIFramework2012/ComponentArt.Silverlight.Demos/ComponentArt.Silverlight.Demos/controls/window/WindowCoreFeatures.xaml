@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.WindowCoreFeatures"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+>
+    
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Window" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Window Core Features" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An example of the core features available in Window." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\Window\WindowCoreFeatures.xaml,\source\controls\Window\WindowCoreFeatures.xaml.cs" />
+            <Button Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Open Window" Click="Button_Click" Width="125" Height="25"/>
+            <ComponentArt:Window   
+                Width="225"
+                Height="100"
+                Alignment="Center"
+                Title="Window"
+                IsOpen="false"
+                IsModal="false"
+                OpenAnimation="Rise"
+                CloseAnimation="Rise"
+                IsPopup="true"
+                x:Name="Window1"
+            >
+                    <TextBlock Text="This is a Window" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </ComponentArt:Window>
+    </Grid>
+</UserControl>

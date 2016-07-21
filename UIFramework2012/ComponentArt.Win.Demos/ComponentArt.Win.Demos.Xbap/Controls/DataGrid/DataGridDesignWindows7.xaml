@@ -1,0 +1,199 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.DataGridDesignWindows7"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:cartCommon="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Data;assembly=ComponentArt.Win.UI.Data"
+>
+
+	<UserControl.Resources>
+
+    <cartCommon:Theme x:Key="windows7DataGridTheme" 
+                      BaseSource="/ComponentArt.Win.UI.Data;component/Themes/generic.xaml" 
+                      Source="/ComponentArt.Win.Themes.Windows7;component/DataGrid.xaml"  />
+    
+    <Style TargetType="TextBlock" x:Key="ComponentArt_DataGrid_TextBlock">
+      <Setter Property="FontFamily" Value="Trebuchet MS" />
+      <Setter Property="FontSize" Value="12" />
+    </Style>
+    
+	</UserControl.Resources>
+
+
+		<Grid x:Name="LayoutRoot">
+		  <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+      <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Windows 7" />
+		  <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="A Windows 7-styled data grid." />
+      <TextBlock
+        x:Name="DemoCodeFiles"
+        Visibility = "Collapsed"
+        Text="\source\controls\datagrid\DataGridWindows7.xaml,
+              \source\controls\datagrid\DataGridWindows7.xaml.cs" />
+		
+		<ComponentArt:DataGrid
+			x:Name="DataGrid1"
+      Padding="0"
+			Theme="{StaticResource windows7DataGridTheme}"
+			PageSize="18" 
+			VerticalScrollBarVisibility="Hidden" 
+			RunningMode="Client" 
+			ItemsSource="{Binding}" 
+			Width="800" 
+			Height="510"
+			AllowColumnResizing="True"
+			ColumnResizingMode="Distribute"
+			AllowColumnReordering="True"
+			AllowGrouping="True"
+			GroupingMode="ConstantRows"
+      PreExpandGroups="True"
+		>
+			<ComponentArt:DataGrid.Columns>
+				<ComponentArt:DataGridTemplateColumn Binding="{Binding PriorityIcon}" Width="22" AllowResizing="False">
+          <ComponentArt:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Source="{Binding}" Stretch="None" />
+						</DataTemplate>
+					</ComponentArt:DataGridTemplateColumn.CellTemplate>
+					<ComponentArt:DataGridTemplateColumn.CellStyle>
+						<Style TargetType="ComponentArt:DataGridCell">
+							<Setter Property="Foreground" Value="#ff00ff" />
+							<Setter Property="Padding" Value="1" />
+						</Style>
+					</ComponentArt:DataGridTemplateColumn.CellStyle>
+					<ComponentArt:DataGridTemplateColumn.Header>
+						<Image Source="/Assets/DataGrid/Messages/icon_priority.png" Stretch="None" />
+					</ComponentArt:DataGridTemplateColumn.Header>
+				</ComponentArt:DataGridTemplateColumn>
+				<ComponentArt:DataGridTemplateColumn Binding="{Binding EmailIcon}" Width="22" AllowResizing="False">
+					<ComponentArt:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Source="{Binding}" Stretch="None" />
+						</DataTemplate>
+					</ComponentArt:DataGridTemplateColumn.CellTemplate>
+					<ComponentArt:DataGridTemplateColumn.CellStyle>
+						<Style TargetType="ComponentArt:DataGridCell">
+							<Setter Property="Foreground" Value="#ff00ff" />
+							<Setter Property="Padding" Value="1" />
+						</Style>
+					</ComponentArt:DataGridTemplateColumn.CellStyle>
+					<ComponentArt:DataGridTemplateColumn.Header>
+						<Image Source="/Assets/DataGrid/Messages/icon_icon.png" Stretch="None" />
+					</ComponentArt:DataGridTemplateColumn.Header>
+				</ComponentArt:DataGridTemplateColumn>
+      <ComponentArt:DataGridTemplateColumn Binding="{Binding AttachmentIcon}" Width="22" AllowResizing="False">
+					<ComponentArt:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Source="{Binding}" Stretch="None" />
+						</DataTemplate>
+					</ComponentArt:DataGridTemplateColumn.CellTemplate>
+					<ComponentArt:DataGridTemplateColumn.CellStyle>
+						<Style TargetType="ComponentArt:DataGridCell">
+							<Setter Property="Padding" Value="1" />
+						</Style>
+					</ComponentArt:DataGridTemplateColumn.CellStyle>
+					<ComponentArt:DataGridTemplateColumn.Header>
+						<Image Source="/Assets/DataGrid/Messages/icon_attachment.png" Stretch="None" />
+					</ComponentArt:DataGridTemplateColumn.Header>
+				</ComponentArt:DataGridTemplateColumn>
+				<ComponentArt:DataGridTextColumn Binding="{Binding Subject}" Header="Subject" Width="4*" />
+				<ComponentArt:DataGridTextColumn Binding="{Binding LastPostDate}" Header="Last Post" Width="2*"  />
+				<ComponentArt:DataGridTextColumn Binding="{Binding StartedBy}" Header="Started By" Width="1*"  />
+				<ComponentArt:DataGridTextColumn Binding="{Binding Replies}" Header="Replies" Width="1*"  />
+				<ComponentArt:DataGridTextColumn Binding="{Binding TotalViews}" Header="Total Views" Width="1*"  />
+				<ComponentArt:DataGridTemplateColumn Binding="{Binding FlagIcon}" Width="22" AllowResizing="False">
+					<ComponentArt:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Image Source="{Binding}" Stretch="None" />
+						</DataTemplate>
+					</ComponentArt:DataGridTemplateColumn.CellTemplate>
+					<ComponentArt:DataGridTemplateColumn.CellStyle>
+						<Style TargetType="ComponentArt:DataGridCell">
+							<Setter Property="Padding" Value="1" />
+						</Style>
+					</ComponentArt:DataGridTemplateColumn.CellStyle>
+					<ComponentArt:DataGridTemplateColumn.Header>
+						<Image Source="/Assets/DataGrid/Messages/icon_flag.png" Stretch="None" />
+					</ComponentArt:DataGridTemplateColumn.Header>
+				</ComponentArt:DataGridTemplateColumn>
+			</ComponentArt:DataGrid.Columns>
+			
+			<ComponentArt:DataGrid.SliderPopupTemplate>
+				<DataTemplate>
+
+          <Grid Height="60" Width="300">
+
+            <Border Margin="2,2,-2,-2" Background="#1A000000">
+            </Border>
+
+            <Border BorderThickness="1" Width="300" Height="63" Background="#f8fdff">
+
+              <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="24" />
+                  <ColumnDefinition Width="100" />
+                  <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="20"/>
+                  <RowDefinition Height="20"/>
+                  <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Background="#bbd9f0">
+                  <Image Source="{Binding DataItem.EmailIcon}" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="None"/>
+                </Border>
+
+                <Border Background="#bbd9f0" Grid.Row="1">
+                  <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Image Source="{Binding DataItem.PriorityIcon}" Stretch="None"/>
+                    <Image Source="{Binding DataItem.AttachmentIcon}" Stretch="None"/>
+                  </StackPanel>
+                </Border>
+
+
+
+                <TextBlock Padding="3" Text="{Binding DataItem.StartedBy}" Grid.Column="1" Grid.Row="0" />
+                <TextBlock Padding="3" HorizontalAlignment="Right" Text="{Binding DataItem.LastPostDate}" Grid.Column="2" Grid.Row="0" />
+
+                <TextBlock Padding="3" FontWeight="Bold" TextWrapping="NoWrap" Text="{Binding DataItem.Subject}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" />
+
+                <Grid Grid.Row="2" Grid.ColumnSpan="3" Background="Black" HorizontalAlignment="Stretch" >
+
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                  </Grid.ColumnDefinitions>
+
+                  <Border
+                    BorderThickness="0,1,0,0"
+                    Grid.Column="0"
+								>
+                    <StackPanel Orientation="Horizontal" Margin="6,3,3,3" VerticalAlignment="Stretch">
+                      <TextBlock Foreground="White" Text="Page " Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+                      <TextBlock Foreground="White" Text="{Binding PageNumber}" FontWeight="Bold" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+                      <TextBlock Foreground="White" Text=" of " Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+                      <TextBlock Foreground="White" Text="{Binding Owner.PageCount}" FontWeight="Bold" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+                    </StackPanel>
+                  </Border>
+
+                  <Border
+                    BorderThickness="0,1,0,0"
+                    Grid.Column="1"
+								>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="3,3,6,3">
+                      <TextBlock Foreground="White" Text="Message " Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+                      <TextBlock Foreground="White" Text="{Binding RecordNumber}" FontWeight="Bold" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+                      <TextBlock Foreground="White" Text=" of " Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+                      <TextBlock Foreground="White" Text="{Binding Owner.RecordCount}" FontWeight="Bold" Style="{ StaticResource ComponentArt_DataGrid_TextBlock }" />
+                    </StackPanel>
+                  </Border>
+                </Grid>
+
+              </Grid>
+            </Border>
+          </Grid>
+				</DataTemplate>
+			</ComponentArt:DataGrid.SliderPopupTemplate>
+		</ComponentArt:DataGrid>
+	</Grid>
+</UserControl>
+

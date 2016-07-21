@@ -1,0 +1,45 @@
+#hd #prod li a { background-image:url("../img/20121/static.gif"); }
+#hd #prod li.soa { background-image:url("../img/20121/static.gif"); }
+#hd a.logo { background-image:url("../img/20121/hdr/logo.gif"); }
+
+#hd #mnu .l { background-image:url("../img/20121/static.gif"); }
+#hd #mnu .m { background-image:url("../img/20121/horizontal.gif"); }
+#hd #mnu .r { background-image:url("../img/20121/static.gif"); }
+
+.mnu-ajax a { background-image:url("../img/20121/static.gif"); }
+.mnu-ajax-h a { background-image:url("../img/20121/static.gif"); }
+
+
+.mnu-sl a { background-image:url("../img/20121/static.gif"); }
+.mnu-sl-h a { background-image:url("../img/20121/static.gif"); }
+
+.itm-ajax-top { background-image:url("../img/20121/ddn/ajax/static.gif"); }
+.itm-ajax-sep { background-image:url("../img/20121/ddn/ajax/static.gif"); }
+.itm-ajax-btm { background-image:url("../img/20121/ddn/ajax/static.gif"); }
+
+.ttl-ajax { background-image:url("../img/20121/ddn/ajax/vertical.gif"); }
+.ttl-ajax h3 { background-image:url("../img/20121/ddn/ajax/static.gif"); }
+
+.itm-ajax { background-image:url("../img/20121/ddn/ajax/vertical.gif"); }
+.itm-ajax a { background-image:url("../img/20121/ddn/ajax/static.gif"); }
+
+.itm-sl-top { background-image:url("../img/20121/ddn/sl/static.gif"); }
+.itm-sl-sep { background-image:url("../img/20121/ddn/sl/static.gif"); }
+.itm-sl-btm { background-image:url("../img/20121/ddn/sl/static.gif"); }
+
+
+.ttl-sl { background-image:url("../img/20121/ddn/sl/vertical.gif"); }
+.ttl-sl h3 { background-image:url("../img/20121/ddn/sl/static.gif"); }
+.ttl-sl h3.int { background-position:0 -28px; }
+.ttl-sl h3.simp { background-position:0 -49px; }
+.ttl-sl h3.adv { background-position:0 -70px; }
+
+.itm-sl { background-image:url("../img/20121/ddn/sl/vertical.gif"); }
+.itm-sl a { background-image:url("../img/20121/ddn/sl/static.gif"); }
+.itm-sl a:hover { background-position:0 -107px; }
+#ttl div.l { background-image:url("../img/20121/static.gif"); }
+#ttl div.m { background-image:url("../img/20121/horizontal.gif"); }
+#ttl div.r { background-image:url("../img/20121/static.gif"); }
+#mn { display:inline; }
+#ft { background-image:url("../img/20121/static.gif"); }
+#ft ul li.lnk a { background-image:url("../img/20121/static.gif"); }

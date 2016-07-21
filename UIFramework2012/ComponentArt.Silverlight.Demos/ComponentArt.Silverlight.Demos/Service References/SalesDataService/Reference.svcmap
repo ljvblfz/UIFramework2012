@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6eba837b-6052-4064-bb4c-507e19c63afb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2002/SalesDataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesDataService2.wsdl" MetadataType="Wsdl" ID="ee58c5f0-14c1-40dd-ac87-77c430cf8659" SourceId="1" SourceUrl="http://localhost:2002/SalesDataService.svc?wsdl" />
+    <MetadataFile FileName="SalesDataService3.xsd" MetadataType="Schema" ID="760577aa-7619-4193-bde7-5ebcdcace81b" SourceId="1" SourceUrl="http://localhost:2002/SalesDataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SalesDataService31.xsd" MetadataType="Schema" ID="0c7c965e-82f0-4094-bc18-9c90db8aa485" SourceId="1" SourceUrl="http://localhost:2002/SalesDataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SalesDataService1.disco" MetadataType="Disco" ID="09d9f543-b282-43a2-998f-74872abea494" SourceId="1" SourceUrl="http://localhost:2002/SalesDataService.svc?disco" />
+    <MetadataFile FileName="SalesDataService21.wsdl" MetadataType="Wsdl" ID="a4c0f458-ae7e-4cfd-bc43-8beb02035549" SourceId="1" SourceUrl="http://localhost:2002/SalesDataService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SalesDataService32.xsd" MetadataType="Schema" ID="b20c9038-caef-4332-90fe-d124e4a5463f" SourceId="1" SourceUrl="http://localhost:2002/SalesDataService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

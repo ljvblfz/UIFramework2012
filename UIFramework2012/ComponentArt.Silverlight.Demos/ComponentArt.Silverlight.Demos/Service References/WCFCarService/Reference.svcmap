@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3839eee6-4603-42f7-b392-b03a62786a7a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3069/WCFCarService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFCarService.xsd" MetadataType="Schema" ID="0cedb243-5d1a-435c-b025-2d6934be9737" SourceId="1" SourceUrl="http://localhost:3069/WCFCarService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCFCarService.wsdl" MetadataType="Wsdl" ID="41750af4-7db2-4223-896c-e0fef98c4a7c" SourceId="1" SourceUrl="http://localhost:3069/WCFCarService.svc?wsdl" />
+    <MetadataFile FileName="WCFCarService1.xsd" MetadataType="Schema" ID="0b743602-0a2e-4577-a6b6-190495434912" SourceId="1" SourceUrl="http://localhost:3069/WCFCarService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCFCarService2.xsd" MetadataType="Schema" ID="1f7de7a5-d57a-4c76-ba8d-2b415b1b1ea9" SourceId="1" SourceUrl="http://localhost:3069/WCFCarService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCFCarService.disco" MetadataType="Disco" ID="bdfb45b7-3425-4376-94a2-f27de9b6deac" SourceId="1" SourceUrl="http://localhost:3069/WCFCarService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

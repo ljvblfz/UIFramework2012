@@ -1,0 +1,40 @@
+﻿@using ComponentArt.Web.UI
+<script type="text/javascript">
+
+  function NavigatorNavBar_ItemSelect(sender, eventArgs)
+  {
+    if (window.FolderList_TreeView)
+    {
+      var node = FolderList_TreeView.findNodeByProperty('Text', eventArgs.get_item().get_text());
+
+      if (node)
+      {
+        node.select();
+      }
+    }
+  }
+
+</script>
+<div style="overflow: hidden; height: 124px;">
+  @(Html.ComponentArt().NavBar()
+    .ID("NavigationNavBar")
+    .AutoTheming(true)
+    .FillContainer(true)
+    .CssClass("NavigationNavBar")
+    .ImagesBaseUrl("~/Content/Integration/Outlook/navigation_toolbar_images/")
+    .Items(i =>
+    {
+      i.Add().Text("Mail").IconUrl("mail.gif");
+      i.Add().Text("Calendar").IconUrl("calendar.gif");
+      i.Add().Text("Contacts").IconUrl("contacts.gif");
+      i.Add().Text("Tasks").IconUrl("tasks.gif");
+      i.Add().Text("Notes").IconUrl("notes.gif");
+      i.Add().Text("Folder List").IconUrl("folder.gif");
+      i.Add().Text("Shortcuts").IconUrl("shortcuts.gif");
+    })
+    .ClientEvents(c =>
+    {
+      c.ItemSelect("NavigatorNavBar_ItemSelect");
+    })
+  )
+</div>

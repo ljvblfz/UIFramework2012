@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- ContextMenu -->
+<TreeView>
+    <TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Simple Context Menu" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuSimple" />
+      <TreeViewNode Header="Control-based Context Menu" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuCoreFeatures" />
+      <TreeViewNode Header="Custom Context Menu" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuCustom" />
+      <TreeViewNode Header="Context Menu Effects" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuShowTypes" />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-design.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0" >
+      <TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuDesignBlackIce" />
+      <TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuDesignArcticWhite" />
+      <TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuDesignOffice2003" />
+      <TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuDesignOffice2007" />
+      <TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuDesignWindows7" />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-programming.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ContextMenuAPIControl" />
+    </TreeViewNode>
+</TreeView>
+<!-- /ContextMenu -->

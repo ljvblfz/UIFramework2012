@@ -1,0 +1,50 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{ 
+  ViewData["DemoType"] = "Calendar";
+  ViewData["DemoTitle"] = "Multi-month Calendar";
+  ViewData["CodeFiles"] = "/Views/Calendar/DisabledDates.aspx,/Controllers/CalendarController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>Multi-month calendar can be implemented by setting the <b>MonthColumns</b> and <b>MonthRows</b> properties.</li>
+</ul>
+";
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/Themes/ArcticWhite/theme.css")" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .myTitleClass
+    {
+      font-size: larger;
+    }
+    .cart-calendar-month-title
+    {
+      font-weight: normal !important;
+    }
+  </style>
+}
+<div style="width: 500px; height: 300px">
+  @(Html.ComponentArt().Calendar()
+    .ID("Calendar1")
+    .AutoTheming(true)
+    .AllowMultipleSelection(true)
+    .AllowWeekSelection(false)
+    .AllowMonthSelection(false)
+    .ControlType(CalendarControlType.Calendar)
+    .TitleType(CalendarTitleType.VisibleRangeText)
+    .TitleDateFormat("MMMM yyyy")
+    .TitleDateRangeSeparatorString(" - ")
+    .MonthColumns(2)
+    .MonthRows(2)
+    .TitleCssClass("myTitleClass")
+    .SwapSlide(SlideType.Linear)
+    .SwapDuration(400)
+    .ShowMonthTitle(true)
+    .DayNameFormat(DayNameFormat.FirstTwoLetters)
+    .ImagesBaseUrl("~/Content/Calendar/Plain/images/")
+    .PrevImageUrl("cal_prevMonth.gif")
+    .NextImageUrl("cal_nextMonth.gif")
+    .SelectedDate(DateTime.Parse("2005-12-25"))
+    .VisibleDate(DateTime.Parse("2005-11-01"))
+)
+</div>

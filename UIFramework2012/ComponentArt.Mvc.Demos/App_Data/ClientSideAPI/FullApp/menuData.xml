@@ -1,0 +1,25 @@
+<SiteMap>
+  <item ToolTip="Add New Root Node" ID="AddRootNode" ClientSideCommand="Command_AddTopNode();" LookId="TopItemLook" Look-LeftIconUrl="btn_addRoot.gif" Width="22" Height="21" />
+  <item ToolTip="Add New Child Node" ID="AddChildNode" Enabled="false" ClientSideCommand="Command_AddChildNode();" LookId="TopItemLook" Look-LeftIconUrl="btn_addChild.gif" DisabledLook-LeftIconUrl="btn_addChildDisabled.gif" DisabledLook-HoverCssClass="TopMenuItem" Width="22" Height="21" />
+  <item LookId="BreakToolbarItemLook" />
+  <item ToolTip="Edit Node Text" ID="EditNode" Enabled="false" ClientSideCommand="Command_EditNode();" LookId="TopItemLook" Look-LeftIconUrl="btn_rename.gif" DisabledLook-LeftIconUrl="btn_renameDisabled.gif" DisabledLook-HoverCssClass="TopMenuItem" Width="22" Height="21" />
+  <item ToolTip="Remove Node" ID="RemoveNode" Enabled="false" ClientSideCommand="Command_RemoveNode();" LookId="TopItemLook" Look-LeftIconUrl="btn_remove.gif" DisabledLook-LeftIconUrl="btn_removeDisabled.gif" DisabledLook-HoverCssClass="TopMenuItem" Width="22" Height="21" />
+  <item LookId="BreakToolbarItemLook" />
+  <item ToolTip="Select Node Icon" ID="SetNodeIcon" Enabled="false" LookId="TopItemLook" Look-LeftIconUrl="folder.gif" Look-RightIconUrl="arrow_downh.gif" DisabledLook-LeftIconUrl="folder_Disabled.gif" Look-HoverRightIconUrl="arrow_down.gif" DisabledLook-RightIconUrl="spacer.gif" DisabledLook-HoverRightIconUrl="spacer.gif" DisabledLook-HoverCssClass="TopMenuItem" Width="29" Height="21" Look-RightIconWidth="7" Look-RightIconHeigth="3" DisabledLook-RightIconWidth="7" DisabledLook-RightIconHeigth="3">
+    <item Text="ICON: folders.gif" ClientSideCommand="SetNodeIcon('folders.gif');" Look-LeftIconUrl="folders.gif" />
+    <item Text="ICON: folder.gif" ClientSideCommand="SetNodeIcon('folder.gif');" Look-LeftIconUrl="folder.gif" />
+    <item LookId="BreakMenuItemLook" />
+    <item Text="ICON: sentItems.gif" ClientSideCommand="SetNodeIcon('sentItems.gif');" Look-LeftIconUrl="sentItems.gif" />
+    <item Text="ICON: inbox.gif" ClientSideCommand="SetNodeIcon('inbox.gif');" Look-LeftIconUrl="inbox.gif" />
+    <item Text="ICON: drafts.gif" ClientSideCommand="SetNodeIcon('drafts.gif');" Look-LeftIconUrl="drafts.gif" />
+    <item Text="ICON: junk.gif" ClientSideCommand="SetNodeIcon('junk.gif');" Look-LeftIconUrl="junk.gif" />
+    <item LookId="BreakMenuItemLook" />
+    <item Text="ICON: calendar.gif" ClientSideCommand="SetNodeIcon('calendar.gif');" Look-LeftIconUrl="calendar.gif" />
+    <item Text="ICON: contacts.gif" ClientSideCommand="SetNodeIcon('contacts.gif');" Look-LeftIconUrl="contacts.gif" />
+    <item Text="ICON: deleted.gif" ClientSideCommand="SetNodeIcon('deleted.gif');" Look-LeftIconUrl="deleted.gif" />
+    <item Text="ICON: notes.gif" ClientSideCommand="SetNodeIcon('notes.gif');" Look-LeftIconUrl="notes.gif" />
+  </item>
+  <item LookId="BreakToolbarItemLook" />
+  <item ToolTip="Show / Hide Property Grid" ID="TogglePropertyGrid" ClientSideCommand="Command_TogglePropertyGrid();" LookId="TopItemLook" Look-LeftIconUrl="btn_propertyGrid.gif" Width="22" Height="21" />
+  <item Width="100%" LookId="SpacerItemLook" />
+</SiteMap>

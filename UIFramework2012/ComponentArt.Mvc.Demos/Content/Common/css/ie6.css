@@ -1,0 +1,86 @@
+/* main menu */
+.itm-bob-top { background-image:url("../img/20101/ddn/bob/static.gif") }
+.itm-bob-sep { background-image:url("../img/20101/ddn/bob/static.gif") }
+.itm-bob-btm { background-image:url("../img/20101/ddn/bob/static.gif") }
+
+.itm-bob { background-image:url("../img/20101/ddn/bob/vertical.gif") }
+.itm-bob a span.h2 { background-image:url("../img/20101/ddn/bob/static.gif") }
+.itm-bob a:hover { background-image:url("../img/20101/ddn/bob/static.gif") }
+
+.itm-int-top { background-image:url("../img/20101/ddn/int/static.gif") }
+.itm-int-sep { background-image:url("../img/20101/ddn/int/static.gif") }
+.itm-int-btm { background-image:url("../img/20101/ddn/int/static.gif") }
+.itm-int { background-image:url("../img/20101/ddn/int/vertical.gif") }
+.itm-int a span.h2 { background-image:url("../img/20101/ddn/int/static.gif") }
+.itm-int a:hover { background-image:url("../img/20101/ddn/int/static.gif") }
+
+.itm-tech-top { background-image:url("../img/20101/ddn/tech/static.gif"); }
+.itm-tech-sep { background-image:url("../img/20101/ddn/tech/static.gif"); }
+.itm-tech-btm { background-image:url("../img/20101/ddn/tech/static.gif"); }
+
+.ttl-tech { background-image:url("../img/20101/ddn/tech/vertical.gif"); }
+.ttl-tech h3 { background-image:url("../img/20101/ddn/tech/static.gif"); }
+.itm-tech { background-image:url("../img/20101/ddn/tech/vertical.gif"); }
+.itm-tech a { background-image:url("../img/20101/ddn/tech/static.gif"); }
+
+.itm-des-top { background-image:url("../img/20101/ddn/des/static.gif") }
+.itm-des-sep { background-image:url("../img/20101/ddn/des/static.gif") }
+.itm-des-btm { background-image:url("../img/20101/ddn/des/static.gif") }
+.itm-des { background-image:url("../img/20101/ddn/des/vertical.gif") }
+.itm-des a span.h2 { background-image:url("../img/20101/ddn/des/static.gif") }
+.itm-des a:hover { background-image:url("../img/20101/ddn/des/static.gif") }
+
+.itm-ctrl-top { background-image:url("../img/20101/ddn/ctrl/static.gif"); }
+.itm-ctrl-btm { background-image:url("../img/20101/ddn/ctrl/static.gif"); }
+.itm-ctrl { background-image:url("../img/20101/ddn/ctrl/vertical.gif"); }
+.itm-ctrl ul li a span { background-image:url("../img/20101/ddn/ctrl/static.gif"); }
+.itm-ctrl ul li a:hover { background-image:url("../img/20101/ddn/ctrl/static.gif"); }
+
+
+/* treeview navigation */
+#con #mn .mn-l #nav { padding-bottom:0; }
+#con #mn .mn-l #nav .tv .nav-top { background-image:url("../img/20101/nav/static.gif"); }
+#con #mn .mn-l #nav .tv .nav-itm { background-image:url("../img/20101/nav/static.gif"); }
+#con #mn .mn-l #nav .tv .nav-itm-h { background-image:url("../img/20101/nav/static.gif"); }
+#con #mn .mn-l #nav .tv .nav-itm-s { background-image:url("../img/20101/nav/static.gif"); }
+
+
+
+/* content */
+#con { background-image:url("../img/20101/vertical.gif"); }
+
+#hd #prod li a { background-image:url("../img/20101/static.gif") }
+#hd #prod li.ajax { background-image:url("../img/20101/static.gif"); }
+#hd a.logo { background-image:url("../img/20101/hdr/logo.gif"); }
+#hd a.logo:hover { background-position:0 0; }
+#hd #mnu .l { background-image:url("../img/20101/static.gif"); }
+#hd #mnu .m { background-image:url("../img/20101/horizontal.gif"); }
+#hd #mnu .r { background-image:url("../img/20101/static.gif"); }
+.mnu-bob a { background-image:url("../img/20101/static.gif"); }
+.mnu-bob-h a { background-image:url("../img/20101/static.gif"); }
+.mnu-int a { background-image:url("../img/20101/static.gif"); }
+.mnu-int-h a { background-image:url("../img/20101/static.gif"); }
+.mnu-tech a { background-image:url("../img/20101/static.gif"); }
+.mnu-tech-h a { background-image:url("../img/20101/static.gif"); }
+.mnu-des a { background-image:url("../img/20101/static.gif"); }
+.mnu-des-h a { background-image:url("../img/20101/static.gif"); }
+.mnu-ctrl a { background-image:url("../img/20101/static.gif"); }
+.mnu-ctrl-h a { background-image:url("../img/20101/static.gif"); }
+
+.mnu-sep div { background-image:url("../img/20101/static.gif"); }
+
+#ttl div.l { background-image:url("../img/20101/static.gif"); }
+#ttl div.m { background-image:url("../img/20101/horizontal.gif"); }
+#ttl div.m #code { background-image:url("../img/20101/static.gif"); }
+#ttl div.m #ctrl { background-image:url("../img/20101/static.gif"); }
+#ttl div.r { background-image:url("../img/20101/static.gif"); }
+
+
+
+
+
+/* testing
+.itm-bob a img { display:inline;margin:0;padding:0;display:none; }
+.itm-bob a span.h2 { background:#f00;display:inline;margin:0;padding:0; }
+.itm-bob a span.txt { background:#f0f;display:inline;margin:0;padding:0; }
+ */

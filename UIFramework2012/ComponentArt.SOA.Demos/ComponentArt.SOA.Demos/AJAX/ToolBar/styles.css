@@ -1,0 +1,25 @@
+.toolbar
+{
+	background-image: url('toolbar_images/_background.png');
+	border-left:1px solid black;
+	border-right:1px solid black;
+	height:25px;
+}
+
+.itm
+{
+	padding: 3px;
+}
+
+.itm-h
+{
+	border: 1px solid black;
+	padding: 2px;
+}
+
+.itm-a
+{
+	border: 1px solid black;
+	background-image: url('toolbar_images/_background-over.png');
+	padding: 2px;
+}

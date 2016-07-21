@@ -1,0 +1,60 @@
+.ToolBar
+{
+  background-color:#E1E2EC; 
+  background-image:url(images/toolbar_bg.gif);
+  border:solid 1px #7C7C94; 
+  cursor:default;
+}
+
+.ToolBarItem TABLE TR TD IMG,
+.DropDownItem TABLE TR TD.ca_tb_ddn IMG
+{
+  margin:1px;
+  border:none;
+  padding:1px;
+}
+
+.ToolBarItemHover TABLE TR TD IMG
+{
+  margin:0px;
+  border:solid 1px #4B4B6F;
+  padding:1px;
+  background-color:#FFE1AC;
+}
+
+.DropDownItemHover TABLE TR TD.ca_tb_ddn IMG
+{
+  margin:0px;
+  border:solid 1px #4B4B6F;
+  border-left:none;
+  padding:1px;
+  padding-left:2px;
+  background-color:#FFE1AC;
+}
+
+.DropDownItemExpanded TABLE TR TD.ca_tb_ddn IMG
+{
+  margin:0px;
+  border:solid 1px #4B4B6F;
+  padding:1px;
+  border-left:none;
+  padding-left:2px;
+  background-color:#FFE1AC;
+}
+
+.DropDownItem TABLE TR TD.ca_tb_img IMG
+{
+  margin:1px;
+  margin-right:0px;
+  border:none;
+  padding:1px;
+}
+
+.DropDownItemHover TABLE TR TD.ca_tb_img IMG,
+.DropDownItemExpanded TABLE TR TD.ca_tb_img IMG
+{
+  border:solid 1px #4B4B6F;
+  border-right:none;
+  padding:1px;
+  background-color:#FFE1AC;
+}

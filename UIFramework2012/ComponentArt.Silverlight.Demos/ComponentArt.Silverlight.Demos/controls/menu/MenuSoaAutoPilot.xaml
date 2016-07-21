@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.MenuSoaAutoPilot"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    Width="760" Height="450">
+    <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Stretch" Width="760">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Menu" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Menu SOA.UI Auto-Pilot" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Using SOA.UI to populate the Menu." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\menu\MenuSoaAutoPilot.xaml,
+            \source\controls\menu\MenuSoaAutoPilot.xaml.cs"/>
+        <ComponentArt:Menu x:Name="muDemo" 
+                           SoaServiceUrl="../SoaMenuDemoService.svc"
+                           HorizontalAlignment="Stretch" 
+                           VerticalAlignment="Top"></ComponentArt:Menu>
+    </Grid>
+</UserControl>

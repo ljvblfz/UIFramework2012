@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- 
+    Usage:
+    <ScrollBar Style="{StaticResource ComponentArt_ScrollBar}"/>
+    <ScrollViewer Style={StaticResource CArtScrollViewerStyle}"/>
+-->
+    <sys:Double x:Key="ComponentArt_ScrollBar_Width">11</sys:Double>
+    <sys:Double x:Key="ComponentArt_ScrollBar_Height">11</sys:Double>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_Background" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_Foreground" Color="#165993" Opacity=".85"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_MouseOverButton" Color="#9DCCE5" Opacity=".5"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_MouseOverButtonBorder" Color="#35709B"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_PressedButton" Color="#6DC1F4" Opacity=".5"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_PressedButtonBorder" Color="#165993"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_TrackBackground" Color="#EEE"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_TrackBackgroundBorder" Color="#BBB"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_PageButtonBackground" Opacity="0" Color="White"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_PageButtonBackgroundPressed" Opacity="0" Color="White"/>
+    <!-- Fills -->
+    <LinearGradientBrush x:Key="ComponentArt_ScrollBar_ThumbNormal" EndPoint="1,0" StartPoint="0,0">
+        <GradientStop Color="#F1F1F1" Offset="0" />
+        <GradientStop Color="#BFC0C3" Offset="0.9" />
+        <GradientStop Color="#CDCDCD" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_ScrollBar_ThumbHover" EndPoint="1,0" StartPoint="0,0">
+        <GradientStop Color="#FCFDFE" Offset="0" />
+        <GradientStop Color="#E0F2FB" Offset="0.1" />
+        <GradientStop Color="#9DCCE5" Offset="0.9" />
+        <GradientStop Color="#DADCDE" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_ScrollBar_ThumbPressed" EndPoint="1,0" StartPoint="0,0">
+        <GradientStop Color="#FAFCFE" Offset="0" />
+        <GradientStop Color="#CFEDFD" Offset="0.1" />
+        <GradientStop Color="#6DC1F4" Offset="0.9" />
+        <GradientStop Color="#CACFD4" Offset="1" />
+    </LinearGradientBrush>
+    <!-- /Fills -->
+    <!-- Hatches -->
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Normal0" Color="#777777"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Normal1" Color="#bebebe"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Hover0" Color="#558BA7"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Hover1" Color="#78B0CD"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Pressed0" Color="#1A70A1"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Pressed1" Color="#36A5E7"/>
+    <!-- /Hatches -->
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_ThumbBorderBrushNormal" Color="#949494"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_ThumbBorderBrushHover" Color="#35709B"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_ThumbBorderBrushPressed" Color="#165993"/>
+    <sys:String x:Key="ScrollBar_Thumb_RadiusX">0</sys:String>
+    <sys:String x:Key="ScrollBar_Thumb_RadiusY">0</sys:String>
+    <!-- Do not edit below -->
+</ResourceDictionary>

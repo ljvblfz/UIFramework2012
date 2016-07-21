@@ -1,0 +1,111 @@
+﻿/*
+This doesn't have the issue with IE, with the groups often not collapsing when border is none.
+However, it doesn't work in Lynx, because that piece of crap browser is smart enough to hide the groups.
+*/
+
+/*BEGIN some colors*/
+/*  .menu ul {background-color:#DDDDDD;}
+  .menu li {background-color:#EEEEAA;}*/
+/*BEGIN some colors*/
+
+/*BEGIN top-level menu styles*/
+  .menu {display:table;}
+  .menu ul {list-style:none;margin:0;padding:0;display:block;}
+  .menu ul li {display:block;float:left;}
+  .menu ul li span {display:block;}
+  .menu ul li a {display:block;}
+/*END top-level menu styles*/
+
+/* BEGIN default position settings for all pop-up groups */
+  .menu ul ul {position:absolute;}
+  .menu li li {position:relative;clear:both;}
+/* END positioning settings for all pop-up groups */
+
+/* BEGIN default pop-up group (x,y) */
+  .menu ul.horizontal  li  ul {left:auto;  top:auto;}
+  .menu ul.vertical    li  ul {left:162px; top:0px;}
+/* END default pop-up group (x,y) */
+
+/* BEGIN width setting for all (vertical) pop-up groups */
+  .menu li ul.vertical a {width:162px;}
+/* END width setting for all (vertical) pop-up groups */
+
+/* BEGIN pop-up group visibility */
+  /* BEGIN level 1 */
+    .menu li        ul {visibility:hidden;}
+    .menu li:active ul,
+    .menu li:hover  ul {visibility:visible;}
+  /* END level 1 */
+  /* BEGIN level 2 */
+    .menu li        li        ul {visibility:hidden;}
+    .menu li:active li        ul,
+    .menu li:hover  li        ul {visibility:hidden;}
+    .menu li        li:active ul,
+    .menu li        li:hover  ul {visibility:visible;}
+  /* END level 2 */
+  /* BEGIN level 3 */
+    .menu li        li        li        ul {visibility:hidden;}
+    .menu li:active li        li        ul,
+    .menu li:hover  li        li        ul {visibility:hidden;}
+    .menu li        li:active li        ul,
+    .menu li        li:hover  li        ul {visibility:hidden;}
+    .menu li        li        li:active ul,
+    .menu li        li        li:hover  ul {visibility:visible;}
+  /* END level 3 */
+  /* BEGIN level 4 */
+    .menu li        li        li        li        ul {visibility:hidden;}
+    .menu li:active li        li        li        ul,
+    .menu li:hover  li        li        li        ul {visibility:hidden;}
+    .menu li        li:active li        li        ul,
+    .menu li        li:hover  li        li        ul {visibility:hidden;}
+    .menu li        li        li:active li        ul,
+    .menu li        li        li:hover  li        ul {visibility:hidden;}
+    .menu li        li        li        li:active ul,
+    .menu li        li        li        li:hover  ul {visibility:visible;}
+  /* END level 4 */
+  /* BEGIN level 5 */
+    .menu li        li        li        li        li        ul {visibility:hidden;}
+    .menu li:active li        li        li        li        ul,
+    .menu li:hover  li        li        li        li        ul {visibility:hidden;}
+    .menu li        li:active li        li        li        ul,
+    .menu li        li:hover  li        li        li        ul {visibility:hidden;}
+    .menu li        li        li:active li        li        ul,
+    .menu li        li        li:hover  li        li        ul {visibility:hidden;}
+    .menu li        li        li        li:active li        ul,
+    .menu li        li        li        li:hover  li        ul {visibility:hidden;}
+    .menu li        li        li        li        li:active ul,
+    .menu li        li        li        li        li:hover  ul {visibility:visible;}
+  /* END level 5 */
+  /* BEGIN level 6 */
+    .menu li        li        li        li        li        li        ul {visibility:hidden;}
+    .menu li:active li        li        li        li        li        ul,
+    .menu li:hover  li        li        li        li        li        ul {visibility:hidden;}
+    .menu li        li:active li        li        li        li        ul,
+    .menu li        li:hover  li        li        li        li        ul {visibility:hidden;}
+    .menu li        li        li:active li        li        li        ul,
+    .menu li        li        li:hover  li        li        li        ul {visibility:hidden;}
+    .menu li        li        li        li:active li        li        ul,
+    .menu li        li        li        li:hover  li        li        ul {visibility:hidden;}
+    .menu li        li        li        li        li:active li        ul,
+    .menu li        li        li        li        li:hover  li        ul {visibility:hidden;}
+    .menu li        li        li        li        li        li:active ul,
+    .menu li        li        li        li        li        li:hover  ul {visibility:visible;}
+  /* END level 6 */
+  /* BEGIN level 7 */
+    .menu li        li        li        li        li        li        li        ul {visibility:hidden;}
+    .menu li:active li        li        li        li        li        li        ul,
+    .menu li:hover  li        li        li        li        li        li        ul {visibility:hidden;}
+    .menu li        li:active li        li        li        li        li        ul,
+    .menu li        li:hover  li        li        li        li        li        ul {visibility:hidden;}
+    .menu li        li        li:active li        li        li        li        ul,
+    .menu li        li        li:hover  li        li        li        li        ul {visibility:hidden;}
+    .menu li        li        li        li:active li        li        li        ul,
+    .menu li        li        li        li:hover  li        li        li        ul {visibility:hidden;}
+    .menu li        li        li        li        li:active li        li        ul,
+    .menu li        li        li        li        li:hover  li        li        ul {visibility:hidden;}
+    .menu li        li        li        li        li        li:active li        ul,
+    .menu li        li        li        li        li        li:hover  li        ul {visibility:hidden;}
+    .menu li        li        li        li        li        li        li:active ul,
+    .menu li        li        li        li        li        li        li:hover  ul {visibility:visible;}
+  /* END level 7 */
+/* END pop-up group visibility */

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.NumberInputDesignBlackIce"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="NumberInput" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Black Ice NumberInput" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="A Black Ice-styled NumberInput." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\numberinput\NumberInputDesignBlackIce.xaml,
+            \source\controls\numberinput\NumberInputDesignBlackIce.xaml.cs"/>
+        <Border Width="800" Height="600" Background="#eeeeee" CornerRadius="3" BorderBrush="#666666" BorderThickness="1"/>
+
+        <Grid Margin="20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+            </Grid.RowDefinitions>
+
+            <ComponentArt:NumberInput x:Name="MyNumberInput" MaximumValue="1000000" MinimumValue="-1000000" Increment="1000" 
+                                      NumberType="Currency" LargeIncrement="50000" Value="500000" />
+        </Grid>
+    </Grid>
+</UserControl>

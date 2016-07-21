@@ -1,0 +1,33 @@
+﻿@using ComponentArt.Web.UI
+
+@{
+  ViewData["DemoType"] = "Calendar";
+  ViewData["DemoTitle"] = "Theme Switching";
+  ViewData["CodeFiles"] = "/Views/Calendar/ThemeSwitching.aspx,/Controllers/CalendarController.cs,/Views/Shared/ThemeSwitchingCss.ascx,/Views/Shared/ThemeSwitchingInterface.ascx";
+  ViewData["AboutText"] = @"
+  <ul>
+  <li>Calendar's theming functionality is showcased here, which is activated via its AutoTheming property.</li>
+  <li>The changing of the CSS definitions is done by resetting the active stylesheet.</li>
+  </ul>
+  ";    
+}
+
+@section HeadContent
+{
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+}
+
+<table cellpadding="8">
+  <tr>
+    <td style="width:200px">
+      @(Html.ComponentArt().Calendar()
+        .ID("Calendar1")
+        .AutoTheming(true)
+      )
+    </td>
+    <td>
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml") 
+    </td>
+  </tr>
+</table>
+

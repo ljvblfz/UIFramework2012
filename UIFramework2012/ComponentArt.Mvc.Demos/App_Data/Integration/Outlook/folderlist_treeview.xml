@@ -1,0 +1,61 @@
+<Nodes>
+  <TreeViewNode ID="N0" Text="Mailbox" ImageUrl="root.gif" Expanded="true">
+    <TreeViewNode ID="N1" ImageUrl="calendar.gif" Text="Calendar" />
+    <TreeViewNode ID="N2" Text="Contacts" ImageUrl="contacts.gif" />
+    <TreeViewNode ID="N3" Text="Deleted Items" ImageUrl="deleted.gif" UnreadItems="121" TemplateId="UnreadItemsTemplate">
+      <TreeViewNode ImageUrl="deletedFolder.gif" Text="Today" CssClass="GrayedTreeNode" />
+      <TreeViewNode ImageUrl="deletedFolder.gif" Text="Last Week" CssClass="GrayedTreeNode" />
+      <TreeViewNode ImageUrl="deletedFolder.gif" Text="Last Month" CssClass="GrayedTreeNode" />
+    </TreeViewNode>
+    <TreeViewNode ID="N4" Text="Drafts" ImageUrl="drafts.gif" />
+    <TreeViewNode ID="N5" Text="Inbox" ImageUrl="inbox.gif" UnreadItems="1" TemplateId="UnreadItemsTemplate">
+      <TreeViewNode Text="ComponentArt">
+        <TreeViewNode Text="Admin" />
+        <TreeViewNode Text="Alpha" />
+        <TreeViewNode Text="Branding" />
+        <TreeViewNode Text="Business Planning" />
+        <TreeViewNode Text="Finance" />
+        <TreeViewNode Text="Other" />
+        <TreeViewNode Text="Projects" />
+      </TreeViewNode>
+      <TreeViewNode Text="Personal">
+        <TreeViewNode Text="Admin" />
+        <TreeViewNode Text="Alpha" />
+        <TreeViewNode Text="Branding" />
+        <TreeViewNode Text="Business Planning" />
+        <TreeViewNode Text="Corporate" />
+        <TreeViewNode Text="Finance" />
+        <TreeViewNode Text="Other" />
+        <TreeViewNode Text="Projects" />
+      </TreeViewNode>
+      <TreeViewNode Text="Miscellaneous">
+        <TreeViewNode Text="Admin" />
+        <TreeViewNode Text="Alpha" />
+        <TreeViewNode Text="Branding" />
+        <TreeViewNode Text="Business Planning" />
+        <TreeViewNode Text="Corporate" />
+        <TreeViewNode Text="Finance" />
+        <TreeViewNode Text="Other" />
+        <TreeViewNode Text="Projects" />
+      </TreeViewNode>
+    </TreeViewNode>
+    <TreeViewNode ID="N6" Text="Junk E-mail" ImageUrl="junk.gif" InfoItems="17" TemplateId="InfoItemsTemplate" />
+    <TreeViewNode ID="N7" Text="Notes" ImageUrl="notes.gif" />
+    <TreeViewNode ID="N8" Text="Outbox" ImageUrl="outbox.gif" />
+    <TreeViewNode ID="N9" Text="Sent Items" ImageUrl="sentItems.gif" />
+    <TreeViewNode ID="N10" Text="Tasks" ImageUrl="tasks.gif" />
+    <TreeViewNode ID="N11" Text="Search Folders" ImageUrl="search.gif">
+      <TreeViewNode ImageUrl="searchFolder.gif" Text="For Follow Up" CssClass="GrayedTreeNode" />
+      <TreeViewNode ImageUrl="searchFolder.gif" Text="Large Mail" CssClass="GrayedTreeNode" />
+      <TreeViewNode ImageUrl="searchFolder.gif" Text="Unread Mail" CssClass="GrayedTreeNode" />
+    </TreeViewNode>
+  </TreeViewNode>
+  <TreeViewNode Text="Public Folders" ImageUrl="folders.gif ">
+    <TreeViewNode Text="Sales" ImageUrl="folder.gif" />
+    <TreeViewNode Text="Hiring" ImageUrl="folder.gif" />
+    <TreeViewNode Text="HR" ImageUrl="folder.gif" />
+    <TreeViewNode Text="Projects" ImageUrl="folder.gif" />
+    <TreeViewNode Text="Legal" ImageUrl="folder.gif" />
+    <TreeViewNode Text="Marketing" ImageUrl="folder.gif" />
+  </TreeViewNode>
+</Nodes>

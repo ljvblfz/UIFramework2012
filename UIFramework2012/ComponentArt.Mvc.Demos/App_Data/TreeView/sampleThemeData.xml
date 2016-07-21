@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<nodes>
+	<node Text="Mailbox" Expanded="true" IconCssClass="icon-outlook-home" >
+		<node Text="Calendar" IconCssClass="icon-outlook-calendar" ID="nCalendar" />
+		<node Text="Contacts" IconCssClass="icon-outlook-contacts" />
+		<node Text="Deleted Items" Expanded="true" IconCssClass="icon-outlook-trash">
+			<node Text="Today" Enabled="false" IconCssClass="icon-outlook-folder" />
+			<node Text="Last Week" IconCssClass="icon-outlook-folder" />
+			<node Text="Last Month" IconCssClass="icon-outlook-folder" />
+		</node>
+		<node Text="Drafts" IconCssClass="icon-outlook-drafts" />
+		<node Text="Inbox" Expanded="true" IconCssClass="icon-outlook-inbox">
+			<node Text="ComponentArt" IconCssClass="icon-outlook-mailbox" >
+				<node Text="Admin" IconCssClass="icon-outlook-notes" />
+				<node Text="Alpha" IconCssClass="icon-outlook-notes" />
+				<node Text="Branding" IconCssClass="icon-outlook-notes" />
+				<node Text="Business Planning" IconCssClass="icon-outlook-notes" />
+				<node Text="Finance" IconCssClass="icon-outlook-notes" />
+				<node Text="Other" IconCssClass="icon-outlook-notes" />
+				<node Text="Projects" IconCssClass="icon-outlook-notes" />
+			</node>
+			<node Text="Personal" IconCssClass="icon-outlook-mailbox">
+				<node Text="Admin" IconCssClass="icon-outlook-folder" />
+				<node Text="Alpha" IconCssClass="icon-outlook-folder" />
+				<node Text="Branding" IconCssClass="icon-outlook-folder" />
+				<node Text="Business Planning" IconCssClass="icon-outlook-folder" />
+				<node Text="Corporate" IconCssClass="icon-outlook-folder" />
+				<node Text="Finance" IconCssClass="icon-outlook-folder" />
+				<node Text="Other" IconCssClass="icon-outlook-folder" />
+				<node Text="Projects" IconCssClass="icon-outlook-folder" />
+			</node>
+			<node Text="Miscellaneous" IconCssClass="icon-outlook-mailbox">
+				<node Text="Admin" IconCssClass="icon-outlook-folder" />
+				<node Text="Alpha" IconCssClass="icon-outlook-folder" />
+				<node Text="Branding" IconCssClass="icon-outlook-folder" />
+				<node Text="Business Planning" IconCssClass="icon-outlook-folder" />
+				<node Text="Corporate" IconCssClass="icon-outlook-folder" />
+				<node Text="Finance" IconCssClass="icon-outlook-folder" />
+				<node Text="Other" IconCssClass="icon-outlook-folder" />
+				<node Text="Projects" IconCssClass="icon-outlook-folder" />
+			</node>
+		</node>
+	</node>
+</nodes>

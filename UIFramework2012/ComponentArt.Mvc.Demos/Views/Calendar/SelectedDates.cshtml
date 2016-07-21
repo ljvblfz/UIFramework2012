@@ -1,0 +1,55 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{ 
+  ViewData["DemoType"] = "Calendar";
+  ViewData["DemoTitle"] = "Selected Dates";
+  ViewData["CodeFiles"] = "/Views/Calendar/SelectedDates.aspx,/Controllers/CalendarController.cs,/Controllers/Calendar/SelectedDatesController.cs";
+  ViewData["AboutText"] = @"
+  <ul>
+  <li>Changes made to the Calenedar or Picker will persist via the Controller handling the Form state, which feeds the selected and visible dates back into the Page Model and ViewData.</li>
+  </ul>
+  ";
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/Themes/BlackIce/theme.css")" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .picker
+    {
+      font-family: Verdana !important;
+      font-weight: normal !important;
+    }
+  </style>
+}
+<form method="post">
+Calendar:
+<div style="width: 230px; height: 180px; margin: 10px;">
+  @(Html.ComponentArt().Calendar()
+    .ID("Calendar1")
+    .AutoTheming(true)
+    .AllowMultipleSelection(false)
+    .AllowMonthSelection(true)
+    .AllowWeekSelection(true)
+    .VisibleDate(DateTime.Parse("2007-10-15"))
+    .SelectedDate(DateTime.Parse("2007-10-15"))
+    .DayNameFormat(DayNameFormat.FirstTwoLetters)
+    .SelectMonthText("&curren;")
+    .SelectWeekText("&raquo;")
+)
+</div>
+<br />
+<br />
+Picker:<br />
+<br />
+@(Html.ComponentArt().Calendar("MyPickerDate")
+    .ID("Picker1")
+    .VisibleDate(DateTime.Parse("2007-10-15"))
+    .SelectedDate(DateTime.Parse("2007-10-15"))
+    .ControlType(CalendarControlType.Picker)
+    .PickerFormat(DateTimeFormatType.Custom)
+    .PickerCustomFormat("MMMM dd, yyyy h:mm:ss tt")
+    .PickerCssClass("picker")
+)
+<br />
+<br />
+<input type="submit" value="Post" />
+</form>

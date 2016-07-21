@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.TreeViewSOAUIEditing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TreeView" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="SOA.UI Edit Notifications Web Service" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases SOA.UI data editing automation in TreeView." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\treeview\TreeViewSOAUIEditing.xaml,
+            \source\controls\treeview\TreeViewSOAUIEditing.xaml.cs" />
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <my:TreeView x:Name="myTree" SoaServiceUrl="../SoaTreeViewEdit.svc" IsSoaEditingEnabled="True" Grid.Row="1" AllowDrag="True" AllowDrop="True"
+                         AllowNodeEditing="True" HeaderVisibility="Collapsed" CornerRadius="0 0 5 5" InnerCornerRadius="0 0 5 5" BorderThickness="1"
+                         BeforeSoaRequestSent="TreeView_BeforeSoaRequestSent" BeforeSoaResponseProcessed="TreeView_BeforeSoaResponseProcessed" 
+                         Height="500" Width="300"/>
+
+            <my:ToolBar Grid.Row="0" CornerRadius="5 5 0 0" BaseImageSource="/ComponentArt.Silverlight.Demos;component/Assets/TreeView/TreeViewSOAUIEditing/" ItemTextImageRelation="ImageOnly" Orientation="Horizontal" ItemClick="ToolBar_ItemClick">
+                <my:ToolBar.VerticalSeparatorItemTemplate>
+                    <DataTemplate>
+                        <Border Height="5">
+                            <StackPanel Orientation="Vertical">
+                                <Rectangle Width="20" Fill="#FF333333" Height="1" />
+                                <Rectangle Width="20" Fill="#FFCCCCCC" Height="1" />
+                                <Rectangle Width="20" Fill="#FF333333" Height="1" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </my:ToolBar.VerticalSeparatorItemTemplate>
+                <my:ToolBar.HorizontalSeparatorItemTemplate>
+                    <DataTemplate>
+                        <Border Height="24">
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Width="1" Fill="#FF333333" Height="20" />
+                                <Rectangle Width="1" Fill="#FFCCCCCC" Height="20" />
+                                <Rectangle Width="1" Fill="#FF333333" Height="20" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </my:ToolBar.HorizontalSeparatorItemTemplate>
+                <my:ToolBarItem x:Name="NewRootNode" IconSource="addroot.png" ToolTipContent="Add new root node"/>
+                <my:ToolBarItem x:Name="NewChildNode" IconSource="addnode.png" DisabledIconSource="disabled_addnode.png" IsEnabled="False" ToolTipContent="Add new child node"/>
+                <my:ToolBarSeparatorItem />
+                <my:ToolBarItem x:Name="EditNode" IconSource="rename.png" DisabledIconSource="disabled_rename.png" IsEnabled="False" ToolTipContent="Edit node"/>
+                <my:ToolBarItem x:Name="DeleteNode" IconSource="delete.png" DisabledIconSource="disabled_delete.png" IsEnabled="False" ToolTipContent="Delete node"/>
+            </my:ToolBar>
+            
+        </Grid>
+        <Border Grid.Column="1" Margin="50 0 0 0" HorizontalAlignment="Left" Width="250" Height="300" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10 5">
+                <CheckBox x:Name="endUserFeedback" IsChecked="False"/>
+                    <TextBlock Text="Show end-user feedback"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="10 5">
+                    <CheckBox x:Name="cancelEvents" IsChecked="False"/>
+                    <TextBlock Text="Cancel events on the server"/>
+                </StackPanel>
+                <TextBlock Grid.Row="2" Text="SOA.UI web service calls:" VerticalAlignment="Top" x:Name="LongDescription" Margin="10 10 10 5" Visibility="Visible" TextWrapping="Wrap" />
+                <ListBox Grid.Row="3" x:Name="eventList" Margin="10 0 0 0" Width="230" HorizontalAlignment="Left" />
+                <Button Grid.Row="4" x:Name="Clear" Content="  Clear  " Click="Clear_Click" HorizontalAlignment="Center" Margin="10" />
+            </Grid>
+        </Border>
+
+    </Grid>
+</UserControl>

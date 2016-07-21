@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.HtmlEditorOffice2007"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"    
+    xmlns:ComponentArtInput="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common">
+    <UserControl.Resources>
+        <!-- HtmlEditor -->
+        <ComponentArtTheming:Theme
+			x:Key="Office2007HtmlEditorTheme" 
+			BaseSource="/ComponentArt.Silverlight.UI.Input;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Silverlight.Themes.Office2007;component/HtmlEditor.xaml"
+		/>
+        <!-- /HtmlEditor -->
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="HtmlEditor" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="HtmlEditor Office 2007" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo illustrates the Office 2007 Theme of HtmlEditor." />
+    <TextBlock x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\htmleditor\HtmlEditorOffice2007.xaml,\source\controls\htmleditor\HtmlEditorOffice2007.xaml.cs" />
+        <ComponentArtInput:HtmlEditor 
+            Width="500"
+            Height="500"
+            ToolBarHeight="60"
+            Theme="{StaticResource Office2007HtmlEditorTheme}"
+            SupportUri="ClientBin/Controls/HtmlEditor/ComponentArt.Silverlight.Support.HtmlEditor.Office2007.xap"
+            ToolBarUri="HtmlEditor.ToolBar.xml"
+            x:Name="HtmlEditor6" 
+            HtmlContent="&lt;h2&gt;ComponentArt HtmlEditor for Silverlight&lt;/h2&gt;&lt;h3&gt;The New Lightweight, Feature-packed and Easy to Configure Web Editing Control &lt;/h3&gt;&lt;div&gt;We are excited to announce the imminent release of ComponentArt HtmlEditor for Silverlight. Major features include:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Supports the most commonly used Html formatting options&lt;/li&gt;&lt;li&gt;Smooth, responsive and highly customizable UI&lt;/li&gt;&lt;li&gt;Powerful client-side API&lt;/li&gt;&lt;li&gt;And much more...&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;For more information check &lt;a title=&quot;http://www.componentart.com/&quot; href=&quot;http://www.componentart.com/&quot;&gt;ComponentArt.com&lt;/a&gt; or subscribe to the ComponentArt &lt;a title=&quot;http://www.componentart.com/publish/news.xml&quot; href=&quot;http://www.componentart.com/publish/news.xml&quot;&gt;news RSS feed&lt;/a&gt;.&lt;/div&gt;"
+           >
+        </ComponentArtInput:HtmlEditor>
+    </Grid>
+</UserControl>

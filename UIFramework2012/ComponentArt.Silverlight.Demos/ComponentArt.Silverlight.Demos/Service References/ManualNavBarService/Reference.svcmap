@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="92cdd001-c1d4-49fe-8cf6-a6488a72b8b4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3069/ManualNavBarService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ManualNavBarService2.wsdl" MetadataType="Wsdl" ID="567d4ac5-e295-4b5b-832b-ce5120883d97" SourceId="1" SourceUrl="http://localhost:3069/ManualNavBarService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ManualNavBarService3.xsd" MetadataType="Schema" ID="57c47e5e-ff5f-4e40-9096-9cf1fa2c79af" SourceId="1" SourceUrl="http://localhost:3069/ManualNavBarService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ManualNavBarService1.disco" MetadataType="Disco" ID="2c4c5128-fa44-4753-98cd-ecd7b44849df" SourceId="1" SourceUrl="http://localhost:3069/ManualNavBarService.svc?disco" />
+    <MetadataFile FileName="ManualNavBarService31.xsd" MetadataType="Schema" ID="2d0a4428-8f8c-4814-ba64-77ed413e321d" SourceId="1" SourceUrl="http://localhost:3069/ManualNavBarService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ManualNavBarService32.xsd" MetadataType="Schema" ID="eef89a9b-aab6-49c6-81df-80c5346f36da" SourceId="1" SourceUrl="http://localhost:3069/ManualNavBarService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ManualNavBarService21.wsdl" MetadataType="Wsdl" ID="855bbd17-5ceb-4143-89fa-4dceb9f876a8" SourceId="1" SourceUrl="http://localhost:3069/ManualNavBarService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

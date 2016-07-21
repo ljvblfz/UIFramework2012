@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Nodes>
+	<Node Text="Integration Demos" ClientTemplateId="TopLevelItemTemplate" SubGroupCssClass="mnu-grp-int" Value="mnu-int">
+		<Node ClientTemplateId="SeparatorTemplate" Value="itm-int-top" />
+		<Node
+			Text="Outlook 2007"
+			Description="Built using DataGrid, Menu, TreeView, NavBar, ToolBar &amp; Splitter."
+			Image="outlook.png"
+			NavigateUrl="~/integration/outlook/"
+			ClientTemplateId="IntegrationTemplate"
+			TextWrap="true"
+			CssClass="out"
+		/>
+
+		<Node ClientTemplateId="SeparatorTemplate" Value="itm-int-sep" />
+
+		<Node
+			Text="Feed Browser"
+			Description="Built using DataGrid, Menu, TreeView, ToolBar, &amp; TabStrip controls."
+			Image="feedbrowser.png"
+			NavigateUrl="~/integration/feedbrowser/"
+			ClientTemplateId="IntegrationTemplate"
+			TextWrap="true"
+			Class="feed"
+		/>
+
+		<Node ClientTemplateId="SeparatorTemplate" Value="itm-int-btm" />
+	</Node>
+
+	<Node ClientTemplateId="SeparatorTemplate" Enabled="false" Value="mnu-sep" />
+
+	<Node Text="Technology Showcase" ClientTemplateId="TopLevelItemTemplate" SubGroupCssClass="mnu-grp-tech" Value="mnu-tech">
+		<Node ClientTemplateId="SeparatorTemplate" Value="itm-tech-top" />
+
+		<Node Text="Client-Side APIs" Value="api" ClientTemplateId="TechnologyTemplateTitle" Enabled="false" />
+		<Node Text="Client-Side Creation" NavigateUrl="~/clientSideAPI/creation/" ClientTemplateId="TechnologyTemplate" />
+		<Node Text="Full Client-Side App" NavigateUrl="~/clientSideAPI/fullApp/" ClientTemplateId="TechnologyTemplate" />
+
+		<Node ClientTemplateId="SeparatorTemplate" Enabled="false" Value="itm-tech-sep" />
+
+		<Node Text="MVC-Specific Features" Value="mvc" ClientTemplateId="TechnologyTemplateTitle" Enabled="false" />
+		<Node Text="DataGrid AJAX Paging, Sorting, Grouping" NavigateUrl="~/datagrid/CallbackRunningMode/" ClientTemplateId="TechnologyTemplate" />
+		<Node Text="DataGrid Automatic Binding to Model" NavigateUrl="~/datagrid/coreFeatures/" ClientTemplateId="TechnologyTemplate" />
+		<Node Text="ComboBox AJAX Auto-Complete" NavigateUrl="~/ComboBox/CoreFeaturesAjax/" ClientTemplateId="TechnologyTemplate" />
+		<Node Text="ComboBox Selection Posting" NavigateUrl="~/ComboBox/SelectedItem/" ClientTemplateId="TechnologyTemplate" />
+
+		<Node ClientTemplateId="SeparatorTemplate" Value="itm-tech-btm" Enabled="false" />
+	</Node>
+
+
+	<Node ClientTemplateId="SeparatorTemplate" Enabled="false" Value="mnu-sep" />
+
+	<Node Text="Design Showcase" ClientTemplateId="TopLevelItemTemplate" SubGroupCssClass="mnu-grp-des" Value="mnu-des">
+		<Node ClientTemplateId="SeparatorTemplate" Value="itm-des-top" Enabled="false" />
+
+		<Node
+			Text="Themes"
+			Description="Built-in visual styles &#x2013; Office 2010, Outlook 2007, Black Ice and more."
+			Image="theming.jpg"
+			NavigateUrl="~/design/themes/"
+			ClientTemplateId="DesignTemplate"
+			TextWrap="true"
+			Class="rend"
+		/>
+
+		<Node ClientTemplateId="SeparatorTemplate" Value="itm-des-btm" Enabled="false" />
+	</Node>
+
+	<Node ClientTemplateId="SeparatorTemplate" Enabled="false" Value="mnu-sep" />
+
+	<Node Text="Individual Controls" ClientTemplateId="TopLevelItemTemplate" SubGroupCssClass="mnu-grp-hlp" Value="mnu-hlp">
+		<Node ClientTemplateId="SeparatorTemplate" Value="itm-hlp-top" Enabled="false" />
+		<Node ClientTemplateId="ControlTemplate" />
+		<Node ClientTemplateId="SeparatorTemplate" Value="itm-hlp-btm" Enabled="false" />
+	</Node>
+</Nodes>

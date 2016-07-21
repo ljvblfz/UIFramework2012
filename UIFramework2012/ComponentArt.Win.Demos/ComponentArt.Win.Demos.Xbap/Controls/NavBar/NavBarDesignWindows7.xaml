@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.NavBarDesignWindows7"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+	xmlns:cartCommon="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+>
+    <UserControl.Resources>
+        <cartCommon:Theme
+			x:Key="Windows7NavBarTheme" 
+			BaseSource="/ComponentArt.Win.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Win.Themes.Windows7;component/NavBar.xaml"
+		/>
+    </UserControl.Resources>
+    <Grid>
+  	<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="NavBar" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Core Features" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases NavBar's Windows 7 theme." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\NavBar\NavBarDesignWindows7.xaml" />
+        
+        <my:NavBar
+			x:Name="MyNavBar"
+			Height="340"
+			Width="220" 
+			TextImageRelation="ImageBeforeText" 
+			GroupItemHeaderHorizontalAlignment="Left"
+			ItemHeaderHorizontalAlignment="Left"
+			Theme="{ StaticResource Windows7NavBarTheme }"
+			FontFamily="Trebuchet MS"
+			CornerRadius="2"
+			BorderBrush="#acb8c5"
+			Padding="0"
+		>
+
+			<my:NavBarItem Header="Mail" IsSelected="True" IconSource="/Assets/NavBar/small/mail.png">
+				<my:NavBarItem Header="Mailbox" IconSource="/Assets/NavBar/small/mailbox.png" />
+				<my:NavBarItem Header="Inbox" IconSource="/Assets/NavBar/small/inbox.png"/>
+				<my:NavBarItem Header="Drafts" IconSource="/Assets/NavBar/small/drafts.png"/>
+				<my:NavBarItem Header="Outbox" IconSource="/Assets/NavBar/small/outbox.png" />
+				<my:NavBarItem Header="Junk E-mail" IconSource="/Assets/NavBar/small/junk.png"/>
+				<my:NavBarItem Header="Deleted Items" IconSource="/Assets/NavBar/small/deleted.png" />
+				<my:NavBarItem Header="Search Folders" IconSource="/Assets/NavBar/small/search.png" />
+				<my:NavBarItem Header="Sent Items" IconSource="/Assets/NavBar/small/sent.png" />
+			</my:NavBarItem>
+
+			<my:NavBarItem Header="Notes" IconSource="/Assets/NavBar/small/notes.png">
+				<my:NavBarItem Header="Icons" IconSource="/Assets/NavBar/small/notes.png" />
+				<my:NavBarItem Header="Note List" IconSource="/Assets/NavBar/small/notes.png"/>
+				<my:NavBarItem Header="Last Seven Days" IconSource="/Assets/NavBar/small/notes.png"/>
+				<my:NavBarItem Header="By Category" IconSource="/Assets/NavBar/small/notes.png" />
+				<my:NavBarItem Header="By Color" IconSource="/Assets/NavBar/small/notes.png"/>
+			</my:NavBarItem>
+
+			<my:NavBarItem Header="Contacts" IconSource="/Assets/NavBar/small/contacts.png">
+				<my:NavBarItem Header="Address Cards" IconSource="/Assets/NavBar/small/contacts.png" />
+				<my:NavBarItem Header="Details Address List" IconSource="/Assets/NavBar/small/contacts.png"/>
+				<my:NavBarItem Header="By Category" IconSource="/Assets/NavBar/small/contacts.png"/>
+				<my:NavBarItem Header="By Company" IconSource="/Assets/NavBar/small/contacts.png" />
+				<my:NavBarItem Header="By Follow-up Flag" IconSource="/Assets/NavBar/small/contacts.png"/>
+			</my:NavBarItem>
+		</my:NavBar>
+    </Grid>
+</UserControl>

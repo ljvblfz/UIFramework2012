@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Nodes>
+	<Node Text="Welcome to ComponentArt.com" NavigateUrl="/default.aspx" />
+
+	<Node Text="Products">
+
+		<Node Text="Silverlight" NavigateUrl="~/silverlight/">
+			<Node Text="Overview" NavigateUrl="~/silverlight/default.aspx" />
+			<Node Text="ContextMenu" NavigateUrl="~/silverlight/contextmenu.aspx" />
+			<Node Text="DataGrid" NavigateUrl="~/silverlight/datagrid.aspx" />
+			<Node Text="DragDrop" NavigateUrl="~/silverlight/dragdrop.aspx" />
+			<Node Text="ItemFlow" NavigateUrl="~/silverlight/itemflow.aspx" />
+			<Node Text="Menu" NavigateUrl="~/silverlight/menu.aspx" />
+			<Node Text="ToolBar" NavigateUrl="~/silverlight/toolbar.aspx" />
+			<Node Text="TreeView" NavigateUrl="~/silverlight/treeview.aspx" />
+			<Node Text="Upload" NavigateUrl="~/silverlight/upload.aspx" />
+		</Node>
+
+		<Node Text="Web.UI" NavigateUrl="/webui/">
+			<Node Text="Overview" NavigateUrl="/webui/default.aspx" />
+			<Node Text="Features" NavigateUrl="/webui/default.aspx?tab=features" />
+			<Node Text="ASP.NET AJAX" NavigateUrl="/webui/ajax.aspx" />
+			<Node Text="Roadmap" NavigateUrl="/webui/roadmap.aspx" />
+			<Node Text="Web.UI for Silverlight" NavigateUrl="/webui/silverlight.aspx" />
+
+			<Node Text="Demos" NavigateUrl="/webui/demos/default.aspx">
+				<Node Text="Integration Demos">
+					<Node Text="ComponentArt Editor" NavigateUrl="~/webui/demos/demos_integration/editor/default.aspx" />
+					<Node Text="ComponentArt Editor (Arctic White Skin)" NavigateUrl="~/webui/demos/demos_integration/editor/arcticwhite.aspx" />
+					<Node Text="Outlook 2007" NavigateUrl="~/webui/demos/demos_integration/outlook/default.aspx" />
+					<Node Text="Windows Vista Explorer" NavigateUrl="~/webui/demos/demos_integration/explorer/default.aspx" />
+					<Node Text="Office 2007 Ribbon" NavigateUrl="~/webui/demos/demos_integration/ribbon/default.aspx" />
+					<Node Text="ComponentArt Grid" NavigateUrl="~/webui/demos/demos_integration/grid/default.aspx" />
+				</Node>
+
+				<Node Text="AJAX Techniques">
+					<Node Text="Technique 1 &amp;ndash; ASP.NET AJAX UpdatePanel" NavigateUrl="~/webui/demos/demos_ajax-techniques/technique1/default.aspx" />
+					<Node Text="Technique 2 &amp;ndash; ComponentArt CallBack " NavigateUrl="~/webui/demos/demos_ajax-techniques/technique2/default.aspx" />
+					<Node Text="Technique 3 &amp;ndash; Client Controls + Web Services" NavigateUrl="~/webui/demos/demos_ajax-techniques/technique3/default.aspx" />
+				</Node>
+
+				<Node Text="Technology Showcase">
+					<Node Text="Client-Side APIs">
+						<Node Text="Client-side Creation" NavigateUrl="~/webui/demos/demos_technology_showcase/client_api/client_sideCreation/default.aspx" />
+						<Node Text="Full Client-side App" NavigateUrl="~/webui/demos/demos_technology_showcase/client_api/full_clientSideApp/default.aspx" />
+					</Node>
+					<Node Text="Web Services and AJAX">
+						<Node Text="Web Service Creation" NavigateUrl="~/webui/demos/demos_technology-showcase/web-services_ajax/web_serviceCreation/default.aspx" />
+						<Node Text="Full Web Service App" NavigateUrl="~/webui/demos/demos_technology-showcase/web-services_ajax/full_webServiceApp/default.aspx" />
+						<Node Text="Grid: Load From Web Service" NavigateUrl="~/webui/demos/demos_technology-showcase/web-services_ajax/grid_loadFromWebService/default.aspx" />
+						<Node Text="Grid: WebService Running Mode" NavigateUrl="~/webui/demos/demos_technology-showcase/web-services_ajax/grid_webServiceRunningMode/default.aspx" />
+						<Node Text="TreeView: Load From Web Service" NavigateUrl="~/webui/demos/demos_technology-showcase/web-services_ajax/treeview_loadFromWebService/default.aspx" />
+						<Node Text="AJAX With Client-side Caching" NavigateUrl="~/webui/demos/demos_technology-showcase/web-services_ajax/aJAX_withClientSideCaching/default.aspx" />
+					</Node>
+				</Node>
+
+				<Node Text="Control-Specific">
+					<Node Text="Calendar" NavigateUrl="~/webui/demos/demos_control-specific/calendar/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/calendardemos.xml" Value="Control" />
+					<Node Text="CallBack" NavigateUrl="~/webui/demos/demos_control-specific/callback/features/ajax_windowsexplorer/webform1.aspx" SiteMapXmlFile="~/common/xml/callbackdemos.xml" Value="Control" />
+					<Node Text="ColorPicker" NavigateUrl="~/webui/demos/demos_control-specific/colorpicker/features/core_features/default.aspx" SiteMapXmlFile="~/common/xml/colorpickerdemos.xml" Value="Control" />
+					<Node Text="ComboBox" NavigateUrl="~/webui/demos/demos_control-specific/combobox/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/comboboxdemos.xml" Value="Control" />
+					<Node Text="Dialog" NavigateUrl="~/webui/demos/demos_control-specific/dialog/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/dialogdemos.xml" Value="Control" />
+					<Node Text="Editor" NavigateUrl="~/webui/demos/demos_control-specific/editor/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/editordemos.xml" Value="Control" />
+					<Node Text="Grid" NavigateUrl="~/webui/demos/demos_control-specific/grid/features/ajax_caching/webform1.aspx" SiteMapXmlFile="~/common/xml/griddemos.xml" Value="Control" />
+					<Node Text="Input" NavigateUrl="~/webui/demos/demos_control-specific/input/features/core_features/default.aspx" SiteMapXmlFile="~/common/xml/inputdemos.xml" Value="Control" />
+					<Node Text="Menu" NavigateUrl="~/webui/demos/demos_control-specific/menu/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/menudemos.xml" Value="Control" />
+					<Node Text="MultiPage" NavigateUrl="~/webui/demos/demos_control-specific/multipage/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/multipagedemos.xml" Value="Control" />
+					<Node Text="NavBar" NavigateUrl="~/webui/demos/demos_control-specific/navbar/design/outlook_2003/webform1.aspx" SiteMapXmlFile="~/common/xml/navbardemos.xml" Value="Control" />
+					<Node Text="Rotator" NavigateUrl="~/webui/demos/demos_control-specific/rotator/design/simple_rotator/webform1.aspx" SiteMapXmlFile="~/common/xml/rotatordemos.xml" Value="Control" />
+					<Node Text="SiteMap" NavigateUrl="~/webui/demos/demos_control-specific/sitemap/features/basic_treelayout/webform1.aspx" SiteMapXmlFile="~/common/xml/sitemapdemos.xml" Value="Control" />
+					<Node Text="Slider" NavigateUrl="~/webui/demos/demos_control-specific/slider/features/core_features/default.aspx" SiteMapXmlFile="~/common/xml/sliderdemos.xml" Value="Control" />
+					<Node Text="Snap" NavigateUrl="~/webui/demos/demos_control-specific/snap/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/snapdemos.xml" Value="Control" />
+					<Node Text="SpellCheck" NavigateUrl="~/webui/demos/demos_control-specific/spellcheck/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/spellcheckdemos.xml" Value="Control" />
+					<Node Text="Splitter" NavigateUrl="~/webui/demos/demos_control-specific/splitter/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/splitterdemos.xml" Value="Control" />
+					<Node Text="TabStrip" NavigateUrl="~/webui/demos/demos_control-specific/tabstrip/features/navigation_tabstrip/webform1.aspx" SiteMapXmlFile="~/common/xml/tabstripdemos.xml" Value="Control" />
+					<Node Text="ToolBar" NavigateUrl="~/webui/demos/demos_control-specific/toolbar/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/toolbardemos.xml" Value="Control" />
+					<Node Text="TreeView" NavigateUrl="~/webui/demos/demos_control-specific/treeview/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/treeviewdemos.xml" Value="Control" />
+					<Node Text="Upload" NavigateUrl="~/webui/demos/demos_control-specific/upload/features/core_features/webform1.aspx" SiteMapXmlFile="~/common/xml/uploaddemos.xml" Value="Control" />
+				</Node>
+
+				<Node Text="Platform-Specific">
+					<Node Text="ASP.NET AJAX">
+						<Node Text="AJAX Windows Explorer" NavigateUrl="~/webui/demos/demos_platform-specific/aspnetajax/windows_explorer/default.aspx" />
+						<Node Text="AJAX Image Gallery" NavigateUrl="~/webui/demos/demos_platform-specific/aspnetajax/image_gallery/default.aspx" />
+						<Node Text="AJAX TabStrip Content" NavigateUrl="~/webui/demos/demos_platform-specific/aspnetajax/tabstrip_content/default.aspx" />
+						<Node Text="AJAX TreeView Content" NavigateUrl="~/webui/demos/demos_platform-specific/aspnetajax/treeview_content/default.aspx" />
+						<Node Text="AJAX Menu Content" NavigateUrl="~/webui/demos/demos_platform-specific/aspnetajax/menu_content/default.aspx" />
+					</Node>
+					<Node Text="ASP.NET 2.0">
+						<Node Text="Navigation Architecture" NavigateUrl="~/webui/demos/demos_platform-specific/aspnet20/navigation_architecture/default.aspx" />
+						<Node Text="Binding with SqlDataSource" NavigateUrl="~/webui/demos/demos_platform-specific/aspnet20/sqldatasource/default.aspx" />
+						<Node Text="Binding with AccessDataSource" NavigateUrl="~/webui/demos/demos_platform-specific/aspnet20/accessdatasource/default.aspx" />
+						<Node Text="Binding with XmlDataSource" NavigateUrl="~/webui/demos/demos_platform-specific/aspnet20/xmldatasource/default.aspx" />
+						<Node Text="Binding with ObjectDataSource" NavigateUrl="~/webui/demos/demos_platform-specific/aspnet20/objectdatasource/default.aspx" />
+					</Node>
+				</Node>
+			</Node>
+
+			<Node Text="Calendar" NavigateUrl="/webui/calendar.aspx" />
+			<Node Text="Callback" NavigateUrl="/webui/callback.aspx" />
+			<Node Text="ColorPicker" NavigateUrl="/webui/colorpicker.aspx" />
+			<Node Text="ComboBox" NavigateUrl="/webui/combobox.aspx" />
+			<Node Text="Dialog" NavigateUrl="/webui/dialog.aspx" />
+			<Node Text="Editor" NavigateUrl="/webui/editor.aspx" />
+			<Node Text="Grid" NavigateUrl="/webui/grid.aspx" />
+			<Node Text="Input" NavigateUrl="/webui/input.aspx" />
+			<Node Text="Menu" NavigateUrl="/webui/menu.aspx" />
+			<Node Text="MultiPage" NavigateUrl="/webui/multipage.aspx" />
+			<Node Text="NavBar" NavigateUrl="/webui/navbar.aspx" />
+			<Node Text="Rotator" NavigateUrl="/webui/rotator.aspx" />
+			<Node Text="SiteMap" NavigateUrl="/webui/sitemap.aspx" />
+			<Node Text="Slider" NavigateUrl="/webui/slider.aspx" />
+			<Node Text="Snap" NavigateUrl="/webui/snap.aspx" />
+			<Node Text="SpellCheck" NavigateUrl="/webui/spellcheck.aspx" />
+			<Node Text="Splitter" NavigateUrl="/webui/splitter.aspx" />
+			<Node Text="TabStrip" NavigateUrl="/webui/tabstrip.aspx" />
+			<Node Text="Toolbar" NavigateUrl="/webui/toolbar.aspx" />
+			<Node Text="TreeView" NavigateUrl="/webui/treeview.aspx" />
+			<Node Text="Upload" NavigateUrl="/webui/upload.aspx" />
+			<Node Text="WebChart Lite" NavigateUrl="/webui/webchartlite.aspx" />
+		</Node>
+
+		<Node Text="Charting" NavigateUrl="/charting/">
+			<Node Text="Overview" NavigateUrl="/charting/default.aspx" />
+			<Node Text="Features" NavigateUrl="/charting/features.aspx" />
+			<Node Text="Gallery" NavigateUrl="/charting/gallery/default.aspx">
+				<Node Text="Chart Viewer" NavigateUrl="/charting/gallery/chart.aspx" />
+				<Node Text="Interactive AJAX Demos">
+					<Node Text="Client-side API ToolBar" NavigateUrl="/charting/gallery/samples/AJAX/toolbar/default.aspx" />
+					<Node Text="Zooming &amp; Scrolling" NavigateUrl="/charting/gallery/samples/AJAX/zooming/default.aspx" />
+					<Node Text="Drill-Down Interactivity" NavigateUrl="/charting/gallery/samples/AJAX/drilldown/default.aspx" />
+					<Node Text="Auto-Rrefresh on Change" NavigateUrl="/charting/gallery/samples/AJAX/autorefresh/default.aspx" />
+					<Node Text="Refresh Interval" NavigateUrl="/charting/gallery/samples/AJAX/interval/default.aspx" />
+					<Node Text="Mouse Events" NavigateUrl="/charting/gallery/samples/AJAX/mouse/default.aspx" />
+				</Node>
+			</Node>
+			<Node Text="SqlChart" NavigateUrl="/charting/sqlchart.aspx" />
+			<Node Text="WebChart" NavigateUrl="/charting/webchart.aspx" />
+			<Node Text="WinChart" NavigateUrl="/charting/winchart.aspx" />
+			<Node Text="Roadmap" NavigateUrl="/charting/roadmap.aspx" />
+			<Node Text="WebGauge" NavigateUrl="/charting/webgauge.aspx" />
+		</Node>
+	</Node>
+
+	<Node Text="Support" NavigateUrl="/support/">
+		<Node Text="Support Center" NavigateUrl="/support/default.aspx" />
+		<Node Text="Documentation" NavigateUrl="/docs/default.aspx" />
+		<Node ID="KnowledgeBase" Text="Knowledge Base" NavigateUrl="/kb/default.aspx" />
+		<Node Text="Consulting" NavigateUrl="/support/consulting.aspx" />
+		<Node Text="Training" NavigateUrl="/support/training.aspx" />
+		<Node Text="Request Support" NavigateUrl="/support/contact.aspx" />
+		<Node Text="Submit a Support Request" NavigateUrl="/support/supportform.aspx" />
+		<Node Text="Support Request Confirmed" NavigateUrl="/support/confirmation.aspx" />
+	</Node>
+
+	<Node Text="Community">
+		<Node ID="Forums" Text="Forums" NavigateUrl="/forums/default.aspx" />
+		<Node ID="Blogs" Text="Blogs" NavigateUrl="/blogs/default.aspx" />
+		<Node Text="MVP Program" NavigateUrl="/community/mvps.aspx" />
+		<Node Text="Events" NavigateUrl="/community/events.aspx" />
+	</Node>
+
+	<Node Text="Company" NavigateUrl="/company/">
+		<Node Text="About Us" NavigateUrl="/company/default.aspx" />
+		<Node Text="Enterprise Focus" NavigateUrl="/company/enterprise.aspx" />
+		<Node Text="Media Room" NavigateUrl="/company/media.aspx" />
+		<Node Text="What's New" NavigateUrl="/company/news.aspx" />
+		<Node Text="Featured Customers" NavigateUrl="/company/customers.aspx" />
+		<Node Text="Testimonials" NavigateUrl="/company/testimonials.aspx" />
+		<Node Text="Case Studies" NavigateUrl="/company/casestudies.aspx" />
+		<Node Text="Contact Information" NavigateUrl="/company/contact.aspx" />
+		<Node Text="Employment Opportunities" NavigateUrl="/company/jobs.aspx" />
+	</Node>
+
+	<Node Text="Download">
+		<Node Text="Charting" NavigateUrl="/download/charting.aspx" />
+		<Node Text="Charting Beta" NavigateUrl="/download/chartingbeta.aspx" />
+		<Node Text="Web.UI" NavigateUrl="/download/webui.aspx" />
+		<Node Text="Web.UI Beta" NavigateUrl="/download/beta.aspx" />
+		<Node Text="Silverlight" NavigateUrl="/download/silverlight.aspx" />
+		<Node Text="Silverlight Beta" NavigateUrl="/download/silverlightbeta.aspx" />
+	</Node>
+
+	<Node Text="Purchase" NavigateUrl="/store/">
+		<Node Text="Online Store" NavigateUrl="/store/default.aspx">
+			<Node Text="Create Account" NavigateUrl="/store/userinformation.aspx" />
+			<Node Text="Billing Information" NavigateUrl="/store/billingaddress.aspx" />
+			<Node Text="Checkout Summary" NavigateUrl="/store/checkout.aspx" />
+			<Node Text="Purchase Complete" NavigateUrl="/store/purchasecomplete.aspx" />
+		</Node>
+		<Node Text="Enterprise Licensing" NavigateUrl="/store/enterprise.aspx" />
+		<Node Text="License Upgrade" NavigateUrl="/store/upgrade.aspx" />
+		<Node Text="Subscription Renewal" NavigateUrl="/store/renewal.aspx" />
+		<Node Text="Sales FAQ" NavigateUrl="/store/faq.aspx" />
+		<Node Text="License Comparison" NavigateUrl="/store/comparison.aspx" />
+		<Node Text="License Agreements" NavigateUrl="/store/licenseagreements.aspx" />
+	</Node>
+
+	<Node Text="My Account">
+		<Node Text="Edit Profile" NavigateUrl="/user/edituserprofile.aspx" />
+	</Node>
+
+	<Node Text="Privacy Notice" NavigateUrl="/privacy.aspx" />
+	<Node Text="Terms of Use" NavigateUrl="/terms.aspx" />
+	<Node Text="Site Map" NavigateUrl="/sitemap.aspx" />
+
+	<Node Text="Leaders in .NET Development Choose ComponentArt" NavigateUrl="/leaders/default.aspx" />
+</Nodes>
+

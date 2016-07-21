@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.ToolBarButtonAppearances"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:ComponentArtTheme="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    Width="760" Height="450">
+    <UserControl.Resources>
+        <ComponentArtTheme:Theme x:Key="ThemeOffice2007" 
+           BaseSource="/ComponentArt.Win.UI.Navigation;component/Themes/generic.xaml" 
+           Source="/ComponentArt.Win.Themes.Office2007;component/ToolBar.xaml" />
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ToolBar" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Button Appearances" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo shows the core features of the ToolBar control." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\ToolBar\ToolBarButtonAppearances.xaml,
+            \source\controls\ToolBar\ToolBarButtonAppearances.xaml.cs"/>
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
+
+            <Border BorderBrush="#656f7b" BorderThickness="1" Padding="4" Background="#bfdbff">
+                <ComponentArt:ToolBar
+                    HorizontalAlignment="Left"
+				ItemTextImageRelation="ImageAboveText"
+				Width="275"
+				Orientation="Horizontal"
+				x:Name="ToolBar1"
+				FontFamily="Trebuchet MS"
+				FontSize="12"
+                Theme="{StaticResource ThemeOffice2007}"
+			>
+                    <ComponentArt:ToolBarItem IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserBack.png" HoverIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserBack.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserBack.png" Text="Back" />
+                    <ComponentArt:ToolBarItem IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserForward.png" HoverIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserForward.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserForward.png" Text="Forward"  />
+                    <ComponentArt:ToolBarItem IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserReload.png" HoverIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserReload.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserReload.png" Text="Reload" />
+                    <ComponentArt:ToolBarItem IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserStop.png" HoverIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserStop.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserStop.png" Text="Stop" />
+                    <ComponentArt:ToolBarItem IconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserHome.png" HoverIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserHome.png" DisabledIconSource="/ComponentArt.Win.Demos;component/Assets/ToolBar/BrowserHome.png" Text="Home" />
+
+                </ComponentArt:ToolBar>
+            </Border>
+
+            <RadioButton Margin="0,50,0,0" Checked="Appearances_Checked" x:Name="ImageAboveText" GroupName="Appearances" Content="Image above Text" IsChecked="True" />
+            <RadioButton Checked="Appearances_Checked" x:Name="TextAboveImage" GroupName="Appearances" Content="Text above Image" />
+            <RadioButton Checked="Appearances_Checked" x:Name="TextOnly" GroupName="Appearances" Content="Text only" />
+            <RadioButton Checked="Appearances_Checked" x:Name="ImageOnly" GroupName="Appearances" Content="Image only" />
+            <RadioButton Checked="Appearances_Checked" x:Name="ImageBeforeText" GroupName="Appearances" Content="Image before Text" />
+            <RadioButton Checked="Appearances_Checked" x:Name="TextBeforeImage" GroupName="Appearances" Content="Text before Image" />
+
+        </StackPanel>
+    </Grid>
+</UserControl>

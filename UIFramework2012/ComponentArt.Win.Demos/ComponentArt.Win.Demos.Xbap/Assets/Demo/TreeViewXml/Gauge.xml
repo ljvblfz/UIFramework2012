@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Gauge -->
+<TreeView>
+
+    <!--<TreeViewNode Header="Overview" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="GaugeOverview"  />-->
+  
+    <TreeViewNode Header="Features" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Highlights" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="GaugeCoreFeatures"  />
+      <TreeViewNode Header="Linear Gauge Settings" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="LinearGaugeCoreFeatures"  />
+      <TreeViewNode Header="Radial Gauge Settings" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="RadialGaugeCoreFeatures"  />
+      <TreeViewNode Header="Subgauges" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="Subgauge"  />
+    </TreeViewNode>
+  
+    <!--<TreeViewNode Header="Radial Gauge" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Core Features" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="RadialGaugeCoreFeatures"  />
+	   <TreeViewNode Header="Subgauges" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="Subgauge"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Linear Gauge" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Core Features" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="LinearGaugeCoreFeatures"  />
+    </TreeViewNode>-->
+
+	<TreeViewNode Header="Skinning &amp; Theming" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+		<TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10" FontWeight="ExtraLight" Padding="0,1,0,2" Tag="GaugeBlackIce"  />
+		<TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10" FontWeight="ExtraLight" Padding="0,1,0,2" Tag="GaugeArcticWhite"  />
+		<TreeViewNode Header="Custom Images" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10" FontWeight="ExtraLight" Padding="0,1,0,2" Tag="GaugeRadialOldeTyme"  />
+	</TreeViewNode>
+
+</TreeView>
+<!-- /Gauge -->

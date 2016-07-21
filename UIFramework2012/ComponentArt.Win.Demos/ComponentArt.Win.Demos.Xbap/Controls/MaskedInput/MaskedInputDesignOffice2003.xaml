@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.MaskedInputDesignOffice2003"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common">
+    <UserControl.Resources>
+        <ComponentArtTheming:Theme x:Key="MaskedInputOffice2003" 
+                      BaseSource="/ComponentArt.Win.UI.Input;component/Themes/generic.xaml" 
+                      Source="/ComponentArt.Win.Themes.Office2003;component/MaskedInput.xaml"  />
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="MaskedInput" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Office 2003 MaskedInput" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An Office 2003-styled MaskedInput." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\maskedinput\MaskedInputDesignOffice2003.xaml,
+            \source\controls\maskedinput\MaskedInputDesignOffice2003.xaml.cs"/>
+        <Border Width="800" Height="600" Background="#eeeeee" CornerRadius="3" BorderBrush="#666666" BorderThickness="1"/>
+
+        <Grid Margin="20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="24"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Email Address:" />
+            <ComponentArt:MaskedInput x:Name="MyMaskedInput" Transform="EmailAddress" EmptyText="name@domain.com" Grid.Row="1"
+                                      Theme="{StaticResource MaskedInputOffice2003}"/>
+        </Grid>
+    </Grid>
+</UserControl>

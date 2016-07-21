@@ -1,0 +1,293 @@
+<UserControl x:Class="ComponentArt.Win.Demos.DragDropCoreFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    xmlns:src="clr-namespace:ComponentArt.Win.Demos;assembly=ComponentArt.Win.Demos"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtData="clr-namespace:ComponentArt.Win.UI.Data;assembly=ComponentArt.Win.UI.Data"
+
+    >
+    <UserControl.Resources>
+
+        <Style x:Key="OverlayText" TargetType="ContentControl">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Margin" Value="20 0 0 -15" />
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ContentControl">
+                        <Border Padding="3" BorderBrush="Black" BorderThickness="1" CornerRadius="3">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFE3E6F5" Offset="0"/>
+                                    <GradientStop Color="#FF9D9D9D" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <DataTemplate x:Key="DataGridDragSingleRow">
+            <Grid>
+                <Rectangle Opacity="0.8" RadiusX="5" RadiusY="5" >
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Color="#FFDFE4F4" Offset="0"/>
+                                <GradientStop Color="#FFB8BCC2" Offset="0.0439606"/>
+                                <GradientStop Color="#FFE0E6F4" Offset="0.0769196"/>
+                                <GradientStop Color="#FFD4DBE8" Offset="0.648346"/>
+                                <GradientStop Color="#FFE8ECF4" Offset="0.714279"/>
+                                <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Border Background="Transparent" CornerRadius="5" Padding="5">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Stretch="None" Source="{Binding LargeEmailIcon}" VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding Subject}" Margin="5 0 0 0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="DataGridDragMultipleRows">
+            <Grid>
+                <Rectangle Opacity="0.8" RadiusX="5" RadiusY="5" >
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Color="#FFDFE4F4" Offset="0"/>
+                                <GradientStop Color="#FFB8BCC2" Offset="0.0439606"/>
+                                <GradientStop Color="#FFE0E6F4" Offset="0.0769196"/>
+                                <GradientStop Color="#FFD4DBE8" Offset="0.648346"/>
+                                <GradientStop Color="#FFE8ECF4" Offset="0.714279"/>
+                                <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Border Background="Transparent" CornerRadius="5" Padding="5">
+                    <Grid x:Name="ImageGrid">
+                        <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 0 -15 0">
+                            <Ellipse>
+                                <Ellipse.Fill>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <GradientStop Color="#FF777777" />
+                                        <GradientStop Color="#FF555555" Offset=".45"/>
+                                        <GradientStop Color="#FF000000" Offset=".48"/>
+                                    </LinearGradientBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <TextBlock Text="{Binding}" Foreground="White" FontWeight="Bold" FontSize="16" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10 2"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="DropNotAllowed">
+            <Path Data="M0,0 20,20 M20,0 0,20" Stroke="#C11300" StrokeThickness="6" Stretch="None" Margin="-10"
+                  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </DataTemplate>
+        
+        <Storyboard x:Key="errorMsgAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="errorMsgText" Storyboard.TargetProperty="Opacity">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.0" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3" Value="1.0" />
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="1.0" />
+                <SplineDoubleKeyFrame KeyTime="00:00:01.3" Value="0.0" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+        <Grid>
+      <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,30,0,0" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Margin="10" Grid.Column="0" HorizontalAlignment="Left" Text="Try dragging one or more DataGrid rows into a TreeView." />
+                <TextBlock Text="Drag Cancelled" Foreground="Red" x:Name="errorMsgText" Opacity="0.0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10"/>
+                </Grid>
+        </Border>
+
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DragDrop" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Core Features" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases drag &amp; drop between ComponentArt controls with some additional visual feedback." />
+        <TextBlock x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\dragdrop\DragDropCoreFeatures.xaml,
+                   \source\controls\dragdrop\DragDropCoreFeatures.xaml.cs" />
+
+        <ComponentArt:TreeView x:Name="FirstTree" Grid.Row="0" Grid.Column="0" MultiSelect="ControlClick" Width="250"
+                 AllowDrag="True" AllowDrop="True" NodeDragEnter="FirstTree_NodeDragEnter" NodeDrop="FirstTree_NodeDrop">
+            <ComponentArt:TreeViewNode Header="Mailbox" IconSource="/Assets/TreeView/Core/root.png" IsExpanded="True">
+                <ComponentArt:TreeViewNode Header="Calendar" IconSource="/Assets/TreeView/Core/calendar.png" IsExpanded="False" />
+                <ComponentArt:TreeViewNode Header="Contacts" IconSource="/Assets/TreeView/Core/contacts.png" />
+                <ComponentArt:TreeViewNode Header="Deleted Items" IconSource="/Assets/TreeView/Core/deleted.png">
+                    <ComponentArt:TreeViewNode Header="Today" IconSource="/Assets/TreeView/Core/deletedFolder.png" />
+                    <ComponentArt:TreeViewNode Header="Last Week" IconSource="/Assets/TreeView/Core/deletedFolder.png" />
+                    <ComponentArt:TreeViewNode Header="Last Month" IconSource="/Assets/TreeView/Core/deletedFolder.png" />
+                </ComponentArt:TreeViewNode>
+                <ComponentArt:TreeViewNode Header="Drafts" IconSource="/Assets/TreeView/Core/drafts.png" />
+                <ComponentArt:TreeViewNode Header="Inbox" IconSource="/Assets/TreeView/Core/inbox.png" IsExpanded="True">
+                    <ComponentArt:TreeViewNode Header="ComponentArt" IconSource="/Assets/TreeView/Core/folders.png" />
+                    <ComponentArt:TreeViewNode Header="Personal" IconSource="/Assets/TreeView/Core/folders.png" />
+                    <ComponentArt:TreeViewNode Header="Miscellaneous" IconSource="/Assets/TreeView/Core/folders.png" />
+                </ComponentArt:TreeViewNode>
+                <ComponentArt:TreeViewNode Header="Junk E-mail" IconSource="/Assets/TreeView/Core/junk.png" />
+                <ComponentArt:TreeViewNode Header="Notes" IconSource="/Assets/TreeView/Core/notes.png" />
+                <ComponentArt:TreeViewNode Header="Outbox" IconSource="/Assets/TreeView/Core/outbox.png" />
+                <ComponentArt:TreeViewNode Header="Sent Items" IconSource="/Assets/TreeView/Core/sentItems.png" />
+                <ComponentArt:TreeViewNode Header="Tasks" IconSource="/Assets/TreeView/Core/tasks.png" />
+                <ComponentArt:TreeViewNode Header="Search Folders" IconSource="/Assets/TreeView/Core/search.png" />
+            </ComponentArt:TreeViewNode>
+            <ComponentArt:TreeViewNode Header="Mailbox - News" IconSource="/Assets/TreeView/Core/folders.png" IsExpanded="True">
+                <ComponentArt:TreeViewNode Header="World" IconSource="/Assets/TreeView/Core/folder.png" >
+                </ComponentArt:TreeViewNode>
+                <ComponentArt:TreeViewNode Header="Business" IconSource="/Assets/TreeView/Core/folder.png" />
+                <ComponentArt:TreeViewNode Header="Science" IconSource="/Assets/TreeView/Core/folder.png" />
+                <ComponentArt:TreeViewNode Header="Weather" IconSource="/Assets/TreeView/Core/folder.png" />
+            </ComponentArt:TreeViewNode>
+        </ComponentArt:TreeView>
+
+
+        <ComponentArtData:DataGrid x:Name="DataGrid1" Width="500"
+                   RowDraggingTemplate="{StaticResource DataGridDragSingleRow}"
+                   AllowRowDragging="True"
+                   Grid.Row="0" Grid.Column="1"
+                   Margin="25 0"
+                   DragEnter="DataGrid1_DragEnter"
+                   DragStarted="DataGrid1_DragStarted"
+                   AllowColumnResizing="True"
+                   ColumnResizingMode="Distribute"
+                   AllowGrouping="False"
+                   VerticalScrollBarVisibility="Hidden"
+                   PageSize="16" 
+                   RunningMode="Client" 
+                   GroupingMode="ConstantRows"
+                   PagerMode="None"
+                   FooterVisibility="Collapsed"
+                   PreExpandGroups="True">
+            <ComponentArtData:DataGrid.Columns>
+                <ComponentArtData:DataGridTemplateColumn Binding="{Binding PriorityIcon}" Width="22">
+                    <ComponentArtData:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="ComponentArtData:DataGridColumnHeader">
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </ComponentArtData:DataGridTemplateColumn.HeaderStyle>
+                    <ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        </DataTemplate>
+                    </ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                    <ComponentArtData:DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="ComponentArtData:DataGridCell">
+                            <Setter Property="Padding" Value="1" />
+                        </Style>
+                    </ComponentArtData:DataGridTemplateColumn.CellStyle>
+                    <ComponentArtData:DataGridTemplateColumn.Header>
+                        <Image Source="/Assets/DataGrid/Messages/icon_priority.png" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </ComponentArtData:DataGridTemplateColumn.Header>
+                </ComponentArtData:DataGridTemplateColumn>
+                <ComponentArtData:DataGridTemplateColumn Binding="{Binding EmailIcon}" Width="22">
+                    <ComponentArtData:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="ComponentArtData:DataGridColumnHeader">
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </ComponentArtData:DataGridTemplateColumn.HeaderStyle>
+                    <ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        </DataTemplate>
+                    </ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                    <ComponentArtData:DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="ComponentArtData:DataGridCell">
+                            <Setter Property="Padding" Value="1" />
+                        </Style>
+                    </ComponentArtData:DataGridTemplateColumn.CellStyle>
+                    <ComponentArtData:DataGridTemplateColumn.Header>
+                        <Image Source="/Assets/DataGrid/Messages/icon_icon.png" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </ComponentArtData:DataGridTemplateColumn.Header>
+                </ComponentArtData:DataGridTemplateColumn>
+                <ComponentArtData:DataGridTemplateColumn Binding="{Binding AttachmentIcon}" Width="22">
+                    <ComponentArtData:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="ComponentArtData:DataGridColumnHeader">
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </ComponentArtData:DataGridTemplateColumn.HeaderStyle>
+                    <ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        </DataTemplate>
+                    </ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                    <ComponentArtData:DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="ComponentArtData:DataGridCell">
+                            <Setter Property="Padding" Value="1" />
+                        </Style>
+                    </ComponentArtData:DataGridTemplateColumn.CellStyle>
+                    <ComponentArtData:DataGridTemplateColumn.Header>
+                        <Image Source="/Assets/DataGrid/Messages/icon_attachment.png" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </ComponentArtData:DataGridTemplateColumn.Header>
+                </ComponentArtData:DataGridTemplateColumn>
+                <ComponentArtData:DataGridTextColumn Binding="{Binding Subject}" Header="Subject" Width="4*" />
+                <ComponentArtData:DataGridTextColumn Binding="{Binding LastPostDate}" Header="Last Post" Width="2*"/>
+                <ComponentArtData:DataGridTextColumn Binding="{Binding StartedBy}" Header="Started By" Width="1*"/>
+                <ComponentArtData:DataGridTextColumn Binding="{Binding Replies}" Header="Replies" Width="1*"/>
+                <ComponentArtData:DataGridTextColumn Binding="{Binding TotalViews}" Header="Total Views" Width="1*"/>
+                <ComponentArtData:DataGridTemplateColumn Binding="{Binding FlagIcon}" Width="22">
+                    <ComponentArtData:DataGridTemplateColumn.HeaderStyle>
+                        <Style TargetType="ComponentArtData:DataGridColumnHeader">
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </ComponentArtData:DataGridTemplateColumn.HeaderStyle>
+                    <ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        </DataTemplate>
+                    </ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                    <ComponentArtData:DataGridTemplateColumn.CellStyle>
+                        <Style TargetType="ComponentArtData:DataGridCell">
+                            <Setter Property="Padding" Value="1" />
+                        </Style>
+                    </ComponentArtData:DataGridTemplateColumn.CellStyle>
+                    <ComponentArtData:DataGridTemplateColumn.Header>
+                        <Image Source="/Assets/DataGrid/Messages/icon_flag.png" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    </ComponentArtData:DataGridTemplateColumn.Header>
+                </ComponentArtData:DataGridTemplateColumn>
+            </ComponentArtData:DataGrid.Columns>
+            <ComponentArtData:DataGrid.CellStyle>
+                <Style TargetType="ComponentArtData:DataGridCell">
+                    <Setter Property="Padding" Value="3" />
+                </Style>
+            </ComponentArtData:DataGrid.CellStyle>
+            <ComponentArtData:DataGrid.ColumnHeaderStyle>
+                <Style TargetType="ComponentArtData:DataGridColumnHeader">
+                    <Setter Property="Padding" Value="5,0,0,0" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </ComponentArtData:DataGrid.ColumnHeaderStyle>
+        </ComponentArtData:DataGrid>
+
+    </Grid>
+</UserControl>

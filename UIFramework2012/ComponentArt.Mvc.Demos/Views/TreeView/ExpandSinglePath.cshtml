@@ -1,0 +1,22 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoTitle"] = "Expand Single Path";
+  ViewData["DemoType"] = "TreeView";
+  ViewData["CodeFiles"] = "/Views/TreeView/ExpandSinglePath.aspx,/Controllers/TreeViewController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>Setting <b>ExpandSinglePath=true</b> will only allow one path to be expanded at a time.</li>
+</ul>
+";      
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/Themes/Outlook2007/theme.css")" rel="stylesheet" type="text/css" />
+}
+@(Html.ComponentArt().TreeView()
+  .ID("TreeView1")
+  .ExpandSinglePath(true)
+  .SiteMapXmlFile("~/App_Data/TreeView/ExpandSinglePath/treeData.xml")
+  .Height(320)
+  .Width(220)
+  .AutoTheming(true)
+)

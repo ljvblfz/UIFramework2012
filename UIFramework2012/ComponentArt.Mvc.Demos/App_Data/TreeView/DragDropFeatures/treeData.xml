@@ -1,0 +1,16 @@
+<Nodes>
+  <TreeViewNode ID="N0" Text="Mailbox" ImageUrl="root.gif" Expanded="true">
+    <TreeViewNode ID="N1" ImageUrl="calendar.gif" Text="Calendar" />
+    <TreeViewNode ID="N2" Text="Contacts" ImageUrl="contacts.gif" />
+    <TreeViewNode ID="N3" Text="Deleted Items" ImageUrl="deleted.gif" />
+    <TreeViewNode ID="N4" Text="Inbox" ImageUrl="inbox.gif" />
+    <TreeViewNode ID="N5" Text="Junk E-mail" ImageUrl="junk.gif" />
+    <TreeViewNode ID="N6" Text="Outbox" ImageUrl="outbox.gif" />
+    <TreeViewNode ID="N7" Text="Sent Items" ImageUrl="sentItems.gif" />
+    <TreeViewNode ID="N8" Text="Tasks" ImageUrl="tasks.gif" />
+  </TreeViewNode>
+  <TreeViewNode ID="N9" Text="Custom Drag &amp; Drop Logic" Expanded="true">
+    <TreeViewNode ID="N11" Text="Droppable into Inbox Only" />
+    <TreeViewNode ID="N13" Text="Droppable into Tasks Only" />
+  </TreeViewNode>
+</Nodes>

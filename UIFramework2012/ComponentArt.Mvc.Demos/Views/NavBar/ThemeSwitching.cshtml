@@ -1,0 +1,31 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoType"] = "NavBar";
+  ViewData["DemoTitle"] = "Theme Switching";
+  ViewData["CodeFiles"] = "/Views/NavBar/ThemeSwitching.aspx,/Controllers/NavBarController.cs,/Views/Shared/ThemeSwitchingCss.ascx,/Views/Shared/ThemeSwitchingInterface.ascx";
+  ViewData["AboutText"] = @"
+<ul>
+<li>NavBar's theming functionality is showcased here, which is activated via its AutoTheming property.</li>
+<li>The changing of the CSS definitions is done by resetting the active stylesheet.</li>
+</ul>
+";    
+}
+@section HeadContent {
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+}
+<table>
+  <tr valign="top">
+    <td style="height: 355px">
+      @(Html.ComponentArt().NavBar()
+        .ID("NavBar1")
+        .SiteMapXmlFile("~/App_Data/NavBar/ThemeSwitching/navData.xml")
+        .AutoTheming(true)
+        .FullExpand(true)
+        .FillContainer(true)
+      )
+    </td>
+    <td>
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml")
+    </td>
+  </tr>
+</table>

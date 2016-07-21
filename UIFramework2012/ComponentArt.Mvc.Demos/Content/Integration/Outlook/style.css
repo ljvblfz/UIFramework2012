@@ -1,0 +1,118 @@
+.OutlookDemo
+{
+  width:1047px;
+  height:546px;
+  background-color:#6591CD;
+  background-image:url(images/splitter_bg.gif);
+  background-position:left top;
+  background-repeat:repeat-x;
+  
+  
+  
+  padding:3px;
+}
+
+.Splitter
+{
+  margin:0px;
+}
+
+.HorizontalSplitterBar
+{
+  background-color:transparent;
+  border-left:solid 1px #6593CF;
+  border-right:solid 1px #6593CF;  
+  cursor:e-resize !important;
+}
+
+.CollapsedHorizontalSplitterBar
+{
+  background-color:#AAAAC6; 
+  border:none;
+}
+
+.VerticalSplitterBar
+{
+  background-color:#6593CF;
+  background-image:url(images/splitterbar_vertical.gif);
+  background-position:center center;
+  border-left:solid 1px #6593CF;
+  cursor:n-resize !important; 
+}
+
+.CollapsedVerticalSplitterBar
+{
+  background-color:#C6C6AA; 
+}
+
+.ActiveSplitterBar
+{
+  background-color: #000000;  
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40); 
+  opacity: 0.4;
+}
+
+/*  background-color:#F3FFF3; */
+
+.NavigationPane
+{
+  background-color:#F3F3FF; 
+}
+.FoldersPane
+{
+  background-color:#FFFFFF; 
+}
+.FolderPane
+{
+  background-color:#FFFFFF; 
+}
+.MessagePane
+{
+  background-color:#99C9C9; 
+}
+
+.h1
+{
+  color:#15428B;
+  background-color:#C4DEFF;
+  background-image:url(images/h1_bg.gif);
+  background-position:top left;
+  padding:3px;
+  padding-left:6px;
+  font-weight:bold;
+}
+
+.h1 IMG
+{
+  border:none;
+  vertical-align:middle;
+}
+
+.h2
+{
+  color:#15428B;
+  background-color:#D6E8FF;
+  background-image:url(images/h2_bg.gif);
+  background-position:top left;
+  padding:2px;
+  padding-left:6px;
+}
+
+.h3
+{
+  color:#000000;
+  background-color:#FFFFFF;
+  padding-top:3px;
+  padding-bottom:5px;
+  padding-left:3px;
+  padding-right:3px;
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  font-weight: bold;
+}
+
+.h3 IMG
+{
+  border:none;
+  vertical-align:middle;
+}

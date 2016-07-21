@@ -1,0 +1,200 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.MenuTemplatedItems" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation" 
+    xmlns:toolkit="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
+    Width="760" Height="450" >
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Menu" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Templated Items" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases Menu's templated items." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\menu\MenuTemplatedItems.xaml,
+            \source\controls\menu\MenuTemplatedItems.xaml.cs"/>
+        <ComponentArt:Menu x:Name="muDemo" Initialized="muDemo_Initialized" Width="730" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ComponentArt:MenuItem Text="File" IsChecked="False">
+                <ComponentArt:MenuItem Text="New..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/New.png" />
+                <ComponentArt:MenuItem Text="Open..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Open.png"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Calendar" >
+                    <ComponentArt:MenuItem Text="myCalendar" CustomTemplate="myCalendar" CustomTemplateHighlight="false" />
+                    <ComponentArt:MenuItem IsSeparator="True"/>
+                    <ComponentArt:MenuItem Text="Microsoft Office Offline" />
+                </ComponentArt:MenuItem>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Save As" />
+                <ComponentArt:MenuItem Text="Save as Web Page" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/SaveAsWebPage.png"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Page Setup..." />
+                <ComponentArt:MenuItem Text="Print..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Print.png"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Close"/>
+            </ComponentArt:MenuItem>
+            <ComponentArt:MenuItem Text="Edit" IsOpened="False">
+                <ComponentArt:MenuItem Text="Cut" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Cut.png"/>
+                <ComponentArt:MenuItem Text="Copy" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Copy.png"/>
+                <ComponentArt:MenuItem Text="Paste" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Paste.png"/>
+            </ComponentArt:MenuItem>
+            <ComponentArt:MenuItem Text="View" IsChecked="False">
+                <ComponentArt:MenuItem Text="Stop" />
+                <ComponentArt:MenuItem Text="Refresh"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Client Templates">
+                    <ComponentArt:MenuItem Margin="2,0,2,0" Text="Last Custom Setting" CustomTemplate="ClientTemplates_LastCustomSetting"/>
+                    <ComponentArt:MenuItem Margin="2,0,2,0" Text="Normal" CustomTemplate="ClientTemplates_Normal" />
+                    <ComponentArt:MenuItem Margin="2,0,2,0" Text="Narrow" CustomTemplate="ClientTemplates_Narrow" />
+                    <ComponentArt:MenuItem Margin="2,0,2,0" Text="Wide" CustomTemplate="ClientTemplates_Wide" />
+                </ComponentArt:MenuItem>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Privacy Report..." />
+                <ComponentArt:MenuItem Text="Full Screen" />
+            </ComponentArt:MenuItem>
+            <ComponentArt:MenuItem Text="Tools" IsOpened="False">
+                <ComponentArt:MenuItem Text="Mail and News"/>
+                <ComponentArt:MenuItem Text="Synchronize..." />
+                <ComponentArt:MenuItem Text="Windows Update" />
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Show Related Links" />
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Internet Options..." />
+            </ComponentArt:MenuItem>
+            <ComponentArt:MenuItem Text="Help" IsChecked="False">
+                <ComponentArt:MenuItem Text="Online Support" />
+                <ComponentArt:MenuItem Text="Send Feedback"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="About ComponentArt"/>
+            </ComponentArt:MenuItem>
+            <ComponentArt:Menu.Resources>
+                <DataTemplate x:Key="myCalendar">
+                    <toolkit:Calendar></toolkit:Calendar>
+                </DataTemplate>
+                <DataTemplate x:Key="ClientTemplates_LastCustomSetting">
+                    <Grid
+                          Height="47" 
+                          VerticalAlignment="Top" 
+                          Width="202.5" 
+                          HorizontalAlignment="Right" 
+                          Margin="22,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.310*"/>
+                            <RowDefinition Height="0.340*"/>
+                            <RowDefinition Height="0.340*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="37"/>
+                            <ColumnDefinition Width="0.17*"/>
+                            <ColumnDefinition Width="0.12*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/ComponentArt.Win.Demos;component/Assets/Menu/margins_custom.png" Stretch="Fill" VerticalAlignment="Center" Height="47" Grid.RowSpan="3" HorizontalAlignment="Left"/>
+                        <TextBlock Margin="3,0,0,0" TextWrapping="NoWrap" Grid.Column="1" Grid.ColumnSpan="4" FontWeight="Bold" FontFamily="Trebuchet MS" VerticalAlignment="Center" Foreground="#FF444444"><Run FontSize="11" Text="Last Custom Setting"/></TextBlock>
+                        <TextBlock Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Normal" TextWrapping="NoWrap" Grid.Column="1" Grid.Row="1" Foreground="#FF444444" ><Run FontSize="11" Text="Top:"/></TextBlock>
+                        <TextBlock Margin="3,0,0,0" TextWrapping="NoWrap" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontFamily="Trebuchet MS" VerticalAlignment="Center" Foreground="#FF444444" ><Run FontSize="11" Text="Bottom:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1" FontWeight="Normal" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Foreground="#FF444444" ><Run FontSize="11" Text="Right:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="2" FontWeight="Normal" FontFamily="Trebuchet MS" Foreground="#FF444444" ><Run FontSize="11" Text="Left:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="1&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" HorizontalAlignment="Stretch" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="1&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="1.25&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="4" Grid.Row="2" FontFamily="Trebuchet MS" FontWeight="Bold" ><Run FontSize="11" Text="1.25&quot;"/></TextBlock>
+                    </Grid>
+                </DataTemplate>
+                <DataTemplate x:Key="ClientTemplates_Normal">
+                    <Grid
+                          Height="47" 
+                          VerticalAlignment="Top" 
+                          Width="202.5" 
+                          HorizontalAlignment="Right" 
+                          Margin="22,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.310*"/>
+                            <RowDefinition Height="0.340*"/>
+                            <RowDefinition Height="0.340*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="37"/>
+                            <ColumnDefinition Width="0.17*"/>
+                            <ColumnDefinition Width="0.12*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/ComponentArt.Win.Demos;component/Assets/Menu/margins_normal.png" Stretch="Fill" VerticalAlignment="Center" Height="47" Grid.RowSpan="3" HorizontalAlignment="Left"/>
+                        <TextBlock Margin="3,0,0,0" TextWrapping="NoWrap" Grid.Column="1" Grid.ColumnSpan="4" FontWeight="Bold" FontFamily="Trebuchet MS" VerticalAlignment="Center" Foreground="#FF444444"><Run FontSize="11" Text="Normal"/></TextBlock>
+                        <TextBlock Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Normal" TextWrapping="NoWrap" Grid.Column="1" Grid.Row="1" Foreground="#FF444444" ><Run FontSize="11" Text="Top:"/></TextBlock>
+                        <TextBlock Margin="3,0,0,0" TextWrapping="NoWrap" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontFamily="Trebuchet MS" VerticalAlignment="Center" Foreground="#FF444444" ><Run FontSize="11" Text="Bottom:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1" FontWeight="Normal" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Foreground="#FF444444" ><Run FontSize="11" Text="Right:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="2" FontWeight="Normal" FontFamily="Trebuchet MS" Foreground="#FF444444" ><Run FontSize="11" Text="Left:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="1&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" HorizontalAlignment="Stretch" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="1&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="0.75&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="4" Grid.Row="2" FontFamily="Trebuchet MS" FontWeight="Bold" ><Run FontSize="11" Text="0.75&quot;"/></TextBlock>
+                    </Grid>
+                </DataTemplate>
+                <DataTemplate x:Key="ClientTemplates_Narrow">
+                    <Grid 
+                          Height="47" 
+                          VerticalAlignment="Top" 
+                          Width="202.5" 
+                          HorizontalAlignment="Right" 
+                          Margin="22,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.310*"/>
+                            <RowDefinition Height="0.340*"/>
+                            <RowDefinition Height="0.340*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="37"/>
+                            <ColumnDefinition Width="0.17*"/>
+                            <ColumnDefinition Width="0.12*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/ComponentArt.Win.Demos;component/Assets/Menu/margins_narrow.png" Stretch="Fill" VerticalAlignment="Center" Height="47" Grid.RowSpan="3" HorizontalAlignment="Left"/>
+                        <TextBlock Margin="3,0,0,0" TextWrapping="NoWrap" Grid.Column="1" Grid.ColumnSpan="4" FontWeight="Bold" FontFamily="Trebuchet MS" VerticalAlignment="Center" Foreground="#FF444444"><Run FontSize="11" Text="Narrow"/></TextBlock>
+                        <TextBlock Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Normal" TextWrapping="NoWrap" Grid.Column="1" Grid.Row="1" Foreground="#FF444444" ><Run FontSize="11" Text="Top:"/></TextBlock>
+                        <TextBlock Margin="3,0,0,0" TextWrapping="NoWrap" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontFamily="Trebuchet MS" VerticalAlignment="Center" Foreground="#FF444444" ><Run FontSize="11" Text="Bottom:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1" FontWeight="Normal" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Foreground="#FF444444" ><Run FontSize="11" Text="Right:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="2" FontWeight="Normal" FontFamily="Trebuchet MS" Foreground="#FF444444" ><Run FontSize="11" Text="Left:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="0.25&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" HorizontalAlignment="Stretch" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="0.25&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="0.25&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="4" Grid.Row="2" FontFamily="Trebuchet MS" FontWeight="Bold" ><Run FontSize="11" Text="0.25&quot;"/></TextBlock>
+                    </Grid>
+                </DataTemplate>
+                <DataTemplate x:Key="ClientTemplates_Wide">
+                    <Grid
+                          Height="47" 
+                          VerticalAlignment="Top" 
+                          Width="202.5" 
+                          HorizontalAlignment="Right" 
+                          Margin="22,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.310*"/>
+                            <RowDefinition Height="0.340*"/>
+                            <RowDefinition Height="0.340*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="37"/>
+                            <ColumnDefinition Width="0.17*"/>
+                            <ColumnDefinition Width="0.12*"/>
+                            <ColumnDefinition Width="0.15*"/>
+                            <ColumnDefinition Width="0.1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/ComponentArt.Win.Demos;component/Assets/Menu/margins_wide.png" Stretch="Fill" VerticalAlignment="Center" Height="47" Grid.RowSpan="3" HorizontalAlignment="Left"/>
+                        <TextBlock Margin="3,0,0,0" TextWrapping="NoWrap" Grid.Column="1" Grid.ColumnSpan="4" FontWeight="Bold" FontFamily="Trebuchet MS" VerticalAlignment="Center" Foreground="#FF444444"><Run FontSize="11" Text="Wide"/></TextBlock>
+                        <TextBlock Margin="3,0,0,0" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Normal" TextWrapping="NoWrap" Grid.Column="1" Grid.Row="1" Foreground="#FF444444" ><Run FontSize="11" Text="Top:"/></TextBlock>
+                        <TextBlock Margin="3,0,0,0" TextWrapping="NoWrap" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="2" FontWeight="Normal" FontFamily="Trebuchet MS" VerticalAlignment="Center" Foreground="#FF444444" ><Run FontSize="11" Text="Bottom:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1" FontWeight="Normal" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Foreground="#FF444444" ><Run FontSize="11" Text="Right:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="3" Grid.Row="2" FontWeight="Normal" FontFamily="Trebuchet MS" Foreground="#FF444444" ><Run FontSize="11" Text="Left:"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="1&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" HorizontalAlignment="Stretch" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="1&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="4" Grid.Row="1" HorizontalAlignment="Left" FontFamily="Trebuchet MS" FontWeight="Bold"><Run FontSize="11" Text="2&quot;"/></TextBlock>
+                        <TextBlock TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="4" Grid.Row="2" FontFamily="Trebuchet MS" FontWeight="Bold" ><Run FontSize="11" Text="2&quot;"/></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ComponentArt:Menu.Resources>
+        </ComponentArt:Menu>
+    </Grid>
+</UserControl>

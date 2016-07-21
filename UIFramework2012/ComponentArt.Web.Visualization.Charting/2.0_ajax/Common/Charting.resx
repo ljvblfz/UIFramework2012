@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="TickMarkStyleKindDesrc">
+		<value>Kind of the tick mark</value>
+	</data>
+	<data name="TickMarkStyleLengthDesrc">
+		<value>Length of the tick mark</value>
+	</data>
+	<data name="TickMarkStyleLineStyleNameDesrc">
+		<value>Line style of the tick mark</value>
+	</data>
+	<data name="TextStyleNameDescr">
+		<value>Name of the text style.</value>
+	</data>
+	<data name="TextStyleRevDirectionStyleDescr">
+		<value>Specifies how text in reversed direction should look.</value>
+	</data>
+	<data name="TextStyleRevSideStyleDescr">
+		<value>Specifies how text should look from the back.</value>
+	</data>
+	<data name="TextStyleShadowDepthPxlDescr">
+		<value>Shadow depth in pixels</value>
+	</data>
+	<data name="DataPointLabelStyleOrientationDescr">
+		<value>Orientation of the label.</value>
+	</data>
+	<data name="GradientStyleEndColorDescr">
+		<value>Ending color of the gradient.</value>
+	</data>
+	<data name="GradientStyleGradientKindDescr">
+		<value>Gradient kind.</value>
+	</data>
+	<data name="GradientStyleStartColorDescr">
+		<value>Starting color of the gradient.</value>
+	</data>
+	<data name="LineStyleLiftDescr">
+		<value>Specifies the z displacement in target coordinate system.</value>
+	</data>
+	<data name="LineStyleJoinStyleDescr">
+		<value>Specifies how a line should be joined.</value>
+	</data>
+	<data name="DashLineStyleSegmentsDescr">
+		<value>Segment collection of dashed line</value>
+	</data>
+	<data name="DashLineStyleSegmentLengthDescr">
+		<value>Length of the segment.</value>
+	</data>
+	<data name="DotLineStyleRelativeDistanceDescr">
+		<value>Distance between dots relative to the line width.</value>
+	</data>
+	<data name="MultiLineStyleLineStylesDescr">
+		<value>Collection of line styles in this line style.</value>
+	</data>
+	<data name="MultiLineStyleItemLineStyleNameDescr">
+		<value>Line style included in the parent line style</value>
+	</data>
+	<data name="LineStyle2DColorDescr">
+		<value>Color of this line style</value>
+	</data>
+	<data name="LineStyle2DDashStyleDescr">
+		<value>Style used for dashed lines drawn with this LineStyle2D object.</value>
+	</data>
+	<data name="LineStyle2DShadeWidthDescr">
+		<value>Shade width of this line</value>
+	</data>
+	<data name="LineStyle2DWidthDescr">
+		<value>Line width</value>
+	</data>
+	<data name="ChartColorColorDescr">
+		<value>Indicates the color.</value>
+	</data>
+	<data name="MarkerStyleMarkerKindDescr">
+		<value>Marker kind.</value>
+	</data>
+	<data name="PaletteAlphaDescr">
+		<value>Alpha (transparency) component of this palette.</value>
+	</data>
+	<data name="PaletteNameDescr">
+		<value>Palette name.</value>
+	</data>
+	<data name="PalettePrimaryColorsDescr">
+		<value>Collection of primary colors.</value>
+	</data>
+	<data name="PaletteSecondaryColorsDescr">
+		<value>Collection of secondary colors.</value>
+	</data>
+	<data name="CoordinateSystemXAxisDescr">
+		<value>X-Axis of the coordinate system.</value>
+	</data>
+	<data name="CoordinateSystemYAxisDescr">
+		<value>Y-Axis of the coordinate system.</value>
+	</data>
+	<data name="CoordinateSystemZAxisDescr">
+		<value>Z-Axis of the coordinate system.</value>
+	</data>
+	<data name="SeriesBaseNameDescr">
+		<value>Name of this series node.</value>
+	</data>
+	<data name="SeriesBaseStyleNameDescr">
+		<value>Style name of the series style associated with this series node.</value>
+	</data>
+	<data name="ThickLineStyleHeightEdgeRadiusDescr">
+		<value>Height on the curve of the thick line.</value>
+	</data>
+	<data name="ThickLineStyleWidthEdgeRadiusDescr">
+		<value>Width on the curve of the thick line.</value>
+	</data>
+	<data name="SeriesStyleFirstSegmentStartDescr">
+		<value>Indicates the angle at which the first segment will start</value>
+	</data>
+	<data name="SeriesStyleRelativeEdgeSmoothingRadiusDescr">
+		<value>Relative height to the radius of this SeriesStyle object. Only applicable when ChartKind property is set to pie or doughnut.</value>
+	</data>
+	<data name="SeriesStyleRelativeInnerRadiusDescr">
+		<value>Relative inner radius of the doughnut to the radius of this SeriesStyle object. Only applicable when ChartKind property is set to doughnut.</value>
+	</data>
+	<data name="SeriesStyleRelativeOuterEdgeSmoothingRadiusDescr">
+		<value>Outer edge smoothing radius in relation to the radius of this SeriesStyle object. Only applicable when ChartKind property is set to doughnut.</value>
+	</data>
+	<data name="SeriesRenderAreaMapDescr">
+		<value>Determines whether map areas should be rendered for this series.</value>
+	</data>
+	<data name="CoordinatePlaneGridsDescr">
+		<value>Grid collection located on this plane.</value>
+	</data>
+	<data name="GridAxisOrientationDescr">
+		<value>Orientation of the grid.</value>
+	</data>
+	<data name="GridAxisOrientation2Descr">
+		<value>Orientation of the grid lines.</value>
+	</data>
+	<data name="GridNameDescr">
+		<value>Grid name.</value>
+	</data>
+	<data name="ChartObjectVisibleDescr">
+		<value>Determines whether the object is visible or hidden.</value>
+	</data>
+	<data name="CoordinatePlaneStripSetsDescr">
+		<value>Strip set located on this plane.</value>
+	</data>
+	<data name="StripSetAlternateColorDescr">
+		<value>The color between the strips.</value>
+	</data>
+	<data name="StripSetColorDescr">
+		<value>The color of the strip.</value>
+	</data>
+	<data name="StripSetLayerDescr">
+		<value>Painting layer of strips.</value>
+	</data>
+	<data name="StripSetNameDescr">
+		<value>Indicates the name of the strip set.</value>
+	</data>
+	<data name="StripSetStripSetKindDescr">
+		<value>Indicates the type of the strips.</value>
+	</data>
+	<data name="StripSetWidthDescr">
+		<value>Width of the strips.</value>
+	</data>
+	<data name="AxisAxisAnnotationsDescr">
+		<value>The collection of axis annotations within this axis.</value>
+	</data>
+	<data name="AxisAnnotationFormatStringDescr">
+		<value>Format string used to convert axis values to string.</value>
+	</data>
+	<data name="AxisAnnotationMinimumNumberOfLabelsDescr">
+		<value>Specifies the minimum number of labels.</value>
+	</data>
+	<data name="AxisAnnotationLabelsVisibleDescr">
+		<value>Determines whether labels are visible or hidden.</value>
+	</data>
+	<data name="AxisAnnotationLineVisibleDescr">
+		<value>Determines whether axis annotation line is visible or hidden.</value>
+	</data>
+	<data name="AxisAnnotationHOffsetDescr">
+		<value>Offset in the horizontal direction of the text.</value>
+	</data>
+	<data name="AxisAnnotationLiftZDescr">
+		<value>Specifies the z displacement of the annotation in the target coordinate system.</value>
+	</data>
+	<data name="AxisAnnotationPositionKindDescr">
+		<value>Specifies the position of the axis annotation.</value>
+	</data>
+	<data name="AxisAnnotationReferencePointDescr">
+		<value>Specifies crossing point with orthogonal axis.</value>
+	</data>
+	<data name="AxisAnnotationTextOrientationDescr">
+		<value>Text orientation of the labels.</value>
+	</data>
+	<data name="AxisAnnotationVOffsetDescr">
+		<value>Offset in the vertical direction of the text.</value>
+	</data>
+	<data name="AxisAnnotationNameDescr">
+		<value>Indicates the name of the axis annotation.</value>
+	</data>
+	<data name="AxisAnnotationTickMarkStyleNameDescr">
+		<value>Indicates the name of the tick mark style used in this axis annotation.</value>
+	</data>
+	<data name="AxisAnnotationTickMarksVisibleDescr">
+		<value>Determines whether the tick marks are visible or hidden.</value>
+	</data>
+	<data name="AxisIsLogarithmicDescr">
+		<value>Determines whether the axis is logarithmic.</value>
+	</data>
+	<data name="SeriesLogBaseDescr">
+		<value>Determines the log base of this series.</value>
+	</data>
+	<data name="AxisScaleDescr">
+		<value>Number by which the axis is scaled.</value>
+	</data>
+	<data name="InputVariableNumberOfPointsDescr">
+		<value>Number of points of simulated series in design time.</value>
+	</data>
+	<data name="InputVariableNumEndDescr">
+		<value>Ending value of the range of simulated values in design time.</value>
+	</data>
+	<data name="InputVariableNumStartDescr">
+		<value>Starting value of the range of simulated values in design time.</value>
+	</data>
+	<data name="InputVariableNumStepDescr">
+		<value>Not used</value>
+	</data>
+	<data name="InputVariableStringPrefixDescr">
+		<value>Prefix of values of the input variable to be used in design time.</value>
+	</data>
+	<data name="InputVariableStringsDescr">
+		<value>Not used</value>
+	</data>
+	<data name="InputVariableTimeEndDescr">
+		<value>Not used</value>
+	</data>
+	<data name="InputVariableTimeStartDescr">
+		<value>Not used</value>
+	</data>
+	<data name="InputVariableTimeStepDescr">
+		<value>Not used</value>
+	</data>
+	<data name="InputVariableTimeStepUnitDescr">
+		<value>Not used</value>
+	</data>
+	<data name="ChartTitleRectangleSizeDescr">
+		<value>Size of the title rectangle.</value>
+	</data>
+	<data name="SeriesBaseCoordSystemDescr">
+		<value>Coordinate system of this series node.</value>
+	</data>
+	<data name="SeriesIsLogarithmicDescr">
+		<value>Determines whether this series is logarithmic.</value>
+	</data>
+	<data name="CatBehavior">
+		<value>Behavior</value>
+	</data>
+	<data name="CatColors">
+		<value>Colors</value>
+	</data>
+	<data name="CatGeneral">
+		<value>General</value>
+	</data>
+	<data name="CatAppearance">
+		<value>Appearance</value>
+	</data>
+	<data name="CatTickMarks">
+		<value>Tick Marks</value>
+	</data>
+	<data name="StripsMinimumNumberOfStripsDescr">
+		<value>Specifies the minimum number of strips.</value>
+	</data>
+	<data name="GridMinimumNumberOfLinessDescr">
+		<value>Specifies the minimum number of lines in grid.</value>
+	</data>
+	<data name="SeriesBaseMissingPointStyleNameDescr">
+		<value>Missing points style name.</value>
+	</data>
+	<data name="SeriesBaseMissingPointStyleKindDescr">
+		<value>Missing points style kind.</value>
+	</data>
+	<data name="RadarTextOrientationDescr">
+		<value>The x-coordinate text orientation for radar charts.</value>
+	</data>
+</root>

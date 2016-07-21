@@ -1,0 +1,578 @@
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21004</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7A3E8FE-9B9D-419B-B73F-DDFFE56B822B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Core\gauges.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>ComponentArt.Web.Visualization.Gauges</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ComponentArt.Web.Visualization.Gauges</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>20</FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;FW1;WEB</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>FW35;WEB</DefineConstants>
+    <DocumentationFile>ComponentArt.Gauges.Gauge.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Name>System.Drawing.Design</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Name>System.Web.Extensions</Name>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CachingImageManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClientEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Annotation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataSourceConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DoubleWithAutoConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Factory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\GaugeGeometry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\GaugePalette.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\GaugeXmlSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\IDrawableControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\IEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\IGaugeControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ImageAnnotation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Indicator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\IObjectModelNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Layer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\LayerVisualPart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\MapArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\MarkerStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\MultiColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\NamedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\NamedObjectCollectionEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\ObjectMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ObjectModelBrowser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Pointer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\PointerStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Range.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\RelativeObjects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Renderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\RenderingContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Scale.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SizePositionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Skin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SliderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\SubGauge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Text.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\TextStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Theme.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\TickMark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\ColorStopControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\ColorStopList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\ListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\MultiColorDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\ProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\Separator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\StateColorDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\StateColorStopControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\StateColorStopList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardRadioBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardSkin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardTabControlDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\WinUI\WizardTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\AnnotationsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\CollectionsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\GaugeThumbnailListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\GaugeTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\GaugeWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\IndicatorsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\PointersTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\PreviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\ProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\RangesTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\ScalesTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\StartTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\SubGaugesTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\ThumbnailListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\WizardGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Wizard\WizardSkin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gauge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GaugeClientEvents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GaugeDesigner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GaugeHttpHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GDIEngine\GDIBitmapSkin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GDIEngine\GDIEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GDIEngine\GDIFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GDIEngine\GDILayerDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GDIEngine\GDIProceduralFrameSkin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GDIEngine\GDIRenderingContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GDIEngine\GDISkin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JsonUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Licensing\RedistributableLicenseProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SavingImageManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StoredImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="client_scripts\A654k.js" />
+    <EmbeddedResource Include="client_scripts\A654u.js" />
+    <EmbeddedResource Include="Core\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\NamedObjectCollectionEditor.resx">
+      <DependentUpon>NamedObjectCollectionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\SizePositionControl.resx">
+      <DependentUpon>SizePositionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\SliderControl.resx">
+      <DependentUpon>SliderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\ColorStopControl.resx">
+      <DependentUpon>ColorStopControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\ColorStopList.resx">
+      <DependentUpon>ColorStopList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\ListBox.resx">
+      <DependentUpon>ListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\MultiColorDialog.resx">
+      <DependentUpon>MultiColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\Separator.resx">
+      <DependentUpon>Separator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\StateColorDialog.resx">
+      <DependentUpon>StateColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\StateColorStopControl.resx">
+      <DependentUpon>StateColorStopControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\StateColorStopList.resx">
+      <DependentUpon>StateColorStopList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\WizardButton.resx">
+      <DependentUpon>WizardButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\WizardCheckBox.resx">
+      <DependentUpon>WizardCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\WizardGroupBox.resx">
+      <DependentUpon>WizardGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\WizardRadioBox.resx">
+      <DependentUpon>WizardRadioBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\WizardTabControl.resx">
+      <DependentUpon>WizardTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\WizardTabPage.resx">
+      <DependentUpon>WizardTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\WinUI\WizardTrackBar.resx">
+      <DependentUpon>WizardTrackBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\AnnotationsTab.resx">
+      <DependentUpon>AnnotationsTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\CollectionsTab.resx">
+      <DependentUpon>CollectionsTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\GaugeThumbnailListBox.resx">
+      <DependentUpon>GaugeThumbnailListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\GaugeTreeControl.resx">
+      <DependentUpon>GaugeTreeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\GaugeWizardForm.resx">
+      <DependentUpon>GaugeWizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\Images\ButtonArrow.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\ButtonArrowDown.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\apply-down.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\apply-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\apply.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\back-down.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\back-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\back.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\cancel-down.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\cancel-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\cancel.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\close-down.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\close-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\close.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\finish-down.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\finish-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\finish.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\help-down.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\help-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\help.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\next-down.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\next-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\chromeButtons\next.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\header.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\annotations-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\annotations-selected.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\annotations.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\indicators-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\indicators-selected.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\indicators.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\pointers-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\pointers-selected.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\pointers.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\ranges-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\ranges-selected.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\ranges.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\scales-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\scales-selected.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\scales.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\start-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\start-selected.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\start.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\subGauges-hover.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\subGauges-selected.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\navButtons\subGauges.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\annotation-collection.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\annotation.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\gauge-collection.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\gauge.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\imageAnnotation-collection.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\imageAnnotation.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\indicator-collection.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\indicator.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\pointer-collection.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\pointer.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\range-collection.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\range.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\scale-collection.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\scale.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\textAnnotation-collection.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\treeviewIcons\textAnnotation.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\wizard-icon.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\wizardSkin.png" />
+    <EmbeddedResource Include="Core\Wizard\Images\wizardTitleBar.png" />
+    <EmbeddedResource Include="Core\Wizard\IndicatorsTab.resx">
+      <DependentUpon>IndicatorsTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\PointersTab.resx">
+      <DependentUpon>PointersTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\PreviewControl.resx">
+      <DependentUpon>PreviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\ProgressBar.resx">
+      <DependentUpon>ProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\RangesTab.resx">
+      <DependentUpon>RangesTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\ScalesTab.resx">
+      <DependentUpon>ScalesTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\StartTab.resx">
+      <DependentUpon>StartTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\SubGaugesTab.resx">
+      <DependentUpon>SubGaugesTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\ThumbnailListBox.resx">
+      <DependentUpon>ThumbnailListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Wizard\WizardGroupBox.resx">
+      <DependentUpon>WizardGroupBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gauge-About.png" />
+    <EmbeddedResource Include="Gauge.bmp" />
+    <EmbeddedResource Include="GDIEngine\Resources\Bitmaps.XML" />
+    <EmbeddedResource Include="GDIEngine\Resources\IndicatorCircle.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\IndicatorRect.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD0.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD1.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD2.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD3.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD4.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD5.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD6.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD7.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD8.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCD9.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCDdash.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCDdot.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\LCDempty.png" />
+    <EmbeddedResource Include="GDIEngine\Resources\Themes.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

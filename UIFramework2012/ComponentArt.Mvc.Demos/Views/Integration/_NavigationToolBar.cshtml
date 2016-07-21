@@ -1,0 +1,50 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+<script type="text/javascript">
+  function NavigationToolBar_ItemCheckChange(sender, eventArgs)
+  {
+    if (eventArgs.get_item().get_checked() && window.FolderList_TreeView)
+    {
+      var node = FolderList_TreeView.findNodeByProperty('Text', eventArgs.get_item().get_id());
+
+      if (node)
+      {
+        node.select();
+      }
+    }
+  }
+
+  function NavigationToolBar_Load(sender, eventArgs)
+  {
+    Update_NavigationToolBar(4);
+  }
+</script>
+@(Html.ComponentArt().ToolBar()
+  .ID("NavigationToolBar")
+  .AutoTheming(true)
+  .Width(Unit.Parse("232px"))
+  .CssClass("NavigationToolBar")
+  .DefaultItemCheckedCssClass("NavigationToolBarSelectedItem")
+  .DefaultItemCheckedHoverCssClass("NavigationToolBarSelectedItemHover")
+  .DefaultItemCssClass("NavigationToolBarItem")
+  .DefaultItemHoverCssClass("NavigationToolBarItemHover")
+  .DefaultItemImageWidth(16)
+  .DefaultItemImageHeight(16)
+  .ImagesBaseUrl("~/Content/Integration/Outlook/navigation_toolbar_images/")
+  .Items(i =>
+  {
+    i.Add().ItemType(ToolBarItemType.Separator).CssClass("NavigationToolBarSpacerItem");
+    i.Add().ItemType(ToolBarItemType.ToggleRadio).Visible(false).ToggleGroupId("group").IconCssClass("icon-outlook-mail");
+    i.Add().ItemType(ToolBarItemType.ToggleRadio).Visible(false).ID("Calendar").ToggleGroupId("group").IconUrl("calendar.gif");
+    i.Add().ItemType(ToolBarItemType.ToggleRadio).Visible(false).ID("Contacts").ToggleGroupId("group").IconUrl("contacts.gif");
+    i.Add().ItemType(ToolBarItemType.ToggleRadio).Visible(false).ID("Tasks").ToggleGroupId("group").IconUrl("tasks.gif");
+    i.Add().ItemType(ToolBarItemType.ToggleRadio).Visible(false).ID("Notes").ToggleGroupId("group").IconUrl("notes.gif");
+    i.Add().ItemType(ToolBarItemType.ToggleRadio).Visible(false).ID("Inbox").ToggleGroupId("group").IconUrl("folder.gif");
+    i.Add().ItemType(ToolBarItemType.ToggleRadio).Visible(false).ToggleGroupId("group").IconCssClass("icon-outlook-shortcuts");
+  })
+  .ClientEvents(c =>
+  {
+    c.ItemCheckChange("NavigationToolBar_ItemCheckChange");
+    c.Load("NavigationToolBar_Load");
+  })
+)

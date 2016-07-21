@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="ComponentArt.SOA.Demos.TabStrip"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+>
+    <UserControl.Resources>
+        <!-- BEGIN TABSTRIP -->
+
+    <!-- TABSTRIP RESOURCES -->
+
+</UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TabStrip" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="TabStrip SOA.UI Automatic" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An example of populating a TabStrip via a SOA.UI service." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\TabStrip\TabStripSOAUIAutomatic.xaml,\source\controls\tabstrip\TabStripSOAUIAutomatic.xaml.cs" />
+        <StackPanel Orientation="Vertical" Margin="10">
+            <ComponentArt:TabStrip 
+            x:Name="TabStrip1"
+            Width="520"
+            Height="22"
+            Overflow="Wrap"
+            Alignment="top"
+            VerticalAlignment="top"
+            Margin="0,0,0,-1"
+            ScrollLeftIconSource="./TabStrip/left_arrow.png"
+            ScrollRightIconSource="./TabStrip/right_arrow.png"
+            SoaResponseProcessed="TabStrip1_SoaResponseProcessed"
+            SoaServiceUrl="../Services/SoaSimpleTabStripService.svc"
+            >
+            </ComponentArt:TabStrip>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
+

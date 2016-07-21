@@ -1,0 +1,279 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:local="clr-namespace:ComponentArt.Silverlight.Demos" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="ComponentArt.Silverlight.Demos.Welcome"
+	mc:Ignorable="d">
+    
+	<UserControl.Resources>
+
+        <LinearGradientBrush x:Key="ButtonReflection" StartPoint="0,0" EndPoint="0,1">
+			<GradientStop Color="#b3e7fb" Offset="0" />
+			<GradientStop Color="#ffffff" Offset="0.5" />
+			<GradientStop Color="#00ffffff" Offset="1" />
+		</LinearGradientBrush>
+        
+		<LinearGradientBrush x:Key="Demo_Overlay_Fill" StartPoint="0,0" EndPoint="0,1">
+			<GradientStop Color="#00ffffff" Offset="0" />
+			<GradientStop Color="#00ffffff" Offset="1" />
+		</LinearGradientBrush>
+		
+		<SolidColorBrush x:Key="Demo_Text" Color="#000000" />
+		<SolidColorBrush x:Key="Demo_Text_Hover" Color="#0097bc" />
+		<Storyboard x:Name="MainImageHighlight_animation">
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+				<EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="585">
+					<EasingDoubleKeyFrame.EasingFunction>
+						<CubicEase EasingMode="EaseIn"/>
+					</EasingDoubleKeyFrame.EasingFunction>
+				</EasingDoubleKeyFrame>
+			</DoubleAnimationUsingKeyFrames>
+            <DoubleAnimation From=".25" To="1" Storyboard.TargetName="MainImage" Storyboard.TargetProperty="Opacity" Duration="00:00:00.25" />
+		</Storyboard>
+
+        <!-- /Demo button styles -->
+
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="Transparent" Width="1076" Height="652">
+       
+        <Grid.RowDefinitions>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Index" Margin="0,0,-134,220" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="" Margin="0,0,-134,220" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Groundbreaking UI controls for enterprise line-of-business applications." Margin="0,0,-134,220" />
+		<Grid Width="1076" Height="652">
+			<TextBlock FontFamily="Verdana" HorizontalAlignment="Left" Margin="10,0,0,236" FontSize="11"
+				Width="473" Text="Incorporating multiple controls to demonstrate complex, real-life scenarios" 
+				TextWrapping="Wrap" FontStretch="Expanded" Height="22" VerticalAlignment="Bottom"/>
+			<TextBlock Margin="0,0,287,227" LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="31" VerticalAlignment="Bottom"
+			 HorizontalAlignment="Right" Width="249" Text="Examples demonstrating technologically exceptional features and functionality" 
+			 FontStretch="Expanded"/>
+
+			<TextBlock Margin="0,0,19,227" LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="31" VerticalAlignment="Bottom"
+				HorizontalAlignment="Right" Width="249" 
+				FontStretch="Expanded"><Run Text="See the richness and flexibility of"/><LineBreak/><Run Text="Web.UI's ready-to-use designs."/></TextBlock>
+
+            <Image Height="28" VerticalAlignment="Top" Source="Assets/Pages/Welcome/outline_r1_c1.png" Stretch="None" HorizontalAlignment="Left" Width="312"/>            
+			<Image Height="19" Margin="0,0,310,259" VerticalAlignment="Bottom" Source="Assets/Pages/Welcome/outline_r15_c13.png" Stretch="None" HorizontalAlignment="Right" Width="227"/>
+
+			<Image Height="19" HorizontalAlignment="Right" Margin="0,0,96,259" VerticalAlignment="Bottom" Width="175" Source="Assets/Pages/Welcome/outline_r15_c18.png" Stretch="None"/>
+            
+			<Image Height="19" HorizontalAlignment="Left" Margin="9,0,0,258" VerticalAlignment="Bottom" Width="189" Source="Assets/Pages/Welcome/outline_r16_c2.png" Stretch="None"/>
+            
+			<Image Height="16" HorizontalAlignment="Right" Margin="0,21,66,0" VerticalAlignment="Top" Width="205" Source="Assets/Pages/Welcome/outline_r2_c18.png" Stretch="None"/>
+            
+			<Image Height="31" HorizontalAlignment="Right" Margin="0,0,352,182" VerticalAlignment="Bottom" Width="185" Source="Assets/Pages/Welcome/outline_r20_c13.png" Stretch="None"/>
+			<Image Height="43" Margin="0,0,352,102" VerticalAlignment="Bottom" Source="Assets/Pages/Welcome/outline_r22_c13.png" Stretch="None" HorizontalAlignment="Right" Width="185"/>
+			<TextBlock Height="31" Margin="0,40,19,0" FontFamily="Verdana" VerticalAlignment="Top" TextWrapping="Wrap" LineHeight="2" HorizontalAlignment="Right" Width="248"><Run Text="Comprehensive demos for each"/><LineBreak/><Run Text="Web.UI for ASP.NET AJAX control."/></TextBlock>
+			
+            <!-- RIA -->
+            <HyperlinkButton Height="16" HorizontalAlignment="Right" Margin="0,0,307,164" VerticalAlignment="Bottom" Width="228" FontFamily="Verdana" 
+                             FontSize="10.667" Foreground="#FF0076A3" Content="DataGrid Paging, Sorting, Grouping" Style="{StaticResource BulletedHyperlinkButton}" 
+                             Padding="10,0,2,0" Click="DemoButton_Click" Tag="demo DataGridRiaCodeless" />
+			<HyperlinkButton Height="16" HorizontalAlignment="Right" Margin="0,0,307,151" VerticalAlignment="Bottom" Width="228" FontFamily="Verdana" 
+                             FontSize="10.667" Foreground="#FF0076A3" Content="DataGrid Filtering" Style="{StaticResource BulletedHyperlinkButton}" 
+                             Padding="10,0,2,0" Click="DemoButton_Click" Tag="demo DataGridRiaCodelessFiltering"/>
+            <!-- Regular -->
+			<HyperlinkButton Height="16" HorizontalAlignment="Right" Margin="0,0,307,86" VerticalAlignment="Bottom" Width="228" FontFamily="Verdana" 
+                             FontSize="10.667" Foreground="#FF0076A3" Content="DataGrid Paging, Sorting, Grouping" Style="{StaticResource BulletedHyperlinkButton}" 
+                             Padding="10,0,2,0" Click="DemoButton_Click" Tag="demo DataGridCoreFeatures"/>
+			<HyperlinkButton Height="16" HorizontalAlignment="Right" Margin="0,0,307,73" VerticalAlignment="Bottom" Width="228" FontFamily="Verdana" 
+                             FontSize="10.667" Foreground="#FF0076A3" Content="DataGrid Deferred Scrolling" Style="{StaticResource BulletedHyperlinkButton}" 
+                             Padding="10,0,2,0" Click="DemoButton_Click" Tag="demo DataGridSoaScrolling"/>
+			<HyperlinkButton Height="16" HorizontalAlignment="Right" Margin="0,0,307,60" VerticalAlignment="Bottom" Width="228" FontFamily="Verdana" 
+                             FontSize="10.667" Foreground="#FF0076A3" Content="DataGrid Editing" Style="{StaticResource BulletedHyperlinkButton}" 
+                             Padding="10,0,2,0" Click="DemoButton_Click" Tag="demo DataGridSoaEditing"/>
+			<HyperlinkButton Height="16" HorizontalAlignment="Right" Margin="0,0,307,47" VerticalAlignment="Bottom" Width="228" FontFamily="Verdana" 
+                             FontSize="10.667" Foreground="#FF0076A3" Content="TreeView Load on Demand" Style="{StaticResource BulletedHyperlinkButton}" 
+                             Padding="10,0,2,0" Click="DemoButton_Click" Tag="demo TreeViewSOAUIAutomatic" />
+			<HyperlinkButton Height="16" HorizontalAlignment="Right" Margin="0,0,307,34" VerticalAlignment="Bottom" Width="228" FontFamily="Verdana" 
+                             FontSize="10.667" Foreground="#FF0076A3" Content="ComboBox Auto-complete" Style="{StaticResource BulletedHyperlinkButton}" 
+                             Padding="10,0,2,0" Click="DemoButton_Click" Tag="demo ComboBoxSoaAutoPilot"/>
+
+			<local:SmallIndexDemoButton Tag="design BlackIce" Click="DemoButton_Click" Width="230" Height="192" 
+                                        Margin="0,0,50,29" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}"
+                                        ButtonImage="Assets/Pages/Welcome/themes.jpg" d:LayoutOverrides="VerticalAlignment" HeaderText="Themes">
+                <!--
+                <TextBlock Margin="0,-4,0,0" LineHeight="11" FontFamily="Verdana" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="12"
+				HorizontalAlignment="Left" FontWeight="Bold" Text="Themes" Foreground="#FF0076A3">
+                -->
+                <TextBlock LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="60" VerticalAlignment="Bottom"
+				HorizontalAlignment="Left" Width="220" 
+				FontStretch="Expanded">
+                    <Run Text="Built-in visual styles - Office 2010,"/><LineBreak/><Run Text="Outlook 2007, Black Ice and more." />
+                </TextBlock>
+            </local:SmallIndexDemoButton>
+<!--			
+			<local:SmallIndexDemoButton Tag="integration GaugeSkins" Click="DemoButton_Click" Width="246" Height="100" 
+                                        Margin="0,0,30,30" VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}" HeaderText=""
+                                        ButtonImage="Assets/Pages/Welcome/DesignShowcase-Gauge.png" d:LayoutOverrides="VerticalAlignment">
+                <TextBlock Margin="0,-4,0,0" LineHeight="11" FontFamily="Verdana" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="12"
+				HorizontalAlignment="Left" Text="Gauge Skins" Foreground="#FF0076A3"/>
+            </local:SmallIndexDemoButton> 
+			-->
+            <local:SmallIndexDemoButton Tag="integration Outlook2007" Click="DemoButton_Click" Width="164" Height="201" 
+                                        Margin="2,0,0,29" HorizontalAlignment="Left"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}" HeaderText="Outlook 2007"
+                                        ButtonImage="Assets/Pages/Welcome/outline_r19_c2.png" VerticalAlignment="Bottom">
+                <TextBlock LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="46" VerticalAlignment="Bottom"
+				HorizontalAlignment="Left" Width="148" 
+				FontStretch="Expanded"><Run Text="Built using DataGrid,"/><LineBreak/><Run Text="Menu, TreeView, NavBar,"/><LineBreak/><Run Text="ToolBar and Splitter."/></TextBlock>
+            </local:SmallIndexDemoButton>
+
+            <local:SmallIndexDemoButton Tag="integration FileExplorer" Click="DemoButton_Click" Width="164" Height="201" 
+                                        Margin="171,0,0,29" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}" HeaderText="File Explorer"
+                                        ButtonImage="Assets/Pages/Welcome/outline_r19_c5.png">
+                <TextBlock LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="46" VerticalAlignment="Bottom"
+				HorizontalAlignment="Left" Width="148" 
+				FontStretch="Expanded"><Run Text="An integrated demo using"/><LineBreak/><Run Text="DataGrid and TreeView controls."/></TextBlock>
+            </local:SmallIndexDemoButton>
+
+            <local:SmallIndexDemoButton Tag="integration FeedBrowser" Click="DemoButton_Click" Width="164" Height="201" 
+                                        Margin="339,0,0,29" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}" HeaderText="Feed Browser"
+                                        ButtonImage="Assets/Pages/Welcome/outline_r19_c9.png">
+                <TextBlock LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="46" VerticalAlignment="Bottom"
+				HorizontalAlignment="Left" Width="148" 
+				FontStretch="Expanded"><Run Text="Built using DataGrid, Menu, TreeView, Toolbar, &amp; TabStrip controls."/></TextBlock>
+            </local:SmallIndexDemoButton>
+            
+
+
+            <!-- Control Buttons -->
+            <Grid HorizontalAlignment="Right" Margin="0,75,11,0" ShowGridLines="False" 
+                  VerticalAlignment="Top" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width=".5*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <local:ImageButton Text="BreadCrumb" Tag="control BreadCrumb" ImageNormal="../Assets/Demo/ControlLogos/node-breadcrumb.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <!-- Hwan
+                    <local:ImageButton Text="Chart" Tag="control Chart" ImageNormal="../Assets/Demo/ControlLogos/node-chart.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    -->
+                    
+                    <local:ImageButton Text="ComboBox" Tag="control ComboBox" ImageNormal="../Assets/Demo/ControlLogos/node-combobox.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="ContextMenu" Tag="control ContextMenu" ImageNormal="../Assets/Demo/ControlLogos/node-contextmenu.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="DataGrid" Tag="control DataGrid" ImageNormal="../Assets/Demo/ControlLogos/node-datagrid.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="DragDrop" Tag="control DragDrop" ImageNormal="../Assets/Demo/ControlLogos/node-dragdrop.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />                    
+                    <!-- Hwan
+                    <local:ImageButton Text="Gauge" Tag="control Gauge" ImageNormal="../Assets/Demo/ControlLogos/node-gauge.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    -->                    
+                    <local:ImageButton Text="HtmlEditor" Tag="control HtmlEditor" ImageNormal="../Assets/Demo/ControlLogos/node-htmleditor.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="HtmlPanel" Tag="control HtmlPanel" ImageNormal="../Assets/Demo/ControlLogos/node-htmlpanel.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="ItemFlow" Tag="control ItemFlow" ImageNormal="../Assets/Demo/ControlLogos/node-itemflow.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="MaskedInput" Tag="control MaskedInput" ImageNormal="../Assets/Demo/ControlLogos/node-maskedinput.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="Menu" Tag="control Menu" ImageNormal="../Assets/Demo/ControlLogos/node-menu.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" >
+                    <local:ImageButton Text="NavBar" Tag="control NavBar" ImageNormal="../Assets/Demo/ControlLogos/node-navbar.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="NumberInput" Tag="control NumberInput" ImageNormal="../Assets/Demo/ControlLogos/node-numberinput.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="RangeSlider" Tag="control RangeSlider" ImageNormal="../Assets/Demo/ControlLogos/node-rangeslider.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="Spinner" Tag="control Spinner" ImageNormal="../Assets/Demo/ControlLogos/node-spinner.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="Splitter" Tag="control Splitter" ImageNormal="../Assets/Demo/ControlLogos/node-splitter.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="TabStrip" Tag="control TabStrip" ImageNormal="../Assets/Demo/ControlLogos/node-tabstrip.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="ToolBar" Tag="control ToolBar" ImageNormal="../Assets/Demo/ControlLogos/node-toolbar.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="TreeView" Tag="control TreeView" ImageNormal="../Assets/Demo/ControlLogos/node-treeview.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="Upload" Tag="control Upload" ImageNormal="../Assets/Demo/ControlLogos/node-upload.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                    <local:ImageButton Text="Window" Tag="control Window" ImageNormal="../Assets/Demo/ControlLogos/node-window.png" 
+                                                                           Style="{StaticResource Button_Controls_Welcome}"  Click="ControlButton_Click" />
+                </StackPanel>
+            </Grid>
+            
+            <local:SmallIndexDemoButton Tag="bob DataGrid" Click="ControlButton_Click" Height="84" 
+                                        Margin="463,52,341,0" MouseEnter="RollOverButton_MouseEnter"
+                                        MouseLeave="RollOverButton_MouseLeave" Id="bob DataGrid"
+                                        Style="{StaticResource Style_IndexRollOverButton}" HeaderText=""
+                                        ButtonImage="Assets/Pages/Welcome/outline_r5_c11.png" VerticalAlignment="Top">
+                <TextBlock Margin="0,10,0,5" Height="60" FontFamily="Verdana" TextWrapping="Wrap" FontSize="12" LineHeight="19" Width="253">
+                    <Run Text="Performance, Technical Sophistication,"/><LineBreak/><Run Text="Enterprise Features and Raw Power"/>
+                </TextBlock>
+            </local:SmallIndexDemoButton>
+            <!-- Hwan
+            <local:SmallIndexDemoButton Tag="bob Visualization" Click="ControlButton_Click" Height="66" 
+            	                        Margin="463,121,341,0" MouseEnter="RollOverButton_MouseEnter"
+            	                        MouseLeave="RollOverButton_MouseLeave"
+            	                        Style="{StaticResource Style_IndexRollOverButton}" HeaderText="" Id="bob Visualization"
+            	                        ButtonImage="Assets/Pages/Welcome/outline_r7_c11.png" VerticalAlignment="Top">
+            	<TextBlock Height="31" TextWrapping="Wrap" FontFamily="Verdana" 
+            		Text="Brilliant Rendering, Unmatched Interactivity, Smooth Animation and Pure Elegance" LineHeight="17" Width="253" Margin="0,2,0,0"/>
+            </local:SmallIndexDemoButton>
+            -->
+            <local:SmallIndexDemoButton Tag="bob Navigation" Click="ControlButton_Click" Height="84" 
+            	                        Margin="463,142,341,0" MouseEnter="RollOverButton_MouseEnter"
+            	                        MouseLeave="RollOverButton_MouseLeave"
+            	                        Style="{StaticResource Style_IndexRollOverButton}" HeaderText="" Id="bob Navigation"
+            	                        ButtonImage="Assets/Pages/Welcome/outline_r10_c11.png" VerticalAlignment="Top">
+                <TextBlock Margin="0,10,0,5" TextWrapping="Wrap" Height="60" FontFamily="Verdana" FontSize="12" LineHeight="19" Width="253" >
+                    <Run Text="Extreme Flexibility, Powerful APIs,"/><LineBreak/><Run Text="a Balance of Function and Style"/>
+                </TextBlock>
+            </local:SmallIndexDemoButton>
+            <local:SmallIndexDemoButton Tag="bob Editors" Click="ControlButton_Click" Height="84" Id="bob Editors"
+            	                        Margin="463,222,341,324" MouseEnter="RollOverButton_MouseEnter"
+            	                        MouseLeave="RollOverButton_MouseLeave"
+            	                        Style="{StaticResource Style_IndexRollOverButton}" HeaderText=""
+            	                        ButtonImage="Assets/Pages/Welcome/outline_r12_c11.png">
+                <TextBlock Margin="0,10,0,5" TextWrapping="Wrap" Height="60" FontFamily="Verdana" FontSize="12" LineHeight="19" Width="253" >
+                    <Run Text="WYSIWYG Experience, Real-time"/><LineBreak/><Run Text="User Feedback and Built-in Validation"/>
+                </TextBlock>
+            </local:SmallIndexDemoButton>
+
+            <Grid Margin="8,40,0,0" Width="435" Height="325" HorizontalAlignment="Left" d:LayoutOverrides="Width, HorizontalMargin" VerticalAlignment="Top" >
+			<Grid.Clip>
+				<RectangleGeometry Rect="0,0,435,325" />
+			</Grid.Clip>
+                <Image x:Name="MainImage"  Source="Assets/Pages/Welcome/WebUiBox.png" Stretch="None" HorizontalAlignment="Left" Width="435" Height="325" />
+				<Rectangle x:Name="rectangle" Fill="#55FFFFFF" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" 
+                           Height="390.144" Canvas.Left="-97.056" Canvas.Top="-30.943" Margin="-94.5,-30,0,-35.144" HorizontalAlignment="Left" Width="43">
+					<Rectangle.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform Angle="16.66"/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Rectangle.RenderTransform>
+				</Rectangle>
+            </Grid>
+            <!-- End Control Buttons -->
+            
+        </Grid>
+
+
+	</Grid>
+</UserControl>

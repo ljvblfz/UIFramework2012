@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3069/SoaComboBoxLocationService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SoaComboBoxInsertRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaComboBoxRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:ArrayOfSoaComboBoxColumn" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Values" nillable="true" type="q1:ArrayOfanyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaComboBoxInsertRequest" nillable="true" type="tns:SoaComboBoxInsertRequest" />
+  <xs:complexType name="SoaComboBoxRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaComboBoxRequest" nillable="true" type="tns:SoaComboBoxRequest" />
+  <xs:complexType name="ArrayOfSoaComboBoxColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SoaComboBoxColumn" nillable="true" type="tns:SoaComboBoxColumn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoaComboBoxColumn" nillable="true" type="tns:ArrayOfSoaComboBoxColumn" />
+  <xs:complexType name="SoaComboBoxColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaComboBoxColumn" nillable="true" type="tns:SoaComboBoxColumn" />
+  <xs:complexType name="SoaComboBoxInsertResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaComboBoxResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaComboBoxInsertResponse" nillable="true" type="tns:SoaComboBoxInsertResponse" />
+  <xs:complexType name="SoaComboBoxResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaComboBoxResponse" nillable="true" type="tns:SoaComboBoxResponse" />
+  <xs:complexType name="SoaComboBoxSelectRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaComboBoxRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:ArrayOfSoaComboBoxColumn" />
+          <xs:element minOccurs="0" name="Count" type="xs:int" />
+          <xs:element minOccurs="0" name="Filters" nillable="true" type="tns:ArrayOfSoaComboBoxDataCondition" />
+          <xs:element minOccurs="0" name="Offset" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaComboBoxSelectRequest" nillable="true" type="tns:SoaComboBoxSelectRequest" />
+  <xs:complexType name="ArrayOfSoaComboBoxDataCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SoaComboBoxDataCondition" nillable="true" type="tns:SoaComboBoxDataCondition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoaComboBoxDataCondition" nillable="true" type="tns:ArrayOfSoaComboBoxDataCondition" />
+  <xs:complexType name="SoaComboBoxDataCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataFieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataFieldValue" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Operand" type="tns:SoaComboBoxDataConditionOperand" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaComboBoxDataCondition" nillable="true" type="tns:SoaComboBoxDataCondition" />
+  <xs:simpleType name="SoaComboBoxDataConditionOperand">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Equals" />
+      <xs:enumeration value="LessThan" />
+      <xs:enumeration value="LessThanOrEqual" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="GreaterThanOrEqual" />
+      <xs:enumeration value="Contains" />
+      <xs:enumeration value="StartsWith" />
+      <xs:enumeration value="NotEqualTo" />
+      <xs:enumeration value="In" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SoaComboBoxDataConditionOperand" nillable="true" type="tns:SoaComboBoxDataConditionOperand" />
+  <xs:complexType name="SoaComboBoxSelectResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaComboBoxResponse">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Data" nillable="true" type="q2:ArrayOfArrayOfKeyValueOfstringanyType" />
+          <xs:element minOccurs="0" name="ItemCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaComboBoxSelectResponse" nillable="true" type="tns:SoaComboBoxSelectResponse" />
+</xs:schema>

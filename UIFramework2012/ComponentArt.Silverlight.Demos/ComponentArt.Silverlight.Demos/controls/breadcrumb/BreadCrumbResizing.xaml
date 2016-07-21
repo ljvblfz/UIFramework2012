@@ -1,0 +1,281 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.BreadCrumbResizing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:input="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+    Width="760" Height="450">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="BreadCrumb" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Core Features" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Drag the red square to view BreadCrumb's resizing features." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\menu\BreadCrumbResizing.xaml,
+            \source\controls\menu\BreadCrumbResizing.xaml.cs"/>
+        <StackPanel x:Name="BreadCrumbStack" Orientation="Vertical" Margin="0,15,0,0" HorizontalAlignment="Left">
+            <ComponentArt:BreadCrumb x:Name="bcDemo" Initialized="bcDemo_Initialized" PopupHorizontalOffset="-15" EnableScrolling="True" UseRootIcon="True"
+                                     Height="30" BaseIconSource="/ComponentArt.Silverlight.Demos;component/Assets/BreadCrumb/filesystemicons/" DefaultRootIcon="Desktop.png"
+                                     DefaultIcon="GenericFolder.png" BreadCrumbClick="bcDemo_ItemClick">
+                <ComponentArt:BreadCrumbItem Text="Desktop" IconSource="Desktop.png">
+                    <ComponentArt:BreadCrumbItem Text="Computer" IconSource="MyComputerNew.png" DropDownHeight="250" >
+                        <ComponentArt:BreadCrumbItem Text="Floppy Disk Drive (A:)" IconSource="FloppyDrive.png"/>
+                        <ComponentArt:BreadCrumbItem Text="Local Disk (C:)" IconSource="HardDrive.png">
+                            <ComponentArt:BreadCrumbItem Text="PerfLogs" />
+                            <ComponentArt:BreadCrumbItem Text="Program Files" >
+                                <ComponentArt:BreadCrumbItem Text="Common Files" />
+                                <ComponentArt:BreadCrumbItem Text="DVD Maker" />
+                                <ComponentArt:BreadCrumbItem Text="Internet Explorer" />
+                                <ComponentArt:BreadCrumbItem Text="Microsoft Silverlight" />
+                                <ComponentArt:BreadCrumbItem Text="MSBuild" />
+                                <ComponentArt:BreadCrumbItem Text="Readonweb" />
+                                <ComponentArt:BreadCrumbItem Text="Reference Assemblies" />
+                                <ComponentArt:BreadCrumbItem Text="Sun" />
+                                <ComponentArt:BreadCrumbItem Text="Windows Defender" />
+                                <ComponentArt:BreadCrumbItem Text="Windows Journal" />
+                                <ComponentArt:BreadCrumbItem Text="Windows Mail" />
+                                <ComponentArt:BreadCrumbItem Text="Windows Media Player" />
+                                <ComponentArt:BreadCrumbItem Text="Windows NT" />
+                                <ComponentArt:BreadCrumbItem Text="Windows Photo Viewer" />
+                                <ComponentArt:BreadCrumbItem Text="Windows Portable Devices" />
+                                <ComponentArt:BreadCrumbItem Text="Windows Sidebar" />
+                            </ComponentArt:BreadCrumbItem>
+                            <ComponentArt:BreadCrumbItem Text="Users" >
+                                <ComponentArt:BreadCrumbItem Text="Public" />
+                                <ComponentArt:BreadCrumbItem Text="user" />
+                            </ComponentArt:BreadCrumbItem>
+                            <ComponentArt:BreadCrumbItem Text="Windows" >
+                                <ComponentArt:BreadCrumbItem Text="addins" />
+                                <ComponentArt:BreadCrumbItem Text="AppCompat" >
+                                    <ComponentArt:BreadCrumbItem Text="Programs" />
+                                </ComponentArt:BreadCrumbItem>
+                                <ComponentArt:BreadCrumbItem Text="AppPatch" >
+                                    <ComponentArt:BreadCrumbItem Text="Custom" />
+                                    <ComponentArt:BreadCrumbItem Text="en-US" />
+                                </ComponentArt:BreadCrumbItem>
+                                <ComponentArt:BreadCrumbItem Text="assembly" >
+                                    <ComponentArt:BreadCrumbItem Text="Download" />
+                                </ComponentArt:BreadCrumbItem>
+                                <ComponentArt:BreadCrumbItem Text="Boot" >
+                                    <ComponentArt:BreadCrumbItem Text="DVD" >
+                                        <ComponentArt:BreadCrumbItem Text="PCAT" >
+                                            <ComponentArt:BreadCrumbItem Text="en-US" />
+                                        </ComponentArt:BreadCrumbItem>
+                                        <ComponentArt:BreadCrumbItem Text="Fonts" />
+                                        <ComponentArt:BreadCrumbItem Text="PCAT" >
+                                            <ComponentArt:BreadCrumbItem Text="cs-CZ" />
+                                            <ComponentArt:BreadCrumbItem Text="da-DK" />
+                                            <ComponentArt:BreadCrumbItem Text="de-DE" />
+                                            <ComponentArt:BreadCrumbItem Text="el-GR" />
+                                            <ComponentArt:BreadCrumbItem Text="en-US" />
+                                            <ComponentArt:BreadCrumbItem Text="es-ES" />
+                                            <ComponentArt:BreadCrumbItem Text="fi-FI" />
+                                            <ComponentArt:BreadCrumbItem Text="fr-FR" />
+                                            <ComponentArt:BreadCrumbItem Text="hu-HU" />
+                                            <ComponentArt:BreadCrumbItem Text="it-IT" />
+                                            <ComponentArt:BreadCrumbItem Text="ja-JP" />
+                                            <ComponentArt:BreadCrumbItem Text="ko-KR" />
+                                            <ComponentArt:BreadCrumbItem Text="nb-NO" x:Name="SelectMe"/>
+                                            <ComponentArt:BreadCrumbItem Text="nl-NL" />
+                                            <ComponentArt:BreadCrumbItem Text="pl-PL" />
+                                            <ComponentArt:BreadCrumbItem Text="pt-BR" />
+                                            <ComponentArt:BreadCrumbItem Text="pt-PT" />
+                                            <ComponentArt:BreadCrumbItem Text="ru-RU" />
+                                            <ComponentArt:BreadCrumbItem Text="sv-SE" />
+                                            <ComponentArt:BreadCrumbItem Text="tr-TR" />
+                                            <ComponentArt:BreadCrumbItem Text="zh-CN" />
+                                            <ComponentArt:BreadCrumbItem Text="zh-HK" />
+                                            <ComponentArt:BreadCrumbItem Text="zh-TW" />
+                                        </ComponentArt:BreadCrumbItem>
+                                    </ComponentArt:BreadCrumbItem>
+                                </ComponentArt:BreadCrumbItem>
+                                <ComponentArt:BreadCrumbItem Text="Branding" />
+                                <ComponentArt:BreadCrumbItem Text="CSC" />
+                                <ComponentArt:BreadCrumbItem Text="Cursors" />
+                                <ComponentArt:BreadCrumbItem Text="debug" />
+                                <ComponentArt:BreadCrumbItem Text="diagnostics" />
+                                <ComponentArt:BreadCrumbItem Text="DigitalLocker" />
+                                <ComponentArt:BreadCrumbItem Text="Downloaded Program Files" />
+                                <ComponentArt:BreadCrumbItem Text="ehome" />
+                                <ComponentArt:BreadCrumbItem Text="en-US" />
+                                <ComponentArt:BreadCrumbItem Text="Fonts" />
+                                <ComponentArt:BreadCrumbItem Text="Globalization" />
+                                <ComponentArt:BreadCrumbItem Text="Help" />
+                                <ComponentArt:BreadCrumbItem Text="IME" />
+                                <ComponentArt:BreadCrumbItem Text="inf" />
+                                <ComponentArt:BreadCrumbItem Text="L2Schemas" />
+                                <ComponentArt:BreadCrumbItem Text="LiveKernelReports" />
+                                <ComponentArt:BreadCrumbItem Text="Logs" />
+                                <ComponentArt:BreadCrumbItem Text="Media" />
+                                <ComponentArt:BreadCrumbItem Text="Microsoft.NET" />
+                                <ComponentArt:BreadCrumbItem Text="ModernLogs" />
+                                <ComponentArt:BreadCrumbItem Text="Offline Web Pages" />
+                                <ComponentArt:BreadCrumbItem Text="Panther" />
+                                <ComponentArt:BreadCrumbItem Text="Performance" />
+                                <ComponentArt:BreadCrumbItem Text="PLA" />
+                                <ComponentArt:BreadCrumbItem Text="PolicyDefinitions" />
+                                <ComponentArt:BreadCrumbItem Text="Prefetch" />
+                                <ComponentArt:BreadCrumbItem Text="Registration" />
+                                <ComponentArt:BreadCrumbItem Text="RemotePackages" />
+                                <ComponentArt:BreadCrumbItem Text="Resources" />
+                                <ComponentArt:BreadCrumbItem Text="SchCache" />
+                                <ComponentArt:BreadCrumbItem Text="schemas" />
+                                <ComponentArt:BreadCrumbItem Text="security" />
+                                <ComponentArt:BreadCrumbItem Text="ServiceProfiles" />
+                                <ComponentArt:BreadCrumbItem Text="servicing" />
+                                <ComponentArt:BreadCrumbItem Text="Setup" />
+                                <ComponentArt:BreadCrumbItem Text="ShellNew" />
+                                <ComponentArt:BreadCrumbItem Text="SoftwareDistribution" />
+                                <ComponentArt:BreadCrumbItem Text="Speech" />
+                                <ComponentArt:BreadCrumbItem Text="system" />
+                                <ComponentArt:BreadCrumbItem Text="System32" />
+                                <ComponentArt:BreadCrumbItem Text="TAPI" />
+                                <ComponentArt:BreadCrumbItem Text="Tasks" />
+                                <ComponentArt:BreadCrumbItem Text="Temp" />
+                                <ComponentArt:BreadCrumbItem Text="tracing" />
+                                <ComponentArt:BreadCrumbItem Text="twain_32" />
+                                <ComponentArt:BreadCrumbItem Text="Vss" />
+                                <ComponentArt:BreadCrumbItem Text="Web" />
+                                <ComponentArt:BreadCrumbItem Text="winsxs" />
+                                <ComponentArt:BreadCrumbItem Text="Help" />
+                                <ComponentArt:BreadCrumbItem Text="IME" />
+                                <ComponentArt:BreadCrumbItem Text="inf" />
+                                <ComponentArt:BreadCrumbItem Text="L2Schemas" />
+                                <ComponentArt:BreadCrumbItem Text="LiveKernelReports" />
+                                <ComponentArt:BreadCrumbItem Text="Logs" />
+                                <ComponentArt:BreadCrumbItem Text="Media" />
+                                <ComponentArt:BreadCrumbItem Text="Microsoft.NET" />
+                                <ComponentArt:BreadCrumbItem Text="ModernLogs" />
+                                <ComponentArt:BreadCrumbItem Text="Offline Web Pages" />
+                                <ComponentArt:BreadCrumbItem Text="Panther" />
+                                <ComponentArt:BreadCrumbItem Text="Performance" />
+                                <ComponentArt:BreadCrumbItem Text="PLA" />
+                                <ComponentArt:BreadCrumbItem Text="PolicyDefinitions" />
+                                <ComponentArt:BreadCrumbItem Text="Prefetch" />
+                                <ComponentArt:BreadCrumbItem Text="Registration" />
+                                <ComponentArt:BreadCrumbItem Text="RemotePackages" />
+                                <ComponentArt:BreadCrumbItem Text="Resources" />
+                                <ComponentArt:BreadCrumbItem Text="SchCache" />
+                                <ComponentArt:BreadCrumbItem Text="schemas" />
+                                <ComponentArt:BreadCrumbItem Text="security" />
+                                <ComponentArt:BreadCrumbItem Text="ServiceProfiles" />
+                                <ComponentArt:BreadCrumbItem Text="servicing" />
+                                <ComponentArt:BreadCrumbItem Text="Setup" />
+                                <ComponentArt:BreadCrumbItem Text="ShellNew" />
+                                <ComponentArt:BreadCrumbItem Text="SoftwareDistribution" />
+                                <ComponentArt:BreadCrumbItem Text="Speech" />
+                                <ComponentArt:BreadCrumbItem Text="system" />
+                                <ComponentArt:BreadCrumbItem Text="System32" />
+                                <ComponentArt:BreadCrumbItem Text="TAPI" />
+                                <ComponentArt:BreadCrumbItem Text="Tasks" />
+                                <ComponentArt:BreadCrumbItem Text="Temp" />
+                                <ComponentArt:BreadCrumbItem Text="tracing" />
+                                <ComponentArt:BreadCrumbItem Text="twain_32" />
+                                <ComponentArt:BreadCrumbItem Text="Vss" />
+                                <ComponentArt:BreadCrumbItem Text="Web" />
+                                <ComponentArt:BreadCrumbItem Text="winsxs" />
+                            </ComponentArt:BreadCrumbItem>
+                        </ComponentArt:BreadCrumbItem>
+                        <ComponentArt:BreadCrumbItem Text="CD Drive (D:)" IconSource="OpticalDrive.png" />
+                    </ComponentArt:BreadCrumbItem>
+                    <ComponentArt:BreadCrumbItem Text="Recycle Bin" IconSource="RecycleBin.png" />
+                    <ComponentArt:BreadCrumbItem Text="Control Panel" IconSource="ControlPanel.png"  >
+                        <ComponentArt:BreadCrumbItem Text="All Control Panel Items" />
+                        <ComponentArt:BreadCrumbItem Text="Appearance and Personalization" />
+                        <ComponentArt:BreadCrumbItem Text="Clock, Language, and Region" />
+                        <ComponentArt:BreadCrumbItem Text="Ease of Access" />
+                        <ComponentArt:BreadCrumbItem Text="Hardware and Sound" />
+                        <ComponentArt:BreadCrumbItem Text="Network and Internet" />
+                        <ComponentArt:BreadCrumbItem Text="Programs" />
+                        <ComponentArt:BreadCrumbItem Text="System and Security" />
+                        <ComponentArt:BreadCrumbItem Text="User Accounts and Family Safety" />
+                    </ComponentArt:BreadCrumbItem>
+                    <ComponentArt:BreadCrumbItem Text="User" >
+                        <ComponentArt:BreadCrumbItem Text="Contacts" />
+                        <ComponentArt:BreadCrumbItem Text="Desktop" IconSource="Desktop.png" />
+                        <ComponentArt:BreadCrumbItem Text="Downloads" />
+                        <ComponentArt:BreadCrumbItem Text="Favorites" IconSource="FavouritesStar.png" />
+                        <ComponentArt:BreadCrumbItem Text="Links" />
+                        <ComponentArt:BreadCrumbItem Text="My Documents" IconSource="DocumentFolder.png" />
+                        <ComponentArt:BreadCrumbItem Text="My Music" IconSource="MusicFolder.png"/>
+                        <ComponentArt:BreadCrumbItem Text="My Pictures" IconSource="ImagesFolder.png" />
+                        <ComponentArt:BreadCrumbItem Text="My Videos" IconSource="VideoFolder.png" />
+                        <ComponentArt:BreadCrumbItem Text="Saved Games" />
+                        <ComponentArt:BreadCrumbItem Text="Searches" IconSource="SearchFolder.png" />
+                    </ComponentArt:BreadCrumbItem>
+                    <ComponentArt:BreadCrumbItem Text="Libraries" >
+                        <ComponentArt:BreadCrumbItem Text="Documents" IconSource="DocumentFolder.png" >
+                            <ComponentArt:BreadCrumbItem Text="My Documents" IconSource="DocumentFolder.png" />
+                            <ComponentArt:BreadCrumbItem Text="Public Documents" IconSource="SharedFolder.png" />
+                        </ComponentArt:BreadCrumbItem>
+                        <ComponentArt:BreadCrumbItem Text="Music" IconSource="MusicFolder.png"  >
+                            <ComponentArt:BreadCrumbItem Text="My Music" IconSource="MusicFolder.png" />
+                            <ComponentArt:BreadCrumbItem Text="Public Music" IconSource="SharedFolder.png" />
+                        </ComponentArt:BreadCrumbItem>
+                        <ComponentArt:BreadCrumbItem Text="Pictures" IconSource="ImagesFolder.png" >
+                            <ComponentArt:BreadCrumbItem Text="My Pictures" IconSource="ImagesFolder.png" />
+                            <ComponentArt:BreadCrumbItem Text="Public Pictures" IconSource="SharedFolder.png" />
+                        </ComponentArt:BreadCrumbItem>
+                        <ComponentArt:BreadCrumbItem Text="Videos" IconSource="VideoFolder.png" >
+                            <ComponentArt:BreadCrumbItem Text="My Videos" IconSource="VideoFolder.png" />
+                            <ComponentArt:BreadCrumbItem Text="Public Videos" IconSource="SharedFolder.png" />
+                        </ComponentArt:BreadCrumbItem>
+                    </ComponentArt:BreadCrumbItem>
+                    <ComponentArt:BreadCrumbItem Text="Home Group" />
+                    <ComponentArt:BreadCrumbItem Text="Network" IconSource="NetworkFolder.png" />
+                </ComponentArt:BreadCrumbItem>
+            </ComponentArt:BreadCrumb>
+            <Border x:Name="boundary" Width="20" Height="20" Background="Transparent" Canvas.Top="0" Canvas.Left="0" BorderThickness="0" Canvas.ZIndex="2" >
+                <Rectangle x:Name="thumb" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="20" Height="20" Fill="IndianRed" 
+                           MouseLeftButtonDown="thumb_MouseLeftButtonDown" MouseLeftButtonUp="thumb_MouseLeftButtonUp"/>
+            </Border>
+        </StackPanel>
+        <Border HorizontalAlignment="Left" Width="756" Margin="0,120,0,0" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+            <Grid Width="720">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="18"/>
+                    <RowDefinition Height="18"/>
+                    <RowDefinition Height="13"/>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="498"/>
+                    <ColumnDefinition Width="222"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="1" Grid.Column="0" Margin="0,0,0,0" Text="Options:" FontSize="14"/>
+                <StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" >
+                    <Line Fill="#CCCCCC" Height="1" Stroke="#CCCCCC" StrokeThickness="10" X1="0" Y1="1" X2="480" Y2="1"/>
+                    <Line Fill="#FFFFFF" Height="1" Stroke="#FFFFFF" StrokeThickness="10" X1="0" Y1="1" X2="480" Y2="1"/>
+                </StackPanel>
+                <TextBlock Grid.Row="1" Grid.Column="1" Margin="6,0,0,0" Text="Control Events:" FontSize="14"/>
+                <Border Width="210" HorizontalAlignment="Right" Grid.RowSpan="2" Grid.Row="2" Grid.Column="1" Background="White" CornerRadius="5" BorderBrush="#cccccc" BorderThickness="1" Padding="0" Margin="5,5,0,19">
+                    <TextBox Background="White"
+                        Margin="4" 
+                        BorderThickness="0" 
+                        Height="210" 
+                        x:Name="dbg" IsReadOnly="True" TextWrapping="Wrap" VerticalContentAlignment="Bottom" VerticalScrollBarVisibility="Auto"/>
+                </Border>
+                <Grid Grid.Row="3" Grid.Column="0" Height="140" Width="480" Margin="3,78,8,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.47*"/>
+                        <ColumnDefinition Width="0.06*"/>
+                        <ColumnDefinition Width="0.47*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <CheckBox x:Name="cxExpandOnClick" Content="" Margin="115,6,0,0" Grid.Row="0" Click="cxExpandOnClick_Click" />
+                    <TextBlock Text="ExpandOnClick" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="Auto"/>
+                    <CheckBox x:Name="cxUseRootIcon" Content="" Margin="115,6,0,0" Grid.Column="2" Grid.Row="0" Click="cxUseRootIcon_Click"/>
+                    <TextBlock Text="UseRootIcon"  Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

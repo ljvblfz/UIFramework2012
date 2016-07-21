@@ -1,0 +1,107 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoTitle"] = "Node Cell Styles";
+  ViewData["DemoType"] = "TreeView";
+  ViewData["CodeFiles"] = "/Views/TreeView/NodeCellStyles.aspx,/Controllers/TreeViewController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>Separate styles can be defined for node text, extend node cells, and node rows.</li>
+</ul>
+";
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/TreeView/NodeCellStyles/treeStyle.css")" rel="stylesheet" type="text/css" />
+  <script type="text/javascript">
+    function ddNodeCellStyle_onClick(dropdown)
+    {
+      switch (dropdown.value)
+      {
+        case 'ExtendedCell':
+          TreeView1.setProperty('ExtendNodeCells', true);
+          TreeView1.setProperty('NodeCssClass', 'TreeNode');
+          TreeView1.setProperty('NodeRowCssClass', '');
+          TreeView1.setProperty('HoverNodeCssClass', 'HoverTreeNode');
+          TreeView1.setProperty('HoverNodeRowCssClass', '');
+          TreeView1.setProperty('SelectedNodeCssClass', 'SelectedTreeNode');
+          TreeView1.setProperty('SelectedNodeRowCssClass', '');
+          break;
+        case 'EntireRow':
+          TreeView1.setProperty('ExtendNodeCells', false);
+          TreeView1.setProperty('NodeCssClass', 'RowTreeNode');
+          TreeView1.setProperty('NodeRowCssClass', 'TreeNodeRow');
+          TreeView1.setProperty('HoverNodeCssClass', 'Empty');
+          TreeView1.setProperty('HoverNodeRowCssClass', 'HoverTreeNodeRow');
+          TreeView1.setProperty('SelectedNodeCssClass', '');
+          TreeView1.setProperty('SelectedNodeRowCssClass', 'SelectedTreeNodeRow');
+          break;
+        default:
+          TreeView1.setProperty('ExtendNodeCells', false);
+          TreeView1.setProperty('NodeCssClass', 'TreeNode');
+          TreeView1.setProperty('NodeRowCssClass', '');
+          TreeView1.setProperty('HoverNodeCssClass', 'HoverTreeNode');
+          TreeView1.setProperty('HoverNodeRowCssClass', '');
+          TreeView1.setProperty('SelectedNodeCssClass', 'SelectedTreeNode');
+          TreeView1.setProperty('SelectedNodeRowCssClass', '');
+          break;
+      }
+      TreeView1.render();
+    }
+  </script>
+}
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td width="320">
+      @(Html.ComponentArt().TreeView()
+        .ID("TreeView1")
+        .Height(325)
+        .Width(220)
+        .DragAndDropEnabled(false)
+        .NodeEditingEnabled(false)
+        .KeyboardEnabled(true)
+        .CssClass("TreeView")
+        .NodeCssClass("TreeNode")
+        .SelectedNodeRowCssClass("SelectedTreeNodeNode")
+        .HoverNodeCssClass("HoverTreeNode")
+        .NodeEditCssClass("NodeEdit")
+        .LineImageWidth(19)
+        .LineImageHeight(20)
+        .ExpandCollapseImageWidth(15)
+        .ExpandCollapseImageHeight(15)
+        .DefaultImageWidth(16)
+        .DefaultImageHeight(16)
+        .NodeIndent(16)
+        .ItemSpacing(0)
+        .NodeLabelPadding(3)
+        .CollapseImageUrl("exp.gif")
+        .ExpandImageUrl("col.gif")
+        .ParentNodeImageUrl("folders.gif")
+        .LeafNodeImageUrl("folder.gif")
+        .ShowLines(false)
+        .ImagesBaseUrl("~/Content/TreeView/NodeCellStyles/images/")
+        .LineImagesFolderUrl("~/Content/TreeView/NodeCellStyles/images/lines/")
+        .SiteMapXmlFile("~/App_Data/TreeView/NodeCellStyles/treeData.xml")
+      )
+    </td>
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td valign="middle" width="100%" class="MainText">
+      <b>Node Cell Style</b>:
+      <br />
+      <br />
+      <select id="ddNodeCellStyle" onclick="ddNodeCellStyle_onClick(this)">
+        <option value="Default">Default</option>
+        <option value="ExtendedCell">Extended Cell</option>
+        <option value="EntireRow">Entire Row</option>
+      </select>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </td>
+  </tr>
+</table>

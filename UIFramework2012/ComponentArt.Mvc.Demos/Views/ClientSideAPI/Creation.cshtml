@@ -1,0 +1,125 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+
+@{
+  ViewData["DemoType"] = "ClientSideAPI";
+  ViewData["DemoTitle"] = "Client-side Creation";
+  ViewData["BodyClass"] = "full";
+
+  ViewData["CodeFiles"] = "/Views/ClientSideAPI/Creation.aspx,/Controllers/ClientSideAPIController.cs,/Content/ClientSideAPI/Creation/MenuClientCode.js,/Content/ClientSideAPI/Creation/TabStripClientCode.js,/Content/ClientSideAPI/Creation/ToolBarClientCode.js,/Content/ClientSideAPI/Creation/TreeViewClientCode.js,/Content/ClientSideAPI/Creation/NavBarClientCode.js,/Content/ClientSideAPI/Creation/GridClientCode.js";
+  ViewData["AboutText"] = @"
+<ul>
+<li>The ability to create the entire structure of a UI control on the client is a key feature of ComponentArt's web user interface technology.</li>
+<li>The client-side APIs for all ComponentArt Web.UI controls are fully compliant with Microsoft's ASP.NET AJAX client-side syntax. </li>
+<li>All client-side changes are persisted to server-side object state on postbacks or callbacks. </li>
+<li>Having these capabilities on the client greatly reduces the need for roundtrips to the server and adds a new level of richness to web programming.</li>
+</ul>
+";
+}
+
+@section HeadContent {
+  <script type="text/javascript" src="../../Content/ClientSideAPI/Creation/MenuClientCode.js"></script>
+  <script type="text/javascript" src="../../Content/ClientSideAPI/Creation/TabStripClientCode.js"></script>
+  <script type="text/javascript" src="../../Content/ClientSideAPI/Creation/ToolBarClientCode.js"></script>
+  <script type="text/javascript" src="../../Content/ClientSideAPI/Creation/TreeViewClientCode.js"></script>
+  <script type="text/javascript" src="../../Content/ClientSideAPI/Creation/NavBarClientCode.js"></script>
+  <script type="text/javascript" src="../../Content/ClientSideAPI/Creation/GridClientCode.js"></script>  
+  
+  <link href="../../Content/ClientSideAPI/Creation/gridStyle.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../../Content/Themes/Outlook2007/icons.css" />
+  <link href="@Url.Content("~/Content/Themes/BlackIce/theme.css")" type="text/css" rel="stylesheet" />
+}
+
+<table width="100%" height="480" cellpadding="0" border="0" cellspacing="10">
+<tr valign="top" style="height:75px">
+ <td width="30%">
+<input class="ButtonClass" id="btnMenuCreate" type="button" disabled="disabled" onclick="this.disabled=true;buildMenu();" value="Create Menu" /><br/><br/>
+  @(Html.ComponentArt().Menu()
+    .ID("Menu1")
+    .AutoTheming(true)
+    .ClientEvents(ce => { ce.Load("Menu1_onLoad"); })
+    .Width(Unit.Pixel(80))
+)
+ </td>
+ <td width="35%">
+
+<input class="ButtonClass" type="button" id="btnTabStripCreate" onclick="this.disabled=true;BuildClientTabStrip();" value="Create TabStrip" /><br/><br/>
+  @(Html.ComponentArt().TabStrip()
+    .ID("TabStrip1")
+    .AutoTheming(true)
+    .ClientEvents(ce => { ce.Load("TabStrip1_onLoad"); })
+)
+</td>
+ <td width="35%">
+
+<input class="ButtonClass" id="btnToolBarCreate" type="button" disabled="disabled" onclick="this.disabled=true;buildToolBar();" value="Create ToolBar" /><br/><br/>
+  @(Html.ComponentArt().ToolBar()
+    .ID("ToolBar1")
+    .AutoTheming(true)
+    .ClientEvents(ce => { ce.Load("ToolBar1_onLoad"); })
+)
+</td>
+</tr>
+<tr valign="top" style="height:340px">
+ <td>
+
+<input type="button" class="ButtonClass" value="Create TreeView" onclick="BuildTreeView();this.disabled=true;" />
+        <br/><br/>
+  @(Html.ComponentArt().TreeView()
+    .ID("TreeView1")
+    .ImagesBaseUrl("~/Content/ClientSideAPI/Creation/treeview_images/")
+    .Height(Unit.Pixel(270))
+    .Width(Unit.Pixel(220))
+    .ClientEvents(ce => { ce.Load("TreeView1_onLoad"); })
+    .AutoTheming(true)
+)
+  </td>
+ <td>
+
+<input id="btnNavBarCreate" class="ButtonClass" type="button" disabled="disabled" onclick="this.disabled=true;buildNavBar();" value="Create NavBar" /><br/><br/>
+  @(Html.ComponentArt().NavBar()
+    .AutoTheming(true)
+    .ID("NavBar1")
+    .Height(Unit.Pixel(270))
+    .Width(Unit.Pixel(200))
+    .ClientEvents(ce => { ce.Load("NavBar1_onLoad"); })
+)
+</td>
+ <td>
+<input id="btnGridCreate" class="ButtonClass" type="button" disabled="disabled" onclick="this.disabled=true;buildGrid();" value="Create Grid" /><br/><br/>
+  @(Html.ComponentArt().DataGrid()
+    .ID("Grid1")
+    .AutoTheming(true)
+    .AutoThemingCssClassPrefix("cart-")      
+    .Width(200)
+    .Height(Unit.Pixel(325))
+    .CssClass("Grid")
+    .FooterCssClass("GridFooter")
+    .ShowFooter(false)
+    .PagerTextCssClass("PagerText")
+    .PageSize(14)
+    .ScrollBar(GridScrollBarMode.On)
+    .ScrollTopBottomImagesEnabled(true)
+    .ScrollTopBottomImageHeight(2)
+    .ScrollTopBottomImageWidth(16)
+    .ScrollImagesFolderUrl("~/Content/ClientSideAPI/Creation/grid_images/")
+    .ScrollButtonWidth(16)
+    .ScrollButtonHeight(17)
+    .ScrollBarCssClass("ScrollBar")
+    .ScrollGripCssClass("ScrollGrip")
+    .ScrollBarWidth(16)      
+    .Levels(l=>
+    {
+      l.Add().DataKeyField("PostId").Columns(c =>
+      {
+        c.Add().DataField("PropertyName").Width(140);
+        c.Add().DataField("PropertyValue").Width(135);
+      });
+    })
+    .ClientEvents(ce => { ce.Load("Grid1_onLoad"); })
+)
+</td>
+</tr>
+</table>
+
+

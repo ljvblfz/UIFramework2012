@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.WindowDesignWindows7"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"
+>
+
+	<UserControl.Resources>
+		<ComponentArtTheming:Theme
+			x:Key="Windows7WindowTheme" 
+			BaseSource="/ComponentArt.Silverlight.UI.Layout;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Silverlight.Themes.Windows7;component/Window.xaml"
+		/>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Window" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Windows 7 Window" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="A Windows 7-styled Window." />
+		<TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\Window\WindowDesignWindows7.xaml,\source\controls\Window\WindowDesignWindows7.xaml.cs" />
+		<Button Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Open Window" Click="Button_Click" Width="125" Height="25"/>
+
+		<ComponentArt:Window   
+                Width="225"
+                Height="100"
+                Alignment="Center"
+                Title="Window"
+                IsOpen="false"
+                IsModal="false"
+                IsPopup="true"
+                x:Name="Window1"
+                AllowResize="True"
+                Theme="{ StaticResource Windows7WindowTheme }"
+                FontFamily="Trebuchet MS"
+                FontSize="13"
+            >
+			<TextBlock Text="This is a Window" VerticalAlignment="Center" HorizontalAlignment="Center" />
+		</ComponentArt:Window>
+	</Grid>
+</UserControl>

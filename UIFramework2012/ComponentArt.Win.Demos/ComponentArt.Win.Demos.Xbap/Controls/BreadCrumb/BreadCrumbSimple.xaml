@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.BreadCrumbSimple"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:input="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+    Width="760" Height="450">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="BreadCrumb" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Simple" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Demonstrates a site navigation type BreadCrumb." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\menu\BreadCrumbSimple.xaml,
+            \source\controls\menu\BreadCrumbSimple.xaml.cs"/>
+        <StackPanel Orientation="Vertical" Margin="0,15,0,0" >
+            <ComponentArt:BreadCrumb x:Name="bcDemo" 
+                                     UseRootIcon="False"
+                                     Height="30" 
+                                     HideSplitButton="True"
+                                     SelectionChanged="bcDemo_SelectionChanged"
+                                     BreadCrumbClick="bcDemo_ItemClick">
+            </ComponentArt:BreadCrumb>
+
+            <StackPanel Orientation="Vertical" Margin="0,40,0,0" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Path: "/>
+                    <TextBlock x:Name="path" Foreground="DarkRed"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Click: "/>
+                    <TextBlock x:Name="click" Foreground="DarkRed"></TextBlock>
+                </StackPanel>
+                <Button Content="Append and Select Item" Click="AppendAndSelectItem" Width="220" HorizontalAlignment="Left"/>
+                <Button Content="Remove Selected Item" Click="RemoveSelectedItem" Width="220" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

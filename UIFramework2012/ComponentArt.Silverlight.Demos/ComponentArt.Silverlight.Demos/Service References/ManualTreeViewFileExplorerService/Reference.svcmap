@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="43019454-2417-48fc-815e-982040179e5c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3069/ManualTreeViewFileExplorerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ManualTreeViewFileExplorerService3.xsd" MetadataType="Schema" ID="0571c9db-97f4-4a8f-bd92-75f687921de3" SourceId="1" SourceUrl="http://localhost:3069/ManualTreeViewFileExplorerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ManualTreeViewFileExplorerService2.wsdl" MetadataType="Wsdl" ID="0c460e12-25da-44b3-bf33-a66ebdfb84f4" SourceId="1" SourceUrl="http://localhost:3069/ManualTreeViewFileExplorerService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ManualTreeViewFileExplorerService31.xsd" MetadataType="Schema" ID="a36ca0c3-e6bd-4ece-8f35-e4e4f807ad60" SourceId="1" SourceUrl="http://localhost:3069/ManualTreeViewFileExplorerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ManualTreeViewFileExplorerService1.disco" MetadataType="Disco" ID="1cd3d40c-af11-4a5d-bc5a-22baa42bca77" SourceId="1" SourceUrl="http://localhost:3069/ManualTreeViewFileExplorerService.svc?disco" />
+    <MetadataFile FileName="ManualTreeViewFileExplorerService21.wsdl" MetadataType="Wsdl" ID="041bd9a2-a8f9-4adf-b54f-9676ae64db7f" SourceId="1" SourceUrl="http://localhost:3069/ManualTreeViewFileExplorerService.svc?wsdl" />
+    <MetadataFile FileName="ManualTreeViewFileExplorerService32.xsd" MetadataType="Schema" ID="31795fbe-d8a5-4680-a243-fd8441f3c96c" SourceId="1" SourceUrl="http://localhost:3069/ManualTreeViewFileExplorerService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

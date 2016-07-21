@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.TabStripSOAUIAutomatic"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+>
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TabStrip" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="TabStrip SOA.UI Automatic" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An example of populating a TabStrip via a SOA.UI service." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\TabStrip\TabStripSOAUIAutomatic.xaml,\source\controls\tabstrip\TabStripSOAUIAutomatic.xaml.cs" />
+        <StackPanel Orientation="Vertical">
+            <ComponentArt:TabStrip 
+            x:Name="TabStrip1"
+            Width="495"
+            Height="22"
+            Overflow="Scroll"
+            Alignment="top"
+            VerticalAlignment="top"
+            Margin="0,0,0,-1"
+            ScrollLeftIconSource="left_arrow.png"
+            ScrollRightIconSource="right_arrow.png"
+            TabClick="TabStrip1_TabClick"
+            SoaResponseProcessed="TabStrip1_SoaResponseProcessed"
+            SoaServiceUrl="../SoaSimpleTabStripService.svc"
+            >
+            </ComponentArt:TabStrip>
+                <ScrollViewer 
+                x:Name="ScrollViewer1"
+                Width="500"
+                Height="350"
+                VerticalScrollBarVisibility="Visible"
+                HorizontalScrollBarVisibility="Auto"
+                Padding="5"
+                BorderThickness="1"
+                BorderBrush="Black"
+                Background="Beige">
+                    <TextBlock x:Name="Content"></TextBlock>
+                </ScrollViewer>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

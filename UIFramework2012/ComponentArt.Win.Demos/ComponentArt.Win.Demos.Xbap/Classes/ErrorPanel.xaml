@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.ErrorPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="450" Width="510">
+    <Grid x:Name="LayoutRoot">
+        <Border BorderBrush="Black" BorderThickness="1" Padding="5,5,5,5" 
+			                        CornerRadius="5" HorizontalAlignment="Center" 
+			                        VerticalAlignment="Center" Width="510" Height="436">
+            <Border.Background>
+                <LinearGradientBrush  EndPoint="0.5,.1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF848484" Offset="0"/>
+                    <GradientStop Color="#FF3B3B3B" Offset="0.4"/>
+                    <GradientStop Color="#FF000000" Offset="0.504"/>
+                    <GradientStop Color="#FF000000" Offset="0.965"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="34" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="34" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Foreground="White" FontSize="18" Text="An exception has occured. Here are the details:" Margin="1.828,2.742,-1.828,3.657" />
+                <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1" CornerRadius="5">
+                    <Border.Background>
+                        <LinearGradientBrush  EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFe2e2e2" Offset="0"/>
+                            <GradientStop Color="#FFffffff" Offset="0.039"/>
+                            <GradientStop Color="#FFffffff" Offset="0.979"/>
+                            <GradientStop Color="#FFe2e2e2" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <TextBox x:Name="ExceptionText" Text="" TextWrapping="Wrap" Foreground="Black" Background="#00000000" >
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border CornerRadius="5" Background="White">
+                                    <ScrollViewer x:Name="PART_ContentHost"/>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                </Border>
+                <Button Grid.Row="2" HorizontalAlignment="Center" Content="Back to Demo" Width="187.016" Margin="0,5.484,0,0.915" Click="errorBackButton_Click" >
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="5"   
+				                                        Background="White"  
+				                                        BorderThickness="1"  
+				                                        Padding="10 6">
+                                <Border.BorderBrush >
+                                    <SolidColorBrush x:Name="HoverBorderColor" Color="Gray" />
+                                </Border.BorderBrush>
+                                <ContentPresenter TextBlock.Foreground="Black" HorizontalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

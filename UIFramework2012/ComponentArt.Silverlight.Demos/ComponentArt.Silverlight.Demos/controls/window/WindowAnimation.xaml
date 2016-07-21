@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.WindowAnimation"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+>
+    
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Window" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Window Animations" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An example of some of the open and close animations possible in Window." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\Window\WindowAnimation.xaml,\source\controls\Window\WindowAnimation.xaml.cs" />
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Margin="5" Content="Fade" Click="Button_Click" Width="100" Height="25"/>
+                    <Button Margin="5" Content="Slide" Click="Button_Click_1" Width="100" Height="25"/>
+                    <Button Margin="5" Content="Rise" Click="Button_Click_2" Width="100" Height="25"/>
+                    <Button Margin="5" Content="Explode" Click="Button_Click_3" Width="100" Height="25"/>
+                </StackPanel>
+                <Grid>
+                    <ComponentArt:Window
+            Width="200"
+            Height="100"
+            Title="Fade Animation"
+            IsOpen="false"
+            IsPopup="true"
+            Alignment="BottomRight"
+            CloseAnimation="Fade"
+            OpenAnimation="Fade"
+            x:Name="Window1"
+            >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="This is a Window"  />
+                    </ComponentArt:Window>
+                    <ComponentArt:Window
+            Width="200"
+            Height="100"
+            Title="Slide Animation"
+            IsOpen="false"
+            IsPopup="true"
+            Alignment="Center"
+            VerticalOffset="300"
+            CloseAnimation="Slide"
+            OpenAnimation="Slide"
+            x:Name="Window2"
+            >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="This is a Window"  />
+                    </ComponentArt:Window>
+                    <ComponentArt:Window
+            Width="200"
+            Height="100"
+            Title="Rise Animation"
+            IsOpen="false"
+            IsPopup="true"
+            Alignment="TopRight"
+            CloseAnimation="Rise"
+            OpenAnimation="Rise"
+            x:Name="Window3"
+            >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="This is a Window"  />
+                    </ComponentArt:Window>
+                    <ComponentArt:Window
+            Width="200"
+            Height="100"
+            Title="Explode Animation"
+            IsOpen="false"
+            IsPopup="true"
+            Alignment="Center"
+            CloseAnimation="Explode"
+            OpenAnimation="Explode"
+            x:Name="Window4"
+            >
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="This is a Window"  />
+                    </ComponentArt:Window>
+                </Grid>
+            </StackPanel>
+    </Grid>
+</UserControl>

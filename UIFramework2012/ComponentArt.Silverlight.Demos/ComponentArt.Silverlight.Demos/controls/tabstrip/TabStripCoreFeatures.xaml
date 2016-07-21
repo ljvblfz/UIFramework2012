@@ -1,0 +1,530 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.TabStripCoreFeatures"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+>
+    <UserControl.Resources>
+        <!-- TABSTRIP RESOURCES -->
+
+        <LinearGradientBrush x:Key="ComponentArt_TabStripTab_Background" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#E3EEFB" Offset="0" />
+            <GradientStop Color="#E3EEFB" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundOver" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#A3C9F8" Offset="0" />
+            <GradientStop Color="#EEF3FA" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundActiveWhite" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#C3DDFB" Offset="0" />
+            <GradientStop Color="#F2F6FB" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundDown" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#A3C9F8" Offset="0" />
+            <GradientStop Color="#EEF3FA" Offset="1" />
+        </LinearGradientBrush>
+
+        <ControlTemplate x:Key="ComponentArt_TabStrip_TabDropIndicator">
+            <Grid x:Name="DropIndicatorContainer" Margin="-5,0,0,0" Height="{TemplateBinding Height}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.Triggers>
+                    <EventTrigger RoutedEvent="Grid.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard x:Name="Animation">
+                                <DoubleAnimation Storyboard.TargetName="TopTranslateTransform" Storyboard.TargetProperty="Y" From="0" To="-10" Duration="0:0:0.35" AutoReverse="True" RepeatBehavior="Forever" />
+                                <DoubleAnimation Storyboard.TargetName="BottomTranslateTransform" Storyboard.TargetProperty="Y" From="0" To="10" Duration="0:0:0.35" AutoReverse="True" RepeatBehavior="Forever" />
+                                <DoubleAnimation Storyboard.TargetName="DropIndicatorContainer" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.35" AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Grid.Triggers>
+
+                <Path Fill="Red" StrokeThickness="0" Data="M1,1 L9,1 L5,5" Margin="0,-7,0,0" VerticalAlignment="Top" Grid.Row="0">
+                    <Path.RenderTransform>
+                        <TranslateTransform x:Name="TopTranslateTransform" Y="0" />
+                    </Path.RenderTransform>
+                </Path>
+                <Rectangle Fill="Red" Grid.RowSpan="2" VerticalAlignment="Stretch" Width="1" />
+                <Path Fill="Red" StrokeThickness="0" Data="M1,5 L9,5 L5,1" Margin="0,0,0,-7" VerticalAlignment="Bottom" Grid.Row="1">
+                    <Path.RenderTransform>
+                        <TranslateTransform x:Name="BottomTranslateTransform" Y="0" />
+                    </Path.RenderTransform>
+                </Path>
+            </Grid>
+        </ControlTemplate>
+
+        <Style x:Key="ComponentArt_TabStrip_ScrollButtonStyleRight" TargetType="Button">
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootElement"
+                              Background="White"
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}" 
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                              Margin="0,2,0,0"
+                            >
+                            <vsm:VisualStateManager.VisualStateGroups>
+                                <vsm:VisualStateGroup x:Name="CommonStates">
+                                    <vsm:VisualState x:Name="Pressed" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="MouseOver" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Normal" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Disabled" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                                <vsm:VisualStateGroup x:Name="FocusStates">
+                                    <vsm:VisualState x:Name="Unfocused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Focused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                            </vsm:VisualStateManager.VisualStateGroups>
+                            <Border x:Name="_OuterBorder"
+                                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}" 
+                                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                        Width="{TemplateBinding Width}" 
+                                        Height="{TemplateBinding Height}">
+                                <Grid>
+                                    <Border CornerRadius="2,2,0,0" BorderThickness=".5,1,0,1" BorderBrush="#FF9095A1" x:Name="NormalRect" Opacity="1" Background="{StaticResource ComponentArt_TabStripTab_Background}" />
+                                    <Border CornerRadius="2,2,0,0" BorderThickness=".5,1,0,1" BorderBrush="#FF9095A1" x:Name="MouseOverRect" Opacity="0" Background="{StaticResource ComponentArt_TabStripTab_BackgroundOver}" />
+                                    <Border CornerRadius="2,2,0,0" BorderThickness=".5,1,0,1" BorderBrush="#FF9095A1" x:Name="PressedRect" Opacity="0" Background="{StaticResource ComponentArt_TabStripTab_BackgroundActiveWhite}" />
+                                    <Border x:Name="_InnerBorder" Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter Content="{TemplateBinding Content}" />
+                                    </Border>
+                                    <Border CornerRadius="2,2,0,0" BorderThickness="1,1,.5,1" Opacity="1">
+                                        <Border CornerRadius="2,2,0,0" BorderBrush="White" BorderThickness="1" />
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ComponentArt_TabStrip_ScrollButtonStyleLeft" TargetType="Button">
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootElement"
+                            Background="White"
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}" 
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                              Margin="0,2,0,0"
+                            >
+                            <vsm:VisualStateManager.VisualStateGroups>
+                                <vsm:VisualStateGroup x:Name="CommonStates">
+                                    <vsm:VisualState x:Name="Pressed" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="MouseOver" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Normal" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Disabled" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                                <vsm:VisualStateGroup x:Name="FocusStates">
+                                    <vsm:VisualState x:Name="Unfocused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Focused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                            </vsm:VisualStateManager.VisualStateGroups>
+                            <Border x:Name="_OuterBorder"
+                                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}" 
+                                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                        Width="{TemplateBinding Width}" 
+                                        Height="{TemplateBinding Height}">
+                                <Grid>
+                                    <Border CornerRadius="2,2,0,0" BorderThickness=".5,1,.5,1" BorderBrush="#FF9095A1" x:Name="NormalRect" Opacity="1" Background="{StaticResource ComponentArt_TabStripTab_Background}" />
+                                    <Border CornerRadius="2,2,0,0" BorderThickness=".5,1,.5,1" BorderBrush="#FF9095A1" x:Name="MouseOverRect" Opacity="0" Background="{StaticResource ComponentArt_TabStripTab_BackgroundOver}" />
+                                    <Border CornerRadius="2,2,0,0" BorderThickness=".5,1,.5,1" BorderBrush="#FF9095A1" x:Name="PressedRect" Opacity="0" Background="{StaticResource ComponentArt_TabStripTab_BackgroundActiveWhite}" />
+                                    <Border x:Name="_InnerBorder" Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter Content="{TemplateBinding Content}" />
+                                    </Border>
+                                    <Border CornerRadius="2,2,0,0" BorderThickness="1" Opacity="1">
+                                        <Border CornerRadius="2,2,0,0" BorderBrush="White" BorderThickness="1" />
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- /TABSTRIP RESOURCES -->
+
+        <Style x:Name="CoreFeaturesTabStrip" TargetType="ComponentArt:TabStrip">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate x:Name="TabStripTemplate" TargetType="ComponentArt:TabStrip">
+                        <Canvas
+                        Grid.Row="{TemplateBinding Grid.Row}"
+                        Grid.Column="{TemplateBinding Grid.Column}"
+                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                        Background="{TemplateBinding Background}"
+                        >
+                            <Grid
+                            x:Name="_RootGrid"
+                            Height="{TemplateBinding Height}"
+                            Width="{TemplateBinding Width}"
+                            >
+                                <Grid.RenderTransform>
+                                    <TransformGroup>
+                                        <RotateTransform x:Name="_RotateTransform" Angle="0" />
+                                        <TranslateTransform x:Name="_TranslateTransform" />
+                                        <ScaleTransform x:Name="_ScaleTransform" />
+                                    </TransformGroup>
+                                </Grid.RenderTransform>
+                                <ScrollViewer
+                                x:Name="_ScrollViewer"
+                                Height="{TemplateBinding Height}"
+                                Width="{TemplateBinding Width}"
+                                VerticalScrollBarVisibility="Hidden"
+                                HorizontalScrollBarVisibility="Hidden"
+                                BorderThickness="0"
+                                Padding="0"
+                                >
+                                    <ItemsPresenter x:Name="ItemsRoot" VerticalAlignment="Top" HorizontalAlignment="Left"  />
+                                </ScrollViewer>
+                                <Button 
+                                    Style="{StaticResource ComponentArt_TabStrip_ScrollButtonStyleLeft}" 
+                                    ClickMode="Press" 
+                                    Visibility="Collapsed" 
+                                    HorizontalAlignment="Left" 
+                                    VerticalAlignment="Stretch"
+
+                                    x:Name="_ScrollDown">
+                                    <Image x:Name="_ScrollLeftIcon" Margin="0,-2,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="None" />
+                                </Button>
+                                <Button 
+                                    Style="{StaticResource ComponentArt_TabStrip_ScrollButtonStyleRight}" 
+                                    ClickMode="Press" 
+                                    Visibility="Collapsed" 
+                                    HorizontalAlignment="Right" 
+                                    VerticalAlignment="Stretch" 
+     
+                                    x:Name="_ScrollUp">
+                                    <Image x:Name="_ScrollRightIcon" Margin="0,-2,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="None" />
+                                </Button>
+                                <ComponentArtCommon:CommonPopup x:Name="_TabDropPopup" IsOpen="False">
+                                    <ContentControl Template="{StaticResource ComponentArt_TabStrip_TabDropIndicator}" />
+                                </ComponentArtCommon:CommonPopup>
+                            </Grid>
+                        </Canvas>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <ComponentArtCommon:WrapPanel x:Name="_ItemWrap" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Name="CoreFeaturesTabStyle" TargetType="ComponentArt:TabStripTab">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComponentArt:TabStripTab">
+                        <Grid Height="30" x:Name="RootElement" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <vsm:VisualStateManager.VisualStateGroups>
+                                <vsm:VisualStateGroup x:Name="CommonStates">
+                                    <vsm:VisualState x:Name="Pressed" >
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="MouseOver" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Normal" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Disabled" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                                <vsm:VisualStateGroup x:Name="Custom">
+                                    <vsm:VisualState x:Name="Selected">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="SelectedRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="_InnerBorder" Storyboard.TargetProperty="Height" To="30"/>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="_Text" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)">
+                                                <SplineColorKeyFrame KeyTime="0" Value="#FF333333"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Unselected">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="_Text" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)">
+                                                <SplineColorKeyFrame KeyTime="0" Value="White"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                                <vsm:VisualStateGroup x:Name="FocusStates">
+                                    <vsm:VisualState x:Name="Unfocused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Focused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                            </vsm:VisualStateManager.VisualStateGroups>
+                            <Border x:Name="_OuterBorder" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="{TemplateBinding Margin}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                                <Grid>
+                                    <Border Height="27" CornerRadius="2,2,0,0" BorderThickness=".5,1,.5,0" BorderBrush="#FF9095A1" x:Name="NormalRect" Opacity="1" Background="{StaticResource ComponentArt_TabStripTab_Background}">
+                                        <Border CornerRadius="2,2,0,0" BorderThickness="1,1,1,0" BorderBrush="#FFF6FAFF" x:Name="NormalRectInner" Opacity="1" Background="#00000000" />
+                                    </Border>
+                                    <Border Height="27" CornerRadius="2,2,0,0" BorderThickness=".5,1,.5,0" BorderBrush="#FF9095A1" x:Name="MouseOverRect" Opacity="0" Background="{StaticResource ComponentArt_TabStripTab_BackgroundOver}">
+                                        <Border CornerRadius="2,2,0,0" BorderThickness="1,1,1,0" BorderBrush="#FFF6FAFF" x:Name="MouseOverRectInner" Background="#00000000" />
+                                    </Border>
+                                    <Border Height="30" CornerRadius="2,2,0,0" BorderThickness=".5,1,.5,0" BorderBrush="#FF9095A1" x:Name="SelectedRect" Opacity="0" Background="{ StaticResource ComponentArt_TabStripTab_BackgroundActiveWhite }">
+                                        <Border CornerRadius="2,2,0,0" BorderThickness="1,1,1,0" BorderBrush="#FFF6FAFF" x:Name="SelectedRectInner" Background="#00000000" />
+                                    </Border>
+                                    <Grid x:Name="_RootGrid">
+                                        <Grid.RenderTransform>
+                                            <TransformGroup>
+                                                <RotateTransform x:Name="_RotateTransform" Angle="0" />
+                                                <TranslateTransform x:Name="_TranslateTransform" />
+                                                <ScaleTransform x:Name="_ScaleTransform" />
+                                            </TransformGroup>
+                                        </Grid.RenderTransform>
+                                        <Border x:Name="_InnerBorder" Height="28" VerticalAlignment="Bottom" Padding="{TemplateBinding Padding}">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image VerticalAlignment="Top" HorizontalAlignment="Center" Stretch="None" Source="{TemplateBinding EffectiveIconSource}" x:Name="_Icon" />
+                                                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" Text="{TemplateBinding Text}" x:Name="_Text" />
+                                                <ContentPresenter VerticalAlignment="Top" Content="{TemplateBinding Content}" />
+                                            </StackPanel>
+                                        </Border>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- END TABSTRIP -->
+
+        <Style x:Key="ComponentArt_TabStrip_RemoveButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootElement"
+                             Height="14" Width="15"
+                            >
+                            <vsm:VisualStateManager.VisualStateGroups>
+                                <vsm:VisualStateGroup x:Name="CommonStates">
+                                    <vsm:VisualState x:Name="Pressed" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="_Text" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)">
+                                                <SplineColorKeyFrame KeyTime="0" Value="White"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="MouseOver" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="_Text" Storyboard.TargetProperty="(Foreground).(SolidColorBrush.Color)">
+                                                <SplineColorKeyFrame KeyTime="0" Value="#B93D3D"/>
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Normal" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Disabled" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                                <vsm:VisualStateGroup x:Name="FocusStates">
+                                    <vsm:VisualState x:Name="Unfocused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Focused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                            </vsm:VisualStateManager.VisualStateGroups>
+                            <Border x:Name="_OuterBorder">
+                                <Grid>
+                                    <Border CornerRadius="2" BorderThickness="1" BorderBrush="#FFF6FAFF" x:Name="MouseOverRect" Opacity="0" Background="#EAEBEC" />
+                                    <Border CornerRadius="2" BorderThickness="1" BorderBrush="#FFF6FAFF" x:Name="PressedRect" Opacity="0" Background="#EAEBEC" />
+                                    <TextBlock x:Name="_Text" Foreground="#969696" Margin="0" Text="X" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ComponentArt_TabStrip_NewButton" TargetType="Button">
+            <Setter Property="Height" Value="27" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootElement"
+                              Background="White"
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}" 
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                              Margin="-1,2,0,0"
+                            >
+                            <vsm:VisualStateManager.VisualStateGroups>
+                                <vsm:VisualStateGroup x:Name="CommonStates">
+                                    <vsm:VisualState x:Name="Pressed" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="NewIcon" Storyboard.TargetProperty="Opacity" To="1"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="MouseOver" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1"/>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetName="NewIcon" Storyboard.TargetProperty="Opacity" To="1"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Normal" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Disabled" >
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                                <vsm:VisualStateGroup x:Name="FocusStates">
+                                    <vsm:VisualState x:Name="Unfocused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Focused">
+                                        <Storyboard>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                            </vsm:VisualStateManager.VisualStateGroups>
+                            <Border x:Name="_OuterBorder"
+                                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}" 
+                                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                        Width="{TemplateBinding Width}" 
+                                        Height="{TemplateBinding Height}">
+                                <Grid>
+                                    <Border CornerRadius="2,2,0,0" BorderThickness=".5,1,1,1" BorderBrush="#FF9095A1" x:Name="NormalRect" Opacity="1" Background="{StaticResource ComponentArt_TabStripTab_Background}" />
+                                    <Border CornerRadius="2,2,0,0" BorderThickness=".5,1,1,1" BorderBrush="#FF9095A1" x:Name="MouseOverRect" Opacity="0" Background="{StaticResource ComponentArt_TabStripTab_BackgroundOver}" />
+                                    <Border CornerRadius="2,2,0,0" BorderThickness=".5,1,1,1" BorderBrush="#FF9095A1" x:Name="PressedRect" Opacity="0" Background="{StaticResource ComponentArt_TabStripTab_BackgroundActiveWhite}" />
+                                    <Border x:Name="_InnerBorder" Padding="{TemplateBinding Padding}">
+                                        <Image Opacity="0" x:Name="NewIcon" Source="new.png" Stretch="None" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-1,0,0" />
+                                    </Border>
+                                    <Border CornerRadius="2,2,0,0" BorderThickness="1" Opacity="1">
+                                        <Border CornerRadius="2,2,0,0" BorderBrush="White" BorderThickness="1" />
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TabStrip" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Core Features" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases TabStrip's core features." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\TabStrip\TabStripCoreFeatures.xaml,
+        \source\controls\TabStrip\TabStripCoreFeatures.xaml.cs" />
+        
+        <StackPanel Orientation="Vertical" Margin="10">
+            <StackPanel Orientation="Horizontal" Height="30" Margin="0,10,0,0">
+                <ComponentArt:TabStrip 
+            Style="{StaticResource CoreFeaturesTabStrip}"
+            Width="403" 
+            Height="30"
+            HorizontalAlignment="Left" 
+            Overflow="Scroll" 
+            ScrollLeftIconSource="left_arrow.png"
+            ScrollRightIconSource="right_arrow.png"
+            AllowReorder="True"
+            TabClick="TabStrip1_TabClick"
+            x:Name="TabStrip1" 
+            >
+                    <ComponentArt:TabStrip.DragTemplate>
+                        <DataTemplate>
+                            <Border Opacity=".65" CornerRadius="2" BorderBrush="Gray" BorderThickness="1" Background="{StaticResource ComponentArt_TabStripTab_Background}" Width="{Binding Width}" Height="{Binding Height}">
+
+                            </Border>
+                        </DataTemplate>
+                    </ComponentArt:TabStrip.DragTemplate>
+                    <ComponentArt:TabStripTab IsSelected="True" Height="30" Style="{StaticResource CoreFeaturesTabStyle}" Padding="8,3,8,3" Tag="Silverlight">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="explorer.png" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,2,0,0"/>
+                            <TextBlock x:Name="Title" FontSize="11" Foreground="Black" FontFamily="Tahoma" Text="Silverlight" VerticalAlignment="Top" Margin=".5,4,10,0" />
+                            <Button  Margin="0,2,0,0" Style="{StaticResource ComponentArt_TabStrip_RemoveButton}" Height="16" Width="15" Click="RemoveTab_Click"></Button>
+                        </StackPanel>
+                    </ComponentArt:TabStripTab>
+                </ComponentArt:TabStrip>
+                <Button Margin="0" Style="{StaticResource ComponentArt_TabStrip_NewButton}" Foreground="White" Content=" " Height="30" Width="27" Padding="2" Click="AddTab_Click" />
+            </StackPanel>
+            <Grid>
+                <Border Margin="0,-1" BorderBrush="#bbbbbb" Background="#eeeeee" BorderThickness="1" Height="400" Width="430">
+                    <TextBlock x:Name="output" Foreground="White" FontSize="35" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Silverlight"/>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tree>
+  <node Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuCoreFeatures" />
+    <node Header="Templated Items" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuTemplatedItems" />
+    <node Header="Boundary Detection" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuBoundaryDetection" />
+    <node Header="Vertical Orientation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuVerticalOrientation" />
+    <node Header="Drop Shadow" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDropShadowFeatures" />
+  </node>
+
+  <node Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignBlackIce" />
+    <node Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignArcticWhite" />
+    <node Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignOffice2003" />
+    <node Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignOffice2007" />
+    <node Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuDesignWindows7" />
+  </node>
+
+  <node Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Programmatic Creation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuProgrammaticCreation" />
+    <node Header="Add/Remove/Disable Items" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="MenuAddRemoveDisableItems" />
+  </node>
+</tree>

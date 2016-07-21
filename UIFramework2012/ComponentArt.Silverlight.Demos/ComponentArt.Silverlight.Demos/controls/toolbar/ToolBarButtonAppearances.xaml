@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.ToolBarButtonAppearances"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"    
+>
+
+    <UserControl.Resources>
+        <ComponentArtTheming:Theme
+			x:Key="Office2007ToolBarTheme" 
+			BaseSource="/ComponentArt.Silverlight.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Silverlight.Themes.Office2007;component/ToolBar.xaml"
+		/>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ToolBar" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Button Appearances" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This example illustrates various toolbar item formats." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\toolbar\ToolBarButtonAppearances.xaml,\source\controls\toolbar\ToolBarButtonAppearances.xaml.cs" />
+        <StackPanel Orientation="Vertical">
+
+			<Border BorderBrush="#656f7b" BorderThickness="1" Padding="4" Background="#bfdbff">
+				<ComponentArt:ToolBar
+				ItemTextImageRelation="ImageAboveText"
+				Orientation="Horizontal"
+				x:Name="ToolBar1"
+				FontFamily="Trebuchet MS"
+				FontSize="12"
+				Theme="{ StaticResource Office2007ToolBarTheme }"
+			>
+					<ComponentArt:ToolBarItem IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserBack.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserBack.png" DisabledIconSource="BrowserBack.png" Text="Back" />
+					<ComponentArt:ToolBarItem IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserForward.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserForward.png" DisabledIconSource="BrowserForward.png" Text="Forward"  />
+					<ComponentArt:ToolBarItem IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserReload.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserReload.png" DisabledIconSource="BrowserReload.png" Text="Reload" />
+					<ComponentArt:ToolBarItem IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserStop.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserStop.png" DisabledIconSource="BrowserStop.png" Text="Stop" />
+					<ComponentArt:ToolBarItem IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserHome.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BrowserHome.png" DisabledIconSource="BrowserHome.png" Text="Home" />
+
+				</ComponentArt:ToolBar>
+			</Border>
+            
+            <RadioButton Margin="0,50,0,0" Checked="Appearances_Checked" x:Name="ImageAboveText" GroupName="Appearances" Content="Image above Text" IsChecked="True" />
+            <RadioButton Checked="Appearances_Checked" x:Name="TextAboveImage" GroupName="Appearances" Content="Text above Image" />
+            <RadioButton Checked="Appearances_Checked" x:Name="TextOnly" GroupName="Appearances" Content="Text only" />
+            <RadioButton Checked="Appearances_Checked" x:Name="ImageOnly" GroupName="Appearances" Content="Image only" />
+            <RadioButton Checked="Appearances_Checked" x:Name="ImageBeforeText" GroupName="Appearances" Content="Image before Text" />
+            <RadioButton Checked="Appearances_Checked" x:Name="TextBeforeImage" GroupName="Appearances" Content="Text before Image" />
+            
+</StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,133 @@
+﻿.NavigationToolBar
+{
+  border-left:solid 1px #6593CF;
+  background-color:#C4DDFF;
+  width:100%;
+}
+
+.NavigationToolBarItem
+{
+  height:30px;
+  width:22px;
+  padding:0px;
+  padding-left:3px;
+  padding-right:3px;
+  border:none;
+  margin:0px;
+  background-color:#C4DDFF;
+  background-image:url(navigation_toolbar_images/bg.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+}
+
+.NavigationToolBarItemHover
+{
+  height:30px;
+  width:22px;
+  padding:0px;
+  padding-left:3px;
+  padding-right:3px;
+  border:none;
+  margin:0px;
+  background-color:#FFE8A7;
+  background-image:url(navigation_toolbar_images/bg_hover.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+}
+
+.NavigationToolBarSelectedItem
+{
+  height:30px;
+  width:22px;
+  padding:0px;
+  padding-left:3px;
+  padding-right:3px;
+  border:none;
+  margin:0px;
+  background-color:#FFBB6E;
+  background-image:url(navigation_toolbar_images/bg_selected.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+}
+
+.NavigationToolBarSelectedItemHover
+{
+  height:30px;
+  width:22px;
+  padding:0px;
+  padding-left:3px;
+  padding-right:3px;
+  border:none;
+  margin:0px;
+  background-color:#FFAC42;
+  background-image:url(navigation_toolbar_images/bg_selected_hover.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+}
+
+.NavigationToolBarSpacerItem
+{
+  height:30px;
+  width:100%;
+  padding:0px;
+  border:none;
+  margin:0px;
+  background-color:#C4DDFF;
+  background-image:url(navigation_toolbar_images/bg.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+}
+
+.NavigationToolBarDropDownItem
+{
+  height:30px;
+  width:18px;
+  padding:0px;
+  padding-left:7px;
+  padding-right:6px;
+  border:none;
+  margin:0px;
+  background-color:#C4DDFF;
+  background-image:url(navigation_toolbar_images/bg.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+}
+
+.NavigationToolBarDropDownItemHover
+{
+  height:30px;
+  width:18px;
+  padding:0px;
+  padding-left:7px;
+  padding-right:6px;
+  border:none;
+  margin:0px;
+  background-color:#FFE8A7;
+  background-image:url(navigation_toolbar_images/bg_hover.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+}
+
+
+.NavigationToolBarSpacerItem .cart-toolbar-separator { display:none !important; }
+
+.NavigationToolBar .cart-item-active
+{
+  height:30px;
+  width:22px;
+  padding:0px;
+  padding-left:3px;
+  padding-right:3px;
+  border:none;
+  margin:0px;
+  background-color:#FFAC42;
+  background-image:url(navigation_toolbar_images/bg_selected_hover.gif);
+  background-position:center center;
+  background-repeat:repeat-x;
+}
+
+.NavigationToolBar .cart-toolbar-item a { cursor:default !important;border:none !important; }
+.NavigationToolBar .cart-toolbar-item a:hover {
+	border:none !important;
+	background:none !important;
+}

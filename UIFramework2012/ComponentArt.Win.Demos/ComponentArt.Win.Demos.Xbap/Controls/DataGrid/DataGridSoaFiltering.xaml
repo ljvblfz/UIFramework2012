@@ -1,0 +1,141 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.DataGridSoaFiltering"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:local="clr-namespace:ComponentArt.Win.Demos"
+    xmlns:cart="clr-namespace:ComponentArt.Win.UI.Data;assembly=ComponentArt.Win.UI.Data"
+    >
+  <UserControl.Resources>
+    <local:MessageServiceImageSourceConverter x:Key="MessageServiceImageSourceConverter" />
+  </UserControl.Resources>
+  
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Filtering with SOA.UI" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This sample demonstrates filtering and searching with a SOA.UI service." />
+    <TextBlock
+      x:Name="DemoCodeFiles"
+      Visibility = "Collapsed"
+      Text="\source\controls\datagrid\DataGridSoaFiltering.xaml,
+            \source\controls\datagrid\DataGridSoaFiltering.xaml.cs" />
+
+
+    <cart:DataGrid x:Name="DataGrid1" Width="800" Height="500"
+                     AllowGrouping="False" 
+                     AllowColumnReordering="True" 
+                     ShowColumnFilters="True" 
+                     SearchBoxVisibility="Visible"
+                     AllowColumnResizing="True" 
+                     ColumnResizingMode="Distribute"
+                     PageSize="15"
+                     RunningMode="Callback"
+         >
+      <cart:DataGrid.Columns>
+        <cart:DataGridTemplateColumn Binding="{Binding PriorityIcon}" Width="22" AllowResizing="false" ShowFilter="False">
+          <cart:DataGridTemplateColumn.HeaderStyle>
+            <Style TargetType="cart:DataGridColumnHeader">
+              <Setter Property="Padding" Value="0" />
+              <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+          </cart:DataGridTemplateColumn.HeaderStyle>
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding Converter={StaticResource MessageServiceImageSourceConverter}}" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+              <Setter Property="BorderThickness" Value="0,0,0,1" />
+              <Setter Property="BorderBrush" Value="#FFC8ECF7" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="/Assets/DataGrid/Messages/icon_priority.png" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTemplateColumn Binding="{Binding EmailIcon}" Width="22" AllowResizing="false" ShowFilter="False">
+          <cart:DataGridTemplateColumn.HeaderStyle>
+            <Style TargetType="cart:DataGridColumnHeader">
+              <Setter Property="Padding" Value="0" />
+              <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+          </cart:DataGridTemplateColumn.HeaderStyle>
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding Converter={StaticResource MessageServiceImageSourceConverter}}" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="/Assets/DataGrid/Messages/icon_icon.png" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTemplateColumn Binding="{Binding AttachmentIcon}" Width="22" AllowResizing="false" ShowFilter="False">
+          <cart:DataGridTemplateColumn.HeaderStyle>
+            <Style TargetType="cart:DataGridColumnHeader">
+              <Setter Property="Padding" Value="0" />
+              <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+          </cart:DataGridTemplateColumn.HeaderStyle>
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding Converter={StaticResource MessageServiceImageSourceConverter}}" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="/Assets/DataGrid/Messages/icon_attachment.png" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTextColumn Binding="{Binding Subject}" Header="Subject" Width="4*" AllowSearching="True"/>
+        <cart:DataGridTextColumn Binding="{Binding LastPostDate}" Header="Last Post" Width="2*" />
+        <cart:DataGridTextColumn Binding="{Binding StartedBy}" Header="Started By" Width="1*" AllowSearching="True"/>
+        <cart:DataGridTextColumn Binding="{Binding Replies}" Header="Replies" Width="1*" />
+        <cart:DataGridTextColumn Binding="{Binding TotalViews}" Header="Total Views" Width="1*" />
+        <cart:DataGridTemplateColumn Binding="{Binding FlagIcon}" Width="22" AllowResizing="False" ShowFilter="False">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding Converter={StaticResource MessageServiceImageSourceConverter}}" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="3" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="/Assets/DataGrid/Messages/icon_flag.png" Stretch="None" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+      </cart:DataGrid.Columns>
+      <cart:DataGrid.CellStyle>
+        <Style TargetType="cart:DataGridCell">
+          <Setter Property="Padding" Value="3" />
+        </Style>
+      </cart:DataGrid.CellStyle>
+      <cart:DataGrid.ColumnHeaderStyle>
+        <Style TargetType="cart:DataGridColumnHeader">
+          <Setter Property="Padding" Value="5,3,3,3" />
+          <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+      </cart:DataGrid.ColumnHeaderStyle>
+    </cart:DataGrid>
+
+    <Border Grid.Row="1" HorizontalAlignment="Left" Width="800" Margin="0,30,0,0" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+      <TextBlock Margin="10" TextWrapping="Wrap" Text="With a standard SOA.UI web service handling DataGrid operations, a single property setting (SoaServiceUrl) is the only step required on the client. No additional code is needed." />
+    </Border>
+
+  </Grid>
+</UserControl>

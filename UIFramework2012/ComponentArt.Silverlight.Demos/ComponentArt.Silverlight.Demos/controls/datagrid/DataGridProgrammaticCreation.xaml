@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.DataGridProgrammaticCreation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cart="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data">
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Programmatic Creation" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This sample demonstrates how DataGrid can be configured in code." />
+    <TextBlock
+    x:Name="DemoCodeFiles"
+    Visibility = "Collapsed"
+    Text="\source\controls\datagrid\DataGridProgrammaticCreation.xaml,
+            \source\controls\datagrid\DataGridProgrammaticCreation.xaml.cs" />
+
+    <cart:DataGrid x:Name="DataGrid1"
+                   Width="800" Height="500"
+                   ItemsSource="{Binding}"
+                   PageSize="16"
+                   RunningMode="Client"
+                   VerticalScrollBarVisibility="Hidden"
+                   GroupingMode="ConstantRows"
+                   AllowGrouping="True"
+                   AllowColumnResizing="True"
+                   ColumnResizingMode="Distribute"
+                   AllowColumnReordering="True">
+      <cart:DataGrid.CellStyle>
+        <Style TargetType="cart:DataGridCell">
+          <Setter Property="Padding" Value="3" />
+        </Style>
+      </cart:DataGrid.CellStyle>
+      <cart:DataGrid.ColumnHeaderStyle>
+        <Style TargetType="cart:DataGridColumnHeader">
+          <Setter Property="Padding" Value="3" />
+          <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+      </cart:DataGrid.ColumnHeaderStyle>
+    </cart:DataGrid>
+  </Grid>
+</UserControl>

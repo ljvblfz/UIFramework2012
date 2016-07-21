@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"
+    xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+    >
+
+    <Style TargetType="ComponentArt:TreeViewNode">
+        <Setter Property="Padding" Value="3 4 3 3" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComponentArt:TreeViewNode">
+                    <Grid x:Name="NodeLayoutRoot" ShowGridLines="False">
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualState x:Name="MouseOver" >
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="NodeBackground" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                            <SplineColorKeyFrame KeyTime="00:00:00.1" Value="#FBE1B3" KeySpline="0,0,1,0"/>
+                                        </ColorAnimationUsingKeyFrames>
+                                        <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="HeaderContent" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)">
+                                            <SplineColorKeyFrame KeyTime="00:00:00.2" Value="Black" KeySpline="0,1,1,1"/>
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Normal" >
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Selected" >
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="NodeBackground" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                            <SplineColorKeyFrame KeyTime="00:00:00.2" Value="#FB962C" KeySpline="0,0,1,0"/>
+                                        </ColorAnimationUsingKeyFrames>
+                                        <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="HeaderContent" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)">
+                                            <SplineColorKeyFrame KeyTime="00:00:00.2" Value="White" KeySpline="0,1,1,1"/>
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Disabled" >
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="Header" Storyboard.TargetProperty="Opacity" Duration="0" To="0.5" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                            <vsm:VisualStateGroup x:Name="ExpansionStates">
+                                <vsm:VisualState x:Name="Collapsed">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Children" Storyboard.TargetProperty="Height">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="200" x:Name="collapseStartFrame" />
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00.6" Value="0" KeySpline="0,1,1,1" x:Name="collapseEndFrame"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Expanded">
+                                    <Storyboard x:Name="slideOpenClose">
+                                        <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Children" Storyboard.TargetProperty="Height">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0" x:Name="expandStartFrame"/>
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00.6" Value="200" KeySpline="0,1,1,1" x:Name="expandEndFrame"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="12" x:Name="ArrowColumn" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Path x:Name="HorizontalLine" Data="M0,0 100,0" Width="9" StrokeThickness="1" 
+                              StrokeDashArray="1 2" StrokeDashCap="Flat" Opacity="1" StrokeDashOffset="1"
+                              Stretch="None" Grid.Row="0" Grid.Column="0" Stroke="Red" Margin="0 0 -4 0"
+                              VerticalAlignment="Center" HorizontalAlignment="Right" Visibility="Collapsed"/>
+                        <Image x:Name="Arrow" Stretch="None" VerticalAlignment="Center" HorizontalAlignment="Center"
+                               Grid.Row="0" Grid.Column="0"/>
+                        <ComponentArtUtils:Spinner Width="12" Background="White" x:Name="LoadOnDemandSpinner" Visibility="Collapsed" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Grid x:Name="Header" Grid.Row="0" Grid.Column="1" Margin="{TemplateBinding Padding}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="Icon" Visibility="Visible" Stretch="None" Grid.Column="0"
+                                   VerticalAlignment="Center" HorizontalAlignment="Left" Margin="4,0,4,0" />
+                            <CheckBox x:Name="Check" Visibility="Visible" IsTabStop="False" VerticalAlignment="Center"
+                                      Grid.Column="1" Background="Transparent" Margin="0" />
+                            <Border x:Name="NodeBackground" Style="{StaticResource ComponentArt_TreeViewNode_Background}" 
+                                    Background="{TemplateBinding Background}" Grid.Column="2">
+                                <ContentControl x:Name="HeaderContent" Foreground="{TemplateBinding Foreground}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+                            </Border>
+                            <ContentControl x:Name="DragDropBetweenNodesIndicator" Template="{StaticResource ComponentArt_TreeView_BetweenNodesDragDropIndicator}" Grid.Column="0" Grid.ColumnSpan="3" Visibility="Collapsed" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+                            <ContentControl x:Name="OnNodeDragDropIndicator" Template="{StaticResource ComponentArt_TreeView_OnNodeDragDropIndicator}" Grid.Column="0" Grid.ColumnSpan="3" Visibility="Collapsed" VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+                        </Grid>
+                        <Path x:Name="VerticalLine" Data="M0,0 0,70000" Height="0" StrokeThickness="1" StrokeDashArray="1 2" StrokeDashCap="Flat" 
+                              Stretch="None" Grid.Column="1" Grid.Row="1" Margin="16 -1 0 0" StrokeDashOffset="1" Stroke="Red" 
+                              HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed" Opacity="1"/>
+
+                        <ItemsPresenter x:Name="Children" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left"
+                                        Height="0" Margin="10,0,0,0"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

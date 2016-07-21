@@ -1,0 +1,37 @@
+.datarea { background:White; height:402px;}
+.grid { background: white; } 
+.hdr { height:36px; background: transparent url("images/header_bg.png"); }
+
+		.grid .hdr .txt { color:#fff;font-weight:bold;padding:5px; font-size:11px; }
+
+		.grid .hdr .grp { border:1px solid #000;height:25px;margin:0 5px 0 0;cursor:default; }
+			.grid .hdr .grp .txt { border:1px solid #a9a9a9;height:23px;color:#fff;font-weight:bold;padding:0 5px;background:#333 url("images/horizontal.png") repeat-x 0 -177px;border-right:none; }
+
+			.grid .hdr .grp img { border:1px solid #a9a9a9;border-left:none; }
+
+.ind,.grp-hd { height:23px;border-top:1px solid #fff;border-bottom:1px solid #b2b1b5;background:#efeff4;font:12px Tahoma,Verdana,Arial,Helvetica,sans-serif;line-height:23px;color:#000; }
+.ind { padding-right:1px; }
+
+tr.row .ind { border-top:1px solid #fff;border-bottom:1px solid #bfdbf5;border-right:1px dotted #bfdbf5;padding:0;background:#fff; }
+
+.row { border-color:#bfdbf5;background:#fff;font:11px Tahoma,Verdana,Arial,Helvetica,sans-serif;line-height:23px;cursor:default; }
+.row-s { border-color:#bfdbf5;background:#fff;font:11px Tahoma,Verdana,Arial,Helvetica,sans-serif;line-height:23px;background:#dceaf8;cursor:default; }
+	.row-s .txt { color:#000;padding:0; }
+	.row-s .ind,.row-s .dat,.row-s .dat-pri,.row-s .dat-eml,.row-s .dat-att { background:#e6eff7;border-top-color:#e6eff7;border-bottom:1px solid #bfdbf5;border-right:1px dotted #bfdbf5; }
+
+.dat { border-top: 1px solid #fff; border-bottom: 1px solid #bfdbf5; border-right: 1px dotted #bfdbf5; padding: 0px; background: #fff; color: #000; }
+	
+.row-hd { height:25px !important; cursor:default; }
+	.row-hd .ind { border-top:1px solid #fff;border-left:1px solid #fff;border-bottom:1px solid #b2b1b5;border-right:1px solid #b2b1b5;padding:0;background:#eee url("images/horizontal.png") repeat-x 0 -35px; }
+	.row-hd .cell { border-top:1px solid #fff;border-left:1px solid #fff;border-bottom:1px solid #b2b1b5;border-right:1px solid #b2b1b5;padding:0;background:#eee url("images/horizontal.png") repeat-x 0 -35px;text-align:center; }
+	.row-hd .cell-h { border-top:1px solid #fff;border-left:1px solid #fff;border-bottom:1px solid #b2b1b5;border-right:1px solid #b2b1b5;padding:0;background:#eee url("images/horizontal.png") repeat-x 0 -60px; }
+	.row-hd .cell-d { border-bottom:1px solid #fff;border-right:1px solid #fff;border-top:1px solid #b2b1b5;border-left:1px solid #b2b1b5;padding:0;background:#eee url("images/horizontal.png") repeat-x 0 -85px; }
+	.row-hd .txt { font:bold 11px Tahoma,Verdana,Arial,Helvetica,sans-serif;color:#000;line-height:25px;padding:0 0 0 8px; }
+
+.ScrollBar { background-image: url(images/scroller/scroller_bg.gif); }
+.ScrollGrip { background-image: url(images/scroller/scroll_gripBg.gif); }
+
+.LighterDataCell { background-color: #F8FDFF; } 
+.DarkerDataCell { background-color: #E8F7FD; } 
+
+

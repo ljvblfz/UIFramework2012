@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.HtmlPanelAutomaticLayout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common">
+
+	<UserControl.Resources>
+		<sys:String x:Key="uriContent">http://www.bing.com/</sys:String>
+	</UserControl.Resources>
+
+
+	<Canvas x:Name="LayoutRoot" VerticalAlignment="Top">
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="HtmlPanel" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="HtmlPanel Automatic Layout" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo illustrates the default (automatic) layout capabilities of HtmlPanel." />
+		<TextBlock x:Name="DemoCodeFiles" 
+        Visibility="Collapsed"
+        Text="\source\controls\htmlpanel\HtmlPanelAutomaticLayout.xaml,\source\controls\htmlpanel\HtmlPanelAutomaticLayout.xaml.cs" />
+        
+        
+		<Border x:Name="boundary" Width="0" Height="0" Background="#1F444444" Canvas.Top="0" Canvas.Left="0" BorderThickness="0" Canvas.ZIndex="2">
+			<Grid>
+				<Grid Margin="100">
+					<ComponentArt:HtmlPanel x:Name="htmlPanel" Canvas.ZIndex="3" SourceUri="{StaticResource uriContent}" MonitorState="True"/>
+				</Grid>
+				<Rectangle x:Name="thumb" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="20" Height="20" Fill="IndianRed" MouseLeftButtonDown="thumb_MouseLeftButtonDown" MouseLeftButtonUp="thumb_MouseLeftButtonUp"/>
+			</Grid>
+		</Border>
+
+		<TextBlock Canvas.ZIndex="1" Margin="5,5,0,0" Text="Drag the red square to resize boundaries."/>
+
+	</Canvas>
+
+</UserControl>

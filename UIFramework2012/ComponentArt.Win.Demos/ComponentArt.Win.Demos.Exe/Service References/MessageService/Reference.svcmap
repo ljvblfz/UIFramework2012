@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1a9f0f16-7bbb-4b93-86c2-8c26701185da" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3521/Services/WCFMessageService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFMessageService.xsd" MetadataType="Schema" ID="3d23f2c6-d3a0-497d-977f-e67f581250bf" SourceId="1" SourceUrl="http://localhost:3521/Services/WCFMessageService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCFMessageService1.xsd" MetadataType="Schema" ID="b9cfa613-f439-47b2-ad96-bcfdc332007c" SourceId="1" SourceUrl="http://localhost:3521/Services/WCFMessageService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCFMessageService2.xsd" MetadataType="Schema" ID="8586d12c-4f01-4305-92a5-4e45f223ed6f" SourceId="1" SourceUrl="http://localhost:3521/Services/WCFMessageService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCFMessageService.disco" MetadataType="Disco" ID="ecdf7b03-e273-4e6e-ab0f-c211c56d8cf0" SourceId="1" SourceUrl="http://localhost:3521/Services/WCFMessageService.svc?disco" />
+    <MetadataFile FileName="WCFMessageService.wsdl" MetadataType="Wsdl" ID="7215b64b-e491-4c3f-8c0b-06a377120ad0" SourceId="1" SourceUrl="http://localhost:3521/Services/WCFMessageService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

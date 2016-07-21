@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data"
+>
+
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_GroupHeadingBorderBrush" Color="#FF000333" />
+
+  <sys:String x:Key="ComponentArt_DataGrid_GroupHeadingMargin">5,0,0,0</sys:String>
+
+  <sys:String x:Key="ComponentArt_DataGrid_GroupHeadingHeight">27</sys:String>
+
+  <sys:String x:Key="ComponentArt_DataGrid_GroupingHeadingBorderThickness">0,0,0,2</sys:String>
+
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_GroupHeadingBackground" Color="#FFFFFFFF" />
+
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_GroupBackground" Color="LightBlue" />
+
+
+</ResourceDictionary>

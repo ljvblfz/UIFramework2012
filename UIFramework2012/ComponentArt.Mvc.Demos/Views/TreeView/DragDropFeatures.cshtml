@@ -1,0 +1,108 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoTitle"] = "Drag & Drop";
+  ViewData["DemoType"] = "TreeView";
+  ViewData["CodeFiles"] = "/Views/TreeView/DragDropFeatures.aspx,/Controllers/TreeViewController.cs";
+  ViewData["AboutText"] = @"
+    <ul>
+    <li>ComponentArt TreeView provides fine drag & drop programmatic control. </li>
+    </ul>
+  ";    
+}
+@section HeadContent {
+  <script type="text/javascript">
+    //<![CDATA[
+    function TreeView1_onNodeBeforeMove(sender, eventArgs)
+    {
+      var doMove = false;
+      var targetNode = eventArgs.get_newParentNode();
+      var sourceNode = eventArgs.get_node();
+
+      // Handle the special case where a node can only be dropped into "Tasks"
+      if (sourceNode.get_text() == "Droppable into Tasks Only" && (targetNode == null || targetNode.get_text() != 'Tasks'))
+      {
+        document.getElementById('lblFeedback').innerHTML = "Can only move into Tasks";
+        eventArgs.set_cancel(true);
+        return;
+      }
+
+      // Handle the special case where a node can only be dropped into "Inbox"
+      if (sourceNode.get_text() == "Droppable into Inbox Only" && (targetNode == null || targetNode.get_text() != "Inbox"))
+      {
+        document.getElementById('lblFeedback').innerHTML = "Can only move into Inbox";
+        eventArgs.set_cancel(true);
+        return;
+      }
+
+      if (document.getElementById('chkConfirm').checked)
+      {
+        if (targetNode)
+          doMove = confirm("Move '" + sourceNode.get_text() + "' to '" + targetNode.get_text() + "'?");
+        else
+          doMove = confirm("Move '" + sourceNode.get_text() + "' into a root position?");
+      }
+      else
+        doMove = true;
+
+      if (doMove)
+      {
+        if (targetNode)
+          document.getElementById('lblFeedback').innerHTML = "Moved '" + sourceNode.get_text() + "' into '" + targetNode.get_text() + "'";
+        else
+          document.getElementById('lblFeedback').innerHTML = "Moved '" + sourceNode.get_text() + "' into root position";
+        return true;
+      }
+      else
+        eventArgs.set_cancel(true);
+    }
+    //]]>
+  </script>
+  <link href="@Url.Content("~/Content/TreeView/DragDropFeatures/treeStyle.css")" rel="stylesheet" type="text/css" />
+}
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td width="320">
+      @(Html
+        .ComponentArt().TreeView()
+        .ID("TreeView1")
+        .SiteMapXmlFile("~/App_Data/TreeView/DragDropFeatures/treeData.xml")
+        .LineImagesFolderUrl("~/Content/TreeView/DragDropFeatures/images/lines/")
+        .ImagesBaseUrl("~/Content/TreeView/DragDropFeatures/images/")
+        .DragAndDropEnabled(true)
+        .NodeEditingEnabled(false)
+        .SelectedNodeCssClass("SelectedTreeNode")
+        .HoverNodeCssClass("HoverTreeNode")
+        .NodeEditCssClass("NodeEdit")
+        .LineImageHeight(20)
+        .LineImageWidth(19)
+        .DefaultImageWidth(16)
+        .DefaultImageHeight(16)
+        .NodeLabelPadding(3)
+        .ParentNodeImageUrl("~/Content/TreeView/DragDropFeatures/images/folders.gif")
+        .LeafNodeImageUrl("~/Content/TreeView/DragDropFeatures/images/folder.gif")
+        .Height(320)
+        .Width(220)
+        .CssClass("TreeView")
+        .NodeCssClass("TreeNode")
+        .ShowLines(true)
+        .ClientEvents(ce =>
+        {
+        ce.NodeBeforeMove("TreeView1_onNodeBeforeMove");
+        })
+      )
+    </td>
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td valign="middle" width="100%" class="MainText">
+      <input type="checkbox" id="chkConfirm" />&nbsp;Confirm Before Node Move&nbsp;
+      <br />
+      <br />
+      <br />
+      <u>Action Feedback</u>:
+      <br />
+      <br />
+      <span id="lblFeedback">&nbsp;</span>
+    </td>
+  </tr>
+</table>

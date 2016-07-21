@@ -1,0 +1,104 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.ItemFlowSelectedItemTemplate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common">
+    <Grid x:Name="LayoutRoot">
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ItemFlow" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Selected Item Template" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases ItemFlow's SelectedItemTemplate functionality." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\itemflow\ItemFlowSelectedItemTemplate.xaml,
+            \source\controls\itemflow\ItemFlowSelectedItemTemplate.xaml.cs,
+            \clientbin\controls\itemflow\ItemFlowData.xml" />
+        
+        <Border
+            BorderThickness="5"
+            BorderBrush="Black"
+            Background="#FFE0E2E5"
+            CornerRadius="10"
+            Padding="20">
+      <StackPanel>
+        <ComponentArt:ItemFlow  Margin="0,0,0,0" x:Name="myItemFlow"
+                          ItemHeight="170"
+                          ItemWidth="256"
+                          SelectedIndex="0"
+                          ShadingAlphaStart="195"
+                          ShadingAlphaEnd="0"
+                          ShadingAlphaOffset=".5"
+                          ShowReflections="True"
+                          Height="325"
+                          Width="800"
+                          SlowAnimationDuration="500"
+                          MediumAnimationDuration="225"
+                          FastAnimationDuration="75"
+                          DecelerationEnabled="True"
+                          MouseWheelEnabled="True"
+                          ScrollOnDrag="True"
+                          ScrollOnClick="True"
+                          InstantAnimationDuration="5"
+                          ReflectionAlphaStart="150"
+                          ReflectionAlphaEnd="0"
+                          ReflectionAlphaOffset=".5"
+                          ItemSpacing=".75"
+                          Zoom="1.2"
+                          XmlBindingSource="./Controls/ItemFlow/ItemFlowData.xml"
+                          CustomNodeMapping="demoNodeMap"
+                          CustomAttributeMapping="demoAttributeMap">
+                    <ComponentArt:ItemFlow.Resources>
+                        <ComponentArtCommon:CustomAttributeMappingCollection x:Name="demoAttributeMap" />
+                        <ComponentArtCommon:CustomNodeMappingCollection x:Name="demoNodeMap">
+                            <ComponentArtCommon:NodeMap From="ItemFlow" To="ComponentArt.Silverlight.UI.Navigation.ItemFlow" />
+                            <ComponentArtCommon:NodeMap From="Item" To="ComponentArt.Silverlight.UI.Navigation.ItemFlowItem" />
+                        </ComponentArtCommon:CustomNodeMappingCollection>
+                    </ComponentArt:ItemFlow.Resources>
+                    <ComponentArt:ItemFlow.SelectedItemTemplate>
+                        <DataTemplate>
+                            <Grid Height="270" Width="256" >
+                                <Rectangle Stroke="Black" StrokeThickness="1" Width="200" Fill="White" Height="80" RadiusX="10" RadiusY="10" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+
+                                </Rectangle>
+                                <StackPanel Margin="0,0,0,5"  Width="175" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                    <HyperlinkButton Foreground="#FF577F8B" Margin="0,0,0,10"  Content="Details" HorizontalAlignment="Right" />
+                                    <HyperlinkButton Foreground="#FF577F8B" Margin="0,0,0,10"  Content="Email" HorizontalAlignment="Right" />
+                                    <HyperlinkButton Foreground="#FF577F8B" Content="Map" HorizontalAlignment="Right" />
+                                    <!-- http://maps.google.com/maps?q=43.7099%20-79.4396 -->
+                                </StackPanel>
+                                <StackPanel Margin="0,0,0,3" Width="175" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                    <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="#FF577F8B" Text="{Binding Price}"></TextBlock>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="8" Foreground="#FF577F8B" Text="MLS©"></TextBlock>
+                                        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="8" Foreground="#FF577F8B" Text="{Binding Text}"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock TextWrapping="Wrap" FontSize="9" Text="{Binding Bedrooms}"></TextBlock>
+                                        <TextBlock TextWrapping="Wrap" FontSize="9" Text=" Beds, "></TextBlock>
+                                        <TextBlock TextWrapping="Wrap" FontSize="9" Text="{Binding Bathrooms}"></TextBlock>
+                                        <TextBlock TextWrapping="Wrap" FontSize="9" Text=" Baths"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock TextWrapping="Wrap" FontSize="9" Text="{Binding Lat}"></TextBlock>
+                                        <TextBlock TextWrapping="Wrap" FontSize="9" Text=" "></TextBlock>
+                                        <TextBlock TextWrapping="Wrap" FontSize="9" Text="{Binding Long}"></TextBlock>
+                                    </StackPanel>
+                                    <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" Foreground="#FF577F8B" Text="{Binding City}"></TextBlock>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ComponentArt:ItemFlow.SelectedItemTemplate>
+                    <ComponentArt:ItemFlow.ItemLoadingTemplate>
+            <DataTemplate>
+              <Grid Width="{Binding Width}" Height="{Binding Height}">
+                <TextBlock Text="Loading..." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Silver" FontFamily="Verdana" FontSize="16">
+                </TextBlock>
+              </Grid>
+            </DataTemplate>
+          </ComponentArt:ItemFlow.ItemLoadingTemplate>
+        </ComponentArt:ItemFlow>
+      </StackPanel>
+    </Border>
+  </Grid>
+</UserControl>

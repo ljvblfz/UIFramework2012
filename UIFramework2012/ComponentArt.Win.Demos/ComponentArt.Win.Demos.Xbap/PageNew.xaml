@@ -1,0 +1,662 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.PageNew"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=WPFToolkit"
+    xmlns:cartNav="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:cartData="clr-namespace:ComponentArt.Win.UI.Data;assembly=ComponentArt.Win.UI.Data"
+    xmlns:cartTheme="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    xmlns:cartCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:local="clr-namespace:ComponentArt.Win.Demos" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"             
+    Height="Auto" Width="Auto" >    
+    <UserControl.Resources>
+        <cartTheme:Theme x:Key="CustomMenuThemeSilverlight" 
+			BaseSource="/ComponentArt.Win.UI.Navigation;component/Themes/generic.xaml" 
+			Source="Assets/Demo/customMenuTheme.xaml"/>
+
+        <!--<cartTheme:Theme x:Key="CustomSplitterThemeSilverlight"
+                         BaseSource="ComponentArt.Win.UI.Layout;component/Themes/generic.xaml"
+                         Source="ComponentArt.Win.Demos;component/Assets/Demo/customSplitterTheme.xaml" />-->
+        
+        <LinearGradientBrush x:Key="PageGridBackground" StartPoint="0,0" EndPoint="0,1000" MappingMode="Absolute">
+            <GradientStop Color="#3d005a" Offset=".07"/>
+            <GradientStop Color="Black" Offset=".45"/>
+        </LinearGradientBrush>
+        
+        <sys:Double x:Key="ContentMinHeight">500</sys:Double>
+        
+        <!-- Header -->
+        <LinearGradientBrush x:Key="MenuBar_Background" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#ffffff" Offset="0" />
+            <GradientStop Color="#e9e9e9" Offset=".4999" />
+            <GradientStop Color="#cdcdcd" Offset=".5" />
+            <GradientStop Color="#ffffff" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="MenuBar_BorderBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#bbbbbb" Offset="0" />
+            <GradientStop Color="#888888" Offset="1" />
+        </LinearGradientBrush>
+        <!-- END Header -->
+
+        <!-- Content -->
+        <LinearGradientBrush x:Key="ContentHeaderBorderBackground" StartPoint="0,0" EndPoint="0,1" >
+            <GradientStop Color="#ffffff" Offset="0" />
+            <GradientStop Color="#f3f3f3" Offset=".4999" />
+            <GradientStop Color="#e3e3e3" Offset=".5" />
+            <GradientStop Color="#ffffff" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="ContentBorderBackground" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FFffffff" Offset="0"/>
+            <GradientStop Color="#FFffffff" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <LinearGradientBrush x:Key="ContentBorderBrush" StartPoint="0,0" EndPoint="0,.25">
+            <GradientStop Color="#FF999999" Offset="0"/>
+            <GradientStop Color="#FFffffff" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="ContentInnerBorderBackground_Demo" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#e5e5e5" Offset="0"/>
+            <GradientStop Color="#fcfcfc" Offset=".25"/>
+            <GradientStop Color="#ffffff" Offset=".5"/>
+            <GradientStop Color="#fcfcfc" Offset=".75"/>
+            <GradientStop Color="#e5e5e5" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="ContentInnerBorderBackground_Index" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#e2e2e2" Offset="0"/>
+            <GradientStop Color="#ffffff" Offset=".11"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="DescriptionBorderBackground" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#00ffffff" Offset="0"/>
+            <GradientStop Color="#FFe3e3e3" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="TreeViewBackground" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#e5e5e5" Offset="0"/>
+            <GradientStop Color="#fcfcfc" Offset=".25"/>
+            <GradientStop Color="#ffffff" Offset=".5"/>
+            <GradientStop Color="#fcfcfc" Offset=".75"/>
+            <GradientStop Color="#e5e5e5" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!-- END Content-->
+
+        <!-- Footer -->
+        <LinearGradientBrush x:Key="Footer_Background" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#ff666666" Offset="0" />
+            <GradientStop Color="#00666666" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="Footer_BorderBrush" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#00666666" Offset="0" />
+            <GradientStop Color="#00666666" Offset="1" />
+        </LinearGradientBrush>
+        <!-- End Footer -->
+
+    </UserControl.Resources>
+    
+    <ScrollViewer x:Name="PageScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0" Padding="0" Height="Auto"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Style="{StaticResource CArtScrollViewerStyle}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="InitialStateGroup">
+                <VisualState x:Name="InitialStateNormal"/>
+                <VisualState x:Name="InitialStateLogoFadeIn" >
+                    <Storyboard>
+                        <DoubleAnimation From="0" To="1" Storyboard.TargetName="WebUiLogoButton" Storyboard.TargetProperty="Opacity" Duration="00:00:00.2" BeginTime="0:0:0.233"/>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IntroLogoAnimation" Storyboard.TargetProperty="Visibility" Duration="0" BeginTime="0:0:0.433">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="InitialStateMenuFadeIn" >
+                    <Storyboard>
+                        <DoubleAnimation From="0" To="1" Storyboard.TargetName="MenuBorder" Storyboard.TargetProperty="Opacity" Duration="00:00:00.2" />
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IntroMenuBarAnimation" Storyboard.TargetProperty="Visibility" Duration="0" BeginTime="00:00:00.2">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        
+                        <DoubleAnimation From="0" To="1" Storyboard.TargetName="WebUiLogoButton" Storyboard.TargetProperty="Opacity" Duration="00:00:00.0" />
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IntroLogoAnimation" Storyboard.TargetProperty="Visibility" Duration="0" BeginTime="00:00:00.2">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+				<VisualState x:Name="InitialStateContentFadeIn" >
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IntroLogoAnimation" Storyboard.TargetProperty="Visibility" Duration="0" BeginTime="00:00:00.2">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <DoubleAnimation From="0" To="1" Storyboard.TargetName="MenuBorder" Storyboard.TargetProperty="Opacity" Duration="00:00:00.0" />
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IntroMenuBarAnimation" Storyboard.TargetProperty="Visibility" Duration="0" BeginTime="00:00:00.0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IntroContentAnimation" Storyboard.TargetProperty="Visibility" Duration="0" BeginTime="00:00:00.0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetName="PageScrollViewer" Storyboard.TargetProperty="VerticalScrollBarVisibility" Duration="0" BeginTime="00:00:00.0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Auto"/>
+                        </ObjectAnimationUsingKeyFrames>-->
+                        <DoubleAnimation From="0" To="1" Storyboard.TargetName="MainBorder" Storyboard.TargetProperty="Opacity" Duration="00:00:00.2" />
+                        <DoubleAnimation From="0" To="1" Storyboard.TargetName="ContentPaneDropShadow" Storyboard.TargetProperty="Opacity" Duration="00:00:00.2" />
+						<DoubleAnimation From="0" To="1" Storyboard.TargetName="FooterBorder" Storyboard.TargetProperty="Opacity" Duration="00:00:00.2" />
+                        <DoubleAnimation From="0" To="1" Storyboard.TargetName="WebUiLogoButton" Storyboard.TargetProperty="Opacity" Duration="00:00:00.0" />
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="InitialStateAnimateIn"/>
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="LocationTypeGroup">
+                <VisualState x:Name="LocationTypeLive" >
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TabStripLive" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TabStripLocal" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="LocationTypeLocal">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TabStripLive" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TabStripLocal" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="PageTypeGroup">
+                <VisualState x:Name="PageTypeIndex">
+                    <Storyboard>
+                        <cartCommon:GridLengthAnimation
+                                            Storyboard.TargetName="TreeViewColumn"
+                                            Storyboard.TargetProperty="(ColumnDefinition.Width)"
+                                            To="0" From="250"
+                                            AutoReverse="False"
+                                            Duration="0"/>
+                        <cartCommon:GridLengthAnimation
+                                            Storyboard.TargetName="DescriptionRow"
+                                            Storyboard.TargetProperty="(RowDefinition.Height)"
+                                            To="0" From="94"
+                                            AutoReverse="False"
+                                            Duration="0"/>
+                        <!--<DoubleAnimation Storyboard.TargetName="TreeViewSplitter" Storyboard.TargetProperty="CurrentPosition" To="0" Duration="0" />
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TreeViewSplitter" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DescriptionSplitter" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>-->
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HeaderArrow" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ThicknessAnimation Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderThickness" Duration="0" To="0" />
+                        <ThicknessAnimation Storyboard.TargetName="ContentInnerBorder" Storyboard.TargetProperty="BorderThickness" Duration="0" To="0" />
+                        <ThicknessAnimation Storyboard.TargetName="ContentInnerShade1" Storyboard.TargetProperty="BorderThickness" Duration="0" To="0" />
+                        <ThicknessAnimation Storyboard.TargetName="ContentInnerShade2" Storyboard.TargetProperty="BorderThickness" Duration="0" To="0" />
+                        <ThicknessAnimation Storyboard.TargetName="ContentInnerShade3" Storyboard.TargetProperty="BorderThickness" Duration="0" To="0" />
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentInnerBorder" Storyboard.TargetProperty="Background" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ContentInnerBorderBackground_Index}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ShowCodeButton" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="PageTypeIntegration">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HeaderArrow" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                            <!--<DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>-->
+                        </ObjectAnimationUsingKeyFrames>
+                        <cartCommon:GridLengthAnimation
+                                            Storyboard.TargetName="TreeViewColumn"
+                                            Storyboard.TargetProperty="(ColumnDefinition.Width)"
+                                            To="0" From="250"
+                                            AutoReverse="False"
+                                            Duration="0"/>
+                        <cartCommon:GridLengthAnimation
+                                            Storyboard.TargetName="DescriptionRow"
+                                            Storyboard.TargetProperty="(RowDefinition.Height)"
+                                            To="0" From="94"
+                                            AutoReverse="False"
+                                            Duration="0"/>
+                        <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetName="DemoGrid" Storyboard.TargetProperty="(Grid.RowDefinitions)[2].Height" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
+                        </ObjectAnimationUsingKeyFrames>-->
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ShowCodeButton" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="PageTypeDemo">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="HeaderArrow" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <cartCommon:GridLengthAnimation
+                                            Storyboard.TargetName="TreeViewColumn"
+                                            Storyboard.TargetProperty="(ColumnDefinition.Width)"
+                                            To="250" From="0"
+                                            AutoReverse="False"
+                                            Duration="0"/>
+                        <cartCommon:GridLengthAnimation
+                                            Storyboard.TargetName="DescriptionRow"
+                                            Storyboard.TargetProperty="(RowDefinition.Height)"
+                                            To="94" From="0"
+                                            AutoReverse="False"
+                                            Duration="0"/>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="ShowCodeButtonVisibility">
+                <VisualState x:Name="CodeButtonVisible">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ShowCodeButton" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="CodeButtonCollapsed">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ShowCodeButton" Storyboard.TargetProperty="Visibility" Duration="0">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <Grid Width="Auto" Height="Auto" Background="{StaticResource PageGridBackground}" VerticalAlignment="Stretch">
+
+            <local:IntroLogo x:Name="IntroLogoAnimation" Margin="-578,-150,326,0" Height="400" VerticalAlignment="Top" Canvas.ZIndex="1" 
+                             HorizontalAlignment="Center" d:IsLocked="True" Visibility="Collapsed"/>
+        	<local:IntroMenuBar x:Name="IntroMenuBarAnimation" Height="50" Margin="249,25,5,0" VerticalAlignment="Top" Canvas.ZIndex="1" 
+                                HorizontalAlignment="Center" d:IsLocked="True" Visibility="Collapsed"/>
+            <local:IntroContent x:Name="IntroContentAnimation" Margin="5,80,4,403" Canvas.ZIndex="1" HorizontalAlignment="Center" 
+                                VerticalAlignment="Top" Height="616" Visibility="Collapsed" >
+            </local:IntroContent>
+
+            <Image Source="Assets/Demo/silverlight-flare.png" Margin="-1088,-4,0,0" Opacity=".93" Height="340.7" Width="502.5" SnapsToDevicePixels="True"
+                   RenderOptions.BitmapScalingMode="NearestNeighbor" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.ZIndex="0" />
+            <Image x:Name="ContentPaneDropShadow" Height="133" Margin="-980,68.5,0,0" VerticalAlignment="Top" Source="Assets/Demo/CornerGlow.png" Stretch="None" HorizontalAlignment="Center" Width="134"/>
+
+            <Grid x:Name="LayoutRoot" Background="Transparent" ShowGridLines="False" Canvas.ZIndex="2"
+              Width="1090" HorizontalAlignment="Center" VerticalAlignment="Stretch" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!-- Header -->
+                <Border x:Name="HeaderBorder" Grid.Row="0" Background="Transparent" BorderThickness="0" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal" Width="1090" VerticalAlignment="Top" HorizontalAlignment="Stretch" >
+
+                        <Button x:Name="WebUiLogoButton" Click="WebUiLogoButton_Click"  Style="{StaticResource MainComponentArtButton}" Cursor="Hand" Margin="0,10,0,0"/>
+
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+
+                            <!-- Tabs -->
+                            <StackPanel x:Name="TabStripLive" Orientation="Horizontal" HorizontalAlignment="Right" Height="20" Visibility="Collapsed">
+
+                                <Image Source="Assets/Demo/UIFramework.png" Height="20.1" Width="142.71"/>
+                                
+                                <local:ImageButton x:Name="TabButton_Silverlight" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="Assets/Demo/Tabs/Silverlight-hover.png" Height="20.1" Width="90.45"
+                                                   ImageNormal="Assets/Demo/Tabs/Silverlight.png" HyperlinkUri="http://silverlight.componentart.com" />
+                                <local:ImageButton x:Name="TabButton_AspNetAjax" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="Assets/Demo/Tabs/AspNetAjax-hover.png" Height="20.1" Width="90.45"
+                                                   ImageNormal="Assets/Demo/Tabs/AspNetAjax.png" HyperlinkUri="http://aspnetajax.componentart.com/"/>
+                                <local:ImageButton x:Name="TabButton_WPF" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="Assets/Demo/Tabs/WPF-hover.png" Height="20.1" Width="90.45"
+                                                   ImageNormal="Assets/Demo/Tabs/WPF.png" HyperlinkUri="http://wpf.componentart.com"/>
+                                <local:ImageButton x:Name="TabButton_AspNetMvc" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="Assets/Demo/Tabs/AspNetMvc-hover.png" Height="20.1" Width="90.45"
+                                                   ImageNormal="Assets/Demo/Tabs/AspNetMvc.png" HyperlinkUri="http://aspnetmvc.componentart.com"/>
+                                <local:ImageButton x:Name="TabButton_SoaUi" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="Assets/Demo/Tabs/SoaUi-hover.png" Height="20.1" Width="90.45"
+                                                   ImageNormal="Assets/Demo/Tabs/SoaUi.png" HyperlinkUri="http://soaui.componentart.com"/>
+                                <local:ImageButton x:Name="TabButton_Download" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="Assets/Demo/Tabs/Download-hover.png" Height="20.1" Width="90.45"
+                                                   ImageNormal="Assets/Demo/Tabs/Download.png" HyperlinkUri="http://www.componentart.com/download/"/>
+                            </StackPanel>
+                            <StackPanel x:Name="TabStripLocal" Orientation="Horizontal" HorizontalAlignment="Right" Height="20" Visibility="Collapsed">
+                                <TextBlock  Margin="5,5,0,0" Foreground="#6dcff6" Tag="http://www.componentart.com" Padding="0,0,5,0">
+                                    <Hyperlink Click="Hyperlink_Click" NavigateUri="http://www.componentart.com" Foreground="#CEB3EA">www.componentart.com </Hyperlink>
+                                </TextBlock>
+                            </StackPanel>
+                            <!-- End Tabs -->
+                            
+                            <!-- Menu -->
+                            <StackPanel Orientation="Horizontal" Margin="21,10,0,0" HorizontalAlignment="Stretch">
+                                <Border x:Name="MenuBorder" Height="40" Width="846" HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                                    CornerRadius="3" Background="{StaticResource MenuBar_Background}"
+                                    BorderBrush="{StaticResource MenuBar_BorderBrush}" BorderThickness="1">
+
+                                    <cartNav:Menu x:Name="DemoMenu" Margin="0,0,0,0" VerticalAlignment="Center"
+                                              UseHandCursor="True" ExpandOnClick="False" Theme="{StaticResource CustomMenuThemeSilverlight}"
+                                              ExpandDelay="8" ExpandDuration="160" ExpandTransition="None" ExpandSlide="Decelerate" 
+                                              CollapseDelay="300" CollapseDuration="75" CollapseTransition="None" CollapseSlide="Accelerate" 
+                                              MenuClick="DemoMenu_MenuClick" BeforeItemShow="DemoMenu_BeforeItemShow" ItemHide="DemoMenu_ItemHide"  
+                                              ItemShow="DemoMenu_ItemShow" 
+                                              CustomAttributeMapping="menuAttrMap" CustomNodeMapping="menuNodeMap">
+                                        <cartNav:Menu.Resources>
+
+                                            <DataTemplate x:Key="MenuBulleted">
+                                                <Grid Margin="8,0,2,1"
+                                                      VerticalAlignment="Top" 
+                                                      HorizontalAlignment="Left">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="16"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="4"/>
+                                                        <ColumnDefinition Width="208"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <TextBlock Margin="0,1,0,0" Foreground="#000000" FontWeight="Bold" FontSize="12"><Run Text="•"/></TextBlock>
+                                                    <TextBlock Margin="4,0,0,0" Grid.Column="1" TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                       Foreground="#FF58188D" FontWeight="Thin" FontSize="11.4" FontFamily="Arial" Text="{Binding Text}"/>
+                                                </Grid>
+                                            </DataTemplate>
+
+                                            <DataTemplate x:Key="MenuSubHeading">
+                                                <Grid Margin="8,4,2,2"
+                                                      VerticalAlignment="Center" 
+                                                      HorizontalAlignment="Left">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image Source="{Binding Tag}" Height="16.08" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                                                </Grid>
+                                            </DataTemplate>
+                                            
+                                            <DataTemplate x:Key="MenuAllControls">
+                                                <Grid Margin="0,1,0,1" 
+                                                      VerticalAlignment="Center" 
+                                                      HorizontalAlignment="Center">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width=".5*"/>
+                                                        <ColumnDefinition Width=".5*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <StackPanel>
+                                                        <local:ImageButton Text="BreadCrumb" Tag="control BreadCrumb" ImageNormal="Assets/Demo/ControlLogos/node-breadcrumb.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+                                                        
+                                                        <!-- Hwan
+                                                        <local:ImageButton Text="Chart" Tag="control Chart" ImageNormal="Assets/Demo/ControlLogos/node-chart.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+-->
+                                                        <local:ImageButton Text="ComboBox" Tag="control ComboBox" ImageNormal="Assets/Demo/ControlLogos/node-combobox.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+
+                                                        <local:ImageButton Text="ContextMenu" Tag="control ContextMenu" ImageNormal="Assets/Demo/ControlLogos/node-contextmenu.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+                                                        
+                                                        <local:ImageButton Text="DataGrid" Tag="control DataGrid" ImageNormal="Assets/Demo/ControlLogos/node-datagrid.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+                                                        
+                                                        <local:ImageButton Text="DragDrop" Tag="control DragDrop" ImageNormal="Assets/Demo/ControlLogos/node-dragdrop.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+                                                        
+                                                        <!-- Hwan
+                                                        <local:ImageButton Text="Gauge" Tag="control Gauge" ImageNormal="Assets/Demo/ControlLogos/node-gauge.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+                                                        -->
+                                                        <local:ImageButton Text="ItemFlow" Tag="control ItemFlow" ImageNormal="Assets/Demo/ControlLogos/node-itemflow.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+                                                        
+                                                        <local:ImageButton Text="MaskedInput" Tag="control MaskedInput" ImageNormal="Assets/Demo/ControlLogos/node-maskedinput.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+
+                                                    </StackPanel>
+                                                    <StackPanel Grid.Column="1" >
+                                                        <local:ImageButton Text="Menu" Tag="control Menu" ImageNormal="Assets/Demo/ControlLogos/node-menu.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+
+                                                        <local:ImageButton Text="NavBar" Tag="control NavBar" ImageNormal="Assets/Demo/ControlLogos/node-navbar.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+
+                                                        <local:ImageButton Text="NumberInput" Tag="control NumberInput" ImageNormal="Assets/Demo/ControlLogos/node-numberinput.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+                                                        
+                                                        <local:ImageButton Text="RangeSlider" Tag="control RangeSlider" ImageNormal="Assets/Demo/ControlLogos/node-rangeslider.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+
+                                                        <!--<local:ImageButton Text="Spinner" Tag="control Spinner" ImageNormal="Assets/Demo/ControlLogos/node-spinner.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />-->
+
+                                                        <local:ImageButton Text="TabStrip" Tag="control TabStrip" ImageNormal="Assets/Demo/ControlLogos/node-tabstrip.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+
+                                                        <local:ImageButton Text="ToolBar" Tag="control ToolBar" ImageNormal="Assets/Demo/ControlLogos/node-toolbar.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+
+                                                        <local:ImageButton Text="TreeView" Tag="control TreeView" ImageNormal="Assets/Demo/ControlLogos/node-treeview.png" 
+                                                                           Style="{StaticResource Button_Controls}"  Click="DemoMenuButton_Click" />
+                                                    </StackPanel>
+                                                </Grid>
+                                            </DataTemplate>
+
+                                            <DataTemplate x:Key="MenuSubImageBlock">
+                                                <Grid Width="297" Margin="2,0,2,0"
+                                                      VerticalAlignment="Center" 
+                                                      HorizontalAlignment="Center">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="26" />
+                                                        <RowDefinition Height="55" />
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="128" />
+                                                        <ColumnDefinition Width="177" />
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Image Source="{Binding Img}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Height="75.375" Width="110.55"
+                                                           RenderOptions.BitmapScalingMode="NearestNeighbor"
+                                                           Margin="3,0,10,0" Stretch="None" />
+
+                                                    <Image Source="{Binding ImgText}" Margin="0,0,0,1" Grid.Column="1" Grid.Row="0" Height="14.07" 
+                                                           RenderOptions.BitmapScalingMode="NearestNeighbor"
+                                                           HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+
+                                                    <TextBlock Text="{Binding Text}" Grid.Column="1" Grid.Row="1" Foreground="#FF58188D" TextWrapping="Wrap" FontSize="10.555" 
+                                                           Margin="0,2,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Verdana"/>
+                                                </Grid>
+                                            </DataTemplate>
+                                            
+                                            <cartCommon:CustomNodeMappingCollection x:Key="menuNodeMap" x:Name="menuNodeMap">
+                                                <cartCommon:NodeMap From="Menu" To="ComponentArt.Win.UI.Navigation.Menu"/>
+                                                <cartCommon:NodeMap From="MenuItem" To="ComponentArt.Win.UI.Navigation.MenuItem"/>
+                                            </cartCommon:CustomNodeMappingCollection>
+
+                                            <cartCommon:CustomAttributeMappingCollection x:Key="menuAttrMap" x:Name="menuAttrMap"/>
+
+                                        </cartNav:Menu.Resources>
+                                        <cartNav:Menu.Clip>
+                                            <RectangleGeometry Rect="0, 0, 837, 500"/>
+                                        </cartNav:Menu.Clip>
+                                    </cartNav:Menu>
+
+                                </Border>
+                            </StackPanel>
+                            <!-- End Menu -->
+                            
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <!-- End Header -->
+
+                <!-- Content -->
+                <Border x:Name="MainBorder" Grid.Row="1" CornerRadius="3" Background="White" BorderThickness="1" BorderBrush="{StaticResource ContentBorderBrush}"
+                        VerticalAlignment="Stretch">
+                    <Grid x:Name="ContentGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Name="TreeViewColumn" Width="0" MaxWidth="250"/>
+                            <ColumnDefinition Width="6"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="48" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <!-- Content Header -->
+                        <Border Margin="0,0,0,0" x:Name="ContentHeaderBorder" Grid.ColumnSpan="3" Background="{StaticResource ContentHeaderBorderBackground}" CornerRadius="3" 
+                                HorizontalAlignment="Stretch" >
+                            <Grid HorizontalAlignment="Stretch" >
+                            	<Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" >
+                            		<Grid Height="48" Width="266" HorizontalAlignment="Left" >
+                            			<Image x:Name="HeaderImage" Source="Assets/Demo/PageTitle-SilverlightLiveDemos.png" Height="45" Width="231"
+                                               RenderOptions.BitmapScalingMode="NearestNeighbor"
+                                               HorizontalAlignment="Left" Margin="9,2,0,0" Canvas.ZIndex="2"/>
+                            			<Image x:Name="HeaderArrow" Source="Assets/Demo/PageTitle-Arrow.png" Height="48" Width="266" HorizontalAlignment="Left" Margin="0,0,0,0" Canvas.ZIndex="1"/>
+                            		</Grid>
+                            		<TextBlock x:Name="demo_header_title" Text="" Foreground="#222222" FontSize="15" 
+                            			FontWeight="Bold" HorizontalAlignment="Left" Margin="274,14,0,12" d:LayoutOverrides="Height"/>
+                            		<Button x:Name="ShowCodeButton" Margin="0,0,7,0" HorizontalAlignment="Right" VerticalAlignment="Center" Click="ShowCodeButton_Click" >
+                            			<Image Source="Assets/Demo/ShowCode-Normal.png" Width="107.535" Height="28.14" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                            		</Button>
+                            	</Grid>
+                            </Grid>
+                        </Border>
+                        <!-- End Content Header -->
+
+                        <!-- TreeView Splitter -->
+                        <!--<cartLayout:Splitter x:Name="TreeViewSplitter" CollapseDirection="Left" Grid.Column="1" Grid.Row="1" MaxWidth="250"
+                                           CollapseAnimationDuration="180" Theme="{StaticResource CustomSplitterThemeSilverlight}" >
+                            <cartLayout:Splitter.CollapseButtonContent>
+                                <Image Source="Assets/Demo/splitter-vert-opened.png" />
+                            </cartLayout:Splitter.CollapseButtonContent>
+                            <cartLayout:Splitter.CollapseButtonCollapsedContent>
+                                <Image Source="Assets/Demo/splitter-vert-closed.png" />
+                            </cartLayout:Splitter.CollapseButtonCollapsedContent>
+                        </cartLayout:Splitter>-->
+                        <!-- End TreeView Splitter -->
+                        
+                        <!-- Demo Border -->
+                        <Border x:Name="DemoBorder" Grid.Column="2" Grid.Row="1" Background="{StaticResource ContentBorderBackground}" CornerRadius="3" VerticalAlignment="Stretch">
+                         
+							<Grid x:Name="DemoGrid">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" MinHeight="{StaticResource ContentMinHeight}"/>
+                                    <RowDefinition Height="6" />
+                                    <RowDefinition x:Name="DescriptionRow" Height="0" MaxHeight="94" />
+                                </Grid.RowDefinitions>
+
+                                <Border x:Name="ContentBorder" Grid.Row="0" Background="{StaticResource ContentBorderBackground}" CornerRadius="3" Margin="0,1,5,0" 
+                                    BorderBrush="#777777" BorderThickness="1" VerticalAlignment="Stretch" >
+                                    <Border x:Name="ContentInnerBorder" Background="{StaticResource ContentInnerBorderBackground_Demo}" CornerRadius="3" 
+                                        BorderBrush="#b8b8b8" BorderThickness="1" Margin="1,1,2,2" VerticalAlignment="Stretch">
+										<Border x:Name="ContentInnerShade1" BorderBrush="#FFc8c8c8" BorderThickness="1" CornerRadius="3" >
+											<Border x:Name="ContentInnerShade2" BorderBrush="#FFd5d5d5" BorderThickness="1" CornerRadius="3" >
+												<Border x:Name="ContentInnerShade3" BorderBrush="#FFdfdfdf" BorderThickness="1" CornerRadius="3" Padding="4,4,0,4" >
+                                                    <Grid>
+                                                        <ContentControl x:Name="ContentPane" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.ZIndex="1" />
+                                                    </Grid>
+												</Border>
+											</Border>
+										</Border>										
+                                    </Border>
+                                </Border>
+
+                                <!--<cartLayout:Splitter x:Name="DescriptionSplitter" CollapseDirection="Down" Grid.Row="1" CollapseAnimationDuration="150"
+                                                     Theme="{StaticResource CustomSplitterThemeSilverlight}" >
+                                    <cartLayout:Splitter.CollapseButtonContent>
+                                        <Image Source="Assets/Demo/splitter-horiz-opened.png" />
+                                    </cartLayout:Splitter.CollapseButtonContent>
+                                    <cartLayout:Splitter.CollapseButtonCollapsedContent>
+                                        <Image Source="Assets/Demo/splitter-horiz-closed.png" />
+                                    </cartLayout:Splitter.CollapseButtonCollapsedContent>
+                                </cartLayout:Splitter>-->
+
+                                <Border x:Name="DescriptionBorder" Grid.Row="2" VerticalAlignment="Bottom" Background="{StaticResource DescriptionBorderBackground}" 
+                                    Margin="0,0,5,5" CornerRadius="0,0,3,3" >
+                                    <Grid Height="90" VerticalAlignment="Top" HorizontalAlignment="Left" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="2" />
+                                            <RowDefinition Height="92" />
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Top">
+                                            <TextBlock VerticalAlignment="Top" Foreground="#666666" Margin="12,2,0,0" FontSize="12" FontWeight="SemiBold" Text="About this sample:"/>
+                                            <TextBlock VerticalAlignment="Top" Foreground="#666666" Margin="12,8,12,0" FontSize="11" FontWeight="Light"  x:Name="demo_header_description" Text="" TextWrapping="Wrap" />
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+
+                        </Border>
+                        <!-- End Demo Border -->
+
+                        <!-- TreeView -->
+                        <Border x:Name="TreeViewBorder" Grid.Row="1" Background="{StaticResource ContentBorderBackground}" CornerRadius="3" 
+                            BorderBrush="#777777" BorderThickness="1" Margin="5,1,0,6" 
+                            VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Border x:Name="TreeViewInnerBorder" Background="{StaticResource TreeViewBackground}" CornerRadius="3" BorderBrush="#b8b8b8" 
+                                    BorderThickness="1" Margin="1,1,2,2" VerticalAlignment="Stretch">
+								<Border BorderBrush="#FFc8c8c8" BorderThickness="1" CornerRadius="3" VerticalAlignment="Stretch">
+									<Border BorderBrush="#FFd5d5d5" BorderThickness="1" CornerRadius="3" VerticalAlignment="Stretch">
+										<Border BorderBrush="#FFdfdfdf" BorderThickness="1" CornerRadius="3" VerticalAlignment="Stretch">  									
+			                                <cartNav:TreeView BorderBrush="Transparent" Background="Transparent"
+			                                            x:Name="DemoTreeView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+			                                            NodeSelected="DemoTreeView_NodeSelected"
+			                                            ExpanderOpenIconSource="Assets/Demo/TreeViewImages/node-expanded.png"
+			                                            ExpanderClosedIconSource="Assets/Demo/TreeViewImages/node-collapsed.png"
+			                                            CustomNodeMapping="demoNodeMap" CustomAttributeMapping="demoAttrMap"
+			                                            HeaderVisibility="Collapsed"
+			                                            CornerRadius="2"
+			                                            HeaderBackground="#00ffffff"
+			                                            TreeLineStyle="Solid"
+			                                            FontFamily="Verdana"
+			                                            FontSize="11" 
+			                                            FontWeight="Normal"
+			                                            Margin="-4,0,0,0"
+			                                            Padding="0"
+                                                        ShowTextOverflowToolTip="False">
+			                                    <cartNav:TreeView.Resources>
+			                                        <cartCommon:CustomNodeMappingCollection x:Key="demoNodeMap" x:Name="demoNodeMap">
+			                                            <cartCommon:NodeMap From="TreeView" To="ComponentArt.Win.UI.Navigation.TreeView"/>
+			                                            <cartCommon:NodeMap From="TreeViewNode" To="ComponentArt.Win.UI.Navigation.TreeViewNode"/>
+			                                        </cartCommon:CustomNodeMappingCollection>
+			                                        <cartCommon:CustomAttributeMappingCollection x:Key="demoAttrMap" x:Name="demoAttrMap"/>
+			                                    </cartNav:TreeView.Resources>
+                                            </cartNav:TreeView>
+                                            
+										</Border>
+									</Border>
+								</Border>	
+                            </Border>
+                        </Border>
+                        <!-- End TreeView -->
+                    </Grid>
+                </Border>
+                <!-- End Content -->
+
+                <!-- Footer -->
+                <Border x:Name="FooterBorder" Background="{StaticResource Footer_Background}" Grid.Row="2" Width="Auto" Height="47" CornerRadius="3,3,0,0"
+                    BorderBrush="{StaticResource Footer_BorderBrush}" BorderThickness="0" Margin="0,1,0,0" VerticalAlignment="Top" >
+                    <Grid HorizontalAlignment="Stretch">
+                        <TextBlock x:Name="VersionTextBlock" HorizontalAlignment="Left" Foreground="#aaaaaa" Margin="18,10,0,0" Text="{Binding VersionText}"/>
+                        <TextBlock HorizontalAlignment="Right" Foreground="#aaaaaa" Margin="0,10,140,0" ><Run Text="Copyright © 2011 ComponentArt Inc. All rights reserved."/></TextBlock>
+                        <Button x:Name="CopyrightInfo" Margin="0,-14,0,0"
+                            HorizontalAlignment="Right" Content="CopyrightInfo" Style="{StaticResource Button_CopyrightInfo}" Cursor="Hand" Click="CopyrightInfo_Click"/>
+                    </Grid>
+                </Border>
+                <!-- End Footer -->
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

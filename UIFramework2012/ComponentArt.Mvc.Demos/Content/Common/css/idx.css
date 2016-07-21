@@ -1,0 +1,134 @@
+#idx { width:100%;height:820px;padding:11px 0 0 0; }
+	#idx h3 { margin:0;padding:0;font-size:14px;font-weight:bold;color:#333; }
+	#idx h4 { margin:0;padding:0;font-size:11px;font-weight:normal;color:#666;line-height:16px; }
+
+	#idx ul { margin:0;padding:0;list-style:none;list-style-position:inside; }
+
+	#idx .col1 { float:left;width:662px;height:810px;min-height:125px;padding:0 0 0 20px;background:transparent url("../img/vertical.png") repeat-y right 0;display:inline; }
+
+		/* Line-of-Business */
+		#idx .col1 .int { width:100%;margin:0;height:220px;padding:0 0 15px 0; }
+			#idx .col1 .int h4 { padding:0 0 5px 0; }
+
+			#idx .col1 .int ul { margin:0; }
+				#idx .col1 .int ul li { display:inline; }
+					#idx .col1 .int ul li a { float:left;width:200px;padding:5px 5px 0 5px;height:171px;margin:0 10px 0 0;display:inline; }
+					#idx .col1 .int ul li.int3 a { margin:0; }
+					#idx .col1 .int ul li a:hover { background:transparent url("../img/idx/int.jpg") no-repeat -200px 0;text-decoration:none; }
+						#idx .col1 .int ul li a span.img { display:block;width:200px;height:115px;background:transparent url("../img/idx/int.jpg") no-repeat;cursor:pointer; }
+						#idx .col1 .int ul li.int1 a span.img { background-position:0 0; }
+						#idx .col1 .int ul li.int2 a span.img { background-position:0 -115px; }
+						#idx .col1 .int ul li.int3 a span.img { background-position:0 -230px; }
+
+						#idx .col1 .int ul li a span.txt { display:block;width:200px;height:48px;text-decoration:none;color:#666;padding:1px 0 0 0;line-height:16px;cursor:pointer; }
+							#idx .col1 .int ul li a span.txt strong { color:#dd3409; }
+
+							#idx .col1 .int ul li a:hover span.txt strong { text-decoration:underline; }
+							#idx .col1 .int ul li a:visited span.txt strong { color:#a31515;text-decoration:none; }
+							#idx .col1 .int ul li a:visited:hover span.txt strong { color:#a31515;text-decoration:underline; }
+
+
+		/* Visualisation */
+		#idx .col1 .viz { width:100%;margin:0;height:330px;padding:0 0 15px 0; }
+			#idx .col1 .viz h4 { padding:0 0 5px 0; }
+
+			#idx .col1 .viz ul { margin:0; }
+				#idx .col1 .viz ul li { display:inline; }
+					#idx .col1 .viz ul li a { float:left;width:200px;padding:5px 5px 0 5px;height:142px;margin:0 10px 0 0;display:inline; }
+					#idx .col1 .viz ul li.viz3 a { margin:0; }
+					#idx .col1 .viz ul li a:hover { background:transparent url("../img/idx/viz.jpg") no-repeat -400px 0;text-decoration:none; }
+						#idx .col1 .viz ul li a span.img { display:block;width:200px;height:115px;background:transparent url("../img/idx/viz.jpg") no-repeat;cursor:pointer; }
+						#idx .col1 .viz ul li.viz1 a span.img { background-position:0 0; }
+						#idx .col1 .viz ul li.viz2 a span.img { background-position:0 -115px; }
+						#idx .col1 .viz ul li.viz3 a span.img { background-position:0 -230px; }
+						#idx .col1 .viz ul li.viz4 a span.img { background-position:-200px 0; }
+						#idx .col1 .viz ul li.viz5 a span.img { background-position:-200px -115px; }
+						#idx .col1 .viz ul li.viz6 a span.img { background-position:-200px -230px; }
+
+						#idx .col1 .viz ul li a span.txt { display:block;width:200px;height:16px;text-decoration:none;color:#dd3409;font-weight:bold;padding:1px 0 0 0;line-height:16px;cursor:pointer; }
+
+						#idx .col1 .viz ul li a:hover span.txt { text-decoration:underline; }
+						#idx .col1 .viz ul li a:visited span.txt { color:#a31515;text-decoration:none; }
+						#idx .col1 .viz ul li a:visited:hover span.txt { color:#a31515;text-decoration:underline; }
+
+		/* Technology showcase */
+		#idx .col1 .tech { width:100%;margin:0;padding:0 0 55px 0; }
+			#idx .col1 .tech h4 { padding:0 0 5px 0; }
+
+			#idx .col1 .tech ul { margin:0; }
+				#idx .col1 .tech ul li { display:inline; }
+					#idx .col1 .tech ul li a { float:left;width:200px;padding:5px 5px 0 5px;height:87px;margin:0 10px 0 0;display:inline; }
+					#idx .col1 .tech ul li.viz3 a { margin:0; }
+					#idx .col1 .tech ul li a:hover { background:transparent url("../img/idx/tech.png") no-repeat -400px 0;text-decoration:none; }
+						#idx .col1 .tech ul li a span.img { display:block;width:200px;height:65px;background:transparent url("../img/idx/tech.png") no-repeat;cursor:pointer; }
+						#idx .col1 .tech ul li.tech1 a span.img { background-position:0 0; }
+						#idx .col1 .tech ul li.tech2 a span.img { background-position:0 -65px; }
+						#idx .col1 .tech ul li.tech3 a span.img { background-position:0 -130px; }
+						#idx .col1 .tech ul li.tech4 a span.img { background-position:-200px 0; }
+						#idx .col1 .tech ul li.tech5 a span.img { background-position:-200px -65px; }
+						#idx .col1 .tech ul li.tech6 a span.img { background-position:-200px -130px; }
+
+						#idx .col1 .tech ul li a span.txt { display:block;width:200px;height:16px;text-decoration:none;color:#dd3409;font-weight:bold;padding:1px 0 0 0;line-height:16px;cursor:pointer; }
+
+						#idx .col1 .tech ul li a:hover span.txt { text-decoration:underline; }
+						#idx .col1 .tech ul li a:visited span.txt { color:#a31515;text-decoration:none; }
+						#idx .col1 .tech ul li a:visited:hover span.txt { color:#a31515;text-decoration:underline; }
+
+
+
+
+
+
+	#idx .col2 { margin:0 5px 0 700px;width:230px;min-height:325px; }
+
+
+		/* Controls */
+		#idx .col2 .ctrl { margin:0;padding:0;height:294px; }
+			#idx .col2 .ctrl h3 { padding:0 0 13px 0; }
+
+
+		#idx .col2 .ctrl ul.l { width:100px;float:left;margin:0 20px 0 0; }
+		#idx .col2 .ctrl ul.r { width:100px;float:left; }
+
+		#idx .col2 .ctrl li { display:inline; }
+
+		#idx .col2 .ctrl li a { display:block;line-height:16px;font-weight:bold;width:auto;margin:0 0 4px 0;background:transparent url("../img/ddn/ctrl/icons.png") no-repeat;padding:0 0 0 20px; }
+			#idx .col2 .ctrl li a.calendar { background-position:0 0; }
+			#idx .col2 .ctrl li a.callback { background-position:0 -16px; }
+			#idx .col2 .ctrl li a.combobox { background-position:0 -32px; }
+			#idx .col2 .ctrl li a.dialog { background-position:0 -48px; }
+			#idx .col2 .ctrl li a.editor { background-position:0 -64px; }
+			#idx .col2 .ctrl li a.grid { background-position:0 -80px; }
+			#idx .col2 .ctrl li a.menu { background-position:0 -96px; }
+			#idx .col2 .ctrl li a.multipage { background-position:0 -112px; }
+			#idx .col2 .ctrl li a.navbar { background-position:0 -128px; }
+			#idx .col2 .ctrl li a.rotator { background-position:0 -144px; }
+			#idx .col2 .ctrl li a.sitemap { background-position:0 -160px; }
+			#idx .col2 .ctrl li a.snap { background-position:0 -176px; }
+			#idx .col2 .ctrl li a.spellcheck { background-position:0 -192px; }
+			#idx .col2 .ctrl li a.splitter { background-position:0 -208px; }
+			#idx .col2 .ctrl li a.tabstrip { background-position:0 -224px; }
+			#idx .col2 .ctrl li a.toolbar { background-position:0 -240px; }
+			#idx .col2 .ctrl li a.treeview { background-position:0 -256px; }
+			#idx .col2 .ctrl li a.upload { background-position:0 -336px; }
+			#idx .col2 .ctrl li a.colorpicker { background-position:0 -352px; }
+			#idx .col2 .ctrl li a.input { background-position:0 -368px; }
+			#idx .col2 .ctrl li a.slider { background-position:0 -384px; }
+			#idx .col2 .ctrl li a.chart { background-position:0 -304px; }
+			#idx .col2 .ctrl li a.gauge { background-position:0 -400px; }
+			#idx .col2 .ctrl li a.scheduler { background-position:0 -416px; }
+
+
+		/* Ajax */
+		#idx .col2 .ajax { width:100%;margin:0;padding:3px 0 0 0; }
+
+			#idx .col2 .ajax span.img { display:block;width:230px;height:120px;background:transparent url("../img/idx/ajax.png") no-repeat;margin:12px 0 0 0; }
+
+			#idx .col2 .ajax ul { background:transparent url("../img/idx/ajax.png") no-repeat right -120px; }
+				#idx .col2 .ajax ul li { display:inline; }
+				#idx .col2 .ajax ul a { display:block;width:100%;height:63px;border-top:1px solid #ccc;padding:0;margin:0; }
+				#idx .col2 .ajax ul a.first { border:none;margin:1px 0 0 0; }
+				#idx .col2 .ajax ul a:hover { text-decoration:none; }
+					#idx .col2 .ajax ul a span { display:block;line-height:16px;width:90px;font-weight:bold; }
+						#idx .col2 .ajax ul a span.txt { color:#666;padding:7px 0 0 0; }
+						#idx .col2 .ajax ul a:hover span.ttl { text-decoration:underline; }

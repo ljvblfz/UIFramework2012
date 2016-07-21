@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:vsm="clr-namespace:System.Windows;assembly=WPFToolkit" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+	xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+>
+
+	<!-- BEGIN NAVBAR -->
+ 
+    <!-- NAVBAR RESOURCES -->
+    <sys:Double x:Key="ComponentArt_NavBar_BorderThickness">0</sys:Double>
+
+    <SolidColorBrush x:Key="ComponentArt_NavBar_Background" Color="#003B3B3B" />
+
+    <SolidColorBrush x:Key="ComponentArt_NavBar_Group_Background" Color="White" />
+
+    <SolidColorBrush x:Key="ComponentArt_NavBar_BackgroundBorder" Color="#00000000"/>
+
+    <!-- NAVBAR ITEM RESOURCES -->
+	<sys:String x:Key="ComponentArt_NavBar_NormalItemBorder">##FF00FF00</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_NormalItemInnerBorder">#00000000</sys:String>
+
+	<sys:String x:Key="ComponentArt_NavBar_PressedItemBorder">#efeff0</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_PressedItemInnerBorder">#efeff0</sys:String>
+
+	<sys:String x:Key="ComponentArt_NavBar_OverItemBorder">#55e5e5e5</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_OverItemInnerBorder">#55e5e5e5</sys:String>
+
+	<sys:String x:Key="ComponentArt_NavBar_CheckedItemBorder">#e5e5e5</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_CheckedItemInnerBorder">#e5e5e5</sys:String>
+
+	<SolidColorBrush x:Key="ComponentArt_NavBarItem_Background" Color="#00000000" />
+
+	<LinearGradientBrush x:Key="ComponentArt_NavBarItem_BackgroundOver" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#55e5e5e5" Offset="0"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="ComponentArt_NavBarItem_BackgroundActive" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#e5e5e5" Offset="0"/>
+	</LinearGradientBrush>
+
+	<!-- /NAVBAR ITEM RESOURCES -->
+
+
+	<!-- new -->
+	<sys:String x:Key="ComponentArt_NavBar_ItemHeader_Padding">0</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_ItemHeader_CornerRadius">0</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_ItemHeader_FontSize">12</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_ItemHeader_FontWeight">Normal</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_ItemPadding">0</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_ItemMargin">0</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_ItemIconMargin">0</sys:String>
+
+	<SolidColorBrush x:Key="ComponentArt_NavBar_ItemForeground" Color="#000000" />
+	<sys:String x:Key="ComponentArt_NavBar_ItemForegroundOver">#000000</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_ItemForegroundChecked">#000000</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_ItemForegroundPressed">#000000</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_ItemForegroundDisabled">Black</sys:String>
+
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemHeader_Padding">0</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemHeader_CornerRadius">0</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemHeader_FontSize">13</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemHeader_FontWeight">Bold</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemMargin">0,0,0,0</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemIconMargin">0</sys:String>
+
+	<SolidColorBrush x:Key="ComponentArt_NavBar_GroupItemForeground" Color="#1b5086" />
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemForegroundOver">#1b5086</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemForegroundChecked">#000000</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemForegroundPressed">#1b5086</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_GroupItemForegroundDisabled">#1b5086</sys:String>
+
+	<!-- /new -->
+    
+	<!-- NAVBAR GROUP ITEM RESOURCES -->
+
+	<sys:String x:Key="ComponentArt_NavBar_NormalGroupItemBorder">#FF6196cc</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_NormalGroupItemInnerBorder">#00bbdcfd</sys:String>
+
+	<sys:String x:Key="ComponentArt_NavBar_PressedGroupItemBorder">#FF6196cc</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_PressedGroupItemInnerBorder">#00ffe69c</sys:String>
+
+	<sys:String x:Key="ComponentArt_NavBar_OverGroupItemBorder">#FF6196cc</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_OverGroupItemInnerBorder">#00ffdd87</sys:String>
+
+	<sys:String x:Key="ComponentArt_NavBar_CheckedGroupItemBorder">#FF6196cc</sys:String>
+	<sys:String x:Key="ComponentArt_NavBar_CheckedGroupItemInnerBorder">#00ffcd66</sys:String>
+
+    <LinearGradientBrush x:Key="ComponentArt_NavBarGroupItem_Background" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#e4f0fd" Offset="0" />
+        <GradientStop Color="#c2dffc" Offset="0.38" />
+        <GradientStop Color="#aad3fc" Offset="0.38" />
+        <GradientStop Color="#c0ddfa" Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ComponentArt_NavBarGroupItem_BackgroundOver" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#fffbe7" Offset="0" />
+        <GradientStop Color="#ffe5a8" Offset="0.38" />
+        <GradientStop Color="#ffd667" Offset="0.38" />
+        <GradientStop Color="#ffe79d" Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ComponentArt_NavBarGroupItem_BackgroundActive" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#ffd6ad" Offset="0" />
+        <GradientStop Color="#ffb86e" Offset="0.38" />
+        <GradientStop Color="#ffa93f" Offset="0.38" />
+        <GradientStop Color="#ffdf7c" Offset="1" />
+    </LinearGradientBrush>
+
+
+
+    <Style x:Key="ComponentArt_NavBar_GroupHeaderStyle" TargetType="ComponentArt:NavBarItemHeader">
+        <Setter Property="Foreground" Value="{StaticResource ComponentArt_NavBar_GroupItemForeground}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{StaticResource ComponentArt_NavBar_GroupItemHeader_Padding}"/>
+        <Setter Property="CornerRadius" Value="{StaticResource ComponentArt_NavBar_GroupItemHeader_CornerRadius}"/>
+        <Setter Property="Margin" Value="{StaticResource ComponentArt_NavBar_GroupItemMargin}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComponentArt:NavBarItemHeader">
+                    <Grid x:Name="LayoutRoot" Height="35">
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="CommonStates">
+                                <vsm:VisualStateGroup.Transitions>
+                                    <vsm:VisualTransition GeneratedDuration="00:00:00.01" />
+                                </vsm:VisualStateGroup.Transitions>
+                                <vsm:VisualState x:Name="Checked" >
+                                    <Storyboard>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_CheckedGroupItemBorder}"/>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_CheckedGroupItemInnerBorder}"/>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="LeftText" Storyboard.TargetProperty="(ContentControl.Foreground).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_GroupItemForegroundChecked}"/>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="RightText" Storyboard.TargetProperty="(ContentControl.Foreground).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_GroupItemForegroundChecked}"/>
+                                        <DoubleAnimation AutoReverse="True" Duration="00:00:00" Storyboard.TargetName="CheckedRect" Storyboard.TargetProperty="Opacity" To="1" />
+                                        <DoubleAnimation Duration="00:00:00" Storyboard.TargetName="NormalRect" Storyboard.TargetProperty="Opacity" To="0" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="UnChecked" >
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="MouseOver" >
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_OverGroupItemBorder}" />
+                                        <ColorAnimation Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_OverGroupItemInnerBorder}" />
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="LeftText" Storyboard.TargetProperty="(ContentControl.Foreground).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_GroupItemForegroundOver}"/>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="RightText" Storyboard.TargetProperty="(ContentControl.Foreground).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_GroupItemForegroundOver}"/>
+                                        <DoubleAnimation Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1"  />
+                                        <DoubleAnimation Storyboard.TargetName="NormalRect" Storyboard.TargetProperty="Opacity" To="0" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Normal" >
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Pressed" >
+                                    <Storyboard>
+                                        <ColorAnimation Duration="00:00:00.0" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_PressedGroupItemBorder}"/>
+                                        <ColorAnimation Duration="00:00:00.0" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_PressedGroupItemInnerBorder}" />
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="LeftText" Storyboard.TargetProperty="(ContentControl.Foreground).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_GroupItemForegroundPressed}"/>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="RightText" Storyboard.TargetProperty="(ContentControl.Foreground).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_GroupItemForegroundPressed}"/>
+                                        <DoubleAnimation AutoReverse="True" Duration="00:00:00.0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="1" />
+                                        <DoubleAnimation AutoReverse="True" Duration="00:00:00.0" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1" />
+                                        <DoubleAnimation Duration="00:00:00.0" Storyboard.TargetName="NormalRect" Storyboard.TargetProperty="Opacity" To="0" />
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Disabled" >
+                                    <Storyboard>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_NormalGroupItemBorder}"/>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_NormalGroupItemInnerBorder}"/>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="LeftText" Storyboard.TargetProperty="(ContentControl.Foreground).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_GroupItemForegroundDisabled}"/>
+                                        <ColorAnimation Duration="00:00:00" Storyboard.TargetName="RightText" Storyboard.TargetProperty="(ContentControl.Foreground).(SolidColorBrush.Color)" To="{StaticResource ComponentArt_NavBar_GroupItemForegroundDisabled}"/>
+                                        <DoubleAnimation Duration="0" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="Opacity" To=".55"/>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+                        <Border x:Name="BackgroundBorder" Padding="0" BorderBrush="{StaticResource ComponentArt_NavBar_NormalGroupItemBorder}" HorizontalAlignment="Stretch" BorderThickness="0,0,0,1" CornerRadius="{TemplateBinding CornerRadius}">
+                            <Border x:Name="InnerBorder" BorderBrush="{StaticResource ComponentArt_NavBar_NormalGroupItemInnerBorder}" HorizontalAlignment="Stretch" BorderThickness="0" CornerRadius="{TemplateBinding CornerRadius}">
+                                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                                    <Border CornerRadius="{TemplateBinding CornerRadius}" x:Name="NormalRect" Opacity="1" Background="{StaticResource ComponentArt_NavBarGroupItem_Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                    <Border CornerRadius="{TemplateBinding CornerRadius}" x:Name="MouseOverRect" Opacity="0" Background="{StaticResource ComponentArt_NavBarGroupItem_BackgroundOver}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                    <Border CornerRadius="{TemplateBinding CornerRadius}" x:Name="PressedRect" Opacity="0" Background="{StaticResource ComponentArt_NavBarGroupItem_BackgroundOver}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                    <Border CornerRadius="{TemplateBinding CornerRadius}" x:Name="CheckedRect" Opacity="0" Background="{StaticResource ComponentArt_NavBarGroupItem_BackgroundActive}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                    <StackPanel Margin="{TemplateBinding Padding}"  x:Name="InnerStack" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
+                                        <ContentControl x:Name="LeftText" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Foreground="{StaticResource ComponentArt_NavBar_GroupItemForeground}" FontSize="{StaticResource ComponentArt_NavBar_GroupItemHeader_FontSize}" FontWeight="{StaticResource ComponentArt_NavBar_GroupItemHeader_FontWeight}" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        <Image x:Name="Icon" Margin="5"  Height="31"  HorizontalAlignment="Center" VerticalAlignment="Center" Source="{TemplateBinding EffectiveIconSource}" Stretch="None"/>
+                                        <ContentControl x:Name="RightText" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Foreground="{StaticResource ComponentArt_NavBar_GroupItemForeground}" FontSize="{StaticResource ComponentArt_NavBar_GroupItemHeader_FontSize}" FontWeight="{StaticResource ComponentArt_NavBar_GroupItemHeader_FontWeight}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="ComponentArt:NavBarItem">
+        <Setter Property="Background" Value="{StaticResource ComponentArt_NavBar_Group_Background}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComponentArt:NavBarItem">
+                    <Grid x:Name="LayoutRoot" RenderTransformOrigin="0.5,0.5" Background="{TemplateBinding Background}">
+                        <vsm:VisualStateManager.VisualStateGroups>
+                            <vsm:VisualStateGroup x:Name="SelectionStates">
+                                <vsm:VisualState x:Name="Unselected">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ItemsBorder" Storyboard.TargetProperty="Height">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00.6" Value="0" KeySpline="0,1,1,1" x:Name="CollapseEndFrame"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                                <vsm:VisualState x:Name="Selected">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ItemsBorder" Storyboard.TargetProperty="Height">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00.6" Value="100" KeySpline="0,1,1,1" x:Name="ExpandEndFrame"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </vsm:VisualState>
+                            </vsm:VisualStateGroup>
+                        </vsm:VisualStateManager.VisualStateGroups>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="0"/>
+                        </Grid.RowDefinitions>
+                        <ComponentArt:NavBarItemHeader x:Name="Header" 
+                                Content="{TemplateBinding Header}" 
+                                Grid.Row="0" HorizontalAlignment="Stretch"
+                                IconSource="{TemplateBinding IconSource}"
+                                TextImageRelation="{TemplateBinding TextImageRelation}"
+                                HorizontalContentAlignment="{TemplateBinding HeaderHorizontalAlignment}"
+                                Height="35"
+                                ContentTemplate="{TemplateBinding HeaderContentTemplate}" 
+                                />
+                        <Border x:Name="ItemsBorder" Visibility="Visible" Height="0" Grid.Row="1" Grid.Column="0" BorderThickness="0">
+                            <!--  Background="{TemplateBinding Background}"-->
+                            <Grid>
+                                <ScrollViewer x:Name="ItemsScrollViewer" Visibility="Collapsed"  Background="{TemplateBinding Background}" HorizontalScrollBarVisibility="Hidden"  VerticalScrollBarVisibility="Hidden"
+                                                      Padding="{TemplateBinding Padding}" Margin="0" BorderThickness="0" >
+                                    <ItemsPresenter x:Name="ItemsPresenter" />
+                                </ScrollViewer>
+                                <Button x:Name="ScrollUp" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{TemplateBinding ScrollUpChevronStyle}" />
+                                <Button x:Name="ScrollDown" VerticalAlignment="Bottom" HorizontalAlignment="Right" Style="{TemplateBinding ScrollDownChevronStyle}" />
+                                <ComponentArtCommon:Spinner x:Name="LoadOnDemandSpinner" Visibility="Collapsed" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="ComponentArt:NavBar">
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Background" Value="{StaticResource ComponentArt_NavBar_Background}" />
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="InnerCornerRadius" Value="0" />
+        <Setter Property="GroupItemHeaderStyle" Value="{StaticResource ComponentArt_NavBar_GroupHeaderStyle}"/>
+        <!--<Setter Property="ItemHeaderStyle" Value="{StaticResource ComponentArt_NavBar_ItemHeaderStyle}"/>
+        <Setter Property="ScrollDownChevronStyle" Value="{StaticResource ComponentArt_NavBar_ScrollDownChevron}" />
+        <Setter Property="ScrollUpChevronStyle" Value="{StaticResource ComponentArt_NavBar_ScrollUpChevron}" />-->
+        <Setter Property="GroupItemHeaderHorizontalAlignment" Value="Left" />
+        <Setter Property="ItemHeaderHorizontalAlignment" Value="Left" />
+        <Setter Property="TextImageRelation" Value="ImageBeforeText" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComponentArt:NavBar">
+                    <Grid x:Name="LayoutRoot" RenderTransformOrigin="0.5,0.5">
+                        <Border
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Padding="{TemplateBinding Padding}"
+                            Background="{TemplateBinding Background}">
+
+                            <Border x:Name="ItemsPresenterBorder" CornerRadius="{TemplateBinding InnerCornerRadius}" BorderThickness="0" Background="{TemplateBinding Background}">
+                                <ItemsPresenter x:Name="ItemsPresenter" />
+                            </Border>
+                        </Border>
+                        <ComponentArtCommon:Spinner x:Name="LoadOnDemandSpinner" Visibility="Collapsed" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /NAVBAR RESOURCES -->
+	<!-- END NAVBAR -->
+</ResourceDictionary>

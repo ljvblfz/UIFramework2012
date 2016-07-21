@@ -1,0 +1,76 @@
+.NavBar
+{
+  background-color: #FFFFFF; 
+  border: 1px solid #000000; 
+  padding: 2px;
+  padding-bottom: 1px;
+  cursor: default; 
+} 
+
+.TopItem
+{
+  color: #FFFFFF;
+  background-image: url(images/top_item_background.gif);
+  background-color: #202020; 
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  font-weight: bold;
+  border:1px solid #696885; 
+  border-bottom-color: #57566F; 
+  border-right-color: #57566F; 
+  padding-top: 6px; 
+  padding-bottom: 4px; 
+  cursor:hand;
+}
+
+.TopItemHover
+{
+  color: #FFE0E0;
+  background-image: url(images/top_item_background.gif);
+  background-color: #202020; 
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  font-weight: bold;
+  border: 1px solid #d03030;
+  border-bottom-color:#d03030;
+  padding-top: 6px; 
+  padding-bottom: 4px; 
+  cursor:hand;
+}
+
+.Level2Item
+{
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  padding: 5px; 
+  cursor:hand;
+  text-align:center;
+}
+
+.Level2ItemHover
+{
+  font-family: tahoma, verdana; 
+  font-size: 11px; 
+  text-decoration:underline;
+  padding: 5px; 
+  cursor:hand;
+  text-align:center;
+  background-color: #f0f0f0;
+}
+
+.Level2Group
+{
+  background-color:white;
+  background-image: url(navbar_images/group_bg.gif);
+  border-top-color: #F0F1F5;
+  padding:10px;
+  padding-left:10px;
+  padding-right:0px;
+  text-align:center;
+}
+
+.Empty
+{
+}
+
+

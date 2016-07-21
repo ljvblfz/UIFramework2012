@@ -1,0 +1,255 @@
+﻿@using ComponentArt.Web.UI
+
+@{
+  ViewData["DemoType"] = "Menu";
+  ViewData["DemoTitle"] = "Core Features";
+  ViewData["CodeFiles"] = "/Views/Menu/CoreFeatures.aspx,/Controllers/MenuController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>ComponentArt Menu has a comprehensive set of core expand/collapse features; </li>
+<li>Set any combination of properties exposed above to fine-tune the core menu behaviour; </li> 
+<li>All changes will be effective immediately, without a need for a postback. </li> 
+</ul>
+";
+}
+
+@section HeadContent {
+  <link href="@Url.Content("~/Content/Themes/Outlook2007/theme.css")" rel="stylesheet" type="text/css" />
+}
+
+@(Html.ComponentArt().Menu()
+      .ID("Menu1")
+      .AutoTheming(true)
+      .ScrollingEnabled(true)
+      .SiteMapXmlFile("~/App_Data/Menu/CoreFeatures/menuData.xml")
+      .ImagesBaseUrl("~/Content/Menu/CoreFeatures/images/")
+      .ShadowEnabled(false)
+      .ExpandDelay(100)
+      .ClientTemplates(ct =>
+      {
+        ct.Add().ID("SetMarginsTemplate")
+          .Content("<table cellpadding=\"3\" cellspacing=\"0\">"
++ "<tr>"
++ "  <td><img src=\"../../Content/Menu/CoreFeatures/images/## DataItem.GetProperty('MarginImage') ##\" width=\"37\" height=\"47\" alt=\"\" /></td>"
++ "  <td>"
++ "    <b>## DataItem.GetProperty('SettingName') ##</b>"
++ "    <table cellpadding=\"2\" cellspacing=\"0\">"
++ "    <tr>"
++ "      <td>Top:</td>"
++ "      <td><b>## DataItem.GetProperty('Top') ##\"</b></td>"
++ "      <td><img src=\"../../Content/Menu/CoreFeatures/images/spacer.gif\" width=\"20\" height=\"10\" alt=\"\" /></td>"
++ "      <td>Right:</td>"
++ "      <td><b>## DataItem.GetProperty('Right') ##\"</b></td>"
++ "    </tr>"
++ "    <tr>"
++ "      <td>Bottom:</td>"
++ "      <td><b>## DataItem.GetProperty('Bottom') ##\"</b></td>"
++ "      <td><img src=\"../../Content/Menu/CoreFeatures/images/spacer.gif\" width=\"20\" height=\"10\" alt=\"\" /></td>"
++ "      <td>Left:</td>"
++ "      <td><b>## DataItem.GetProperty('Left') ##\"</b></td>"
++ "    </tr>"
++ "    </table>"
++ "  </td>"
++ "</tr>"
++ "</table>");
+      })
+)
+<br />
+<br />
+<br />
+<span class="hint">Expand various menu groups to see examples of nested ASP.NET
+  <br />
+  server or user controls, client templates, and scrolling groups.</span>
+<br />
+<br />
+<br />
+<br />
+<br />
+<table width="600" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td>
+      <table width="250" cellpadding="0" cellspacing="5" border="0">
+        <tr>
+          <td colspan="2" class="MainText">
+            <span style="font-weight: bold; text-decoration: underline;">Expand Properties</span>:
+            <br />
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            ExpandSlide:
+          </td>
+          <td class="MainText">
+            <select style="width: 130px;" id="selExpandSlide">
+              <option value="0">None</option>
+              <option value="3">Constant</option>
+              <option value="2" selected="selected">Decelerate</option>
+              <option value="1">Accelerate</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            ExpandTransition:
+          </td>
+          <td class="MainText">
+            <select style="width: 130px;" id="selExpandTransition">
+              <option value="0">None</option>
+              <option value="3">Fade</option>
+              <option value="2">Dissolve</option>
+              <option value="16">Pixelate</option>
+              <option value="19">WipeDown</option>
+              <option value="20">WipeLeft</option>
+              <option value="21">WipeRight</option>
+              <option value="22">WipeUp</option>
+              <option value="4">IrisCircle</option>
+              <option value="5">IrisCircleIn</option>
+              <option value="6">IrisCross</option>
+              <option value="7">IrisCrossIn</option>
+              <option value="8">IrisDiamond</option>
+              <option value="9">IrisDiamondIn</option>
+              <option value="10">IrisPlus</option>
+              <option value="11">IrisPlusIn</option>
+              <option value="12">IrisSquare</option>
+              <option value="13">IrisSquareIn</option>
+              <option value="14">IrisStar</option>
+              <option value="15">IrisStarIn</option>
+              <option value="17">Wheel2</option>
+              <option value="18">Wheel8</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            ExpandDuration:
+          </td>
+          <td class="MainText">
+            <input type="text" id="txtExpandDuration" value="300" style="width: 40px;" />
+            <span style="color: gray">milliseconds</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            ExpandDelay:
+          </td>
+          <td class="MainText">
+            <input type="text" id="txtExpandDelay" value="100" style="width: 40px;" />
+            <span style="color: gray">milliseconds</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            ExpandOnClick
+          </td>
+          <td class="MainText">
+            <input type="checkbox" id="chkExpandOnClick" />
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      &nbsp;&nbsp;
+    </td>
+    <td>
+      <table width="250" cellpadding="0" cellspacing="5" border="0">
+        <tr>
+          <td colspan="2" class="MainText">
+            <span style="font-weight: bold; text-decoration: underline;">Collapse Properties</span>:
+            <br />
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            CollapseSlide:
+          </td>
+          <td class="MainText">
+            <select style="width: 130px;" id="selCollapseSlide">
+              <option value="0">None</option>
+              <option value="3">Constant</option>
+              <option value="2" selected="selected">Decelerate</option>
+              <option value="1">Accelerate</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            CollapseTransition:
+          </td>
+          <td class="MainText">
+            <select style="width: 130px;" id="selCollapseTransition">
+              <option value="0">None</option>
+              <option value="3">Fade</option>
+              <option value="2">Dissolve</option>
+              <option value="16">Pixelate</option>
+              <option value="19">WipeDown</option>
+              <option value="20">WipeLeft</option>
+              <option value="21">WipeRight</option>
+              <option value="22">WipeUp</option>
+              <option value="4">IrisCircle</option>
+              <option value="5">IrisCircleIn</option>
+              <option value="6">IrisCross</option>
+              <option value="7">IrisCrossIn</option>
+              <option value="8">IrisDiamond</option>
+              <option value="9">IrisDiamondIn</option>
+              <option value="10">IrisPlus</option>
+              <option value="11">IrisPlusIn</option>
+              <option value="12">IrisSquare</option>
+              <option value="13">IrisSquareIn</option>
+              <option value="14">IrisStar</option>
+              <option value="15">IrisStarIn</option>
+              <option value="17">Wheel2</option>
+              <option value="18">Wheel8</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            CollapseDuration:
+          </td>
+          <td class="MainText">
+            <input type="text" id="txtCollapseDuration" value="200" style="width: 40px;" />
+            <span style="color: gray">milliseconds</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            CollapseDelay:
+          </td>
+          <td class="MainText">
+            <input type="text" id="txtCollapseDelay" value="500" style="width: 40px;" />
+            <span style="color: gray">milliseconds</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="MainText">
+            CascadeCollapse
+          </td>
+          <td class="MainText">
+            <input type="checkbox" id="chkCascadeCollapse" checked="checked" />
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<br />
+<input type="button" onclick="updateMenu();" value="Apply Changes" />
+<script type="text/javascript">
+    //<![CDATA[
+  function updateMenu()
+  {
+    Menu1.set_expandSlide(parseInt(document.getElementById('selExpandSlide').value));
+    Menu1.set_expandTransition(parseInt(document.getElementById('selExpandTransition').value));
+    Menu1.set_expandDuration(parseInt(document.getElementById('txtExpandDuration').value));
+    Menu1.set_expandDelay(parseInt(document.getElementById('txtExpandDelay').value));
+    Menu1.set_expandOnClick(!!(document.getElementById('chkExpandOnClick').checked));
+    Menu1.set_collapseSlide(parseInt(document.getElementById('selCollapseSlide').value));
+    Menu1.set_collapseTransition(parseInt(document.getElementById('selCollapseTransition').value));
+    Menu1.set_collapseDuration(parseInt(document.getElementById('txtCollapseDuration').value));
+    Menu1.set_collapseDelay(parseInt(document.getElementById('txtCollapseDelay').value));
+    Menu1.set_cascadeCollapse(!!(document.getElementById('chkCascadeCollapse').checked));
+  }
+    //]]>
+</script>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tree>
+  <node Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewCoreFeatures" />
+    <node Header="Drag &#x26; Drop" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDragDropFeatures" />
+    <node Header="Node Editing" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewEditingFeatures" />
+    <node Header="TreeView Lines" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewLinesFeatures" />
+    <node Header="Multiple Selection" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewMultiSelectFeatures" />
+  </node>
+
+  <node Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignBlackIce" />
+    <node Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignArcticWhite" />
+    <node Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignOffice2003" />
+    <node Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignOffice2007" />
+    <node Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewDesignWindows7" />
+  </node>
+
+  <node Header="Load on Demand" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewSOAUIAutomatic" />
+    <node Header="SOA.UI Custom" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewSOAUICustom" />
+    <node Header="Manual Web Service" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewLoadOnDemandFeatures" />
+  </node>
+
+  <node Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="TreeViewAddRemoveFeatures" />
+  </node>
+</tree>

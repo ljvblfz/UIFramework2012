@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://localhost:1337/Services/SalesDataService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://localhost:1337/Services/SalesDataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1337/Services/SalesDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SalesDataService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="GetData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetAllData_InputMessage">
+    <wsdl:part name="parameters" element="GetAllData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetAllData_OutputMessage">
+    <wsdl:part name="parameters" element="GetAllDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetYearlyData_InputMessage">
+    <wsdl:part name="parameters" element="GetYearlyData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetYearlyData_OutputMessage">
+    <wsdl:part name="parameters" element="GetYearlyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetYearlyDataFromDecade_InputMessage">
+    <wsdl:part name="parameters" element="GetYearlyDataFromDecade" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetYearlyDataFromDecade_OutputMessage">
+    <wsdl:part name="parameters" element="GetYearlyDataFromDecadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetMonthlyData_InputMessage">
+    <wsdl:part name="parameters" element="GetMonthlyData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetMonthlyData_OutputMessage">
+    <wsdl:part name="parameters" element="GetMonthlyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetDailyData_InputMessage">
+    <wsdl:part name="parameters" element="GetDailyData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetDailyData_OutputMessage">
+    <wsdl:part name="parameters" element="GetDailyDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetProductSummaryData_InputMessage">
+    <wsdl:part name="parameters" element="GetProductSummaryData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetProductSummaryData_OutputMessage">
+    <wsdl:part name="parameters" element="GetProductSummaryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetDashboardData_InputMessage">
+    <wsdl:part name="parameters" element="GetDashboardData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetDashboardData_OutputMessage">
+    <wsdl:part name="parameters" element="GetDashboardDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetAllAuxiliaryData_InputMessage">
+    <wsdl:part name="parameters" element="GetAllAuxiliaryData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetAllAuxiliaryData_OutputMessage">
+    <wsdl:part name="parameters" element="GetAllAuxiliaryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetYearlyAuxiliaryData_InputMessage">
+    <wsdl:part name="parameters" element="GetYearlyAuxiliaryData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetYearlyAuxiliaryData_OutputMessage">
+    <wsdl:part name="parameters" element="GetYearlyAuxiliaryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetYearlyAuxiliaryDataFromDecade_InputMessage">
+    <wsdl:part name="parameters" element="GetYearlyAuxiliaryDataFromDecade" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetYearlyAuxiliaryDataFromDecade_OutputMessage">
+    <wsdl:part name="parameters" element="GetYearlyAuxiliaryDataFromDecadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetMonthlyAuxiliaryData_InputMessage">
+    <wsdl:part name="parameters" element="GetMonthlyAuxiliaryData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetMonthlyAuxiliaryData_OutputMessage">
+    <wsdl:part name="parameters" element="GetMonthlyAuxiliaryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetDailyAuxiliaryData_InputMessage">
+    <wsdl:part name="parameters" element="GetDailyAuxiliaryData" />
+  </wsdl:message>
+  <wsdl:message name="SalesDataService_GetDailyAuxiliaryData_OutputMessage">
+    <wsdl:part name="parameters" element="GetDailyAuxiliaryDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SalesDataService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetData" message="SalesDataService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetDataResponse" message="SalesDataService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetAllData" message="SalesDataService_GetAllData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetAllDataResponse" message="SalesDataService_GetAllData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetYearlyData" message="SalesDataService_GetYearlyData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetYearlyDataResponse" message="SalesDataService_GetYearlyData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyDataFromDecade">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetYearlyDataFromDecade" message="SalesDataService_GetYearlyDataFromDecade_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetYearlyDataFromDecadeResponse" message="SalesDataService_GetYearlyDataFromDecade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetMonthlyData" message="SalesDataService_GetMonthlyData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetMonthlyDataResponse" message="SalesDataService_GetMonthlyData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetDailyData" message="SalesDataService_GetDailyData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetDailyDataResponse" message="SalesDataService_GetDailyData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSummaryData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetProductSummaryData" message="SalesDataService_GetProductSummaryData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetProductSummaryDataResponse" message="SalesDataService_GetProductSummaryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDashboardData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetDashboardData" message="SalesDataService_GetDashboardData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetDashboardDataResponse" message="SalesDataService_GetDashboardData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAuxiliaryData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetAllAuxiliaryData" message="SalesDataService_GetAllAuxiliaryData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetAllAuxiliaryDataResponse" message="SalesDataService_GetAllAuxiliaryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyAuxiliaryData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetYearlyAuxiliaryData" message="SalesDataService_GetYearlyAuxiliaryData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetYearlyAuxiliaryDataResponse" message="SalesDataService_GetYearlyAuxiliaryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYearlyAuxiliaryDataFromDecade">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetYearlyAuxiliaryDataFromDecade" message="SalesDataService_GetYearlyAuxiliaryDataFromDecade_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetYearlyAuxiliaryDataFromDecadeResponse" message="SalesDataService_GetYearlyAuxiliaryDataFromDecade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyAuxiliaryData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetMonthlyAuxiliaryData" message="SalesDataService_GetMonthlyAuxiliaryData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetMonthlyAuxiliaryDataResponse" message="SalesDataService_GetMonthlyAuxiliaryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyAuxiliaryData">
+      <wsdl:input wsaw:Action="urn:SalesDataService/GetDailyAuxiliaryData" message="SalesDataService_GetDailyAuxiliaryData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:SalesDataService/GetDailyAuxiliaryDataResponse" message="SalesDataService_GetDailyAuxiliaryData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

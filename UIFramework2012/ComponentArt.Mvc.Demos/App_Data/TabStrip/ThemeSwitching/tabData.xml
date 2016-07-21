@@ -1,0 +1,37 @@
+<items>
+  <item Text="News" >
+    <!-- 
+    <item Text="Top Stories" />
+    <item Text="Breaking News" />
+    <item Text="World News" />
+    -->
+  </item>
+
+  <item Text="Markets" >
+    <!--
+    <item Text="Commentary" />
+    <item Text="Technology" />
+    <item Text="Personal Finance" />
+    <item Text="Mutual Funds" />
+    -->
+  </item>
+
+  <item Text="Showbiz" >
+    <!--
+    <item Text="Movies" />
+    <item Text="Music" />
+    <item Text="Television" />
+    <item Text="Books" />
+    <item Text="Video | Audio" />
+    -->
+  </item>
+
+  <item Text="Travel">
+    <!--
+    <item Text="Destinations" />
+    <item Text="Agencies" />
+    <item Text="Photo of the Day" />
+    -->
+  </item>
+
+</items>

@@ -1,0 +1,61 @@
+﻿@using ComponentArt.Web.UI
+@{ 
+  ViewData["DemoType"] = "TreeView";
+  ViewData["DemoTitle"] = "Theme Switching";
+  ViewData["CodeFiles"] = "/Views/TreeView/ThemeSwitching.aspx,/Controllers/TreeViewController.cs,/Views/Shared/ThemeSwitchingCss.ascx,/Views/Shared/ThemeSwitchingInterface.ascx";
+  ViewData["AboutText"] = @"
+<ul>
+<li>TreeViews's theming functionality is showcased here, which is activated via its AutoTheming property.</li>
+<li>The changing of the CSS definitions is done by resetting the active stylesheet.</li>
+</ul>
+";   
+}
+@section HeadContent {
+  <script type="text/javascript">
+    function setShowLines(value)
+    {
+      TreeView.ShowLines = value;
+      TreeView.render();
+    }
+  </script>
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+}
+<table>
+  <tr>
+    <td>@(Html.ComponentArt().TreeView()
+      .ID("TreeView")
+      .Width(250)
+      .Height(400)
+      .AutoScroll(true)
+      .SiteMapXmlFile("~/App_Data/TreeView/sampleThemeData.xml")
+      .AutoTheming(true)
+      .ShowLines(true)
+)
+    </td>
+    <td valign="top" style="padding: 10px; padding-left: 30px;">
+      <input type="checkbox" checked="yes" onclick="setShowLines(this.checked)" />Show
+      Lines
+      <br />
+      <br />
+      <br />
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml")
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+  function setActiveStyleSheet(title)
+  {
+    var i, a, main;
+    for (i = 0; (a = document.getElementsByTagName("link")[i]); i++)
+    {
+      if (a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title"))
+      {
+        a.disabled = true;
+        if (a.getAttribute("title") == title) a.disabled = false;
+      }
+    }
+
+    // re-draw
+    TreeView.render();
+  }
+</script>

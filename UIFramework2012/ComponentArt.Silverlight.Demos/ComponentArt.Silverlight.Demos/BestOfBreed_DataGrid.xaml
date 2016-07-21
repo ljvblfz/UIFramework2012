@@ -1,0 +1,155 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="ComponentArt.Silverlight.Demos.BestOfBreed_DataGrid"
+	xmlns:local="clr-namespace:ComponentArt.Silverlight.Demos" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    mc:Ignorable="d">
+    
+	<UserControl.Resources>
+        <Storyboard x:Key="DataGridCoreFeatures_animation"/>
+
+        <Storyboard x:Key="ItemFlowCoreFeatures_animation"/>
+
+        <Storyboard x:Key="MenuCoreFeatures_animation"/>
+
+        <Storyboard x:Key="ContextMenuSimple_animation"/>
+
+        <Storyboard x:Key="TreeViewCoreFeatures_animation"/>
+        
+        <Storyboard x:Key="overview_intro_animation"/>
+        
+        <LinearGradientBrush x:Key="ButtonBackground" StartPoint="0,0" EndPoint="0,1">
+			<GradientStop Color="#7fd6f7" Offset="0" />
+			<GradientStop Color="#7fd6f7" Offset="0.04" />
+			<GradientStop Color="#8edbf8" Offset="0.04" />
+			<GradientStop Color="#37bff2" Offset="0.5" />
+			<GradientStop Color="#0093c9" Offset="0.5" />
+			<GradientStop Color="#3bc1f3" Offset="1" />
+		</LinearGradientBrush>
+		<SolidColorBrush Color="#3bc1f3" x:Key="ButtonBorder" />
+
+		<LinearGradientBrush x:Key="ButtonBackgroundHover" StartPoint="0,0" EndPoint="0,1">
+			<GradientStop Color="#87f5fd" Offset="0" />
+			<GradientStop Color="#29e2f5" Offset="0.5" />
+			<GradientStop Color="#12d9ef" Offset="0.5" />
+			<GradientStop Color="#00c0e7" Offset="0.75" />
+			<GradientStop Color="#00afef" Offset="1" />
+		</LinearGradientBrush>
+		<SolidColorBrush Color="#3bc1f3" x:Key="ButtonBorderHover" />
+
+		<LinearGradientBrush x:Key="ButtonReflection" StartPoint="0,0" EndPoint="0,1">
+			<GradientStop Color="#b3e7fb" Offset="0" />
+			<GradientStop Color="#ffffff" Offset="0.5" />
+			<GradientStop Color="#00ffffff" Offset="1" />
+		</LinearGradientBrush>
+        
+		<LinearGradientBrush x:Key="Demo_Overlay_Fill" StartPoint="0,0" EndPoint="0,1">
+			<GradientStop Color="#00ffffff" Offset="0" />
+			<GradientStop Color="#00ffffff" Offset="1" />
+		</LinearGradientBrush>
+		
+		<SolidColorBrush x:Key="Demo_Text" Color="#000000" />
+		<SolidColorBrush x:Key="Demo_Text_Hover" Color="#0097bc" />
+		<!-- /Demo button styles -->
+
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="Transparent" Width="1076" Height="652">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Index" Margin="0,0,-134,220" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="" Margin="0,0,-134,220" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Groundbreaking UI controls for enterprise line-of-business applications." Margin="0,0,-134,220" />
+		<Grid Width="1076" Height="652">
+			<Image HorizontalAlignment="Left" Margin="18,63,0,264" Width="435" Source="Assets/Pages/Common/mainVisual-DataGrid.png" Stretch="None"/>
+			<Image Margin="474,260,417,0" Source="Assets/Pages/Welcome/outline_r22_c13.png" Stretch="Fill" Height="43" VerticalAlignment="Top"/>
+			<Image Margin="474,310,417,311" Source="Assets/Pages/Welcome/outline_r20_c13.png" Stretch="Fill"/>
+
+            <local:ImageButton Height="31" Margin="473,179,419,0" VerticalAlignment="Top" ImageNormal="Assets/Pages/DataGridIndex/button_datagrid_demos.png"
+                               ImageHover="Assets/Pages/DataGridIndex/button_datagrid_demos_over.png" Tag="control DataGrid" Click="ControlButton_Click" Style="{StaticResource Button_Tabs}"/>
+            
+			<Image Height="20" HorizontalAlignment="Left" Margin="18,17,0,0" VerticalAlignment="Top" Width="396" Source="Assets/Pages/DataGridIndex/heading_bob_datagrid.png" Stretch="Fill"/>
+			<!--<Image Height="16" HorizontalAlignment="Right" Margin="0,17,112,0" VerticalAlignment="Top" Width="141" Source="Assets/Pages/DataGridIndex/heading_fullyfeatured.png" Stretch="Fill"/>-->
+			<Image Height="17" HorizontalAlignment="Right" Margin="0,0,295,250" VerticalAlignment="Bottom" Width="229" Source="Assets/Pages/DataGridIndex/heading_tech_showcase.png" Stretch="Fill"/>
+			<TextBlock Height="67" Margin="475,98,332,0" FontFamily="Verdana" VerticalAlignment="Top" TextWrapping="Wrap" LineHeight="16" Text="With the ability to handle millions of records, elegant architecture, a wealth of features and built-in styles, ComponentArt DataGrid will make your Silverlight applications shine."/>
+			<TextBlock Height="26" Margin="474,74,342,0" VerticalAlignment="Top" Text="Experience the Live Demos" TextWrapping="Wrap" FontFamily="Verdana" FontSize="14.667" FontWeight="SemiBold"/>
+			<TextBlock Height="16" Margin="474,240,342,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" FontWeight="SemiBold" Text="Integrated with:" TextWrapping="Wrap"/>
+			<TextBlock Margin="0,0,292,217" LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="31" VerticalAlignment="Bottom"
+				HorizontalAlignment="Right" Width="229" 
+				FontStretch="Expanded" Text="Examples demonstrating features and functionality unique to the industry."/>
+			<TextBlock Height="22" FontFamily="Verdana" HorizontalAlignment="Left" Margin="20,42,0,0" VerticalAlignment="Top" FontSize="11"
+				Width="473" Text="Performance, Technical Sophistication, Enterprise Features and Raw Power." 
+				TextWrapping="Wrap" FontStretch="Expanded" FontWeight="Medium"/>
+			<TextBlock FontFamily="Verdana" HorizontalAlignment="Left" Margin="26,0,0,226" FontSize="11"
+				Width="473" Text="Examples showcasing the DataGrid's most advanced &amp; impressive features." 
+				TextWrapping="Wrap" FontStretch="Expanded" Height="22" VerticalAlignment="Bottom" FontWeight="Medium"/>
+
+      <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,280,125">
+        <TextBlock Height="16" Margin="0,0,0,3" FontFamily="Verdana" FontSize="12" FontWeight="SemiBold" Text="Performance" TextWrapping="Wrap" Width="238"/>
+        <HyperlinkButton Height="16" Width="228" FontFamily="Verdana" FontSize="10.667" Foreground="#FF0076A3" 
+                               Content="Large Client-side Data Set" Style="{StaticResource BulletedHyperlinkButton}" Padding="10,0,2,0" Tag="demo DataGridLargeClientDataset" Click="DemoButton_Click"/>
+        <HyperlinkButton Height="16" Width="228" FontFamily="Verdana" FontSize="10.667" Foreground="#FF0076A3" 
+                               Content="Client-side Paging, Sorting, Grouping" Style="{StaticResource BulletedHyperlinkButton}" Padding="10,0,2,0" Tag="demo DataGridClientOperation" Click="DemoButton_Click"/>
+        <HyperlinkButton Height="16" Width="228" FontFamily="Verdana" FontSize="10.667" Foreground="#FF0076A3" 
+                               Content="Client-side Filtering and Searching" Style="{StaticResource BulletedHyperlinkButton}" Padding="10,0,2,0" Tag="demo DataGridClientFiltering" Click="DemoButton_Click"/>
+        <HyperlinkButton Height="16" Width="228" FontFamily="Verdana" FontSize="10.667" Foreground="#FF0076A3" 
+                               Content="Client-side Deferred Scrolling" Style="{StaticResource BulletedHyperlinkButton}" Padding="10,0,2,0" Tag="demo DataGridScrolling" Click="DemoButton_Click"/>
+      </StackPanel>
+      
+      <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,280,30">
+        <TextBlock Height="16" Margin="0,0,0,3" FontFamily="Verdana" FontSize="12" FontWeight="SemiBold" Text="Codeless Operation" TextWrapping="Wrap" Width="238"/>
+        <HyperlinkButton Height="16" Width="228" FontFamily="Verdana" FontSize="10.667" Foreground="#FF0076A3" 
+                               Content="Automatic RIA Services Operation" Style="{StaticResource BulletedHyperlinkButton}" Padding="10,0,2,0" Tag="demo DataGridRiaCodeless" Click="DemoButton_Click"/>			
+        <HyperlinkButton Height="16" Width="228" FontFamily="Verdana" FontSize="10.667" Foreground="#FF0076A3" 
+                               Content="Automatic SOA.UI Operation" Style="{StaticResource BulletedHyperlinkButton}" Padding="10,0,2,0" Tag="demo DataGridSoaAutoPilot" Click="DemoButton_Click"/>
+			  <HyperlinkButton Height="16" Width="228" FontFamily="Verdana" FontSize="10.667" Foreground="#FF0076A3" 
+                               Content="Automatic SOA.UI Editing" Style="{StaticResource BulletedHyperlinkButton}" Padding="10,0,2,0" Tag="demo DataGridSoaEditing" Click="DemoButton_Click"/>
+        <HyperlinkButton Height="16" Width="228" FontFamily="Verdana" FontSize="10.667" Foreground="#FF0076A3" 
+                               Content="Automatic SOA.UI Scrolling" Style="{StaticResource BulletedHyperlinkButton}" Padding="10,0,2,0" Tag="demo DataGridSoaScrolling" Click="DemoButton_Click"/>
+      </StackPanel>
+      
+      <Path Fill="#FFCCCCCC" Stretch="Fill" Stroke="#FFCCCCCC" HorizontalAlignment="Right" Margin="0,0,266,0" Width="1" UseLayoutRounding="False" Data="M809,0 L809,652"/>
+			<Path Fill="White" Stretch="Fill" Stroke="White" HorizontalAlignment="Right" Margin="0,0,265,0" Width="1" UseLayoutRounding="False" Data="M809,0 L809,652"/>
+			<Image Height="14" HorizontalAlignment="Left" Margin="24,0,0,250" VerticalAlignment="Bottom" Width="187" Source="Assets/Pages/DataGridIndex/heading_highlighted_demos.png" Stretch="Fill"/>
+
+            <local:SmallIndexDemoButton Tag="control DataGridCoreFeatures" Click="DemoButton_Click" Width="164" Height="201"  
+                                        Margin="20,0,0,22" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}" HeaderText="Core Features"
+                                        ButtonImage="Assets/Pages/DataGridIndex/sl_dg_idx_core.png" d:LayoutOverrides="VerticalAlignment">
+                <TextBlock LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="46" VerticalAlignment="Bottom"
+				HorizontalAlignment="Left" Width="148" 
+				FontStretch="Expanded"><Run Text="Paging, scrolling, sorting, grouping, filtering and searching."/></TextBlock>
+            </local:SmallIndexDemoButton>
+
+            <local:SmallIndexDemoButton Tag="control DataGridHierarchyHighlight" Click="DemoButton_Click" Width="164" Height="201"  
+                                        Margin="190,0,0,22" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}" HeaderText="Hierarchy"
+                                        ButtonImage="Assets/Pages/DataGridIndex/sl_dg_idx_hier.png" d:LayoutOverrides="VerticalAlignment">
+                <TextBlock LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="46" VerticalAlignment="Bottom"
+				HorizontalAlignment="Left" Width="148"
+				FontStretch="Expanded"><Run Text="An example demonstrat-"/><LineBreak/><Run Text="ing hierarchical display of data."/></TextBlock>
+            </local:SmallIndexDemoButton>
+
+            <local:SmallIndexDemoButton Tag="control DataGridEditing" Click="DemoButton_Click" Width="164" Height="201" 
+                                        Margin="360,0,0,22" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                                        Style="{StaticResource Style_SmallIndexDemoButton}" HeaderText="Data Editing"
+                                        ButtonImage="Assets/Pages/DataGridIndex/sl_dg_idx_edit.png" d:LayoutOverrides="VerticalAlignment">
+                <TextBlock LineHeight="10" FontFamily="Verdana" TextWrapping="Wrap" Height="46" VerticalAlignment="Bottom"
+				HorizontalAlignment="Left" Width="148" 
+				FontStretch="Expanded"><Run Text="Demonstrating the"/><LineBreak/><Run Text="advanced data editing capabilities of the control."/></TextBlock>
+            </local:SmallIndexDemoButton>
+
+            <local:DemoList HorizontalAlignment="Right" Width="242" Margin="13,0,8,0" Header="../Assets/Pages/DataGridIndex/list_header.png">
+                <local:DemoList.Controls>
+                    <sys:String>DataGrid</sys:String>
+                </local:DemoList.Controls>
+            </local:DemoList>
+        </Grid>
+
+	</Grid>
+</UserControl>

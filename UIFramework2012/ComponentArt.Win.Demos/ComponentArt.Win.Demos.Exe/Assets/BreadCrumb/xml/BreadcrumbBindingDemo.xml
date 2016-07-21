@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sitemap>
+  <item label="Desktop" image="Desktop.png">
+    <item label="Computer" image="MyComputerNew.png" DropDownHeight="250" >
+      <item label="Floppy Disk Drive (A:)" image="FloppyDrive.png"/>
+      <item label="Local Disk (C:)" image="HardDrive.png">
+        <item label="PerfLogs" />
+        <item label="Program Files" >
+          <item label="Common Files" />
+          <item label="DVD Maker" />
+          <item label="Internet Explorer" />
+          <item label="Microsoft Silverlight" />
+          <item label="MSBuild" />
+          <item label="Readonweb" />
+          <item label="Reference Assemblies" />
+          <item label="Sun" />
+          <item label="Windows Defender" />
+          <item label="Windows Journal" />
+          <item label="Windows Mail" />
+          <item label="Windows Media Player" />
+          <item label="Windows NT" />
+          <item label="Windows Photo Viewer" />
+          <item label="Windows Portable Devices" />
+          <item label="Windows Sidebar" />
+        </item>
+        <item label="Users" >
+          <item label="Public" />
+          <item label="user" />
+        </item>
+        <item label="Windows" >
+          <item label="addins" />
+          <item label="AppCompat" >
+            <item label="Programs" />
+          </item>
+          <item label="AppPatch" >
+            <item label="Custom" />
+            <item label="en-US" />
+          </item>
+          <item label="assembly" >
+            <item label="Download" />
+          </item>
+          <item label="Boot" >
+            <item label="DVD" >
+              <item label="PCAT" >
+                <item label="en-US" />
+              </item>
+              <item label="Fonts" />
+              <item label="PCAT" >
+                <item label="cs-CZ" />
+                <item label="da-DK" />
+                <item label="de-DE" />
+                <item label="el-GR" />
+                <item label="en-US" />
+                <item label="es-ES" />
+                <item label="fi-FI" />
+                <item label="fr-FR" />
+                <item label="hu-HU" />
+                <item label="it-IT" />
+                <item label="ja-JP" />
+                <item label="ko-KR" />
+                <item label="nb-NO" />
+                <item label="nl-NL" />
+                <item label="pl-PL" />
+                <item label="pt-BR" />
+                <item label="pt-PT" />
+                <item label="ru-RU" />
+                <item label="sv-SE" />
+                <item label="tr-TR" />
+                <item label="zh-CN" />
+                <item label="zh-HK" />
+                <item label="zh-TW" />
+              </item>
+            </item>
+          </item>
+          <item label="Branding" />
+          <item label="CSC" />
+          <item label="Cursors" />
+          <item label="debug" />
+          <item label="diagnostics" />
+          <item label="DigitalLocker" />
+          <item label="Downloaded Program Files" />
+          <item label="ehome" />
+          <item label="en-US" />
+          <item label="Fonts" />
+          <item label="Globalization" />
+          <item label="Help" />
+          <item label="IME" />
+          <item label="inf" />
+          <item label="L2Schemas" />
+          <item label="LiveKernelReports" />
+          <item label="Logs" />
+          <item label="Media" />
+          <item label="Microsoft.NET" />
+          <item label="ModernLogs" />
+          <item label="Offline Web Pages" />
+          <item label="Panther" />
+          <item label="Performance" />
+          <item label="PLA" />
+          <item label="PolicyDefinitions" />
+          <item label="Prefetch" />
+          <item label="Registration" />
+          <item label="RemotePackages" />
+          <item label="Resources" />
+          <item label="SchCache" />
+          <item label="schemas" />
+          <item label="security" />
+          <item label="ServiceProfiles" />
+          <item label="servicing" />
+          <item label="Setup" />
+          <item label="ShellNew" />
+          <item label="SoftwareDistribution" />
+          <item label="Speech" />
+          <item label="system" />
+          <item label="System32" />
+          <item label="TAPI" />
+          <item label="Tasks" />
+          <item label="Temp" />
+          <item label="tracing" />
+          <item label="twain_32" />
+          <item label="Vss" />
+          <item label="Web" />
+          <item label="winsxs" />
+          <item label="Help" />
+          <item label="IME" />
+          <item label="inf" />
+          <item label="L2Schemas" />
+          <item label="LiveKernelReports" />
+          <item label="Logs" />
+          <item label="Media" />
+          <item label="Microsoft.NET" />
+          <item label="ModernLogs" />
+          <item label="Offline Web Pages" />
+          <item label="Panther" />
+          <item label="Performance" />
+          <item label="PLA" />
+          <item label="PolicyDefinitions" />
+          <item label="Prefetch" />
+          <item label="Registration" />
+          <item label="RemotePackages" />
+          <item label="Resources" />
+          <item label="SchCache" />
+          <item label="schemas" />
+          <item label="security" />
+          <item label="ServiceProfiles" />
+          <item label="servicing" />
+          <item label="Setup" />
+          <item label="ShellNew" />
+          <item label="SoftwareDistribution" />
+          <item label="Speech" />
+          <item label="system" />
+          <item label="System32" />
+          <item label="TAPI" />
+          <item label="Tasks" />
+          <item label="Temp" />
+          <item label="tracing" />
+          <item label="twain_32" />
+          <item label="Vss" />
+          <item label="Web" />
+          <item label="winsxs" />
+        </item>
+      </item>
+      <item label="CD Drive (D:)" image="OpticalDrive.png" />
+    </item>
+    <item label="Recycle Bin" image="RecycleBin.png" />
+    <item label="Control Panel" image="ControlPanel.png" >
+      <item label="All Control Panel Items" />
+      <item label="Appearance and Personalization" />
+      <item label="Clock, Language, and Region" />
+      <item label="Ease of Access" />
+      <item label="Hardware and Sound" />
+      <item label="Network and Internet" />
+      <item label="Programs" />
+      <item label="System and Security" />
+      <item label="User Accounts and Family Safety" />
+    </item>
+    <item label="User" >
+      <item label="Contacts" />
+      <item label="Desktop" image="Desktop.png" />
+      <item label="Downloads" />
+      <item label="Favorites" image="FavouritesStar.png" />
+      <item label="Links" />
+      <item label="My Documents" image="DocumentFolder.png" />
+      <item label="My Music" image="MusicFolder.png"/>
+      <item label="My Pictures" image="ImagesFolder.png" />
+      <item label="My Videos" image="VideoFolder.png" />
+      <item label="Saved Games" />
+      <item label="Searches" image="SearchFolder.png" />
+    </item>
+    <item label="Libraries" >
+      <item label="Documents" image="DocumentFolder.png" >
+        <item label="My Documents" image="DocumentFolder.png" />
+        <item label="Public Documents" image="SharedFolder.png" />
+      </item>
+      <item label="Music" image="MusicFolder.png"  >
+        <item label="My Music" image="MusicFolder.png" />
+        <item label="Public Music" image="SharedFolder.png" />
+      </item>
+      <item label="Pictures" image="ImagesFolder.png" >
+        <item label="My Pictures" image="ImagesFolder.png" />
+        <item label="Public Pictures" image="SharedFolder.png" />
+      </item>
+      <item label="Videos" image="VideoFolder.png" >
+        <item label="My Videos" image="VideoFolder.png" />
+        <item label="Public Videos" image="SharedFolder.png" />
+      </item>
+    </item>
+    <item label="Home Group" />
+    <item label="Network" image="NetworkFolder.png" />
+  </item>
+</sitemap>

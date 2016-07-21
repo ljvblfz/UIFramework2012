@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows">
+    <!-- Begin Black Ice -->
+    <LinearGradientBrush x:Key="ComponentArt_Menu_TopGroupBackground" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#ffffff" Offset="0" />
+        <GradientStop Color="#e9e9e9" Offset=".4999" />
+        <GradientStop Color="#cdcdcd" Offset=".5" />
+        <GradientStop Color="#ffffff" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopGroupBorder" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemForeground" Color="#FFFFFFFF" />
+    <LinearGradientBrush x:Key="ComponentArt_Menu_TopItemBackground" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#ffffff" Offset="0"/>
+        <GradientStop Color="#e9e9e9" Offset="0.5"/>
+        <GradientStop Color="#cdcdcd" Offset="0.503"/>
+        <GradientStop Color="#ffffff" Offset="0.975"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBorder" Color="#00000000"/>
+
+    <LinearGradientBrush x:Key="ComponentArt_Menu_TopItemBackgroundOver" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#00dbf8" Offset="0"/>
+        <GradientStop Color="#2ebef8" Offset="0.005"/>
+        <GradientStop Color="#0f83c1" Offset="0.52"/>
+        <GradientStop Color="#125386" Offset="0.521"/>
+        <GradientStop Color="#1f97cb" Offset="0.995"/>
+        <GradientStop Color="#1f97cb" Offset="0.99"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBorderOver" Color="#FF000000"/>
+
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorTopItemBorder" Color="#7F808080"/>
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorTopItemLineTopColor" Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorTopItemLineBottomColor" Color="#FFFFFFFF" />
+
+    <LinearGradientBrush x:Key="ComponentArt_Menu_TopItemBackgroundSelected" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#00dbf8" Offset="0"/>
+        <GradientStop Color="#2ebef8" Offset="0.005"/>
+        <GradientStop Color="#0f83c1" Offset="0.52"/>
+        <GradientStop Color="#125386" Offset="0.521"/>
+        <GradientStop Color="#1f97cb" Offset="0.995"/>
+        <GradientStop Color="#1f97cb" Offset="0.99"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_Menu_TopItemBorderSelected" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#1979ac" Offset="0"/>
+        <GradientStop Color="#125386" Offset="0.99"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorSubItemBorder" Color="#7F808080"/>
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorSubItemLineTopColor" Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorSubItemLineBottomColor" Color="#FFFFFFFF" />
+
+    <SolidColorBrush x:Key="ComponentArt_Menu_SubGroupBorder" Color="#808080" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SubGroupBackground" Color="White"/>
+
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForegroundDisabled" Color="DarkRed"/>
+
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForeground" Color="#00a5e3"/>
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForegroundOver" Color="#00a5e3"/>
+    <LinearGradientBrush x:Key="ComponentArt_Menu_ItemBackgroundNormal" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#00E3E3E3" Offset="0.51"/>
+        <GradientStop Color="#00FEFEFE" Offset="0"/>
+        <GradientStop Color="#00F1F1F1" Offset="0.49"/>
+        <GradientStop Color="#00F6F6F6" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorderNormal" Color="#00262626"/>
+
+    <LinearGradientBrush x:Key="ComponentArt_Menu_ItemBackgroundOver" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#e8e8e8" Offset="0.51"/>
+        <GradientStop Color="#e8e8e8" Offset="0"/>
+        <GradientStop Color="#e8e8e8" Offset="0.49"/>
+        <GradientStop Color="#e8e8e8" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorderOver" Color="Transparent"/>
+
+    <!-- Menu ControlTemplate -->
+    <sys:String x:Key="ComponentArt_Menu_MenuBorderMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_MenuBorderThickness">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_MenuBorderPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_MenuBorderCornerRadius">2</sys:String>
+    <!-- /Menu ControlTemplate -->
+
+    <!-- MenuItem LevelTop VisualState-->
+    <sys:String x:Key="ComponentArt_Menu_TopLevelItemBorderThickness">1,1,1,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelItemCornerRadius">2</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelItemPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelItemMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_TopLevelFontSize">13</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopLevelFontWeight">Normal</sys:String>
+    <!-- /MenuItem LevelTop VisualState-->
+
+    <!-- MenuItem ItemGrid -->
+    <sys:String x:Key="ComponentArt_Menu_ItemGridMargin">0</sys:String>
+    <!-- /MenuItem ItemGrid -->
+
+    <!-- MenuItem RectLeft -->
+    <sys:String x:Key="ComponentArt_Menu_RectLeftPadding">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftMargin">2,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftBorderThickness">.5,.5,0,.5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftCornerRadius">2,0,0,2</sys:String>
+    <!-- /MenuItem RectLeft -->
+
+    <!-- MenuItem RectMiddle -->
+    <sys:Double x:Key="ComponentArt_Menu_MenuItemMinWidth">30</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddlePadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleBorderThickness">0,.5,0,.5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleStackMargin">1,4,5,4</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleTextBlockPadding">3,0,3,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleTextBlockMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_SubLevelFontSize">11</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_SubLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_SubLevelFontWeight">Normal</sys:String>
+    <!-- /MenuItem RectMiddle -->
+
+    <!-- MenuItem RectRight -->
+    <sys:String x:Key="ComponentArt_Menu_RectRightPadding">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightMargin">-1,0,2,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightBorderThickness">0,.5,.5,.5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightCornerRadius">0,2,2,0</sys:String>
+
+    <sys:Double x:Key="ComponentArt_Menu_SeparatorTopLineWidth">1</sys:Double>
+    <sys:Double x:Key="ComponentArt_Menu_SeparatorTopLineHeight">18</sys:Double>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorTopLineColumnSpan">1</sys:Int32>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorTopLineColumn">1</sys:Int32>
+    <sys:String x:Key="ComponentArt_Menu_SeparatorTopLineMargin">0,1,0,0</sys:String>
+
+    <sys:Double x:Key="ComponentArt_Menu_SeparatorSubLineHeight">1</sys:Double>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorSubLineColumnSpan">3</sys:Int32>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorSubLineColumn">0</sys:Int32>
+    <sys:String x:Key="ComponentArt_Menu_SeparatorSubLineMargin">0,1,0,0</sys:String>
+    <!-- /MenuItem RectRight -->
+
+    <!-- MenuItem Popup -->
+    <sys:String x:Key="ComponentArt_Menu_PopupBorderPadding">0,2,0,2</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_PopupBorderThickness">1</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_PopupMinWidth">60</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_PopupCornerRadius">2</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_PopupMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopGroupPopupMargin">1,0,0,0</sys:String>
+    <!-- /MenuItem Popup -->
+
+    <ControlTemplate x:Key="ComponentArt_Menu_SeparatorTop">
+        <StackPanel Orientation="Horizontal" >
+            <Path x:Name="TopLine" Height="{StaticResource ComponentArt_Menu_SeparatorTopLineHeight}" Width="{StaticResource ComponentArt_Menu_SeparatorTopLineWidth}"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorTopItemLineTopColor}" 
+                  Data="M0,0 L0,20" VerticalAlignment="Top"/>
+            <Path x:Name="BottomLine" Height="{StaticResource ComponentArt_Menu_SeparatorTopLineHeight}" Width="{StaticResource ComponentArt_Menu_SeparatorTopLineWidth}"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorTopItemLineBottomColor}" 
+                  Data="M0,0 L0,20"/>
+        </StackPanel>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ComponentArt_Menu_SeparatorTopVertical">
+        <StackPanel Orientation="Horizontal" >
+            <Path x:Name="TopLine" Height="{StaticResource ComponentArt_Menu_SeparatorTopLineHeight}" Width="{StaticResource ComponentArt_Menu_SeparatorTopLineWidth}"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorTopItemLineTopColor}" 
+                  Data="M0,0 L0,10" VerticalAlignment="Top"/>
+            <Path x:Name="BottomLine" Height="{StaticResource ComponentArt_Menu_SeparatorTopLineHeight}" Width="{StaticResource ComponentArt_Menu_SeparatorTopLineWidth}"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorTopItemLineBottomColor}" 
+                  Data="M0,0 L0,10"/>
+        </StackPanel>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ComponentArt_Menu_SeparatorSub">
+        <StackPanel Orientation="Vertical">
+            <Path x:Name="TopLine" Height="{StaticResource ComponentArt_Menu_SeparatorSubLineHeight}" Width="Auto"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorSubItemLineTopColor}" 
+                  Data="M0,0 L10,0" VerticalAlignment="Top"/>
+            <Path x:Name="BottomLine" Height="{StaticResource ComponentArt_Menu_SeparatorSubLineHeight}" Width="Auto"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorSubItemLineBottomColor}" 
+                  Data="M0,0 L10,0"/>
+        </StackPanel>
+    </ControlTemplate>
+    <!-- End Black Ice -->
+
+    <!-- Begin MenuItem -->
+    <Style TargetType="ComponentArt:MenuItem" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation" xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows">
+        <Setter Property="IsCollapsed" Value="false" />
+        <Setter Property="IsEnabled" Value="true" />
+        <Setter Property="IsTabStop" Value="true" />
+        <Setter Property="Background" Value="white" />
+        <Setter Property="Foreground" Value="black" />
+        <Setter Property="Margin" Value="0,0,0,0" />
+        <Setter Property="Padding" Value="0,1,0,1" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Arrow" />
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="FontWeight" Value="Light" />
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="IsCheckable" Value="false" />
+        <Setter Property="IsChecked" Value="false" />
+        <Setter Property="IsSelected" Value="false" />
+        <Setter Property="HasSubMenu" Value="false" />
+        <Setter Property="IsSeparator" Value="false" />
+        <Setter Property="Enabled" Value="true" />
+        <Setter Property="ItemTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <ComponentArt:MenuItem />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel x:Name="ItemsPanel" />
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComponentArt:MenuItem">
+                    <Grid x:Name="LayoutRoot" Margin="0,0,0,0">
+                        <!-- Visual State Groups -->
+                        <syswin:VisualStateManager.VisualStateGroups>
+                            <!-- Level State Group -->
+                            <syswin:VisualStateGroup x:Name="ItemLevelStates">
+                                <syswin:VisualStateGroup.Transitions>
+                                    <syswin:VisualTransition GeneratedDuration="0:0:0.2" />
+                                </syswin:VisualStateGroup.Transitions>
+                                <syswin:VisualState x:Name="LevelSub" />
+                                <syswin:VisualState x:Name="LevelTop">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopItemBackground}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectLeft" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectRight" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Border.CornerRadius" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ComponentArt_Menu_TopLevelItemCornerRadius}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopItemForeground}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="FontFamily">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopLevelFontFamily}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="FontSize">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopLevelFontSize}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="FontWeight">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopLevelFontWeight}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="HorizontalAlignment">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Center" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Padding" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ComponentArt_Menu_TopLevelItemPadding}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Margin" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ComponentArt_Menu_TopLevelItemMargin}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemsBorder" Storyboard.TargetProperty="Margin" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ComponentArt_Menu_TopGroupPopupMargin}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemGrid" Storyboard.TargetProperty="(Grid.ColumnDefinitions)[0].Width" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemGrid" Storyboard.TargetProperty="(Grid.ColumnDefinitions)[2].Width" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Border.BorderThickness" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ComponentArt_Menu_TopLevelItemBorderThickness}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="LevelTopVertical">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemGrid" Storyboard.TargetProperty="(Grid.ColumnDefinitions)[0].Width" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Border.BorderThickness" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value=".5" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopItemForeground}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="FontSize">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="13" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="HorizontalAlignment">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Center" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="LevelTopVerticalSeparator">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectLeft" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectRight" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SeparatorGridTop" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SeparatorGridTopVertical" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SeparatorGridSub" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="LevelTopSeparator">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectLeft" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectRight" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SeparatorGridTop" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SeparatorGridTopVertical" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SeparatorGridSub" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemGrid" Storyboard.TargetProperty="(Grid.ColumnDefinitions)[0].Width" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemGrid" Storyboard.TargetProperty="(Grid.ColumnDefinitions)[2].Width" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Border.BorderThickness" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ComponentArt_Menu_TopLevelItemBorderThickness}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="LevelSeparator">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectLeft" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectRight" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SeparatorGridTop" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SeparatorGridTopVertical" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SeparatorGridSub" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="LevelCollapsed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemGrid" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="LevelCustom">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemGrid" Storyboard.TargetProperty="(Grid.ColumnDefinitions)[0].Width" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ItemGrid" Storyboard.TargetProperty="(Grid.ColumnDefinitions)[2].Width" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Height">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Border.BorderThickness" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value=".5" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="LevelDisabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_ItemForegroundDisabled}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Opacity">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value=".65" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectLeft" Storyboard.TargetProperty="Opacity">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value=".35" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                            </syswin:VisualStateGroup>
+                            <!-- Control State Group -->
+                            <syswin:VisualStateGroup x:Name="ItemControlStates">
+                                <syswin:VisualStateGroup.Transitions>
+                                    <syswin:VisualTransition GeneratedDuration="0:0:0.2" />
+                                </syswin:VisualStateGroup.Transitions>
+                                <syswin:VisualState x:Name="ControlClosed">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ItemsPopup" Storyboard.TargetProperty="VerticalOffset" Duration="00:00:00.001">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00.001" Value="1" KeySpline=".1,.1,.9,.9" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="ClipFigure" Storyboard.TargetProperty="StartPoint" Duration="00:00:00.001">
+                                            <SplinePointKeyFrame KeyTime="00:00:00.001" Value="0,0" KeySpline=".1,.1,.9,.9" />
+                                        </PointAnimationUsingKeyFrames>
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="seg2" Storyboard.TargetProperty="Point" Duration="00:00:00.001">
+                                            <SplinePointKeyFrame KeyTime="00:00:00.001" Value="0,0" KeySpline=".1,.1,.9,.9" />
+                                        </PointAnimationUsingKeyFrames>
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="seg3" Storyboard.TargetProperty="Point" Duration="00:00:00.001">
+                                            <SplinePointKeyFrame KeyTime="00:00:00.001" Value="0,0" KeySpline=".1,.1,.9,.9" />
+                                        </PointAnimationUsingKeyFrames>
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="seg4" Storyboard.TargetProperty="Point" Duration="00:00:00.001">
+                                            <SplinePointKeyFrame KeyTime="00:00:00.001" Value="0,0" KeySpline=".1,.1,.9,.9" />
+                                        </PointAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="ItemsBorder" Storyboard.TargetProperty="Opacity" Duration="00:00:00.001" From="1" To="1" />
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="ControlOpened">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ItemsPopup" Storyboard.TargetProperty="VerticalOffset" Duration="00:00:00.001">
+                                            <SplineDoubleKeyFrame KeyTime="00:00:00.001" Value="1" KeySpline=".1,.1,.9,.9" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="ClipFigure" Storyboard.TargetProperty="StartPoint" Duration="00:00:00.001">
+                                            <SplinePointKeyFrame KeyTime="00:00:00.001" Value="0,0" KeySpline=".1,.1,.9,.9" />
+                                        </PointAnimationUsingKeyFrames>
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="seg2" Storyboard.TargetProperty="Point" Duration="00:00:00.001">
+                                            <SplinePointKeyFrame KeyTime="00:00:00.001" Value="0,0" KeySpline=".1,.1,.9,.9" />
+                                        </PointAnimationUsingKeyFrames>
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="seg3" Storyboard.TargetProperty="Point" Duration="00:00:00.001">
+                                            <SplinePointKeyFrame KeyTime="00:00:00.001" Value="0,0" KeySpline=".1,.1,.9,.9" />
+                                        </PointAnimationUsingKeyFrames>
+                                        <PointAnimationUsingKeyFrames Storyboard.TargetName="seg4" Storyboard.TargetProperty="Point" Duration="00:00:00.001">
+                                            <SplinePointKeyFrame KeyTime="00:00:00.001" Value="0,0" KeySpline=".1,.1,.9,.9" />
+                                        </PointAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="ItemsBorder" Storyboard.TargetProperty="Opacity" Duration="00:00:00.001" From="1" To="1" />
+                                    </Storyboard>
+                                </syswin:VisualState>
+                            </syswin:VisualStateGroup>
+                            <!-- Focus State Group -->
+                            <syswin:VisualStateGroup x:Name="ItemFocusStates">
+                                <syswin:VisualState x:Name="FocusNormal" />
+                                <syswin:VisualState x:Name="FocusFocused">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="RectLeft" Storyboard.TargetProperty="Opacity" Duration="00:00:00.4" From=".5" To="1" />
+                                        <DoubleAnimation Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Opacity" Duration="00:00:00.4" From=".5" To="1" />
+                                        <DoubleAnimation Storyboard.TargetName="RectRight" Storyboard.TargetProperty="Opacity" Duration="00:00:00.4" From=".5" To="1" />
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectLeft" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_ItemBackgroundOver}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_ItemBackgroundOver}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectRight" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_ItemBackgroundOver}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectLeft" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_ItemBorderOver}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_ItemBorderOver}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectRight" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_ItemBorderOver}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Text" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_ItemForegroundOver}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="FocusNormalTopLevel">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopItemBackground}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopItemBorder}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="FocusFocusedTopLevel">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopItemBackgroundOver}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopItemBorderOver}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="FocusedSelectedTopLevel">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopItemBackgroundSelected}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RectMiddle" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource ComponentArt_Menu_TopItemBorderSelected}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                            </syswin:VisualStateGroup>
+                            <!-- Right Rect State Group -->
+                            <syswin:VisualStateGroup x:Name="ItemRightRectStates">
+                                <syswin:VisualState x:Name="RightNormal" />
+                                <syswin:VisualState x:Name="RightExpanded">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SubmenuIndicator" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                            </syswin:VisualStateGroup>
+                            <!-- Left Rect State Group -->
+                            <syswin:VisualStateGroup x:Name="ItemLeftRectStates">
+                                <syswin:VisualState x:Name="LeftNormal" />
+                                <syswin:VisualState x:Name="LeftCheckBox">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckBox" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Radio" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                                <syswin:VisualState x:Name="LeftRadio">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckBox" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Radio" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                            </syswin:VisualStateGroup>
+                            <!-- Icon State Group -->
+                            <syswin:VisualStateGroup x:Name="IconSourceStates">
+                                <syswin:VisualState x:Name="IconNone" />
+                                <syswin:VisualState x:Name="IconEnabled">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Visibility" Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </syswin:VisualState>
+                            </syswin:VisualStateGroup>
+                        </syswin:VisualStateManager.VisualStateGroups>
+                        <!-- Item Grid -->
+                        <Grid x:Name="ItemGrid" Margin="{Binding Source={StaticResource ComponentArt_Menu_ItemGridMargin}, Converter={StaticResource StringToThickness}}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition x:Name="LeftColumn" Width="32" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition x:Name="RightColumn" Width="15" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Border x:Name="RectLeft" Padding="{Binding Source={StaticResource ComponentArt_Menu_RectLeftPadding}, Converter={StaticResource StringToThickness}}" Margin="{Binding Source={StaticResource ComponentArt_Menu_RectLeftMargin}, Converter={StaticResource StringToThickness}}" Grid.Column="0" BorderThickness="{Binding Source={StaticResource ComponentArt_Menu_RectLeftBorderThickness}, Converter={StaticResource StringToThickness}}" CornerRadius="{Binding Source={StaticResource ComponentArt_Menu_RectLeftCornerRadius}, Converter={StaticResource StringToCornerRadius}}" BorderBrush="{StaticResource ComponentArt_Menu_ItemBorderNormal}" Background="{StaticResource ComponentArt_Menu_ItemBackgroundNormal}">
+                                <Grid>
+                                    <CheckBox x:Name="CheckBox" Margin="-7,0,0,0" Style="{StaticResource ComponentArt_Menu_CheckBox}" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Height="16" Width="16" />
+                                    <RadioButton x:Name="Radio" Margin="-7,0,0,0" Style="{StaticResource ComponentArt_Menu_RadioButton}" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Height="16" Width="16" />
+                                    <Image x:Name="Icon" Source="{TemplateBinding EffectiveIconSource}" Margin="-4,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="16" Height="16" Visibility="Collapsed" />
+                                </Grid>
+                            </Border>
+                            <Border x:Name="RectMiddle" Padding="{Binding Source={StaticResource ComponentArt_Menu_RectMiddlePadding}, Converter={StaticResource StringToThickness}}" Margin="{Binding Source={StaticResource ComponentArt_Menu_RectMiddleMargin}, Converter={StaticResource StringToThickness}}" MinWidth="{StaticResource ComponentArt_Menu_MenuItemMinWidth}" Grid.Column="1" BorderThickness="{Binding Source={StaticResource ComponentArt_Menu_RectMiddleBorderThickness}, Converter={StaticResource StringToThickness}}" CornerRadius="{Binding Source={StaticResource ComponentArt_Menu_RectMiddleCornerRadius}, Converter={StaticResource StringToCornerRadius}}" BorderBrush="{StaticResource ComponentArt_Menu_ItemBorderNormal}" Background="{StaticResource ComponentArt_Menu_ItemBackgroundNormal}">
+                                <StackPanel x:Name="RectMiddleStack" VerticalAlignment="Center" Margin="{Binding Source={StaticResource ComponentArt_Menu_RectMiddleStackMargin}, Converter={StaticResource StringToThickness}}">
+                                    <TextBlock x:Name="Text" Margin="{Binding Source={StaticResource ComponentArt_Menu_RectMiddleTextBlockMargin}, Converter={StaticResource StringToThickness}}" Padding="{Binding Source={StaticResource ComponentArt_Menu_RectMiddleTextBlockPadding}, Converter={StaticResource StringToThickness}}" Foreground="{StaticResource ComponentArt_Menu_ItemForeground}" Text="{TemplateBinding Text}" FontSize="{StaticResource ComponentArt_Menu_SubLevelFontSize}" FontFamily="{StaticResource ComponentArt_Menu_SubLevelFontFamily}" FontWeight="{StaticResource ComponentArt_Menu_SubLevelFontWeight}" TextWrapping="NoWrap" HorizontalAlignment="Left" VerticalAlignment="Stretch" />
+                                </StackPanel>
+                            </Border>
+                            <Border x:Name="RectRight" Padding="{Binding Source={StaticResource ComponentArt_Menu_RectRightPadding}, Converter={StaticResource StringToThickness}}" Margin="{Binding Source={StaticResource ComponentArt_Menu_RectRightMargin}, Converter={StaticResource StringToThickness}}" Grid.Column="2" BorderThickness="{Binding Source={StaticResource ComponentArt_Menu_RectRightBorderThickness}, Converter={StaticResource StringToThickness}}" CornerRadius="{Binding Source={StaticResource ComponentArt_Menu_RectRightCornerRadius}, Converter={StaticResource StringToCornerRadius}}" BorderBrush="{StaticResource ComponentArt_Menu_ItemBorderNormal}" Background="{StaticResource ComponentArt_Menu_ItemBackgroundNormal}">
+                                <Path Width="4" Height="7" Fill="#000000" Margin="0,0,1,0" Stretch="Fill" Stroke="#00000000" Data="M0,0 L0,8 4,4 z" x:Name="SubmenuIndicator" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+                                <!--<Image Margin="0,0,1,0" x:Name="SubmenuIndicator" Source="/ComponentArt.Silverlight.UI.Navigation;component/Assets/RightArrow.png" HorizontalAlignment="Right" VerticalAlignment="Center" Height="9" Width="6" Visibility="Collapsed"/>-->
+                            </Border>
+                            <Grid Width="2" VerticalAlignment="Center" Height="Auto" x:Name="SeparatorGridTop" Visibility="Collapsed" Margin="{Binding Source={StaticResource ComponentArt_Menu_SeparatorTopLineMargin}, Converter={StaticResource StringToThickness}}" Grid.Row="0" Grid.Column="{StaticResource ComponentArt_Menu_SeparatorTopLineColumn}" Grid.ColumnSpan="{StaticResource ComponentArt_Menu_SeparatorTopLineColumnSpan}">
+                                <ContentControl Template="{StaticResource ComponentArt_Menu_SeparatorTop}" />
+                            </Grid>
+                            <Grid Height="2" VerticalAlignment="Center" Width="Auto" x:Name="SeparatorGridTopVertical" Visibility="Collapsed" Margin="{Binding Source={StaticResource ComponentArt_Menu_SeparatorTopVerticalLineMargin}, Converter={StaticResource StringToThickness}}" Grid.Row="0" Grid.Column="{StaticResource ComponentArt_Menu_SeparatorTopVerticalLineColumn}" Grid.ColumnSpan="{StaticResource ComponentArt_Menu_SeparatorTopVerticalLineColumnSpan}">
+                                <ContentControl Template="{StaticResource ComponentArt_Menu_SeparatorTopVertical}" />
+                            </Grid>
+                            <Grid Height="2" VerticalAlignment="Center" Width="Auto" x:Name="SeparatorGridSub" Visibility="Collapsed" Margin="{Binding Source={StaticResource ComponentArt_Menu_SeparatorSubLineMargin}, Converter={StaticResource StringToThickness}}" Grid.Row="0" Grid.Column="{StaticResource ComponentArt_Menu_SeparatorSubLineColumn}" Grid.ColumnSpan="{StaticResource ComponentArt_Menu_SeparatorSubLineColumnSpan}">
+                                <ContentControl Template="{StaticResource ComponentArt_Menu_SeparatorSub}" />
+                            </Grid>
+                        </Grid>
+                        <!-- Item Popup -->
+                        <Popup x:Name="ItemsPopup" IsOpen="False">
+                            <Popup.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform />
+                                    <SkewTransform />
+                                    <RotateTransform />
+                                    <TranslateTransform />
+                                </TransformGroup>
+                            </Popup.RenderTransform>
+                            <Border x:Name="ItemsBorder" Padding="0" Margin="{Binding Source={StaticResource ComponentArt_Menu_PopupMargin}, Converter={StaticResource StringToThickness}}" BorderThickness="0">
+                                <Border.Clip>
+                                    <PathGeometry>
+                                        <PathFigure x:Name="ClipFigure" IsClosed="True" StartPoint="0,0">
+                                            <LineSegment x:Name="seg2" Point="0,0" />
+                                            <LineSegment x:Name="seg3" Point="0,0" />
+                                            <LineSegment x:Name="seg4" Point="0,0" />
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Border.Clip>
+                                <Canvas Background="#00FFFFFF">
+                                    <Border x:Name="PresenterBorder" Padding="{Binding Source={StaticResource ComponentArt_Menu_PopupBorderPadding}, Converter={StaticResource StringToThickness}}" CornerRadius="{Binding Source={StaticResource ComponentArt_Menu_PopupCornerRadius}, Converter={StaticResource StringToCornerRadius}}" Margin="0" BorderThickness="{Binding Source={StaticResource ComponentArt_Menu_PopupBorderThickness}, Converter={StaticResource StringToThickness}}" MinWidth="{StaticResource ComponentArt_Menu_PopupMinWidth}" Canvas.ZIndex="2" Background="{StaticResource ComponentArt_Menu_SubGroupBackground}" BorderBrush="{StaticResource ComponentArt_Menu_SubGroupBorder}">
+                                        <ComponentArtCommon:WrapPanel Orientation="Horizontal" Height="350">
+                                            <ItemsPresenter x:Name="ItemsRoot" Visibility="Visible" Margin="0" />
+                                        </ComponentArtCommon:WrapPanel>
+                                    </Border>
+                                    <Border x:Name="ShadowBorder" Padding="{Binding Source={StaticResource ComponentArt_Menu_PopupBorderPadding}, Converter={StaticResource StringToThickness}}" Margin="0" CornerRadius="{Binding Source={StaticResource ComponentArt_Menu_PopupCornerRadius}, Converter={StaticResource StringToCornerRadius}}" Canvas.Top="{TemplateBinding ShadowOffsetVertical}" Canvas.Left="{TemplateBinding ShadowOffsetHorizontal}" Background="{TemplateBinding ShadowBrush}" BorderBrush="{TemplateBinding ShadowBrush}" BorderThickness="{TemplateBinding ShadowThickness}">
+                                    </Border>
+                                </Canvas>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- End MenuItem -->
+</ResourceDictionary>

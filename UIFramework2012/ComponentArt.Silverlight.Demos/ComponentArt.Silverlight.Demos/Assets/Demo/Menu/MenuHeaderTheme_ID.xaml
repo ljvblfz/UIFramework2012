@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows">
+
+    <ImageBrush x:Key="ComponentArt_Menu_TopItemBackground" ImageSource="Integration-Demos.png" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBorder" Color="Transparent"/>
+
+    <ImageBrush x:Key="ComponentArt_Menu_TopItemBackgroundOver" ImageSource="Integration-Demos_over.png" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBorderOver" Color="Transparent"/>
+    
+    <ImageBrush x:Key="ComponentArt_Menu_TopItemBackgroundSelected" ImageSource="Integration-Demos_over.png" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemBorderSelected" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_Menu_TopItemForeground" Color="Transparent" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForegroundOver" Color="Transparent"/>
+    <!-- MenuItem RectMiddle -->
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleCornerRadius">0</sys:String>
+    <!-- /MenuItem RectMiddle -->
+    <!-- MenuItem Popup -->
+    <sys:String x:Key="ComponentArt_Menu_PopupBorderPadding">0,2,0,2</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_PopupBorderThickness">1</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_PopupMinWidth">60</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_PopupCornerRadius">2</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_PopupMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopGroupPopupMargin">1,0,0,0</sys:String>
+    <!-- /MenuItem Popup -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_SubGroupBorder" Color="#808080" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SubGroupBackground" Color="White"/>
+</ResourceDictionary>

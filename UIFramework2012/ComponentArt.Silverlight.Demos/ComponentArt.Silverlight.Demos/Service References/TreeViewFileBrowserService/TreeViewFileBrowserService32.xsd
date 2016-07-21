@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="ComponentArt.SOA.UI" elementFormDefault="qualified" targetNamespace="ComponentArt.SOA.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3069/TreeViewFileBrowserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" />
+  <xs:element name="DeleteNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="request" nillable="true" type="q1:SoaTreeViewDeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="DeleteNodeResult" nillable="true" type="q2:SoaTreeViewDeleteResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="request" nillable="true" type="q3:SoaTreeViewAddRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="AddNodeResult" nillable="true" type="q4:SoaTreeViewAddResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="request" nillable="true" type="q5:SoaTreeViewGetNodesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="GetNodesResult" nillable="true" type="q6:SoaTreeViewGetNodesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="request" nillable="true" type="q7:SoaTreeViewMoveRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="MoveNodeResult" nillable="true" type="q8:SoaTreeViewMoveResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="request" nillable="true" type="q9:SoaTreeViewEditRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" minOccurs="0" name="EditNodeResult" nillable="true" type="q10:SoaTreeViewEditResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

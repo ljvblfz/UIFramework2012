@@ -1,0 +1,228 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{ 
+  ViewData["DemoType"] = "Calendar";
+  ViewData["DemoTitle"] = "Date Range Picker";
+  ViewData["CodeFiles"] = "/Views/Calendar/DateRangePicker.aspx,/Controllers/CalendarController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>The date/time range picker example is implemented with two Calendar instances (both pickers).</li>
+<li>The Calendar instances are synchronized through the client-side API.</li>
+</ul>
+";    
+}
+@section HeadContent {
+  <script type="text/javascript">
+    function PickerFrom_OnDateChange(sender, eventArgs)
+    {
+      var fromDate = PickerFrom.getSelectedDate();
+      var toDate = PickerTo.getSelectedDate();
+      CalendarFrom.setSelectedDate(fromDate);
+      if (fromDate > toDate)
+      {
+        PickerTo.setSelectedDate(fromDate);
+        CalendarTo.setSelectedDate(fromDate);
+      }
+    }
+    function PickerTo_OnDateChange(sender, eventArgs)
+    {
+      var fromDate = PickerFrom.getSelectedDate();
+      var toDate = PickerTo.getSelectedDate();
+      CalendarTo.setSelectedDate(toDate);
+      if (fromDate > toDate)
+      {
+        PickerFrom.setSelectedDate(toDate);
+        CalendarFrom.setSelectedDate(toDate);
+      }
+    }
+    function CalendarFrom_OnChange(sender, eventArgs)
+    {
+      var fromDate = CalendarFrom.getSelectedDate();
+      var toDate = PickerTo.getSelectedDate();
+      PickerFrom.setSelectedDate(fromDate);
+      if (fromDate > toDate)
+      {
+        PickerTo.setSelectedDate(fromDate);
+        CalendarTo.setSelectedDate(fromDate);
+      }
+    }
+    function CalendarTo_OnChange(sender, eventArgs)
+    {
+      var fromDate = PickerFrom.getSelectedDate();
+      var toDate = CalendarTo.getSelectedDate();
+      PickerTo.setSelectedDate(toDate);
+      if (fromDate > toDate)
+      {
+        PickerFrom.setSelectedDate(toDate);
+        CalendarFrom.setSelectedDate(toDate);
+      }
+    }
+    function ButtonFrom_OnClick(event)
+    {
+      if (CalendarFrom.get_popUpShowing())
+      {
+        CalendarFrom.hide();
+      }
+      else
+      {
+        CalendarFrom.setSelectedDate(PickerFrom.getSelectedDate());
+        CalendarFrom.show();
+      }
+    }
+    function ButtonTo_OnClick(event)
+    {
+      if (CalendarTo.get_popUpShowing())
+      {
+        CalendarTo.hide();
+      }
+      else
+      {
+        CalendarTo.setSelectedDate(PickerTo.getSelectedDate());
+        CalendarTo.show();
+      }
+    }
+    function ButtonFrom_OnMouseUp(event)
+    {
+      if (CalendarFrom.get_popUpShowing())
+      {
+        event.cancelBubble = true;
+        event.returnValue = false;
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+    }
+    function ButtonTo_OnMouseUp(event)
+    {
+      if (CalendarTo.get_popUpShowing())
+      {
+        event.cancelBubble = true;
+        event.returnValue = false;
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+    }
+  </script>
+  <link href="@Url.Content("~/Content/Calendar/Plain/calendarStyle.css")" rel="stylesheet" type="text/css" />
+}
+<form method="post">
+Start Date:
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td onmouseup="ButtonFrom_OnMouseUp(event)">
+      @(Html.ComponentArt().Calendar("PickerFromDate")
+        .ID("PickerFrom")
+        .PickerFormat(DateTimeFormatType.Custom)
+        .PickerCustomFormat("MMMM d yyyy")
+        .ControlType(CalendarControlType.Picker)
+        .SelectedDate(DateTime.Parse("2005-12-13"))
+        .PickerCssClass("picker")
+        .ClientEvents(c =>
+        {
+          c.SelectionChanged("PickerFrom_OnDateChange");
+        })
+)
+    </td>
+    <td style="font-size: 10px;">
+      &nbsp;
+    </td>
+    <td>
+      <img id="calendar_from_button" alt="" onclick="ButtonFrom_OnClick(event)" onmouseup="ButtonFrom_OnMouseUp(event)"
+        class="calendar_button" src="../../Content/Calendar/Plain/images/btn_calendar.gif" />
+    </td>
+  </tr>
+</table>
+<br />
+<br />
+Finish Date:
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td onmouseup="ButtonTo_OnMouseUp(event)">
+      @(Html.ComponentArt().Calendar("PickerToDate")
+        .ID("PickerTo")
+        .PickerFormat(DateTimeFormatType.Custom)
+        .PickerCustomFormat("MMMM d yyyy")
+        .ControlType(CalendarControlType.Picker)
+        .SelectedDate(DateTime.Parse("2005-12-17"))
+        .PickerCssClass("picker")
+        .ClientEvents(c =>
+        {
+          c.SelectionChanged("PickerTo_OnDateChange");
+        })
+)
+    </td>
+    <td style="font-size: 10px;">
+      &nbsp;
+    </td>
+    <td>
+      <img id="calendar_to_button" alt="" onclick="ButtonTo_OnClick(event)" onmouseup="ButtonTo_OnMouseUp(event)"
+        class="calendar_button" src="../../Content/Calendar/Plain/images/btn_calendar.gif" />
+    </td>
+  </tr>
+</table>
+@(Html.ComponentArt().Calendar()
+  .ID("CalendarFrom")
+  .AllowMultipleSelection(false)
+  .AllowWeekSelection(false)
+  .AllowMonthSelection(false)
+  .ControlType(CalendarControlType.Calendar)
+  .DayNameFormat(DayNameFormat.FirstTwoLetters)
+  .PopUp(CalendarPopUpType.Custom)
+  .PopUpExpandControlId("calendar_from_button")
+  .TitleCssClass("title")
+  .SelectedDate(DateTime.Parse("2005-12-13"))
+  .VisibleDate(DateTime.Parse("2005-12-13"))
+  .DayHeaderCssClass("dayheader")
+  .DayCssClass("day")
+  .DayHoverCssClass("dayhover")
+  .OtherMonthDayCssClass("othermonthday")
+  .SelectedDayCssClass("selectedday")
+  .CalendarCssClass("calendar")
+  .NextPrevCssClass("nextprev")
+  .MonthCssClass("month")
+  .SwapSlide(SlideType.Linear)
+  .SwapDuration(300)
+  .ImagesBaseUrl("~/Content/Calendar/Plain/images/")
+  .PrevImageUrl("cal_prevMonth.gif")
+  .NextImageUrl("cal_nextMonth.gif")
+  .ClientEvents(c =>
+  {
+    c.SelectionChanged("CalendarFrom_OnChange");
+  })
+)
+@(Html.ComponentArt().Calendar()
+  .ID("CalendarTo")
+  .AllowMultipleSelection(false)
+  .AllowWeekSelection(false)
+  .AllowMonthSelection(false)
+  .ControlType(CalendarControlType.Calendar)
+  .PopUp(CalendarPopUpType.Custom)
+  .PopUpExpandControlId("calendar_to_button")
+  .TitleCssClass("title")
+  .SelectedDate(DateTime.Parse("2005-12-13"))
+  .VisibleDate(DateTime.Parse("2005-12-13"))
+  .DayHeaderCssClass("dayheader")
+  .DayCssClass("day")
+  .DayHoverCssClass("dayhover")
+  .OtherMonthDayCssClass("othermonthday")
+  .SelectedDayCssClass("selectedday")
+  .CalendarCssClass("calendar")
+  .NextPrevCssClass("nextprev")
+  .MonthCssClass("month")
+  .SwapSlide(SlideType.Linear)
+  .SwapDuration(300)
+  .DayNameFormat(DayNameFormat.FirstTwoLetters)
+  .ImagesBaseUrl("~/Content/Calendar/Plain/images/")
+  .PrevImageUrl("cal_prevMonth.gif")
+  .NextImageUrl("cal_nextMonth.gif")
+  .ClientEvents(c =>
+  {
+    c.SelectionChanged("CalendarTo_OnChange");
+  })
+)
+</form>

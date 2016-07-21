@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.RangeSliderDatabindingFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+    xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+    >
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+            <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="RangeSlider" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Databinding Features" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases RangeSlider's databinding features." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\rangeslider\RangeSliderDatabindingFeatures.xaml, \source\controls\rangeslider\RangeSliderDatabindingFeatures.xaml.cs" />
+        <TextBlock Text="Numeric Binding" Margin="0 0 0 12" HorizontalAlignment="Left" Grid.Row="0"/>
+        <ComponentArt:RangeSlider x:Name="myRangeSlider" Grid.Row="1" Width="601" Height="50" ShowTooltip="True" SelectionStart="67" SelectionEnd="85">
+            <ComponentArt:RangeSlider.Axis>
+                <ComponentArt:NumericAxis Minimum="0" Maximum="100" TickMarkPosition="BottomRight" TickMarkInterval="20" />
+            </ComponentArt:RangeSlider.Axis>
+        </ComponentArt:RangeSlider>
+        <Grid Grid.Row="2" Margin="0 20 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Selection start: " Grid.Column="0" VerticalAlignment="Center"/>
+            <TextBox Grid.Column="1" Width="50" Text="{Binding SelectionStart, ElementName=myRangeSlider, Mode=TwoWay}" KeyDown="TextBox_KeyDown"/>
+            <TextBlock Text="Selection end: " Grid.Column="2" VerticalAlignment="Center" Margin="20 0 0 0"/>
+            <TextBox Grid.Column="3" Width="50" Text="{Binding SelectionEnd, ElementName=myRangeSlider, Mode=TwoWay}" KeyDown="TextBox_KeyDown"/>
+        </Grid>
+
+        <TextBlock Text="DateTime Binding" Margin="0 40 0 12" HorizontalAlignment="Left" Grid.Row="3"/>
+            <ComponentArt:RangeSlider x:Name="dateTimeRangeSlider" Grid.Row="4" Width="601" Height="50" ShowTooltip="True" 
+                                      SelectionStart="11/3/2009" SelectionEnd="11/6/2009" BeforeTooltipShown="dateTimeRangeSlider_BeforeTooltipShown">
+                <ComponentArt:RangeSlider.Axis>
+                    <ComponentArt:DateTimeAxis Minimum="11/1/2009" Maximum="11/14/2009" SmallChange="Day"  TickMarkInterval="Day" 
+                                          TickMarkPosition="BottomRight" AnnotationFormat="MMM d"/>
+                </ComponentArt:RangeSlider.Axis>
+            </ComponentArt:RangeSlider>
+            <Grid Grid.Row="5" Margin="40 40 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Start Date" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <controls:Calendar Grid.Column="0" Grid.Row="1" SelectionMode="SingleDate" 
+                                   SelectedDate="{Binding SelectionStart, ElementName=dateTimeRangeSlider, Mode=TwoWay}" 
+                                   DisplayMode="Month" DisplayDate="11/1/2009" />
+                <TextBlock Text="End Date" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <controls:Calendar Grid.Column="2" Grid.Row="1" SelectionMode="SingleDate" 
+                                   SelectedDate="{Binding SelectionEnd, ElementName=dateTimeRangeSlider, Mode=TwoWay}" 
+                                   DisplayMode="Month" DisplayDate="11/1/2009"/>
+        </Grid>
+    </Grid>
+</UserControl>

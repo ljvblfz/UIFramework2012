@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.TabStripReorder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:ComponentArtTheme="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    Width="760" Height="450">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TabStrip" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Tab Re-Ordering" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo shows the re-ordering features of the TabStrip control." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\tabstrip\TabStripReorder.xaml,
+            \source\controls\tabstrip\TabStripReorder.xaml.cs"/>
+        <ComponentArt:TabStrip 
+        HorizontalAlignment="Left"
+						Width="400"
+						Height="26"
+						Alignment="top"
+                        AllowReorder="True"
+                        AllowDrop="True"
+						VerticalAlignment="top"
+						Margin="6,-1,-6,-1"
+					>
+            <ComponentArt:TabStripTab x:Name="tab1" Padding="10,5,10,5" Text="First Tab" />
+            <ComponentArt:TabStripTab x:Name="tab2" Padding="10,5,10,5" Text="Second Tab" />
+            <ComponentArt:TabStripTab x:Name="tab3" Padding="10,5,10,5" Text="Third Tab" />
+            <ComponentArt:TabStripTab x:Name="tab4" Padding="10,5,10,5" Text="Fourth Tab" />
+            <ComponentArt:TabStripTab x:Name="tab5" Padding="10,5,10,5" Text="Fifth Tab" />
+        </ComponentArt:TabStrip>
+    </Grid>
+</UserControl>

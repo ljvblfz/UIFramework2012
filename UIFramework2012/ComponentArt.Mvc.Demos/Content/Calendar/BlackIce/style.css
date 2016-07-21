@@ -1,0 +1,49 @@
+.cal { width:300px;height:250px;background:transparent url("images/static.png") no-repeat;color:#000;font-weight:bold;font-family:Tahoma,"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;font-size:11px; }
+
+.hdr { width:270px;height:50px;color:#fff;padding:0;margin:5px 15px 10px 15px;cursor:default;color:#333; }
+  .hdr-d { width:56px;height:100%;float:left;margin:0 8px 0 0;background:transparent url("images/static.png") no-repeat 0 -250px; }
+    .hdr-d .day { width:100%;height:14px;line-height:14px;text-align:center;font-size:11px;padding-top:6px;  }
+    .hdr-d .date { width:100%;height:30px;line-height:30px;text-align:center; }
+
+  .hdr-m { width:128px;height:100%;float:left;margin:0 8px 0 0; }
+    .hdr-m a { display:block;height:100%;width:14px;float:left;cursor:default;background:transparent url("images/static.png") no-repeat; }
+    .hdr-m a.prev { background-position:-112px -250px; }
+    .hdr-m a.prev:active { background-position:-140px -250px !important;outline:none; }
+    .hdr-m a.prev:hover { background-position:-126px -250px; }
+    .hdr-m a.next { background-position:-154px -250px; }
+    .hdr-m a.next:active { background-position:-182px -250px !important;outline:none; }
+    .hdr-m a.next:hover { background-position:-168px -250px; }
+    .hdr-m .month { display:block;height:100%;width:100px;float:left;line-height:50px;text-align:center;background:transparent url("images/horizontal.png") repeat-x; }
+
+  .hdr-y { width:70px;height:100%;float:left;margin:0; }
+    .hdr-y .year { width:56px;height:100%;float:left;line-height:50px;text-align:center;background:transparent url("images/static.png") no-repeat -56px -250px; }
+    .hdr-y .btns { float:right;width:14px;height:100%; }
+    .hdr-y .btns a { display:block;width:100%;height:50%;cursor:default;background:transparent url("images/static.png") no-repeat 600px -300px; }
+    .hdr-y a.next { background-position:-196px -250px; }
+    .hdr-y a.next:active { background-position:-224px -250px !important;outline:none; }
+    .hdr-y a.next:hover { background-position:-210px -250px; }
+    .hdr-y a.prev { background-position:-196px -275px; }
+    .hdr-y a.prev:active { background-position:-224px -275px !important;outline:none; }
+    .hdr-y a.prev:hover { background-position:-210px -275px; }
+
+.con {
+  width:260px;
+  height:160px;
+  margin:0 15px;
+}
+
+.ftr { width:100%;height:15px; }
+
+.select-month { cursor:default;color:#333;text-align:center;width:22px;height:26px; }
+.select-week { cursor:default;color:#333;text-align:center;width:22px; }
+.day-hdr { cursor:default;color:#333;text-align:center; }
+
+a:active,a:focus { outline:none; }
+
+.day { cursor:default;text-align:center;width:33px;height:24px;color:#333; }
+.day-h { cursor:default;text-align:center;background:#fff url("images/static.png") no-repeat -238px -250px;width:33px;height:24px;color:#c00; }
+.day-s { cursor:default;text-align:center;background:#fff url("images/static.png") no-repeat -238px -273px;width:33px;height:24px;color:#000;text-decoration:underline; }
+.day-s-h { cursor:default;text-align:center;background:#fff url("images/static.png") no-repeat -238px -273px;width:33px;height:24px;color:#c00;text-decoration:underline; }
+.other { cursor:default;color:#ccc; }
+
+.picker { font-size:120%;font-weight:bold;font-family:"Courier New",monospace; }

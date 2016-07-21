@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.TreeViewDragDropFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TreeView" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Drag &amp; Drop" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases Drag &amp; Drop functionality in a TreeView. Aside from dropping between and onto nodes, drag &amp; drop can expand collapsed nodes by hovering over them, and autoscroll the TreeView when dragging near the edges of the scrolling area." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\treeview\TreeViewDragDropFeatures.xaml" />
+        <my:TreeView x:Name="FirstTree" Height="400" Width="250" AllowDrag="True" AllowDrop="True" Grid.Row="0" Grid.Column="0" 
+                     Header="Active Items">
+            <my:TreeViewNode Header="Mailbox" IconSource="/assets/TreeView/Core/root.png" IsExpanded="True">
+                <my:TreeViewNode Header="Calendar" IconSource="/assets/TreeView/Core/calendar.png" IsExpanded="False" />
+                <my:TreeViewNode Header="Contacts" IconSource="/assets/TreeView/Core/contacts.png" />
+                <my:TreeViewNode Header="Deleted Items" IconSource="/assets/TreeView/Core/deleted.png">
+                    <my:TreeViewNode Header="Today" IconSource="/assets/TreeView/Core/deletedFolder.png" />
+                    <my:TreeViewNode Header="Last Week" IconSource="/assets/TreeView/Core/deletedFolder.png" />
+                    <my:TreeViewNode Header="Last Month" IconSource="/assets/TreeView/Core/deletedFolder.png" />
+                </my:TreeViewNode>
+                <my:TreeViewNode Header="Drafts" IconSource="/assets/TreeView/Core/drafts.png" />
+                <my:TreeViewNode Header="Inbox" IconSource="/assets/TreeView/Core/inbox.png" IsExpanded="True">
+                    <my:TreeViewNode Header="ComponentArt" IconSource="/assets/TreeView/Core/folders.png" />
+                    <my:TreeViewNode Header="Personal" IconSource="/assets/TreeView/Core/folders.png" />
+                    <my:TreeViewNode Header="Miscellaneous" IconSource="/assets/TreeView/Core/folders.png" />
+                </my:TreeViewNode>
+                <my:TreeViewNode Header="Junk E-mail" IconSource="/assets/TreeView/Core/junk.png" />
+                <my:TreeViewNode Header="Notes" IconSource="/assets/TreeView/Core/notes.png" />
+                <my:TreeViewNode Header="Outbox" IconSource="/assets/TreeView/Core/outbox.png" />
+                <my:TreeViewNode Header="Sent Items" IconSource="/assets/TreeView/Core/sentItems.png" />
+                <my:TreeViewNode Header="Tasks" IconSource="/assets/TreeView/Core/tasks.png" />
+                <my:TreeViewNode Header="Search Folders" IconSource="/assets/TreeView/Core/search.png" />
+            </my:TreeViewNode>
+            <my:TreeViewNode Header="Mailbox - News" IconSource="/assets/TreeView/Core/folders.png" IsExpanded="True">
+                <my:TreeViewNode Header="World" IconSource="/assets/TreeView/Core/folder.png" >
+                </my:TreeViewNode>
+                <my:TreeViewNode Header="Business" IconSource="/assets/TreeView/Core/folder.png" />
+                <my:TreeViewNode Header="Science" IconSource="/assets/TreeView/Core/folder.png" />
+                <my:TreeViewNode Header="Weather" IconSource="/assets/TreeView/Core/folder.png" />
+            </my:TreeViewNode>
+        </my:TreeView>
+
+        <my:TreeView Grid.Row="0" AllowDrag="True" AllowDrop="True" Grid.Column="1" Header="Archive" x:Name="SecondTree" ExpanderOpenIconSource="/assets/TreeView/Core/minus.png" ExpanderClosedIconSource="/assets/TreeView/Core/plus.png"
+                     Margin="50 0 0 0" Width="250" Height="400"  >
+            <my:TreeViewNode Header="Financial" IconSource="/assets/TreeView/Core/folders.png" IsExpanded="True">
+                <my:TreeViewNode Header="Revenue"  IconSource="/assets/TreeView/Core/folder.png" />
+                <my:TreeViewNode Header="Profit" IconSource="/assets/TreeView/Core/folder.png" />
+                <my:TreeViewNode Header="Stock Market Forecasts" IconSource="/assets/TreeView/Core/folder.png" />
+            </my:TreeViewNode>
+            <my:TreeViewNode Header="Sales" IconSource="/assets/TreeView/Core/folders.png" IsExpanded="True">
+                <my:TreeViewNode Header="Customers"  IconSource="/assets/TreeView/Core/folder.png" />
+                <my:TreeViewNode Header="Leads" IconSource="/assets/TreeView/Core/folder.png" />
+                <my:TreeViewNode Header="Market Research" IconSource="/assets/TreeView/Core/folder.png" />
+            </my:TreeViewNode>
+            <my:TreeViewNode Header="Leadership" IconSource="/assets/TreeView/Core/folders.png">
+                <my:TreeViewNode Header="Important"  IconSource="/assets/TreeView/Core/folder.png" />
+                <my:TreeViewNode Header="Human Resources"  IconSource="/assets/TreeView/Core/folder.png" />
+                <my:TreeViewNode Header="Meeting Minutes" IconSource="/assets/TreeView/Core/folder.png" />
+                <my:TreeViewNode Header="Golf" IconSource="/assets/TreeView/Core/folder.png" />
+            </my:TreeViewNode>
+
+            <my:TreeViewNode Header="SOX Compliance" IconSource="/assets/TreeView/Core/deleted.png">
+                <my:TreeViewNode Header="Shred immediately"  IconSource="/assets/TreeView/Core/deletedFolder.png" />
+                <my:TreeViewNode Header="Shred immediately, including backup copies"  IconSource="/assets/TreeView/Core/deletedFolder.png" />
+                <my:TreeViewNode Header="Shred tomorrow" IconSource="/assets/TreeView/Core/deletedFolder.png" />
+                <my:TreeViewNode Header="Shred in a week" IconSource="/assets/TreeView/Core/deletedFolder.png" />
+                <my:TreeViewNode Header="Just hide from auditors" IconSource="/assets/TreeView/Core/folder.png" />
+            </my:TreeViewNode>
+
+        </my:TreeView>
+
+    </Grid>
+</UserControl>

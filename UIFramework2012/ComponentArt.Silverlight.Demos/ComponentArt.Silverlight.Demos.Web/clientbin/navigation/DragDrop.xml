@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tree>
+  <node Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Simple Drag &#x26; Drop" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DragDropCoreFeatures" />
+    <node Header="ListBox-to-TreeView" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ListTree" />
+    <!--<node Header="TreeView-to-DataGrid" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="EmptyDemo" />-->
+  </node>
+</tree>

@@ -1,0 +1,160 @@
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_WCFMessageService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISoaDataGridService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISoaTreeViewService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ManualTreeViewFileExplorerService"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ManualComboBoxLocationsService"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ManualNavBarService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISoaNavBarService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISoaComboBoxService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_WCFProductService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISoaDataGridService1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ISoaMenuService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_WCFCarService" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_WCFCarService1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ManualComboBoxLocationsService1"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ManualNavBarService1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_ManualTreeViewFileExplorerService1"
+                    maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_WCFMessageService1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+                <binding name="BasicHttpBinding_WCFProductService1" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+            <customBinding>
+                <binding name="CustomBinding_SalesDataService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="CustomBinding_SalesDataService1">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:3069/TreeViewFileBrowserService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISoaTreeViewService"
+                contract="TreeViewFileBrowserService.ISoaTreeViewService"
+                name="BasicHttpBinding_ISoaTreeViewService" />
+            <endpoint address="http://localhost:3069/ManualComboBoxLocationsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ManualComboBoxLocationsService"
+                contract="ManualComboBoxLocationsService.ManualComboBoxLocationsService"
+                name="BasicHttpBinding_ManualComboBoxLocationsService" />
+            <endpoint address="http://localhost:3069/ManualNavBarService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ManualNavBarService"
+                contract="ManualNavBarService.ManualNavBarService" name="BasicHttpBinding_ManualNavBarService" />
+            <endpoint address="http://localhost:3069/ManualTreeViewFileExplorerService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ManualTreeViewFileExplorerService"
+                contract="ManualTreeViewFileExplorerService.ManualTreeViewFileExplorerService"
+                name="BasicHttpBinding_ManualTreeViewFileExplorerService" />
+            <endpoint address="http://localhost:3069/WCFMessageService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_WCFMessageService"
+                contract="MessageService.WCFMessageService" name="BasicHttpBinding_WCFMessageService" />
+            <endpoint address="http://localhost:3069/SoaNavBar.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_ISoaNavBarService"
+                contract="NavBarService.ISoaNavBarService" name="BasicHttpBinding_ISoaNavBarService" />
+            <endpoint address="http://localhost:3069/WCFProductService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_WCFProductService"
+                contract="ProductService.WCFProductService" name="BasicHttpBinding_WCFProductService" />
+            <endpoint address="http://localhost:3069/SoaComboBoxLocationService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISoaComboBoxService"
+                contract="SoaComboBoxLocationService.ISoaComboBoxService"
+                name="BasicHttpBinding_ISoaComboBoxService" />
+            <endpoint address="http://localhost:3069/SoaDataGridMessageService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISoaDataGridService1"
+                contract="SoaDataGridMessageService.ISoaDataGridService" name="BasicHttpBinding_ISoaDataGridService" />
+            <endpoint address="http://localhost:3069/SoaMenuDemoService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISoaMenuService"
+                contract="SoaMenuDemoService.ISoaMenuService" name="BasicHttpBinding_ISoaMenuService" />
+            <endpoint address="http://localhost:3069/WCFCarService.svc" binding="basicHttpBinding"
+                bindingConfiguration="BasicHttpBinding_WCFCarService" contract="WCFCarService.WCFCarService"
+                name="BasicHttpBinding_WCFCarService" />
+            <endpoint address="http://localhost:2002/SalesDataService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_SalesDataService"
+                contract="SalesDataService.SalesDataService" name="CustomBinding_SalesDataService" />
+            <endpoint address="http://localhost:13771/WCFCarService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_WCFCarService1"
+                contract="ServiceReference.ComponentArt.Silverlight.Demos.Web.WCFCarService.WCFCarService"
+                name="BasicHttpBinding_WCFCarService1" />
+            <endpoint address="http://localhost:13771/SalesDataService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_SalesDataService1"
+                contract="ServiceReference.ComponentArt.Silverlight.Demos.Web.SalesDataService.SalesDataService"
+                name="CustomBinding_SalesDataService1" />
+            <endpoint address="http://localhost:13771/ManualComboBoxLocationsService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ManualComboBoxLocationsService1"
+                contract="ServiceReference.ComponentArt.Silverlight.Demos.Web.ManualComboBoxLocationsService.ManualComboBoxLocationsService"
+                name="BasicHttpBinding_ManualComboBoxLocationsService1" />
+            <endpoint address="http://localhost:13771/ManualNavBarService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ManualNavBarService1"
+                contract="ServiceReference.ComponentArt.Silverlight.Demos.Web.ManualNavBarService.ManualNavBarService"
+                name="BasicHttpBinding_ManualNavBarService1" />
+            <endpoint address="http://localhost:13771/ManualTreeViewFileExplorerService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ManualTreeViewFileExplorerService1"
+                contract="ServiceReference.ComponentArt.Silverlight.Demos.Web.ManualTreeViewFileExplorerService.ManualTreeViewFileExplorerService"
+                name="BasicHttpBinding_ManualTreeViewFileExplorerService1" />
+            <endpoint address="http://localhost:13771/WCFMessageService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_WCFMessageService1"
+                contract="ServiceReference.ComponentArt.Silverlight.Demos.Web.WCFMessageService.WCFMessageService"
+                name="BasicHttpBinding_WCFMessageService1" />
+            <endpoint address="http://localhost:13771/WCFProductService.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_WCFProductService1"
+                contract="ServiceReference.ComponentArt.Silverlight.Demos.Web.WCFProductService.WCFProductService"
+                name="BasicHttpBinding_WCFProductService1" />
+        </client>
+    </system.serviceModel>
+</configuration> 

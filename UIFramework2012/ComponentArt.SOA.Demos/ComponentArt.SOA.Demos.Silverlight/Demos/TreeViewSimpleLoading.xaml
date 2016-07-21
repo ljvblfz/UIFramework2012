@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="ComponentArt.SOA.Demos.TreeViewSimpleLoading"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    >
+  <Grid>
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TreeView" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Simple SOA.UI TreeView" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="On load, the TreeView control instance automatically downloads its node data from a SOA.UI web service." />
+
+    <my:TreeView SoaServiceUrl="../Services/SoaTreeViewEdit.svc" IsLoadOnDemandEnabled="True" Margin="5"
+                 BaseIconSource="/ComponentArt.SOA.Demos;component/assets/TreeViewEdit/" Height="450" Width="270" />
+
+    </Grid>
+</UserControl>

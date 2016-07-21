@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.HtmlPanelHtmlSource"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common">
+
+  <UserControl.Resources>
+		<sys:String x:Key="htmlSource">
+&lt;strong&gt;Lorem ipsum dolor&lt;/strong&gt; sit amet, consectetur adipiscing elit. &lt;em&gt;Fusce blandit est in risus ullamcorper scelerisque.&lt;/em&gt; Cras accumsan, mi ut viverra aliquet, &lt;strong&gt;&lt;em&gt;est sapien mollis.&lt;/em&gt;&lt;/strong&gt;
+
+&lt;table align="center"&gt;
+	&lt;tr&gt;&lt;td&gt;X&lt;/td&gt;&lt;td&gt;O&lt;/td&gt;&lt;td&gt;&lt;strong&gt;X&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;O&lt;/td&gt;&lt;td&gt;&lt;strong&gt;X&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;O&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr&gt;&lt;td&gt;&lt;strong&gt;X&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;X&lt;/td&gt;&lt;td&gt;O&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+		</sys:String>
+	</UserControl.Resources>
+
+  <Grid x:Name="LayoutRoot">
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="HtmlPanel" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="HtmlPanel HTML Source" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo illustrates binding to HTML source content." />
+    <TextBlock x:Name="DemoCodeFiles" 
+        Visibility="Collapsed"
+        Text="\source\controls\htmlpanel\HtmlPanelHtmlSource.xaml,\source\controls\htmlpanel\HtmlPanelHtmlSource.xaml.cs" />
+
+    <StackPanel Orientation="Vertical" Margin="10">
+
+			<Border BorderBrush="#bbbbbb" BorderThickness="1">
+				<ComponentArt:HtmlPanel x:Name="htmlPanel" Width="600" Height="200" MonitorState="True"/>        
+      </Border>
+
+			<Border Margin="0,9" CornerRadius="5" Background="#eeeeee" BorderBrush="#bbbbbb" BorderThickness="1">
+				<StackPanel Margin="9" Orientation="Vertical">
+
+					<TextBlock Text="Edit the HTML markup below:"/>
+				
+					<TextBox x:Name="htmlSource"
+							AcceptsReturn="True"
+							TextWrapping="Wrap"
+							VerticalScrollBarVisibility="Auto"
+							Text="{StaticResource htmlSource}"
+							TextChanged="htmlSource_TextChanged"
+							Width="582"
+							Height="200"/>
+							
+				</StackPanel>
+			</Border>
+		</StackPanel>
+  </Grid>
+</UserControl>

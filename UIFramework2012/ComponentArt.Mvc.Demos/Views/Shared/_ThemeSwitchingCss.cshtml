@@ -1,0 +1,15 @@
+﻿@{
+  string[] themes = {"ArcticWhite", "BlackIce", "Office2010Black", "Office2010Blue", "Office2010Silver", "Outlook2007", "Windows7" };
+  string[] imagefiles = { "glyphs", "horizontal", "icons", "static", "vertical" };
+}
+@foreach (string theme in themes)
+{
+  <link href="@(Url.Content("~/Content/Themes/" + theme + "/theme.css"))" rel="stylesheet" type="text/css" title="@theme" />
+  <link href="@(Url.Content("~/Content/Themes/" + theme + "/icons.css"))" rel="stylesheet" type="text/css" title="@theme" />
+  <div style="display:none;">
+  @foreach (string imagefile in imagefiles)
+  {
+    <img src="@(Url.Content("~/Content/Themes/" + theme + "/" + imagefile)).png" />
+  }
+  </div>
+}

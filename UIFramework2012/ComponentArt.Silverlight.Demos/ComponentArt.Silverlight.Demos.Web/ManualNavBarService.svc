@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ComponentArt.Silverlight.Demos.Web.ManualNavBarService" CodeBehind="ManualNavBarService.svc.cs" %>

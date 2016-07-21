@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema id="ComponentArt TreeView Schema" elementFormDefault="qualified" targetNamespace="ComponentArt.Web.UI TreeView Schema" xmlns="ComponentArt.Web.UI TreeView Schema" xmlns:mstns="ComponentArt.Web.UI TreeView Schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="TreeViewData">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="TreeViewNode" type="TreeViewNode" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="TreeViewNode">
+    <xsd:complexType>
+      <xsd:attribute name="AutoPostBackOnCheckChanged" type="xsd:boolean" />
+      <xsd:attribute name="AutoPostBackOnCollapse" type="xsd:boolean" />
+      <xsd:attribute name="AutoPostBackOnExpand" type="xsd:boolean" />
+      <xsd:attribute name="AutoPostBackOnMove" type="xsd:boolean" />
+      <xsd:attribute name="AutoPostBackOnRename" type="xsd:boolean" />
+      <xsd:attribute name="AutoPostBackOnSelect" type="xsd:boolean" />
+      <xsd:attribute name="Checked" type="xsd:boolean" />
+      <xsd:attribute name="ChildSelectedCssClass" type="xsd:string" />
+      <xsd:attribute name="ChildSelectedHoverCssClass" type="xsd:string" />
+      <xsd:attribute name="ChildSelectedHoverRowCssClass" type="xsd:string" />
+      <xsd:attribute name="ChildSelectedRowCssClass" type="xsd:string" />
+      <xsd:attribute name="ClientSideCommand" type="xsd:string" />
+      <xsd:attribute name="ContentCallbackUrl" type="xsd:string" />
+      <xsd:attribute name="CssClass" type="xsd:string" />
+      <xsd:attribute name="DraggingAcrossTreesEnabled" type="xsd:boolean" />
+      <xsd:attribute name="DraggingEnabled" type="xsd:boolean" />
+      <xsd:attribute name="DroppingAcrossTreesEnabled" type="xsd:boolean" />
+      <xsd:attribute name="DroppingEnabled" type="xsd:boolean" />
+      <xsd:attribute name="EditingEnabled" type="xsd:boolean" />
+      <xsd:attribute name="Enabled" type="xsd:boolean" />
+      <xsd:attribute name="Expanded" type="xsd:boolean" />
+      <xsd:attribute name="ExpandedImageUrl" type="xsd:string" />
+      <xsd:attribute name="ExtendNodeCell" type="xsd:boolean" />
+      <xsd:attribute name="Height" type="xsd:nonNegativeInteger" />
+      <xsd:attribute name="HoverCssClass" type="xsd:string" />
+      <xsd:attribute name="HoverRowCssClass" type="xsd:string" />
+      <xsd:attribute name="ID" type="xsd:string" />
+      <xsd:attribute name="ImageHeight" type="xsd:nonNegativeInteger" />
+      <xsd:attribute name="ImageUrl" type="xsd:string" />
+      <xsd:attribute name="ImageWidth" type="xsd:nonNegativeInteger" />
+      <xsd:attribute name="Indent" type="xsd:nonNegativeInteger" />
+      <xsd:attribute name="KeyboardShortcut" type="xsd:string" />
+      <xsd:attribute name="LabelPadding" type="xsd:nonNegativeInteger" />
+      <xsd:attribute name="MarginImageUrl" type="xsd:string" />
+      <xsd:attribute name="NavigateUrl" type="xsd:string" />
+      <xsd:attribute name="PageViewId" type="xsd:string" />
+      <xsd:attribute name="RowCssClass" type="xsd:string" />
+      <xsd:attribute name="Selectable" type="xsd:boolean" />
+      <xsd:attribute name="SelectedCssClass" type="xsd:string" />
+      <xsd:attribute name="SelectedExpandedImageUrl" type="xsd:string" />
+      <xsd:attribute name="SelectedHoverCssClass" type="xsd:string" />
+      <xsd:attribute name="SelectedHoverRowCssClass" type="xsd:string" />
+      <xsd:attribute name="SelectedImageUrl" type="xsd:string" />
+      <xsd:attribute name="SelectedRowCssClass" type="xsd:string" />
+      <xsd:attribute name="ShowCheckBox" type="xsd:boolean" />
+      <xsd:attribute name="SiteMapXmlFile" type="xsd:string" />
+      <xsd:attribute name="Target" type="xsd:string" />
+      <xsd:attribute name="TemplateId" type="xsd:string" />
+      <xsd:attribute name="Text" type="xsd:string" />
+      <xsd:attribute name="Value" type="xsd:string" />
+      <xsd:sequence>
+        <xsd:element name="TreeViewNode" type="TreeViewNode" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

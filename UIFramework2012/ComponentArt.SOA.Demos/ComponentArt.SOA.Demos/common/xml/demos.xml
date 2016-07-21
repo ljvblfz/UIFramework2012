@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Nodes>
+	<Node ClientTemplateId="SpacerTemplate" LookId="ItemSpacer" />
+
+	<Node Text="ASP.NET AJAX" ClientTemplateId="TopLevelItemTemplate" LookId="ItemAjax" SubGroupCssClass="mnu-grp-ajax">
+		<Node Look-CssClass="itm-ajax-top" Enabled="false" />
+
+		<Node Text="Control Integration" ClientTemplateId="AjaxTitleTemplate" Class="int" />
+		<Node Text="TreeView &amp; DataGrid: File Explorer" NavigateUrl="~/ajax/filebrowser/" ClientTemplateId="AjaxItemTemplate" />
+
+		<Node Look-CssClass="itm-ajax-sep" Enabled="false" />
+
+		<Node Text="Simple SOA.UI Loading" ClientTemplateId="AjaxTitleTemplate" Class="simp" />
+		<Node Text="ComboBox" NavigateUrl="~/ajax/combobox/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="DataGrid" NavigateUrl="~/ajax/datagridsimpleloading/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="Menu" NavigateUrl="~/ajax/menu/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="NavBar" NavigateUrl="~/ajax/navbar/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="TabStrip" NavigateUrl="~/ajax/tabstrip/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="ToolBar" NavigateUrl="~/ajax/toolbar/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="TreeView" NavigateUrl="~/ajax/treeview/" ClientTemplateId="AjaxItemTemplate" />
+
+		<Node Look-CssClass="itm-ajax-sep" Enabled="false" />
+
+		<Node Text="Advanced SOA.UI Features" ClientTemplateId="AjaxTitleTemplate" Class="adv" />
+		<Node Text="DataGrid: Automatic Paging" NavigateUrl="~/ajax/datagridmessagebrowser/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="DataGrid: Automatic Scrolling" NavigateUrl="~/ajax/datagridsoascrolling/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="DataGrid: Data Editing" NavigateUrl="~/ajax/datagridsoaediting/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="TreeView: Load-on-Demand" NavigateUrl="~/ajax/treeviewfilebrowser/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="TreeView: Structure Manipulation" NavigateUrl="~/ajax/treeviewstructuremanipulation/" ClientTemplateId="AjaxItemTemplate" />
+		<Node Text="ComboBox: Automatic Filtering" NavigateUrl="~/ajax/comboboxfiltering/" ClientTemplateId="AjaxItemTemplate" />
+
+		<Node Look-CssClass="itm-ajax-btm" Enabled="false" />
+	</Node>
+
+	<Node Text="Silverlight" ClientTemplateId="TopLevelItemTemplate" LookId="ItemSilverlight" SubGroupCssClass="mnu-grp-sl">
+		<Node Look-CssClass="itm-sl-top" Enabled="false" />
+
+		<Node Text="Control Integration" ClientTemplateId="SilverlightTitleTemplate" Class="int" />
+		<Node Text="TreeView &amp; DataGrid: File Explorer" NavigateUrl="~/silverlight/#FileExplorer/" ClientTemplateId="SilverlightItemTemplate" />
+
+		<Node Look-CssClass="itm-sl-sep" Enabled="false" />
+
+		<Node Text="Simple SOA.UI Loading" ClientTemplateId="SilverlightTitleTemplate" Class="simp" />
+		<Node Text="ComboBox" NavigateUrl="~/silverlight/#ComboBox" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="DataGrid" NavigateUrl="~/silverlight/#DataGridSimpleLoading" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="Menu" NavigateUrl="~/silverlight/#Menu" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="NavBar" NavigateUrl="~/silverlight/#NavBar" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="TabStrip" NavigateUrl="~/silverlight/#TabStrip" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="ToolBar" NavigateUrl="~/silverlight/#ToolBar" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="TreeView" NavigateUrl="~/silverlight/#TreeViewSimpleLoading" ClientTemplateId="SilverlightItemTemplate" />
+
+		<Node Look-CssClass="itm-sl-sep" Enabled="false" />
+
+		<Node Text="Advanced SOA.UI Features" ClientTemplateId="SilverlightTitleTemplate" Class="adv" />
+		<Node Text="DataGrid: Automatic Paging" NavigateUrl="~/silverlight/#DataGridMessageBrowser" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="DataGrid: Automatic Scrolling" NavigateUrl="~/silverlight/#DataGridSoaScrolling" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="DataGrid: Data Editing" NavigateUrl="~/silverlight/#DataGridSoaEditing" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="TreeView: Load-on-Demand" NavigateUrl="~/silverlight/#TreeViewFileBrowser" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="TreeView: Structure Manipulation" NavigateUrl="~/silverlight/#TreeViewStructureEdit" ClientTemplateId="SilverlightItemTemplate" />
+		<Node Text="ComboBox: Automatic Filtering" NavigateUrl="~/silverlight/#ComboBoxFiltering" ClientTemplateId="SilverlightItemTemplate" />
+
+		<Node Look-CssClass="itm-sl-btm" Enabled="false" />
+	</Node>
+</Nodes>

@@ -1,0 +1,45 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{
+  ViewData["DemoType"] = "ToolBar";
+  ViewData["DemoTitle"] = "Theme Switching";
+  ViewData["CodeFiles"] = "/Views/ToolBar/ThemeSwitching.aspx,/Controllers/ToolBarController.cs,/Views/Shared/ThemeSwitchingCss.ascx,/Views/Shared/ThemeSwitchingInterface.ascx";
+  ViewData["AboutText"] = @"
+<ul>
+<li>ToolBar's built-in theme-switching functionality is showcased here, which is activated via its AutoTheming property.</li>
+<li>The changing of the CSS definitions is done by resetting the active stylesheet.</li>
+<li>The icons are provided in the default set of images in ""icons.png"" of the theme.  The names are tabulated in ""icon-map.png"".</li>
+</ul>
+";    
+}
+@section HeadContent {
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+}
+<table cellspacing="20">
+  <tr valign="top">
+    <td>
+      @(Html.ComponentArt().ToolBar()
+        .ID("ToolBar1")
+        .AutoTheming(true)
+        .Width(Unit.Pixel(320))
+        .Items(i =>
+        {
+          i.Add().ItemType(ToolBarItemType.ToggleRadioCheck).ToggleGroupId("TextAlign").ToolTip("Align Left").IconCssClass("icon-format-alignleft");
+          i.Add().ItemType(ToolBarItemType.ToggleRadioCheck).ToggleGroupId("TextAlign").ToolTip("Center").IconCssClass("icon-format-center");
+          i.Add().ItemType(ToolBarItemType.ToggleRadioCheck).ToggleGroupId("TextAlign").ToolTip("Align Right").IconCssClass("icon-format-alignright");
+          i.Add().ItemType(ToolBarItemType.ToggleRadioCheck).ToggleGroupId("TextAlign").ToolTip("Justify").IconCssClass("icon-format-justify");
+          i.Add().ItemType(ToolBarItemType.Separator);
+          i.Add().ToolTip("Copy").IconCssClass("icon-edit-copy");
+          i.Add().ToolTip("Paste").IconCssClass("icon-edit-cut");
+          i.Add().ToolTip("Paste").IconCssClass("icon-edit-paste");
+          i.Add().ItemType(ToolBarItemType.Separator);
+          i.Add().Text("Undo").IconCssClass("icon-edit-undo");
+          i.Add().Text("Redo").IconCssClass("icon-edit-redo");
+        })
+      )
+    </td>
+    <td>
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml")
+    </td>
+  </tr>
+</table>

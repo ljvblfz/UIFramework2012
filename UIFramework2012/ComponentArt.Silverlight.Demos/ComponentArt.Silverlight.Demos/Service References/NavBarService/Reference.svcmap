@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5a82e654-a126-4140-aadd-faa18e7532a3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3069/SoaNavBar.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SoaNavBar3.xsd" MetadataType="Schema" ID="c64fef44-aa9c-4b74-a684-3cab934014e2" SourceId="1" SourceUrl="http://localhost:3069/SoaNavBar.svc?xsd=xsd1" />
+    <MetadataFile FileName="SoaNavBar1.disco" MetadataType="Disco" ID="78cabe36-85e0-4417-afa4-e9d23197abd0" SourceId="1" SourceUrl="http://localhost:3069/SoaNavBar.svc?disco" />
+    <MetadataFile FileName="SoaNavBar31.xsd" MetadataType="Schema" ID="d1b95f24-09e9-4cb8-837c-b08652ebcdbd" SourceId="1" SourceUrl="http://localhost:3069/SoaNavBar.svc?xsd=xsd2" />
+    <MetadataFile FileName="SoaNavBar2.wsdl" MetadataType="Wsdl" ID="66505723-ae16-4a3b-956c-85853cc23780" SourceId="1" SourceUrl="http://localhost:3069/SoaNavBar.svc?wsdl" />
+    <MetadataFile FileName="SoaNavBar32.xsd" MetadataType="Schema" ID="0d27d976-3b18-4a50-b7d0-9c1b0b8109a3" SourceId="1" SourceUrl="http://localhost:3069/SoaNavBar.svc?xsd=xsd0" />
+    <MetadataFile FileName="SoaNavBar21.wsdl" MetadataType="Wsdl" ID="458b29b8-b1d1-43e4-8127-ae19db32eb92" SourceId="1" SourceUrl="http://localhost:3069/SoaNavBar.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=WPFToolkit"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+>
+    <!-- Begin Black Ice -->
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopGroupBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFffffff" Offset="0"/>
+        <GradientStop Color="#FFffffff" Offset="0.5"/>
+        <GradientStop Color="#FFffffff" Offset="0.504"/>
+        <GradientStop Color="#FFffffff" Offset="0.965"/>
+        <GradientStop Color="#FFffffff" Offset="0.966"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopGroupBorder" Color="#FF000000"/>
+    <!-- TOP LEVEL -->
+    <!-- Split Button -->
+    <!-- normal -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemForeground" Color="Black" />
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFffffff" Offset="0"/>
+        <GradientStop Color="#FFffffff" Offset="0.522"/>
+        <GradientStop Color="#FFffffff" Offset="0.523"/>
+        <GradientStop Color="#FFffffff" Offset="0.975"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemBorder" Color="#00000000"/>
+    <!-- over -->
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemBackgroundOver" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFEAF6FD" Offset="0"/>
+        <GradientStop Color="#FFEAF6FD" Offset="0.005"/>
+        <GradientStop Color="#FFD7EFFC" Offset="0.52"/>
+        <GradientStop Color="#FFBDE6FD" Offset="0.521"/>
+        <GradientStop Color="#FFA6D9F4" Offset="0.975"/>
+        <GradientStop Color="#FFA6D9F4" Offset="0.99"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemBorderOver" Color="#FF3C7FB1"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopSeparatorItemLineTopColor" Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopSeparatorItemLineBottomColor" Color="#FFFFFFFF" />
+    <!-- expanded -->
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemBackgroundExpanded" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#C2E4F6" Offset="0"/>
+        <GradientStop Color="#C2E4F6" Offset="0.005"/>
+        <GradientStop Color="#C2E4F6" Offset="0.52"/>
+        <GradientStop Color="#A9D9F2" Offset="0.521"/>
+        <GradientStop Color="#90CBEB" Offset="0.975"/>
+        <GradientStop Color="#90CBEB" Offset="0.99"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemBorderExpanded" Color="#6E8D9F"/>
+
+
+    <!-- Label Button -->
+    <!-- normal -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelForeground" Color="Black" />
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFffffff" Offset="0"/>
+        <GradientStop Color="#FFffffff" Offset="0.522"/>
+        <GradientStop Color="#FFffffff" Offset="0.523"/>
+        <GradientStop Color="#FFffffff" Offset="0.975"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBorderBrush" Color="#00000000"/>
+    <!-- label over -->
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBackgroundOver" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFEAF6FD" Offset="0"/>
+        <GradientStop Color="#FFEAF6FD" Offset="0.005"/>
+        <GradientStop Color="#FFD7EFFC" Offset="0.52"/>
+        <GradientStop Color="#FFBDE6FD" Offset="0.521"/>
+        <GradientStop Color="#FFA6D9F4" Offset="0.975"/>
+        <GradientStop Color="#FFA6D9F4" Offset="0.99"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBorderOver" Color="#FF3C7FB1"/>
+    <!-- label split over -->
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBackgroundSplitOver" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFF2F2F2" Offset="0"/>
+        <GradientStop Color="#FFF2F2F2" Offset="0.005"/>
+        <GradientStop Color="#FFEAEAEA" Offset="0.52"/>
+        <GradientStop Color="#FFDCDCDC" Offset="0.521"/>
+        <GradientStop Color="#FFCFCFCF" Offset="0.975"/>
+        <GradientStop Color="#FFCFCFCF" Offset="0.99"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBorderSplitOver" Color="#FF3C7FB1"/>
+    <!-- label expanded -->
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBackgroundExpanded" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#C2E4F6" Offset="0"/>
+        <GradientStop Color="#C2E4F6" Offset="0.005"/>
+        <GradientStop Color="#C2E4F6" Offset="0.52"/>
+        <GradientStop Color="#A9D9F2" Offset="0.521"/>
+        <GradientStop Color="#90CBEB" Offset="0.975"/>
+        <GradientStop Color="#90CBEB" Offset="0.99"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBorderExpanded" Color="#6E8D9F"/>
+    <!-- END TOP LEVEL -->
+
+    <!-- SUB LEVEL -->
+    <!-- Separator -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_SeparatorItemBorder" Color="#7F808080"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_SeparatorItemLineTopColor" Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_SeparatorItemLineBottomColor" Color="#FFFFFFFF" />
+    <!-- Group Border -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_SubGroupBorder" Color="#FF000000" />
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_SubGroupBackground" StartPoint="0,100" EndPoint="300,100" SpreadMethod="Pad" MappingMode="Absolute">
+        <GradientStop Color="#FFE3E3E3" Offset="0"/>
+        <GradientStop Color="#FFE3E3E3" Offset="0.00899"/>
+        <GradientStop Color="#FFE3E3E3" Offset="0.009"/>
+        <GradientStop Color="#FFE3E3E3" Offset="0.08999"/>
+        <GradientStop Color="#FFF6F6F6" Offset="0.09"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemForegroundDisabled" Color="DarkRed"/>
+
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemForeground" Color="#FF808080"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemForegroundOver" Color="#FF404040"/>
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_ItemBackgroundNormal" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#00E3E3E3" Offset="0.51"/>
+        <GradientStop Color="#00FEFEFE" Offset="0"/>
+        <GradientStop Color="#00F1F1F1" Offset="0.49"/>
+        <GradientStop Color="#00F6F6F6" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemBorderNormal" Color="#00262626"/>
+
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_ItemBackgroundOver" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFE3E3E3" Offset="0.51"/>
+        <GradientStop Color="#FFFEFEFE" Offset="0"/>
+        <GradientStop Color="#FFF1F1F1" Offset="0.49"/>
+        <GradientStop Color="#FFF6F6F6" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemBorderOver" Color="#FF262626"/>
+    <!-- END SUB LEVEL -->
+
+    <!-- BreadCrumb ControlTemplate -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_MainBorderMargin">1</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_MainBorderThickness">1</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_MainBorderPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_MainBorderCornerRadius">0</sys:String>
+    <!-- /BreadCrumb ControlTemplate -->
+
+    <!-- BreadCrumbItem LevelTop VisualState-->
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelItemBorderThickness">.5,0,.5,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelItemCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelItemPadding">3,0,3,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelItemMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_BreadCrumb_TopLevelFontSize">12</sys:Double>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelFontWeight">SemiBold</sys:String>
+    <!-- /BreadCrumbItem LevelTop VisualState-->
+
+    <!-- BreadCrumbItem LabelGrid -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelGridMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelTextMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelTextBorder">.5,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelTextPadding">3,0,3,0</sys:String>
+
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelBorderThickness">.5,0,.5,0</sys:String>
+
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelCornerRadius">0</sys:String>
+    <!-- /BreadCrumbItem LabelGrid -->
+
+    <!-- BreadCrumbItem ItemGrid -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_ItemGridMargin">0</sys:String>
+    <!-- /BreadCrumbItem ItemGrid -->
+
+    <!-- BreadCrumbItem RectLeft -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectLeftPadding">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectLeftMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectLeftBorderThickness">.5,.5,0,.5</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectLeftCornerRadius">0</sys:String>
+    <!-- /BreadCrumbItem RectLeft -->
+
+    <!-- BreadCrumbItem RectMiddle -->
+    <sys:Double x:Key="ComponentArt_BreadCrumb_BreadCrumbItemMinWidth">0</sys:Double>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddlePadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleBorderThickness">0,.5,0,.5</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleStackMargin">0,3,0,3</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleTextBlockPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleTextBlockMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_BreadCrumb_SubLevelFontSize">11</sys:Double>
+    <sys:String x:Key="ComponentArt_BreadCrumb_SubLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_SubLevelFontWeight">Normal</sys:String>
+    <!-- /BreadCrumbItem RectMiddle -->
+
+    <!-- BreadCrumbItem RectRight -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectRightPadding">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectRightMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectRightBorderThickness">0,.5,.5,.5</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectRightCornerRadius">0</sys:String>
+    <sys:Double x:Key="ComponentArt_BreadCrumb_SeparatorLineHeight">1</sys:Double>
+    <sys:Int32 x:Key="ComponentArt_BreadCrumb_SeparatorLineColumnSpan">3</sys:Int32>
+    <sys:Int32 x:Key="ComponentArt_BreadCrumb_SeparatorLineColumn">0</sys:Int32>
+    <sys:String x:Key="ComponentArt_BreadCrumb_SeparatorLineMargin">0,1,0,0</sys:String>
+    <!-- /BreadCrumbItem RectRight -->
+
+    <!-- BreadCrumbItem Popup -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_PopupBorderPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_PopupBorderThickness">1</sys:String>
+    <sys:Double x:Key="ComponentArt_BreadCrumb_PopupMinWidth">60</sys:Double>
+    <sys:String x:Key="ComponentArt_BreadCrumb_PopupCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_PopupMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopGroupPopupMargin">1,0,0,0</sys:String>
+    <!-- /BreadCrumbItem Popup ComponentArt_BreadCrumb_AbsorbedButton-->
+
+    <ControlTemplate x:Key="ComponentArt_BreadCrumb_ExpandButton" >
+        <StackPanel>
+            <vsm:VisualStateManager.VisualStateGroups>
+                <vsm:VisualStateGroup x:Name="CommonStates">
+                    <vsm:VisualState x:Name="Expand" >
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ExpandBorder" Storyboard.TargetProperty="Visibility" Duration="0">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AbsorbedBorder" Storyboard.TargetProperty="Visibility" Duration="0">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </vsm:VisualState>
+                    <vsm:VisualState x:Name="Absorb" >
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ExpandBorder" Storyboard.TargetProperty="Visibility" Duration="0">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AbsorbedBorder" Storyboard.TargetProperty="Visibility" Duration="0">
+                                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </vsm:VisualState>
+                </vsm:VisualStateGroup>
+            </vsm:VisualStateManager.VisualStateGroups>
+            <Border x:Name="ExpandBorder" Padding="4,4,4,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                <Path Width="4" Height="7" Fill="#ff000000" Stretch="Fill" Stroke="#00000000" Data="M0,0 L0,8 4,4 z" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <Border x:Name="AbsorbedBorder" Padding="2,4,2,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal">
+                    <Path Width="4" Height="8" Fill="#00000000" Stretch="Fill" Stroke="#ff000000" Data="M4,0 L0,4 L4,8" 
+                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Path Width="4" Height="8" Fill="#00000000" Stretch="Fill" Stroke="#ff000000" Data="M4,0 L0,4 L4,8" 
+                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ControlTemplate>
+
+    <!-- Scroll -->
+    <Color x:Key="ComponentArt_BreadCrumb_ScrollBtnNormalItemBorder">#FF808080</Color>
+    <Color x:Key="ComponentArt_BreadCrumb_ScrollBtnNormalItemInnerBorder">#FF808080</Color>
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_ScrollBtnBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFffffff" Offset="0"/>
+        <GradientStop Color="#FFffffff" Offset="0.522"/>
+        <GradientStop Color="#FFffffff" Offset="0.523"/>
+        <GradientStop Color="#FFffffff" Offset="0.975"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="ComponentArt_BreadCrumb_ScrollBtnOverItemBorder">#FF808080</Color>
+    <Color x:Key="ComponentArt_BreadCrumb_ScrollBtnOverItemInnerBorder">#FF808080</Color>
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_ScrollBtnBackgroundOver" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#EAF6FD" Offset="0"/>
+        <GradientStop Color="#EAF6FD" Offset="0.005"/>
+        <GradientStop Color="#D7EFFC" Offset="0.52"/>
+        <GradientStop Color="#BDE6FD" Offset="0.521"/>
+        <GradientStop Color="#A6D9F4" Offset="0.975"/>
+        <GradientStop Color="#A6D9F4" Offset="0.99"/>
+    </LinearGradientBrush>
+
+    <Color x:Key="ComponentArt_BreadCrumb_ScrollBtnPressedItemBorder" >#FF808080</Color>
+    <Color x:Key="ComponentArt_BreadCrumb_ScrollBtnPressedItemInnerBorder" >#FF808080</Color>
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_ScrollBtnBackgroundPressed" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFEAF6FD" Offset="0"/>
+        <GradientStop Color="#FFEAF6FD" Offset="0.005"/>
+        <GradientStop Color="#FFD7EFFC" Offset="0.52"/>
+        <GradientStop Color="#FFBDE6FD" Offset="0.521"/>
+        <GradientStop Color="#FFA6D9F4" Offset="0.975"/>
+        <GradientStop Color="#FFA6D9F4" Offset="0.99"/>
+    </LinearGradientBrush>
+
+    <ControlTemplate x:Key="ComponentArt_BreadCrumb_ScrollUpButton" >
+        <Grid x:Name="RootElement">
+            <vsm:VisualStateManager.VisualStateGroups>
+                <vsm:VisualStateGroup x:Name="CommonStates">
+                    <vsm:VisualState x:Name="MouseOver" >
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.1" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnOverItemBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.1" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnOverItemInnerBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="NormalRect" Storyboard.TargetProperty="Opacity" To="0" />
+                        </Storyboard>
+                    </vsm:VisualState>
+                    <vsm:VisualState x:Name="Normal" >
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.1" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnNormalItemBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.1" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnNormalItemInnerBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimation Duration="00:00:00.1" Storyboard.TargetName="NormalRect" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation Duration="00:00:00.1" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="0" />
+                            <DoubleAnimation Duration="00:00:00.0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="0" />
+                        </Storyboard>
+                    </vsm:VisualState>
+                    <vsm:VisualState x:Name="Pressed" >
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.0" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnPressedItemBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.0" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnPressedItemInnerBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimation AutoReverse="True" Duration="00:00:00.0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation AutoReverse="True" Duration="00:00:00.0" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation Duration="00:00:00.0" Storyboard.TargetName="NormalRect" Storyboard.TargetProperty="Opacity" To="0" />
+                        </Storyboard>
+                    </vsm:VisualState>
+                    <vsm:VisualState x:Name="Disabled" >
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnNormalItemBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnNormalItemInnerBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="Opacity" To=".55"/>
+                        </Storyboard>
+                    </vsm:VisualState>
+                </vsm:VisualStateGroup>
+            </vsm:VisualStateManager.VisualStateGroups>
+            <Border x:Name="BackgroundBorder" Padding="0" BorderBrush="Transparent" HorizontalAlignment="Stretch" BorderThickness=".25" CornerRadius="0" Margin="0,0,0,0">
+                <Border x:Name="InnerBorder" BorderBrush="Transparent" HorizontalAlignment="Stretch" BorderThickness=".25" CornerRadius="0">
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <Rectangle RadiusX="0" RadiusY="0" x:Name="NormalRect" Opacity="1" Fill="{StaticResource ComponentArt_BreadCrumb_ScrollBtnBackground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                        <Rectangle RadiusX="0" RadiusY="0" x:Name="MouseOverRect" Opacity="0" Fill="{StaticResource ComponentArt_BreadCrumb_ScrollBtnBackgroundOver}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                        <Rectangle RadiusX="0" RadiusY="0" x:Name="PressedRect" Opacity="0" Fill="{StaticResource ComponentArt_BreadCrumb_ScrollBtnBackgroundPressed}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0,0,0,4">
+                            <Path Width="4" Height="7" Fill="#ff000000" Stretch="Fill" Stroke="#00000000" Data="M0,0 L0,8 4,4 z" 
+                                    HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Path.RenderTransform>
+                                    <RotateTransform CenterX="4" CenterY="4" Angle="270"></RotateTransform>
+                                </Path.RenderTransform>
+                            </Path>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ComponentArt_BreadCrumb_ScrollDownButton">
+        <Grid x:Name="RootElement">
+            <vsm:VisualStateManager.VisualStateGroups>
+                <vsm:VisualStateGroup x:Name="CommonStates">
+                    <vsm:VisualState x:Name="MouseOver" >
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.1" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnOverItemBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.1" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnOverItemInnerBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="NormalRect" Storyboard.TargetProperty="Opacity" To="0" />
+                        </Storyboard>
+                    </vsm:VisualState>
+                    <vsm:VisualState x:Name="Normal" >
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.1" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnNormalItemBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.1" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.1" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnNormalItemInnerBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimation Duration="00:00:00.1" Storyboard.TargetName="NormalRect" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation Duration="00:00:00.1" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="0" />
+                            <DoubleAnimation Duration="00:00:00.0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="0" />
+                        </Storyboard>
+                    </vsm:VisualState>
+                    <vsm:VisualState x:Name="Pressed" >
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.0" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnPressedItemBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00.0" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnPressedItemInnerBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimation AutoReverse="True" Duration="00:00:00.0" Storyboard.TargetName="PressedRect" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation AutoReverse="True" Duration="00:00:00.0" Storyboard.TargetName="MouseOverRect" Storyboard.TargetProperty="Opacity" To="1" />
+                            <DoubleAnimation Duration="00:00:00.0" Storyboard.TargetName="NormalRect" Storyboard.TargetProperty="Opacity" To="0" />
+                        </Storyboard>
+                    </vsm:VisualState>
+                    <vsm:VisualState x:Name="Disabled" >
+                        <Storyboard>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00" Storyboard.TargetName="BackgroundBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnNormalItemBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                <SplineColorKeyFrame KeyTime="00:00:00" Value="{StaticResource ComponentArt_BreadCrumb_ScrollBtnNormalItemInnerBorder}"/>
+                            </ColorAnimationUsingKeyFrames>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="Opacity" To=".55"/>
+                        </Storyboard>
+                    </vsm:VisualState>
+                </vsm:VisualStateGroup>
+            </vsm:VisualStateManager.VisualStateGroups>
+            <Border x:Name="BackgroundBorder" Padding="0" BorderBrush="Transparent" HorizontalAlignment="Stretch" BorderThickness=".25" CornerRadius="0" Margin="0,0,0,0">
+                <Border x:Name="InnerBorder" BorderBrush="Transparent" HorizontalAlignment="Stretch" BorderThickness=".25" CornerRadius="0">
+                    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                        <Rectangle RadiusX="0" RadiusY="0" x:Name="NormalRect" Opacity="1" Fill="{StaticResource ComponentArt_BreadCrumb_ScrollBtnBackground}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                        <Rectangle RadiusX="0" RadiusY="0" x:Name="MouseOverRect" Opacity="0" Fill="{StaticResource ComponentArt_BreadCrumb_ScrollBtnBackgroundOver}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                        <Rectangle RadiusX="0" RadiusY="0" x:Name="PressedRect" Opacity="0" Fill="{StaticResource ComponentArt_BreadCrumb_ScrollBtnBackgroundPressed}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0,4,0,0">
+                            <Path Width="4" Height="7" Fill="#ff000000" Stretch="Fill" Stroke="#00000000" Data="M0,0 L0,8 4,4 z" 
+                                  HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Path.RenderTransform>
+                                    <RotateTransform CenterX="4" CenterY="4" Angle="90"></RotateTransform>
+                                </Path.RenderTransform>
+                            </Path>
+                        </Border>
+                    </Grid>
+                </Border>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+    <!-- End Scroll -->
+
+    <!-- End Black Ice -->
+
+</ResourceDictionary>

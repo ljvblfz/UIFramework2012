@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- DataGrid -->
+<TreeView>
+
+    <TreeViewNode Header="Highlights" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Core Features" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridCoreFeatures"  />
+      <TreeViewNode Header="Hierarchy" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridHierarchyHighlight"  />
+      <TreeViewNode Header="Editing" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridEditing"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Rows &amp; Columns" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Row Details" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridRowDetails" />
+      <TreeViewNode Header="Column Resizing" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridColumnResizing" />
+      <TreeViewNode Header="Column Reordering" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridColumnReordering" />
+      <TreeViewNode Header="Data Cell Templates" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridDataCellTemplates"  />
+      <TreeViewNode Header="Runtime Column Creation" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridProgrammaticCreation"  />
+    </TreeViewNode>
+  
+    <TreeViewNode Header="Paging &amp; Scrolling" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Paging (Client)" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridClientOperation"  />
+      <TreeViewNode Header="Paging (Web Service)" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridWebServiceOperation"  />
+      <TreeViewNode Header="Scrolling (Client)" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridScrolling" />
+      <TreeViewNode Header="Scrolling (Web Service)" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridSoaScrolling"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Grouping &amp; Filtering" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Grouping" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridGrouping" />
+      <TreeViewNode Header="Group Heading Templates" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridGroupTotals"  />
+      <TreeViewNode Header="Filtering (Client)" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridClientFiltering"  />
+      <TreeViewNode Header="Filtering (Web Service)" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridSoaFiltering"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Data Binding" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-programming.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Client Mode" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridClientOperation"  />
+      <TreeViewNode Header="Callback Mode (Web Service)" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridWebServiceOperation"  />
+      <TreeViewNode Header="SOA.UI Automatic" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridSoaAutoPilot"  />
+      <TreeViewNode Header="ObservableCollection" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridObservableCollection"  />
+      <TreeViewNode Header="Hierarchy" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridHierarchy" />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Editing" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-programming.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Basic Editing" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridEditing"  />
+      <TreeViewNode Header="SOA.UI Editing" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridSoaEditing"  />
+      <TreeViewNode Header="External Editing Form" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridExternalEditing"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Themes" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-design.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridDesignBlackIce" />
+      <TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridDesignArcticWhite" />
+      <TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridDesignOffice2003" />
+      <TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridDesignOffice2007" />
+      <TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,2,0,2" Tag="DataGridDesignWindows7" />
+    </TreeViewNode>
+</TreeView>
+<!-- DataGrid -->

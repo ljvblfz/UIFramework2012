@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Data;assembly=ComponentArt.Win.UI.Data"
+>
+
+  <Style TargetType="Rectangle" x:Key="ComponentArt_DataGrid_RowBottomLineRectangle">
+    <Setter Property="Height" Value="2" />
+    <Setter Property="Fill">
+      <Setter.Value>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="#FF000000" />
+          <GradientStop Color="#FF666666" Offset="1" />
+        </LinearGradientBrush>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_UnloadedBackground" Color="#FF666666" />
+  
+  <SolidColorBrush x:Key="ComponentArt_DataGrid_LoadedBackground" Color="#FF333333" />
+  
+</ResourceDictionary>
+  
+  

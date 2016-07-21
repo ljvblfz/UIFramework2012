@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.HtmlEditorAPI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArtLayout="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:ComponentArtInput="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common">
+  <Grid x:Name="LayoutRoot">
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="HtmlEditor" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="HtmlEditor API" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo illustrates usage of the HtmlEditor API." />
+    <TextBlock x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\htmleditor\HtmlEditorAPI.xaml,\source\controls\htmleditor\HtmlEditorAPI.xaml.cs" />
+            <StackPanel Orientation="Horizontal">
+            <ComponentArtInput:HtmlEditor 
+            Width="500"
+            Height="500"
+            ToolBarHeight="60"
+            SupportUri="ClientBin/Controls/HtmlEditor/ComponentArt.Silverlight.Support.HtmlEditor.xap"
+            ToolBarUri="HtmlEditor.ToolBar.xml"
+            x:Name="HtmlEditor1" 
+            HtmlContent="&lt;h2&gt;ComponentArt HtmlEditor for Silverlight&lt;/h2&gt;&lt;h3&gt;The New Lightweight, Feature-packed and Easy to Configure Web Editing Control &lt;/h3&gt;&lt;div&gt;We are excited to announce the imminent release of ComponentArt HtmlEditor for Silverlight. Major features include:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Supports the most commonly used Html formatting options&lt;/li&gt;&lt;li&gt;Smooth, responsive and highly customizable UI&lt;/li&gt;&lt;li&gt;Powerful client-side API&lt;/li&gt;&lt;li&gt;And much more...&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;For more information check &lt;a title=&quot;http://www.componentart.com/&quot; href=&quot;http://www.componentart.com/&quot;&gt;ComponentArt.com&lt;/a&gt; or subscribe to the ComponentArt &lt;a title=&quot;http://www.componentart.com/publish/news.xml&quot; href=&quot;http://www.componentart.com/publish/news.xml&quot;&gt;news RSS feed&lt;/a&gt;.&lt;/div&gt;"
+            >
+        </ComponentArtInput:HtmlEditor>
+        <Border HorizontalAlignment="Left" Width="300" Margin="10,0,0,0" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Margin="10" Text="API Control:" FontSize="14"/>
+                    <Line Fill="#CCCCCC" Height="1" Stroke="#CCCCCC" StrokeThickness="10" X1="10" Y1="1" X2="290" Y2="1"/>
+                    <Line Fill="#FFFFFF" Height="1" Stroke="#FFFFFF" StrokeThickness="10" X1="10" Y1="1" X2="290" Y2="1"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Text="&lt;STRONG&gt;Pasted Html&lt;/STRONG&gt; " x:Name="html" Width="150" Height="24" Margin="10,10,0,10" />
+                        <Button Content="Paste Html" Width="120" Click="Paste_Click" Margin="10,10,0,10" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="selection" Width="150" Height="24" Margin="10,10,0,10" />
+                        <Button Content="Get Selected Html" Width="120" Click="Selection_Click" Margin="10,10,0,10" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox x:Name="selectiontext" Width="150" Height="24" Margin="10,10,0,10" />
+                        <Button Content="Get Selected Text" Width="120" Click="SelectionText_Click" Margin="10,10,0,10" />
+                    </StackPanel>
+                    
+                    <Line Fill="#CCCCCC" Height="1" Stroke="#CCCCCC" StrokeThickness="10" X1="10" Y1="1" X2="290" Y2="1"/>
+                    <Line Fill="#FFFFFF" Height="1" Stroke="#FFFFFF" StrokeThickness="10" X1="10" Y1="1" X2="290" Y2="1"/>
+
+                    <TextBox x:Name="htmlcontent" HorizontalAlignment="Stretch" Height="100" Margin="10" />
+                    <Button Content="Get Html Content" HorizontalAlignment="Stretch" Click="HtmlContent_Click" Margin="10,5,10,10" />
+                    
+                    <Line Fill="#CCCCCC" Height="1" Stroke="#CCCCCC" StrokeThickness="10" X1="10" Y1="1" X2="290" Y2="1"/>
+                    <Line Fill="#FFFFFF" Height="1" Stroke="#FFFFFF" StrokeThickness="10" X1="10" Y1="1" X2="290" Y2="1"/>
+
+                    <TextBox x:Name="textcontent" HorizontalAlignment="Stretch" Height="100" Margin="10" />
+                    <Button Content="Get Text Content" HorizontalAlignment="Stretch" Click="TextContent_Click" Margin="10,5,10,10" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

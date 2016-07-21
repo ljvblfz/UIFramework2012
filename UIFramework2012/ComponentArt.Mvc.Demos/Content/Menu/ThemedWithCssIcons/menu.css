@@ -1,0 +1,283 @@
+/* Background gradient */
+.cart-menu-group
+{
+  background-image:url(images/group_background.gif) !important;
+}
+
+/* Separator line */
+.cart-menu-sub-separator div.cart-outer
+{
+  background:transparent url(images/break_bg.gif) !important;
+  height:1px !important;
+}
+.cart-menu-sub-separator div.cart-outer div.cart-inner
+{
+  display:none;
+}
+
+/* Icons */
+.icon_new
+{
+  background:transparent url(images/icon_new.gif) no-repeat -2px 0 !important;
+}
+.icon_open
+{
+  background:transparent url(images/icon_open.gif) no-repeat -2px 0 !important;
+}
+.icon_mailRecipient
+{
+  background:transparent url(images/icon_mailRecipient.gif) no-repeat -2px 0 !important;
+}
+.icon_mailRecipientReview
+{
+  background:transparent url(images/icon_mailRecipientReview.gif) no-repeat -2px 0 !important;
+}
+.icon_mailRecipientAttachment
+{
+  background:transparent url(images/icon_mailRecipientAttachment.gif) no-repeat -2px 0 !important;
+}
+.icon_routingRecipient
+{
+  background:transparent url(images/icon_routingRecipient.gif) no-repeat -2px 0 !important;
+}
+.icon_exchangeFolder
+{
+  background:transparent url(images/icon_exchangeFolder.gif) no-repeat -2px 0 !important;
+}
+.icon_powerPoint
+{
+  background:transparent url(images/icon_powerPoint.gif) no-repeat -2px 0 !important;
+}
+.icon_save
+{
+  background:transparent url(images/icon_save.gif) no-repeat -2px 0 !important;
+}
+.icon_saveAsWebPage
+{
+  background:transparent url(images/icon_saveAsWebPage.gif) no-repeat -2px 0 !important;
+}
+.icon_fileSearch
+{
+  background:transparent url(images/icon_fileSearch.gif) no-repeat -2px 0 !important;
+}
+.icon_printPreview
+{
+  background:transparent url(images/icon_printPreview.gif) no-repeat -2px 0 !important;
+}
+.icon_print
+{
+  background:transparent url(images/icon_print.gif) no-repeat -2px 0 !important;
+}
+.icon_cut
+{
+  background:transparent url(images/icon_cut.gif) no-repeat -2px 0 !important;
+}
+.icon_copy
+{
+  background:transparent url(images/icon_copy.gif) no-repeat -2px 0 !important;
+}
+.icon_clipboard
+{
+  background:transparent url(images/icon_clipboard.gif) no-repeat -2px 0 !important;
+}
+.icon_paste
+{
+  background:transparent url(images/icon_paste.gif) no-repeat -2px 0 !important;
+}
+.icon_find
+{
+  background:transparent url(images/icon_find.gif) no-repeat -2px 0 !important;
+}
+.icon_normal
+{
+  background:transparent url(images/icon_normal.gif) no-repeat -2px 0 !important;
+}
+.icon_webLayout
+{
+  background:transparent url(images/icon_webLayout.gif) no-repeat -2px 0 !important;
+}
+.icon_readingLayout
+{
+  background:transparent url(images/icon_readingLayout.gif) no-repeat -2px 0 !important;
+}
+.icon_outline
+{
+  background:transparent url(images/icon_outline.gif) no-repeat -2px 0 !important;
+}
+.icon_documentMap
+{
+  background:transparent url(images/icon_documentMap.gif) no-repeat -2px 0 !important;
+}
+.icon_thumbnails
+{
+  background:transparent url(images/icon_thumbnails.gif) no-repeat -2px 0 !important;
+}
+.icon_headerFooter
+{
+  background:transparent url(images/icon_headerFooter.gif) no-repeat -2px 0 !important;
+}
+.icon_font
+{
+  background:transparent url(images/icon_font.gif) no-repeat -2px 0 !important;
+}
+.icon_paragraph
+{
+  background:transparent url(images/icon_paragraph.gif) no-repeat -2px 0 !important;
+}
+.icon_bullets
+{
+  background:transparent url(images/icon_bullets.gif) no-repeat -2px 0 !important;
+}
+.icon_tableOfContents
+{
+  background:transparent url(images/icon_tableOfContents.gif) no-repeat -2px 0 !important;
+}
+.icon_autoFormat
+{
+  background:transparent url(images/icon_autoFormat.gif) no-repeat -2px 0 !important;
+}
+.icon_stylesAndFormatting
+{
+  background:transparent url(images/icon_stylesAndFormatting.gif) no-repeat -2px 0 !important;
+}
+.icon_revealFormatting
+{
+  background:transparent url(images/icon_revealFormatting.gif) no-repeat -2px 0 !important;
+}
+.icon_help
+{
+  background:transparent url(images/icon_help.gif) no-repeat -2px 0 !important;
+}
+
+.icon_new:hover
+{
+  background:transparent url(images/icon_new_over.gif) no-repeat -2px 0 !important;
+}
+.icon_open:hover
+{
+  background:transparent url(images/icon_open_over.gif) no-repeat -2px 0 !important;
+}
+.icon_mailRecipient:hover
+{
+  background:transparent url(images/icon_mailRecipient_over.gif) no-repeat -2px 0 !important;
+}
+.icon_mailRecipientReview:hover
+{
+  background:transparent url(images/icon_mailRecipientReview_over.gif) no-repeat -2px 0 !important;
+}
+.icon_mailRecipientAttachment:hover
+{
+  background:transparent url(images/icon_mailRecipientAttachment_over.gif) no-repeat -2px 0 !important;
+}
+.icon_routingRecipient:hover
+{
+  background:transparent url(images/icon_routingRecipient_over.gif) no-repeat -2px 0 !important;
+}
+.icon_exchangeFolder:hover
+{
+  background:transparent url(images/icon_exchangeFolder_over.gif) no-repeat -2px 0 !important;
+}
+.icon_powerPoint:hover
+{
+  background:transparent url(images/icon_powerPoint_over.gif) no-repeat -2px 0 !important;
+}
+.icon_save:hover
+{
+  background:transparent url(images/icon_save_over.gif) no-repeat -2px 0 !important;
+}
+.icon_saveAsWebPage:hover
+{
+  background:transparent url(images/icon_saveAsWebPage_over.gif) no-repeat -2px 0 !important;
+}
+.icon_fileSearch:hover
+{
+  background:transparent url(images/icon_fileSearch_over.gif) no-repeat -2px 0 !important;
+}
+.icon_printPreview:hover
+{
+  background:transparent url(images/icon_printPreview_over.gif) no-repeat -2px 0 !important;
+}
+.icon_print:hover
+{
+  background:transparent url(images/icon_print_over.gif) no-repeat -2px 0 !important;
+}
+.icon_cut:hover
+{
+  background:transparent url(images/icon_cut_over.gif) no-repeat -2px 0 !important;
+}
+.icon_copy:hover
+{
+  background:transparent url(images/icon_copy_over.gif) no-repeat -2px 0 !important;
+}
+.icon_clipboard:hover
+{
+  background:transparent url(images/icon_clipboard_over.gif) no-repeat -2px 0 !important;
+}
+.icon_paste:hover
+{
+  background:transparent url(images/icon_paste_over.gif) no-repeat -2px 0 !important;
+}
+.icon_find:hover
+{
+  background:transparent url(images/icon_find_over.gif) no-repeat -2px 0 !important;
+}
+.icon_normal:hover
+{
+  background:transparent url(images/icon_normal_over.gif) no-repeat -2px 0 !important;
+}
+.icon_webLayout:hover
+{
+  background:transparent url(images/icon_webLayout_over.gif) no-repeat -2px 0 !important;
+}
+.icon_readingLayout:hover
+{
+  background:transparent url(images/icon_readingLayout_over.gif) no-repeat -2px 0 !important;
+}
+.icon_outline:hover
+{
+  background:transparent url(images/icon_outline_over.gif) no-repeat -2px 0 !important;
+}
+.icon_documentMap:hover
+{
+  background:transparent url(images/icon_documentMap_over.gif) no-repeat -2px 0 !important;
+}
+.icon_thumbnails:hover
+{
+  background:transparent url(images/icon_thumbnails_over.gif) no-repeat -2px 0 !important;
+}
+.icon_headerFooter:hover
+{
+  background:transparent url(images/icon_headerFooter_over.gif) no-repeat -2px 0 !important;
+}
+.icon_font:hover
+{
+  background:transparent url(images/icon_font_over.gif) no-repeat -2px 0 !important;
+}
+.icon_paragraph:hover
+{
+  background:transparent url(images/icon_paragraph_over.gif) no-repeat -2px 0 !important;
+}
+.icon_bullets:hover
+{
+  background:transparent url(images/icon_bullets_over.gif) no-repeat -2px 0 !important;
+}
+.icon_tableOfContents:hover
+{
+  background:transparent url(images/icon_tableOfContents_over.gif) no-repeat -2px 0 !important;
+}
+.icon_autoFormat:hover
+{
+  background:transparent url(images/icon_autoFormat_over.gif) no-repeat -2px 0 !important;
+}
+.icon_stylesAndFormatting:hover
+{
+  background:transparent url(images/icon_stylesAndFormatting_over.gif) no-repeat -2px 0 !important;
+}
+.icon_revealFormatting:hover
+{
+  background:transparent url(images/icon_revealFormatting_over.gif) no-repeat -2px 0 !important;
+}
+.icon_help:hover
+{
+  background:transparent url(images/icon_help_over.gif) no-repeat -2px 0 !important;
+}

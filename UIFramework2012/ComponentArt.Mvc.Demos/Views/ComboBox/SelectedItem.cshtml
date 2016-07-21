@@ -1,0 +1,193 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+
+@{ 
+  ViewData["DemoType"] = "ComboBox";
+  ViewData["DemoTitle"] = "Posting to Controller";
+  ViewData["CodeFiles"] = "/Views/ComboBox/SelectedItem.aspx,/Controllers/ComboBoxController.cs,/Controllers/ComboBox/SelectedItemController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+  <li>This sample showcases ComboBox's ability to post its selection to an MVC controller and retrieve it using helper extensions.</li>
+</ul>
+";    
+}
+
+@section HeadContent {
+  <script type="text/javascript">
+    function get_root()
+    {
+      return '';
+    }
+  </script>
+  <link href="@Url.Content("~/Content/ComboBox/BlackIce/style.css")" rel="stylesheet" type="text/css" />
+}
+
+<form id="frm_Main1" action="" method="post">
+<p style="padding: 0 0 4px 0;">
+  'Simple' ComboBox:</p>
+<div style="margin-bottom: 15px;">
+  @* Standard combobox *@
+  @(Html.ComponentArt().ComboBox()
+    .ID("ComboBox1")
+    .Width(192)
+    .Height(20)
+    .AutoHighlight(false)
+    .AutoComplete(true)
+    .AutoFilter(true)
+    .DataTextField("CountryName")
+    .DataValueField("CountryCode")
+    .ItemCssClass("ddn-item")
+    .ItemHoverCssClass("ddn-item-hover")
+    .CssClass("cmb")
+    .HoverCssClass("cmb-hover")
+    .TextBoxCssClass("txt")
+    .DropHoverImageUrl("~/Content/ComboBox/BlackIce/images/ddn-hover.png")
+    .DropImageUrl("~/Content/ComboBox/BlackIce/images/ddn.png")
+    .DropDownResizingMode(ComboBoxResizingMode.Bottom)
+    .DropDownWidth(190)
+    .DropDownHeight(300)
+    .DropDownCssClass("ddn")
+    .DropDownContentCssClass("ddn-con")
+    .DropDownFooter(@"
+<div class=""ddn-ftr""></div>
+")
+    .SelectedIndex((int)ViewData["SelectedIndex1"])
+)
+  @* /Standard combobox *@
+</div>
+<p style="padding: 0 0 4px 0;">
+  ClientTemplate ComboBox #1:</p>
+<div style="margin-bottom: 15px;">
+  @* 'Style' combobox *@
+  @(Html.ComponentArt().ComboBox()
+    .ID("ComboBox2")
+    .Width(192)
+    .Height(20)
+    .AutoHighlight(false)
+    .AutoComplete(true)
+    .AutoFilter(true)
+    .ItemCssClass("ddn-item")
+    .ItemHoverCssClass("ddn-item-hover")
+    .CssClass("cmb")
+    .HoverCssClass("cmb-hover")
+    .TextBoxCssClass("txt")
+    .DropHoverImageUrl("~/Content/ComboBox/BlackIce/images/ddn-hover.png")
+    .DropImageUrl("~/Content/ComboBox/BlackIce/images/ddn.png")
+    .DropDownResizingMode(ComboBoxResizingMode.Bottom)
+    .DropDownWidth(190)
+    .DropDownHeight(150)
+    .DropDownCssClass("ddn")
+    .DropDownContentCssClass("style")
+    .DropDownFooter(@"
+    <div class=""ddn-ftr""></div>
+")
+    .Items(i =>
+      {
+        i.Add().ClientTemplateId("StyleItemTemplate").Text("Normal").Value("");
+        i.Add().Enabled(false).CssClass("brk");
+        i.Add().ClientTemplateId("StyleItemTemplate").Text("Heading 1").Value("font-size:18px;font-weight:bold;color:#800000;");
+        i.Add().Enabled(false).CssClass("brk");
+        i.Add().ClientTemplateId("StyleItemTemplate").Text("Heading 2").Value("font-size:15px;font-weight:bold;color:#000;");
+        i.Add().Enabled(false).CssClass("brk");
+        i.Add().ClientTemplateId("StyleItemTemplate").Text("Heading 3").Value("font-size:12px;font-weight:bold;font-style:italic;");
+      })
+    .ClientTemplates(t =>
+      {
+        t.Add().ID("StyleItemTemplate").Content(@"
+        <span style=""float:left;padding-left:40px;## DataItem.get_value() ##"">## DataItem.get_text() ##</span>            
+");
+      })
+    .SelectedIndex((int)ViewData["SelectedIndex2"])
+)
+  @* /'Style' combobox *@
+</div>
+<p style="padding: 0 0 4px 0;">
+  ClientTemplate ComboBox #2:</p>
+<div>
+  @* 'Font' combobox *@
+  @(Html.ComponentArt().ComboBox()
+    .ID("ComboBox3")
+    .Width(192)
+    .Height(20)
+    .AutoHighlight(false)
+    .AutoComplete(true)
+    .AutoFilter(true)
+    .ItemClientTemplateId("FontFaceItemTemplate")
+    .ItemCssClass("ddn-item")
+    .ItemHoverCssClass("ddn-item-hover")
+    .CssClass("cmb")
+    .HoverCssClass("cmb-hover")
+    .TextBoxCssClass("txt")
+    .DropHoverImageUrl("~/Content/ComboBox/BlackIce/images/ddn-hover.png")
+    .DropImageUrl("~/Content/ComboBox/BlackIce/images/ddn.png")
+    .DropDownResizingMode(ComboBoxResizingMode.Bottom)
+    .DropDownWidth(190)
+    .DropDownHeight(160)
+    .DropDownCssClass("ddn")
+    .DropDownContentCssClass("font")
+    .DropDownFooter(@"
+    <div class=""ddn-ftr""></div>
+")
+    .Items(i =>
+      {
+        i.Add().Text("Arial").Value("Arial");
+        i.Add().Text("Arial Black").Value("'Arial Black'");
+        i.Add().Text("Comic Sans MS").Value("'Comic Sans MS'");
+        i.Add().Text("Courier New").Value("Courier New");
+        i.Add().Text("Garamond").Value("Garamond");
+        i.Add().Text("Georgia").Value("Georgia");
+        i.Add().Text("Tahoma").Value("Tahoma");
+        i.Add().Text("Times New Roman").Value("'Times New Roman'");
+        i.Add().Text("Trebuchet MS").Value("'Trebuchet MS'");
+        i.Add().Text("Verdana").Value("Verdana");
+      })
+    .ClientTemplates(t =>
+      {
+        t.Add().ID("FontFaceItemTemplate").Content(@"
+        <img src=""## get_root() ##/Content/ComboBox/BlackIce/images/font.png"" width=""12"" height=""12"" class=""icon"" alt=""TrueType icon"" title=""TrueType icon"" />
+				<span style=""float:left;font-family:## DataItem.get_value() ## !important;font-size:11px;vertical-align:middle;line-height:22px;font-weight:normal;"">## DataItem.get_text() ##</span>
+");
+      })
+    .SelectedIndex((int)ViewData["SelectedIndex3"])
+)
+  @* /'Font' combobox *@
+</div>
+<br />
+<br />
+<br />
+<br />
+Selected Item in ComboBox #1: <b>
+  @if (@ViewData["SelectedItem1"] == null)
+  {
+    @:none
+}
+  else
+  {
+    @((ViewData["SelectedItem1"] as ComboBoxItem).Text)
+  }
+</b>
+<br />
+Selected Item in ComboBox #2: <b>
+  @if (@ViewData["SelectedItem2"] == null)
+  {
+    @:none
+}
+  else
+  {
+    @((ViewData["SelectedItem2"] as ComboBoxItem).Text)
+  }
+</b>
+<br />
+Selected Item in ComboBox #3: <b>
+  @if (@ViewData["SelectedItem3"] == null)
+  {
+    @:none
+}
+  else
+  {
+    @((ViewData["SelectedItem3"] as ComboBoxItem).Text)
+  }
+  <br />
+  <br />
+  <input type="submit" value="Post" id="submit" name="btnSubmit" />
+</form>

@@ -1,0 +1,14 @@
+<SiteMap>
+  <item Text="folders.gif" Value="Selected: Folders" IconUrl="folders.gif" />
+  <item Text="folder.gif" Value="Selected: Folder" IconUrl="folder.gif" />
+  <item />
+  <item Text="sentItems.gif" Value="Selected: Sent Items" IconUrl="sentItems.gif" />
+  <item Text="inbox.gif" Value="Selected: Inbox" IconUrl="inbox.gif" />
+  <item Text="drafts.gif" Value="Selected: Drafts" IconUrl="drafts.gif" />
+  <item Text="junk.gif" Value="Selected: Junk" IconUrl="junk.gif" />
+  <item />
+  <item Text="calendar.gif" Value="Selected: Calendar" IconUrl="calendar.gif" />
+  <item Text="contacts.gif" Value="Selected: Contacts" IconUrl="contacts.gif" />
+  <item Text="deleted.gif" Value="Selected: Deleted" IconUrl="deleted.gif" />
+  <item Text="notes.gif" Value="Selected: Notes" IconUrl="notes.gif" />
+</SiteMap>

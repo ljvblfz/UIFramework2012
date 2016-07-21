@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.TabStripDesignBlackIce"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+>
+	<Grid x:Name="LayoutRoot">
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TabStrip" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Black Ice TabStrip" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="A Black Ice-styled TabStrip." />
+		<TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\TabStrip\TabStripDesignBlackIce.xaml,\source\controls\tabstrip\TabStripDesignBlackIce.xaml.cs" />
+
+		<StackPanel Orientation="Vertical">
+			<Border Background="#666666" BorderBrush="#000000" BorderThickness="1,1,1,0" CornerRadius="4,4,0,0" Height="30" Width="400">
+				<Border CornerRadius="4,4,0,0" Margin="0,0,0,0" BorderThickness="0" Padding="0,4,0,0" Height="29" VerticalAlignment="Top">
+					<Border.Background>
+						<LinearGradientBrush StartPoint="0,0"  EndPoint="0,1">
+							<GradientStop Color="#666666" Offset="0" />
+							<GradientStop Color="#3a3a3a" Offset="0.58" />
+							<GradientStop Color="#000000" Offset="0.58" />
+							<GradientStop Color="#000000" Offset="1" />
+						</LinearGradientBrush>
+					</Border.Background>
+
+					<ComponentArt:TabStrip 
+						Width="400"
+						Height="26"
+						Alignment="top"
+						VerticalAlignment="top"
+						Margin="6,-1,-6,-1"
+						BaseImageSource="controls/tabstrip"
+					>
+						<ComponentArt:TabStripTab Padding="10,5,10,5" Text="First Tab" />
+						<ComponentArt:TabStripTab Padding="10,5,10,5" Text="Second Tab" />
+						<ComponentArt:TabStripTab Padding="10,5,10,5" Text="Third Tab" />
+						<ComponentArt:TabStripTab Padding="10,5,10,5" Text="Fourth Tab" />
+					</ComponentArt:TabStrip>
+				</Border>
+			</Border>
+
+
+
+			<Border Width="400" Height="150" Padding="1" Background="#000000" BorderBrush="#000000" BorderThickness="3,0,3,3" CornerRadius="0,0,4,4">
+				<Border CornerRadius="4" Background="#ffffff">
+					<TextBlock TextWrapping="Wrap" Padding="5">The site editor takes your right to privacy seriously, and wants you to feel comfortable using this web site. This privacy policy deals with personally-identifiable information (referred to as "data" below) that may be collected by this site. This policy does not apply to other entities that are not owned or controlled by the site editor, nor does it apply to persons that are not employees or agents of the site editor, or that are not under the site editor's control.</TextBlock>
+				</Border>
+			</Border>
+
+		</StackPanel>
+
+
+	</Grid>
+</UserControl>

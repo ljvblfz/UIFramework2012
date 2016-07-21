@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tree>
+  <node Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowCoreFeatures" />
+    <node Header="Wrap FlowMode" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowWrap" />
+    <node Header="Selected Item Template" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowSelectedItemTemplate" />
+    <node Header="Two Instances" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowTwoInstances" />
+  </node>
+
+  <node Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="ItemFlowAPI" />
+  </node>
+</tree>

@@ -1,0 +1,33 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{
+  ViewData["DemoTitle"] = "Core Features";
+  ViewData["DemoType"] = "TabStrip";
+  ViewData["CodeFiles"] = "/Views/TabStrip/CoreFeatures.aspx,/Controllers/TabStripController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>This is a basic navigation TabStrip, using the BlackIce theme.</li>
+<li>The Controller passes the current page to ViewData.</li>
+</ul>
+";    
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/Themes/BlackIce/theme.css")" rel="stylesheet" type="text/css" />
+}
+<div class="cart-tabstrip-outer-wrapper" style="width: 550px">
+  <div class="cart-tabstrip-inner-wrapper">
+    @(Html
+      .ComponentArt().TabStrip()
+      .ID("TabStrip1")
+      .SiteMapXmlFile("~/App_Data/TabStrip/CoreFeatures/tabData.xml")
+      .AutoTheming(true)
+      .ImagesBaseUrl("~/Content/TabStrip/CoreFeatures/images/")
+      .Width(Unit.Percentage(100))
+    )
+  </div>
+</div>
+<br />
+<br />
+<div>
+  Showing page: <b>@((ViewData["TabStripPage"] ?? "") == "" ? "News" : ViewData["TabStripPage"])</b>
+</div>

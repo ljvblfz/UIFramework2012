@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows">
+
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForeground" Color="#00a5e3"/>
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForegroundOver" Color="#00a5e3"/>
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBackgroundNormal" Color="Transparent" />
+
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorderNormal" Color="Transparent"/>
+
+    <LinearGradientBrush x:Key="ComponentArt_Menu_ItemBackgroundOver" EndPoint="0,0" StartPoint="1,0">
+        <GradientStop Color="#FFe3e3e3" Offset="0"/>
+        <GradientStop Color="#00e3e3e3" Offset=".65"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorderOver" Color="Transparent"/>
+
+    <!-- MenuItem RectLeft -->
+    <sys:String x:Key="ComponentArt_Menu_RectLeftPadding">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftMargin">2,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftBorderThickness">.5,.5,0,.5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftCornerRadius">2,0,0,2</sys:String>
+    <!-- /MenuItem RectLeft -->
+
+    <!-- MenuItem RectMiddle -->
+    <sys:Double x:Key="ComponentArt_Menu_MenuItemMinWidth">30</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddlePadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleBorderThickness">0,.5,0,.5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleCornerRadius">2.5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleStackMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleTextBlockPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleTextBlockMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_SubLevelFontSize">11</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_SubLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_SubLevelFontWeight">Normal</sys:String>
+    <!-- /MenuItem RectMiddle -->
+
+    <!-- MenuItem RectRight -->
+    <sys:String x:Key="ComponentArt_Menu_RectRightPadding">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightMargin">-1,0,2,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightBorderThickness">0,.5,.5,.5</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightCornerRadius">0,2,2,0</sys:String>
+</ResourceDictionary>

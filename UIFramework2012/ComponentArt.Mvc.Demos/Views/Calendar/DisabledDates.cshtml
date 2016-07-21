@@ -1,0 +1,71 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{ 
+  ViewData["DemoType"] = "Calendar";
+  ViewData["DemoTitle"] = "Disabled Dates";
+  ViewData["CodeFiles"] = "/Views/Calendar/DisabledDates.aspx,/Controllers/CalendarController.cs,/Controllers/Calendar/DisabledDatesController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>The <b>DisabledDates</b> collection can be used to specify a list of dates which cannot be selected by the user; </li>
+<li>The following Calendar properties can be used to customize the look of disabled dates: <b>DisabledDayCssClass</b>, <b>DisabledDayHoverCssClass</b>, <b>DisabledDayActiveCssClass</b>. </li>
+</ul>
+";
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/Calendar/Plain/calendarStyle.css")" rel="stylesheet" type="text/css" />
+  <script type="text/javascript">
+  //<![CDATA[
+    function Picker1_onSelectionChanged(sender, eventArgs)
+    {
+      Calendar1.setSelectedDate(Picker1.getSelectedDate());
+    }
+    function Calendar1_onSelectionChanged(sender, eventArgs)
+    {
+      Picker1.setSelectedDate(Calendar1.getSelectedDate());
+    }
+  //]]>
+  </script>
+}
+Select a date:
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td>
+      @(Html.ComponentArt().Calendar()
+        .ID("Picker1")
+        .ControlType(CalendarControlType.Picker)
+        .PickerFormat(DateTimeFormatType.Custom)
+        .PickerCustomFormat("MMMM d yyyy")
+        .PickerCssClass("picker")
+        .ClientEvents(c =>
+        {
+          c.SelectionChanged("Picker1_onSelectionChanged");
+        })
+      )
+    </td>
+  </tr>
+</table>
+@(Html.ComponentArt().Calendar()
+  .ID("Calendar1")
+  .ControlType(CalendarControlType.Calendar)
+  .TitleCssClass("title")
+  .DayHeaderCssClass("dayheader")
+  .DayCssClass("day")
+  .DayHoverCssClass("dayhover")
+  .DisabledDayCssClass("disabledday")
+  .DisabledDayHoverCssClass("disabledday")
+  .OtherMonthDayCssClass("othermonthday")
+  .SelectedDayCssClass("selectedday")
+  .CalendarCssClass("calendar")
+  .MonthCssClass("month")
+  .SwapSlide(SlideType.Linear)
+  .SwapDuration(300)
+  .DayNameFormat(DayNameFormat.FirstLetter)
+  .ImagesBaseUrl("~/Content/Calendar/Plain/images/")
+  .PrevImageUrl("cal_prevMonth.gif")
+  .NextImageUrl("cal_nextMonth.gif")
+  .NextPrevCssClass("nextprev")
+  .ClientEvents(c =>
+  {
+    c.SelectionChanged("Calendar1_onSelectionChanged");
+  })
+)

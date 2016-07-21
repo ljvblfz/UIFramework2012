@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d" >
+    <!-- BREADCRUMB -->
+
+    <!-- Begin Black Ice -->
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopGroupBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF7e7e7e" Offset="0"/>
+        <GradientStop Color="#FF4e4e4e" Offset="0.48"/>
+        <GradientStop Color="#FF050505" Offset="0.481"/>
+        <GradientStop Color="#FF5d5d5d" Offset="0.99"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopGroupBorder" EndPoint=".5,1" StartPoint=".5,0">
+        <GradientStop Color="#FF000000" Offset="0"/>
+        <GradientStop Color="#FF373737" Offset="1"/>
+    </LinearGradientBrush>
+    <!-- TOP LEVEL -->
+    <!-- Split Button -->
+    <!-- normal -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemForeground" Color="White" />
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemBorder" Color="Transparent"/>
+    <!-- over -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemBackgroundOver" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemBorderOver" Color="#FFffffff"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopSeparatorItemLineTopColor" Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopSeparatorItemLineBottomColor" Color="#FFFFFFFF" />
+    <!-- expanded -->
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemBackgroundExpanded" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#C2E4F6" Offset="0"/>
+        <GradientStop Color="#C2E4F6" Offset="0.005"/>
+        <GradientStop Color="#C2E4F6" Offset="0.52"/>
+        <GradientStop Color="#A9D9F2" Offset="0.521"/>
+        <GradientStop Color="#90CBEB" Offset="0.975"/>
+        <GradientStop Color="#90CBEB" Offset="0.99"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemBorderExpanded" Color="#6E8D9F"/>
+
+
+    <!-- Label Button -->
+    <!-- normal -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelForeground" Color="Black" />
+    <!--<LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF7e7e7e" Offset="0"/>
+        <GradientStop Color="#FF4e4e4e" Offset="0.46"/>
+        <GradientStop Color="#FF050505" Offset="0.461"/>
+        <GradientStop Color="#FF5d5d5d" Offset="0.975"/>
+    </LinearGradientBrush>-->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBackground" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBorderBrush" Color="Transparent"/>
+    <!-- label over -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBackgroundOver" Color="Transparent"/>
+    <LinearGradientBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBorderOver" EndPoint="1,1" StartPoint="0,0">
+        <GradientStop Color="#FFababab" Offset="0"/>
+        <GradientStop Color="#FFababab" Offset="1"/>
+    </LinearGradientBrush>
+    <!-- label split over -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBackgroundSplitOver" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBorderSplitOver" Color="Transparent"/>
+    <!-- label expanded -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBackgroundExpanded" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_TopItemLabelBorderExpanded" Color="Transparent"/>
+    <!-- END TOP LEVEL -->
+
+
+    <!-- SUB LEVEL -->
+    <!-- Separator -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_SeparatorItemBorder" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_SeparatorItemLineTopColor" Color="Transparent" />
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_SeparatorItemLineBottomColor" Color="Transparent" />
+    <!-- Group Border -->
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_SubGroupBorder" Color="Transparent" />
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_SubGroupBackground" Color="Transparent" />
+
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemForegroundDisabled" Color="Transparent"/>
+
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemForeground" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemForegroundOver" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemBackgroundNormal" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemBorderNormal" Color="Transparent"/>
+
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemBackgroundOver" Color="Transparent"/>
+
+    <SolidColorBrush x:Key="ComponentArt_BreadCrumb_ItemBorderOver" Color="Transparent"/>
+    <!-- END SUB LEVEL -->
+
+
+    <!-- BreadCrumb ControlTemplate -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_MainBorderMargin">0,1,0,1</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_MainBorderThickness">1.5</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_MainBorderPadding">1,0,1,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_MainBorderCornerRadius">3</sys:String>
+    <!-- /BreadCrumb ControlTemplate -->
+
+    <!-- BreadCrumbItem LevelTop VisualState-->
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelItemBorderThickness">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelItemCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelItemPadding">2,0,2,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelItemMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_BreadCrumb_TopLevelFontSize">12</sys:Double>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopLevelFontWeight">SemiBold</sys:String>
+    <!-- /BreadCrumbItem LevelTop VisualState-->
+
+    <!-- BreadCrumbItem LabelGrid -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelGridMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelTextMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelTextBorder">.5,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelTextPadding">0,0,0,0</sys:String>
+
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelBorderThickness">1</sys:String>
+
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_LabelCornerRadius">2</sys:String>
+    <!-- /BreadCrumbItem LabelGrid -->
+
+    
+    <!-- BreadCrumbItem ItemGrid -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_ItemGridMargin">0</sys:String>
+    <!-- /BreadCrumbItem ItemGrid -->
+
+    <!-- BreadCrumbItem RectLeft -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectLeftPadding">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectLeftMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectLeftBorderThickness">.5,.5,0,.5</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectLeftCornerRadius">0</sys:String>
+    <!-- /BreadCrumbItem RectLeft -->
+
+    <!-- BreadCrumbItem RectMiddle -->
+    <sys:Double x:Key="ComponentArt_BreadCrumb_BreadCrumbItemMinWidth">0</sys:Double>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddlePadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleBorderThickness">0,.5,0,.5</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleStackMargin">0,3,0,3</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleTextBlockPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectMiddleTextBlockMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_BreadCrumb_SubLevelFontSize">11</sys:Double>
+    <sys:String x:Key="ComponentArt_BreadCrumb_SubLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_SubLevelFontWeight">Normal</sys:String>
+    <!-- /BreadCrumbItem RectMiddle -->
+
+    <!-- BreadCrumbItem RectRight -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectRightPadding">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectRightMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectRightBorderThickness">0,.5,.5,.5</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_RectRightCornerRadius">0</sys:String>
+    <sys:Double x:Key="ComponentArt_BreadCrumb_SeparatorLineHeight">1</sys:Double>
+    <sys:Int32 x:Key="ComponentArt_BreadCrumb_SeparatorLineColumnSpan">3</sys:Int32>
+    <sys:Int32 x:Key="ComponentArt_BreadCrumb_SeparatorLineColumn">0</sys:Int32>
+    <sys:String x:Key="ComponentArt_BreadCrumb_SeparatorLineMargin">0,1,0,0</sys:String>
+    <!-- /BreadCrumbItem RectRight -->
+
+    <!-- BreadCrumbItem Popup -->
+    <sys:String x:Key="ComponentArt_BreadCrumb_PopupBorderPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_PopupBorderThickness">1</sys:String>
+    <sys:Double x:Key="ComponentArt_BreadCrumb_PopupMinWidth">60</sys:Double>
+    <sys:String x:Key="ComponentArt_BreadCrumb_PopupCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_PopupMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_BreadCrumb_TopGroupPopupMargin">1,0,0,0</sys:String>
+    <!-- /BreadCrumbItem Popup ComponentArt_BreadCrumb_AbsorbedButton-->
+
+</ResourceDictionary>

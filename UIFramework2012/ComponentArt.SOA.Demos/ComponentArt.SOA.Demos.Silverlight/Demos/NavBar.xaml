@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="ComponentArt.SOA.Demos.NavBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    >
+  <Grid>
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="NavBar" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Simple SOA.UI NavBar" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="On load, the NavBar control instance automatically downloads its item data from a SOA.UI web service." />
+
+        <my:NavBar x:Name="MyNavBar" Height="400" Width="250" Margin="20"
+                   SoaServiceUrl="../Services/SimpleNavBarService.svc"
+                   IsLoadOnDemandEnabled="True"
+                   TextImageRelation="ImageAboveText" 
+                   BaseIconSource="/ComponentArt.SOA.Demos;component/Assets/NavBar/Big/"
+                   GroupItemHeaderHorizontalAlignment="Center"
+                   ItemHeaderHorizontalAlignment="Center"
+                   />
+    </Grid>
+</UserControl>

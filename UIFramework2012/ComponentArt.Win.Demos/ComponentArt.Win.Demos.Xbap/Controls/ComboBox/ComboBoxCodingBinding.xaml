@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.ComboBoxCodingBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"             
+    xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common">
+    <UserControl.Resources>
+        <DataTemplate x:Key="MyItemTemplate">
+            <Border Height="23">
+                <TextBlock x:Name="ItemText" Text="{Binding}" FontFamily="Courier New" FontSize="14" FontWeight="Bold"/>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ComboBox" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="ComboBox Collection Binding" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Click on the ComboBox to begin." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\combobox\ComboBoxCodingBinding.xaml,
+            \source\controls\combobox\ComboBoxCodingBinding.xaml.cs"/>
+
+        <Border Width="800" Height="600" Background="#eeeeee" CornerRadius="3" BorderBrush="#666666" BorderThickness="1"/>
+
+        <Grid Margin="20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ComponentArt:ComboBox x:Name="MyComboBox" ItemTemplate="{StaticResource MyItemTemplate}" Height="24" MaxPopupHeight="350"/>
+
+            <StackPanel Orientation="Vertical" Grid.Column="1" Grid.RowSpan="2" Margin="4,0,0,0">
+                <Button x:Name="AddItem" Content="Add Item to Collection" Click="AddItem_Click"/>
+                <Button x:Name="RemoveItem" Content="Remove first Item" Click="RemoveItem_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

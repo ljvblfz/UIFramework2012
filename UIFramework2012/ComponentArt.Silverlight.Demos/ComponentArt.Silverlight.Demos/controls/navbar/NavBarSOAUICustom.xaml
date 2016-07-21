@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.NavBarSOAUICustom"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    >
+  <Grid>
+  	<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="NavBar" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="SOA.UI Custom Web Service" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases fully controlable SOA.UI data binding in NavBar." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\NavBar\NavBarSOAUICustom.xaml,\source\controls\NavBar\NavBarSOAUICustom.xaml.cs" />
+
+      <my:NavBar x:Name="MyNavBar" Height="400" Width="250" 
+                   LoadOnDemand="MyNavBar_LoadOnDemand"
+                   IsLoadOnDemandEnabled="True"
+                   TextImageRelation="ImageBeforeText" 
+                   BaseIconSource="/ComponentArt.Silverlight.Demos;component/Assets/NavBar/small/"
+                   GroupItemHeaderHorizontalAlignment="Left"
+                   ItemHeaderHorizontalAlignment="Left"
+                   />
+
+    </Grid>
+</UserControl>

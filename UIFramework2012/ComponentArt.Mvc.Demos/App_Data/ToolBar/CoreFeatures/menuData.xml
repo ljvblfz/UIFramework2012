@@ -1,0 +1,11 @@
+<SiteMap>
+  <item Text="Mail Message" IconUrl="newmailmessage.gif" Value="Create a new mail message." />
+  <item Text="Post in This Folder" IconUrl="newpost.gif" Value="Create a new post in this folder." />
+  <item />
+  <item Text="Appointment" IconUrl="newappointment.gif" Value="Create a new appointment." />
+  <item Text="Meeting Request" IconUrl="newmeetingrequest.gif" Value="Create a new meeting request." />
+  <item Text="Contact" IconUrl="newcontact.gif" Value="Create a new contact." />
+  <item  />
+  <item Text="Task" IconUrl="newtask.gif" Value="Create a new task." />
+  <item Text="Journal Entry" IconUrl="newjournalentry.gif" Value="Create a new journal entry." />
+</SiteMap>

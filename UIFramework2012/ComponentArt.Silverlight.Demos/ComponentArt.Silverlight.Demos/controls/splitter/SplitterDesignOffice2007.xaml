@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.SplitterDesignOffice2007"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common" 
+>
+	<UserControl.Resources>
+		<ComponentArtTheming:Theme
+			x:Key="Office2007SplitterTheme" 
+			BaseSource="/ComponentArt.Silverlight.UI.Layout;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Silverlight.Themes.Office2007;component/Splitter.xaml"
+		/>
+		<!-- Paths cannot be directly used as resources, and need to be wrapped into DataTemplates -->
+		<DataTemplate x:Key="dtLeftArrow">
+			<Canvas Width="11" Height="60" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Path Fill="#000000" Data="F1 M 3.200,30 L 5,27.900 L 5,26.500 L 2,30 L 5,33.500 L 5,32.101 L 3.200,30 Z" />
+				<Path Fill="#000000" Data="F1 M 6.200,30 L 8,27.900 L 8,26.500 L 5,30 L 8,33.500 L 8,32.101 L 6.200,30 Z" />
+			</Canvas>
+		</DataTemplate>
+		<DataTemplate x:Key="dtRightArrow">
+			<Canvas Width="11" Height="60" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Path Fill="#000000" Data="F1 M 7.800,30 L 6,32.100 L 6,33.500 L 9,30 L 6,26.500 L 6,27.899 L 7.800,30 Z" />
+				<Path Fill="#000000" Data="F1 M 4.800,30 L 3,32.100 L 3,33.500 L 6,30 L 3,26.500 L 3,27.899 L 4.800,30 Z" />
+			</Canvas>
+		</DataTemplate>
+		<DataTemplate x:Key="dtUpArrow">
+			<Canvas Width="60" Height="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Path Fill="#000000" Data="F1 M 30,3.200 L 32.100,5 L 33.500,5 L 30,2 L 26.500,5 L 27.899,5 L 30,3.200 Z" />
+				<Path Fill="#000000" Data="F1 M 30,6.200 L 32.100,8 L 33.500,8 L 30,5 L 26.500,8 L 27.899,8 L 30,6.200 Z" />
+			</Canvas>
+		</DataTemplate>
+		<DataTemplate x:Key="dtDownArrow">
+			<Canvas Width="60" Height="11" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<Path Fill="#000000" Data="F1 M 30,7.800 L 27.900,6 L 26.500,6 L 30,9 L 33.500,6 L 32.100,6 L 30,7.800 Z" />
+				<Path Fill="#000000" Data="F1 M 30,4.800 L 27.900,3 L 26.500,3 L 30,6 L 33.500,3 L 32.100,3 L 30,4.800 Z" />
+			</Canvas>
+		</DataTemplate>
+	</UserControl.Resources>
+
+	<Grid>
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Splitter" />
+		<TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Office 2007 Splitter" />
+		<TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An Office 2007-styled Splitter." />
+		<TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\Splitter\SplitterDesignOffice2007.xaml" />
+
+		<Grid Height="500" Width="760">
+			<Border Padding="5" BorderBrush="#3b5a82" BorderThickness="1" CornerRadius="3,3,0,0">
+				<Border.Background>
+					<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+						<GradientStop Color="#bfdcf9" Offset="0" />
+						<GradientStop Color="#6495c7" Offset="1" />
+					</LinearGradientBrush>
+				</Border.Background>
+			
+				<Grid x:Name="LayoutRoot">
+					<Grid.RowDefinitions>
+						<RowDefinition />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+
+					<!-- Vertical Splitter -->
+					<ComponentArt:Splitter Background="#00ffffff" CollapseDirection="Left" ShowsPreview="False" Grid.Column="1" Theme="{ StaticResource Office2007SplitterTheme }">
+						<ComponentArt:Splitter.CollapseButtonContent>
+							<ContentControl ContentTemplate="{StaticResource dtLeftArrow}"/>
+						</ComponentArt:Splitter.CollapseButtonContent>
+						<ComponentArt:Splitter.CollapseButtonCollapsedContent>
+							<ContentControl ContentTemplate="{StaticResource dtRightArrow}"/>
+						</ComponentArt:Splitter.CollapseButtonCollapsedContent>
+					</ComponentArt:Splitter>
+
+					<Grid Background="#e3efff" Grid.Column="0">
+						<Border BorderBrush="#6593cf" BorderThickness="1"><TextBlock Text="Left Side" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontSize="13" /></Border>
+					</Grid>
+
+					<Grid Grid.Column="2" >
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+
+						<Grid Background="#e3efff">
+							<Border BorderBrush="#6593cf" BorderThickness="1">
+								<TextBlock Text="Top Right" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontSize="13" />
+							</Border>
+						</Grid>
+
+						<!-- Horizontal Splitter -->
+						<ComponentArt:Splitter Background="#00ffffff" CollapseDirection="Up" ShowsPreview="True" Grid.Row="1" Theme="{ StaticResource Office2007SplitterTheme }">
+							<ComponentArt:Splitter.CollapseButtonContent>
+								<ContentControl ContentTemplate="{StaticResource dtUpArrow}"/>
+							</ComponentArt:Splitter.CollapseButtonContent>
+							<ComponentArt:Splitter.CollapseButtonCollapsedContent>
+								<ContentControl ContentTemplate="{StaticResource dtDownArrow}"/>
+							</ComponentArt:Splitter.CollapseButtonCollapsedContent>
+						</ComponentArt:Splitter>
+
+						<Grid Background="#e3efff" Grid.Row="2">
+							<Border BorderBrush="#6593cf" BorderThickness="1">
+								<TextBlock Text="Bottom Right" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontSize="13" />
+							</Border>
+						</Grid>
+					</Grid>
+				</Grid>
+			</Border>
+		</Grid>
+
+	</Grid>
+</UserControl>

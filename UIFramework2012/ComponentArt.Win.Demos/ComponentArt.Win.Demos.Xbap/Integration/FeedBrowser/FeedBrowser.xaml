@@ -1,0 +1,780 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.FeedBrowser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    xmlns:ComponentArtNav="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtData="clr-namespace:ComponentArt.Win.UI.Data;assembly=ComponentArt.Win.UI.Data"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=WPFToolkit"
+    xmlns:local="clr-namespace:ComponentArt.Win.Demos"
+    Width="1050" Height="706">
+    <UserControl.Resources>
+        
+        <sys:String x:Key="MyFavoritesFolder">My Favorite Posts</sys:String>
+
+        <!-- Interface Resources-->
+        <LinearGradientBrush x:Key="ComponentArt_FeedBrowser_Background" StartPoint="0,0" EndPoint="0,40" MappingMode="Absolute">
+            <GradientStop Color="#797979" Offset="0"/>
+            <GradientStop Color="#6A6A6A" Offset="0.125"/>
+            <GradientStop Color="#595959" Offset="0.25"/>
+            <GradientStop Color="#484848" Offset="0.375"/>
+            <GradientStop Color="#363636" Offset="0.5"/>
+            <GradientStop Color="#252525" Offset="0.625"/>
+            <GradientStop Color="#161616" Offset="0.75"/>
+            <GradientStop Color="#090909" Offset="0.875"/>
+            <GradientStop Color="#000000" Offset="1"/>
+        </LinearGradientBrush>
+        <!-- /Interface Resources -->
+
+        <!-- Menu Resources -->
+        <ComponentArtCommon:Theme x:Key="FeedBrowserMenuTheme" 
+			BaseSource="/ComponentArt.Win.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/FeedBrowserMenuTheme.xaml"/>
+
+        <!-- /Menu Resources -->
+
+        <!-- ItemFlow Title Animations -->
+        <Storyboard x:Key="Title_Animation">
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack0trans" Storyboard.TargetProperty="X" Duration="0:0:0" To="0" />
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stacktrans" Storyboard.TargetProperty="X" Duration="0:0:0.0" To="0" />
+
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack0trans" Storyboard.TargetProperty="Y" Duration="0:0:0" To="0" />
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stacktrans" Storyboard.TargetProperty="Y" Duration="0:0:0.0" To="0" />
+
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack0scale" Storyboard.TargetProperty="ScaleX" Duration="0:0:0.15" From="0" To="1" />
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stackscale" Storyboard.TargetProperty="ScaleX" Duration="0:0:0.15" From="1" To="2" />
+
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack0scale" Storyboard.TargetProperty="ScaleY" Duration="0:0:0.15" From="0" To="1" />
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stackscale" Storyboard.TargetProperty="ScaleY" Duration="0:0:0.15" From="1" To="2" />
+
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack0" Storyboard.TargetProperty="Opacity" Duration="0:0:0.15" From="0" To=".5" />
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack" Storyboard.TargetProperty="Opacity" Duration="0:0:0.1" From="1" To=".2" />
+        </Storyboard>
+        <Storyboard x:Key="Title_Animation_Reverse">
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack0scale" Storyboard.TargetProperty="ScaleX" Duration="0:0:0" To="0" />
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stackscale" Storyboard.TargetProperty="ScaleX" Duration="0:0:0" To="1" />
+
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack0scale" Storyboard.TargetProperty="ScaleY" Duration="0:0:0" To="0" />
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stackscale" Storyboard.TargetProperty="ScaleY" Duration="0:0:0" To="1" />
+
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack0" Storyboard.TargetProperty="Opacity" Duration="0:0:0" To="0" />
+            <DoubleAnimation BeginTime="0:0:0.0" Storyboard.TargetName="Stack" Storyboard.TargetProperty="Opacity" Duration="0:0:0" To="1" />
+        </Storyboard>
+        <!-- /ItemFlow Title Animations -->
+
+        <!-- ToolBar Resources -->
+        <LinearGradientBrush x:Key="ComponentArt_ToolBar_Background" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF7a7a7a" Offset="0.0" />
+            <GradientStop Color="#FF3B3B3B" Offset="0.5" />
+            <GradientStop Color="#FF000000" Offset="0.504" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="ComponentArt_ToolBar_Over_Background" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF666666" Offset="0"/>
+            <GradientStop Color="#FF666666" Offset="0.45"/>
+            <GradientStop Color="#FF000000" Offset="0.46"/>
+            <GradientStop Color="#FF636363" Offset="1"/>
+        </LinearGradientBrush>
+
+        <Style x:Key="toolBarStyle" TargetType="ComponentArtNav:ToolBar">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate x:Name="ToolBarTemplate" TargetType="ComponentArtNav:ToolBar">
+                        <Border Width="420" CornerRadius="4" BorderBrush="#FF666666" BorderThickness="1">
+                            <Border Padding="0" CornerRadius="4" BorderBrush="Black" BorderThickness="1" Background="{StaticResource ComponentArt_ToolBar_Background}">
+                                    <ItemsPresenter x:Name="ItemsRoot" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <StackPanel VerticalAlignment="{TemplateBinding VerticalAlignment}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" x:Name="ItemsStackPanel" Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- /ToolBar Resources -->
+
+        <!-- Featured Views Resources -->
+        <LinearGradientBrush x:Key="ComponentArt_Featured_Background" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF000000" Offset=".75"/>
+            <GradientStop Color="#FF353535" Offset="1"/>
+        </LinearGradientBrush>
+       
+        <LinearGradientBrush x:Key="ComponentArt_Featured_Overlay" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#ffffff" Offset="0"/>
+            <GradientStop Color="#ffffff" Offset="0.12"/>
+            <GradientStop Color="#00ffffff" Offset="0.121"/>
+         </LinearGradientBrush>
+        
+        <Style x:Key="myFeaturedButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootElement">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="167" />
+                            </Grid.ColumnDefinitions>
+                            <!--<Grid.RowDefinitions>
+                                <RowDefinition Height="232" />
+                            </Grid.RowDefinitions>-->
+                            <vsm:VisualStateManager.VisualStateGroups>
+                                <vsm:VisualStateGroup x:Name="CommonStates">
+                                    <vsm:VisualState x:Name="MouseOver" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="00:00:00.2" Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Opacity" To=".3"/>
+                                            <ColorAnimation Storyboard.TargetName="NormalBorder" Storyboard.TargetProperty="(Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Duration="00:00:00.2" To="#FF222222"/>
+                                            <ColorAnimation Storyboard.TargetName="NormalBorder" Storyboard.TargetProperty="(Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Duration="00:00:00.2" To="#FF6a6a6a"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Normal" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="00:00:00.2" Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Opacity" To=".16" />
+                                            <ColorAnimation Storyboard.TargetName="NormalBorder" Storyboard.TargetProperty="(Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Duration="00:00:00.2" To="#FF000000"/>
+                                            <ColorAnimation Storyboard.TargetName="NormalBorder" Storyboard.TargetProperty="(Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Duration="00:00:00.2" To="#FF353535"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Pressed" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="00:00:00.2" Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Opacity" To=".3" />
+                                            <ColorAnimation Storyboard.TargetName="NormalBorder" Storyboard.TargetProperty="(Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Duration="00:00:00.2" To="#333333"/>
+                                            <ColorAnimation Storyboard.TargetName="NormalBorder" Storyboard.TargetProperty="(Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Duration="00:00:00.2" To="#333333"/>
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                    <vsm:VisualState x:Name="Disabled" >
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="00:00:00.5" Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="Opacity" To=".16" />
+                                        </Storyboard>
+                                    </vsm:VisualState>
+                                </vsm:VisualStateGroup>
+                            </vsm:VisualStateManager.VisualStateGroups>
+                            <Border x:Name="OverBorder" CornerRadius="4" Opacity="1" BorderThickness="1" BorderBrush="#FF5F5F5F" >
+                                <Border Grid.Column="0" Background="{StaticResource ComponentArt_Featured_Background}" x:Name="NormalBorder" CornerRadius="4" BorderThickness="1" BorderBrush="Black">
+                                    <ContentControl HorizontalAlignment="Center" Grid.Column="0" Padding="4,8,4,2" x:Name="Content" Opacity="1" Content="{TemplateBinding Content}" />
+                                </Border>
+                            </Border>
+                            <Border Grid.Column="0" Margin="2" x:Name="OuterBorder" CornerRadius="4" Opacity=".16" Background="{StaticResource ComponentArt_Featured_Overlay}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- /Featured Views Resources -->
+
+        <!-- Browse Pane Resources-->
+        <LinearGradientBrush x:Key="BottomRowHeaderShade" StartPoint="0,0" EndPoint="0,25" MappingMode="Absolute">
+            <GradientStop Color="#767676" Offset="0"/>
+            <GradientStop Color="#585858" Offset="0.8"/>
+            <GradientStop Color="#525252" Offset="0.88"/>
+            <GradientStop Color="#333333" Offset="0.92"/>
+            <GradientStop Color="#0F0F0F" Offset="0.96"/>
+            <GradientStop Color="#000000" Offset="1"/>
+            
+        </LinearGradientBrush>
+        <!-- /Menu Resources -->
+        
+        <!-- TreeView Resources 
+        <ComponentArtCommon:Theme x:Key="FeedBrowserTreeViewTheme" 
+			BaseSource="/ComponentArt.Win.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/TreeView/TreeViewTheme.xaml"/>
+        /TreeView Resources -->
+
+        <!-- /Browse Filter Pane Resources-->
+        
+        <!-- DataGrid DragDrop resources -->
+        
+        <Style x:Key="OverlayText" TargetType="ContentControl">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+            <Setter Property="Margin" Value="20 0 0 -15" />
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ContentControl">
+                        <Border Padding="3" BorderBrush="Black" BorderThickness="1" CornerRadius="3">
+                            <Border.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFE3E6F5" Offset="0"/>
+                                    <GradientStop Color="#FF9D9D9D" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <DataTemplate x:Key="BlankDragTemplate">
+            <Grid/>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="DataGridDragSingleRow">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border Opacity="0.8" CornerRadius="5,5,0,0" Grid.Row="0" BorderThickness="1" BorderBrush="#DFE6F3">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Color="#FBFCFD" Offset="0"/>
+                                <GradientStop Color="#EEF2F9" Offset="0.4"/>
+                                <GradientStop Color="#DFE6F3" Offset="0.4"/>
+                                <GradientStop Color="#CAD1DE" Offset="0.99"/>
+                                <GradientStop Color="#C5CCD9" Offset="0.99"/>
+                                <GradientStop Color="#C5CCD9" Offset="1"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Border Background="Transparent" CornerRadius="5,5,0,0" Grid.Row="0" Padding="2 2 10 5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="CantDropIcon" Source="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/TreeView/cantDrop.png" Stretch="None" Grid.Column="0" VerticalAlignment="Center" Visibility="Collapsed"/>
+                        <Image x:Name="CanDropIcon" Source="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/TreeView/folder-closed.png" Stretch="None" Grid.Column="0" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="CantDropText" Text="Cannot drop here." Margin="5 0" Grid.Column="1" VerticalAlignment="Center" Visibility="Collapsed"/>
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Run Text="Drop into "/>
+                            <Run FontWeight="Bold" Text="{StaticResource MyFavoritesFolder}"/>
+                        </TextBlock>
+                    </Grid>
+                </Border>
+                <Border Opacity="0.8" CornerRadius="0 0 5 5" Grid.Row="1" BorderThickness="0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Color="#DFE6F3" Offset="0"/>
+                                <GradientStop Color="#DFE6F3" Offset="0.55"/>
+                                <GradientStop Color="#CCD3E0" Offset="0.9"/>
+                                <GradientStop Color="#C9D0DD" Offset="0.944"/>
+                                <GradientStop Color="#C5CCD9" Offset="1"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+                <Border Background="Transparent" CornerRadius="0 0 5 5" Padding="5" Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Stretch="None" Source="/ComponentArt.Win.Demos;component/Assets/DataGrid/FeedBrowser/FeedName_icon.png" Grid.Row="0" Grid.Column="0" Margin="0 0 5 5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Image Stretch="None" Source="/ComponentArt.Win.Demos;component/Assets/DataGrid/FeedBrowser/FeedTitle_icon.png" Grid.Row="1" Grid.Column="0" Margin="0 0 5 5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="FeedTitle" Text="" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="ItemTitle" Text="" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="6*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="Timestamp" Text="" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Path Data="M0,0 0,10"  Stroke="DarkGray" StrokeThickness="1" Stretch="Uniform" Grid.Column="1" Margin="10 0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Image x:Name="Rating" Stretch="None" Grid.Column="2" Grid.ColumnSpan="2" Margin="0 0 5 0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="DataGridDragMultipleRows">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border Opacity="0.8" CornerRadius="5,5,0,0" Grid.Row="0"  BorderThickness="0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Color="#FBFCFD" Offset="0"/>
+                                <GradientStop Color="#EEF2F9" Offset="0.4"/>
+                                <GradientStop Color="#DFE6F3" Offset="0.4"/>
+                                <GradientStop Color="#CAD1DE" Offset="0.99"/>
+                                <GradientStop Color="#C5CCD9" Offset="0.99"/>
+                                <GradientStop Color="#C5CCD9" Offset="1"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Border Background="Transparent" CornerRadius="5,5,0,0" Grid.Row="0" Padding="2 2 10 5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="CantDropIcon" Source="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/TreeView/cantDrop.png" Stretch="None" Grid.Column="0" VerticalAlignment="Center" Visibility="Collapsed"/>
+                        <Image x:Name="CanDropIcon" Source="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/TreeView/folder-closed.png" Stretch="None" Grid.Column="0" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="CantDropText" Text="Cannot drop here." Margin="5 0" Grid.Column="1" VerticalAlignment="Center" Visibility="Collapsed"/>
+                        <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Run Text="Drop into "/>
+                            <Run FontWeight="Bold" Text="{StaticResource MyFavoritesFolder}"/>
+                        </TextBlock>
+                    </Grid>
+                </Border>
+                <Border Opacity="0.8" CornerRadius="0 0 5 5" Grid.Row="1" BorderThickness="0">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <LinearGradientBrush.GradientStops>
+                                <GradientStop Color="#DFE6F3" Offset="0"/>
+                                <GradientStop Color="#DFE6F3" Offset="0.55"/>
+                                <GradientStop Color="#CCD3E0" Offset="0.9"/>
+                                <GradientStop Color="#C9D0DD" Offset="0.944"/>
+                                <GradientStop Color="#C5CCD9" Offset="1"/>
+                            </LinearGradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+                <Border Background="Transparent" CornerRadius="0 0 5 5" Padding="5" Grid.Row="1">
+                    <Grid x:Name="ImageGrid">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding}" Grid.Column="1" Margin="10 0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </DataTemplate>
+
+        <!-- /DataGrid DragDrop resources -->
+        <!-- DataGrid resources -->
+
+        <local:RatingToImageSourceConverter x:Key="RatingToImageSourceConverter" />
+
+        <ComponentArtCommon:Theme x:Key="DataGridFeedBrowserTheme"
+			BaseSource="/ComponentArt.Win.UI.Data;component/Themes/generic.xaml"
+            Source="/ComponentArt.Win.Demos;component/Assets/DataGrid/FeedBrowser/DataGridFeedBrowserTheme.xaml"/>
+        
+      <ComponentArtData:DataGridNumberFormatter x:Key="DataGridNumberFormatter" />
+      <sys:String x:Key="DataGridNumberFormat">{0:#,###,###,###,###,###,###,###}</sys:String>
+
+      <!-- /DataGrid resources -->
+    </UserControl.Resources>
+    
+    
+    <Border Padding="8,0,8,0" Background="{StaticResource ComponentArt_FeedBrowser_Background}" BorderThickness="1" BorderBrush="Black" MinWidth="860" MinHeight="550" >
+        <Grid x:Name="LayoutRoot" Background="Transparent" Margin="0 11">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Integration" />
+            <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Feed Browser" />
+            <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo demonstrates an elaborate RSS feed browser." />
+            <TextBlock x:Name="DemoCodeFiles" 
+        Visibility="Collapsed"
+        Text="\source\integration\FeedBrowser\FeedBrowser.xaml,\source\integration\FeedBrowser\FeedBrowser.xaml.cs"/>
+            
+            <Grid x:Name="TopRow" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="422"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                </Grid.RowDefinitions>
+                
+                <StackPanel x:Name="MenuToolBarStackPanel" Grid.Column="0" Grid.Row="0"
+              VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Orientation="Vertical">
+
+                    <!-- Menu -->
+                    <ComponentArtNav:Menu x:Name="FeedMenu" MenuClick="FeedMenu_MenuClick" HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                                  Height="40" Theme="{StaticResource FeedBrowserMenuTheme}"
+                                  Margin="0,-2,0,4" XmlBindingSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Menu/feedBrowserMenu.xml" Initialized="FeedMenu_Initialized"
+                                  ExpandDelay="150" CollapseDelay="200" ExpandTransition="None" CollapseTransition="None">
+                    </ComponentArtNav:Menu>
+                    <!-- /Menu -->
+
+                    <!-- ToolBar 
+                    Removed:  Style="{StaticResource toolBarStyle}"
+                    -->
+                    <ComponentArtNav:ToolBar
+                        Orientation="Horizontal" 
+                        Height="85" 
+                        Width="422"
+                        Padding="0"
+                        Margin="0"
+                        Style="{StaticResource toolBarStyle}"
+                        x:Name="myToolBar">
+                        <ComponentArtNav:ToolBarSplitItem Click="Previous_Click" IsEnabled="False" ItemContextMenu="PreviousMenu" x:Name="PreviousButton" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssToolBarIcons/previousview.png" DropDownIconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssToolBarIcons/splitArrow.png">
+                            <ComponentArtNav:ToolBarSplitItem.Content>
+                                <ComponentArtNav:ContextMenu
+			                    x:Name="PreviousMenu"
+			                    Orientation="Vertical" 
+                                Hide="PreviousMenu_Hide"
+			                    HorizontalAlignment="Left" 
+			                    VerticalAlignment="Top"
+                                ContextType="Custom"
+                                MenuClick="PreviousMenu_MenuClick">
+                                </ComponentArtNav:ContextMenu>
+                            </ComponentArtNav:ToolBarSplitItem.Content>
+                        </ComponentArtNav:ToolBarSplitItem>
+                        <ComponentArtNav:ToolBarSplitItem Click="Next_Click" IsEnabled="False" ItemContextMenu="NextMenu" x:Name="NextButton"  IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssToolBarIcons/nextview.png" DropDownIconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssToolBarIcons/splitArrow.png">
+                            <ComponentArtNav:ToolBarSplitItem.Content>
+                                <ComponentArtNav:ContextMenu
+			                    x:Name="NextMenu"
+			                    Orientation="Vertical" 
+                                Hide="NextMenu_Hide"
+			                    HorizontalAlignment="Left" 
+			                    VerticalAlignment="Top"
+                                ContextType="Custom"
+                                MenuClick="NextMenu_MenuClick">
+                                </ComponentArtNav:ContextMenu>
+                            </ComponentArtNav:ToolBarSplitItem.Content>
+                        </ComponentArtNav:ToolBarSplitItem>
+                        <ComponentArtNav:ToolBarItem Click="RefreshButton_Click" x:Name="RefreshButton" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssToolBarIcons/refresh.png" />
+                        <ComponentArtNav:ToolBarItem Click="CancelButton_Click" x:Name="CancelButton" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssToolBarIcons/cancel.png" />
+                        <ComponentArtNav:ToolBarItem Click="HomeButton_Click" x:Name="HomeButton" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssToolBarIcons/home.png" />
+                    </ComponentArtNav:ToolBar>
+                    <!-- /ToolBar -->
+
+                </StackPanel>
+                
+                <!-- ItemFlow -->
+                <ComponentArtNav:ItemFlow
+                OnFlowComplete="myItemFlow_FlowComplete"
+                OnDragSelected="myItemFlow_OnDragSelected"
+                ItemMouseEnter="myItemFlow_ItemMouseEnter"
+                ItemMouseLeave="myItemFlow_ItemMouseLeave"
+                Loaded="myItemFlow_Loaded"
+                ItemClick="myItemFlow_ItemClick"
+                x:Name="FeedItemFlow"
+                Margin="25,8,10,0"
+                Grid.Column="1"
+                Grid.Row="0"
+                Width="560"
+                Height="100"
+                SelectedIndex="5"
+                FlowMode="Wrap"
+                BackgroundColor="Transparent"
+                ItemHeight="80" 
+                ItemWidth="120"
+                ReverseReflectionTransforms="True"
+                DecelerationEnabled="True"
+                SlowAnimationDuration="250"
+                MediumAnimationDuration="150"
+                FastAnimationDuration="100"
+                InstantAnimationDuration="5"
+                MouseWheelEnabled="True"
+                ScrollOnDrag="True"
+                ScrollOnClick="True"
+                ReflectionAlphaStart="225"
+                ReflectionAlphaEnd="0"
+                ReflectionAlphaOffset=".7"
+                ShadingAlphaStart="30"
+                ShadingAlphaEnd="1"
+                HorizontalPerspective=".9"
+                ShadingAlphaOffset=".5"       
+                ItemSpacing=".65"
+                Zoom=".80"
+                Visibility="Visible"
+                >
+                    <!-- REMOVED: BaseImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons" -->
+                    <ComponentArtNav:ItemFlow.Items>
+                        <ComponentArtNav:ItemFlowItem Tag="ComponentArt Blogs|Employee Insights and/or Ramblings" Text="ComponentArt Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/ComponentArtBlogs.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="Telerik Blogs|Tips &amp; tricks from Telerik employees" Text="Telerik Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Telerik.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="Infragistics Blogs|Powering the Presentation Layer" Text="Infragistics Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Infragistics.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="CNET.com Blogs|Product reviews and prices, software downloads, and tech news" Text="CNET.com Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Cnet.png" />
+                        <ComponentArtNav:ItemFlowItem IsSelected="True" Tag="Kotaku|The Gamer's Guide" Text="Kotaku" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/kotaku.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="O'Reilly Radar|Spreading the knowledge of technology innovators" Text="O'Reilly Radar" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/OReilly.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="Microsoft Azure Services|Internet-scale cloud computing and services" Text="Microsoft Azure Services" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/WindowsAzure.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="Silverlight Team|Light up the Web" Text="Silverlight Team" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Silverlight.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="GigaOm|Om Malik's website about broadband, voice over IP, telecom and other new technologies" Text="GigaOm" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Gigaom.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="Gizmodo|An online review dedicated to gadgets, gizmos, and cutting-edge consumer electronics" Text="Gizmodo" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Gizmodo.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="lifehack.org|Tips and downloads for getting things done" Text="lifehack.org" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/LifeHacker.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="MSDN Blogs|MSDN Blogs" Text="MSDN Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Microsoft.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="ReadWriteWeb|Web Apps, Web Technology Trends, Social Networking and Social Media" Text="ReadWriteWeb" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/ReadWriteWeb.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="TechCrunch|Group-edited blog about technology start-ups, particularly the Web 2.0 sector" Text="TechCrunch" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/TechCrunch.PNG" />
+                        <!-- Repeated To Fill The Space -->
+                        <ComponentArtNav:ItemFlowItem Tag="ComponentArt Blogs|Employee Insights and/or Ramblings" Text="ComponentArt Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/ComponentArtBlogs.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="Telerik Blogs|Tips &amp; tricks from Telerik employees" Text="Telerik Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Telerik.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="Infragistics Blogs|Powering the Presentation Layer" Text="Infragistics Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Infragistics.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="CNET.com Blogs|Product reviews and prices, software downloads, and tech news" Text="CNET.com Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Cnet.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="Kotaku|The Gamer's Guide" Text="Kotaku" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/kotaku.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="O'Reilly Radar|Spreading the knowledge of technology innovators" Text="O'Reilly Radar" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/OReilly.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="Microsoft Azure Services|Internet-scale cloud computing and services" Text="Microsoft Azure Services" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/WindowsAzure.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="Silverlight Team|Light up the Web" Text="Silverlight Team" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Silverlight.png" />
+                        <ComponentArtNav:ItemFlowItem Tag="GigaOm|Om Malik's website about broadband, voice over IP, telecom and other new technologies" Text="GigaOm" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Gigaom.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="Gizmodo|An online review dedicated to gadgets, gizmos, and cutting-edge consumer electronics" Text="Gizmodo" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Gizmodo.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="lifehack.org|Tips and downloads for getting things done" Text="lifehack.org" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/LifeHacker.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="MSDN Blogs|MSDN Blogs" Text="MSDN Blogs" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/Microsoft.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="ReadWriteWeb|Web Apps, Web Technology Trends, Social Networking and Social Media" Text="ReadWriteWeb" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/ReadWriteWeb.PNG" />
+                        <ComponentArtNav:ItemFlowItem Tag="TechCrunch|Group-edited blog about technology start-ups, particularly the Web 2.0 sector" Text="TechCrunch" ImageSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/RssItemFlowIcons/TechCrunch.PNG" />
+                    </ComponentArtNav:ItemFlow.Items>
+                    <ComponentArtNav:ItemFlow.ItemLoadingTemplate>
+                        <DataTemplate>
+                            <Grid Width="{Binding Width}" Height="{Binding Height}">
+                                <TextBlock Text="Loading..." VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Silver" FontFamily="Verdana" FontSize="16">
+                                </TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </ComponentArtNav:ItemFlow.ItemLoadingTemplate>
+                </ComponentArtNav:ItemFlow>
+                <!-- /ItemFlow -->
+                <Image x:Name="FeaturedFeeds" Source="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/Images/txt_featuredFeeds.png" Stretch="None" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="23,0,0,0"/>
+                <!-- ItemFlow Title -->
+                <Grid x:Name="ItemFlowTitle" MinWidth="270" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                    <StackPanel x:Name="Stack0" Height="30" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal"  Opacity="0">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform x:Name="Stack0scale" CenterX="50" CenterY="14" />
+                                <TranslateTransform x:Name="Stack0trans" />
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
+                        <TextBlock x:Name="Title0" TextAlignment="Right" HorizontalAlignment="Right" FontFamily="Tahoma" FontWeight="Bold" FontSize="12" Foreground="White"/>
+                        <TextBlock x:Name="SubTitle0" TextAlignment="Left" HorizontalAlignment="Left" FontFamily="Tahoma" FontSize="12" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,0" HorizontalAlignment="Center" Orientation="Horizontal" Canvas.Top="10" x:Name="Stack">
+                        <StackPanel.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform x:Name="Stackscale" CenterX="50" CenterY="14" />
+                                <TranslateTransform x:Name="Stacktrans" />
+                            </TransformGroup>
+                        </StackPanel.RenderTransform>
+                        <TextBlock x:Name="Title" TextAlignment="Right" HorizontalAlignment="Right" FontFamily="Tahoma" FontWeight="Bold" FontSize="12" Foreground="White"/>
+                        <TextBlock x:Name="SubTitle" TextAlignment="Left" HorizontalAlignment="Left" FontFamily="Tahoma" FontSize="12" Foreground="White"/>
+                    </StackPanel>
+                </Grid>
+                <!-- /ItemFlow Title -->
+
+            </Grid>
+
+            <Grid x:Name="BottomRow" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="QuickButtonFeedViewGrid" Grid.Row="1" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="36"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- TreeView And Filter -->
+                    <Border x:Name="FeedTreeViewBorder" BorderBrush="#666666" BorderThickness="1" CornerRadius="5,5,5,5" Padding="0"
+                        Grid.Row="0" Grid.RowSpan="2" Margin="5,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Border x:Name="TreeViewHeaderGradient" BorderBrush="Black" BorderThickness="1" CornerRadius="5,5,5,5" Padding="0" HorizontalAlignment="Stretch" 
+                                VerticalAlignment="Stretch" Background="{StaticResource BottomRowHeaderShade}">
+                            <Grid x:Name="FeedTreeViewGrid">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="0"/>
+                                </Grid.RowDefinitions>
+                                <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                    <Image Source="/ComponentArt.Win.Demos;component/Assets/DataGrid/FeedBrowser/FeedName_icon.png" Stretch="None" Margin="5 0 0 0" VerticalAlignment="Center"/>
+                                    <TextBlock Margin="5,0,0,0" Text="Browse" Foreground="White" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <ComponentArtNav:TreeView x:Name="FeedTreeView_Browse" 
+                                        Padding="0" 
+                                        BorderThickness="0" 
+                                        VerticalAlignment="Stretch" 
+                                        Grid.Row="1" 
+                                        Margin="0" 
+                                        HorizontalAlignment="Stretch" 
+                                        ImageFailed="FeedTreeView_ImageError" 
+                                        NodeSelected="FeedTreeView_Browse_NodeSelected"
+                                        Loaded="FeedTreeView_Browse_Loaded"
+                                        CornerRadius="0,0,5,5" 
+                                        InnerCornerRadius="0,0,5,5"
+
+                                        ExpanderClosedIconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/TreeView/expand.png"
+                                        ExpanderOpenIconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/TreeView/collapse.png"
+
+                                        BaseIconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/"
+                                        NodeDragEnter="FeedTreeView_Browse_NodeDragEnter"
+                                        NodeDrop="FeedTreeView_Browse_NodeDrop"
+                                        BeforeNodeDrop="FeedTreeView_Browse_BeforeNodeDrop"
+                                        DragLeave="FeedTreeView_Browse_DragLeave"
+                                        AllowDrop="True"
+                                                          
+                                        SoaResponseProcessed="FeedTreeView_Browse_SoaResponseProcessed"
+                                        >
+                                    <!-- REMOVED:                            
+                                                                            TreeLineStyle="Dotted"
+                                    Theme="{StaticResource FeedBrowserTreeViewTheme}"
+           -->
+                                    <ComponentArtNav:TreeView.Header>
+                                        <Canvas Height="16">
+                                            <TextBlock Margin="0,2,0,0" Text="Feed Categories" Foreground="#323232" Canvas.ZIndex="2"></TextBlock>
+                                            <TextBlock Margin="1,3,0,0" Text="Feed Categories" Foreground="White"></TextBlock>
+                                        </Canvas>
+                                    </ComponentArtNav:TreeView.Header>
+                                    <ComponentArtNav:TreeView.HeaderBackground>
+                                        <LinearGradientBrush EndPoint="0,30" StartPoint="0,0" MappingMode="Absolute">
+                                            <GradientStop Color="#FFFFFFFF"/>
+                                            <GradientStop Color="#FFE9E9E9" Offset="0.6"/>
+                                            <GradientStop Color="#FFD9D9D9" Offset="0.65"/>
+                                            <GradientStop Color="#FFC5C5C5" Offset="0.9"/>
+                                        </LinearGradientBrush>
+                                    </ComponentArtNav:TreeView.HeaderBackground>
+                                    <ComponentArtNav:TreeViewNode Text="All Feeds" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/TreeView/folder-open.png" IsLoadOnDemandEnabled="true" FontWeight="Bold"/>
+                                    <ComponentArtNav:TreeViewNode Text="{StaticResource MyFavoritesFolder}" IconSource="/ComponentArt.Win.Demos;component/Assets/Pages/FeedBrowser/TreeView/folder-open.png" AllowDrop="True" FontWeight="Bold">
+                                    </ComponentArtNav:TreeViewNode>
+                                </ComponentArtNav:TreeView>
+                            </Grid>
+                        </Border>
+                    </Border>
+                </Grid>
+
+                <!-- DataGrid -->
+                <Border x:Name="DataGridBorder" BorderBrush="#666666" BorderThickness="1" CornerRadius="5" Margin="8,0,0,0" Grid.Column="1" Grid.Row="1" Padding="1">
+                   <ComponentArtData:DataGrid x:Name="FeedDataGrid" Margin="0" Grid.Row="1"
+                           Theme="{StaticResource DataGridFeedBrowserTheme}"
+                           PageSize="17" ShowTextOverflowToolTip="true"
+                           VerticalScrollBarVisibility="Auto"
+                           FooterVisibility="Collapsed"
+				           BorderThickness="0" Padding="0"
+                           RunningMode="Callback"
+                           GroupingMode="ConstantRows"                    
+                           PreExpandGroups="True" 
+                           ShowColumnFilters="true" 
+                           SearchBoxVisibility="Visible"
+                           AllowGrouping="True" 
+                           AllowColumnResizing="True"
+                           ColumnResizingMode="Distribute"
+                           AllowColumnReordering="True"
+                           SortingChanged="FeedDataGrid_SortingChanged"
+                           GroupingChanged="FeedDataGrid_GroupingChanged"
+                           >
+                       <!-- REMOVED: SoaServiceUrl="../SoaDataGridFeedService.svc" -->
+                        <ComponentArtData:DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="ComponentArtData:DataGridColumnHeader">
+                                <Setter Property="FontWeight" Value="Bold" />
+                            </Style>
+                        </ComponentArtData:DataGrid.ColumnHeaderStyle>
+                        <ComponentArtData:DataGrid.RowStyle>
+                            <Style TargetType="ComponentArtData:DataGridRow">
+                                <Setter Property="Background" Value="White" />
+                            </Style>
+                        </ComponentArtData:DataGrid.RowStyle>
+                        <ComponentArtData:DataGrid.Columns>
+                            <ComponentArtData:DataGridTemplateColumn Binding="{Binding FeedName}" Width="150" AllowSearching="True">
+                                <ComponentArtData:DataGridTemplateColumn.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Stretch="None" Source="/ComponentArt.Win.Demos;component/Assets/DataGrid/FeedBrowser/FeedName_icon.png" />
+                                        <TextBlock Text="Feed Name" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </ComponentArtData:DataGridTemplateColumn.Header>
+                                <ComponentArtData:DataGridTemplateColumn.CellStyle>
+                                    <Style TargetType="ComponentArtData:DataGridCell">
+                                        <Setter Property="Background" Value="#101098FF" />
+                                        <Setter Property="Padding" Value="4" />
+                                    </Style>
+                                </ComponentArtData:DataGridTemplateColumn.CellStyle>
+                                <ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Stretch="None" Source="/ComponentArt.Win.Demos;component/Assets/DataGrid/FeedBrowser/FeedName_icon.png" />
+                                            <TextBlock Text="{Binding}" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                            </ComponentArtData:DataGridTemplateColumn>
+                            <ComponentArtData:DataGridTextColumn Binding="{Binding Title}" AllowSearching="True" Width="5*">
+                                <ComponentArtData:DataGridTextColumn.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Stretch="None" Source="/ComponentArt.Win.Demos;component/Assets/DataGrid/FeedBrowser/FeedTitle_icon.png" />
+                                        <TextBlock Text="Item Title" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </ComponentArtData:DataGridTextColumn.Header>
+                                <ComponentArtData:DataGridTextColumn.CellStyle>
+                                    <Style TargetType="ComponentArtData:DataGridCell">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush Stretch="None" AlignmentX="Left" ImageSource="/ComponentArt.Win.Demos;component/Assets/DataGrid/FeedBrowser/FeedTitle_icon.png">
+                                                    <ImageBrush.Transform>
+                                                        <TranslateTransform X="5" />
+                                                    </ImageBrush.Transform>
+                                                </ImageBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="Padding" Value="25,4,4,4" />
+                                    </Style>
+                                </ComponentArtData:DataGridTextColumn.CellStyle>
+                            </ComponentArtData:DataGridTextColumn>
+                            <ComponentArtData:DataGridTextColumn Binding="{Binding DatePosted}" Header="Date Posted" Width="2*" DefaultSortDirection="Descending">
+                                <ComponentArtData:DataGridTextColumn.CellStyle>
+                                    <Style TargetType="ComponentArtData:DataGridCell">
+                                        <Setter Property="Background" Value="#101098FF" />
+                                        <Setter Property="Padding" Value="4" />
+                                    </Style>
+                                </ComponentArtData:DataGridTextColumn.CellStyle>
+                            </ComponentArtData:DataGridTextColumn>
+                            <ComponentArtData:DataGridTextColumn Binding="{Binding Visits}" Header="Visits" Width="1*">
+                                <ComponentArtData:DataGridTextColumn.CellStyle>
+                                    <Style TargetType="ComponentArtData:DataGridCell">
+                                        <Setter Property="Padding" Value="4" />
+                                    </Style>
+                                </ComponentArtData:DataGridTextColumn.CellStyle>
+                            </ComponentArtData:DataGridTextColumn>
+                            <ComponentArtData:DataGridTemplateColumn Binding="{Binding Rating}" Header="Rating" Width="70" HeaderHorizontalAlignment="Center" DefaultSortDirection="Descending" AllowResizing="false">
+                                <ComponentArtData:DataGridTemplateColumn.CellStyle>
+                                    <Style TargetType="ComponentArtData:DataGridCell">
+                                        <Setter Property="Background" Value="#101098FF" />
+                                        <Setter Property="Padding" Value="4" />
+                                    </Style>
+                                </ComponentArtData:DataGridTemplateColumn.CellStyle>
+                                <ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding Converter={StaticResource RatingToImageSourceConverter}}" Stretch="None"/>
+                                    </DataTemplate>
+                                </ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                            </ComponentArtData:DataGridTemplateColumn>
+                            <ComponentArtData:DataGridTemplateColumn Binding="{Binding ItemURL}" Header="Site" Width="50" ShowFilter="False" HeaderHorizontalAlignment="Center" AllowSorting="false" AllowResizing="false">
+                                <ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button IsTabStop="false" BorderThickness="0" Tag="{Binding}">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Grid>
+                                                        <VisualStateManager.VisualStateGroups>
+                                                            <VisualStateGroup x:Name="CommonStates">
+                                                                <VisualState x:Name="Normal" />
+                                                                <VisualState x:Name="MouseOver">
+                                                                    <Storyboard>
+                                                                        <DoubleAnimation Storyboard.TargetName="GoImageHover" Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2"/>
+                                                                    </Storyboard>
+                                                                </VisualState>
+                                                            </VisualStateGroup>
+                                                        </VisualStateManager.VisualStateGroups>
+                                                        <Image x:Name="GoImage" Stretch="None" Source="/Assets/DataGrid/FeedBrowser/Go.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                                                        <Image x:Name="GoImageHover" Stretch="None" Source="/Assets/DataGrid/FeedBrowser/Go_hover.png" RenderOptions.BitmapScalingMode="NearestNeighbor" Opacity="0" />
+                                                    </Grid>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                        </Button>
+                                    </DataTemplate>
+                                </ComponentArtData:DataGridTemplateColumn.CellTemplate>
+                            </ComponentArtData:DataGridTemplateColumn>
+                        </ComponentArtData:DataGrid.Columns>
+                    </ComponentArtData:DataGrid>
+                </Border>
+                <!-- /DataGrid -->
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

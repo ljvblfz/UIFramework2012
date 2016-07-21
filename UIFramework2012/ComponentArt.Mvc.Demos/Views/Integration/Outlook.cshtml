@@ -1,0 +1,124 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{
+  ViewData["DemoType"] = "Integration";
+  ViewData["DemoTitle"] = "Outlook 2007";
+  ViewData["BodyClass"] = "full";
+  ViewData["CodeFiles"] = "/Views/Integration/Outlook.aspx,/Views/Integration/FolderGrid.ascx,/Views/Integration/FolderList.ascx,/Views/Integration/NavigationNavBar.ascx,/Views/Integration/NavigationToolBar.ascx,/Views/Integration/TopPanel.ascx,/Controllers/IntegrationController.cs";
+  ViewData["AboutText"] = "";
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/Themes/Outlook2007/theme.css")" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../../Content/Themes/Outlook2007/icons.css" />
+  <link rel="stylesheet" type="text/css" href="../../Content/Integration/Outlook/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../Content/Integration/Outlook/top_panel.css" />
+  <link rel="stylesheet" type="text/css" href="../../Content/Integration/Outlook/navigation_navbar.css" />
+  <link rel="stylesheet" type="text/css" href="../../Content/Integration/Outlook/navigation_toolbar.css" />
+  <link rel="stylesheet" type="text/css" href="../../Content/Integration/Outlook/folderlist_treeview.css" />
+  <link rel="stylesheet" type="text/css" href="../../Content/Integration/Outlook/folder_grid.css" />
+  <style type="text/css">
+    .cart-toolbar-item .cart-toolbar-item-left-icon
+    {
+      background: none;
+      padding: none;
+    }
+    .cart-datagrid-row
+    {
+      line-height: 18px !important;
+    }
+    .cart-datagrid-row-hover
+    {
+      line-height: 18px !important;
+    }
+    .cart-navbar-top-item a span.cart-outer span.cart-inner
+    {
+      font-size: 8pt !important;
+    }
+  </style>
+  <script type="text/javascript">
+
+    function Update_NavigationToolBar(numItems)
+    {
+      if (window.NavigationToolBar)
+      {
+        NavigationToolBar.beginUpdate();
+
+        var items = NavigationToolBar.get_items();
+
+        for (var i = 1; i < items.get_length(); i++)
+        {
+          items.getItem(i).set_visible((i - 1) >= numItems);
+        }
+
+        NavigationToolBar.endUpdate();
+      }
+    }
+  </script>
+}
+<table cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td style="border: 1px solid #6593CF;">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="border: 1px solid #ffffff;">
+            <table width="1015" cellpadding="0" cellspacing="0" border="0" style="padding-left: 4px;
+              padding-right: 4px;" class="OutlookDemo">
+              <tr valign="top">
+                <td colspan="3">
+                  @Html.Partial("~/Views/Integration/_TopPanel.cshtml")
+                </td>
+              </tr>
+              <tr valign="top">
+                <td td style="width: 235px">
+                  <table cellpadding="0" cellspacing="0" border="0" style="width: 230px">
+                    <tr valign="top">
+                      <td>
+                        @Html.Partial("~/Views/Integration/_FolderList.cshtml")
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        @Html.Partial("~/Views/Integration/_NavigationNavBar.cshtml")
+                        @Html.Partial("~/Views/Integration/_NavigationToolBar.cshtml")
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="width: 474px">
+                  @Html.Partial("~/Views/Integration/_FolderGrid.cshtml")
+                </td>
+                <td style="width: 320px; background-color: white;">
+                  <table width="100%" cellpadding="2" cellspacing="6">
+                    <tr>
+                      <td id="MessageSubjectLabel" style="color: #000000; font-family: verdana; font-size: 12px; font-weight: bold;">
+                        
+                      </td>
+                    </tr>
+                    <tr>
+                      <td id="MessageFromLabel" style="color: #000000; font-family: verdana; font-size: 14px;">
+                        
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="color: #000000; font-family: verdana; font-size: 11px; border-bottom: 1px solid #6593CF;
+                        padding-bottom: 5px;">
+                        <font style="color: #6593CF">Sent:</font>
+                        <div id="MessageDateLabel" ></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="100%" valign="top" style="color: #000000; font-size: 12px;">
+                        <br />
+                        <div id="MessageBody">Message body</div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

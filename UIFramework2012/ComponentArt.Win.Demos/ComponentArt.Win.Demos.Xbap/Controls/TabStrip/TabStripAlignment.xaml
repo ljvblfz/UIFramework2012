@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.TabStripAlignment"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:ComponentArtTheme="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    Width="760" Height="450">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TabStrip" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="TabStrip Alignment" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo shows the Alignment Options of the TabStrip control." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\tabstrip\TabStripAlignment.xaml,
+            \source\controls\tabstrip\TabStripAlignment.xaml.cs"/>
+        <StackPanel Orientation="Horizontal">
+            <ComponentArt:TabStrip 
+            HorizontalAlignment="Left"
+            Width="20"
+            Height="200"
+            Overflow="Scroll"
+            Alignment="left"
+            VerticalAlignment="top"
+            Margin="0,22,-1,0"            
+            >
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+            </ComponentArt:TabStrip>
+            <StackPanel Orientation="Vertical">
+                <ComponentArt:TabStrip 
+                    x:Name="TabStrip1"
+            Width="200"
+            Height="20"
+            Alignment="top"
+            Margin="0,0,0,-1"
+            VerticalAlignment="top"
+            >
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+                </ComponentArt:TabStrip>
+                <Border
+                Width="202" 
+                Height="202" 
+                BorderThickness="1" 
+                BorderBrush="Black" />
+                <ComponentArt:TabStrip 
+            Width="200"
+            Height="20"
+            Alignment="bottom"
+            VerticalAlignment="top"
+            Margin="0,-1,0,0"
+            >
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+                </ComponentArt:TabStrip>
+            </StackPanel>
+            <ComponentArt:TabStrip 
+            Width="20"
+            Height="200"
+            Margin="-1,22,0,0"
+            Alignment="Right"
+            VerticalAlignment="top"
+
+            >
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+            </ComponentArt:TabStrip>
+        </StackPanel>
+    </Grid>
+</UserControl>

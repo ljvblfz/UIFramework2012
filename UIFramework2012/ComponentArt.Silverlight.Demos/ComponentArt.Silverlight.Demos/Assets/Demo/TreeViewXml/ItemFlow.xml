@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- ItemFlow -->
+<TreeView>
+
+    <TreeViewNode Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ItemFlowCoreFeatures" />
+		<TreeViewNode Header="XAML Content" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ItemFlowXamlContent" />
+      <TreeViewNode Header="ItemFlow Events" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ItemFlowEvents" />
+      <TreeViewNode Header="Wrap FlowMode" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ItemFlowWrap" />
+      <TreeViewNode Header="Selected Item Template" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ItemFlowSelectedItemTemplate" />
+    </TreeViewNode>
+    <TreeViewNode Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-programming.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="API Control" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ItemFlowAPI" />
+      <TreeViewNode Header="Two Instances" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ItemFlowTwoInstances" />
+    </TreeViewNode>
+</TreeView>
+<!-- /ItemFlow -->

@@ -1,0 +1,15 @@
+<ToolBars>
+	 <ToolBar>
+		<ToolBarItem Name="bold" />
+		<ToolBarItem Name="italic" />
+		<ToolBarItem Name="underline" />
+		<ToolBarItem Name="fontname" />
+		<ToolBarItem Name="fontsize" />
+		<ToolBarItem Name="justifyleft" />
+		<ToolBarItem Name="justifyright" />
+		<ToolBarItem Name="justifycenter" />
+		<ToolBarItem Name="justifyfull" />
+	 	<ToolBarItem Name="insertlink" />
+	 	<ToolBarItem Name="unlink" />
+	</ToolBar>
+</ToolBars> 	

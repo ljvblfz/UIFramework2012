@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.DemoList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+    FontSize="11"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <ScrollViewer x:Name="ItemsScrollViewer" Background="Transparent" BorderBrush="Transparent" Style="{StaticResource CArtScrollViewerStyle}"
+                      VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden">
+            <StackPanel x:Name="ItemsStackPanel">
+                <Image Margin="0,14,0,0" Source="{Binding Header}" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                       Stretch="None" Height="14" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

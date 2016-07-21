@@ -1,0 +1,140 @@
+﻿<SiteMap>
+  <item Text="File">
+    <item Text="New..." />
+    <item Text="Open..." />
+    <item  />
+    <item Text="Save As..." />
+    <item Text="Save As Web Page..." />
+    <item  />
+    <item Text="Page Setup..." />
+    <item Text="Print..." />
+    <item  />
+    <item Text="Close" />
+  </item>
+  <item Text="Edit">
+    <item Text="Cut" />
+    <item Text="Copy" />
+    <item Text="Paste"/>
+    <item  />
+    <item Text="Background" >
+      <item Text="More Colors..." />
+      <item Text="Fill Effects..." />
+      <item Text="Printed Watermark..." />
+    </item>
+    <item Text="IntelliSense" >
+      <item Text="List Members" />
+      <item Text="Parameter Info" />
+      <item Text="Complete Word" />
+    </item>
+  </item>
+  <item Text="View" >
+    <item Text="Stop" />
+    <item Text="Refresh" />
+    <item  />
+    <item Text="Client Templates" >
+      <item ClientTemplateId="SetMarginsTemplate" MarginImage="margins_custom.gif" SettingName="Last Custom Setting" Top="1" Bottom="1" Left="1.25" Right="1.25" />
+      <item ClientTemplateId="SetMarginsTemplate" MarginImage="margins_normal.gif" SettingName="Normal" Top="1" Bottom="1" Left="0.75" Right="0.75" />
+      <item ClientTemplateId="SetMarginsTemplate" MarginImage="margins_narrow.gif" SettingName="Narrow" Top="0.25" Bottom="0.25" Left="0.25" Right="0.25" />
+      <item ClientTemplateId="SetMarginsTemplate" MarginImage="margins_wide.gif" SettingName="Wide" Top="1" Bottom="1" Left="2" Right="2" />
+      <item  />
+      <item Text="Advanced..." />
+    </item>
+    <item Text="Encoding" >
+      <item Text="Auto Select" />
+      <item  />
+      <item Text="Western European (Windows)" />
+      <item Text="Western European (ISO)" />
+      <item Text="Unicode (UTF-8)" />
+      <item  />
+      <item Text="More (Scrolling Group)" SubGroupHeight="190" >
+        <item Text="Auto Select" />
+        <item  />
+        <item Text="Western European (Windows)" />
+        <item Text="Western European (ISO)" />
+        <item Text="Unicode (UTF-8)" />
+        <item  />
+        <item Text="Arabic (ASMO 708)" />
+        <item Text="Arabic (DOS)" />
+        <item Text="Arabic (ISO)" />
+        <item Text="Arabic (Windows)" />
+        <item Text="Baltic (DOS)" />
+        <item Text="Baltic (ISO)" />
+        <item Text="Baltic (Windows)" />
+        <item Text="Central European (DOS)" />
+        <item Text="Central European (Windows)" />
+        <item Text="Chinese Simplified" />
+        <item Text="Chinese Traditional" />
+        <item Text="Cyrillic (DOS)" />
+        <item Text="Cyrillic (ISO)" />
+        <item Text="Cyrillic (KOI8-R)" />
+        <item Text="Cyrillic (KOI8-U)" />
+        <item Text="Cyrillic (Windows)" />
+        <item Text="French (DOS)" />
+        <item Text="French (ISO)" />
+        <item Text="French (Windows)" />
+        <item Text="German (DOS)" />
+        <item Text="German (ISO)" />
+        <item Text="German (Windows)" />
+        <item Text="Hebrew (DOS)" />
+        <item Text="Hebrew (ISO-Logical)" />
+        <item Text="Hebrew (ISO-Visual)" />
+        <item Text="Hebrew (Windows)" />
+        <item Text="Greek (DOS)" />
+        <item Text="Greek (ISO)" />
+        <item Text="Greek (Windows)" />
+        <item Text="Japanese" />
+        <item Text="Korean" />
+        <item Text="Polish (DOS)" />
+        <item Text="Polish (ISO)" />
+        <item Text="Polish (Windows)" />
+        <item Text="Russian (DOS)" />
+        <item Text="Russian (ISO)" />
+        <item Text="Russian (Windows)" />
+        <item Text="Serbian (DOS)" />
+        <item Text="Serbian (ISO)" />
+        <item Text="Serbian (Windows)" />
+        <item Text="Swedish (DOS)" />
+        <item Text="Swedish (ISO)" />
+        <item Text="Swedish (Windows)" />
+        <item Text="Thai" />
+        <item Text="Turkish (DOS)" />
+        <item Text="Turkish (ISO)" />
+        <item Text="Turkish (Windows)" />
+        <item  />
+        <item Text="Left-To-Right Document" />
+        <item Text="Right-To-Left Document" />
+      </item>
+      <item  />
+      <item Text="Left-To-Right Document" />
+      <item Text="Right-To-Left Document" />
+    </item>
+    <item  />
+    <item Text="Navigate" >
+      <item Text="Back" />
+      <item Text="Forward" />
+      <item  />
+      <item Text="MSDN Home Page" />
+      <item Text="CNET.com" />
+      <item Text="ASP.NET Menu" />
+    </item>
+    <item Text="Privacy Report..."/>
+    <item Text="Full Screen" />
+
+  </item>
+  <item Text="Tools">
+    <item Text="Mail and News" />
+    <item Text="Synchronize..." />
+    <item Text="Windows Update" />
+    <item  />
+    <item Text="Show Related Links" />
+    <item  />
+    <item Text="Internet Options..." />
+  </item>
+  <item Text="Help">
+    <item Text="Online Support" />
+    <item Text="Send Feedback" />
+    <item  />
+    <item Text="About ComponentArt" />
+  </item>
+  <item Width="415" />
+</SiteMap>

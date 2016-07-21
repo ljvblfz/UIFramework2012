@@ -1,0 +1,1036 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="ComponentArt.Silverlight.Demos.IntroMenuBar">
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <Storyboard x:Key="RootStoryboard">
+        <Storyboard Duration="0:0:0.7" Completed="Storyboard_Completed">
+          <Storyboard/>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_2_ox_3" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_2_ox_3_ax_8_ix_0" Storyboard.TargetProperty="Visibility">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_2_ox_3_ax_8_ix_0" Storyboard.TargetProperty="RenderTransform">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.533" Value="0.432632, -1.330048, 1.330063, 0.432632, 418, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.566" Value="-1.856262, -1.351913, 1.351929, -1.856262, 418, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="-2.582687, 1.880981, -1.880966, -2.582687, 418, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.633" Value="1.266998, 3.895203, -3.895187, 1.266998, 418, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.666" Value="5, 0, 0, 5, 418, 19"/>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_3_ox_4" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_4_ox_5" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_5_ox_6" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_6_ox_7" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_7_ox_8" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_8_ox_9" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_9_ox_10" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_10_ox_11" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_11_ox_12" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_12_ox_13" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_13_ox_14" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_14_ox_15" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_15_ox_16" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_16_ox_17" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_17_ox_18" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_18_ox_19" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_19_ox_20" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard/>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_21_ox_22" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                      <PathFigure StartPoint="845.05, 2.95">
+                        <PathFigure.Segments>
+                          <LineSegment Point="845.05, 37.1"/>
+                          <QuadraticBezierSegment Point1="845, 38.3" Point2="844.2, 39.1"/>
+                          <QuadraticBezierSegment Point1="843.35, 39.95" Point2="842.15, 40"/>
+                          <LineSegment Point="3, 40"/>
+                          <QuadraticBezierSegment Point1="1.75, 39.95" Point2="0.95, 39.1"/>
+                          <LineSegment Point="0.9, 39.05"/>
+                          <QuadraticBezierSegment Point1="0.1, 38.25" Point2="0.05, 37.1"/>
+                          <LineSegment Point="0.05, 2.95"/>
+                          <QuadraticBezierSegment Point1="0.1, 1.7" Point2="0.95, 0.85"/>
+                          <QuadraticBezierSegment Point1="1.75, 0.05" Point2="3, 0"/>
+                          <LineSegment Point="842.15, 0"/>
+                          <QuadraticBezierSegment Point1="843.2, 0" Point2="844, 0.7"/>
+                          <LineSegment Point="844.2, 0.85"/>
+                          <QuadraticBezierSegment Point1="845, 1.7" Point2="845.05, 2.95"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_21_ox_22_ax_4_ix_0" Storyboard.TargetProperty="Visibility">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_21_ox_22_ax_4_ix_0" Storyboard.TargetProperty="RenderTransform">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.033" Value="1, 0, 0, 1, -709, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.066" Value="1, 0, 0, 1, -533, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="1, 0, 0, 1, -357, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.133" Value="1, 0, 0, 1, -182, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.166" Value="1, 0, 0, 1, -6, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="1, 0, 0, 1, 170, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.233" Value="1, 0, 0, 1, 346, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.266" Value="1, 0, 0, 1, 521, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="1, 0, 0, 1, 697, 19"/>
+              <DiscreteObjectKeyFrame KeyTime="0:0:0.333" Value="1, 0, 0, 1, 873, 19"/>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_22_ox_23" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                      <PathFigure StartPoint="845.05, 2.95">
+                        <PathFigure.Segments>
+                          <LineSegment Point="845.05, 37.1"/>
+                          <QuadraticBezierSegment Point1="845, 38.3" Point2="844.2, 39.1"/>
+                          <QuadraticBezierSegment Point1="843.35, 39.95" Point2="842.15, 40"/>
+                          <LineSegment Point="3, 40"/>
+                          <QuadraticBezierSegment Point1="1.75, 39.95" Point2="0.95, 39.1"/>
+                          <LineSegment Point="0.9, 39.05"/>
+                          <QuadraticBezierSegment Point1="0.1, 38.25" Point2="0.05, 37.1"/>
+                          <LineSegment Point="0.05, 2.95"/>
+                          <QuadraticBezierSegment Point1="0.1, 1.7" Point2="0.95, 0.85"/>
+                          <QuadraticBezierSegment Point1="1.75, 0.05" Point2="3, 0"/>
+                          <LineSegment Point="842.15, 0"/>
+                          <QuadraticBezierSegment Point1="843.2, 0" Point2="844, 0.7"/>
+                          <LineSegment Point="844.2, 0.85"/>
+                          <QuadraticBezierSegment Point1="845, 1.7" Point2="845.05, 2.95"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_23_ox_24" Storyboard.TargetProperty="Clip">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                <DiscreteObjectKeyFrame.Value>
+                  <PathGeometry>
+                    <PathGeometry.Transform>
+                      <MatrixTransform/>
+                    </PathGeometry.Transform>
+                    <PathGeometry.Figures>
+                      <PathFigure StartPoint="844, 3.8">
+                        <PathFigure.Segments>
+                          <LineSegment Point="844, 36.25"/>
+                          <QuadraticBezierSegment Point1="843.95, 37.4" Point2="843.15, 38.15"/>
+                          <QuadraticBezierSegment Point1="842.3, 38.95" Point2="841.1, 39"/>
+                          <LineSegment Point="4, 39"/>
+                          <QuadraticBezierSegment Point1="2.75, 38.95" Point2="1.95, 38.15"/>
+                          <LineSegment Point="1.9, 38.1"/>
+                          <QuadraticBezierSegment Point1="1.1, 37.35" Point2="1.05, 36.25"/>
+                          <LineSegment Point="1.05, 3.8"/>
+                          <QuadraticBezierSegment Point1="1.1, 2.6" Point2="1.95, 1.8"/>
+                          <QuadraticBezierSegment Point1="2.75, 1.05" Point2="4, 1"/>
+                          <LineSegment Point="841.1, 1"/>
+                          <QuadraticBezierSegment Point1="842.3, 1.05" Point2="843.15, 1.8"/>
+                          <QuadraticBezierSegment Point1="843.95, 2.6" Point2="844, 3.8"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                      <PathFigure StartPoint="845.05, 2.95">
+                        <PathFigure.Segments>
+                          <LineSegment Point="845.05, 37.1"/>
+                          <QuadraticBezierSegment Point1="845, 38.3" Point2="844.2, 39.1"/>
+                          <QuadraticBezierSegment Point1="843.35, 39.95" Point2="842.15, 40"/>
+                          <LineSegment Point="3, 40"/>
+                          <QuadraticBezierSegment Point1="1.75, 39.95" Point2="0.95, 39.1"/>
+                          <LineSegment Point="0.9, 39.05"/>
+                          <QuadraticBezierSegment Point1="0.1, 38.25" Point2="0.05, 37.1"/>
+                          <LineSegment Point="0.05, 2.95"/>
+                          <QuadraticBezierSegment Point1="0.1, 1.7" Point2="0.95, 0.85"/>
+                          <QuadraticBezierSegment Point1="1.75, 0.05" Point2="3, 0"/>
+                          <LineSegment Point="842.15, 0"/>
+                          <QuadraticBezierSegment Point1="843.2, 0" Point2="844, 0.7"/>
+                          <LineSegment Point="844.2, 0.85"/>
+                          <QuadraticBezierSegment Point1="845, 1.7" Point2="845.05, 2.95"/>
+                        </PathFigure.Segments>
+                      </PathFigure>
+                    </PathGeometry.Figures>
+                  </PathGeometry>
+                </DiscreteObjectKeyFrame.Value>
+              </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+        </Storyboard>
+        <Storyboard Duration="0:0:0.033">
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_1_ox_25_ax_3_ix_0" Storyboard.TargetProperty="Visibility">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+        </Storyboard>
+        <Storyboard BeginTime="0:0:0.5" Duration="0:0:0.033">
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_12_ox_27_ax_5_ix_0" Storyboard.TargetProperty="Visibility">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+        </Storyboard>
+        <Storyboard BeginTime="0:0:0.5" Duration="0:0:0.033">
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_1_ox_26_ax_6_ix_0" Storyboard.TargetProperty="Visibility">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+          <Storyboard>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="dx_16_ox_28_ax_7_ix_0" Storyboard.TargetProperty="Visibility">
+              <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="Visible"/>
+            </ObjectAnimationUsingKeyFrames>
+          </Storyboard>
+        </Storyboard>
+      </Storyboard>
+    </ResourceDictionary>
+  </UserControl.Resources>
+  <Canvas Width="845" Height="40" x:Name="LayoutRoot" Background="Transparent">
+    <Canvas.Clip>
+      <RectangleGeometry Rect="0, 0, 845, 40"/>
+    </Canvas.Clip>
+    <Canvas x:Name="dx_1_ox_2"/>
+    <Canvas x:Name="dx_2_ox_3">
+      <Canvas x:Name="dx_2_ox_3_ax_8_ix_0" Visibility="Collapsed">
+        <Canvas.RenderTransform>
+          <MatrixTransform Matrix="0.5, 0, 0, 0.5, 418, 19"/>
+        </Canvas.RenderTransform>
+        <Canvas x:Name="dx_1_ox_26">
+          <Canvas x:Name="dx_1_ox_26_ax_6_ix_0" Visibility="Collapsed">
+            <Canvas.RenderTransform>
+              <MatrixTransform/>
+            </Canvas.RenderTransform>
+            <Canvas x:Name="dx_12_ox_27">
+              <Canvas x:Name="dx_12_ox_27_ax_5_ix_0" Visibility="Collapsed">
+                <Canvas.RenderTransform>
+                  <MatrixTransform/>
+                </Canvas.RenderTransform>
+                <Path Data="F0 M -169.2, 161.75 L 0, 0.05 L -161.7, 169.25 L -169.2, 161.75">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="-0.100983, 0.100983, -0.004593, -0.004593, -82.75, 82.75"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M 169.2, -161.65 L 0, 0.05 L 161.7, -169.15 L 169.2, -161.65">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0.100983, -0.100983, 0.004593, 0.004593, 82.75, -82.65"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M -171.45, 75.3 L 0, 0.05 L -167.85, 82.95 L -171.45, 75.3">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="-0.103546, 0.048279, -0.002197, -0.0047, -84.8, 39.55"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M 171.5, -75.25 L 0.05, 0 L 167.9, -82.9 L 171.5, -75.25">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0.103546, -0.048279, 0.002197, 0.0047, 84.85, -39.5"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M -104.65, -40.8 L -0.05, 0 L -106.45, -36 L -104.65, -40.8">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="-0.064407, -0.023453, 0.001068, -0.00293, -52.8, -19.2"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M 104.6, 40.85 L 0, 0.05 L 106.4, 36.05 L 104.6, 40.85">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0.064407, 0.023453, -0.001068, 0.00293, 52.75, 19.25"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M -126.7, -76.95 L 0, 0.05 L -130.05, -71.15 L -126.7, -76.95">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="-0.078354, -0.045242, 0.00206, -0.003555, -64.15, -37"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M 126.7, 77.1 L 0, 0.1 L 130.05, 71.3 L 126.7, 77.1">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0.078354, 0.045242, -0.00206, 0.003555, 64.15, 37.15"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M -108.7, -79.75 L -0.1, 0 L -112.2, -74.75 L -108.7, -79.75">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="-0.067383, -0.04718, 0.002151, -0.003067, -55.25, -38.65"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M 108.6, 79.8 L 0, 0.05 L 112.1, 74.8 L 108.6, 79.8">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0.067383, 0.04718, -0.002151, 0.003067, 55.15, 38.7"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M -101.2, -184.75 L -0.05, 0 L -109.45, -179.95 L -101.2, -184.75">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="-0.064255, -0.111313, 0.005066, -0.00293, -52.6, -91.2"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+                <Path Data="F0 M 101.1, 184.8 L -0.05, 0.05 L 109.35, 180 L 101.1, 184.8">
+                  <Path.Fill>
+                    <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                      <LinearGradientBrush.Transform>
+                        <MatrixTransform Matrix="0.064255, 0.111313, -0.005066, 0.00293, 52.55, 91.25"/>
+                      </LinearGradientBrush.Transform>
+                      <GradientStop Color="#DE9EDBF1"/>
+                      <GradientStop Color="#00A3DDF1" Offset="0.94902"/>
+                    </LinearGradientBrush>
+                  </Path.Fill>
+                </Path>
+              </Canvas>
+            </Canvas>
+          </Canvas>
+        </Canvas>
+        <Canvas x:Name="dx_16_ox_28">
+          <Canvas x:Name="dx_16_ox_28_ax_7_ix_0" Visibility="Collapsed">
+            <Canvas.RenderTransform>
+              <MatrixTransform/>
+            </Canvas.RenderTransform>
+            <Path Data="F0 M 124.6, -0.6 Q 124.6, 50.7 88.3, 87 Q 52, 123.3 0.7, 123.3 Q -50.6, 123.3 -86.9, 87 Q -123.2, 50.7 -123.2, -0.6 Q -123.2, -51.9 -86.9, -88.2 Q -50.6, -124.5 0.7, -124.5 Q 52, -124.5 88.3, -88.2 Q 124.6, -51.9 124.6, -0.6">
+              <Path.Fill>
+                <RadialGradientBrush MappingMode="Absolute" Center="0, 0" GradientOrigin="0, 0" RadiusX="819.2" RadiusY="819.2">
+                  <RadialGradientBrush.Transform>
+                    <MatrixTransform Matrix="0.153427, 0, 0, 0.153427, 0.7, -0.6"/>
+                  </RadialGradientBrush.Transform>
+                  <GradientStop Color="#FF11ACEE"/>
+                  <GradientStop Color="#004AC1DF" Offset="0.878431"/>
+                </RadialGradientBrush>
+              </Path.Fill>
+            </Path>
+            <Path Data="F0 M 71.1, -0.6 Q 71.1, 28.55 50.45, 49.2 Q 29.85, 69.8 0.7, 69.8 Q -28.45, 69.8 -49.1, 49.2 Q -69.7, 28.55 -69.7, -0.6 Q -69.7, -29.75 -49.1, -50.35 Q -28.45, -71 0.7, -71 Q 29.85, -71 50.45, -50.35 Q 71.1, -29.75 71.1, -0.6">
+              <Path.Fill>
+                <RadialGradientBrush MappingMode="Absolute" Center="0, 0" GradientOrigin="0, 0" RadiusX="819.2" RadiusY="819.2">
+                  <RadialGradientBrush.Transform>
+                    <MatrixTransform Matrix="0.087173, 0, 0, 0.087173, 0.7, -0.6"/>
+                  </RadialGradientBrush.Transform>
+                  <GradientStop Color="#D9BFE6FB"/>
+                  <GradientStop Color="#00C3E7FB" Offset="0.678431"/>
+                </RadialGradientBrush>
+              </Path.Fill>
+            </Path>
+            <Path Data="F0 M 36.75, -0.65 Q 36.75, 14.25 26.15, 24.85 Q 15.6, 35.4 0.65, 35.4 Q -14.25, 35.4 -24.85, 24.85 Q -35.4, 14.25 -35.4, -0.65 Q -35.4, -15.55 -24.85, -26.15 Q -14.25, -36.7 0.65, -36.7 Q 15.6, -36.7 26.15, -26.15 Q 36.75, -15.55 36.75, -0.65">
+              <Path.Fill>
+                <RadialGradientBrush MappingMode="Absolute" Center="0, 0" GradientOrigin="0, 0" RadiusX="819.2" RadiusY="819.2">
+                  <RadialGradientBrush.Transform>
+                    <MatrixTransform Matrix="0.044632, 0, 0, 0.044632, 0.65, -0.65"/>
+                  </RadialGradientBrush.Transform>
+                  <GradientStop Color="#D9FFFFFF"/>
+                  <GradientStop Color="#00FFFFFF" Offset="0.678431"/>
+                </RadialGradientBrush>
+              </Path.Fill>
+            </Path>
+          </Canvas>
+        </Canvas>
+      </Canvas>
+    </Canvas>
+    <Canvas x:Name="dx_3_ox_4"/>
+    <Canvas x:Name="dx_4_ox_5"/>
+    <Canvas x:Name="dx_5_ox_6"/>
+    <Canvas x:Name="dx_6_ox_7"/>
+    <Canvas x:Name="dx_7_ox_8"/>
+    <Canvas x:Name="dx_8_ox_9"/>
+    <Canvas x:Name="dx_9_ox_10"/>
+    <Canvas x:Name="dx_10_ox_11"/>
+    <Canvas x:Name="dx_11_ox_12"/>
+    <Canvas x:Name="dx_12_ox_13"/>
+    <Canvas x:Name="dx_13_ox_14"/>
+    <Canvas x:Name="dx_14_ox_15"/>
+    <Canvas x:Name="dx_15_ox_16"/>
+    <Canvas x:Name="dx_16_ox_17"/>
+    <Canvas x:Name="dx_17_ox_18"/>
+    <Canvas x:Name="dx_18_ox_19"/>
+    <Canvas x:Name="dx_19_ox_20"/>
+    <Canvas x:Name="dx_20_ox_21"/>
+    <Canvas x:Name="dx_21_ox_22">
+      <Canvas x:Name="dx_21_ox_22_ax_4_ix_0" Visibility="Collapsed">
+        <Canvas.RenderTransform>
+          <MatrixTransform Matrix="1, 0, 0, 1, -885, 19"/>
+        </Canvas.RenderTransform>
+        <Canvas x:Name="dx_1_ox_25">
+          <Canvas x:Name="dx_1_ox_25_ax_3_ix_0" Visibility="Collapsed">
+            <Canvas.RenderTransform>
+              <MatrixTransform/>
+            </Canvas.RenderTransform>
+            <Path Data="F0 M 880.95, 28.75 L -880.95, 28.75 L -880.95, -28.8 L 880.95, -28.8 L 880.95, 28.75">
+              <Path.Fill>
+                <LinearGradientBrush MappingMode="Absolute" StartPoint="-819.2, 0" EndPoint="819.2, 0">
+                  <LinearGradientBrush.Transform>
+                    <MatrixTransform Matrix="0.555237, 0.555237, -0.555237, 0.555237, 0, -0.05"/>
+                  </LinearGradientBrush.Transform>
+                  <GradientStop Color="#FFAAAAAA"/>
+                  <GradientStop Color="#FFAAAAAA" Offset="0.537255"/>
+                  <GradientStop Color="#00AAAAAA" Offset="0.945098"/>
+                </LinearGradientBrush>
+              </Path.Fill>
+            </Path>
+          </Canvas>
+        </Canvas>
+      </Canvas>
+    </Canvas>
+    <Canvas x:Name="dx_22_ox_23"/>
+    <Canvas x:Name="dx_23_ox_24"/>
+  </Canvas>
+</UserControl>

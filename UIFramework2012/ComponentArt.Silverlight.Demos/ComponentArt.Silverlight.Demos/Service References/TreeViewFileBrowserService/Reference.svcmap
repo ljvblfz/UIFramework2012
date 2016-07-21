@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="84b95af5-6c8b-4bcd-ad56-5634f229046e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3069/TreeViewFileBrowserService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TreeViewFileBrowserService3.xsd" MetadataType="Schema" ID="a9ce45e1-6c49-419f-a387-0b2b3e7d1af0" SourceId="1" SourceUrl="http://localhost:3069/TreeViewFileBrowserService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TreeViewFileBrowserService1.disco" MetadataType="Disco" ID="65b17271-dccf-4da8-8c81-07c65eed6c0c" SourceId="1" SourceUrl="http://localhost:3069/TreeViewFileBrowserService.svc?disco" />
+    <MetadataFile FileName="TreeViewFileBrowserService2.wsdl" MetadataType="Wsdl" ID="9372f6c0-7a92-4ee1-92bf-cafc2fad7aa5" SourceId="1" SourceUrl="http://localhost:3069/TreeViewFileBrowserService.svc?wsdl" />
+    <MetadataFile FileName="TreeViewFileBrowserService31.xsd" MetadataType="Schema" ID="a46491e4-7394-4515-93f6-1d4e3c98d6c4" SourceId="1" SourceUrl="http://localhost:3069/TreeViewFileBrowserService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TreeViewFileBrowserService21.wsdl" MetadataType="Wsdl" ID="54f35512-d17c-41d2-8066-71996f8f53ed" SourceId="1" SourceUrl="http://localhost:3069/TreeViewFileBrowserService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TreeViewFileBrowserService32.xsd" MetadataType="Schema" ID="1c99e156-f01d-40f6-b37a-4a9c33d9df75" SourceId="1" SourceUrl="http://localhost:3069/TreeViewFileBrowserService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

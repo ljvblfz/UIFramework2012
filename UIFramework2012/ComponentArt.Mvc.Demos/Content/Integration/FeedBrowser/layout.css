@@ -1,0 +1,32 @@
+﻿body, html, form, p
+{
+  padding:0;
+  margin:0;
+  height:100%;
+}
+
+body
+{
+  background-color:#000000;
+}
+
+.main
+{
+  min-height: 100%;
+  margin:0 0 0 0;
+  background-color:transparent;
+  color:#AAAAAA;
+  font-family:Verdana;
+  font-size:12pt;
+  overflow:hidden;
+}
+
+#FeedDescription
+{
+  text-align:center;
+  vertical-align:middle;
+  margin:auto auto auto auto;
+  color:#DDDDDD;
+  font-family:Verdana;
+  font-size:8pt;
+}

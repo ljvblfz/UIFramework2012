@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Nodes>
+	<Node CssClass="nav-top app" HoverCssClass="nav-top app nav-top-h" ActiveCssClass="nav-top app nav-top-a" ExpandedCssClass="nav-top app nav-top-x" Text="Design Examples" Selectable="false" ChildSelectedCssClass="nil" RowCssClass="nav-row-top">
+    <Node Text="Theme Switching" NavigateUrl="~/NavBar/ThemeSwitching/" />
+    <Node Text="Themed With Icons" NavigateUrl="~/NavBar/ThemedWithIcons/" />
+    <Node Text="Themed With CSS Icons" NavigateUrl="~/NavBar/ThemedWithCssIcons/" CssClass="nav-itm nav-itm-last" HoverCssClass="nav-itm-h nav-itm-last-h" SelectedCssClass="nav-itm-s nav-itm-last-s" />
+    <!--
+		<Node Text="Arctic White Skin" NavigateUrl="~/control-specific/navbar/design/arcticwhite/default.aspx" />
+		<Node Text="Office 2003 Skin" NavigateUrl="~/control-specific/navbar/design/office2003/default.aspx" />
+		<Node Text="Windows XP Silver" NavigateUrl="~/control-specific/navbar/design/xpsilver/default.aspx" />
+		<Node Text="Outlook 2003 Bar" NavigateUrl="~/control-specific/navbar/design/outlook_2003/WebForm1.aspx" />
+		<Node Text="Outlook 2003 Inbox" NavigateUrl="~/control-specific/navbar/design/outlook_2003Inbox/WebForm1.aspx" />
+		<Node Text="Windows XP Side Bar" NavigateUrl="~/control-specific/navbar/design/windows_xpSideBar/WebForm1.aspx" />
+		<Node Text="Windows XP Classic Bar" NavigateUrl="~/control-specific/navbar/design/windows_xpClassicBar/WebForm1.aspx" />
+		<Node Text="Outlook XP Side Bar" NavigateUrl="~/control-specific/navbar/design/outlook_xpSideBar/WebForm1.aspx" />
+		<Node Text="Hybrid Outlook XP Bar" NavigateUrl="~/control-specific/navbar/design/hybrid_outlookXpBar/WebForm1.aspx" />
+		<Node Text="Silver 3D Gradient" NavigateUrl="~/control-specific/navbar/design/silver_3dGradient/WebForm1.aspx" />
+		<Node Text="Gold 3D Solid" NavigateUrl="~/control-specific/navbar/design/gold_3dSolid/WebForm1.aspx" />
+		<Node Text="Default Look" NavigateUrl="~/control-specific/navbar/design/default/WebForm1.aspx" CssClass="nav-itm nav-itm-last" HoverCssClass="nav-itm-h nav-itm-last-h" SelectedCssClass="nav-itm-s nav-itm-last-s" />
+    -->
+	</Node>
+</Nodes>

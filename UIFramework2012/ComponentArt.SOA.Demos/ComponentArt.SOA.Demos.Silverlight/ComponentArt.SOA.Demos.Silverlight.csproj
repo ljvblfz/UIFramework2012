@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{082BF467-266A-44A5-8BE6-83890074CED7}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComponentArt.SOA.Demos</RootNamespace>
+    <AssemblyName>ComponentArt.SOA.Demos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>ComponentArt.SOA.Demos.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>ComponentArt.SOA.Demos.App</SilverlightAppEntry>
+    <TestPageFileName>TestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>false</ThrowErrorsInValidation>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentArt.Silverlight.UI.Common, Version=2010.1.2597.35, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\ComponentArt.Silverlight.UI.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.UI.Data, Version=2010.1.2597.35, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\ComponentArt.Silverlight.UI.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.UI.Input, Version=2010.1.2597.35, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\ComponentArt.Silverlight.UI.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Silverlight.UI.Navigation, Version=2010.1.2597.35, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\ComponentArt.Silverlight.UI.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows" />
+    <Reference Include="mscorlib" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ImageButton.cs" />
+    <Compile Include="Demos\ComboBox.xaml.cs">
+      <DependentUpon>ComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\ComboBoxFiltering.xaml.cs">
+      <DependentUpon>ComboBoxFiltering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\TreeViewStructureEdit.xaml.cs">
+      <DependentUpon>TreeViewStructureEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\TreeViewSimpleLoading.xaml.cs">
+      <DependentUpon>TreeViewSimpleLoading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\DataGridSoaScrolling.xaml.cs">
+      <DependentUpon>DataGridSoaScrolling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\DataGridSimpleLoading.xaml.cs">
+      <DependentUpon>DataGridSimpleLoading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\DataGridMessageBrowser.xaml.cs">
+      <DependentUpon>DataGridMessageBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\DataGridSoaEditing.xaml.cs">
+      <DependentUpon>DataGridSoaEditing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\FileExplorer.xaml.cs">
+      <DependentUpon>FileExplorer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\NavBar.xaml.cs">
+      <DependentUpon>NavBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\TabStrip.xaml.cs">
+      <DependentUpon>TabStrip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\ToolBar.xaml.cs">
+      <DependentUpon>ToolBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\TreeViewFileBrowser.xaml.cs">
+      <DependentUpon>TreeViewFileBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page.xaml.cs">
+      <DependentUpon>Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="assets\CustomFileBrowserDataGridTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="assets\customThemeAjax.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="assets\customThemeSilverlight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\ComboBoxFiltering.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\TreeViewStructureEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\TreeViewSimpleLoading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\DataGridSoaScrolling.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\DataGridSimpleLoading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\DataGridMessageBrowser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\DataGridSoaEditing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\FileExplorer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\NavBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\TabStrip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\ToolBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Demos\TreeViewFileBrowser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridDeleteResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridGroupResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridInsertResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridSelectResponse.datasource" />
+    <None Include="Properties\DataSources\ComponentArt.SOA.UI.SoaDataGridUpdateResponse.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\file.png" />
+    <Resource Include="assets\logo.png" />
+    <Resource Include="assets\pointer.png" />
+    <Resource Include="assets\sql.png" />
+    <Resource Include="assets\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\DataGridMessageBrowser\images\attachment.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\flag_blue.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\flag_none.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\flag_red.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\icon_attachment.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\icon_flag.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\icon_icon.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\icon_priority.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\msg_forwarded.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\msg_forwarded_large.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\msg_read.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\msg_read_large.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\msg_replied.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\msg_replied_large.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\msg_unread.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\msg_unread_large.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\priority_high.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\priority_low.png" />
+    <Resource Include="assets\DataGridMessageBrowser\images\spacer.png" />
+    <Resource Include="assets\FileBrowser\images\grid\asc.gif" />
+    <Resource Include="assets\FileBrowser\images\grid\ascx.png" />
+    <Resource Include="assets\FileBrowser\images\grid\aspx.png" />
+    <Resource Include="assets\FileBrowser\images\grid\config.png" />
+    <Resource Include="assets\FileBrowser\images\grid\cs.png" />
+    <Resource Include="assets\FileBrowser\images\grid\css.png" />
+    <Resource Include="assets\FileBrowser\images\grid\desc.gif" />
+    <Resource Include="assets\FileBrowser\images\grid\dll.png" />
+    <Resource Include="assets\FileBrowser\images\grid\file.png" />
+    <Resource Include="assets\FileBrowser\images\grid\folder.png" />
+    <Resource Include="assets\FileBrowser\images\grid\folder_open.png" />
+    <Resource Include="assets\FileBrowser\images\grid\gif.png" />
+    <Resource Include="assets\FileBrowser\images\grid\jpg.png" />
+    <Resource Include="assets\FileBrowser\images\grid\js.png" />
+    <Resource Include="assets\FileBrowser\images\grid\minus.png" />
+    <Resource Include="assets\FileBrowser\images\grid\plus.png" />
+    <Resource Include="assets\FileBrowser\images\grid\spacer.png" />
+    <Resource Include="assets\FileBrowser\images\grid\vb.png" />
+    <Resource Include="assets\FileBrowser\images\grid\xml.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\ascx.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\aspx.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\config.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\cs.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\css.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\dll.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\file.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\folder.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\folder_open.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\gif.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\jpg.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\js.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\minus.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\plus.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\vb.png" />
+    <Resource Include="assets\FileBrowser\images\treeview\xml.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\ascx.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\aspx.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\config.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\cs.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\css.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\dll.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\file.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\folder.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\folder_open.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\gif.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\jpg.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\js.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\minus.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\plus.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\vb.png" />
+    <Resource Include="assets\TreeViewFileBrowser\images\xml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\footer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\logoOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\FileBrowser\images\treeview\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\TreeViewFileBrowser\images\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\FileBrowser\images\grid\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\NavBar\Big\calendar.png" />
+    <Resource Include="assets\NavBar\Big\contacts.png" />
+    <Resource Include="assets\NavBar\Big\deleted.png" />
+    <Resource Include="assets\NavBar\Big\drafts.png" />
+    <Resource Include="assets\NavBar\Big\folder.png" />
+    <Resource Include="assets\NavBar\Big\inbox.png" />
+    <Resource Include="assets\NavBar\Big\journal.png" />
+    <Resource Include="assets\NavBar\Big\notes.png" />
+    <Resource Include="assets\NavBar\Big\outbox.png" />
+    <Resource Include="assets\NavBar\Big\outlook_today.png" />
+    <Resource Include="assets\NavBar\Big\sent_items.png" />
+    <Resource Include="assets\NavBar\Big\tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\TreeViewEdit\calendar.png" />
+    <Resource Include="assets\TreeViewEdit\deleted.png" />
+    <Resource Include="assets\TreeViewEdit\drafts.png" />
+    <Resource Include="assets\TreeViewEdit\folder.png" />
+    <Resource Include="assets\TreeViewEdit\folders.png" />
+    <Resource Include="assets\TreeViewEdit\inbox.png" />
+    <Resource Include="assets\TreeViewEdit\junk.png" />
+    <Resource Include="assets\TreeViewEdit\root.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\TreeViewEdit\addnode.png" />
+    <Resource Include="assets\TreeViewEdit\addroot.png" />
+    <Resource Include="assets\TreeViewEdit\delete.png" />
+    <Resource Include="assets\TreeViewEdit\disabled_addnode.png" />
+    <Resource Include="assets\TreeViewEdit\disabled_delete.png" />
+    <Resource Include="assets\TreeViewEdit\disabled_rename.png" />
+    <Resource Include="assets\TreeViewEdit\folder_open.png" />
+    <Resource Include="assets\TreeViewEdit\rename.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Demo\footer-componentArt-hover.png" />
+    <Resource Include="assets\Demo\footer-componentArt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Demo\FLARE-SOA.png" />
+    <Resource Include="assets\Demo\UIFramework.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Demo\Tabs\AspNetAjax-hover.png" />
+    <Resource Include="assets\Demo\Tabs\AspNetAjax.png" />
+    <Resource Include="assets\Demo\Tabs\Download-hover.png" />
+    <Resource Include="assets\Demo\Tabs\Download.png" />
+    <Resource Include="assets\Demo\Tabs\Silverlight-hover.png" />
+    <Resource Include="assets\Demo\Tabs\Silverlight.png" />
+    <Resource Include="assets\Demo\Tabs\SoaUi-hover.png" />
+    <Resource Include="assets\Demo\Tabs\SoaUi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Demo\soaui-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Demo\WhiteBarLeftCap.png" />
+    <Resource Include="assets\Demo\WhiteBarMiddle.png" />
+    <Resource Include="assets\Demo\WhiteBarRightCap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Demo\AgMenuButton.png" />
+    <Resource Include="assets\Demo\AgMenuButtonOver.png" />
+    <Resource Include="assets\Demo\AjMenuButton.png" />
+    <Resource Include="assets\Demo\AjMenuButtonOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Demo\soaui-liveDemos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\Demo\Tabs\AspNetMvc-hover.png" />
+    <Resource Include="assets\Demo\Tabs\AspNetMvc.png" />
+    <Resource Include="assets\Demo\Tabs\WPF-hover.png" />
+    <Resource Include="assets\Demo\Tabs\WPF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

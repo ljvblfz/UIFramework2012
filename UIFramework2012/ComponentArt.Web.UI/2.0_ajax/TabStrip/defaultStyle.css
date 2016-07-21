@@ -1,0 +1,11 @@
+.cts_TopGroup {background-color:#3F3F3F;border:1px;border-color:white;border-top-color:#CCCCCC;border-left-color:#3F3F3F;border-bottom-color:#CCCCCC;border-style:solid;border-right:none;cursor:default;}
+.cts_TopTab {color:white;font-family:verdana;font-size:11px;border:1px;border-color:#3F3F3F;border-style:solid;cursor:pointer;}
+.cts_TopTabHover {color:white;font-family:verdana;font-size:11px;border:1px;border-color:#808080;border-right-color:black;border-bottom-color:black;border-style:solid;cursor:pointer;}
+.cts_TopTabSelected {color:#3F3F3F;background-color:#CCCCCC;font-family:verdana;font-size:11px;border:1px;border-style:solid;border-color:white;border-left-color:gray;border-top-color:gray;border-bottom-color:#CCCCCC;position:relative;top:1px;cursor:default;}
+.cts_TopTabDisabled {color:#9F9F9F;font-family:verdana;font-size:11px;border:1px;border-color:#3F3F3F;border-style:solid;cursor:pointer;}
+.cts_Group {background-color:#CCCCCC;border:1px;border-style:solid;border-color:#CCCCCC;border-bottom-color:#F6F6F6;border-right-color:white;border-right:none;cursor:default;}
+.cts_Tab {color:#3F3F3F;background-color:#CCCCCC;font-family:verdana;font-size:10px;border:1px;border-style:solid;border-color:#CCCCCC;cursor:pointer;}
+.cts_TabHover {color:#3F3F3F;background-color:#CCCCCC;font-family:verdana;font-size:10px;border:1px;border-style:solid;border-color:white;border-right-color:#999999;border-bottom-color:#999999;cursor:pointer;}
+.cts_TabSelected {color:#3F3F3F;background-color:#F6F6F6;font-family:verdana;font-size:10px;border:1px;border-style:solid;border-color:white;border-left-color:#999999;border-top-color:#999999;border-bottom-color:#F6F6F6;position:relative;top:2px;cursor:default;}
+.cts_TabChildSelected {color:#3F3F3F;background-color:#CCCCCC;font-family:verdana;font-size:10px;border:1px;border-style:solid;border-color:white;border-bottom-color:#CCCCCC;border-left-color:#999999;border-top-color:#999999;position:relative;top:2px;cursor:default;}
+.cts_TabDisabled {color:#888888;font-family:verdana;font-size:10px;border:1px;border-style:solid;border-color:#CCCCCC;cursor:pointer;}

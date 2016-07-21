@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.MaskedInputDesignWindows7"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common">
+    <UserControl.Resources>
+        <ComponentArtTheming:Theme x:Key="MaskedInputWindows7" 
+                      BaseSource="/ComponentArt.Silverlight.UI.Input;component/Themes/generic.xaml" 
+                      Source="/ComponentArt.Silverlight.Themes.Windows7;component/MaskedInput.xaml"  />
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="MaskedInput" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Windows 7 MaskedInput" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="A Windows 7-styled MaskedInput." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\maskedinput\MaskedInputDesignWindows7.xaml,
+            \source\controls\maskedinput\MaskedInputDesignWindows7.xaml.cs"/>
+        <Border Width="800" Height="600" Background="#eeeeee" CornerRadius="3" BorderBrush="#666666" BorderThickness="1"/>
+
+        <Grid Margin="20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="24"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Email Address:" />
+            <ComponentArt:MaskedInput x:Name="MyMaskedInput" Transform="EmailAddress" EmptyText="name@domain.com" Grid.Row="1"
+                                      Theme="{StaticResource MaskedInputWindows7}"/>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,48 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{
+  ViewData["DemoType"] = "TabStrip";
+  ViewData["DemoTitle"] = "Theme Switching";
+  ViewData["CodeFiles"] = "/Views/TabStrip/ThemeSwitching.aspx,/Controllers/TabStripController.cs,/Views/Shared/ThemeSwitchingCss.ascx,/Views/Shared/ThemeSwitchingInterface.ascx";
+  ViewData["AboutText"] = @"
+<ul>
+<li>TabStrip's theming functionality is showcased here, which is activated via its AutoTheming property.</li>
+<li>The changing of the CSS definitions is done by resetting the active stylesheet.</li>
+<li>TabStrip's load client-event is used to pre-select a TabStripTab.</p>
+</ul>
+";    
+}
+@section HeadContent {
+  <script type="text/javascript">
+    function TabStrip1_onLoad(sender, e)
+    {
+      // Pre-select "News"
+      sender.setSelectedTab(sender.get_tabs().getTab(0));
+      sender.render();
+    }
+  </script>
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+}
+<table>
+  <tr valign="top">
+    <td>
+      <div class="cart-tabstrip-outer-wrapper" style="width: 550px">
+        <div class="cart-tabstrip-inner-wrapper">
+          @(Html.ComponentArt().TabStrip()
+            .ID("TabStrip1")
+            .SiteMapXmlFile("~/App_Data/TabStrip/ThemeSwitching/tabData.xml")
+            .AutoTheming(true)
+            .Width(Unit.Percentage(100))
+            .ClientEvents(ce =>
+            {
+              ce.Load("TabStrip1_onLoad");
+            })
+          )
+        </div>
+      </div>
+    </td>
+    <td>
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml")
+    </td>
+  </tr>
+</table>

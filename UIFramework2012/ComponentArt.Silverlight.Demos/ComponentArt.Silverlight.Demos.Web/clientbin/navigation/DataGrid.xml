@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tree>
+  <node Header="Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-features.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Core Features" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridCoreFeatures"  />
+    <node Header="Grouping" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridGrouping" />
+    <node Header="Scrolling (Client)" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridScrolling" />
+    <node Header="Scrolling (Web Service)" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridSoaScrolling"  />
+    <node Header="Row Details" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridRowDetails" />
+    <node Header="Hierarchy" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridHierarchy" />
+    <node Header="Column Resizing" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridColumnResizing" />
+    <node Header="Column Reordering" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridColumnReordering" />
+  </node>
+
+  <node Header="Appearance" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-design.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Black Ice" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignBlackIce" />
+    <node Header="Arctic White" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignArcticWhite" />
+    <node Header="Office 2003" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignOffice2003" />
+    <node Header="Office 2007" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignOffice2007" />
+    <node Header="Windows 7" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridDesignWindows7" />
+  </node>
+
+  <node Header="Operation Modes" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Client (Load Once)" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridCoreFeatures"  />
+    <node Header="SOA.UI Automatic" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridSoaAutoPilot"  />
+    <node Header="SOA.UI Custom" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridSoaCustom"  />
+    <node Header="Manual Web Service" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridWebServiceOperation"  />
+  </node>
+
+  <node Header="Programming" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-programming.png" FontSize="11" Padding="0,4,0,4">
+    <node Header="Programmatic Creation" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/node-demo.png" FontSize="11" Padding="0,5,0,5" Tag="DataGridProgrammaticCreation"  />
+  </node>
+</tree>

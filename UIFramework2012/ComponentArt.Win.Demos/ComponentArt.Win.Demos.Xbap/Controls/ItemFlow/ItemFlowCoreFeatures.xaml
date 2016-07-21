@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.ItemFlowCoreFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:ComponentArtTheme="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    Width="760" Height="450">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ItemFlow" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Core Features" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo shows the core features of the ItemFlow control." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\itemflow\itemflowcorefeatures.xaml,
+            \source\controls\itemflow\itemflowcorefeatures.xaml.cs"/>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical">
+        <ComponentArt:ItemFlow Margin="0" x:Name="myItemFlow"
+                          FlowMode="Linear"
+                          BackgroundColor="#FFFFFFFF"
+                          SelectedIndex="6"
+                          ShadingAlphaStart="195"
+                          ShadingAlphaEnd="0"
+                          ShadingAlphaOffset=".3"
+                          ShowReflections="True"
+                          ShowShading="True"
+                          ItemWidth="190"
+                          ItemHeight="200"
+                          Height="300"
+                          Width="675"
+                          SlowAnimationDuration="550"
+                          MediumAnimationDuration="250"
+                          FastAnimationDuration="150"
+                          InstantAnimationDuration="5"
+                          DecelerationEnabled="True"
+                          MouseWheelEnabled="True"
+                          ScrollOnDrag="True"
+                          ScrollOnClick="True"
+                          ReflectionAlphaStart="150"
+                          ReflectionAlphaEnd="0"
+                          ReflectionAlphaOffset=".5"
+                          ReverseReflectionTransforms="True"
+                          HorizontalPerspective=".85"       
+                          ItemSpacing=".9"
+                          Zoom=".6">
+            <ComponentArt:ItemFlow.Items>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_001l.png" >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_002l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_003l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_004l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_005l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_006l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_007l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_008l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_009l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_010l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_011l.png"  >
+                </ComponentArt:ItemFlowItem>
+                <ComponentArt:ItemFlowItem ImageSource="/ComponentArt.Win.Demos;component/assets/itemflow/animals/ali_012l.png"  >
+                </ComponentArt:ItemFlowItem>
+            </ComponentArt:ItemFlow.Items>
+        </ComponentArt:ItemFlow>
+        <Slider Margin="0,0,0,10" SmallChange="1" Minimum="0" Orientation="Horizontal" x:Name="scroll" Width="650" ValueChanged="scroll_ValueChanged" />
+        </StackPanel>
+        <Grid Width="650" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <StackPanel HorizontalAlignment="Left">
+                <TextBlock Height="15"  Foreground="Black" Text="Size" HorizontalAlignment="Left"/>
+                <Slider Value="250" Minimum="75" Maximum="250" Width="300" HorizontalAlignment="Center" ValueChanged="Slider_ValueChanged"/>
+                <TextBlock Height="15"  Foreground="Black" Text="Spacing" HorizontalAlignment="Left"/>
+                <Slider Value=".5" Minimum=".2" Maximum="1.5" Width="300" HorizontalAlignment="Center" ValueChanged="Slider_ValueChanged_1"/>
+                <TextBlock Height="15"  Foreground="Black" Text="Zoom" HorizontalAlignment="Left"/>
+                <Slider Value=".6" SmallChange=".01" Minimum=".6" Maximum="1" Width="300" HorizontalAlignment="Center" ValueChanged="Slider_ValueChanged_4"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right">
+                <TextBlock Height="15"  Foreground="Black" Text="Horizontal Perspective" HorizontalAlignment="Left"/>
+                <Slider Value=".85" Minimum=".2" Maximum="1"  Width="300" HorizontalAlignment="Center" ValueChanged="Slider_ValueChanged_2" />
+                <TextBlock Height="15" Foreground="Black" Text="Selected Vertical Offset" HorizontalAlignment="Left"/>
+                <Slider Value="0" Minimum="-100" Maximum="100"  Width="300" HorizontalAlignment="Center" ValueChanged="Slider_ValueChanged_5"/>
+            </StackPanel>
+        </Grid>
+            </StackPanel>
+    </Grid>
+</UserControl>

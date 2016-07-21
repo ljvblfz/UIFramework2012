@@ -1,0 +1,177 @@
+﻿<Items>
+	<Item ItemType="SplitDropDown" CssClass="splitItem" HoverCssClass="splitItemHover" ActiveCssClass="splitItemActive" ExpandedCssClass="splitItemExpanded" ImageUrl="newmailmessage.gif" Text="New" DropDownImageUrl="_blank.png" DropDownImageHeight="18" DropDownImageWidth="11" DropDownId="Menu1" ID="SplitDropDownItem1" Value="Create a new mail message." ClientSideCommand="showSelectedSplitItem()" />
+
+	<Item ItemType="Separator" ImageUrl="_separator.png" ImageWidth="4" ImageHeight="25" CssClass="separator" />
+
+	<Item
+		ToolTip="Cut"
+		ImageUrl="_blank.png"
+		CssClass="itm cut"
+		HoverCssClass="itm-h cut"
+		ActiveCssClass="itm-a cut"
+		CheckedCssClass="itm-chk cut"
+		CheckedHoverCssClass="itm-chk-h cut"
+		CheckedActiveCssClass="itm-chk-a cut"
+		DisabledCssClass="itm-d cut"
+		DisabledCheckedCssClass="itm-d-chk cut"
+		/>
+	<Item
+		ToolTip="Copy"
+		ImageUrl="_blank.png"
+		CssClass="itm copy"
+		HoverCssClass="itm-h copy"
+		ActiveCssClass="itm-a copy"
+		CheckedCssClass="itm-chk copy"
+		CheckedHoverCssClass="itm-chk-h copy"
+		CheckedActiveCssClass="itm-chk-a copy"
+		DisabledCssClass="itm-d copy"
+		DisabledCheckedCssClass="itm-d-chk copy"
+		/>
+	<Item
+		ToolTip="Paste"
+		ImageUrl="_blank.png"
+		CssClass="itm paste"
+		HoverCssClass="itm-h paste"
+		ActiveCssClass="itm-a paste"
+		CheckedCssClass="itm-chk paste"
+		CheckedHoverCssClass="itm-chk-h paste"
+		CheckedActiveCssClass="itm-chk-a paste"
+		DisabledCssClass="itm-d paste"
+		DisabledCheckedCssClass="itm-d-chk paste"
+		/>
+
+	<Item ItemType="Separator" ImageUrl="_separator.png" ImageWidth="4" ImageHeight="25" CssClass="separator" />
+
+	<Item
+		ItemType="ToggleCheck"
+		ToolTip="Bold"
+		ImageUrl="_blank.png"
+		CssClass="itm bold"
+		HoverCssClass="itm-h bold"
+		ActiveCssClass="itm-a bold"
+		CheckedCssClass="itm-chk bold"
+		CheckedHoverCssClass="itm-chk-h bold"
+		CheckedActiveCssClass="itm-chk-a bold"
+		DisabledCssClass="itm-d bold"
+		DisabledCheckedCssClass="itm-d-chk bold"
+		/>
+	<Item
+		ItemType="ToggleCheck"
+		ToolTip="Italic"
+		ImageUrl="_blank.png"
+		CssClass="itm italic"
+		HoverCssClass="itm-h italic"
+		ActiveCssClass="itm-a italic"
+		CheckedCssClass="itm-chk italic"
+		CheckedHoverCssClass="itm-chk-h italic"
+		CheckedActiveCssClass="itm-chk-a italic"
+		DisabledCssClass="itm-d italic"
+		DisabledCheckedCssClass="itm-d-chk italic"
+		/>
+	<Item
+		ItemType="ToggleCheck"
+		ToolTip="Underline"
+		ImageUrl="_blank.png"
+		CssClass="itm underline"
+		HoverCssClass="itm-h underline"
+		ActiveCssClass="itm-a underline"
+		CheckedCssClass="itm-chk underline"
+		CheckedHoverCssClass="itm-chk-h underline"
+		CheckedActiveCssClass="itm-chk-a underline"
+		DisabledCssClass="itm-d underline"
+		DisabledCheckedCssClass="itm-d-chk underline"
+		/>
+
+
+	<Item ItemType="Separator" ImageUrl="_separator.png" ImageWidth="4" ImageHeight="25" CssClass="separator" />
+
+
+	<Item
+		ItemType="ToggleRadio"
+		ToggleGroupId="TextAlign"
+		ToolTip="Align Left"
+		ImageUrl="_blank.png"
+		CssClass="itm left"
+		HoverCssClass="itm-h left"
+		ActiveCssClass="itm-a left"
+		CheckedCssClass="itm-chk left"
+		CheckedHoverCssClass="itm-chk-h left"
+		CheckedActiveCssClass="itm-chk-a left"
+		DisabledCssClass="itm-d left"
+		DisabledCheckedCssClass="itm-d-chk left"
+		/>
+	<Item
+		ItemType="ToggleRadio"
+		ToggleGroupId="TextAlign"
+		ToolTip="Center"
+		ImageUrl="_blank.png"
+		CssClass="itm center"
+		HoverCssClass="itm-h center"
+		ActiveCssClass="itm-a center"
+		CheckedCssClass="itm-chk center"
+		CheckedHoverCssClass="itm-chk-h center"
+		CheckedActiveCssClass="itm-chk-a center"
+		DisabledCssClass="itm-d center"
+		DisabledCheckedCssClass="itm-d-chk center"
+		/>
+	<Item
+		ItemType="ToggleRadio"
+		ToggleGroupId="TextAlign"
+		ToolTip="Align Right"
+		ImageUrl="_blank.png"
+		CssClass="itm right"
+		HoverCssClass="itm-h right"
+		ActiveCssClass="itm-a right"
+		CheckedCssClass="itm-chk right"
+		CheckedHoverCssClass="itm-chk-h right"
+		CheckedActiveCssClass="itm-chk-a right"
+		DisabledCssClass="itm-d right"
+		DisabledCheckedCssClass="itm-d-chk right"
+		/>
+	<Item
+		ItemType="ToggleRadio"
+		ToggleGroupId="TextAlign"
+		ToolTip="Justify"
+		ImageUrl="_blank.png"
+		CssClass="itm justify"
+		HoverCssClass="itm-h justify"
+		ActiveCssClass="itm-a justify"
+		CheckedCssClass="itm-chk justify"
+		CheckedHoverCssClass="itm-chk-h justify"
+		CheckedActiveCssClass="itm-chk-a justify"
+		DisabledCssClass="itm-d justify"
+		DisabledCheckedCssClass="itm-d-chk justify"
+		/>
+
+	<Item ItemType="Separator" ImageUrl="_separator.png" ImageWidth="4" ImageHeight="25" CssClass="separator" />
+
+	<Item
+		ItemType="ToggleRadioCheck"
+		ToggleGroupId="Bullets"
+		ToolTip="Numbering"
+		ImageUrl="_blank.png"
+		CssClass="itm numbering"
+		HoverCssClass="itm-h numbering"
+		ActiveCssClass="itm-a numbering"
+		CheckedCssClass="itm-chk numbering"
+		CheckedHoverCssClass="itm-chk-h numbering"
+		CheckedActiveCssClass="itm-chk-a numbering"
+		DisabledCssClass="itm-d numbering"
+		DisabledCheckedCssClass="itm-d-chk numbering"
+		/>
+
+	<Item
+		ItemType="ToggleRadioCheck"
+		ToggleGroupId="Bullets"
+		ToolTip="Bullets"
+		ImageUrl="_blank.png"
+		CssClass="itm bullets"
+		HoverCssClass="itm-h bullets"
+		ActiveCssClass="itm-a bullets"
+		CheckedCssClass="itm-chk bullets"
+		CheckedHoverCssClass="itm-chk-h bullets"
+		CheckedActiveCssClass="itm-chk-a bullets"
+		DisabledCssClass="itm-d bullets"
+		DisabledCheckedCssClass="itm-d-chk bullets"
+		/>
+</Items>

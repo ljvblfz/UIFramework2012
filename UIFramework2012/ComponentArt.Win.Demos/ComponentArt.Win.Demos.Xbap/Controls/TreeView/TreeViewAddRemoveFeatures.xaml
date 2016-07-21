@@ -1,0 +1,70 @@
+<UserControl x:Class="ComponentArt.Win.Demos.Xbap.TreeViewAddRemoveFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    >
+  <Grid>
+      <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+
+        <Border HorizontalAlignment="Left" Grid.Row="0"  Margin="50 0 0 0" Width="250" Height="200" Grid.Column="1" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+            <!--<Grid Margin="20" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>-->
+                <StackPanel  Orientation="Vertical" Margin="20 0 20 0">
+                    <TextBlock Text="Select a node in the TreeView to delete it or add child nodes to it." Margin="0 10" TextWrapping="Wrap" HorizontalAlignment="Left"/>
+                    <Button x:Name="add" Content="Add new node" Click="add_Click" Width="100"  HorizontalAlignment="Left"/>
+                    <Button x:Name="remove" Content="Remove node" Click="remove_Click"  Width="100" Margin="0 10 0 0" HorizontalAlignment="Left"/>
+                    <Button x:Name="disable" Content="Disable node" Click="disable_Click"  Width="100" Margin="0 15 0 0" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+            <!--</Grid>-->
+        </Border>
+
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TreeView" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="API Control" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases use of API to add/remove nodes." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\treeview\TreeViewAddRemoveFeatures.xaml,
+            \source\controls\treeview\TreeViewAddRemoveFeatures.xaml.cs" />
+      
+        <my:TreeView x:Name="FirstTree" Width="250" Height="400" >
+            <my:TreeViewNode Header="Mailbox"  IconSource="icons/root.png" IsExpanded="True">
+                <my:TreeViewNode Header="Calendar"   IconSource="icons/calendar.png" IsExpanded="False" />
+                <my:TreeViewNode Header="Contacts" IconSource="icons/contacts.png" />
+                <my:TreeViewNode Header="Deleted Items"  IconSource="icons/deleted.png">
+                    <my:TreeViewNode Header="Today"  IconSource="icons/deletedFolder.png" />
+                    <my:TreeViewNode Header="Last Week" IconSource="icons/deletedFolder.png" />
+                    <my:TreeViewNode Header="Last Month" IconSource="icons/deletedFolder.png" />
+                </my:TreeViewNode>
+                <my:TreeViewNode Header="Drafts"  IconSource="icons/drafts.png" />
+                <my:TreeViewNode Header="Inbox"  IconSource="icons/inbox.png" IsExpanded="False">
+                    <my:TreeViewNode Header="ComponentArt" IconSource="icons/folders.png" />
+                    <my:TreeViewNode Header="Personal" IconSource="icons/folders.png" />
+                    <my:TreeViewNode Header="Miscellaneous"  IconSource="icons/folders.png" />
+                </my:TreeViewNode>
+                <my:TreeViewNode Header="Junk E-mail"  IconSource="icons/junk.png" />
+                <my:TreeViewNode Header="Notes"  IconSource="icons/notes.png" />
+                <my:TreeViewNode Header="Outbox"  IconSource="icons/outbox.png" />
+                <my:TreeViewNode Header="Sent Items"  IconSource="icons/sentItems.png" />
+                <my:TreeViewNode Header="Tasks"  IconSource="icons/tasks.png" />
+                <my:TreeViewNode Header="Search Folders"  IconSource="icons/search.png" />
+            </my:TreeViewNode>
+            <my:TreeViewNode Header="Mailbox - News"  IconSource="icons/folders.png" IsExpanded="False">
+                <my:TreeViewNode Header="World"  IconSource="icons/folder.png" >
+                </my:TreeViewNode>
+                <my:TreeViewNode Header="Business"  IconSource="icons/folder.png" />
+                <my:TreeViewNode Header="Science"  IconSource="icons/folder.png" />
+                <my:TreeViewNode Header="Weather"  IconSource="icons/folder.png" />
+            </my:TreeViewNode>
+        </my:TreeView>
+    </Grid>
+</UserControl>

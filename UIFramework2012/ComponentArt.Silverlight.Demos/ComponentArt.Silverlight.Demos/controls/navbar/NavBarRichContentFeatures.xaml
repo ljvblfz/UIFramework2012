@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.NavBarRichContentFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    >
+  <Grid>
+  	<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="NavBar" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Rich Content Features" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases NavBar's ability to host other controls. The group &quot;Mail&quot; contains an embedded ComponentArt TreeView control, and the Options group has embedded checkboxes and custom formatted headers." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\NavBar\NavBarRichContentFeatures.xaml,
+            \source\controls\NavBar\NavBarRichContentFeatures.xaml" />
+
+        <my:NavBar x:Name="MyNavBar" Height="400" Width="250" 
+                   TextImageRelation="ImageBeforeText" 
+                   BaseIconSource="/ComponentArt.Silverlight.Demos;component/Assets/NavBar/small/"
+                   GroupItemHeaderHorizontalAlignment="Left"
+                   ItemHeaderHorizontalAlignment="Left"
+                   >
+            <my:NavBarItem Header="Mail" IconSource="24x24-mail.png" IsSelected="True" SingleChildMode="True" Padding="0,4,0,4">
+                <my:NavBarItem>
+                    <my:NavBarItem.Header>
+                        <my:TreeView HeaderVisibility="Collapsed" BorderBrush="Transparent" BorderThickness="0"
+                                     BaseIconSource="/ComponentArt.Silverlight.Demos;component/Assets/NavBar/small/">
+                            <my:TreeViewNode Header="Mailbox" IconSource="mailbox.png" IsExpanded="True">
+                                <my:TreeViewNode Header="Inbox" IconSource="inbox.png"/>
+                                <my:TreeViewNode Header="Drafts" IconSource="drafts.png"/>
+                                <my:TreeViewNode Header="Outbox" IconSource="outbox.png" />
+                                <my:TreeViewNode Header="Junk E-mail" IconSource="junk.png"/>
+                                <my:TreeViewNode Header="Deleted Items" IconSource="deleted.png" />
+                                <my:TreeViewNode Header="Sent Items" IconSource="sent.png" />
+                                <my:TreeViewNode Header="Search Folders" IconSource="search.png" />
+                            </my:TreeViewNode>
+                        </my:TreeView>
+                    </my:NavBarItem.Header>
+                </my:NavBarItem>
+            </my:NavBarItem>
+
+            <my:NavBarItem Header="Options" IconSource="24x24-notes.png" Padding="0,4,0,4">
+                <my:NavBarItem >
+                    <my:NavBarItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox x:Name="Option1" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True" />
+                            <TextBlock>
+                                <Run FontWeight="Bold">Option</Run> 1
+                            </TextBlock>
+                        </StackPanel>
+                    </my:NavBarItem.Header>
+                </my:NavBarItem>
+                <my:NavBarItem >
+                    <my:NavBarItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox x:Name="Option2" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True" />
+                            <TextBlock>
+                                <Run TextDecorations="Underline">Option</Run> 2
+                            </TextBlock>
+                        </StackPanel>
+                    </my:NavBarItem.Header>
+                </my:NavBarItem>
+                <my:NavBarItem >
+                    <my:NavBarItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox x:Name="Option3" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" IsChecked="True" />
+                            <TextBlock>
+                                <Run FontStyle="Italic">Option</Run> 3
+                            </TextBlock>
+                        </StackPanel>
+                    </my:NavBarItem.Header>
+                </my:NavBarItem>
+            </my:NavBarItem>
+        </my:NavBar>
+
+    </Grid>
+</UserControl>

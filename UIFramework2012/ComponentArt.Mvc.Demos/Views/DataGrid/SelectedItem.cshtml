@@ -1,0 +1,228 @@
+﻿@using ComponentArt.Web.UI
+@{ 
+  ViewData["DemoType"] = "DataGrid";
+  ViewData["DemoTitle"] = "Posting Selected Item";
+  ViewData["CodeFiles"] = "/Views/DataGrid/SelectedItem.aspx,/Controllers/DataGridController.cs,/Controllers/DataGrid/SelectedItemController.cs";
+  ViewData["AboutText"] = @"
+  <ul>
+<li>Selected rows are tracked by using the DataGridHelperExtensions.GetSelectedItems() method on the posted FormCollection.  The DataGrid's load client-event re-applies the selection when the page is loaded.</li>
+</ul>
+</ul>
+";
+}
+@section HeadContent {
+  <link type="text/css" href="../../Content/DataGrid/FeedBrowserContent/gridStyle.css"
+    rel="stylesheet" />
+  <style type="text/css">
+    .cart-datagrid-grouping-text
+    {
+      color: #15428B;
+      font: 10pt normal Helvetica,Arial,sans-serif !important;
+      line-height: 16pt !important;
+    }
+    .cart-datagrid-pager-text
+    {
+      color: #15428B;
+      font: 8pt normal Helvetica,Arial,sans-serif;
+    }
+  </style>
+  <script type="text/javascript">
+    var sortedDataField = '';
+    var sortedDescending = false;
+    function Grid1_onSortChange(sender, e)
+    {
+      sortedDataField = e.get_column().get_dataField();
+      sortedDescending = e.get_descending();
+    }
+  </script>
+  <style type="text/css">
+    .dataArea
+    {
+      height: 270px !important;
+    }
+  </style>
+  <script type="text/javascript">
+    function Grid1_onLoad(sender, e)
+    {
+      if ('@((ViewData["SelectedItems"] as List<object>) == null || (ViewData["SelectedItems"] as List<object>).Count == 0? "" : (ViewData["SelectedItems"] as List<object>)[0])' != '')
+      {
+        var selectedId = '@(((ViewData["SelectedItems"] as List<object>) == null || (ViewData["SelectedItems"] as List<object>).Count == 0? "none" : (ViewData["SelectedItems"] as List<object>)[0]))';
+        sender.beginUpdate();
+        sender.selectByKey(selectedId, 0, false);
+        sender.endUpdate();
+      }
+    }
+    var sortedDataField = '';
+    var sortedDescending = false;
+    function Grid1_onSortChange(sender, e)
+    {
+      sortedDataField = e.get_column().get_dataField();
+      sortedDescending = e.get_descending();
+    }      
+  </script>
+  <link href="@Url.Content("~/Content/Themes/Outlook2007/theme.css")" rel="stylesheet" type="text/css" />
+}
+<form id="frm_Main1" action="" method="post">
+@(Html
+  .ComponentArt().DataGrid("FeedData")
+  .ID("Grid1")  
+  .Width(790)
+  .Height(365)
+  .AutoTheming(true)
+  .AllowColumnResizing(true)
+  .ShowHeader(true)
+  .HeaderHeight(25)
+  .RunningMode(GridRunningMode.Client)
+  .GroupingMode(GridGroupingMode.ConstantRows)
+  .PreExpandOnGroup(true)
+  .PageSize(11)
+  .SliderHeight(26)
+  .SliderWidth(150)
+  .SliderGripWidth(9)
+  .SliderPopupOffsetX(5)
+  .SliderPopupClientTemplateId("SliderTemplate")
+  .ImagesBaseUrl("~/Content/DataGrid/FeedBrowserContent/images/")
+  .Levels(l =>
+  {
+    l.Add()
+      .DataKeyField("ItemURL")
+      .Columns(c =>
+      {
+        c.Add().DataField("FeedName").DataCellCssClass("DarkerDataCell").Width(120).DataCellClientTemplateId("feedNameTemplate").HeadingCellClientTemplateId("feedNameHeadingTemplate");
+        c.Add().DataField("Title").DataCellCssClass("LighterDataCell").DataCellClientTemplateId("feedTitleTemplate").HeadingCellClientTemplateId("feedTitleHeadingTemplate");
+        c.Add().DataField("DatePosted").DataCellCssClass("DarkerDataCell").Width(150).DataCellClientTemplateId("dateCellTemplate");
+        c.Add().DataField("Visits").DataCellCssClass("LighterDataCell").Width(60).DataCellClientTemplateId("dataCellTemplate");
+        c.Add().DataField("Rating").DataCellCssClass("DarkerDataCell").Width(65).DataCellClientTemplateId("ratingTemplate").FixedWidth(true);
+        c.Add().HeadingText("Site").DataCellCssClass("LighterDataCell").Width(40).DataCellClientTemplateId("siteTemplate").AllowSorting(InheritBool.False).FixedWidth(true);
+        c.Add().DataField("ItemURL").Visible(false);
+      });
+    })
+      .ClientTemplates(ct =>
+      {
+        ct.Add().ID("scrollerTemplate").Content(@"
+            <div style=""background-color: #404040; padding: 12px; color: #e0e0e0; font-family: arial, verdana; font-size: 12px;
+              font-weight: bold;"">## DataItem.Index ##</div>
+              ");
+        ct.Add().ID("siteTemplate").Content(@"
+            <div style=""height:20px; padding: 0px; font-weight: bold; text-align: center;""><a style=""color: Red; text-decoration: none;"" target=""_blank"" href=""## DataItem.getMember('ItemURL').get_value() ##""><img alt="" "" border=""0"" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/go.png"" /></a></div>
+            ");
+        ct.Add().ID("ratingTemplate").Content(@"
+            <img alt="" "" border="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/Rating/## Math.round(Math.min(5, DataItem.getCurrentMember().get_value())) ##.png"" style=""padding: 0px 0px 0px 6px;""/>      
+");
+        ct.Add().ID("dateCellTemplate").Content(@"
+              <div style=""padding:0px 0px 0px 6px; text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 6) ##px;overflow:hidden;""><nobr>## DataItem.getMember('DatePosted').get_text() ##</nobr></div>
+");
+        ct.Add().ID("dataCellTemplate").Content(@"
+            <div style=""padding:0px 0px 0px 6px; text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 6) ##px;overflow:hidden;""><nobr>## DataItem.getCurrentMember().get_text() ##</nobr></div>      
+");
+        ct.Add().ID("feedNameTemplate").Content(@"
+<table cellspacing=""0"" cellpadding=""0"" border=""0"">
+  <tr>
+    <td valign=""middle"" style=""padding: 0px 0px 0px 6px;"">
+      <img border=""0"" alt="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/feedName-icon.png"" />
+    </td>
+    <td style=""padding: 0px 0px 0px 6px;"">
+      <div style=""text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 30) ##px;overflow:hidden;""><nobr>## DataItem.getCurrentMember().get_text() ##</nobr></div>
+    </td>
+  </tr>
+</table>     
+");
+        ct.Add().ID("feedNameHeadingTemplate").Content(@"
+<table cellspacing=""0"" cellpadding=""0"" border=""0"">
+  <tr>
+    <td valign=""middle"" style=""padding: 0px 0px 0px 6px;"">
+      <img border=""0"" alt="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/feedName-icon.png"" />
+    </td>
+    <td style=""font: 11px Tahoma,Verdana,Arial,Helvetica,sans-serif; padding: 0px 0px 0px 6px;width:65px"">
+      Feed&nbsp;Name
+    </td>
+    <td class=""##
+if (sortedDataField == DataItem.get_dataField())
+{
+  (sortedDescending ? 'cart-datagrid-sort-desc' : 'cart-datagrid-sort-asc');
+}
+  ##"" >&nbsp;&nbsp;
+    </td>    
+  </tr>
+</table>      
+");
+        ct.Add().ID("feedTitleTemplate").Content(@"
+        <table cellspacing=""0"" cellpadding=""0"" border=""0""><tr><td style=""padding: 0px 0px 0px 6px;""><img border=""0"" alt="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/feedTitle-icon.png"" /></td><td style=""padding: 0px 0px 0px 6px;""><div style=""text-overflow:ellipsis;width:## (DataItem.getCurrentMember().get_column().get_width() - 30) ##px;overflow:hidden;""><nobr>## DataItem.getCurrentMember().get_text() ##</nobr></div></td></tr></table>      
+");
+        ct.Add().ID("feedTitleHeadingTemplate").Content(@"
+<table cellspacing=""0"" cellpadding=""0"" border=""0"">
+  <tr>
+    <td style=""padding: 0px 0px 0px 6px;"">
+      <img border=""0"" alt="" "" src=""## get_root() ##/Content/DataGrid/FeedBrowserContent/images/feedTitle-icon.png"" />
+    </td>
+    <td style=""font: 11px Tahoma,Verdana,Arial,Helvetica,sans-serif; padding: 0px 0px 0px 6px;width:340px"">
+      Item&nbsp;Title
+    </td>
+    <td class=""##
+if (sortedDataField == DataItem.get_dataField())
+{
+  (sortedDescending ? 'cart-datagrid-sort-desc' : 'cart-datagrid-sort-asc');
+}
+  ##"">&nbsp;&nbsp;
+    </td>    
+  </tr>
+</table>      
+");
+        ct.Add().ID("SliderTemplate").Content(@"
+            <table class=""SliderPopup"" style=""background-color:#ffffff;"" cellspacing=""0"" cellpadding=""0"" border=""0"">
+            <tr>
+              <td valign=""top"">
+              <table width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"">
+              <tr>
+                <td align=""center"" valign=""top"" style=""padding:7px; background-color: #E8F7FD; width: 30px;""><img style=""padding-bottom: 7px;"" src=""../../Content/DataGrid/FeedBrowserContent/images/feedName-icon.png"" border=""0"" alt="" ""><br/><img src=""../../Content/DataGrid/FeedBrowserContent/images/feedTitle-icon.png"" border=""0"" alt="" ""></td>
+                <td>
+                <table cellspacing=""4"" cellpadding=""3"" border=""0"" style=""width:255px;"">
+                <tr>
+                  <td style=""font-family:verdana;font-size:11px;""><div style=""overflow:hidden;width:115px;""><nobr>## DataItem.GetMember('FeedName').Value ##</nobr></div></td>
+                  <td style=""font-family:verdana;font-size:11px;""><img src=""../../Content/DataGrid/FeedBrowserContent/images/Rating/## Math.round(Math.min(5, DataItem.getMember('Rating').get_value())) ##.png"" border=""0"" alt="" ""></td>
+                </tr>
+                <tr>
+                  <td colspan=""2"">
+                  <table cellspacing=""0"" cellpadding=""0"" border=""0"" width=""100%"">
+                  <tr>
+                    <td width=""230"" colspan=""2"" style=""font-family:verdana;font-size:11px;font-weight:bold;""><div style=""text-overflow:ellipsis;overflow:hidden;width:250px;""><nobr>## DataItem.GetMember('Title').Value ##</nobr></div></td>
+                  </tr>
+                  </table>
+                </tr>
+                </table>
+                </td>
+              </tr>
+              </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan=""2"" style=""height:14px;background-color:#000000;"">
+              <table width=""100%"" cellspacing=""0"" cellpadding=""0"" border=""0"">
+              <tr>
+                <td style=""padding-left:5px;color:white;font-family:verdana;font-size:10px;"">
+                Page <b>## DataItem.PageIndex + 1 ##</b> of <b>## Grid1.PageCount ##</b>
+                </td>
+                <td style=""padding-right:5px;color:white;font-family:verdana;font-size:10px;"" align=""right"">
+                Item <b>## DataItem.Index + 1 ##</b> of <b>## Grid1.RecordCount ##</b>
+                </td>
+              </tr>
+              </table>
+              </td>
+            </tr>
+            </table>        
+");
+    })
+  .ClientEvents( ce=>
+  {
+    ce.Load("Grid1_onLoad");
+    ce.SortChange("Grid1_onSortChange");
+  })
+)
+<br />
+<br />
+@{ HtmlString selectedText = new HtmlString("Selected Item: <b>" + ((ViewData["SelectedItems"] as List<object>) == null || (ViewData["SelectedItems"] as List<object>).Count == 0? "none" : (ViewData["SelectedItems"] as List<object>)[0]) + "</b>");}
+@selectedText 
+<br />
+<br />
+<input type="submit" value="Post" id="submit" name="btnSubmit" />
+</form>

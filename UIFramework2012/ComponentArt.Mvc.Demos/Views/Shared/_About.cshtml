@@ -1,0 +1,28 @@
+﻿@using System.Web
+</div> </div>@* demo proper *@ </div>@* /demo wrapper *@
+
+
+@if (ViewData["AboutText"].ToString() != "" && ViewData["AboutText"].ToString() != "")
+{
+  @:<div id="txt"><div><h4>About this sample:</h4>
+}
+
+@{
+  string AboutFile;
+  
+  AboutFile = "/Content/" + ViewData["DemoType"].ToString() + "/" + ViewData["DemoTitle"].ToString().Replace(" ", "") + "/about.inc";
+
+  if (HttpContext.Current.Request.Url.Host.IndexOf("aspnetmvc.componentart.com") >= 0 || HttpContext.Current.Request.Url.Host.IndexOf("aspnetajax-stage.componentart.com") >= 0 || HttpContext.Current.Request.Url.Host.IndexOf("www.componentart.com") >= 0)
+  {
+    ViewData["DemoFolder"] = @"<p>Full source code for this demo is located in the following folder:<br /><span class=""fld"">" + Server.MapPath(AboutFile).Replace("about.inc", "").Replace("AboutThisSample.html", "") + "</span></p>";
+  }
+}
+  @Html.Raw(ViewBag.AboutText)
+  @Html.Raw(ViewBag.DemoFolder)
+      
+  @if (ViewData["AboutText"].ToString() != "" && ViewData["AboutText"].ToString() != "")
+  {
+    @:</div></div>
+  }
+    </div>
+  </div>@* /main content *@ </div>@* /page content *@ 

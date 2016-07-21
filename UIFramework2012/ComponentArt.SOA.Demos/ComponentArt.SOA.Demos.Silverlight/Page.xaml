@@ -1,0 +1,270 @@
+﻿<UserControl x:Class="ComponentArt.SOA.Demos.Page"
+    xmlns:cartNav="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:cartData="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data"
+    xmlns:cartCommon="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:local="clr-namespace:ComponentArt.SOA.Demos">
+    <UserControl.Resources>
+        <cartCommon:Theme x:Key="CustomMenuThemeAjax" 
+			BaseSource="/ComponentArt.Silverlight.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.SOA.Demos;component/Assets/customThemeAjax.xaml"/>
+        <cartCommon:Theme x:Key="CustomMenuThemeSilverlight" 
+			BaseSource="/ComponentArt.Silverlight.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.SOA.Demos;component/Assets/customThemeSilverlight.xaml"/>
+        <LinearGradientBrush x:Name="PageGridBackground" StartPoint="0,0" EndPoint="0,1000" MappingMode="Absolute">
+            <GradientStop Color="#000000" Offset=".07"/>
+            <GradientStop Color="#000000" Offset=".45"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Name="ContentBorderBackground" StartPoint="0,0" EndPoint="0,1" >
+            <GradientStop Color="#FFFFFF" Offset="0"/>
+            <GradientStop Color="#F2F2F2" Offset=".5"/>
+            <GradientStop Color="#DDDDDD" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Name="ContentGridBackground" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#F2F2F2" Offset="0"/>
+            <GradientStop Color="#DDDDDD" Offset="1"/>
+        </LinearGradientBrush>
+
+        <SolidColorBrush x:Name="LayoutRootBackground" Color="Transparent"/>
+        <SolidColorBrush x:Name="AspHeaderBorderBackground" Color="#961E00"/>
+        <SolidColorBrush x:Name="AspContentBorderBackground" Color="#DD3409"/>
+        <SolidColorBrush x:Name="SilverlightHeaderBorderBackground" Color="#005989"/>
+        <SolidColorBrush x:Name="SilverlightContentBorderBackground" Color="#0B85C8"/>
+		<!-- Footer -->
+        <LinearGradientBrush x:Name="Footer_Background" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#ff666666" Offset="0" />
+            <GradientStop Color="#00666666" Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Name="Footer_BorderBrush" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#00666666" Offset="0" />
+            <GradientStop Color="#00666666" Offset="1" />
+        </LinearGradientBrush>
+        <!-- End Footer -->
+
+    </UserControl.Resources>
+    <Grid Width="Auto" Height="Auto" Background="{StaticResource PageGridBackground}">
+        <Image Source="Assets/Demo/FLARE-SOA.png" Margin="-1088,-4,0,0" Height="347" Width="507" VerticalAlignment="Top" HorizontalAlignment="Center" Canvas.ZIndex="0" />
+        <Grid x:Name="LayoutRoot" Background="Transparent" Width="1090" Height="747" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.ZIndex="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1090"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="38" />
+                <RowDefinition Height="579" />
+                <RowDefinition Height="49" />
+            </Grid.RowDefinitions>
+            <!-- Tabs -->
+            <StackPanel x:Name="TabStripLive" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Height="20" Canvas.ZIndex="1">
+
+                <Image Source="../Assets/Demo/UIFramework.png" Height="20" Width="142"/>
+                <local:ImageButton x:Name="TabButton_Silverlight" Click="TabButton_Click" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="../Assets/Demo/Tabs/Silverlight-hover.png"
+                                                   ImageNormal="../Assets/Demo/Tabs/Silverlight.png"/>
+                <local:ImageButton x:Name="TabButton_AspNetAjax" Click="TabButton_Click" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="../Assets/Demo/Tabs/AspNetAjax-hover.png"
+                                                   ImageNormal="../Assets/Demo/Tabs/AspNetAjax.png"/>
+                
+                <local:ImageButton x:Name="TabButton_WPF" Click="TabButton_Click" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="../Assets/Demo/Tabs/WPF-hover.png"
+                                                   ImageNormal="../Assets/Demo/Tabs/WPF.png"/>
+                <local:ImageButton x:Name="TabButton_AspNetMvc" Click="TabButton_Click" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="../Assets/Demo/Tabs/AspNetMvc-hover.png"
+                                                   ImageNormal="../Assets/Demo/Tabs/AspNetMvc.png"/>
+                
+                <local:ImageButton x:Name="TabButton_SoaUi" Click="TabButton_Click" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="../Assets/Demo/Tabs/SoaUi-hover.png"
+                                                   ImageNormal="../Assets/Demo/Tabs/SoaUi.png"/>
+                <local:ImageButton x:Name="TabButton_Download" Click="TabButton_Click" Style="{StaticResource Button_Tabs}" Margin="5,0,0,0"
+                                                   ImageHover="../Assets/Demo/Tabs/Download-hover.png"
+                                                   ImageNormal="../Assets/Demo/Tabs/Download.png"/>
+            </StackPanel>
+            <StackPanel x:Name="TabStripLocal" Orientation="Horizontal" HorizontalAlignment="Right" Height="20" Visibility="Collapsed">
+                <HyperlinkButton x:Name="TabButton_Silverlight_Local" Click="TabButton_Click" Margin="5,5,0,0"
+                                 Content="www.componentart.com" Foreground="#6dcff6" NavigateUri="http://www.componentart.com"/>
+            </StackPanel>
+            <!-- End Tabs -->
+            
+            <Border x:Name="HeaderBorder" Grid.Row="0" Grid.Column="0" Background="Transparent" BorderThickness="0" VerticalAlignment="Top" Margin="0,0,0,0" >
+                <Grid Width="1090" VerticalAlignment="Top" Background="Transparent">
+                    <local:ImageButton x:Name="SoaUILogo" Click="Button_Click" Style="{StaticResource Button_Tabs}" Margin="-26,3,0,0"
+                                       ImageHover="../assets/Demo/soaui-logo.png"
+                                       ImageNormal="../assets/Demo/soaui-logo.png"/>
+                    <StackPanel Orientation="Horizontal" Margin="240,20,0,0" HorizontalAlignment="Stretch">
+                        <Image Source="../assets/Demo/WhiteBarLeftCap.png" Height="48" Width="12" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,0" Stretch="None"/>
+                        <Image Source="../assets/Demo/WhiteBarMiddle.png" Height="48" Width="831" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,0" Stretch="Fill"/>
+                        <Image Source="../assets/Demo/WhiteBarRightCap.png" Height="48" Width="12" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,0" Stretch="None"/>
+                    </StackPanel>
+                    
+                    <cartNav:Menu x:Name="SoaDemoMenuAj" Margin="0,23,167,0" VerticalAlignment="Center" UseHandCursor="True" HorizontalAlignment="Right"
+                                  Theme="{StaticResource CustomMenuThemeAjax}" ExpandTransition="None" CollapseTransition="None"
+                                          ExpandSlide="Decelerate" CollapseSlide="Accelerate" CollapseDuration="250">
+                                <cartNav:Menu.Resources>
+                                    <!-- ASP.NET AJAX -->
+                                    <DataTemplate x:Key="AjaxBulleted">
+                                        <Grid
+                                          VerticalAlignment="Top" 
+                                          HorizontalAlignment="Left" 
+                                          Margin="8,0,-5,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="4"/>
+                                                <ColumnDefinition Width="208"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Margin="0,-1,0,0" Foreground="#DD3409" FontWeight="Bold" FontSize="12">•</TextBlock>
+                                            <TextBlock Margin="4.5,-4,0,0" Grid.Column="1" TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                       Foreground="#DD3409" FontWeight="Thin" FontSize="11" FontFamily="Arial" Text="{Binding Text}"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                    <DataTemplate x:Key="AjaxHeading">
+                                        <Grid
+                                              VerticalAlignment="Top" 
+                                              HorizontalAlignment="Left" 
+                                              Margin="0,0,-5,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="220"/>
+                                            </Grid.ColumnDefinitions>
+                                                <TextBlock Margin="7.5,0,0,0" TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" 
+                                                           Foreground="#000000" FontWeight="Bold" FontSize="13" FontFamily="Verdana" FontStretch="UltraCondensed"
+                                                           Text="{Binding Text}"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </cartNav:Menu.Resources>
+                                <cartNav:MenuItem Height="37" Width="165">
+                                    <cartNav:MenuItem CustomTemplate="AjaxHeading" CustomTemplateHighlight="False" IsEnabled="False" Text="Control Integration" Width="265"  />
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/FileBrowser/" Text="TreeView &amp; DataGrid: File Explorer"/>
+                                    <cartNav:MenuItem IsSeparator="True" Margin="8,3,0,0"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxHeading" CustomTemplateHighlight="False" IsEnabled="False" Text="Simple SOA.UI Loading" />
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/ComboBox/" Text="ComboBox"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/DataGridSimpleLoading/" Text="DataGrid"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/Menu/" Text="Menu"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/NavBar/" Text="NavBar"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/TabStrip/" Text="TabStrip"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/ToolBar/" Text="ToolBar"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/TreeView/" Text="TreeView"/>
+                                    <cartNav:MenuItem IsSeparator="True" Margin="8,3,0,0"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxHeading" CustomTemplateHighlight="False" IsEnabled="False" Text="Advanced SOA.UI Features" />
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/DataGridMessageBrowser/" Text="DataGrid: Automatic Paging"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/DataGridSoaScrolling/" Text="DataGrid: Automatic Scrolling"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/DataGridSoaEditing/" Text="DataGrid: Data Editing"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/TreeViewFileBrowser/" Text="TreeView: Load-on-Demand"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/TreeViewStructureManipulation/" Text="TreeView: Structure Manipulation"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" NavigateUrl="../AJAX/ComboBoxFiltering/" Text="ComboBox: Automatic Filtering"/>
+                                </cartNav:MenuItem>
+                            </cartNav:Menu>
+
+                    <cartNav:Menu x:Name="SoaDemoMenuSl" Margin="0,23,2,0" VerticalAlignment="Center" UseHandCursor="True" HorizontalAlignment="Right"
+                                  Theme="{StaticResource CustomMenuThemeSilverlight}" ExpandTransition="None" CollapseTransition="None"
+                                          ExpandSlide="Decelerate" CollapseSlide="Accelerate" CollapseDuration="250" MenuClick="SoaDemoMenuSl_MenuClick">
+                        <cartNav:Menu.Clip>
+                            <RectangleGeometry Rect="0,0,170,500" />
+                        </cartNav:Menu.Clip>
+                                <cartNav:Menu.Resources>
+                                    <!-- SILVERLIGHT -->
+                                    <DataTemplate x:Key="AjaxBulleted">
+                                        <Grid
+                                          VerticalAlignment="Top" 
+                                          HorizontalAlignment="Left" 
+                                          Margin="8,0,-5,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="4"/>
+                                                <ColumnDefinition Width="208"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Margin="0,-1,0,0" Foreground="#00AEEF" FontWeight="Bold" FontSize="12">•</TextBlock>
+                                            <TextBlock Margin="4.5,-4,0,0" Grid.Column="1" TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                       Foreground="#00AEEF" FontWeight="Thin" FontSize="11" FontFamily="Arial" Text="{Binding Text}"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                    <DataTemplate x:Key="AjaxHeading">
+                                        <Grid
+                                              VerticalAlignment="Top" 
+                                              HorizontalAlignment="Left" 
+                                              Margin="0,0,-5,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="220"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Margin="7.5,0,0,0" TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left" 
+                                                           Foreground="#000000" FontWeight="Bold" FontSize="13" FontFamily="Verdana" FontStretch="UltraCondensed"
+                                                           Text="{Binding Text}"/>
+                                        </Grid>
+                                    </DataTemplate>
+                                </cartNav:Menu.Resources>
+                                <cartNav:MenuItem Height="37" Width="164">
+                                    <cartNav:MenuItem CustomTemplate="AjaxHeading" CustomTemplateHighlight="False" IsEnabled="False" Text="Control Integration" Width="265" />
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="FileExplorer" Text="TreeView &amp; DataGrid: File Explorer"/>
+                                    <cartNav:MenuItem IsSeparator="True" Margin="8,3,0,0"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxHeading" CustomTemplateHighlight="False" IsEnabled="False" Text="Simple SOA.UI Loading" />
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="ComboBox" Text="ComboBox"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="DataGridSimpleLoading" Text="DataGrid"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="Menu" Text="Menu"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="NavBar" Text="NavBar"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="TabStrip" Text="TabStrip"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="ToolBar" Text="ToolBar"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="TreeViewSimpleLoading" Text="TreeView"/>
+                                    <cartNav:MenuItem IsSeparator="True" Margin="8,3,0,0"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxHeading" CustomTemplateHighlight="False" IsEnabled="False" Text="Advanced SOA.UI Features" />
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="DataGridMessageBrowser" Text="DataGrid: Automatic Paging"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="DataGridSoaScrolling" Text="DataGrid: Automatic Scrolling"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="DataGridSoaEditing" Text="DataGrid: Data Editing"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="TreeViewFileBrowser" Text="TreeView: Load-on-Demand"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="TreeViewStructureEdit" Text="TreeView: Structure Manipulation"/>
+                                    <cartNav:MenuItem CustomTemplate="AjaxBulleted" CustomTemplateHighlight="True" Id="ComboBoxFiltering" Text="ComboBox: Automatic Filtering"/>
+                                </cartNav:MenuItem>
+                            </cartNav:Menu>
+
+
+                </Grid>
+            </Border>
+            <Border x:Name="ContentHeaderBorder" Grid.Column="0" Grid.Row="1" Background="{StaticResource ContentBorderBackground}" CornerRadius="10,10,0,0" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="../assets/Demo/soaui-liveDemos.png" Height="15" Width="176" HorizontalAlignment="Left" Margin="14,0,0,0" />
+                    <TextBlock x:Name="demo_header_title" Text="Silverlight File Explorer" Foreground="#666666" FontSize="14" FontWeight="Bold"  VerticalAlignment="Center" Margin="8,1,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border x:Name="ContentGrid" Grid.Column="0" Grid.Row="2" Background="{StaticResource ContentBorderBackground}" CornerRadius="0,0,10,10" >
+                <ContentControl x:Name="demo_panel" HorizontalAlignment="Left" VerticalAlignment="Top">
+                </ContentControl>
+            </Border>
+            <Border x:Name="DescriptionBorder" Grid.Column="0" Grid.Row="2" VerticalAlignment="Bottom">
+                <Grid Height="66" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2" />
+                        <RowDefinition Height="64" />
+                    </Grid.RowDefinitions>
+                    <Path Grid.Row="0" Height=".7" Stretch="Fill" Stroke="#cccccc" Data="M0,0 L10,0" VerticalAlignment="Top"/>
+                    <Path Grid.Row="0" Height=".7" Stretch="Fill" Stroke="White" Data="M0,0 L10,0"/>
+                    <StackPanel Grid.Row="1" Orientation="Vertical">
+                        <TextBlock Foreground="#666666" Margin="12,8,0,0" FontSize="11" FontWeight="SemiBold" Text="About this sample: "/>
+                        <TextBlock Foreground="#666666" Margin="12,8,0,0" FontSize="11" FontWeight="Light"  x:Name="demo_header_description" Text=""/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+                <!-- Footer -->
+                <Border Background="{StaticResource Footer_Background}" Grid.Row="3" Width="Auto" Height="47" CornerRadius="10,10,0,0"
+                    BorderBrush="{StaticResource Footer_BorderBrush}" BorderThickness="0" Margin="0,1,0,0" VerticalAlignment="Top" >
+                    <Grid HorizontalAlignment="Stretch">
+                        <TextBlock x:Name="VersionTextBlock" HorizontalAlignment="Left" Foreground="#aaaaaa" Margin="18,10,0,0" Text="{Binding VersionText}"/>
+                        <TextBlock HorizontalAlignment="Right" Foreground="#aaaaaa" Margin="0,10,140,0" ><Run Text="Copyright © 2010 ComponentArt Inc. All rights reserved."/></TextBlock>
+                        <Button x:Name="CopyrightInfo" Margin="0,-10,0,0"
+                            HorizontalAlignment="Right" Content="CopyrightInfo" 
+                            Style="{StaticResource Button_CopyrightInfo}" Cursor="Hand" Click="CopyrightInfo_Click"/>
+                    </Grid>
+                </Border>
+                <!-- End Footer -->
+        </Grid>
+    </Grid>
+</UserControl>

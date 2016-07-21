@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:ComponentArt.Win.UI.VSM;assembly=ComponentArt.Win.UI.Common" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation" 
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common" 
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d" >
+    <!-- Context Office 2007 -->
+    <!-- SUB-LEVEL -->
+    <!-- Group -->
+    <LinearGradientBrush x:Key="ComponentArt_Menu_SubGroupBackground" StartPoint="0,0" EndPoint="100,0" SpreadMethod="Pad" MappingMode="Absolute">
+        <GradientStop Color="#e9eeee" Offset="0" />
+        <GradientStop Color="#e9eeee" Offset="0.30" />
+        <GradientStop Color="#ffffff" Offset="0.30" />
+        <GradientStop Color="#ffffff" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_SubGroupBorder" Color="#6593cf" />
+    <!-- /Group -->
+    <!-- Item: Default state -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForeground" Color="#000000" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBackground" Color="#00ffffff" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorder" Color="#00ffffff" />
+    <!-- /Item: Default state -->
+    <!-- Item: Over state -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForegroundOver" Color="#000000" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBackgroundOver" Color="#ffe7a2" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorderOver" Color="#ffbd69" />
+    <!-- /Item: Over state -->
+    <!-- Item: Selected state -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemForegroundSelected" Color="#000000" />
+    <LinearGradientBrush x:Key="ComponentArt_Menu_ItemBackgroundSelected" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#45a5e2fa" Offset="0" />
+        <GradientStop Color="#4500aeef" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_Menu_ItemBorderSelected" Color="#8dc8e3" />
+    <!-- /Item: Over state -->
+    <!-- Separator -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorLineTop" Color="#e0e0e0" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorLineBottom" Color="#ffffff" />
+    <!-- /Separator -->
+    <!-- /SUB-LEVEL -->
+    <!-- MenuItem ItemGrid -->
+    <sys:String x:Key="ComponentArt_Menu_ItemGridMargin">0,0,0,0</sys:String>
+    <!-- /MenuItem ItemGrid -->
+    <sys:String x:Key="ComponentArt_Menu_RectLeftPadding">0,1,0,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftMargin">1,1,0,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftBorderThickness">1,1,0,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectLeftCornerRadius">0</sys:String>
+    <!-- MenuItem RectMiddle -->
+    <sys:Double x:Key="ComponentArt_Menu_MenuItemMinWidth">30</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddlePadding">0,1,0,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleMargin">0,1,0,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleBorderThickness">0,1,0,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleStackMargin">2</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleTextBlockPadding">2,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectMiddleTextBlockMargin">0,1.5,0,1.5</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_SubLevelFontSize">11</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_SubLevelFontFamily">Arial</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_SubLevelFontWeight">Normal</sys:String>
+    <!-- /MenuItem RectMiddle -->
+    <!-- MenuItem RectRight -->
+    <sys:String x:Key="ComponentArt_Menu_RectRightPadding">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightMargin">0,1,1,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightBorderThickness">0,1,1,1</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_RectRightCornerRadius">0</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_SeparatorLineHeight">1</sys:Double>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorLineColumnSpan">2</sys:Int32>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorLineColumn">1</sys:Int32>
+    <sys:String x:Key="ComponentArt_Menu_SeparatorLineMargin">0,2,0,1</sys:String>
+    <!-- /MenuItem RectRight -->
+    <!-- MenuItem Popup -->
+    <sys:String x:Key="ComponentArt_Menu_PopupBorderThickness">1</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_PopupMinWidth">60</sys:Double>
+    <sys:String x:Key="ComponentArt_Menu_PopupCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_PopupMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_Menu_TopGroupPopupMargin">0,-2,0,0</sys:String>
+    <!-- /MenuItem Popup -->
+    <!-- FlyLine -->
+    <LinearGradientBrush x:Key="ComponentArt_Menu_ContextMenuFlyLineBrush" StartPoint="0,0" EndPoint="0,1" SpreadMethod="Repeat">
+        <GradientStop Color="#01444444" Offset="0" />
+        <GradientStop Color="#4f444444" Offset=".43" />
+        <GradientStop Color="#cc444444" Offset=".44" />
+        <GradientStop Color="#cc444444" Offset=".56" />
+        <GradientStop Color="#4f444444" Offset=".57" />
+        <GradientStop Color="#01444444" Offset="1" />
+    </LinearGradientBrush>
+    <sys:String x:Key="ComponentArt_Menu_ContextMenuFlyLineThickness">5</sys:String>
+    <!-- /FlyLine -->
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorTopItemBorder" Color="#7F808080"/>
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorTopItemLineTopColor" Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorTopItemLineBottomColor" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorTopVerticalItemBorder" Color="#7F808080"/>
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorTopVerticalItemLineTopColor" Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorTopVerticalItemLineBottomColor" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorSubItemBorder" Color="#7F808080"/>
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorSubItemLineTopColor" Color="#FFCCCCCC" />
+    <SolidColorBrush x:Key="ComponentArt_Menu_SeparatorSubItemLineBottomColor" Color="#FFFFFFFF" />
+    <sys:Double x:Key="ComponentArt_Menu_SeparatorTopLineWidth">1</sys:Double>
+    <sys:Double x:Key="ComponentArt_Menu_SeparatorTopLineHeight">18</sys:Double>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorTopLineColumnSpan">1</sys:Int32>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorTopLineColumn">1</sys:Int32>
+    <sys:String x:Key="ComponentArt_Menu_SeparatorTopLineMargin">0,1,0,0</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_SeparatorTopVerticalLineHeight">1</sys:Double>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorTopVerticalLineColumnSpan">1</sys:Int32>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorTopVerticalLineColumn">1</sys:Int32>
+    <sys:String x:Key="ComponentArt_Menu_SeparatorTopVerticalLineMargin">0,1,0,0</sys:String>
+    <sys:Double x:Key="ComponentArt_Menu_SeparatorSubLineHeight">1</sys:Double>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorSubLineColumnSpan">3</sys:Int32>
+    <sys:Int32 x:Key="ComponentArt_Menu_SeparatorSubLineColumn">0</sys:Int32>
+    <sys:String x:Key="ComponentArt_Menu_SeparatorSubLineMargin">0,1,0,0</sys:String>
+    <ControlTemplate x:Key="ComponentArt_Menu_SeparatorTop">
+        <StackPanel Orientation="Horizontal" >
+            <Path x:Name="TopLine" Height="{StaticResource ComponentArt_Menu_SeparatorTopLineHeight}" Width="{StaticResource ComponentArt_Menu_SeparatorTopLineWidth}"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorTopItemLineTopColor}" 
+                  Data="M0,0 L0,10" VerticalAlignment="Top"/>
+            <Path x:Name="BottomLine" Height="{StaticResource ComponentArt_Menu_SeparatorTopLineHeight}" Width="{StaticResource ComponentArt_Menu_SeparatorTopLineWidth}"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorTopItemLineBottomColor}" 
+                  Data="M0,0 L0,10"/>
+        </StackPanel>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ComponentArt_Menu_SeparatorTopVertical">
+        <StackPanel Orientation="Horizontal" >
+            <Path x:Name="TopLine" Height="{StaticResource ComponentArt_Menu_SeparatorTopVerticalLineHeight}" Width="Auto"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorTopVerticalItemLineTopColor}" 
+                  Data="M0,0 L10,0" VerticalAlignment="Top"/>
+            <Path x:Name="BottomLine" Height="{StaticResource ComponentArt_Menu_SeparatorTopVerticalLineHeight}" Width="Auto"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorTopVerticalItemLineBottomColor}" 
+                  Data="M0,0 L10,0"/>
+        </StackPanel>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ComponentArt_Menu_SeparatorSub">
+        <StackPanel Orientation="Vertical">
+            <Path x:Name="TopLine" Height="{StaticResource ComponentArt_Menu_SeparatorSubLineHeight}" Width="Auto"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorSubItemLineTopColor}" 
+                  Data="M0,0 L10,0" VerticalAlignment="Top"/>
+            <Path x:Name="BottomLine" Height="{StaticResource ComponentArt_Menu_SeparatorSubLineHeight}" Width="Auto"
+                  Stretch="Fill" Stroke="{StaticResource ComponentArt_Menu_SeparatorSubItemLineBottomColor}" 
+                  Data="M0,0 L10,0"/>
+        </StackPanel>
+    </ControlTemplate>
+    <!-- /Context Office 2007 -->
+</ResourceDictionary>

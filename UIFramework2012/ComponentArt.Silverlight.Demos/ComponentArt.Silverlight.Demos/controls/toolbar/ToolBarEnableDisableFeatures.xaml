@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.ToolBarEnableDisableFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"    
+>
+
+    <UserControl.Resources>
+        <ComponentArtTheming:Theme
+			x:Key="Office2003ToolBarTheme" 
+			BaseSource="/ComponentArt.Silverlight.UI.Navigation;component/Themes/generic.xaml" 
+			Source="/ComponentArt.Silverlight.Themes.Office2003;component/ToolBar.xaml"
+		/>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ToolBar" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Enabling / Disabling Items" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This example illustrates the ease with which the ToolBar and its items can be enabled and disabled." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\toolbar\ToolBarEnableDisableFeatures.xaml,\source\controls\toolbar\ToolBarEnableDisableFeatures.xaml.cs" />
+        <StackPanel Orientation="Vertical">
+			<Border BorderBrush="#66667e" BorderThickness="1" Padding="4">
+				<Border.Background>
+					<LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+						<GradientStop Color="#d7d7e5" Offset="0" />
+						<GradientStop Color="#f3f3f7" Offset="1" />
+					</LinearGradientBrush>
+				</Border.Background>
+
+				<ComponentArt:ToolBar
+                IsEnabled="False"
+				Orientation="Horizontal"
+				x:Name="ToolBar1"
+				Theme="{ StaticResource Office2003ToolBarTheme }"
+			>
+					<ComponentArt:ToolBar.HorizontalSeparatorItemTemplate>
+						<DataTemplate>
+							<Border Height="24">
+								<StackPanel Orientation="Horizontal">
+									<Rectangle Width="1" Fill="#dddddd" Height="20" />
+									<Rectangle Width="1" Fill="#ffffff" Height="20" />
+								</StackPanel>
+							</Border>
+						</DataTemplate>
+					</ComponentArt:ToolBar.HorizontalSeparatorItemTemplate>
+
+					<ComponentArt:ToolBar.VerticalSeparatorItemTemplate>
+						<DataTemplate>
+							<Border Height="5">
+								<StackPanel Orientation="Vertical">
+									<Rectangle Width="20" Fill="#FF333333" Height="1" />
+									<Rectangle Width="20" Fill="#FFCCCCCC" Height="1" />
+									<Rectangle Width="20" Fill="#FF333333" Height="1" />
+								</StackPanel>
+							</Border>
+						</DataTemplate>
+					</ComponentArt:ToolBar.VerticalSeparatorItemTemplate>
+
+					<ComponentArt:ToolBarItem x:Name="EditCut" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditCut.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditCut.png" DisabledIconSource="Disabled/EditCut.png" Text="Cut" />
+					<ComponentArt:ToolBarItem x:Name="EditCopy" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditCopy.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditCopy.png" DisabledIconSource="Disabled/EditCopy.png" Text="Copy"  />
+					<ComponentArt:ToolBarItem x:Name="EditPaste" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditPaste.png" HoverIconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/EditPaste.png" DisabledIconSource="Disabled/EditPaste.png" Text="Paste" />
+
+					<ComponentArt:ToolBarSeparatorItem />
+
+					<ComponentArt:ToolBarToggleItem x:Name="BulletsNumbering" GroupName="BulletsGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BulletsNumbering.png" DisabledIconSource="Disabled/BulletsNumbering.png" Text="Numbering" />
+					<ComponentArt:ToolBarToggleItem x:Name="BulletsSymbols" GroupName="BulletsGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/BulletsSymbols.png" DisabledIconSource="Disabled/BulletsSymbols.png" Text="Bullets" />
+
+					<ComponentArt:ToolBarSeparatorItem />
+
+					<ComponentArt:ToolBarToggleItem x:Name="AlignLeft" GroupName="AlignGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/AlignLeft.png" DisabledIconSource="Disabled/AlignLeft.png" Text="Align Left" />
+					<ComponentArt:ToolBarToggleItem x:Name="AlignCenter" GroupName="AlignGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/AlignCenter.png" DisabledIconSource="Disabled/AlignCenter.png" Text="Align Center" />
+					<ComponentArt:ToolBarToggleItem x:Name="AlignRight" GroupName="AlignGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/AlignRight.png" DisabledIconSource="Disabled/AlignRight.png" Text="Align Right" />
+					<ComponentArt:ToolBarToggleItem x:Name="AlignJustify" GroupName="AlignGroup" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/ToolBar/AlignJustify.png" DisabledIconSource="Disabled/AlignJustify.png" Text="Align Justify" />
+
+				</ComponentArt:ToolBar>
+
+			</Border>
+
+			<CheckBox x:Name="EnableToolBar" Unchecked="EnableToolBar_Unchecked" Checked="EnableToolBar_Checked" Margin="0,50,0,0" Content="Enable ToolBar" />
+                <CheckBox IsEnabled="False" x:Name="EnableCommands" Unchecked="EnableCommands_Unchecked" Checked="EnableCommands_Checked" Margin="10,0,0,0" Content="Enable Command Items" />
+                <CheckBox IsEnabled="False" x:Name="EnableBullets" Unchecked="EnableBullets_Unchecked" Checked="EnableBullets_Checked" Margin="10,0,0,0" Content="Enable Bulleting Items" />
+                <CheckBox IsEnabled="False" x:Name="EnableAlignment" Unchecked="EnableAlignment_Unchecked" Checked="EnableAlignment_Checked" Margin="10,0,0,0" Content="Enable Alignment Items" />
+        </StackPanel>
+    </Grid>
+</UserControl>
+
+

@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="ComponentArt.SOA.Demos.FileExplorer" 
+    xmlns:cartnav="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:cartdata="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data"
+    xmlns:cartcommon="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <cartcommon:Theme x:Key="CustomFileBrowserDataGridTheme" 
+			BaseSource="/ComponentArt.Silverlight.UI.Data;component/Themes/generic.xaml" 
+			Source="/ComponentArt.SOA.Demos;component/assets/CustomFileBrowserDataGridTheme.xaml"/>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="272" />
+            <ColumnDefinition Width="508" />
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="SOA.UI Silverlight" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Silverlight File Explorer" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Silverlight File Explorer" />
+        <StackPanel Orientation="Vertical" Margin="4,4,0,0">
+            <Border Height="22" HorizontalAlignment="Stretch" BorderBrush="#666666" BorderThickness="1,1,1,0">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF848484" Offset="0"/>
+                        <GradientStop Color="#FF3B3B3B" Offset="0.5"/>
+                        <GradientStop Color="#FF000000" Offset="0.504"/>
+                        <GradientStop Color="#FF000000" Offset="0.965"/>
+                        <GradientStop Color="#FF5F5F5F" Offset="0.966"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock Margin="3,2,0,0" Foreground="White" FontWeight="Medium" Text="Folder Contents"></TextBlock>
+            </Border>
+            <Border Height="22" HorizontalAlignment="Stretch" BorderBrush="#666666" BorderThickness="1,0,1,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,28" MappingMode="Absolute">
+                        <GradientStop Color="#f3f3f3" Offset="0" />
+                        <GradientStop Color="#ffffff" Offset="0.5" />
+                        <GradientStop Color="#f3f3f3" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock  Margin="3,3,0,0" FontWeight="Light" Foreground="Black" Text="Folders"></TextBlock>
+            </Border>
+            <cartnav:TreeView SoaServiceUrl="../Services/TreeViewFileBrowserService.svc" Padding="0" BorderThickness="0"
+                          NodeSelected="TreeView_NodeSelected" CornerRadius="0" InnerCornerRadius="0"  BorderBrush="#666666"
+                          IsLoadOnDemandEnabled="True" Height="450" Width="268" VerticalAlignment="Top" HeaderVisibility="Collapsed"
+                          ExpanderClosedIconSource="images/plus.png" ExpanderOpenIconSource="images/minus.png" BaseIconSource="../assets/FileBrowser/images/treeview/"/>
+        </StackPanel>
+      <StackPanel Orientation="Vertical" Margin="8,4,0,0" Grid.Column="1">
+        <Border Height="22" HorizontalAlignment="Stretch" BorderBrush="#666666" BorderThickness="1,1,1,0">
+          <Border.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+              <GradientStop Color="#FF848484" Offset="0"/>
+              <GradientStop Color="#FF3B3B3B" Offset="0.5"/>
+              <GradientStop Color="#FF000000" Offset="0.504"/>
+              <GradientStop Color="#FF000000" Offset="0.965"/>
+              <GradientStop Color="#FF5F5F5F" Offset="0.966"/>
+            </LinearGradientBrush>
+          </Border.Background>
+          <TextBlock Margin="3,2,0,0" Foreground="White" FontWeight="Medium" Text="Folder View"></TextBlock>
+        </Border>
+        <cartdata:DataGrid x:Name="DataGrid1" ColumnHeaderVisibility="Visible" HeaderVisibility="Collapsed" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                   AllowColumnReordering="True" AllowColumnResizing="True" Height="472" Width="500" Padding="0"
+                   VerticalScrollBarVisibility="Auto" VerticalScrollMode="Live" HorizontalScrollBarVisibility="Auto"  BorderThickness="1,0,1,1" BorderBrush="#666666"
+                   PageSize="90210" FooterVisibility="Collapsed" RunningMode="Client" CornerRadius="0" Theme="{StaticResource CustomFileBrowserDataGridTheme}"
+                   SoaServiceUrl="../Services/DataGridFileBrowserService.svc">
+          <cartdata:DataGrid.Columns>
+            <cartdata:DataGridTemplateColumn Binding="{Binding Icon}" Header="Icon" Width="40" AllowResizing="false">
+              <cartdata:DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                  <Image Source="{Binding}" Stretch="None" />
+                </DataTemplate>
+              </cartdata:DataGridTemplateColumn.CellTemplate>
+            </cartdata:DataGridTemplateColumn>
+            <cartdata:DataGridTextColumn Binding="{Binding Name}" Header="Name" Width="3*"  />
+            <cartdata:DataGridTextColumn Binding="{Binding SizeString}" Header="Size" Width="1*" />
+            <cartdata:DataGridTextColumn Binding="{Binding Type}" Header="Type" Width="1*"  />
+            <cartdata:DataGridTextColumn Binding="{Binding DateModified}" Header="Date Modified" Width="2*"  />
+          </cartdata:DataGrid.Columns>
+        </cartdata:DataGrid>
+      </StackPanel>
+    </Grid>
+</UserControl>

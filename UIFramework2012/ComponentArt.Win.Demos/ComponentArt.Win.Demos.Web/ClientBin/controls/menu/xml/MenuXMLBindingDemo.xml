@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+  <item label="File" foo="bar">
+    <item label="New..." icon="MenuIcons/New.png" />
+    <item label="Open..." icon="MenuIcons/Open.png" />
+    <item separator="true"/>
+    <item label="Calendar" >
+      <calendar treatAsButton="false"></calendar>
+      <separator/>
+      <item label="Microsoft Office Offline"></item>
+    </item>
+  </item>
+  <item label="Edit">
+    <item label="Cut" image="MenuIcons/Cut.png"/>
+    <item label="Copy" icon="MenuIcons/Copy.png" />
+    <separator/>
+    <item label="Office Clipboard..." icon="MenuIcons/OfficeClipboard.png" />
+    <item label="Paste" icon="MenuIcons/Paste.png" />
+  </item>
+  <item label="View">
+    <item label="Normal" icon="MenuIcons/ViewNormal.png" />
+    <item label="Web Layout" icon="MenuIcons/ViewWebLayout.png" />
+    <item separator="true"/>
+    <item label="Outline" icon="MenuIcons/ViewOutline.png" />
+  </item>
+</menu>

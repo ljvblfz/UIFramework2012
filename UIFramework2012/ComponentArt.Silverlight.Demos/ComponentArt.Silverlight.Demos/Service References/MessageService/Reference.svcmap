@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4c836ccc-d23c-41e2-a3ab-5d4df594df75" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3069/WCFMessageService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WCFMessageService1.wsdl" MetadataType="Wsdl" ID="5ffb6401-e0fb-402d-98f8-523fa4201159" SourceId="1" SourceUrl="http://localhost:3069/WCFMessageService.svc?wsdl" />
+    <MetadataFile FileName="WCFMessageService1.disco" MetadataType="Disco" ID="3f44942f-ba3a-4cab-9224-e2300495c85e" SourceId="1" SourceUrl="http://localhost:3069/WCFMessageService.svc?disco" />
+    <MetadataFile FileName="WCFMessageService3.xsd" MetadataType="Schema" ID="c4d3838d-a8aa-4569-a6c7-48533f59ceaa" SourceId="1" SourceUrl="http://localhost:3069/WCFMessageService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WCFMessageService31.xsd" MetadataType="Schema" ID="3bb9c837-61f1-4e2d-9dc1-c751544aa171" SourceId="1" SourceUrl="http://localhost:3069/WCFMessageService.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCFMessageService32.xsd" MetadataType="Schema" ID="d1dba896-4fcd-45d1-846e-1f2e9a36712c" SourceId="1" SourceUrl="http://localhost:3069/WCFMessageService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

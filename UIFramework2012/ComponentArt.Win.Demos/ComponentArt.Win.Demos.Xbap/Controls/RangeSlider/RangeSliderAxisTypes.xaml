@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.RangeSliderAxisTypes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+    xmlns:local="clr-namespace:ComponentArt.Win.Demos"
+    >
+    <UserControl.Resources>
+        <ComponentArtCommon:Theme x:Key="windowRangeSlider" 
+                      BaseSource="/ComponentArt.Win.UI.Input;component/Themes/generic.xaml" 
+                      Source="/ComponentArt.Win.UI.Input;component/RangeSlider_Window.xaml"  />
+        
+        <local:AxisSource x:Key="objectAxisSource"/>
+        
+    </UserControl.Resources>
+    
+
+    <Grid Margin="20 0 0 0" Width="700" HorizontalAlignment="Left">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+            <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="RangeSlider" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Axis Types" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases different Axis controls available for the RangeSlider." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\rangeslider\RangeSliderAxisTypes.xaml" />
+        <TextBlock Text="Numeric Axis" Margin="0 30 0 12" HorizontalAlignment="Left" Grid.Row="0"/>
+        <ComponentArt:RangeSlider Grid.Row="1" Height="50" SelectionStart="25" SelectionEnd="40" ShowTooltip="False">
+            <ComponentArt:RangeSlider.Axis>
+                <ComponentArt:NumericAxis Minimum="0" Maximum="50" TickMarkInterval="10" TickMarkPosition="BottomRight"/>
+            </ComponentArt:RangeSlider.Axis>
+        </ComponentArt:RangeSlider>
+
+        <TextBlock Text="DateTime Axis" Margin="0 30 0 12" HorizontalAlignment="Left" Grid.Row="2"/>
+        <ComponentArt:RangeSlider x:Name="dateTimeRangeSlider" Grid.Row="3" Height="50" ShowTooltip="False" 
+                                      SelectionStart="6/1/2009" SelectionEnd="9/1/2009" BeforeTooltipShown="RangeSlider_BeforeTooltipShown">
+            <ComponentArt:RangeSlider.Axis>
+                <ComponentArt:DateTimeAxis Minimum="1/1/2009" Maximum="12/1/2009" SmallChange="Month"  TickMarkInterval="Month" 
+                                          TickMarkPosition="BottomRight" AnnotationFormat="MMMM"/>
+            </ComponentArt:RangeSlider.Axis>
+        </ComponentArt:RangeSlider>
+
+        <!--<TextBlock Text="PixelMap Axis" Margin="0 30 0 12" HorizontalAlignment="Left" Grid.Row="4"/>
+        <ComponentArt:RangeSlider Grid.Row="5" SelectionStart="50" SelectionEnd="299" Theme="{StaticResource windowRangeSlider}">
+            <ComponentArt:RangeSlider.Axis>
+                <ComponentArt:PixelMapAxis Tickmarks="0 50 100 150 200 250 299 349 399 449 499 549 599" >
+                    <ComponentArt:PixelMapAxis.Content>
+                        <Image Source="/Assets/RangeSlider/areaChart-01a.png" Stretch="None" HorizontalAlignment="Left" />
+                    </ComponentArt:PixelMapAxis.Content>
+                </ComponentArt:PixelMapAxis>
+            </ComponentArt:RangeSlider.Axis>
+        </ComponentArt:RangeSlider>-->
+
+        <TextBlock Text="ObjectArray Axis" Margin="0 30 0 12" HorizontalAlignment="Left" Grid.Row="6"/>
+        <ComponentArt:RangeSlider Grid.Row="7" Height="50" SelectionStart="1 Bedroom" SelectionEnd="Penthouse" ShowTooltip="False" Margin="0 0 0 30" >
+            <ComponentArt:RangeSlider.Axis>
+                <ComponentArt:ObjectArrayAxis Items="{StaticResource objectAxisSource}" ShowAnnotations="True" TickMarkPosition="BottomRight"/>
+            </ComponentArt:RangeSlider.Axis>
+        </ComponentArt:RangeSlider>
+    </Grid>
+</UserControl>

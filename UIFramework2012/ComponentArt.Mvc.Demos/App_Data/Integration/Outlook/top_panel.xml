@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <!--
+  <MenuItem IconUrl="menu_end_left.gif" Enabled="false" ImageWidth="7" />
+  -->
+  <MenuItem Text="File" SubGroupExpandOffsetX="0" SubGroupExpandOffsetY="-1">
+    <MenuItem Text="New" ID="New">
+      <MenuItem Text="Mail Message" IconUrl="newmailmessage.gif" Value="Create a new mail message." />
+      <MenuItem Text="Post in This Folder" IconUrl="newpost.gif" Value="Create a new post in this folder." />
+      <MenuItem />
+      <MenuItem Text="Folder..." IconUrl="newfolder.gif" />
+      <MenuItem Text="Search Folder..." IconUrl="newsearchfolder.gif" />
+      <MenuItem Text="Navigation Pane Shortcut..." />
+      <MenuItem />
+      <MenuItem Text="Appointment" IconUrl="newappointment.gif" Value="Create a new appointment." />
+      <MenuItem Text="Meeting Request" IconUrl="newmeetingrequest.gif" Value="Create a new meeting request." />
+      <MenuItem Text="Contact" IconUrl="newcontact.gif" Value="Create a new contact." />
+      <MenuItem Text="Distribution List" IconUrl="newdistributionlist.gif" Value="Create a new distribution list." />
+      <MenuItem Text="Task" IconUrl="newtask.gif" Value="Create a new task." />
+      <MenuItem Text="Task Request" IconUrl="newtaskrequest.gif" Value="Create a new task request." />
+      <MenuItem Text="Journal Entry" IconUrl="newjournalentry.gif" Value="Create a new journal entry." />
+      <MenuItem Text="Note" IconUrl="newnote.gif" Value="Create a new note." />
+      <MenuItem Text="Internet Fax" IconUrl="newinternetfax.gif" Value="Create a new internet fax." />
+      <MenuItem />
+      <MenuItem Text="Choose Form" IconUrl="newchooseform.gif" />
+      <MenuItem />
+      <MenuItem Text="Outlook Data File" />
+    </MenuItem>
+    <MenuItem Text="Open">
+      <MenuItem Text="Selected Items" />
+      <MenuItem Text="Other User's Folder..." />
+      <MenuItem Text="Calendar..." />
+      <MenuItem Text="Outlook Data File..." />
+    </MenuItem>
+    <MenuItem Text="Close All Items" />
+    <MenuItem />
+    <MenuItem Text="Save As..." IconUrl="saveas.gif" />
+    <MenuItem Text="Save Attachments" Enabled="false">
+      <MenuItem Value="dummy item" />
+    </MenuItem>
+    <MenuItem Text="Folder">
+      <MenuItem Text="New Folder" IconUrl="newfolder.gif" />
+      <MenuItem Text="Send Link to This Folder" Enabled="false" />
+      <MenuItem />
+      <MenuItem Text="Add a New RSS Feed..." Enabled="false" />
+      <MenuItem Text="Import an OPML File..." Enabled="false" />
+      <MenuItem />
+      <MenuItem Text="Move &amp;quot;Inbox&amp;quot;..." IconUrl="movefolderdisabled.gif" Enabled="false" />
+      <MenuItem Text="Copy &amp;quot;Inbox&amp;quot;..." IconUrl="copyfolder.gif" />
+      <MenuItem />
+      <MenuItem Text="Copy Folder Design..." />
+      <MenuItem />
+      <MenuItem Text="Delete &amp;quot;Inbox&amp;quot;..." IconUrl="deletefolderdisabled.gif" Enabled="false" />
+      <MenuItem Text="Rename &amp;quot;Inbox&amp;quot;..." IconUrl="renamefolderdisabled.gif" Enabled="false" />
+      <MenuItem />
+      <MenuItem Text="Customize This Search Folder..." IconUrl="customizesearchfolderdisabled.gif" Enabled="false" />
+      <MenuItem />
+      <MenuItem Text="Share &amp;quot;Inbox&amp;quot;..." />
+      <MenuItem Text="Change Sharing Permissions..." />
+      <MenuItem />
+      <MenuItem Text="Change Sharing Permissions..." />
+      <MenuItem />
+      <MenuItem Text="Properties for &amp;quot;Inbox&amp;quot;..." IconUrl="properties.gif" />
+    </MenuItem>
+    <MenuItem />
+    <MenuItem Text="Data File Management..." />
+    <MenuItem Text="Import and Export..." />
+    <MenuItem Text="Archive..." />
+    <MenuItem />
+    <MenuItem Text="Page Setup">
+      <MenuItem Text="Table Style" />
+      <MenuItem Text="Memo Style" />
+      <MenuItem />
+      <MenuItem Text="Define Print Styles..." IconUrl="defineprintstyles.gif" />
+    </MenuItem>
+    <MenuItem Text="Print Preview" IconUrl="printpreview.gif" />
+    <MenuItem Text="Print..." IconUrl="print.gif" />
+    <MenuItem />
+    <MenuItem Text="Work Offline" />
+    <MenuItem />
+    <MenuItem Text="Exit" />
+  </MenuItem>
+  <MenuItem Text="Edit" SubGroupExpandOffsetX="0" SubGroupExpandOffsetY="-1">
+    <MenuItem Text="Undo" IconUrl="undodisabled.gif" Enabled="false" />
+    <MenuItem />
+    <MenuItem Text="Cut" IconUrl="cut.gif" />
+    <MenuItem Text="Copy" IconUrl="copy.gif" />
+    <MenuItem Text="Office Clipboard..." IconUrl="officeclipboard.gif" />
+    <MenuItem Text="Paste" IconUrl="paste.gif" />
+    <MenuItem />
+    <MenuItem Text="Select All" IconUrl="selectall.gif" />
+    <MenuItem />
+    <MenuItem Text="Delete" IconUrl="delete.gif" />
+    <MenuItem Text="Move to Folder..." IconUrl="movetofolder.gif" />
+    <MenuItem Text="Copy to Folder..." />
+    <MenuItem />
+    <MenuItem Text="Mark as Read" IconUrl="markasread.gif" />
+    <MenuItem Text="Mark as Unread" IconUrl="markasunread.gif" />
+  </MenuItem>
+  <MenuItem Text="View" SubGroupExpandOffsetX="0" SubGroupExpandOffsetY="-1">
+    <MenuItem Text="AutoPreview" IconUrl="autopreview.gif" />
+    <MenuItem Text="Expand/Collapse Groups" Enabled="false">
+      <MenuItem Text="Collapse This Group" />
+      <MenuItem Text="Expand This Group" />
+      <MenuItem Text="Collapse All Groups" />
+      <MenuItem Text="Expand All Groups" />
+      <MenuItem Text="Always Show Unread and Flagged Messages" />
+    </MenuItem>
+    <MenuItem />
+    <MenuItem Text="Reminders Window" />
+    <MenuItem />
+    <MenuItem Text="Status Bar" />
+    <MenuItem />
+    <MenuItem Text="Refresh" Enabled="false" />
+  </MenuItem>
+  <MenuItem Text="Go" SubGroupExpandOffsetX="0" SubGroupExpandOffsetY="-1">
+    <MenuItem Text="Mail" IconUrl="mail.gif" />
+    <MenuItem Text="Calendar" IconUrl="calendar.gif" />
+    <MenuItem Text="Contacts" IconUrl="contacts.gif" />
+    <MenuItem Text="Tasks" IconUrl="tasks.gif" />
+    <MenuItem Text="Notes" IconUrl="notes.gif" />
+    <MenuItem />
+    <MenuItem Text="Folder List" IconUrl="folder.gif" />
+    <MenuItem Text="Shortcuts" IconUrl="shortcuts.gif" />
+    <MenuItem Text="Journal" IconUrl="journal.gif" />
+    <MenuItem />
+    <MenuItem Text="Folder..." />
+  </MenuItem>
+  <MenuItem Text="Tools" SubGroupExpandOffsetX="0" SubGroupExpandOffsetY="-1">
+    <MenuItem Text="Send/Receive" ID="SendReceive">
+      <MenuItem Text="Send/Receive All" />
+      <MenuItem Text="Send All" />
+      <MenuItem />
+      <MenuItem Text="1 &amp;quot;All Accounts&amp;quot; Group" />
+      <MenuItem />
+      <MenuItem Text="2 &amp;quot;Microsoft Exchange&amp;quot; Only">
+        <MenuItem Text="Inbox" />
+        <MenuItem Text="Download Inbox Headers" Enabled="false" />
+        <MenuItem Text="Process Marked Headers" Enabled="false" />
+      </MenuItem>
+      <MenuItem />
+      <MenuItem Text="Download Address Book..." />
+      <MenuItem Text="Free/Busy Information" Enabled="false" />
+      <MenuItem />
+      <MenuItem Text="Download Headers in This Folder" Enabled="false" />
+      <MenuItem />
+      <MenuItem Text="Process All Marked Headers" Enabled="false" />
+      <MenuItem Text="Process Marked Headers in This Folder" Enabled="false" />
+      <MenuItem />
+      <MenuItem Text="Send/Receive Settings">
+        <MenuItem Text="Define Send/Receive Groups..." />
+        <MenuItem Text="Disabled Scheduled Send/Receive" />
+        <MenuItem Text="Show Progress..." />
+      </MenuItem>
+      <MenuItem Text="Dial-Up Connection">
+        <MenuItem Text="Use Existing Connection (LAN)" />
+        <MenuItem Text="ComponentArt VPN" />
+        <MenuItem Text="QC Dial-up" />
+      </MenuItem>
+    </MenuItem>
+    <MenuItem />
+    <MenuItem Text="Address Book..." IconUrl="addressbook.gif" />
+    <MenuItem Text="Organize" IconUrl="organize.gif" />
+    <MenuItem Text="Rules and Alerts..." IconUrl="rulesandalerts.gif" />
+    <MenuItem Text="Out of Office Assistant..." />
+    <MenuItem />
+    <MenuItem Text="Account Settings..." />
+    <MenuItem Text="Trust Center..." />
+    <MenuItem Text="Customize..." />
+    <MenuItem Text="Options..." />
+  </MenuItem>
+  <MenuItem Text="Actions" SubGroupExpandOffsetX="0" SubGroupExpandOffsetY="-1">
+    <MenuItem Text="New Mail Message" IconUrl="newmailmessage.gif" />
+    <MenuItem />
+    <MenuItem Text="Follow Up" IconUrl="followup.gif" ID="FollowUp">
+      <MenuItem Text="Today" IconUrl="followup.gif" />
+      <MenuItem Text="Tomorrow" IconUrl="followuplighter.gif" />
+      <MenuItem Text="This Week" IconUrl="followuplightest.gif" />
+      <MenuItem Text="Next Week" IconUrl="followuplightest.gif" />
+      <MenuItem Text="No Date" IconUrl="followup.gif" />
+      <MenuItem Text="Custom" IconUrl="followup.gif" />
+      <MenuItem />
+      <MenuItem Text="Add Reminder" IconUrl="addreminder.gif" />
+      <MenuItem Text="Mark Complete" IconUrl="markcomplete.gif" />
+      <MenuItem Text="Clear Flag" Enabled="false" />
+      <MenuItem />
+      <MenuItem Text="Set Quick Click..." />
+    </MenuItem>
+    <MenuItem Text="Categorize" IconUrl="categorize.gif" ID="Categorize">
+      <MenuItem Text="Clear All Categories" Enabled="false" />
+      <MenuItem />
+      <MenuItem Text="Create Category Search Folder..." IconUrl="createcategorysearchfolder.gif" />
+      <MenuItem />
+      <MenuItem Text="Important" IconUrl="categoryred.gif" />
+      <MenuItem Text="Blue Category" IconUrl="categoryblue.gif" />
+      <MenuItem Text="Green Category" IconUrl="categorygreen.gif" />
+      <MenuItem Text="Orange Category" IconUrl="categoryorange.gif" />
+      <MenuItem Text="Purple Category" IconUrl="categorypurple.gif" />
+      <MenuItem Text="Red Category" IconUrl="categoryred.gif" />
+      <MenuItem Text="Yellow Category" IconUrl="categoryyellow.gif" />
+      <MenuItem Text="All Categories..." IconUrl="categorize.gif" />
+      <MenuItem />
+      <MenuItem Text="Set Quick Click..." />
+    </MenuItem>
+    <MenuItem Text="Reply" IconUrl="reply.gif" />
+    <MenuItem Text="Reply to All" IconUrl="replyall.gif" />
+    <MenuItem Text="Forward" IconUrl="forward.gif" />
+    <MenuItem Text="Forward as Attachment" IconUrl="forwardasattachment.gif" />
+    <MenuItem />
+    <MenuItem Text="Copy Shortcut" Enabled="false" />
+  </MenuItem>
+  <MenuItem Text="Help" SubGroupExpandOffsetX="0" SubGroupExpandOffsetY="-1">
+    <MenuItem Text="Microsoft Office Outlook Help" IconUrl="help.gif" />
+    <MenuItem />
+    <MenuItem Text="Microsoft Office Online" />
+    <MenuItem Text="Contact Us" />
+    <MenuItem />
+    <MenuItem Text="Check for Updates" />
+    <MenuItem Text="Disabled Items..." />
+    <MenuItem Text="Office Diagnostics..." IconUrl="officediagnostics.gif" />
+    <MenuItem Text="Activate Product..." />
+    <MenuItem Text="Privacy Options..." />
+    <MenuItem />
+    <MenuItem Text="About Microsoft Office Outlook" />
+  </MenuItem>
+</Items>

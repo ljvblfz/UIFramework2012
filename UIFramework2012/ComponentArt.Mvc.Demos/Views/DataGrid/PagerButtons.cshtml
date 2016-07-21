@@ -1,0 +1,80 @@
+﻿@using ComponentArt.Web.UI
+
+@{ 
+  ViewData["DemoType"] = "DataGrid";
+  ViewData["DemoTitle"] = "Pager Buttons";
+  ViewData["CodeFiles"] = "/Views/DataGrid/PagerButtons.aspx,/Controllers/DataGridController.cs";
+  ViewData["AboutText"] = @"
+  <ul>
+<li>This sample demonstrates the use of a pager buttons.</li>
+</ul>
+";    
+}
+
+@section HeadContent {
+  <link type="text/css" rel="stylesheet" href="../../Content/DataGrid/MessageBrowserContent/gridStyle.css" />
+  <style type="text/css">
+    .cart-datagrid-grouping-text
+    {
+      font-size: 10pt !important;
+      font-weight: normal !important;
+    }
+    .cart-datagrid-pager-text
+    {
+      font-size: 10pt !important;
+    }
+    .cart-datagrid-pager-text a:link
+    {
+      color: #444;
+    }
+  </style>
+  <link href="@Url.Content("~/Content/Themes/Office2010Blue/theme.css")" rel="stylesheet" type="text/css" />
+}
+
+@(Html
+  .ComponentArt().DataGrid()
+  .ID("Grid1")
+  .Width(700)
+  .Height(400)
+  .AutoTheming(true)
+  .AllowColumnResizing(true)
+  .ShowHeader(true)
+  .FooterHeight(32)
+  .RunningMode(GridRunningMode.Client)
+  .PageSize(15)
+  .PagerStyle(GridPagerStyle.Buttons)
+  .PagerImagesFolderUrl("~/Content/DataGrid/MessageBrowserContent/images/pager/")
+  .PagerButtonWidth(44)
+  .PagerButtonHeight(26)
+  .ImagesBaseUrl("~/Content/DataGrid/MessageBrowserContent/images/")
+  .Levels(l =>
+  {
+    l.Add().Columns(c =>
+    {
+      c.Add().DataField("PriorityIcon").DataCellCssClass("FirstDataCell").SortedDataCellCssClass("SortedDataCell").Width(12).DataCellClientTemplateId("PriorityIconTemplate").HeadingCellCssClass("FirstHeadingCell").HeadingImageUrl("icon_priority.gif").FixedWidth(true);
+      c.Add().DataField("EmailIcon").SortedDataCellCssClass("SortedDataCell").Width(20).DataCellClientTemplateId("EmailIconIconTemplate").HeadingImageUrl("icon_icon.gif").FixedWidth(true);
+      c.Add().DataField("AttachmentIcon").SortedDataCellCssClass("SortedDataCell").Width(12).DataCellClientTemplateId("AttachmentIconTemplate").HeadingImageUrl("icon_attachment.gif").FixedWidth(true);
+      c.Add().DataField("Subject").SortedDataCellCssClass("SortedDataCell").Width(300);
+      c.Add().DataField("LastPostDate").HeadingText("Received").SortedDataCellCssClass("SortedDataCell").FixedWidth(true);
+      c.Add().DataField("StartedBy").SortedDataCellCssClass("SortedDataCell").Width(80).FixedWidth(true);
+      c.Add().DataField("TotalViews").SortedDataCellCssClass("SortedDataCell").Width(80).FixedWidth(true);
+      c.Add().DataField("FlagIcon").SortedDataCellCssClass("SortedDataCell").Width(20).DataCellClientTemplateId("FlagIconTemplate").HeadingImageUrl("icon_flag.gif").FixedWidth(true);
+      c.Add().DataField("PostId").Visible(false);
+    });
+  })
+  .ClientTemplates(ct =>
+  {
+    ct.Add().ID("PriorityIconTemplate").Content(@"
+        <img src=""## get_root() ##/Content/DataGrid/MessageBrowserContent/images/## DataItem.GetMember('PriorityIcon').Value ##"" width=""8"" height=""10"" border=""0"">
+          ");
+    ct.Add().ID("EmailIconIconTemplate").Content(@"
+        <img src=""## get_root() ##/Content/DataGrid/MessageBrowserContent/images/## DataItem.GetMember('EmailIcon').Value ##"" width=""20"" height=""15"" border=""0"">
+        ");
+    ct.Add().ID("AttachmentIconTemplate").Content(@"
+        <img src=""## get_root() ##/Content/DataGrid/MessageBrowserContent/images/## DataItem.GetMember('AttachmentIcon').Value ##"" width=""8"" height=""10"" border=""0"">
+");
+    ct.Add().ID("FlagIconTemplate").Content(@"
+        <img src=""## get_root() ##/Content/DataGrid/MessageBrowserContent/images/## DataItem.GetMember('FlagIcon').Value ##"" width=""12"" height=""12"" border=""0"">
+");
+  })
+)

@@ -1,0 +1,8 @@
+﻿<Window x:Class="ComponentArt.Win.Demos.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ComponentArt Win.UI for WPF" Height="900" Width="1250">
+    <Grid>
+       
+    </Grid>
+</Window>

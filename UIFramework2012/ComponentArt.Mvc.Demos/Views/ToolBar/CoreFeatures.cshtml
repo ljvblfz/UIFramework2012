@@ -1,0 +1,77 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoTitle"] = "Core Features";
+  ViewData["DemoType"] = "ToolBar";
+  ViewData["CodeFiles"] = "/Views/ToolBar/CoreFeatures.aspx,/Controllers/ToolBarController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+  <li>Many of the items in this ToolBar can be checked.  Some of these items act like independent checkboxes.</li>
+  <li>Others are organized in radio button groups where exactly one or up to one item is checked at any time.</li>
+  <li>This ToolBar also contains a split drop down item.</li>
+</ul>
+";    
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/ToolBar/CoreFeatures/combobox.css")" rel="stylesheet" type="text/css" />
+  <link href="@Url.Content("~/Content/ToolBar/CoreFeatures/menu.css")" rel="stylesheet" type="text/css" />
+  <link href="@Url.Content("~/Content/ToolBar/CoreFeatures/toolbar.css")" rel="stylesheet" type="text/css" />
+  <link href="@Url.Content("~/Content/Themes/BlackIce/theme.css")" rel="stylesheet" type="text/css" />  
+  <script type="text/javascript">
+    function Menu1_onItemSelect(sender, eventArgs)
+    {
+      var clickedItem = eventArgs.get_item();
+      var toolBarItem = ToolBar1.get_items().getItemById('SplitDropDownItem1');
+      var clickedItemValue = clickedItem.get_value();
+      var toolBarItemValue = toolBarItem.get_value();
+
+      if (clickedItemValue && clickedItemValue != toolBarItemValue)
+      {
+        ToolBar1.beginUpdate();
+        toolBarItem.set_value(clickedItemValue);
+        toolBarItem.set_imageUrl(clickedItem.getProperty('IconUrl'));
+        ToolBar1.endUpdate();
+      }
+    }
+
+    function showSelectedSplitItem()
+    {
+      var item = ToolBar1.get_items().getItemById('SplitDropDownItem1');
+      var image = item.get_imageUrl();
+      document.getElementById('splitItemImage').style.visibility = 'visible';
+      document.getElementById('splitItemImage').src = '../../Content/ToolBar/CoreFeatures/images/' + image;
+      var text = item.get_value();
+      document.getElementById('splitItemText').innerHTML = '<b>' + text + '</b>';
+      alert(text);
+    }
+  </script>
+}
+@(Html.ComponentArt().ToolBar()
+  .ID("ToolBar1")
+  .ImagesBaseUrl("~/Content/ToolBar/CoreFeatures/images/")
+  .SiteMapXmlFile("~/App_Data/ToolBar/CoreFeatures/toolBarData.xml")
+  .CssClass("tb")
+  .Height(25)
+  .DefaultItemImageHeight(16)
+  .DefaultItemImageWidth(16)
+)
+@(Html.ComponentArt().Menu()
+  .ID("Menu1")
+  .ContextMenu(ContextMenuType.Custom)
+  .Orientation(GroupOrientation.Vertical)
+  .SiteMapXmlFile("~/App_Data/ToolBar/CoreFeatures/menuData.xml")
+  .DefaultGroupItemSpacing(1)
+  .TopGroupExpandDirection(GroupExpandDirection.BelowLeft)
+  .TopGroupExpandOffsetY(-1)
+  .ImagesBaseUrl("~/Content/ToolBar/CoreFeatures/images/")
+  .AutoTheming(true)
+  .ClientEvents(ce =>
+  {
+    ce.ItemSelect("Menu1_onItemSelect");
+  })
+)
+<br />
+<br />
+Selected split item action:
+<img id="splitItemImage" border="0" width="16" height="16" style="vertical-align: middle;
+  padding-left: 8px; visibility: hidden;" />
+<span id="splitItemText"></span>

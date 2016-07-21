@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+	xmlns:vsm="clr-namespace:ComponentArt.Win.UI.VSM;assembly=ComponentArt.Win.UI.Common" 
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation" 
+	xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common" 
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+>
+    <!-- BEGIN NAVBAR -->
+    <!-- NAVBAR RESOURCES -->
+    <sys:Double x:Key="ComponentArt_NavBar_BorderThickness">1</sys:Double>
+    <SolidColorBrush x:Key="ComponentArt_NavBar_Background" Color="#bfdcf9"/>
+    <SolidColorBrush x:Key="ComponentArt_NavBar_BackgroundBorder" Color="#bbbbbb"/>
+    <!-- NAVBAR ITEM RESOURCES -->
+    <SolidColorBrush x:Key="ComponentArt_NavBar_NormalItemBorder" Color="#00000000" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_NormalItemInnerBorder" Color="#00000000" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_PressedItemBorder" Color="#efeff0" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_PressedItemInnerBorder" Color="#efeff0" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_OverItemBorder" Color="#55e5e5e5" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_OverItemInnerBorder" Color="#55e5e5e5" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_CheckedItemBorder" Color="#e5e5e5" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_CheckedItemInnerBorder" Color="#e5e5e5" />
+    <SolidColorBrush x:Key="ComponentArt_NavBarItem_Background" Color="#00000000" />
+    <LinearGradientBrush x:Key="ComponentArt_NavBarItem_BackgroundOver" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#55e5e5e5" Offset="0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_NavBarItem_BackgroundActive" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#e5e5e5" Offset="0"/>
+    </LinearGradientBrush>
+    <!-- /NAVBAR ITEM RESOURCES -->
+    <!-- new -->
+    <sys:String x:Key="ComponentArt_NavBar_ItemHeader_Padding">2,2,2,2</sys:String>
+    <sys:String x:Key="ComponentArt_NavBar_ItemHeader_CornerRadius">2</sys:String>
+    <sys:Double x:Key="ComponentArt_NavBar_ItemHeader_FontSize">12</sys:Double>
+    <sys:String x:Key="ComponentArt_NavBar_ItemHeader_FontWeight">Normal</sys:String>
+    <sys:String x:Key="ComponentArt_NavBar_ItemPadding">3,3,3,3</sys:String>
+    <sys:String x:Key="ComponentArt_NavBar_ItemMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_NavBar_ItemIconMargin">12,1,6,1</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_NavBar_ItemForeground" Color="#000000" />
+    <Color x:Key="ComponentArt_NavBar_ItemForegroundOver">#000000</Color>
+    <Color x:Key="ComponentArt_NavBar_ItemForegroundChecked">#000000</Color>
+    <Color x:Key="ComponentArt_NavBar_ItemForegroundPressed">#000000</Color>
+    <Color x:Key="ComponentArt_NavBar_ItemForegroundDisabled">Black</Color>
+    <sys:String x:Key="ComponentArt_NavBar_GroupItemHeader_Padding">2,6,2,6</sys:String>
+    <sys:String x:Key="ComponentArt_NavBar_GroupItemHeader_CornerRadius">2</sys:String>
+    <sys:Double x:Key="ComponentArt_NavBar_GroupItemHeader_FontSize">13</sys:Double>
+    <sys:String x:Key="ComponentArt_NavBar_GroupItemHeader_FontWeight">Bold</sys:String>
+    <sys:String x:Key="ComponentArt_NavBar_GroupItemMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_NavBar_GroupItemIconMargin">2,0,6,0</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_NavBar_GroupItemForeground" Color="#1b5086" />
+    <Color x:Key="ComponentArt_NavBar_GroupItemForegroundOver">#1b5086</Color>
+    <Color x:Key="ComponentArt_NavBar_GroupItemForegroundChecked">#000000</Color>
+    <Color x:Key="ComponentArt_NavBar_GroupItemForegroundPressed">#1b5086</Color>
+    <Color x:Key="ComponentArt_NavBar_GroupItemForegroundDisabled">#1b5086</Color>
+    <!-- /new -->
+    <!-- NAVBAR GROUP ITEM RESOURCES -->
+    <SolidColorBrush x:Key="ComponentArt_NavBar_NormalGroupItemBorder" Color="#6196cc" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_NormalGroupItemInnerBorder" Color="#bbdcfd" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_PressedGroupItemBorder" Color="#6196cc" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_PressedGroupItemInnerBorder" Color="#ffe69c" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_OverGroupItemBorder" Color="#6196cc" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_OverGroupItemInnerBorder" Color="#ffdd87" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_CheckedGroupItemBorder" Color="#6196cc" />
+    <SolidColorBrush x:Key="ComponentArt_NavBar_CheckedGroupItemInnerBorder" Color="#ffcd66" />
+    <LinearGradientBrush x:Key="ComponentArt_NavBarGroupItem_Background" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#e4f0fd" Offset="0" />
+        <GradientStop Color="#c2dffc" Offset="0.38" />
+        <GradientStop Color="#aad3fc" Offset="0.38" />
+        <GradientStop Color="#c0ddfa" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_NavBarGroupItem_BackgroundOver" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#fffbe7" Offset="0" />
+        <GradientStop Color="#ffe5a8" Offset="0.38" />
+        <GradientStop Color="#ffd667" Offset="0.38" />
+        <GradientStop Color="#ffe79d" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_NavBarGroupItem_BackgroundActive" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#ffd6ad" Offset="0" />
+        <GradientStop Color="#ffb86e" Offset="0.38" />
+        <GradientStop Color="#ffa93f" Offset="0.38" />
+        <GradientStop Color="#ffdf7c" Offset="1" />
+    </LinearGradientBrush>
+    <!-- /NAVBAR RESOURCES -->
+    <!-- END NAVBAR -->
+</ResourceDictionary>

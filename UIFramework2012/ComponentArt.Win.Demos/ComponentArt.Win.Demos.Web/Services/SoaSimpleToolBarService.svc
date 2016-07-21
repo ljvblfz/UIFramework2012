@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ComponentArt.Win.Demos.Web.SoaSimpleToolBarService" CodeBehind="SoaSimpleToolBarService.svc.cs" %>
+

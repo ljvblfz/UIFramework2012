@@ -1,0 +1,36 @@
+<items>
+  <item ID="N00" Text="Mail" Expanded="true" IconCssClass="icon-outlook-home">
+    <item ID="N01" Text="Mailbox" IconCssClass="icon-outlook-mailbox" />
+    <item ID="N02" Text="Inbox" IconCssClass="icon-outlook-inbox" />
+    <item ID="N03" Text="Drafts" IconCssClass="icon-outlook-drafts" />
+    <item ID="N04" Text="Outbox" IconCssClass="icon-outlook-outbox" />
+    <item ID="N05" Text="Junk E-mail" IconCssClass="icon-outlook-junk" />
+    <item ID="N06" Text="Deleted Items" IconCssClass="icon-outlook-trash" Enabled="false" />
+    <item ID="N07" Text="Search Folders" IconCssClass="icon-outlook-searchfolders" />
+    <item ID="N08" Text="Sent Items" IconCssClass="icon-outlook-sent" />
+  </item>
+
+  <item ID="N09" Text="Tasks" IconCssClass="icon-outlook-tasks">
+    <item ID="N10" Text="Simple List" IconCssClass="icon-outlook-tasks" />
+    <item ID="N11" Text="Detailed List" IconCssClass="icon-outlook-tasks" />
+    <item ID="N12" Text="Active Tasks" IconCssClass="icon-outlook-tasks" />
+    <item ID="N13" Text="Overdue Tasks" IconCssClass="icon-outlook-tasks" />
+    <item ID="N14" Text="Task Timeline" IconCssClass="icon-outlook-tasks" />
+  </item>
+
+  <item ID="N16" Text="Notes" IconCssClass="icon-outlook-notes">
+    <item ID="N17" Text="Icons" IconCssClass="icon-outlook-notes" />
+    <item ID="N18" Text="Note List" IconCssClass="icon-outlook-notes" />
+    <item ID="N19" Text="Last Seven Days" IconCssClass="icon-outlook-notes" />
+    <item ID="N20" Text="By Category" IconCssClass="icon-outlook-notes" />
+    <item ID="N21" Text="By Color" IconCssClass="icon-outlook-notes" />
+  </item>
+
+  <item ID="N22" Text="Contacts" IconCssClass="icon-outlook-contacts">
+    <item ID="N23" Text="Address Cards" IconCssClass="icon-outlook-contacts" />
+    <item ID="N24" Text="Detailed Address List" IconCssClass="icon-outlook-contacts" />
+    <item ID="N25" Text="By Category" IconCssClass="icon-outlook-contacts" />
+    <item ID="N26" Text="By Company" IconCssClass="icon-outlook-contacts" />
+    <item ID="N27" Text="By Follow-up Flag" IconCssClass="icon-outlook-contacts" />
+  </item>
+</items>

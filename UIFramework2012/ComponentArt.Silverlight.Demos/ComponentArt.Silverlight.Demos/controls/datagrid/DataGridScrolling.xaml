@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.DataGridScrolling"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:cart="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data">
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Scrolling" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This sample demonstrates scrolling a record set on the client." />
+    <TextBlock
+      x:Name="DemoCodeFiles"
+      Visibility = "Collapsed"
+      Text="\source\controls\datagrid\DataGridScrolling.xaml,
+                \source\controls\datagrid\DataGridScrolling.xaml.cs" />
+
+
+    <cart:DataGrid x:Name="DataGrid1" Width="800" Height="500"
+                   PageSize="18" 
+                   VerticalScrollBarVisibility="Auto" 
+                   EnableVirtualization="True"
+                   RunningMode="Client" 
+                   GroupingMode="ConstantRows"
+                   AllowGrouping="true" 
+                   PreExpandGroups="true"
+                   AllowColumnReordering="true"
+                   AllowColumnResizing="true"
+                   ColumnResizingMode="Distribute"
+                   FooterVisibility="Collapsed">
+      <cart:DataGrid.Columns>
+        <cart:DataGridTemplateColumn Binding="{Binding PriorityIcon}" Width="22" AllowResizing="false">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding}" Stretch="None" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="icon_priority.png" Stretch="None" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTemplateColumn Binding="{Binding EmailIcon}" Width="22" AllowResizing="false">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding}" Stretch="None" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="icon_icon.png" Stretch="None" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTemplateColumn Binding="{Binding AttachmentIcon}" Width="22" AllowResizing="false">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding}" Stretch="None" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="icon_attachment.png" Stretch="None" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+        <cart:DataGridTextColumn Binding="{Binding Subject}" Header="Subject" Width="4*" />
+        <cart:DataGridTextColumn Binding="{Binding LastPostDate}" Header="Last Post" Width="2*"/>
+        <cart:DataGridTextColumn Binding="{Binding StartedBy}" Header="Started By" Width="1*"/>
+        <cart:DataGridTextColumn Binding="{Binding Replies}" Header="Replies" Width="1*"/>
+        <cart:DataGridTextColumn Binding="{Binding TotalViews}" Header="Total Views" Width="1*"/>
+        <cart:DataGridTemplateColumn Binding="{Binding FlagIcon}" Width="22" AllowResizing="false">
+          <cart:DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <Image Source="{Binding}" Stretch="None" />
+            </DataTemplate>
+          </cart:DataGridTemplateColumn.CellTemplate>
+          <cart:DataGridTemplateColumn.CellStyle>
+            <Style TargetType="cart:DataGridCell">
+              <Setter Property="Padding" Value="1" />
+            </Style>
+          </cart:DataGridTemplateColumn.CellStyle>
+          <cart:DataGridTemplateColumn.Header>
+            <Image Source="icon_flag.png" Stretch="None" />
+          </cart:DataGridTemplateColumn.Header>
+        </cart:DataGridTemplateColumn>
+      </cart:DataGrid.Columns>
+      <cart:DataGrid.CellStyle>
+        <Style TargetType="cart:DataGridCell">
+          <Setter Property="Padding" Value="3" />
+        </Style>
+      </cart:DataGrid.CellStyle>
+      <cart:DataGrid.ColumnHeaderStyle>
+        <Style TargetType="cart:DataGridColumnHeader">
+          <Setter Property="Padding" Value="5,3,3,3" />
+          <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+      </cart:DataGrid.ColumnHeaderStyle>
+    </cart:DataGrid>
+
+    <Border Grid.Row="1" HorizontalAlignment="Left" Width="800" Margin="0,30,0,0" CornerRadius="5" Background="#eeeeee" BorderBrush="#cccccc" BorderThickness="1">
+      <StackPanel Orientation="Vertical" Grid.Column="1" Margin="20">
+        <TextBlock Margin="0,0,0,20" Text="Try using the scroll bar or your mouse wheel to navigate through the record set. You can choose one of the following scrolling modes:" />
+        <RadioButton x:Name="OnDemandScrollingButton" GroupName="ScrollingMode" FontWeight="Bold" Content="OnDemand scrolling" Checked="RadioButton_Checked" Tag="OnDemand" />
+        <TextBlock Margin="15,7,5,20" FontStyle="Italic" Text="For optimal performance, only the visible rows are rendered." />
+        <RadioButton x:Name="LiveScrollingButton" GroupName="ScrollingMode" FontWeight="Bold" Content="Live scrolling" Checked="RadioButton_Checked" Tag="Live" />
+        <TextBlock Margin="15,7,5,10" FontStyle="Italic" Text="All available rows are rendered and displayed in a scrollable data area." />
+        <TextBlock Margin="0,10,0,10" Text="For this sample, all the records are loaded to the client." />
+      </StackPanel>
+    </Border>
+  </Grid>
+</UserControl>

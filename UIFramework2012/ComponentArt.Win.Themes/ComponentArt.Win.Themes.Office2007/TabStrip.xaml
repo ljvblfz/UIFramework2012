@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:ComponentArt.Win.UI.VSM;assembly=ComponentArt.Win.UI.Common" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation" 
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common" 
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d"
+>
+	<!-- BEGIN TABSTRIP -->
+	<!-- TABSTRIP RESOURCES -->
+    <sys:String x:Key="ComponentArt_TabStripTab_CornerRadiusOuter">4,4,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_TabStripTab_CornerRadiusInner">4,4,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_TabStripTab_BorderThicknessOuter">1,1,1,0</sys:String>
+    <sys:String x:Key="ComponentArt_TabStripTab_BorderThicknessInner">1,1,1,0</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushOuter" Color="#8cb5de" />
+    <SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushInner" Color="#00000000" />
+    <SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushOuterOver" Color="#98bde2" />
+    <SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushInnerOver" Color="#00000000" />
+    <SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushOuterActive" Color="#b4b4b4" />
+    <LinearGradientBrush x:Key="ComponentArt_TabStripTab_BorderBrushInnerActive"  StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#f5f9fd" Offset="0" />
+        <GradientStop Color="#d5f9fe" Offset="0.17" />
+        <GradientStop Color="#d5f9fe" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushOuterDown" Color="#ddffffff" />
+    <SolidColorBrush x:Key="ComponentArt_TabStripTab_BorderBrushInnerDown" Color="#00000000" />
+    <SolidColorBrush x:Key="ComponentArt_TabStripTab_Foreground" Color="#144587" />
+    <SolidColorBrush x:Key="ComponentArt_TabStripTab_BackgroundInner" Color="#00000000" />
+    <LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundOuter" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#c0ddfa" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundOuterOver" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#c2dffc" Offset="0" />
+		<GradientStop Color="#dcecfd" Offset="0.5" />
+		<GradientStop Color="#d5e5f6" Offset="0.5" />
+		<GradientStop Color="#c2dffc" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundOuterActive" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#f6fafe" Offset="0" />
+		<GradientStop Color="#ffffff" Offset="0.1" />
+		<GradientStop Color="#f2f6fa" Offset="0.2" />
+		<GradientStop Color="#e2eaf2" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_TabStripTab_BackgroundOuterDown" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#b6d2f8" Offset="0" />
+		<GradientStop Color="#cce0f9" Offset="0.5" />
+		<GradientStop Color="#c5d8ee" Offset="0.5" />
+		<GradientStop Color="#b4d1f8" Offset="1" />
+	</LinearGradientBrush>
+	<!-- END TABSTRIP -->
+</ResourceDictionary>

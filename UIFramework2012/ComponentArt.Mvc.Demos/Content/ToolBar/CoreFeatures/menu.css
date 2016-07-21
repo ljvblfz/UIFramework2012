@@ -1,0 +1,43 @@
+.MenuGroup
+{
+  background-image:url(images/menugroupbackground.gif);
+  background-color:#f6f6f6;
+  background-position:top left;
+  background-repeat:repeat-y;
+  border:1px solid #666;
+  cursor:default;
+}
+
+.MenuItem
+{
+  color:#666;
+  font-family:tahoma;
+  font-size:11px;
+  margin:1px;
+  cursor:default;
+}
+
+.MenuItemHover
+{
+  background:#f6f6f6 url("images/itemHoverBg.gif") repeat-x;
+  border: 1px solid #ccc;
+  border-right-color:#b9b9b9;
+  border-bottom-color:#b9b9b9;
+  color:black;
+  font-family:tahoma;
+  font-size:11px;
+  cursor:default;
+}
+
+.MenuItem TR TD IMG,
+.MenuItemHover TR TD IMG
+{
+  padding-left:1px;
+}
+
+.MenuBreak
+{
+  background-image:url(images/menubreakbackground.gif);
+  width:100%;
+  height:1px;
+}

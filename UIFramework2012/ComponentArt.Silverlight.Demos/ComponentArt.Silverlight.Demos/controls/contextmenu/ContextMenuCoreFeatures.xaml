@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.ContextMenuCoreFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"             
+    xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+    xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls">
+    <UserControl.Resources>
+        <ComponentArtTheming:Theme x:Key="ArcticWhite" 
+                      BaseSource="/ComponentArt.Silverlight.UI.Navigation;component/Themes/generic.xaml" 
+                      Source="/ComponentArt.Silverlight.Themes.ArcticWhite;component/ContextMenu.xaml" />
+    </UserControl.Resources>
+    <Canvas x:Name="LayoutRoot" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Black">
+        <Canvas Canvas.Top="50" Canvas.Left="50">
+            <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ContextMenu" />
+            <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Control-based Context Menu" />
+            <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Right-click on the image or the calendar to activate control-specific context menus." />
+            <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\contextmenu\ContextMenuCoreFeatures.xaml,
+            \source\controls\contextmenu\ContextMenuCoreFeatures.xaml.cs"/>
+            <ComponentArt:ContextMenu
+		        x:Name="menu1" 
+		        Orientation="Vertical" 
+		        Theme="{StaticResource ArcticWhite}"  
+                ContextTarget="myCalendar" 
+                ContextType="ControlSpecific" 
+                ShowType="FlyLine"
+                ShadowEnabled="True" 
+                ShadowOffsetHorizontal="2" 
+                ShadowOffsetVertical="2" 
+                ShadowColor="#19000000" 
+                MenuClick="menu1_MenuClick">
+                <ComponentArt:MenuItem Text="Go To">
+                    <ComponentArt:MenuItem Text="January 1, 2000" Id="goto" />
+                    <ComponentArt:MenuItem Text="June 13, 2004" Id="goto" />
+                    <ComponentArt:MenuItem Text="October 11, 2005" Id="goto" />
+                </ComponentArt:MenuItem>
+                <ComponentArt:MenuItem IsSeparator="True" />
+                <ComponentArt:MenuItem Text="Select Today" Id="select" />
+                <ComponentArt:MenuItem Text="Select Current Week" Id="select" />
+                <ComponentArt:MenuItem Text="Select Current Month" Id="select" />
+                <ComponentArt:MenuItem IsSeparator="True" />
+                <ComponentArt:MenuItem Text="Select Week Days" Id="select" />
+                <ComponentArt:MenuItem Text="Select Weekend Days" Id="select" />
+            </ComponentArt:ContextMenu>
+            <ComponentArt:ContextMenu
+		        x:Name="menu2"
+		        Orientation="Vertical" 
+		        HorizontalAlignment="Left" 
+		        VerticalAlignment="Top"
+		        Theme="{StaticResource ArcticWhite}"
+                ContextTarget="myImage"
+                MenuClick="menu2_MenuClick"
+                ContextType="ControlSpecific"
+                ShadowOffsetHorizontal="2.5"
+                ShadowOffsetVertical="2.5"
+                ShowType="FlyLine"
+                ShadowColor="#19000000">
+                <ComponentArt:ContextMenu.Resources>
+                    <DataTemplate x:Key="SizeSlider">
+                        <Border Margin="31,0,0,0" Background="#00FFFFFF" BorderBrush="DarkGray" BorderThickness="0">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Foreground="#555555" Text="Image size:"></TextBlock>
+                                <Slider Background="#00FFFFFF" Width="120" Value="1" Maximum="2" Minimum=".05" ValueChanged="Slider_ValueChanged"></Slider>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ComponentArt:ContextMenu.Resources>
+                <ComponentArt:MenuItem Text="Load Tiger.jpg" />
+                <ComponentArt:MenuItem Text="Load Elephant.jpg" />
+                <ComponentArt:MenuItem Text="Load Parrots.jpg" />
+                <ComponentArt:MenuItem Text="Load Dolphin.jpg" />
+                <ComponentArt:MenuItem IsSeparator="True" />
+                <ComponentArt:MenuItem Text="Reset Image" />
+                <ComponentArt:MenuItem CustomTemplateHighlight="False" CustomTemplate="SizeSlider" />
+            </ComponentArt:ContextMenu>
+            <basics:Calendar x:Name="myCalendar" Margin="20,40,0,0"/>
+            <Image x:Name="myImage" Source="assets/dolphin.jpg" Margin="320,40,0,0" UseLayoutRounding="False"/>
+        </Canvas>
+    </Canvas>
+</UserControl>

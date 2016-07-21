@@ -1,0 +1,48 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoTitle"] = "Keyboard Control";
+  ViewData["DemoType"] = "TreeView";
+  ViewData["CodeFiles"] = "/Views/TreeView/KeyboardControl.aspx,/Controllers/TreeViewController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>Try controlling the treeview via the keyboard, as described above.</li>
+</ul>
+";  
+}
+@section HeadContent {
+  <link href="@Url.Content("~/Content/TreeView/keyboardcontrol/treeStyle.css")" rel="stylesheet" type="text/css" />
+}
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td>
+      @(Html
+        .ComponentArt().TreeView()
+        .ID("TreeView1")
+        .AutoScroll(true)
+        .NodeLabelPadding(2)
+        .ExtendNodeCells(true)
+        .DragAndDropEnabled(false)
+        .NodeEditingEnabled(false)
+        .KeyboardEnabled(true)
+        .CssClass("TreeView")
+        .NodeCssClass("TreeNode")
+        .NodeRowCssClass("TreeNodeRow")
+        .HoverNodeCssClass("HoverTreeNode")
+        .SelectedNodeCssClass("SelectedTreeNode")
+        .ShowLines(true)
+        .LineImagesFolderUrl("~/Content/TreeView/keyboardcontrol/images/lines/")
+        .LineImageWidth(21)
+        .LineImageHeight(21)
+        .SiteMapXmlFile("~/App_Data/TreeView/keyboardcontrol/treeData.xml")
+        .Height(370)
+        .Width(250)
+      )
+    </td>
+    <td>
+      &nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+      <img src="../../Content/TreeView/KeyboardControl/images/keyboard_control.gif" border="0">
+    </td>
+  </tr>
+</table>

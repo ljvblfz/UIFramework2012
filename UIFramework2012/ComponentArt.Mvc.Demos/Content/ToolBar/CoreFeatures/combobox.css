@@ -1,0 +1,27 @@
+/*
+	Combobox item styles
+*/
+.tb-font,.tb-size { padding-left:2px;padding-right:4px; }
+
+/* Generic combobox */
+.cmb { font-family:Tahoma,"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;font-size:8px;padding-left:4px;border:1px solid #000;background-color:#fff; }
+.cmb-h { font-family:Tahoma,"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;font-size:8px;padding-left:4px;border:1px solid #000;background-color:#fff; }
+.cmb-txt { font-family:Tahoma,"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;height:12px;font-size:11px;background-color:#fff;border:none;cursor:default !important;text-align:left !important; }
+
+
+/* Combobox dropdown styles */
+.ddn { cursor:default;color:#666;background-color:transparent;font-family:Tahoma,"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;font-size:11px; }
+.ddn-hdr { width:190px;height:2px !important;background:transparent url("combobox_images/ddn-header.gif") no-repeat;font-size:1px; }
+.ddn-ftr { width:190px;height:10px;background:transparent url("combobox_images/ddn-footer.gif") no-repeat; }
+.ddn-con { width:190px;height:auto;background:transparent url("combobox_images/ddn-content.gif") repeat-y !important; }
+.ddn-itm { width:190px;height:22px; }
+.ddn-itm-h { width:190px;height:22px;color:#333;background:transparent url("combobox_images/ddn-item-hover.gif") no-repeat; }
+.ico { width:24px;height:22px;float:left;padding-right:16px; }
+
+
+/* Font Size Combobox dropdown styles */
+.size-hdr { width:64px;height:2px;background:transparent url("combobox_images/size-header.gif") no-repeat;font-size:1px; }
+.size-ftr { width:64px;height:10px;background:transparent url("combobox_images/size-footer.gif") no-repeat; }
+.size-con { width:64px;height:auto;background:transparent url("combobox_images/size-content.gif") repeat-y; }
+.size-itm { width:64px;height:22px;background-color:transparent;text-align:left;padding-left:12px;line-height:22px; }
+.size-itm-h { width:64px;height:22px;color:#333333;background:transparent url("combobox_images/size-item-hover.gif") no-repeat;padding-left:12px;line-height:22px; }

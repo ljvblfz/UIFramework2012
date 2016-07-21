@@ -1,0 +1,266 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.NumberInputCultureSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"             
+    xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="NumberInput" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="NumberInput Core Features" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Use the Combo-Box to change the culture of the Number Inputs." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\numericinput\NumberInputCoreFeatures.xaml,
+            \source\controls\numericinput\NumberInputCoreFeatures.xaml.cs"/>
+        
+        <Border Width="800" Height="600"/>
+
+        <Grid Margin="20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="24"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Percent" Grid.Row="0" />
+            <ComponentArt:NumberInput x:Name="MyNumberInput" Grid.Row="1" MaximumValue="1" MinimumValue="0" Increment=".0001" NumberType="Percent" LargeIncrement=".0005" Value=".5555"/>
+            
+            <TextBlock Text="Currency" Grid.Row="3" />
+            <ComponentArt:NumberInput x:Name="MyNumberInput2" Grid.Row="4"  MaximumValue="1000000" MinimumValue="-1000000" Increment="1000" NumberType="Currency" LargeIncrement="50000" Value="500000"/>
+            
+            <TextBlock Text="Number" Grid.Row="6" />
+            <ComponentArt:NumberInput x:Name="MyNumberInput3" Grid.Row="7"  MaximumValue="1000000" MinimumValue="-1000000" Increment="1000" NumberType="Number" LargeIncrement="50000" Value="500000"/>
+
+            <Border Grid.Row="0" Grid.RowSpan="14" Grid.Column="2" Grid.ColumnSpan="3" Padding="15"
+                    CornerRadius="5" Background="#eeeeee" BorderBrush="#666666" BorderThickness="1">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Choose Culture:" />
+                    <ComponentArt:ComboBox x:Name="CultureCombo" IsReadOnly="True" SelectionFinalized="CultureCombo_SelectionFinalized"
+                                   Width="200" HorizontalAlignment="Left" >
+                        <ComponentArt:ComboBoxItem Id="" Text="invariant culture" />
+                        <ComponentArt:ComboBoxItem Id="af" Text="Afrikaans" />
+                        <ComponentArt:ComboBoxItem Id="af-ZA" Text="Afrikaans - South Africa" />
+                        <ComponentArt:ComboBoxItem Id="sq" Text="Albanian" />
+                        <ComponentArt:ComboBoxItem Id="sq-AL" Text="Albanian - Albania" />
+                        <ComponentArt:ComboBoxItem Id="ar" Text="Arabic" />
+                        <ComponentArt:ComboBoxItem Id="ar-DZ" Text="Arabic - Algeria" />
+                        <ComponentArt:ComboBoxItem Id="ar-BH" Text="Arabic - Bahrain" />
+                        <ComponentArt:ComboBoxItem Id="ar-EG" Text="Arabic - Egypt" />
+                        <ComponentArt:ComboBoxItem Id="ar-IQ" Text="Arabic - Iraq" />
+                        <ComponentArt:ComboBoxItem Id="ar-JO" Text="Arabic - Jordan" />
+                        <ComponentArt:ComboBoxItem Id="ar-KW" Text="Arabic - Kuwait" />
+                        <ComponentArt:ComboBoxItem Id="ar-LB" Text="Arabic - Lebanon" />
+                        <ComponentArt:ComboBoxItem Id="ar-LY" Text="Arabic - Libya" />
+                        <ComponentArt:ComboBoxItem Id="ar-MA" Text="Arabic - Morocco" />
+                        <ComponentArt:ComboBoxItem Id="ar-OM" Text="Arabic - Oman" />
+                        <ComponentArt:ComboBoxItem Id="ar-QA" Text="Arabic - Qatar" />
+                        <ComponentArt:ComboBoxItem Id="ar-SA" Text="Arabic - Saudi Arabia" />
+                        <ComponentArt:ComboBoxItem Id="ar-SY" Text="Arabic - Syria" />
+                        <ComponentArt:ComboBoxItem Id="ar-TN" Text="Arabic - Tunisia" />
+                        <ComponentArt:ComboBoxItem Id="ar-AE" Text="Arabic - United Arab Emirates" />
+                        <ComponentArt:ComboBoxItem Id="ar-YE" Text="Arabic - Yemen" />
+                        <ComponentArt:ComboBoxItem Id="hy" Text="Armenian" />
+                        <ComponentArt:ComboBoxItem Id="hy-AM" Text="Armenian - Armenia" />
+                        <ComponentArt:ComboBoxItem Id="az" Text="Azeri" />
+                        <ComponentArt:ComboBoxItem Id="az-AZ-Cyrl" Text="Azeri (Cyrillic) - Azerbaijan" />
+                        <ComponentArt:ComboBoxItem Id="az-AZ-Latn" Text="Azeri (Latin) - Azerbaijan" />
+                        <ComponentArt:ComboBoxItem Id="eu" Text="Basque" />
+                        <ComponentArt:ComboBoxItem Id="eu-ES" Text="Basque - Basque" />
+                        <ComponentArt:ComboBoxItem Id="be" Text="Belarusian" />
+                        <ComponentArt:ComboBoxItem Id="be-BY" Text="Belarusian - Belarus" />
+                        <ComponentArt:ComboBoxItem Id="bg" Text="Bulgarian" />
+                        <ComponentArt:ComboBoxItem Id="bg-BG" Text="Bulgarian - Bulgaria" />
+                        <ComponentArt:ComboBoxItem Id="ca" Text="Catalan" />
+                        <ComponentArt:ComboBoxItem Id="ca-ES" Text="Catalan - Catalan" />
+                        <ComponentArt:ComboBoxItem Id="zh-HK" Text="Chinese - Hong Kong SAR" />
+                        <ComponentArt:ComboBoxItem Id="zh-MO" Text="Chinese - Macau SAR" />
+                        <ComponentArt:ComboBoxItem Id="zh-CN" Text="Chinese - China" />
+                        <ComponentArt:ComboBoxItem Id="zh-CHS" Text="Chinese (Simplified)" />
+                        <ComponentArt:ComboBoxItem Id="zh-SG" Text="Chinese - Singapore" />
+                        <ComponentArt:ComboBoxItem Id="zh-TW" Text="Chinese - Taiwan" />
+                        <ComponentArt:ComboBoxItem Id="zh-CHT" Text="Chinese (Traditional)" />
+                        <ComponentArt:ComboBoxItem Id="hr" Text="Croatian" />
+                        <ComponentArt:ComboBoxItem Id="hr-HR" Text="Croatian - Croatia" />
+                        <ComponentArt:ComboBoxItem Id="cs" Text="Czech" />
+                        <ComponentArt:ComboBoxItem Id="cs-CZ" Text="Czech - Czech Republic" />
+                        <ComponentArt:ComboBoxItem Id="da" Text="Danish" />
+                        <ComponentArt:ComboBoxItem Id="da-DK" Text="Danish - Denmark" />
+                        <ComponentArt:ComboBoxItem Id="div" Text="Dhivehi" />
+                        <ComponentArt:ComboBoxItem Id="div-MV" Text="Dhivehi - Maldives" />
+                        <ComponentArt:ComboBoxItem Id="nl" Text="Dutch" />
+                        <ComponentArt:ComboBoxItem Id="nl-BE" Text="Dutch - Belgium" />
+                        <ComponentArt:ComboBoxItem Id="nl-NL" Text="Dutch - The Netherlands" />
+                        <ComponentArt:ComboBoxItem Id="en" Text="English" />
+                        <ComponentArt:ComboBoxItem Id="en-AU" Text="English - Australia" />
+                        <ComponentArt:ComboBoxItem Id="en-BZ" Text="English - Belize" />
+                        <ComponentArt:ComboBoxItem Id="en-CA" Text="English - Canada" />
+                        <ComponentArt:ComboBoxItem Id="en-CB" Text="English - Caribbean" />
+                        <ComponentArt:ComboBoxItem Id="en-IE" Text="English - Ireland" />
+                        <ComponentArt:ComboBoxItem Id="en-JM" Text="English - Jamaica" />
+                        <ComponentArt:ComboBoxItem Id="en-NZ" Text="English - New Zealand" />
+                        <ComponentArt:ComboBoxItem Id="en-PH" Text="English - Philippines" />
+                        <ComponentArt:ComboBoxItem Id="en-ZA" Text="English - South Africa" />
+                        <ComponentArt:ComboBoxItem Id="en-TT" Text="English - Trinidad and Tobago" />
+                        <ComponentArt:ComboBoxItem Id="en-GB" Text="English - United Kingdom" />
+                        <ComponentArt:ComboBoxItem Id="en-US" Text="English - United States" />
+                        <ComponentArt:ComboBoxItem Id="en-ZW" Text="English - Zimbabwe" />
+                        <ComponentArt:ComboBoxItem Id="et" Text="Estonian" />
+                        <ComponentArt:ComboBoxItem Id="et-EE" Text="Estonian - Estonia" />
+                        <ComponentArt:ComboBoxItem Id="fo" Text="Faroese" />
+                        <ComponentArt:ComboBoxItem Id="fo-FO" Text="Faroese - Faroe Islands" />
+                        <ComponentArt:ComboBoxItem Id="fa" Text="Farsi" />
+                        <ComponentArt:ComboBoxItem Id="fa-IR" Text="Farsi - Iran" />
+                        <ComponentArt:ComboBoxItem Id="fi" Text="Finnish" />
+                        <ComponentArt:ComboBoxItem Id="fi-FI" Text="Finnish - Finland" />
+                        <ComponentArt:ComboBoxItem Id="fr" Text="French" />
+                        <ComponentArt:ComboBoxItem Id="fr-BE" Text="French - Belgium" />
+                        <ComponentArt:ComboBoxItem Id="fr-CA" Text="French - Canada" />
+                        <ComponentArt:ComboBoxItem Id="fr-FR" Text="French - France" />
+                        <ComponentArt:ComboBoxItem Id="fr-LU" Text="French - Luxembourg" />
+                        <ComponentArt:ComboBoxItem Id="fr-MC" Text="French - Monaco" />
+                        <ComponentArt:ComboBoxItem Id="fr-CH" Text="French - Switzerland" />
+                        <ComponentArt:ComboBoxItem Id="gl" Text="Galician" />
+                        <ComponentArt:ComboBoxItem Id="gl-ES" Text="Galician - Galician" />
+                        <ComponentArt:ComboBoxItem Id="ka" Text="Georgian" />
+                        <ComponentArt:ComboBoxItem Id="ka-GE" Text="Georgian - Georgia" />
+                        <ComponentArt:ComboBoxItem Id="de" Text="German" />
+                        <ComponentArt:ComboBoxItem Id="de-AT" Text="German - Austria" />
+                        <ComponentArt:ComboBoxItem Id="de-DE" Text="German - Germany" />
+                        <ComponentArt:ComboBoxItem Id="de-LI" Text="German - Liechtenstein" />
+                        <ComponentArt:ComboBoxItem Id="de-LU" Text="German - Luxembourg" />
+                        <ComponentArt:ComboBoxItem Id="de-CH" Text="German - Switzerland" />
+                        <ComponentArt:ComboBoxItem Id="el" Text="Greek" />
+                        <ComponentArt:ComboBoxItem Id="el-GR" Text="Greek - Greece" />
+                        <ComponentArt:ComboBoxItem Id="gu" Text="Gujarati" />
+                        <ComponentArt:ComboBoxItem Id="gu-IN" Text="Gujarati - India" />
+                        <ComponentArt:ComboBoxItem Id="he" Text="Hebrew" />
+                        <ComponentArt:ComboBoxItem Id="he-IL" Text="Hebrew - Israel" />
+                        <ComponentArt:ComboBoxItem Id="hi" Text="Hindi" />
+                        <ComponentArt:ComboBoxItem Id="hi-IN" Text="Hindi - India" />
+                        <ComponentArt:ComboBoxItem Id="hu" Text="Hungarian" />
+                        <ComponentArt:ComboBoxItem Id="hu-HU" Text="Hungarian - Hungary" />
+                        <ComponentArt:ComboBoxItem Id="is" Text="Icelandic" />
+                        <ComponentArt:ComboBoxItem Id="is-IS" Text="Icelandic - Iceland" />
+                        <ComponentArt:ComboBoxItem Id="id" Text="Indonesian" />
+                        <ComponentArt:ComboBoxItem Id="id-ID" Text="Indonesian - Indonesia" />
+                        <ComponentArt:ComboBoxItem Id="it" Text="Italian" />
+                        <ComponentArt:ComboBoxItem Id="it-IT" Text="Italian - Italy" />
+                        <ComponentArt:ComboBoxItem Id="it-CH" Text="Italian - Switzerland" />
+                        <ComponentArt:ComboBoxItem Id="ja" Text="Japanese" />
+                        <ComponentArt:ComboBoxItem Id="ja-JP" Text="Japanese - Japan" />
+                        <ComponentArt:ComboBoxItem Id="kn" Text="Kannada" />
+                        <ComponentArt:ComboBoxItem Id="kn-IN" Text="Kannada - India" />
+                        <ComponentArt:ComboBoxItem Id="kk" Text="Kazakh" />
+                        <ComponentArt:ComboBoxItem Id="kk-KZ" Text="Kazakh - Kazakhstan" />
+                        <ComponentArt:ComboBoxItem Id="kok" Text="Konkani" />
+                        <ComponentArt:ComboBoxItem Id="kok-IN" Text="Konkani - India" />
+                        <ComponentArt:ComboBoxItem Id="ko" Text="Korean" />
+                        <ComponentArt:ComboBoxItem Id="ko-KR" Text="Korean - Korea" />
+                        <ComponentArt:ComboBoxItem Id="ky" Text="Kyrgyz" />
+                        <ComponentArt:ComboBoxItem Id="ky-KZ" Text="Kyrgyz - Kazakhstan" />
+                        <ComponentArt:ComboBoxItem Id="lv" Text="Latvian" />
+                        <ComponentArt:ComboBoxItem Id="lv-LV" Text="Latvian - Latvia" />
+                        <ComponentArt:ComboBoxItem Id="lt" Text="Lithuanian" />
+                        <ComponentArt:ComboBoxItem Id="lt-LT" Text="Lithuanian - Lithuania" />
+                        <ComponentArt:ComboBoxItem Id="mk" Text="Macedonian" />
+                        <ComponentArt:ComboBoxItem Id="mk-MK" Text="Macedonian - FYROM" />
+                        <ComponentArt:ComboBoxItem Id="ms" Text="Malay" />
+                        <ComponentArt:ComboBoxItem Id="ms-BN" Text="Malay - Brunei" />
+                        <ComponentArt:ComboBoxItem Id="ms-MY" Text="Malay - Malaysia" />
+                        <ComponentArt:ComboBoxItem Id="mr" Text="Marathi" />
+                        <ComponentArt:ComboBoxItem Id="mr-IN" Text="Marathi - India" />
+                        <ComponentArt:ComboBoxItem Id="mn" Text="Mongolian" />
+                        <ComponentArt:ComboBoxItem Id="mn-MN" Text="Mongolian - Mongolia" />
+                        <ComponentArt:ComboBoxItem Id="no" Text="Norwegian" />
+                        <ComponentArt:ComboBoxItem Id="nb-NO" Text="Norwegian (Bokml) - Norway" />
+                        <ComponentArt:ComboBoxItem Id="nn-NO" Text="Norwegian (Nynorsk) - Norway" />
+                        <ComponentArt:ComboBoxItem Id="pl" Text="Polish" />
+                        <ComponentArt:ComboBoxItem Id="pl-PL" Text="Polish - Poland" />
+                        <ComponentArt:ComboBoxItem Id="pt" Text="Portuguese" />
+                        <ComponentArt:ComboBoxItem Id="pt-BR" Text="Portuguese - Brazil" />
+                        <ComponentArt:ComboBoxItem Id="pt-PT" Text="Portuguese - Portugal" />
+                        <ComponentArt:ComboBoxItem Id="pa" Text="Punjabi" />
+                        <ComponentArt:ComboBoxItem Id="pa-IN" Text="Punjabi - India" />
+                        <ComponentArt:ComboBoxItem Id="ro" Text="Romanian" />
+                        <ComponentArt:ComboBoxItem Id="ro-RO" Text="Romanian - Romania" />
+                        <ComponentArt:ComboBoxItem Id="ru" Text="Russian" />
+                        <ComponentArt:ComboBoxItem Id="ru-RU" Text="Russian - Russia" />
+                        <ComponentArt:ComboBoxItem Id="sa" Text="Sanskrit" />
+                        <ComponentArt:ComboBoxItem Id="sa-IN" Text="Sanskrit - India" />
+                        <ComponentArt:ComboBoxItem Id="sr-SP-Cyrl" Text="Serbian (Cyrillic) - Serbia" />
+                        <ComponentArt:ComboBoxItem Id="sr-SP-Latn" Text="Serbian (Latin) - Serbia" />
+                        <ComponentArt:ComboBoxItem Id="sk" Text="Slovak" />
+                        <ComponentArt:ComboBoxItem Id="sk-SK" Text="Slovak - Slovakia" />
+                        <ComponentArt:ComboBoxItem Id="sl" Text="Slovenian" />
+                        <ComponentArt:ComboBoxItem Id="sl-SI" Text="Slovenian - Slovenia" />
+                        <ComponentArt:ComboBoxItem Id="es" Text="Spanish" />
+                        <ComponentArt:ComboBoxItem Id="es-AR" Text="Spanish - Argentina" />
+                        <ComponentArt:ComboBoxItem Id="es-BO" Text="Spanish - Bolivia" />
+                        <ComponentArt:ComboBoxItem Id="es-CL" Text="Spanish - Chile" />
+                        <ComponentArt:ComboBoxItem Id="es-CO" Text="Spanish - Colombia" />
+                        <ComponentArt:ComboBoxItem Id="es-CR" Text="Spanish - Costa Rica" />
+                        <ComponentArt:ComboBoxItem Id="es-DO" Text="Spanish - Dominican Republic" />
+                        <ComponentArt:ComboBoxItem Id="es-EC" Text="Spanish - Ecuador" />
+                        <ComponentArt:ComboBoxItem Id="es-SV" Text="Spanish - El Salvador" />
+                        <ComponentArt:ComboBoxItem Id="es-GT" Text="Spanish - Guatemala" />
+                        <ComponentArt:ComboBoxItem Id="es-HN" Text="Spanish - Honduras" />
+                        <ComponentArt:ComboBoxItem Id="es-MX" Text="Spanish - Mexico" />
+                        <ComponentArt:ComboBoxItem Id="es-NI" Text="Spanish - Nicaragua" />
+                        <ComponentArt:ComboBoxItem Id="es-PA" Text="Spanish - Panama" />
+                        <ComponentArt:ComboBoxItem Id="es-PY" Text="Spanish - Paraguay" />
+                        <ComponentArt:ComboBoxItem Id="es-PE" Text="Spanish - Peru" />
+                        <ComponentArt:ComboBoxItem Id="es-PR" Text="Spanish - Puerto Rico" />
+                        <ComponentArt:ComboBoxItem Id="es-ES" Text="Spanish - Spain" />
+                        <ComponentArt:ComboBoxItem Id="es-UY" Text="Spanish - Uruguay" />
+                        <ComponentArt:ComboBoxItem Id="es-VE" Text="Spanish - Venezuela" />
+                        <ComponentArt:ComboBoxItem Id="sw" Text="Swahili" />
+                        <ComponentArt:ComboBoxItem Id="sw-KE" Text="Swahili - Kenya" />
+                        <ComponentArt:ComboBoxItem Id="sv" Text="Swedish" />
+                        <ComponentArt:ComboBoxItem Id="sv-FI" Text="Swedish - Finland" />
+                        <ComponentArt:ComboBoxItem Id="sv-SE" Text="Swedish - Sweden" />
+                        <ComponentArt:ComboBoxItem Id="syr" Text="Syriac" />
+                        <ComponentArt:ComboBoxItem Id="syr-SY" Text="Syriac - Syria" />
+                        <ComponentArt:ComboBoxItem Id="ta" Text="Tamil" />
+                        <ComponentArt:ComboBoxItem Id="ta-IN" Text="Tamil - India" />
+                        <ComponentArt:ComboBoxItem Id="tt" Text="Tatar" />
+                        <ComponentArt:ComboBoxItem Id="tt-RU" Text="Tatar - Russia" />
+                        <ComponentArt:ComboBoxItem Id="te" Text="Telugu" />
+                        <ComponentArt:ComboBoxItem Id="te-IN" Text="Telugu - India" />
+                        <ComponentArt:ComboBoxItem Id="th" Text="Thai" />
+                        <ComponentArt:ComboBoxItem Id="th-TH" Text="Thai - Thailand" />
+                        <ComponentArt:ComboBoxItem Id="tr" Text="Turkish" />
+                        <ComponentArt:ComboBoxItem Id="tr-TR" Text="Turkish - Turkey" />
+                        <ComponentArt:ComboBoxItem Id="uk" Text="Ukrainian" />
+                        <ComponentArt:ComboBoxItem Id="uk-UA" Text="Ukrainian - Ukraine" />
+                        <ComponentArt:ComboBoxItem Id="ur" Text="Urdu" />
+                        <ComponentArt:ComboBoxItem Id="ur-PK" Text="Urdu - Pakistan" />
+                        <ComponentArt:ComboBoxItem Id="uz" Text="Uzbek" />
+                        <ComponentArt:ComboBoxItem Id="uz-UZ-Cyrl" Text="Uzbek (Cyrillic) - Uzbekistan" />
+                        <ComponentArt:ComboBoxItem Id="uz-UZ-Latn" Text="Uzbek (Latin) - Uzbekistan" />
+                        <ComponentArt:ComboBoxItem Id="vi" Text="Vietnamese" />
+                        <ComponentArt:ComboBoxItem Id="vi-VN" Text="Vietnamese - Vietnam" />
+                    </ComponentArt:ComboBox>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </Grid>
+</UserControl>

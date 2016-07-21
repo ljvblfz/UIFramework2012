@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Splitter -->
+<TreeView>
+
+    <TreeViewNode Header="Features" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Core Features" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterCoreFeatures" />
+      <TreeViewNode Header="Basic Features" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterBasicFeatures" />
+      <TreeViewNode Header="Minimum Size Limitation" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterResizeLimitationFeatures" />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Appearance" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-design.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Black Ice" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterDesignBlackIce" />
+      <TreeViewNode Header="Arctic White" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterDesignArcticWhite" />
+      <TreeViewNode Header="Office 2003" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterDesignOffice2003" />
+      <TreeViewNode Header="Office 2007" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterDesignOffice2007" />
+      <TreeViewNode Header="Windows 7" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterDesignWindows7" />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Programming" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-programming.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Events" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterEvents" />
+      <TreeViewNode Header="API Control" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SplitterAPI" />
+    </TreeViewNode>
+</TreeView>
+<!-- /Splitter -->

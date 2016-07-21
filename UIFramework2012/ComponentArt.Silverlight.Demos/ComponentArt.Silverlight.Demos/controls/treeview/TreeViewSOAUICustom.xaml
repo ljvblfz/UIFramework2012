@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.TreeViewSOAUICustom"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    >
+  <Grid>
+  	<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TreeView" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="SOA.UI Custom Web Service" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo showcases fully controlable SOA.UI data binding in TreeView." />
+        <TextBlock 
+        x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\treeview\TreeViewSOAUICustom.xaml,
+            \source\controls\treeview\TreeViewSOAUICustom.xaml.cs" />
+
+      <my:TreeView x:Name="FileTree" LoadOnDemand="TreeView_LoadOnDemand" IsLoadOnDemandEnabled="True" Height="500" Width="300" ExpanderClosedIconSource="icons/FileBrowser/plus.png" ExpanderOpenIconSource="icons/FileBrowser/minus.png"  />
+
+  </Grid>
+</UserControl>

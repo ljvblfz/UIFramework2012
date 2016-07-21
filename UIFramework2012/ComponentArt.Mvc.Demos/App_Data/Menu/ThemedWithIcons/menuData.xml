@@ -1,0 +1,79 @@
+<SiteMap>
+  <item Text="File" >
+    <item Text="New..." IconUrl="icon_new.gif" />
+    <item Text="Open..." IconUrl="icon_open.gif" />
+    <item />
+    <item Text="Send To">
+      <item Text="Mail Recipient" IconUrl="icon_mailRecipient.gif" />
+      <item Text="Mail Recipient (for Review)..." IconUrl="icon_mailRecipientReview.gif" />
+      <item Text="Mail Recipient (As Attachment)..." NoWrap="true" IconUrl="icon_mailRecipientAttachment.gif" />
+      <item Text="Routing Recipient..." IconUrl="icon_routingRecipient.gif" />
+      <item Text="Exchange Folder..." IconUrl="icon_exchangeFolder.gif" />
+      <item />
+      <item Text="Microsoft Office PowerPoint..." IconUrl="icon_powerPoint.gif" />
+    </item>
+    <item />
+    <item Text="Save" IconUrl="icon_save.gif" />
+    <item Text="Save As" />
+    <item Text="Save as Web Page" IconUrl="icon_saveAsWebPage.gif" />
+    <item Text="File Search" IconUrl="icon_fileSearch.gif" />
+    <item />
+    <item Text="Page Setup..." />
+    <item Text="Print Preview" IconUrl="icon_printPreview.gif" />
+    <item Text="Print..." IconUrl="icon_print.gif" />
+    <item />
+    <item Text="Exit" />
+  </item>
+  <item Text="Edit" >
+    <item Text="Cut" IconUrl="icon_cut.gif" />
+    <item Text="Copy" IconUrl="icon_copy.gif" />
+    <item Text="Office Clipboard..." NoWrap="true" IconUrl="icon_clipboard.gif" />
+    <item Text="Paste" IconUrl="icon_paste.gif" />
+    <item />
+    <item Text="Find..." IconUrl="icon_find.gif" />
+    <item Text="Clear" >
+      <item Text="Formats" />
+      <item Text="Contents" />
+    </item>
+  </item>
+  <item Text="View" >
+    <item Text="Normal" IconUrl="icon_normal.gif" />
+    <item Text="Web Layout" IconUrl="icon_webLayout.gif" />
+    <item Text="Reading Layout" NoWrap="true" IconUrl="icon_readingLayout.gif" />
+    <item Text="Outline" IconUrl="icon_outline.gif" />
+    <item />
+    <item Text="Document Map" IconUrl="icon_documentMap.gif" />
+    <item Text="Thumbnails" IconUrl="icon_thumbnails.gif" />
+    <item Text="Header and Footer" NoWrap="true" IconUrl="icon_headerFooter.gif" />
+  </item>
+  <item Text="Format">
+    <item Text="Font..." IconUrl="icon_font.gif" />
+    <item Text="Paragraph..." IconUrl="icon_paragraph.gif" />
+    <item Text="Bullets and Numbering..." NoWrap="true" IconUrl="icon_bullets.gif" />
+    <item Text="Borders and Shading..." NoWrap="true" />
+    <item />
+    <item Text="Frames"  >
+      <item Text="Table of Contents in Frame" NoWrap="true" IconUrl="icon_tableOfContents.gif" />
+      <item Text="New Frames Page" />
+    </item>
+    <item Text="Auto Format..." IconUrl="icon_autoFormat.gif" />
+    <item Text="Styles and Formatting..." IconUrl="icon_stylesAndFormatting.gif" />
+    <item Text="Reveal Formatting..." NoWrap="true" IconUrl="icon_revealFormatting.gif" />
+  </item>
+  <item Text="Help">
+    <item Text="Microsoft Office Word Help" NoWrap="true" IconUrl="icon_help.gif" />
+    <item Text="Show the Office Assistant" />
+    <item />
+    <item Text="Microsoft Office Online" />
+    <item Text="Contact Us" />
+    <item />
+    <item Text="Word Perfect Help" />
+    <item />
+    <item Text="Check for Updates" />
+    <item Text="Detect and Repair" />
+    <item Text="Activate Product..." />
+    <item Text="Customer Feedback Options..." />
+    <item />
+    <item Text="About Microsoft Office Word" />
+  </item>
+</SiteMap>

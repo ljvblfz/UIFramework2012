@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8DDBEE1-6A3A-4D70-B275-6BA4C31242DB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComponentArt.SOA.Demos.Web</RootNamespace>
+    <AssemblyName>ComponentArt.SOA.Demos.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightApplicationList>{082BF467-266A-44A5-8BE6-83890074CED7}|..\ComponentArt.SOA.Demos.Silverlight\ComponentArt.SOA.Demos.Silverlight.csproj|Silverlight|False</SilverlightApplicationList>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentArt.Silverlight.Server, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\ComponentArt.Silverlight.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.SOA.UI">
+      <HintPath>..\DLLs\ComponentArt.SOA.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Web.UI">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\ComponentArt.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Silverlight, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLs\System.Web.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AJAX\ComboBoxFiltering\about.inc" />
+    <Content Include="AJAX\ComboBoxFiltering\combobox.css" />
+    <Content Include="AJAX\ComboBoxFiltering\default.aspx" />
+    <Content Include="AJAX\ComboBoxFiltering\images\comboItemBg.gif" />
+    <Content Include="AJAX\ComboBoxFiltering\images\drop.gif" />
+    <Content Include="AJAX\ComboBoxFiltering\images\drop_hover.gif" />
+    <Content Include="AJAX\ComboBox\about.inc" />
+    <Content Include="AJAX\ComboBox\combobox.css" />
+    <Content Include="AJAX\ComboBox\default.aspx" />
+    <Content Include="AJAX\ComboBox\images\comboItemBg.gif" />
+    <Content Include="AJAX\ComboBox\images\drop.gif" />
+    <Content Include="AJAX\ComboBox\images\drop_hover.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\about.inc" />
+    <Content Include="AJAX\DataGridSoaScrolling\about.inc" />
+    <Content Include="AJAX\Menu\about.inc" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Attachment.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\chevron.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Copy.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Cut.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\FileSearch.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Find.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\FormatFont.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\LeftArrow.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\LightningBolt.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Lines.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\List.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\New.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\OfficeClipboard.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Open.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\PaperAndPictures.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Paste.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Print.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\PrintPreview.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\QuestionMark.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\RedFlagMail.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\RevealFormatting.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Save.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\SaveAsWebPage.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\Send.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\StickyPin.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\StylesAndFormatting.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\TableOfContents.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\ToDoListEnvelope.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\ViewDocumentMap.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\ViewHeaderAndFooter.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\ViewNormal.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\ViewOutline.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\ViewThumbnails.png" />
+    <Content Include="AJAX\Menu\images\MenuIcons\ViewWebLayout.png" />
+    <Content Include="AJAX\NavBar\about.inc" />
+    <Content Include="AJAX\NavBar\images\scrolldown.gif" />
+    <Content Include="AJAX\NavBar\images\scrolldown_active.gif" />
+    <Content Include="AJAX\NavBar\images\scrolldown_hover.gif" />
+    <Content Include="AJAX\NavBar\images\scrollup.gif" />
+    <Content Include="AJAX\NavBar\images\scrollup_active.gif" />
+    <Content Include="AJAX\NavBar\images\scrollup_hover.gif" />
+    <Content Include="AJAX\NavBar\images\top_item_background.gif" />
+    <Content Include="AJAX\TabStrip\about.inc" />
+    <Content Include="AJAX\ToolBar\about.inc" />
+    <Content Include="AJAX\ToolBar\toolbar_images\AlignCenterDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\AlignJustifyDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\AlignLeftDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\AlignRightDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\BulletsNumberingDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\BulletsSymbolsDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\EditCopyDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\EditCutDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\EditPaste.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\FormatBoldDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\FormatItalicDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\FormatUnderlineDark.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\_background-over.png" />
+    <Content Include="AJAX\ToolBar\toolbar_images\_background.png" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\calendar.png" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\deleted.png" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\drafts.png" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\folder.png" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\folders.png" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\inbox.png" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\junk.png" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\root.png" />
+    <Content Include="AJAX\TreeView\about.inc" />
+    <Content Include="AJAX\TreeView\default.aspx" />
+    <Content Include="AJAX\TreeView\images\calendar.png" />
+    <Content Include="AJAX\TreeView\images\deleted.png" />
+    <Content Include="AJAX\TreeView\images\drafts.png" />
+    <Content Include="AJAX\TreeView\images\folder.png" />
+    <Content Include="AJAX\TreeView\images\folders.png" />
+    <Content Include="AJAX\TreeView\images\header_background.gif" />
+    <Content Include="AJAX\TreeView\images\inbox.png" />
+    <Content Include="AJAX\TreeView\images\junk.png" />
+    <Content Include="AJAX\TreeView\images\lines\dash.gif" />
+    <Content Include="AJAX\TreeView\images\lines\dashminus.gif" />
+    <Content Include="AJAX\TreeView\images\lines\dashplus.gif" />
+    <Content Include="AJAX\TreeView\images\lines\i.gif" />
+    <Content Include="AJAX\TreeView\images\lines\l.gif" />
+    <Content Include="AJAX\TreeView\images\lines\lminus.gif" />
+    <Content Include="AJAX\TreeView\images\lines\lplus.gif" />
+    <Content Include="AJAX\TreeView\images\lines\minus.gif" />
+    <Content Include="AJAX\TreeView\images\lines\noexpand.gif" />
+    <Content Include="AJAX\TreeView\images\lines\plus.gif" />
+    <Content Include="AJAX\TreeView\images\lines\r.gif" />
+    <Content Include="AJAX\TreeView\images\lines\rminus.gif" />
+    <Content Include="AJAX\TreeView\images\lines\rplus.gif" />
+    <Content Include="AJAX\TreeView\images\lines\t.gif" />
+    <Content Include="AJAX\TreeView\images\lines\tminus.gif" />
+    <Content Include="AJAX\TreeView\images\lines\tplus.gif" />
+    <Content Include="AJAX\TreeView\images\root.png" />
+    <Content Include="AJAX\TreeView\styles.css" />
+    <Content Include="AJAX\DataGridSoaScrolling\default.aspx" />
+    <Content Include="AJAX\DataGridSoaScrolling\gridStyle.css" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\asc.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\attachment.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\desc.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\flag_blue.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\flag_none.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\flag_red.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\grid_footer_bg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\grid_header_bg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\grid_popup_bg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\grid_popup_footer_bg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\grid_postfooter.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\grid_preheader.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\grid_selected_item_bg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\group_asc.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\group_desc.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\header1stCell_bg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\header_activeBg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\header_bg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\header_bga.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\header_hoverBg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\header_rowBg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\heading_bg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\icon_attachment.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\icon_flag.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\icon_icon.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\icon_priority.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\msg_forwarded.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\msg_forwarded_large.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\msg_read.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\msg_read_large.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\msg_replied.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\msg_replied_large.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\msg_unread.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\msg_unread_large.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\priority_high.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\priority_high.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\priority_low.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\priority_low.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\reorder.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\scroller\bottom.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\scroller\down.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\scroller\down_disabled.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\scroller\scroller_bg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\scroller\scroll_gripBg.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\scroller\top.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\scroller\up.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\scroller\up_disabled.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\spacer.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\spacer.png" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\spinner.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\topItem_col.gif" />
+    <Content Include="AJAX\DataGridSoaScrolling\images\topItem_exp.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\calendarStyle.css" />
+    <Content Include="AJAX\DataGridSoaEditing\combobox.css" />
+    <Content Include="AJAX\DataGridSoaEditing\default.aspx" />
+    <Content Include="AJAX\DataGridSoaEditing\gridStyle.css" />
+    <Content Include="AJAX\DataGridSimpleLoading\default.aspx" />
+    <Content Include="AJAX\DataGridSimpleLoading\gridStyle.css" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\asc.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\attachment.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\desc.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\flag_blue.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\flag_none.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\flag_red.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\grid_footer_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\grid_header_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\grid_popup_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\grid_popup_footer_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\grid_postfooter.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\grid_preheader.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\grid_selected_item_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\group_asc.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\group_desc.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\header1stCell_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\header_activeBg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\header_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\header_bga.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\header_hoverBg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\header_rowBg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\heading_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\icon_attachment.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\icon_flag.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\icon_icon.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\icon_priority.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\msg_forwarded.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\msg_forwarded_large.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\msg_read.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\msg_read_large.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\msg_replied.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\msg_replied_large.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\msg_unread.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\msg_unread_large.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\first.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\first_hover.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\last.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\last_hover.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\next.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\next_hover.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\prev.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\prev_hover.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\slider_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\slider_grip.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\slider_grip_hover.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\pager\slider_loaded_bg.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\priority_high.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\priority_high.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\priority_low.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\priority_low.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\reorder.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\spacer.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\spacer.png" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\spinner.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\topItem_col.gif" />
+    <Content Include="AJAX\DataGridSimpleLoading\images\topItem_exp.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\default.aspx" />
+    <Content Include="AJAX\DataGridMessageBrowser\gridStyle.css" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\asc.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\attachment.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\desc.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\flag_blue.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\flag_none.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\flag_red.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\grid_footer_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\grid_header_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\grid_popup_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\grid_popup_footer_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\grid_postfooter.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\grid_preheader.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\grid_selected_item_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\group_asc.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\group_desc.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\header1stCell_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\header_activeBg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\header_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\header_bga.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\header_hoverBg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\header_rowBg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\heading_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\icon_attachment.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\icon_flag.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\icon_icon.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\icon_priority.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\msg_forwarded.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\msg_forwarded_large.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\msg_read.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\msg_read_large.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\msg_replied.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\msg_replied_large.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\msg_unread.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\msg_unread_large.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\first.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\first_hover.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\last.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\last_hover.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\next.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\next_hover.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\prev.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\prev_hover.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\slider_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\slider_grip.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\slider_grip_hover.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\pager\slider_loaded_bg.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\priority_high.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\priority_high.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\priority_low.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\priority_low.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\reorder.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\spacer.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\spacer.png" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\spinner.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\topItem_col.gif" />
+    <Content Include="AJAX\DataGridMessageBrowser\images\topItem_exp.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\asc.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\btn_calendar.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\cal_nextMonth.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\cal_prevMonth.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\comboItemBg.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\desc.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\drop.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\drop_hover.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\selector.gif" />
+    <Content Include="AJAX\DataGridSoaEditing\images\spinner.gif" />
+    <Content Include="AJAX\Default.aspx" />
+    <Content Include="AJAX\FileBrowser\default.aspx" />
+    <Content Include="AJAX\FileBrowser\images\asc.gif" />
+    <Content Include="AJAX\FileBrowser\images\ascx.png" />
+    <Content Include="AJAX\FileBrowser\images\aspx.png" />
+    <Content Include="AJAX\FileBrowser\images\config.png" />
+    <Content Include="AJAX\FileBrowser\images\cs.png" />
+    <Content Include="AJAX\FileBrowser\images\css.png" />
+    <Content Include="AJAX\FileBrowser\images\desc.gif" />
+    <Content Include="AJAX\FileBrowser\images\dll.png" />
+    <Content Include="AJAX\FileBrowser\images\file.png" />
+    <Content Include="AJAX\FileBrowser\images\folder.png" />
+    <Content Include="AJAX\FileBrowser\images\folder_open.png" />
+    <Content Include="AJAX\FileBrowser\images\gif.png" />
+    <Content Include="AJAX\FileBrowser\images\grid_header_bg.gif" />
+    <Content Include="AJAX\FileBrowser\images\grid_header_hover_bg.gif" />
+    <Content Include="AJAX\FileBrowser\images\header_activeBg.gif" />
+    <Content Include="AJAX\FileBrowser\images\header_bg.gif" />
+    <Content Include="AJAX\FileBrowser\images\header_hoverBg.gif" />
+    <Content Include="AJAX\FileBrowser\images\heading_bg.gif" />
+    <Content Include="AJAX\FileBrowser\images\image.png" />
+    <Content Include="AJAX\FileBrowser\images\jpg.png" />
+    <Content Include="AJAX\FileBrowser\images\js.png" />
+    <Content Include="AJAX\FileBrowser\images\lines\dash.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\dashminus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\dashplus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\i.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\iminus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\iplus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\l.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\lminus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\lplus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\minus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\noexpand.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\plus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\r.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\rminus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\rplus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\t.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\tminus.gif" />
+    <Content Include="AJAX\FileBrowser\images\lines\tplus.gif" />
+    <Content Include="AJAX\FileBrowser\images\minus.png" />
+    <Content Include="AJAX\FileBrowser\images\node_bg.gif" />
+    <Content Include="AJAX\FileBrowser\images\plus.png" />
+    <Content Include="AJAX\FileBrowser\images\reorder.gif" />
+    <Content Include="AJAX\FileBrowser\images\scroller\bottom.gif" />
+    <Content Include="AJAX\FileBrowser\images\scroller\down.gif" />
+    <Content Include="AJAX\FileBrowser\images\scroller\down_disabled.gif" />
+    <Content Include="AJAX\FileBrowser\images\scroller\scroller_bg.gif" />
+    <Content Include="AJAX\FileBrowser\images\scroller\scroll_gripBg.gif" />
+    <Content Include="AJAX\FileBrowser\images\scroller\top.gif" />
+    <Content Include="AJAX\FileBrowser\images\scroller\up.gif" />
+    <Content Include="AJAX\FileBrowser\images\scroller\up_disabled.gif" />
+    <Content Include="AJAX\FileBrowser\images\spacer.png" />
+    <Content Include="AJAX\FileBrowser\images\vb.png" />
+    <Content Include="AJAX\FileBrowser\images\xml.png" />
+    <Content Include="AJAX\FileBrowser\styles.css" />
+    <Content Include="AJAX\Menu\default.aspx" />
+    <Content Include="AJAX\Menu\images\arrow_right.gif" />
+    <Content Include="AJAX\Menu\images\arrow_right_hover.gif" />
+    <Content Include="AJAX\Menu\images\break_bg.gif" />
+    <Content Include="AJAX\Menu\images\gray.gif" />
+    <Content Include="AJAX\Menu\images\group_background.gif" />
+    <Content Include="AJAX\Menu\images\item_hover_bg.gif" />
+    <Content Include="AJAX\Menu\images\spacer.gif" />
+    <Content Include="AJAX\Menu\images\top_group_background.gif" />
+    <Content Include="AJAX\Menu\styles.css" />
+    <Content Include="AJAX\NavBar\default.aspx" />
+    <Content Include="AJAX\NavBar\images\calendar.png" />
+    <Content Include="AJAX\NavBar\images\contacts.png" />
+    <Content Include="AJAX\NavBar\images\deleted.png" />
+    <Content Include="AJAX\NavBar\images\drafts.png" />
+    <Content Include="AJAX\NavBar\images\folder.png" />
+    <Content Include="AJAX\NavBar\images\inbox.png" />
+    <Content Include="AJAX\NavBar\images\journal.png" />
+    <Content Include="AJAX\NavBar\images\notes.png" />
+    <Content Include="AJAX\NavBar\images\outbox.png" />
+    <Content Include="AJAX\NavBar\images\outlook_today.png" />
+    <Content Include="AJAX\NavBar\images\sent_items.png" />
+    <Content Include="AJAX\NavBar\images\tasks.png" />
+    <Content Include="AJAX\NavBar\styles.css" />
+    <Content Include="AJAX\TabStrip\default.aspx" />
+    <Content Include="AJAX\TabStrip\styles.css" />
+    <Content Include="AJAX\TabStrip\tabstrip_images\hover_tab_bg.gif" />
+    <Content Include="AJAX\TabStrip\tabstrip_images\hover_tab_left_icon.gif" />
+    <Content Include="AJAX\TabStrip\tabstrip_images\hover_tab_right_icon.gif" />
+    <Content Include="AJAX\TabStrip\tabstrip_images\selected_tab_bg.gif" />
+    <Content Include="AJAX\TabStrip\tabstrip_images\selected_tab_left_icon.gif" />
+    <Content Include="AJAX\TabStrip\tabstrip_images\selected_tab_right_icon.gif" />
+    <Content Include="AJAX\TabStrip\tabstrip_images\tab_bg.gif" />
+    <Content Include="AJAX\TabStrip\tabstrip_images\tab_left_icon.gif" />
+    <Content Include="AJAX\TabStrip\tabstrip_images\tab_right_icon.gif" />
+    <Content Include="AJAX\ToolBar\default.aspx" />
+    <Content Include="AJAX\ToolBar\styles.css" />
+    <Content Include="AJAX\TreeViewFileBrowser\default.aspx" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\ascx.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\aspx.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\config.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\cs.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\css.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\dll.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\file.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\folder.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\folder_open.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\gif.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\grid_header_bg.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\heading_bg.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\image.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\jpg.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\js.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\dash.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\dashminus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\dashplus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\i.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\iminus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\iplus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\l.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\lminus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\lplus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\minus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\noexpand.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\plus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\r.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\rminus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\rplus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\t.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\tminus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\lines\tplus.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\minus.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\node_bg.gif" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\plus.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\vb.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\images\xml.png" />
+    <Content Include="AJAX\TreeViewFileBrowser\styles.css" />
+    <Content Include="AJAX\TreeViewStructureManipulation\ClientCode.js" />
+    <Content Include="AJAX\TreeViewStructureManipulation\default.aspx" />
+    <Content Include="AJAX\TreeViewStructureManipulation\gridStyle.css" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\addnode.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\addroot.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\arrow_down.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\arrow_downh.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\bg.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\break.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\break_bg.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\calendar.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\changeicon.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\contacts.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\delete.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\deleted.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_addnode.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_calendar.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_changeicon.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_contacts.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_delete.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_deleted.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_drafts.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_expand.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_folder.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_folders.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_inbox.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_junk.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_notes.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_rename.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\disabled_sentItems.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\drafts.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\expand.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\folder.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\folders.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\folders_expand.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\group_background.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\inbox.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\junk.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\dash.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\dashminus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\dashplus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\i.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\l.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\lminus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\lplus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\minus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\noexpand.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\plus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\r.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\rminus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\rplus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\t.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\tminus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\lines\tplus.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\notes.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\outbox.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\properties.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\rename.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\scroller\bottom.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\scroller\down.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\scroller\down_disabled.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\scroller\scroller_bg.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\scroller\scroll_gripBg.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\scroller\top.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\scroller\up.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\scroller\up_disabled.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\search.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\sentItems.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\spacer.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\toolbar_bg.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\images\toolbar_break.gif" />
+    <Content Include="AJAX\TreeViewStructureManipulation\Menu1.xml" />
+    <Content Include="AJAX\TreeViewStructureManipulation\menuData.xml" />
+    <Content Include="AJAX\TreeViewStructureManipulation\menuStyle.css" />
+    <Content Include="AJAX\TreeViewStructureManipulation\ToolBar1.xml" />
+    <Content Include="AJAX\TreeViewStructureManipulation\ToolBarStyle.css" />
+    <Content Include="AJAX\TreeViewStructureManipulation\treeStyle.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Services\DataGridFileBrowserService.svc" />
+    <Content Include="Services\demodata.mdb">
+    </Content>
+    <Content Include="Services\SoaComboBoxLocationService.svc" />
+    <Content Include="Services\SoaDataGridMessageService.svc" />
+    <Content Include="Services\SimpleNavBarService.svc" />
+    <Content Include="Services\SoaDataGridProductService.svc" />
+    <Content Include="Services\SoaMenuDemoService.svc" />
+    <Content Include="Services\SoaSimpleComboBoxService.svc" />
+    <Content Include="Services\SoaSimpleTabStripService.svc" />
+    <Content Include="Services\SoaSimpleToolBarService.svc" />
+    <Content Include="Services\SoaTreeViewEdit.svc" />
+    <Content Include="Services\TreeViewFileBrowserService.svc" />
+    <Content Include="Silverlight\ComponentArt.SOA.Demos.xap" />
+    <Content Include="Silverlight\Default.aspx" />
+    <Content Include="Silverlight.js" />
+    <Content Include="Silverlight\Demos\ascx.png" />
+    <Content Include="Silverlight\Demos\aspx.png" />
+    <Content Include="Silverlight\Demos\attachment.png" />
+    <Content Include="Silverlight\Demos\config.png" />
+    <Content Include="Silverlight\Demos\cs.png" />
+    <Content Include="Silverlight\Demos\css.png" />
+    <Content Include="Silverlight\Demos\dll.png" />
+    <Content Include="Silverlight\Demos\file.png" />
+    <Content Include="Silverlight\Demos\flag_blue.png" />
+    <Content Include="Silverlight\Demos\flag_none.png" />
+    <Content Include="Silverlight\Demos\flag_red.png" />
+    <Content Include="Silverlight\Demos\folder.png" />
+    <Content Include="Silverlight\Demos\gif.png" />
+    <Content Include="Silverlight\Demos\icon_attachment.png" />
+    <Content Include="Silverlight\Demos\icon_flag.png" />
+    <Content Include="Silverlight\Demos\icon_icon.png" />
+    <Content Include="Silverlight\Demos\icon_priority.png" />
+    <Content Include="Silverlight\Demos\image.png" />
+    <Content Include="Silverlight\Demos\images\ascx.png" />
+    <Content Include="Silverlight\Demos\images\aspx.png" />
+    <Content Include="Silverlight\Demos\images\config.png" />
+    <Content Include="Silverlight\Demos\images\cs.png" />
+    <Content Include="Silverlight\Demos\images\css.png" />
+    <Content Include="Silverlight\Demos\images\dll.png" />
+    <Content Include="Silverlight\Demos\images\file.png" />
+    <Content Include="Silverlight\Demos\images\folder.png" />
+    <Content Include="Silverlight\Demos\images\folder_open.png" />
+    <Content Include="Silverlight\Demos\images\gif.png" />
+    <Content Include="Silverlight\Demos\images\jpg.png" />
+    <Content Include="Silverlight\Demos\images\js.png" />
+    <Content Include="Silverlight\Demos\images\minus.png" />
+    <Content Include="Silverlight\Demos\images\plus.png" />
+    <Content Include="Silverlight\Demos\images\vb.png" />
+    <Content Include="Silverlight\Demos\images\xml.png" />
+    <Content Include="Silverlight\Demos\jpg.png" />
+    <Content Include="Silverlight\Demos\js.png" />
+    <Content Include="Silverlight\Demos\minus.png" />
+    <Content Include="Silverlight\Demos\msg_forwarded.png" />
+    <Content Include="Silverlight\Demos\msg_forwarded_large.png" />
+    <Content Include="Silverlight\Demos\msg_read.png" />
+    <Content Include="Silverlight\Demos\msg_read_large.png" />
+    <Content Include="Silverlight\Demos\msg_replied.png" />
+    <Content Include="Silverlight\Demos\msg_replied_large.png" />
+    <Content Include="Silverlight\Demos\msg_unread.png" />
+    <Content Include="Silverlight\Demos\msg_unread_large.png" />
+    <Content Include="Silverlight\Demos\plus.png" />
+    <Content Include="Silverlight\Demos\priority_high.png" />
+    <Content Include="Silverlight\Demos\priority_low.png" />
+    <Content Include="Silverlight\Demos\spacer.png" />
+    <Content Include="Silverlight\Demos\TabStrip\left_arrow.png" />
+    <Content Include="Silverlight\Demos\TabStrip\right_arrow.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\AlignCenterDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\AlignJustifyDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\AlignLeftDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\AlignRightDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\BulletsNumberingDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\BulletsSymbolsDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\EditCopyDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\EditCutDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\EditPaste.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\FormatBoldDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\FormatItalicDark.png" />
+    <Content Include="Silverlight\Demos\ToolBar_Images\FormatUnderlineDark.png" />
+    <Content Include="Silverlight\Demos\vb.png" />
+    <Content Include="Silverlight\Demos\xml.png" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AJAX\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DataGridFileBrowserService.svc.cs">
+      <DependentUpon>DataGridFileBrowserService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SoaComboBoxLocationService.svc.cs">
+      <DependentUpon>SoaComboBoxLocationService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SoaDataGridMessageService.svc.cs">
+      <DependentUpon>SoaDataGridMessageService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SimpleNavBarService.svc.cs">
+      <DependentUpon>SimpleNavBarService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SoaDataGridProductService.svc.cs">
+      <DependentUpon>SoaDataGridProductService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SoaMenuDemoService.svc.cs">
+      <DependentUpon>SoaMenuDemoService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SoaSimpleComboBoxService.svc.cs">
+      <DependentUpon>SoaSimpleComboBoxService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SoaSimpleTabStripService.svc.cs">
+      <DependentUpon>SoaSimpleTabStripService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SoaSimpleToolBarService.svc.cs">
+      <DependentUpon>SoaSimpleToolBarService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\SoaTreeViewEdit.svc.cs">
+      <DependentUpon>SoaTreeViewEdit.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\TreeViewFileBrowserService.svc.cs">
+      <DependentUpon>TreeViewFileBrowserService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Silverlight\Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AJAX\FileBrowser\images\scroller\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2846</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.DataGridLargeClientDataset"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cart="clr-namespace:ComponentArt.Silverlight.UI.Data;assembly=ComponentArt.Silverlight.UI.Data">
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Large Client-side Record Set" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This sample demonstrates how DataGrid handles a large (ten thousand record) data set on the client." />
+    <TextBlock
+    x:Name="DemoCodeFiles"
+    Visibility = "Collapsed"
+    Text="\source\controls\datagrid\DataGridLargeClientDataset.xaml,
+            \source\controls\datagrid\DataGridLargeClientDataset.xaml.cs" />
+
+    <cart:DataGrid x:Name="DataGrid1"
+                   Width="700" Height="480"
+                   HeaderVisibility="Collapsed"
+                   Padding="2"
+                   CornerRadius="2"
+                   Background="Black"
+                   AllowColumnResizing="True"
+                   AllowColumnReordering="True"
+                   PreExpandGroups="True"
+                   RunningMode="Client"
+                   EnableVirtualization="True"
+                   ColumnResizingMode="Normal"
+                   PageSize="17">
+      <cart:DataGrid.Columns>
+        <cart:DataGridTextColumn Binding="{Binding FirstName}" Header="First Name" />
+        <cart:DataGridTextColumn Binding="{Binding LastName}" Header="Last Name" />
+        <cart:DataGridTextColumn Binding="{Binding Birthday}" Header="Birthday" FormatString="yyyy/MM/dd" />
+        <cart:DataGridTextColumn Binding="{Binding Occupation}" Header="Occupation" />
+        <cart:DataGridCheckBoxColumn Binding="{Binding IsActive, Mode=TwoWay}" Header="Is Active" />
+      </cart:DataGrid.Columns>
+    </cart:DataGrid>
+    
+  </Grid>
+</UserControl>

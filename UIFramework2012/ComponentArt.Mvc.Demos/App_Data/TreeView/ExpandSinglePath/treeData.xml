@@ -1,0 +1,185 @@
+<siteMap>
+  <siteMapNode Text="MSDN Library">
+    <siteMapNode Text="Using the MSDN Library" />
+  </siteMapNode>
+  <siteMapNode Text="Component Development">
+    <siteMapNode Text="ActiveX Controls">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="Overview of ActiveX" />
+        <siteMapNode Text="Exposing ActiveX" />
+        <siteMapNode Text="Standard Objects" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="Automation">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="Automation Overview" />
+        <siteMapNode Text="Exposing ActiveX" />
+        <siteMapNode Text="Standard Objects" />
+        <siteMapNode Text="Dispatch Interface" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="Component Services">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text=".NET Enterprise" />
+        <siteMapNode Text="Aspect-Oriented" />
+        <siteMapNode Text="Automating COM+" />
+        <siteMapNode Text="COM+ and Win2000" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="Component Object Model">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="The Basics of COM" />
+        <siteMapNode Text="COM Security" />
+        <siteMapNode Text="COM Interfaces" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="DCOM">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="COM Services" />
+        <siteMapNode Text="DCOM Architecture" />
+        <siteMapNode Text="Technical Overview" />
+        <siteMapNode Text="Business Overview" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="Enterprise Services">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text=".NET Enterprise" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="Server Controls">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="Introduction" />
+        <siteMapNode Text="Implementation" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="Structured Storage">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="About Storage" />
+        <siteMapNode Text="Using Storage" />
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+  <siteMapNode Text="Data Access (General)">
+    <siteMapNode Text="ActiveX Data Objects">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="About ADO" />
+        <siteMapNode Text="Using ADO" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="ADO.NET">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="About ADO.NET" />
+        <siteMapNode Text="Using ADO.NET" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="OLEDB Providers">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="About OLEDB" />
+        <siteMapNode Text="Using OLEDB" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode Text="Universal Data Access">
+      <siteMapNode Text="SDK Documentation">
+        <siteMapNode Text="Overviews / Tutorials" />
+        <siteMapNode Text="Reference" />
+        <siteMapNode Text="Internet Development" />
+      </siteMapNode>
+      <siteMapNode Text="Technical Articles">
+        <siteMapNode Text="About UDA" />
+        <siteMapNode Text="Using UDA" />
+      </siteMapNode>
+    </siteMapNode>
+  </siteMapNode>
+  <siteMapNode Text="Development (General)">
+    <siteMapNode Text="Technical Articles">
+      <siteMapNode Text="Design Patterns" />
+      <siteMapNode Text="Programming" />
+      <siteMapNode Text="Development" />
+    </siteMapNode>
+    <siteMapNode Text="Columns">
+      <siteMapNode Text="Ask Dr. GUI" />
+      <siteMapNode Text="Dr. GUI Online" />
+    </siteMapNode>
+    <siteMapNode Text="Periodicals">
+      <siteMapNode Text="MSJ" />
+      <siteMapNode Text="MSDN Magazine" />
+      <siteMapNode Text="VS Magazine" />
+    </siteMapNode>
+    <siteMapNode Text="Internationalization">
+      <siteMapNode Text="Developing" />
+      <siteMapNode Text="International Text" />
+      <siteMapNode Text="Input Method Editor" />
+    </siteMapNode>
+  </siteMapNode>
+  <siteMapNode Text="Enterprise Development">
+    <siteMapNode Text="Enterprise Architecture" />
+    <siteMapNode Text="Application Architecture" />
+    <siteMapNode Text="System Architecture" />
+    <siteMapNode Text="Microsoft" />
+    <siteMapNode Text="Solutions" />
+    <siteMapNode Text="Lifecycle Practices" />
+    <siteMapNode Text="Enterprise Management" />
+    <siteMapNode Text="Window Server System" />
+    <siteMapNode Text="Visual Studio Tools" />
+  </siteMapNode>
+  <siteMapNode Text="Graphics and Multimedia">
+    <siteMapNode Text="Graphics" />
+    <siteMapNode Text="Multimedia" />
+    <siteMapNode Text="Design" />
+  </siteMapNode>
+</siteMap>

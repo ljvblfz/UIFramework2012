@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:Double x:Key="ComponentArt_ScrollBar_PageButtonWidth">0</sys:Double>
+    <sys:Double x:Key="ComponentArt_ScrollBar_PageButtonHeight">0</sys:Double>
+    <sys:Double x:Key="ComponentArt_ScrollBar_Width">11</sys:Double>
+    <sys:Double x:Key="ComponentArt_ScrollBar_Height">11</sys:Double>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_Background" Color="White"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_Foreground" Color="#c5c5c5"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_PressedButton" Color="White"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_PressedButtonBorder" Color="#e1e1e1" />
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_MouseOverButton" Color="White"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_MouseOverButtonBorder" Color="#e1e1e1" />
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_TrackBackground" Color="White"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_TrackBackgroundBorder" Color="#c5c5c5" />
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_TrackInnerBackground" Color="White"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_TrackInnerBackgroundBorder" Color="Transparent" />
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_PageButtonFill" Opacity="1" Color="Transparent"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_PageButtonBackground" Opacity="1" Color="White"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_PageButtonBackgroundPressed" Opacity="1" Color="White"/>
+    <sys:String x:Key="ComponentArt_ScrollBar_PageButtonMargin">0</sys:String>
+    <sys:Double x:Key="ComponentArt_ScrollBar_PageButtonRadiusX">0</sys:Double>
+    <sys:Double x:Key="ComponentArt_ScrollBar_PageButtonRadiusY">0</sys:Double>
+    <sys:Double x:Key="ComponentArt_ScrollBar_TrackRadiusX">0</sys:Double>
+    <sys:Double x:Key="ComponentArt_ScrollBar_TrackRadiusY">0</sys:Double>
+    <!-- Fills -->
+    <LinearGradientBrush x:Key="ComponentArt_ScrollBar_ThumbNormal" EndPoint="1,0" StartPoint="0,0">
+        <GradientStop Color="#f5f5f5" Offset="0" />
+        <GradientStop Color="#fdfdfd" Offset="0.5" />
+        <GradientStop Color="#fdfdfd" Offset="0.5" />
+        <GradientStop Color="#f5f5f5" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_ScrollBar_ThumbHover" EndPoint="1,0" StartPoint="0,0">
+        <GradientStop Color="#ffffff" Offset="0" />
+        <GradientStop Color="#ffffff" Offset="0.5" />
+        <GradientStop Color="#ffffff" Offset="0.5" />
+        <GradientStop Color="#ffffff" Offset="1" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComponentArt_ScrollBar_ThumbPressed" EndPoint="1,0" StartPoint="0,0">
+        <GradientStop Color="#ffffff" Offset="0" />
+        <GradientStop Color="#ffffff" Offset="0.5" />
+        <GradientStop Color="#ffffff" Offset="0.5" />
+        <GradientStop Color="#ffffff" Offset="1" />
+    </LinearGradientBrush>
+    <!-- /Fills -->
+    <!-- Grip Hatches -->
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Normal0" Color="#dddddd"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Normal1" Color="#ffffff"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Hover0" Color="#dddddd"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Hover1" Color="#ffffff"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Pressed0" Color="#dddddd"/>
+    <SolidColorBrush x:Key="ScrollBar_Thumb_Brush_Pressed1" Color="#ffffff"/>
+    <!-- /Grip Hatches -->
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_ThumbBorderBrushNormal" Color="#C5C5C5"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_ThumbBorderBrushHover" Color="#E1E1E1"/>
+    <SolidColorBrush x:Key="ComponentArt_ScrollBar_ThumbBorderBrushPressed" Color="#E1E1E1"/>
+    <sys:Double x:Key="ComponentArt_ScrollBar_ThumbRadiusX">0</sys:Double>
+    <sys:Double x:Key="ComponentArt_ScrollBar_ThumbRadiusY">0</sys:Double>
+</ResourceDictionary>

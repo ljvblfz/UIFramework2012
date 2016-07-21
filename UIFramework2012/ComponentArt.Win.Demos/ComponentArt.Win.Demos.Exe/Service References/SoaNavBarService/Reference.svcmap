@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="49c90cfd-02a4-4ae5-a9e4-86a5afd46330" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1337/Services/SoaNavBar.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SoaNavBar3.xsd" MetadataType="Schema" ID="5a952d1b-0e05-4cff-9518-87f16b6770f0" SourceId="1" SourceUrl="http://localhost:1337/Services/SoaNavBar.svc?xsd=xsd1" />
+    <MetadataFile FileName="SoaNavBar31.xsd" MetadataType="Schema" ID="57d8b70c-39c4-4968-9443-9a6684c08245" SourceId="1" SourceUrl="http://localhost:1337/Services/SoaNavBar.svc?xsd=xsd0" />
+    <MetadataFile FileName="SoaNavBar32.xsd" MetadataType="Schema" ID="b7f22304-f552-45ab-9a19-c4a3134a28ea" SourceId="1" SourceUrl="http://localhost:1337/Services/SoaNavBar.svc?xsd=xsd2" />
+    <MetadataFile FileName="SoaNavBar2.wsdl" MetadataType="Wsdl" ID="0f91753d-7a96-4ab1-9e0a-41591a25e294" SourceId="1" SourceUrl="http://localhost:1337/Services/SoaNavBar.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SoaNavBar1.disco" MetadataType="Disco" ID="a6b7942b-3047-485b-a51e-028663bb2b15" SourceId="1" SourceUrl="http://localhost:1337/Services/SoaNavBar.svc?disco" />
+    <MetadataFile FileName="SoaNavBar21.wsdl" MetadataType="Wsdl" ID="79359990-1eeb-4c72-9244-d1ca905237eb" SourceId="1" SourceUrl="http://localhost:1337/Services/SoaNavBar.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

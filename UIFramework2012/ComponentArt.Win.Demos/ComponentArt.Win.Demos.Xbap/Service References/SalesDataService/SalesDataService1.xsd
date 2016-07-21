@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1337/Services/SalesDataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="range" nillable="true" type="q1:DateRange" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="dataPointPeriod" type="q2:TimePeriod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetDataResult" nillable="true" type="q3:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetAllDataResult" nillable="true" type="q4:ArrayOfStringSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetYearlyDataResult" nillable="true" type="q5:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyDataFromDecade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="decade" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyDataFromDecadeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetYearlyDataFromDecadeResult" nillable="true" type="q6:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMonthlyData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMonthlyDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetMonthlyDataResult" nillable="true" type="q7:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDailyData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="month" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDailyDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetDailyDataResult" nillable="true" type="q8:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductSummaryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="range" nillable="true" type="q9:DateRange" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductSummaryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetProductSummaryDataResult" nillable="true" type="q10:ArrayOfProductSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDashboardData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="range" nillable="true" type="q11:DateRange" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="dataPointPeriod" type="q12:TimePeriod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDashboardDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetDashboardDataResult" nillable="true" type="q13:DashboardData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAuxiliaryData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAuxiliaryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetAllAuxiliaryDataResult" nillable="true" type="q14:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyAuxiliaryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyAuxiliaryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetYearlyAuxiliaryDataResult" nillable="true" type="q15:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyAuxiliaryDataFromDecade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="decade" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetYearlyAuxiliaryDataFromDecadeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetYearlyAuxiliaryDataFromDecadeResult" nillable="true" type="q16:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMonthlyAuxiliaryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMonthlyAuxiliaryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetMonthlyAuxiliaryDataResult" nillable="true" type="q17:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDailyAuxiliaryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="month" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDailyAuxiliaryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ComponentArt.Win.Demos.Web" minOccurs="0" name="GetDailyAuxiliaryDataResult" nillable="true" type="q18:ArrayOfSalesRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

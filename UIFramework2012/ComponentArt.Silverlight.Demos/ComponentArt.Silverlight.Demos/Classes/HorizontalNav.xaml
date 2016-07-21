@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.HorizontalNav"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:local="clr-namespace:ComponentArt.Silverlight.Demos"             
+    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid x:Name="LayoutRoot" Background="{Binding Background}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0" Height="25">
+        <StackPanel x:Name="ResetStackPanel" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <local:ImageButton x:Name="ResetButton" Margin="0,0,1,0"
+                                   ImageNormal="../Assets/Pages/ExecutiveDashboard/BreadCrumb/reset.png"
+                                   ImageHover="../Assets/Pages/ExecutiveDashboard/BreadCrumb/reset_over.png" Click="ResetButton_Click"
+                                   HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource Button_Tabs}" />
+            <StackPanel x:Name="ItemsStackPanel" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

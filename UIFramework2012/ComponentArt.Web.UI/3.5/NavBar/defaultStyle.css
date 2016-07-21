@@ -1,0 +1,8 @@
+.cnb_TopGroup {background-color:#EEEEEE;border:1px;border-color:black;border-top-color:gray;border-left-color:gray;border-style:solid;}
+.cnb_TopItem {background-color:#3F3F3F;color:white;font-family:verdana;font-size:12px;border:1px;border-color:#000000;border-top-color:#808080;border-left-color:#808080;border-style:solid;cursor:pointer;}
+.cnb_TopItemHover {background-color:#8D8F95;color:white;font-family:verdana;font-size:12px;border:1px;border-top-color:#B8B8B9;border-left-color:#B8B8B9;border-right-color:black;border-bottom-color:black;border-style:solid;cursor:pointer;}
+.cnb_TopItemActive {background-color:#8D8F95;color:white;font-family:verdana;font-size:12px;border:1px;border-left-color:#555555;border-top-color:#555555;border-right-color:#B8B8B9;border-bottom-color:#B8B8B9;border-style:solid;cursor:pointer;}
+.cnb_Group {background-color:#EEEEEE;border:1px;border-color:#EEEEEE;border-style:solid;}
+.cnb_Item {background-color:#EEEEEE;color:#333333;font-family:verdana;font-size:11px;border:solid 1px #EEEEEE;border-style:solid;cursor:pointer;}
+.cnb_ItemHover {background-color:#CCCCCC;color:#333333;font-family:verdana;font-size:11px;border:1px;border-color:#AAAAAA;border-top-color:#FFFFFF;border-left-color:#FFFFFF;border-style:solid;cursor:pointer;}
+.cnb_ItemActive {background-color:#FFFFFF;color:#333333;font-family:verdana;font-size:11px;border:1px;border-color:#FFFFFF;border-top-color:#AAAAAA;border-left-color:#AAAAAA;border-style:solid;cursor:pointer;}

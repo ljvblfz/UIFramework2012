@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:ComponentArtLayout="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+>
+    <!-- HTMLEditor -->
+    <LinearGradientBrush x:Key="ComponentArt_HtmlEditorFooter_Background" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#e3efff" Offset="0" />
+        <GradientStop Color="#b1d3ff" Offset="1" />
+    </LinearGradientBrush>
+    <Style TargetType="ComponentArt:HtmlEditor">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComponentArt:HtmlEditor">
+                    <Grid                                                       
+                        Height="{TemplateBinding Height}" 
+                        Width="{TemplateBinding Width}"
+                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                        >
+                        <ComponentArtLayout:HtmlPanel x:Name="ToolBarHtmlPanel" 
+                                                      Height="{TemplateBinding Height}" 
+                                                      Width="{TemplateBinding Width}"
+                                                      />
+                        <Grid x:Name="LayoutRoot" Background="White" 
+                          Height="{TemplateBinding Height}" 
+                          Width="{TemplateBinding Width}"
+                          VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                          HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                          >
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="ToolBarRow" />
+                                <RowDefinition x:Name="EditorRow" />
+                                <RowDefinition x:Name="FooterRow"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" 
+                                VerticalAlignment="Stretch"
+                                HorizontalAlignment="Stretch" 
+                                BorderThickness="1" 
+                                CornerRadius="0" 
+                                BorderBrush="#FFd1d1d1" 
+                                Background="{StaticResource ComponentArt_HtmlEditorFooter_Background}">
+                            </Border>
+                            <Border Grid.Row="1" x:Name="EditorBorder" BorderBrush="#FFd1d1d1" BorderThickness="1" Width="{TemplateBinding Width}">
+                                <ComponentArtLayout:HtmlPanel x:Name="EditorHtmlPanel" SourceUri="about:blank" />
+                            </Border>
+                            <Border Grid.Row="2" 
+                                x:Name="FooterBorder"
+                                Padding="5" 
+                                Height="26"
+                                HorizontalAlignment="Stretch" 
+                                BorderThickness="1,0,1,1" 
+                                CornerRadius="0" 
+                                BorderBrush="#FFd1d1d1" 
+                                Background="{StaticResource ComponentArt_HtmlEditorFooter_Background}">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <TextBlock Foreground="Black" x:Name="WordCountBlock" Text="Words: " />
+                                    <TextBlock Foreground="Black" Margin="15,0,0,0" x:Name="CharacterCountBlock" Text="Chars: " />
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- /HTMLEditor -->
+    </ResourceDictionary>

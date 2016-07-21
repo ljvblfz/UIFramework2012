@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.HtmlPanelCoreFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common">
+
+  <UserControl.Resources>
+		<sys:String x:Key="uriContent">http://www.bing.com/</sys:String>
+	</UserControl.Resources>
+
+  <Grid x:Name="LayoutRoot">
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="HtmlPanel" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="HtmlPanel Core Features" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo illustrates the core features of HtmlPanel." />
+    <TextBlock x:Name="DemoCodeFiles" 
+        Visibility = "Collapsed"
+        Text="\source\controls\htmlpanel\HtmlPanelCoreFeatures.xaml,\source\controls\htmlpanel\HtmlPanelCoreFeatures.xaml.cs" />
+
+    <StackPanel Orientation="Vertical" Margin="10">
+			<Border CornerRadius="5" Background="#eeeeee" BorderBrush="#bbbbbb" BorderThickness="1">
+				<StackPanel Margin="9" Orientation="Vertical">
+					<TextBlock Text="Enter a valid URI and press Enter:"/>
+					<TextBox x:Name="htmlUri"
+						AcceptsReturn="False"
+						TextWrapping="NoWrap"
+						VerticalScrollBarVisibility="Hidden"
+						KeyDown="htmlUri_KeyDown"
+						TextChanged="htmlUri_TextChanged"
+						Text="{StaticResource uriContent}"
+						Width="582"
+						Height="24"/>
+				</StackPanel>
+      </Border>
+
+			<Border Margin="0,9" BorderBrush="#bbbbbb" BorderThickness="1">
+				<ComponentArt:HtmlPanel x:Name="htmlPanel" Width="600" Height="370" MonitorState="True" />
+			</Border>
+		</StackPanel>
+  </Grid>
+</UserControl>

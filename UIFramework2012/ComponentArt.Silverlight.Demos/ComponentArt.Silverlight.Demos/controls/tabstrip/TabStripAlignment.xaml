@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.TabStripAlignment"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+>
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TabStrip" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="TabStrip Alignment" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An example of various Aligments available in the TabStrip." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\TabStrip\TabStripAlignment.xaml,\source\controls\tabstrip\TabStripAlignment.xaml.cs" />
+        <StackPanel Orientation="Horizontal" Canvas.Top="50" Canvas.Left="50">
+            <ComponentArt:TabStrip 
+            Width="22"
+            Height="200"
+            Overflow="Scroll"
+            Alignment="left"
+            VerticalAlignment="top"
+            Margin="0,22,-1,0"            
+            ScrollLeftIconSource="left_arrow.png"
+            ScrollRightIconSource="right_arrow.png"
+            >
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Seven" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Eight" />
+            </ComponentArt:TabStrip>
+            <StackPanel Orientation="Vertical">
+                <ComponentArt:TabStrip 
+            Width="200"
+            Height="22"
+            Overflow="scroll"
+            Alignment="top"
+            Margin="0,0,0,-1"
+            VerticalAlignment="top"
+            ScrollLeftIconSource="left_arrow.png"
+            ScrollRightIconSource="right_arrow.png"
+            >
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Seven" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Eight" />
+                </ComponentArt:TabStrip>
+                <Border
+                Width="202" 
+                Height="202" 
+                BorderThickness="1" 
+                BorderBrush="Black" />
+                <ComponentArt:TabStrip 
+            Width="200"
+            Height="22"
+            Overflow="Scroll"
+            Alignment="bottom"
+            VerticalAlignment="top"
+            Margin="0,-1,0,0"
+            ScrollLeftIconSource="left_arrow.png"
+            ScrollRightIconSource="right_arrow.png"
+            >
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Seven" />
+                    <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Eight" />
+                </ComponentArt:TabStrip>
+            </StackPanel>
+            <ComponentArt:TabStrip 
+            Width="22"
+            Height="200"
+            Overflow="Scroll"
+            Margin="-1,22,0,0"
+            Alignment="Right"
+            VerticalAlignment="top"
+            ScrollLeftIconSource="left_arrow.png"
+            ScrollRightIconSource="right_arrow.png"
+            >
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Seven" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Eight" />
+            </ComponentArt:TabStrip>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

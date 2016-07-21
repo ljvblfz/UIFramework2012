@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+>
+	<sys:String x:Key="ComponentArt_ToolBar_BorderThickness">1,1,1,1</sys:String>
+	<sys:String x:Key="ComponentArt_ToolBar_ItemPadding">3,3,3,3</sys:String>
+	<sys:String x:Key="ComponentArt_ToolBar_ItemMargin">1,1,1,1</sys:String>
+	<sys:String x:Key="ComponentArt_ToolBar_ItemTextMargin">5,0,5,0</sys:String>
+	<sys:String x:Key="ComponentArt_ToolBar_ItemIconMargin">2,1,2,1</sys:String>
+    <Color x:Key="ComponentArt_ToolBar_NormalItemBorder">#00ffffff</Color>
+    <Color x:Key="ComponentArt_ToolBar_NormalItemInnerBorder">#00ffffff</Color>
+    <Color x:Key="ComponentArt_ToolBar_PressedItemBorder">#6e6d8f</Color>
+    <Color x:Key="ComponentArt_ToolBar_PressedItemInnerBorder">#ffad55</Color>
+    <Color x:Key="ComponentArt_ToolBar_OverItemBorder">#4b4b6f</Color>
+    <Color x:Key="ComponentArt_ToolBar_OverItemInnerBorder">#00ffffff</Color>
+    <Color x:Key="ComponentArt_ToolBar_CheckedItemBorder">#4b4b6f</Color>
+    <Color x:Key="ComponentArt_ToolBar_CheckedItemInnerBorder">#00ffffff</Color>
+    <Color x:Key="ComponentArt_ToolBar_ExpandedItemBorder">#6e6d8f</Color>
+    <Color x:Key="ComponentArt_ToolBar_ExpandedItemInnerBorder">#00ffffff</Color>
+    <SolidColorBrush x:Key="ComponentArt_ToolBarItem_Background" Color="#00ffffff" />
+    <SolidColorBrush x:Key="ComponentArt_ToolBar_TextBlockForeground" Color="#333333" />
+	<LinearGradientBrush x:Key="ComponentArt_ToolBar_Background" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#f3f4fa" Offset="0" />
+		<GradientStop Color="#e1e2ed" Offset="0.5" />
+		<GradientStop Color="#dadbe7" Offset="0.5" />
+		<GradientStop Color="#9997b5" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_ToolBar_BackgroundBorder" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#007c7c94" Offset="0" />
+		<GradientStop Color="#7c7c94" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_ToolBarItem_BackgroundOver" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#fff3ca" Offset="0" />
+		<GradientStop Color="#ffd193" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_ToolBarItem_BackgroundActive" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#ffd38d" Offset="0" />
+		<GradientStop Color="#ffad55" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_ToolBarItem_BackgroundChecked" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#fe914e" Offset="0" />
+		<GradientStop Color="#ffd38d" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="ComponentArt_ToolBarItem_BackgroundExpanded" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#f3f4fa" Offset="0" />
+		<GradientStop Color="#b3b0c1" Offset="1" />
+	</LinearGradientBrush>
+	<!-- /TOOLBAR RESOURCES -->
+</ResourceDictionary>

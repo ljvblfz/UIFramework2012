@@ -1,0 +1,6 @@
+#ttl div.l { background-image:url("../img/20101/override/static.gif"); }
+#ttl div.m { background-image:url("../img/20101/override/horizontal.gif"); }
+#ttl div.r { background-image:url("../img/20101/override/static.gif"); }
+#ft { background-image:url("../img/20101/override/static.gif"); }
+
+div.full #mn { display:inline !important;width:1088px !important; }

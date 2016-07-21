@@ -1,0 +1,41 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+
+@{ 
+  ViewData["DemoType"] = "ComboBox";
+  ViewData["DemoTitle"] = "Theme Switching";
+  ViewData["CodeFiles"] = "/Views/ComboBox/ThemeSwitching.aspx,/Controllers/ComboBoxController.cs,/Views/Shared/ThemeSwitchingCss.ascx,/Views/Shared/ThemeSwitchingInterface.ascx";
+  ViewData["AboutText"] = @"
+<ul>
+<li>ComboBox's built-in theme-switching functionality is showcased here, which is activated via its AutoTheming property.</li>
+<li>The changing of the CSS definitions is done by resetting the active stylesheet.</li>
+</ul>
+";    
+}
+
+@section HeadContent
+{
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+  <script type="text/javascript">
+    function get_root()
+    {
+      return '';
+    }
+  </script>
+}
+
+<table>
+  <tr>
+    <td>
+    @(Html.ComponentArt().ComboBox()
+    .ID("ComboBox1")
+    .AutoTheming(true)
+    .DataTextField("CountryName")
+    .Width(Unit.Parse("192px"))
+)
+    </td>
+    <td valign="top">
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml") 
+    </td>
+  </tr>
+</table>

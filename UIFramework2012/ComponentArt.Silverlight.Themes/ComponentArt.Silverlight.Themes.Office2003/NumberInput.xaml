@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <!-- Office 2003 -->
+    <SolidColorBrush x:Key="ComponentArt_NumberInput_Background" Color="#ffcacbd9"/>
+    <SolidColorBrush x:Key="ComponentArt_NumberInput_Border" Color="#B4B4BD"/>
+    <sys:String x:Key="ComponentArt_NumberInput_BorderMargin">0</sys:String>
+    <sys:String x:Key="ComponentArt_NumberInput_BorderCornerRadius">0</sys:String>
+    <sys:String x:Key="ComponentArt_NumberInput_BorderPadding">1</sys:String>
+    <sys:String x:Key="ComponentArt_NumberInput_BorderThickness">1</sys:String>
+    <!-- NumberInput InputTextBox -->
+    <sys:String x:Key="ComponentArt_NumberInput_TextBoxPadding">2,1,2,0</sys:String>
+    <sys:String x:Key="ComponentArt_NumberInput_TextBoxMargin">0,0,0,0</sys:String>
+    <sys:String x:Key="ComponentArt_NumberInput_TextBoxBorderThickness">1</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_NumberInput_TextBoxBackground" Color="#00ffffff"/>
+    <SolidColorBrush x:Key="ComponentArt_NumberInput_TextBoxForeground" Color="#ff000000"/>
+    <SolidColorBrush x:Key="ComponentArt_NumberInput_TextBoxBorder" Color="#fffafafa"/>
+    <sys:String x:Key="ComponentArt_InputTextBox_TextBoxCornerRadius">0</sys:String>
+    <!-- /NumberInput InputTextBox -->
+    <!-- NumberInput RepeatUp -->
+    <ControlTemplate x:Key="ComponentArt_NumberInput_RepeatUpContent" >
+        <Path Fill="#3F3D3D" Stretch="Uniform"
+              StrokeThickness="0" 
+              Data="M 0 5 L 8 5 L 4 0 L 0 5 z" />
+    </ControlTemplate>
+    <!-- /NumberInput RepeatUp -->
+    <!-- NumberInput RepeatDown -->
+    <ControlTemplate x:Key="ComponentArt_NumberInput_RepeatDownContent" >
+        <Path Fill="#3F3D3D" Stretch="Uniform"
+              StrokeThickness="0" 
+              Data="M 0 0 L 4 5 L 8 0 L 0 0 z" />
+    </ControlTemplate>
+    <!-- /NumberInput RepeatDown -->
+    <sys:String x:Key="ComponentArt_NumberInput_RepeatButtonBorderThickness">1</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_NumberInput_RepeatButtonBorder" Color="#B4B4BD"/>
+    <!-- RepeatButton -->
+    <LinearGradientBrush x:Key="ComponentArt_RepeatButton_Background" StartPoint=".7,0" EndPoint=".7,1">
+        <GradientStop Color="#f1f1f1" Offset="0" />
+        <GradientStop Color="#f1f1f1" Offset="0.375" />
+        <GradientStop Color="#f1f1f1" Offset="0.625" />
+        <GradientStop Color="#f1f1f1" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComponentArt_RepeatButton_BorderBackground" Color="#fffafafa"/>
+    <sys:String x:Key="ComponentArt_RepeatButton_CornerRadius">0</sys:String>
+    <SolidColorBrush x:Key="ComponentArt_RepeatButton_BackgroundAnimationBackground" Color="Fuchsia" />
+    <Color x:Key="ComponentArt_RepeatButton_FocusBackgroundStop0">#FFFBFBFB</Color>
+    <Color x:Key="ComponentArt_RepeatButton_FocusBackgroundStop1">#FFFBFBFB</Color>
+    <Color x:Key="ComponentArt_RepeatButton_FocusBackgroundStop2">#FFCACBD9</Color>
+    <Color x:Key="ComponentArt_RepeatButton_FocusBackgroundStop3">#FFCACBD9</Color>
+    <Color x:Key="ComponentArt_RepeatButton_PressBackgroundStop0">#FFFEFEFE</Color>
+    <Color x:Key="ComponentArt_RepeatButton_PressBackgroundStop1">#FFFAFAFB</Color>
+    <Color x:Key="ComponentArt_RepeatButton_PressBackgroundStop2">#FFCED0E2</Color>
+    <Color x:Key="ComponentArt_RepeatButton_PressBackgroundStop3">#FFCED0E2</Color>
+    <Color x:Key="ComponentArt_RepeatButton_FocusStroke" >#B4B4BD</Color>
+    <Color x:Key="ComponentArt_RepeatButton_BackgroundOver" >#7fB4B4BD</Color>
+    <!-- /RepeatButton -->
+    <!-- /Office 2003 -->
+</ResourceDictionary>

@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.MenuXMLFileBinding"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:toolkit="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
+    Width="760" Height="450">
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+    	<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Menu" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Load Menu from XML file." />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo creates a Menu from an XML file." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\menu\MenuXMLFileBinding.xaml,
+            \source\controls\menu\MenuXMLFileBinding.xaml.cs,
+            \clientbin\controls\menu\xml\MenuXMLBindingDemo.xml"/>
+        <ComponentArt:Menu 
+            Width="730"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            x:Name="MyMenu" 
+            MenuClick="MyMenu_MenuClick"
+            Initialized="MyMenu_Initialized"
+            Orientation="Horizontal"
+            XmlBindingSource="/ComponentArt.Win.Demos;component/Assets/Menu/xml/MenuXMLBindingDemo.xml" 
+            CustomAttributeMapping="demoAttributeMap" 
+            CustomNodeMapping="demoNodeMap">
+            <ComponentArt:Menu.Resources>
+                <ComponentArtCommon:CustomAttributeMappingCollection x:Key="demoAttributeMap">
+                    <ComponentArtCommon:AttributeMap From="separator" To="IsSeparator"/>
+                    <ComponentArtCommon:AttributeMap From="icon" To="IconSource"/>
+                    <ComponentArtCommon:AttributeMap From="image" To="IconSource"/>
+                    <ComponentArtCommon:AttributeMap From="label" To="Text"/>
+                    <ComponentArtCommon:AttributeMap From="template" To="CustomTemplate"/>
+                    <ComponentArtCommon:AttributeMap From="checked" To="IsChecked"/>
+                    <ComponentArtCommon:AttributeMap From="radio" To="InRadioGroup"/>
+                    <ComponentArtCommon:AttributeMap From="checkbox" To="IsCheckable"/>
+                    <ComponentArtCommon:AttributeMap From="expander" To="ExpandTemplateUsing"/>
+                    <ComponentArtCommon:AttributeMap From="treatAsButton" To="CustomTemplateHighlight"/>
+                </ComponentArtCommon:CustomAttributeMappingCollection>
+                <ComponentArtCommon:CustomNodeMappingCollection x:Key="demoNodeMap">
+                    <ComponentArtCommon:NodeMap From="menu" To="ComponentArt.Win.UI.Navigation.Menu"/>
+                    <ComponentArtCommon:NodeMap From="item" To="ComponentArt.Win.UI.Navigation.MenuItem"/>
+                    <ComponentArtCommon:NodeMap From="calendar" To="ComponentArt.Win.UI.Navigation.MenuItem,CustomTemplate=myCalendar"/>
+                    <ComponentArtCommon:NodeMap From="client_templates" To="ComponentArt.Win.UI.Navigation.MenuItem,CustomTemplate=ClientTemplates"/>
+                    <ComponentArtCommon:NodeMap From="separator" To="ComponentArt.Win.UI.Navigation.MenuItem,IsSeparator=True"/>
+                </ComponentArtCommon:CustomNodeMappingCollection>
+                <DataTemplate x:Key="myCalendar">
+                    <toolkit:Calendar x:Name="tkCalendar" Background="Transparent" BorderBrush="Transparent" Margin="24,0,0,0" ></toolkit:Calendar>
+                </DataTemplate>
+            </ComponentArt:Menu.Resources>
+        </ComponentArt:Menu>
+    </Grid>
+</UserControl>

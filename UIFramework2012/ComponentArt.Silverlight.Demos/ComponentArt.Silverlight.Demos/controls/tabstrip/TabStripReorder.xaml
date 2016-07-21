@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.TabStripReorder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+>
+    <Grid x:Name="LayoutRoot">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="TabStrip" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="TabStrip Re-Ordering" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="An example of a TabStrip with Tab re-ordering enabled." />
+        <TextBlock x:Name="DemoCodeFiles" Visibility="Collapsed" Text="\source\controls\TabStrip\TabStripRedorder.xaml,\source\controls\tabstrip\TabStripRedorder.xaml.cs" />
+        <StackPanel Orientation="Vertical">
+            <ComponentArt:TabStrip 
+            Width="200"
+            Height="22"
+            Overflow="Scroll"
+            Alignment="top"
+            VerticalAlignment="top"
+            Margin="0,0,0,-1"
+            AllowReorder="true"
+            ScrollLeftIconSource="left_arrow.png"
+            ScrollRightIconSource="right_arrow.png"
+            >
+                <ComponentArt:TabStrip.DragTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="1" Padding="3" BorderBrush="Black" CornerRadius="3" Opacity=".90" Background="#FFDDDDDD" Height="{Binding Height}" Width="{Binding Width}">
+                            <TextBlock Text="{Binding Text}" />
+                        </Border>
+                    </DataTemplate>
+                </ComponentArt:TabStrip.DragTemplate>
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="One" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Two" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Three" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Four" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Five" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Six" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Seven" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Eight" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Nine" />
+                <ComponentArt:TabStripTab Padding="5,3,5,3" Text="Ten" />
+            </ComponentArt:TabStrip>
+            <Border
+                Width="200" 
+                Height="200" 
+                BorderThickness="1" 
+                BorderBrush="Black" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>
+
+

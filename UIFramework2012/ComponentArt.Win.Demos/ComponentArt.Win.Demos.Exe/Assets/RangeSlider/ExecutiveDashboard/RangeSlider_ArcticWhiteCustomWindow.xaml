@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+  xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+  xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+  xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"
+  xmlns:primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows"
+  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+  xmlns:syswin="clr-namespace:System.Windows;assembly=System.Windows"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
+    <!-- BEGIN RangeSlider_Window -->
+
+    <ImageSource x:Key="ComponentArt_ArcticWhiteCustomRangeSlider_Chevron_ImageSource">/ComponentArt.Win.Demos;component/Assets/Pages/ExecutiveDashboard/RangeSliderDecoration.png</ImageSource>
+
+    <SolidColorBrush x:Key="ComponentArt_RangeSlider_CurtainBackground" Color="Black" Opacity="0.7"/>
+    <SolidColorBrush x:Key="ComponentArt_RangeSlider_MainBackground" Color="Black" Opacity="1"/>
+    <SolidColorBrush x:Key="ComponentArt_RangeSlider_SelectedRange_Background" Color="Transparent"/>
+
+    <LinearGradientBrush x:Key="ComponentArt_RangeSlider_ThumbSideArrowBackground" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#FFDD3409"/>
+        <GradientStop Offset="0.5" Color="#FFDD3409"/>
+        <GradientStop Offset="0.5" Color="#FF9E2709"/>
+        <GradientStop Offset="1" Color="#FF9E2709"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ComponentArt_RangeSlider_ThumbBevel" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#FFFFFFFF"/>
+        <GradientStop Offset="0.8" Color="#FFFFFFFF"/>
+        <GradientStop Offset="1" Color="#00FFFFFF"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ComponentArt_RangeSlider_Reflection" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="#FFCCCCCC"/>
+        <GradientStop Offset="0.8" Color="#FFDCDCDC"/>
+        <GradientStop Offset="1" Color="#FFFAFAFA"/>
+    </LinearGradientBrush>
+
+
+    <LinearGradientBrush x:Key="ComponentArt_RangeSlider_ThumbBackgroundTop" StartPoint="0,0" EndPoint="0,1" SpreadMethod="Pad">
+        <GradientStop Color="#FFCCCCCC" Offset="0"/>
+        <GradientStop Color="#FFCCCCCC" Offset="0.44"/>
+        <GradientStop Color="#FFDEDEDE" Offset="0.72"/>
+        <GradientStop Color="#FFFAFAFA" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ComponentArt_RangeSlider_ThumbBackgroundBottom" StartPoint="0,0" EndPoint="0,1" SpreadMethod="Pad">
+        <GradientStop Color="#FFFAFAFA" Offset="0"/>
+        <GradientStop Color="#FFFFFFFF" Offset="0.56"/>
+        <GradientStop Color="#FFFFFFFF" Offset="0.75"/>
+        <GradientStop Color="#FFF7F7F7" Offset="0.75"/>
+        <GradientStop Color="#FFD4D4D4" Offset="1"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="ComponentArt_RangeSlider_ThumbBackground" Color="White"/>
+
+    <sys:String x:Key="ComponentArt_RangeSlider_OuterThumbCornerRadius">0 0 3 3</sys:String>
+    <sys:String x:Key="ComponentArt_RangeSlider_InnerThumbCornerRadius">4</sys:String>
+    <sys:String x:Key="ComponentArt_RangeSlider_InnerThumbShadowCornerRadius">4</sys:String>
+
+    <!--<sys:String x:Key="ComponentArt_RangeSlider_AxisPadding">8 1</sys:String>-->
+    <Thickness x:Key="ComponentArt_RangeSlider_AxisPadding">8 1</Thickness>
+
+    <Style TargetType="ComponentArt:RangeSlider">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Padding" Value="{StaticResource ComponentArt_RangeSlider_AxisPadding}"/>
+        <Setter Property="SelectionBackground" Value="{StaticResource ComponentArt_RangeSlider_SelectedRange_Background}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComponentArt:RangeSlider">
+                    <Grid x:Name="LayoutRoot" Background="{TemplateBinding Background}">
+                        <!-- Horizontal layout -->
+                        <Grid x:Name="H_Layout">
+                            <Grid.Resources>
+                                <Storyboard x:Key="H_ResizingAnimation">
+                                    <DoubleAnimationUsingKeyFrames x:Name="H_SelectionStart_ValueAnimation" Storyboard.TargetName="H_SelectionStart_Curtain" Storyboard.TargetProperty="Width">
+                                        <SplineDoubleKeyFrame x:Name="H_SelectionStart_StartFrame" KeyTime="00:00:00" Value="50"/>
+                                        <SplineDoubleKeyFrame x:Name="H_SelectionStart_EndFrame" KeyTime="00:00:10.5" KeySpline="0,1,1,1" Value="50"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames x:Name="H_SelectionEnd_ValueAnimation" Storyboard.TargetName="H_SelectionEnd_Curtain" Storyboard.TargetProperty="Width">
+                                        <SplineDoubleKeyFrame x:Name="H_SelectionEnd_StartFrame" KeyTime="00:00:00" Value="50"/>
+                                        <SplineDoubleKeyFrame x:Name="H_SelectionEnd_EndFrame" KeyTime="00:00:10.5" KeySpline="0,1,1,1" Value="50"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </Grid.Resources>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" x:Name="H_SelectionStart_CurtainCell"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto" x:Name="H_SelectionEnd_CurtainCell"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+
+                            <ContentControl Grid.Row="0" x:Name="H_AxisContainer" Margin="{TemplateBinding Padding}" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
+
+                            <Rectangle Grid.Row="0" x:Name="H_SelectionStart_Curtain" Grid.Column="0" Fill="{StaticResource ComponentArt_RangeSlider_CurtainBackground}" HorizontalAlignment="Left" Width="0" IsHitTestVisible="True"/>
+                            <Rectangle Grid.Row="0" x:Name="H_SelectionEnd_Curtain" Grid.Column="2" Fill="{StaticResource ComponentArt_RangeSlider_CurtainBackground}" HorizontalAlignment="Right" Width="0" IsHitTestVisible="True"/>
+                            <!-- Thumb detail -->
+                            <Grid x:Name="H_Thumb" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Background gradient -->
+                                <Border BorderThickness="0" Background="{StaticResource ComponentArt_RangeSlider_ThumbBackgroundTop}"
+										CornerRadius="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" 
+                                        ComponentArtUtils:Clip.Enable="True" ComponentArtUtils:Clip.Mask="True" >
+                                    <Border x:Name="H_WindowCutout" Margin="9 4 9 0" CornerRadius="4" 
+                                            BorderThickness="0" BorderBrush="Transparent" ComponentArtUtils:Clip.Mask="True"/>
+                                </Border>
+                                <Border BorderThickness="0" Background="{StaticResource ComponentArt_RangeSlider_ThumbBackgroundBottom}"
+										CornerRadius="0 0 4 4" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Margin="0 -1 0 2">
+                                </Border>
+                                <!-- /Background gradient -->
+
+                                <Border x:Name="H_ThumbOutlineAndBackground" CornerRadius="0 0 4 4" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2"
+								BorderBrush="Black" BorderThickness="1" Background="Transparent" IsHitTestVisible="False" />
+
+                                <Border Margin="1" x:Name="OuterBevel" BorderBrush="White" BorderThickness="1" Background="Transparent" CornerRadius="0 0 4 4" Grid.Column="0" 
+										Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False"/>
+
+                                <Path Fill="{StaticResource ComponentArt_RangeSlider_ThumbSideArrowBackground}" StrokeThickness="0" Data="M1,5 L5,1 L5,9" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3 0 0 0"/>
+                                <Path Fill="{StaticResource ComponentArt_RangeSlider_ThumbSideArrowBackground}" StrokeThickness="0" Data="M1,1 L1,9 L5,5" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 4 0"/>
+
+                                <Border x:Name="H_InnerBevel"  
+                                        Grid.Column="1" Grid.Row="0" CornerRadius="4" 
+                                        BorderThickness="1" Background="Transparent" Margin="-1 4 -1 0" 
+                                        BorderBrush="{StaticResource ComponentArt_RangeSlider_ThumbBevel}" IsHitTestVisible="False">
+                                    <Border x:Name="H_InnerOutline" CornerRadius="4"  IsHitTestVisible="False"
+                                            BorderThickness="1" BorderBrush="#000" Background="Transparent">
+                                    </Border>
+                                </Border>
+
+                                <Image Source="{StaticResource ComponentArt_ArcticWhiteCustomRangeSlider_Chevron_ImageSource}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 0 0 -6" Stretch="None" />
+
+                                <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Height="9" HorizontalAlignment="Center" Orientation="Horizontal">
+                                    <Border BorderBrush="#BBB" BorderThickness="0 3 0 0" Background="#999" Width="1"/>
+                                    <Border BorderBrush="#BBB" BorderThickness="0 3 0 0" Background="#999" Width="1" Margin="1 0 0 0"/>
+                                    <Border BorderBrush="#BBB" BorderThickness="0 3 0 0" Background="#999" Width="1" Margin="1 0 0 0"/>
+                                    <Border BorderBrush="#BBB" BorderThickness="0 3 0 0" Background="#999" Width="1" Margin="1 0 0 0"/>
+                                    <Border BorderBrush="#BBB" BorderThickness="0 3 0 0" Background="#999" Width="1" Margin="1 0 0 0"/>
+                                    <Border BorderBrush="#BBB" BorderThickness="0 3 0 0" Background="#999" Width="1" Margin="1 0 0 0"/>
+                                    <Border BorderBrush="#BBB" BorderThickness="0 3 0 0" Background="#999" Width="1" Margin="1 0 0 0"/>
+                                </StackPanel>
+                                <Rectangle x:Name="H_SelectionStart_Slider" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Fill="Transparent" Width="10" Opacity="0" HorizontalAlignment="Left" Cursor="SizeWE" IsHitTestVisible="True" />
+                                <Rectangle x:Name="H_SelectionStart_SelectionPoint" Grid.Column="0" Grid.Row="0" Fill="Transparent" Width="1" IsHitTestVisible="False" HorizontalAlignment="Center"/>
+                                <Rectangle x:Name="H_SelectionEnd_Slider" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Right" Fill="Transparent"  Width="10" IsHitTestVisible="True" Cursor="SizeWE"/>
+                                <Rectangle x:Name="H_SelectionEnd_SelectionPoint" Grid.Column="2" Grid.Row="0" Fill="Transparent" Width="1" IsHitTestVisible="False" HorizontalAlignment="Center"/>
+                                <Rectangle x:Name="H_ThumbDrag" Grid.Column="1" Grid.Row="1" Fill="Transparent"/>
+                            </Grid>
+                        </Grid>
+                        <ComponentArtUtils:CommonPopup x:Name="ToolTipPopup" IsOpen="False">
+                            <ComponentArtUtils:CommonPopup.Resources>
+                                <Storyboard x:Key="fadeOut">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="TooltipContainer" Storyboard.TargetProperty="Opacity">
+                                        <SplineDoubleKeyFrame KeyTime="0" Value="1.0"/>
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00.3" Value="0.8"/>
+                                        <SplineDoubleKeyFrame x:Name="endFrame" KeyTime="00:00:00.6" KeySpline="0,1,1,1" Value="0.0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </ComponentArtUtils:CommonPopup.Resources>
+                            <ContentControl x:Name="TooltipContainer" />
+                        </ComponentArtUtils:CommonPopup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- END RangeSlider-->
+</ResourceDictionary>

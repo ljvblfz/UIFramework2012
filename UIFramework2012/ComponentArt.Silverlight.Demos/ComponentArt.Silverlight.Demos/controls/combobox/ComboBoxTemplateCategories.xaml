@@ -1,0 +1,370 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.ComboBoxTemplateCategories"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Input;assembly=ComponentArt.Silverlight.UI.Input"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common"             
+    xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common">
+    <UserControl.Resources>
+        <ComponentArtTheming:Theme x:Key="ComboBoxArcticWhite" 
+                      BaseSource="/ComponentArt.Silverlight.UI.Input;component/Themes/generic.xaml" 
+                      Source="/ComponentArt.Silverlight.Themes.ArcticWhite;component/ComboBox.xaml"  />
+        <DataTemplate x:Key="HeadingTemplate">
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Border Background="LightBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock x:Name="ItemText" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                               Foreground="DarkBlue" Grid.Column="2" FontSize="14" Text="{Binding Tag}" FontFamily="Arial" FontWeight="Bold"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="MyItemTemplate">
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Border Background="LightSteelBlue"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock x:Name="ItemText" Foreground="DarkBlue" Grid.Column="2" FontSize="14" Text="{Binding Text}" FontFamily="Comic Sans MS" FontWeight="Bold"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ComboBox" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="ComboBox Custom Templates" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Click on the ComboBox to begin." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\combobox\ComboBoxTemplateCategories.xaml,
+            \source\controls\combobox\ComboBoxTemplateCategories.xaml.cs"/>
+        
+        <Border Width="800" Height="600" Background="#eeeeee" CornerRadius="3" BorderBrush="#666666" BorderThickness="1"/>
+
+        <Grid Margin="20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="142"/>
+                <RowDefinition Height="24"/>
+            </Grid.RowDefinitions>
+
+            <ComponentArt:ComboBox x:Name="MyComboBox" MaxPopupHeight="350"
+                                   FontFamily="Arial Black">
+                <ComponentArt:ComboBoxItem Text="Aaland Islands" Tag="/controls/combobox/flags/ax.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Afghanistan" Tag="/controls/combobox/flags/af.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Albania" Tag="/controls/combobox/flags/al.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Algeria" Tag="/controls/combobox/flags/dz.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="American Samoa" Tag="/controls/combobox/flags/as.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Andorra" Tag="/controls/combobox/flags/ad.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Angola" Tag="/controls/combobox/flags/ao.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Anguilla" Tag="/controls/combobox/flags/ai.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Antarctica" Tag="/controls/combobox/flags/aq.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Antigua And Barbuda" Tag="/controls/combobox/flags/ag.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Argentina" Tag="/controls/combobox/flags/ar.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Armenia" Tag="/controls/combobox/flags/am.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Aruba" Tag="/controls/combobox/flags/aw.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Australia" Tag="/controls/combobox/flags/au.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Austria" Tag="/controls/combobox/flags/at.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Azerbaijan" Tag="/controls/combobox/flags/az.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Bahamas" Tag="/controls/combobox/flags/bs.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Bahrain" Tag="/controls/combobox/flags/bh.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Bangladesh" Tag="/controls/combobox/flags/bd.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Barbados" Tag="/controls/combobox/flags/bb.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Belarus" Tag="/controls/combobox/flags/by.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Belgium" Tag="/controls/combobox/flags/be.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Belize" Tag="/controls/combobox/flags/bz.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Benin" Tag="/controls/combobox/flags/bj.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Bermuda" Tag="/controls/combobox/flags/bm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Bhutan" Tag="/controls/combobox/flags/bt.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Bolivia" Tag="/controls/combobox/flags/bo.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Bosnia And Herzegowina" Tag="/controls/combobox/flags/ba.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Botswana" Tag="/controls/combobox/flags/bw.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Bouvet Island" Tag="/controls/combobox/flags/bv.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Brazil" Tag="/controls/combobox/flags/br.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="British Indian Ocean Territory" Tag="/controls/combobox/flags/io.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Brunei Darussalam" Tag="/controls/combobox/flags/bn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Bulgaria" Tag="/controls/combobox/flags/bg.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Burkina Faso" Tag="/controls/combobox/flags/bf.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Burundi" Tag="/controls/combobox/flags/bi.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Cambodia" Tag="/controls/combobox/flags/kh.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Cameroon" Tag="/controls/combobox/flags/cm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Canada" Tag="/controls/combobox/flags/ca.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Cape Verde" Tag="/controls/combobox/flags/cv.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Cayman Islands" Tag="/controls/combobox/flags/ky.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Central African Republic" Tag="/controls/combobox/flags/cf.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Chad" Tag="/controls/combobox/flags/td.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Chile" Tag="/controls/combobox/flags/cl.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="China" Tag="/controls/combobox/flags/cn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Christmas Island" Tag="/controls/combobox/flags/cx.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Cocos(Keeling)Islands" Tag="/controls/combobox/flags/cc.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Colombia" Tag="/controls/combobox/flags/co.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Comoros" Tag="/controls/combobox/flags/km.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Congo,Democratic Republic Of" Tag="/controls/combobox/flags/cd.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Congo,Republicof" Tag="/controls/combobox/flags/cg.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Cook Islands" Tag="/controls/combobox/flags/ck.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Costa Rica" Tag="/controls/combobox/flags/cr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Cote D'ivoire" Tag="/controls/combobox/flags/ci.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Croatia" Tag="/controls/combobox/flags/hr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Cuba" Tag="/controls/combobox/flags/cu.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Cyprus" Tag="/controls/combobox/flags/cy.png" CustomTemplate="box" />
+               <ComponentArt:ComboBoxItem Text="Czech Republic" Tag="/controls/combobox/flags/cz.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Denmark" Tag="/controls/combobox/flags/dk.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Djibouti" Tag="/controls/combobox/flags/dj.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Dominica" Tag="/controls/combobox/flags/dm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Dominican Republic" Tag="/controls/combobox/flags/do.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Ecuador" Tag="/controls/combobox/flags/ec.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Egypt" Tag="/controls/combobox/flags/eg.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="El Salvador" Tag="/controls/combobox/flags/sv.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Equatorial Guinea" Tag="/controls/combobox/flags/gq.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Eritrea" Tag="/controls/combobox/flags/er.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Estonia" Tag="/controls/combobox/flags/ee.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Ethiopia" Tag="/controls/combobox/flags/et.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Falkland Islands(Malvinas)" Tag="/controls/combobox/flags/fk.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Faroe Islands" Tag="/controls/combobox/flags/fo.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Fiji" Tag="/controls/combobox/flags/fj.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Finland" Tag="/controls/combobox/flags/fi.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="France" Tag="/controls/combobox/flags/fr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="French Guiana" Tag="/controls/combobox/flags/gf.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="French Polynesia" Tag="/controls/combobox/flags/pf.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="French Southern Territories" Tag="/controls/combobox/flags/tf.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Gabon" Tag="/controls/combobox/flags/ga.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Gambia" Tag="/controls/combobox/flags/gm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Georgia" Tag="/controls/combobox/flags/ge.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Germany" Tag="/controls/combobox/flags/de.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Ghana" Tag="/controls/combobox/flags/gh.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Gibraltar" Tag="/controls/combobox/flags/gi.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Greece" Tag="/controls/combobox/flags/gr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Greenland" Tag="/controls/combobox/flags/gl.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Grenada" Tag="/controls/combobox/flags/gd.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Guadeloupe" Tag="/controls/combobox/flags/gp.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Guam" Tag="/controls/combobox/flags/gu.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Guatemala" Tag="/controls/combobox/flags/gt.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Guinea" Tag="/controls/combobox/flags/gn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Guinea-bissau" Tag="/controls/combobox/flags/gw.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Guyana" Tag="/controls/combobox/flags/gy.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Haiti" Tag="/controls/combobox/flags/ht.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Heard And Mcdonald Islands" Tag="/controls/combobox/flags/hm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Honduras" Tag="/controls/combobox/flags/hn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Hongkong" Tag="/controls/combobox/flags/hk.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Hungary" Tag="/controls/combobox/flags/hu.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Iceland" Tag="/controls/combobox/flags/is.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="India" Tag="/controls/combobox/flags/in.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Indonesia" Tag="/controls/combobox/flags/id.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Iran(Islamic Republic Of)" Tag="/controls/combobox/flags/ir.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Iraq" Tag="/controls/combobox/flags/iq.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Ireland" Tag="/controls/combobox/flags/ie.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Israel" Tag="/controls/combobox/flags/il.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Italy" Tag="/controls/combobox/flags/it.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Jamaica" Tag="/controls/combobox/flags/jm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Japan" Tag="/controls/combobox/flags/jp.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Jordan" Tag="/controls/combobox/flags/jo.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Kazakhstan" Tag="/controls/combobox/flags/kz.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Kenya" Tag="/controls/combobox/flags/ke.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Kiribati" Tag="/controls/combobox/flags/ki.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Korea,Democratic People's Republic Of" Tag="/controls/combobox/flags/kp.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Korea,Republic Of" Tag="/controls/combobox/flags/kr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Kuwait" Tag="/controls/combobox/flags/kw.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Kyrgyzstan" Tag="/controls/combobox/flags/kg.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Lao People's Democratic Republic" Tag="/controls/combobox/flags/la.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Latvia" Tag="/controls/combobox/flags/lv.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Lebanon" Tag="/controls/combobox/flags/lb.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Lesotho" Tag="/controls/combobox/flags/ls.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Liberia" Tag="/controls/combobox/flags/lr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Libyan Arab Jamahiriya" Tag="/controls/combobox/flags/ly.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Liechtenstein" Tag="/controls/combobox/flags/li.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Lithuania" Tag="/controls/combobox/flags/lt.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Luxembourg" Tag="/controls/combobox/flags/lu.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Macau" Tag="/controls/combobox/flags/mo.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Macedonia,The Former Yugoslav Republic Of" Tag="/controls/combobox/flags/mk.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Madagascar" Tag="/controls/combobox/flags/mg.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Malawi" Tag="/controls/combobox/flags/mw.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Malaysia" Tag="/controls/combobox/flags/my.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Maldives" Tag="/controls/combobox/flags/mv.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Mali" Tag="/controls/combobox/flags/ml.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Malta" Tag="/controls/combobox/flags/mt.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Marshall Islands" Tag="/controls/combobox/flags/mh.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Martinique" Tag="/controls/combobox/flags/mq.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Mauritania" Tag="/controls/combobox/flags/mr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Mauritius" Tag="/controls/combobox/flags/mu.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Mayotte" Tag="/controls/combobox/flags/yt.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Mexico" Tag="/controls/combobox/flags/mx.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Micronesia,Federated States Of" Tag="/controls/combobox/flags/fm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Moldova,Republic Of" Tag="/controls/combobox/flags/md.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Monaco" Tag="/controls/combobox/flags/mc.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Mongolia" Tag="/controls/combobox/flags/mn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Montserrat" Tag="/controls/combobox/flags/ms.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Morocco" Tag="/controls/combobox/flags/ma.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Mozambique" Tag="/controls/combobox/flags/mz.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Myanmar" Tag="/controls/combobox/flags/mm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Namibia" Tag="/controls/combobox/flags/na.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Nauru" Tag="/controls/combobox/flags/nr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Nepal" Tag="/controls/combobox/flags/np.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Netherlands" Tag="/controls/combobox/flags/nl.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Netherlands Antilles" Tag="/controls/combobox/flags/an.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="New Caledonia" Tag="/controls/combobox/flags/nc.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="New Zealand" Tag="/controls/combobox/flags/nz.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Nicaragua" Tag="/controls/combobox/flags/ni.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Niger" Tag="/controls/combobox/flags/ne.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Nigeria" Tag="/controls/combobox/flags/ng.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Niue" Tag="/controls/combobox/flags/nu.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Norfolk Island" Tag="/controls/combobox/flags/nf.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Northern Mariana Islands" Tag="/controls/combobox/flags/mp.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Norway" Tag="/controls/combobox/flags/no.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Oman" Tag="/controls/combobox/flags/om.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Pakistan" Tag="/controls/combobox/flags/pk.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Palau" Tag="/controls/combobox/flags/pw.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Palestinian Territory" Tag="/controls/combobox/flags/ps.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Panama" Tag="/controls/combobox/flags/pa.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Papua New Guinea" Tag="/controls/combobox/flags/pg.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Paraguay" Tag="/controls/combobox/flags/py.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Peru" Tag="/controls/combobox/flags/pe.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Philippines" Tag="/controls/combobox/flags/ph.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Pitcairn" Tag="/controls/combobox/flags/pn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Poland" Tag="/controls/combobox/flags/pl.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Portugal" Tag="/controls/combobox/flags/pt.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Puertorico" Tag="/controls/combobox/flags/pr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Qatar" Tag="/controls/combobox/flags/qa.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Reunion" Tag="/controls/combobox/flags/re.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Romania" Tag="/controls/combobox/flags/ro.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Russian Federation" Tag="/controls/combobox/flags/ru.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Rwanda" Tag="/controls/combobox/flags/rw.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Saint Helena" Tag="/controls/combobox/flags/sh.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Saint Kittsandnevis" Tag="/controls/combobox/flags/kn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Saint Lucia" Tag="/controls/combobox/flags/lc.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Saint Pierre And Miquelon" Tag="/controls/combobox/flags/pm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Saint Vincent And The Grenadines" Tag="/controls/combobox/flags/vc.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Samoa" Tag="/controls/combobox/flags/ws.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="San Marino" Tag="/controls/combobox/flags/sm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Saotome And Principe" Tag="/controls/combobox/flags/st.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Saudi Arabia" Tag="/controls/combobox/flags/sa.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Senegal" Tag="/controls/combobox/flags/sn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Serbia And Montenegro" Tag="/controls/combobox/flags/cs.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Seychelles" Tag="/controls/combobox/flags/sc.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Sierraleone" Tag="/controls/combobox/flags/sl.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Singapore" Tag="/controls/combobox/flags/sg.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Slovakia" Tag="/controls/combobox/flags/sk.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Slovenia" Tag="/controls/combobox/flags/si.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Solomon Islands" Tag="/controls/combobox/flags/sb.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Somalia" Tag="/controls/combobox/flags/so.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="South Africa" Tag="/controls/combobox/flags/za.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="South Georgia And The South Sandwich Islands" Tag="/controls/combobox/flags/gs.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Spain" Tag="/controls/combobox/flags/es.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Sri Lanka" Tag="/controls/combobox/flags/lk.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Sudan" Tag="/controls/combobox/flags/sd.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Suriname" Tag="/controls/combobox/flags/sr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Svalbard And Janmayen Islands" Tag="/controls/combobox/flags/sj.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Swaziland" Tag="/controls/combobox/flags/sz.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Sweden" Tag="/controls/combobox/flags/se.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Switzerland" Tag="/controls/combobox/flags/ch.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Syrian Arab Republic" Tag="/controls/combobox/flags/sy.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Taiwan" Tag="/controls/combobox/flags/tw.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Tajikistan" Tag="/controls/combobox/flags/tj.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Tanzania,United Republic Of" Tag="/controls/combobox/flags/tz.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Thailand" Tag="/controls/combobox/flags/th.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Timor-leste" Tag="/controls/combobox/flags/tl.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Togo" Tag="/controls/combobox/flags/tg.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Tokelau" Tag="/controls/combobox/flags/tk.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Tonga" Tag="/controls/combobox/flags/to.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Trinidad And Tobago" Tag="/controls/combobox/flags/tt.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Tunisia" Tag="/controls/combobox/flags/tn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Turkey" Tag="/controls/combobox/flags/tr.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Turkmenistan" Tag="/controls/combobox/flags/tm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Turks And Caicos Islands" Tag="/controls/combobox/flags/tc.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Tuvalu" Tag="/controls/combobox/flags/tv.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Uganda" Tag="/controls/combobox/flags/ug.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Ukraine" Tag="/controls/combobox/flags/ua.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="United Arab Emirates" Tag="/controls/combobox/flags/ae.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="United Kingdom" Tag="/controls/combobox/flags/gb.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="United States" Tag="/controls/combobox/flags/us.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="United States Minor Outlying Islands" Tag="/controls/combobox/flags/um.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Uruguay" Tag="/controls/combobox/flags/uy.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Uzbekistan" Tag="/controls/combobox/flags/uz.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Vanuatu" Tag="/controls/combobox/flags/vu.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Vatican City State(Holysee)" Tag="/controls/combobox/flags/va.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Venezuela" Tag="/controls/combobox/flags/ve.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Vietnam" Tag="/controls/combobox/flags/vn.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Virgin Islands(British)" Tag="/controls/combobox/flags/vg.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Virgin Islands(U.S.)" Tag="/controls/combobox/flags/vi.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Wallis And Futuna Islands" Tag="/controls/combobox/flags/wf.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Western Sahara" Tag="/controls/combobox/flags/eh.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Yemen" Tag="/controls/combobox/flags/ye.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Zambia" Tag="/controls/combobox/flags/zm.png" CustomTemplate="box" />
+                <ComponentArt:ComboBoxItem Text="Zimbabwe" Tag="/controls/combobox/flags/zw.png" CustomTemplate="box" />
+                <ComponentArt:ComboBox.Resources>
+                    <DataTemplate x:Key="box">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="16"/>
+                                <ColumnDefinition Width="2"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding Tag}" Grid.Column="0"/>
+                            <TextBlock x:Name="ItemText" Grid.Column="2" Text="{Binding Text}">
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush x:Name="TextForegroundColor" Color="Black" />
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ComponentArt:ComboBox.Resources>
+            </ComponentArt:ComboBox>
+
+            <ComponentArt:ComboBox x:Name="MyComboBox2"
+                                   Grid.Row="2"  MaxPopupHeight="350"
+                                   FilteringType="StartsWith"
+                                   AutoComplete="True"
+                                   AutoHighlight="True"
+                                   AutoFilter="True"
+                                   SelectionChanged="MyComboBox2_SelectionChanged">
+                <ComponentArt:ComboBoxItem CustomTemplate="HeadingTemplate" Text="Sans-serif Fonts" CustomTemplateHighlight="False" Enabled="False" />
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Times New Roman"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Arial"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Arial Black"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Lucida Grande"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Lucida Sans Unicode"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Trebuchet MS"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Verdana"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="HeadingTemplate" Text="All Fonts" CustomTemplateHighlight="False" Enabled="False" />
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Arial"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Arial Black"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Comic Sans MS"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Courier New"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Georgia"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Lucida Grande"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Lucida Sans Unicode"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Times New Roman"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Trebuchet MS"/>
+                <ComponentArt:ComboBoxItem CustomTemplate="FontTemplate" Text="Verdana"/>
+                <ComponentArt:ComboBox.Resources>
+                    <DataTemplate x:Key="FontTemplate">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="16"/>
+                                <ColumnDefinition Width="3"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="/controls/combobox/misc/tt.png" Grid.Column="0"/>
+                            <TextBlock x:Name="ItemText" Grid.Column="2" Text="{Binding Text}" FontSize="14" FontFamily="{Binding Text}"/>
+                        </Grid>
+                    </DataTemplate>
+                    <DataTemplate x:Key="HeadingTemplate">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Border Background="LightBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0,5,0,5">
+                                <TextBlock x:Name="ItemText" Foreground="DarkBlue" Grid.Column="2" FontSize="14" Text="{Binding Text}" FontFamily="Arial" FontWeight="Bold"/>
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </ComponentArt:ComboBox.Resources>
+            </ComponentArt:ComboBox>
+        </Grid>
+    </Grid>
+</UserControl>

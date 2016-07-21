@@ -1,0 +1,123 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoTitle"] = "Core Features";
+  ViewData["DemoType"] = "TreeView";
+  ViewData["CodeFiles"] = "/Views/TreeView/CoreFeatures.aspx,/Controllers/TreeViewController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>Try drag & drop, node editing, keyboard control, and other core TreeView features.</li>
+<li>The selected node is maintained by using the TreeViewHelperExtensions.GetSelectedText() on the posted FormCollection.  The TreeView's load client-event re-applies the selection when the page is loaded.</li>
+</ul>
+";  
+}
+@section HeadContent {
+  <script type="text/javascript">
+    function TreeView1_onLoad(sender, e)
+    {
+      if ('@(ViewData["SelectedNode"] ?? "")' != '')
+      {
+        var selectedNode = sender.findNodeByProperty('Text', '@(ViewData["SelectedNode"] ?? "")');
+        selectedNode.select();
+      }
+    }
+  </script>
+  <link href="@Url.Content("~/Content/TreeView/CoreFeatures/treeStyle.css")" rel="stylesheet" type="text/css" />
+}
+<form id="frm_Main1" action="" method="post">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td width="320">
+      <table border="0" cellpadding="0" cellspacing="0" width="263">
+        <tr>
+          <td class="TreeViewHeader">
+            Folder List
+          </td>
+        </tr>
+      </table>
+      @(Html.ComponentArt().TreeView()
+        .ID("TreeView1")
+        .SiteMapXmlFile("~/App_Data/TreeView/CoreFeatures/treeData.xml")
+        .LineImagesFolderUrl("~/Content/TreeView/CoreFeatures/images/lines/")
+        .ImagesBaseUrl("~/Content/TreeView/CoreFeatures/images/")
+        .Height(320)
+        .Width(260)
+        .DragAndDropEnabled(true)
+        .NodeEditingEnabled(true)
+        .KeyboardEnabled(true)
+        .MultipleSelectEnabled(true)
+        .KeyboardCutCopyPasteEnabled(true)
+        .DisplayMargin(true)
+        .ShowLines(true)
+        .CssClass("TreeViewMargin")
+        .NodeCssClass("TreeNode")
+        .SelectedNodeCssClass("SelectedTreeNode")
+        .MultipleSelectedNodeCssClass("MultipleSelectedTreeNode")
+        .HoverNodeCssClass("HoverTreeNode")
+        .NodeEditCssClass("NodeEdit")
+        .CutNodeCssClass("CutTreeNode")
+        .MarginWidth(24)
+        .DefaultMarginImageWidth(24)
+        .DefaultMarginImageHeight(20)
+        .LineImageWidth(19)
+        .LineImageHeight(20)
+        .DefaultImageWidth(16)
+        .DefaultImageHeight(16)
+        .NodeLabelPadding(3)
+        .ParentNodeImageUrl("folders.gif")
+        .LeafNodeImageUrl("folder.gif")
+        .CollapseImageUrl("exp.gif")
+        .ExpandImageUrl("col.gif")
+        .ExpandCollapseImageWidth(19)
+        .ExpandCollapseImageHeight(20)
+        .ShowLines(true)
+        .ClientTemplates(ct =>
+        {
+          ct.Add().ID("UnreadItemsTemplate").Content(@"
+              <div style=""padding-left:1px;""><b>## DataItem.GetProperty('Text') ##</b>
+                <font color=""blue"">(## DataItem.GetProperty('UnreadItems') ##)</font>
+              </div>
+                ");
+          ct.Add().ID("InfoItemsTemplate").Content(@"
+              <b>## DataItem.GetProperty('Text') ##</b>
+              <font color=""green"">[## DataItem.GetProperty('InfoItems') ##]</font>
+                ");
+        })
+        .ClientEvents(ce =>
+        {
+          ce.Load("TreeView1_onLoad");
+        })
+      )
+    </td>
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td valign="middle" width="100%" class="MainText">
+      <b>Core Features:</b><br />
+      <br />
+      <input type="checkbox" id="chkDragDrop" onclick="TreeView1.SetProperty('DragAndDropEnabled', this.checked);"
+        checked="true" />&nbsp;Drag & Drop Enabled<br />
+      <input type="checkbox" id="chkEditing" onclick="TreeView1.SetProperty('NodeEditingEnabled', this.checked);"
+        checked="true" />&nbsp;Node Editing Enabled<br />
+      <input type="checkbox" id="chkKeyboard" onclick="TreeView1.SetProperty('KeyboardEnabled', this.checked);"
+        checked="true" />&nbsp;Keyboard Control Enabled
+      <br />
+      <input type="checkbox" id="chkMultipleSelect" onclick="TreeView1.SetProperty('MultipleSelectEnabled', this.checked);"
+        checked="true" />&nbsp;Multiple Select Enabled (Ctrl+Click)<br />
+      <input type="checkbox" id="chkCutCopyPaste" onclick="TreeView1.SetProperty('KeyboardCutCopyPasteEnabled', this.checked);"
+        checked="true" />&nbsp;Cut, Copy & Paste Enabled (Ctrl+X/C/V)<br />
+      <input type="checkbox" id="chkDisplayMargin" onclick="TreeView1.SetProperty('DisplayMargin', this.checked);TreeView1.SetProperty('CssClass', this.checked? 'TreeViewMargin' : 'TreeView');TreeView1.Render();"
+        checked="true" />&nbsp;Display Margin
+      <br />
+      <input type="checkbox" id="chkShowLines" onclick="TreeView1.SetProperty('ShowLines', this.checked);TreeView1.Render();"
+        checked="true" />&nbsp;Show Lines
+      <br />
+      <br />
+      <br />
+      Selected Node: <b>@(((ViewData["SelectedNode"] as string) == null ? "none" : (ViewData["SelectedNode"] as string)))</b>
+      <br />
+      <br />
+      <input type="submit" value="Post" id="submit" name="btnSubmit" />
+    </td>
+  </tr>
+</table>
+</form>

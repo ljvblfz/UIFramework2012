@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.DataGridObservableCollection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cart="clr-namespace:ComponentArt.Win.UI.Data;assembly=ComponentArt.Win.UI.Data">
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+    </Grid.RowDefinitions>
+    <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="DataGrid" />
+    <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Manipulating the Source Collection" />
+    <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This sample demonstrates how DataGrid reacts to changes in the ObservableCollection it is bound with." />
+    <TextBlock
+    x:Name="DemoCodeFiles"
+    Visibility = "Collapsed"
+    Text="\source\controls\datagrid\DataGridObservableCollection.xaml,
+            \source\controls\datagrid\DataGridObservableCollection.xaml.cs" />
+
+    <cart:DataGrid x:Name="DataGrid1"
+                   Width="800" Height="500"
+                   AllowColumnResizing="True"
+                   AllowColumnReordering="True"
+                   RunningMode="Client"
+                   ColumnResizingMode="Distribute"
+                   PageSize="16">
+      <cart:DataGrid.Columns>
+        <cart:DataGridTextColumn Binding="{Binding FirstName}" Header="First Name" />
+        <cart:DataGridTextColumn Binding="{Binding LastName}" Header="Last Name" />
+        <cart:DataGridTextColumn Binding="{Binding Birthday}" Header="Birthday" FormatString="yyyy/MM/dd" />
+        <cart:DataGridTextColumn Binding="{Binding Occupation}" Header="Occupation" />
+        <cart:DataGridCheckBoxColumn Binding="{Binding IsActive, Mode=TwoWay}" Header="Is Active" />
+      </cart:DataGrid.Columns>
+    </cart:DataGrid>
+
+    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="10">
+      <Button Content="Add a person" Click="AddButton_Click" Margin="10"/>
+      <Button Content="Remove selected person(s)" Click="RemoveButton_Click" Margin="10"/>
+      <Button Content="Clear all" Click="ClearButton_Click" Margin="10"/>
+    </StackPanel> 
+    
+  </Grid>
+</UserControl>

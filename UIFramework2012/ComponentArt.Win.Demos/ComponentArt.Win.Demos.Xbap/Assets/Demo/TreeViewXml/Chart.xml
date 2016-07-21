@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Chart -->
+<TreeView>
+  
+    <TreeViewNode Header="Highlights" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Core Features" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartCoreFeatures" />
+      <TreeViewNode Header="Simple Drill-Down" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="SimpleDrillDown" />
+      <TreeViewNode Header="Range Drill-Down" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="DoubleChartDrilldown" />
+      <TreeViewNode Header="Composite Series" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="CompositeSeries" />
+      <TreeViewNode Header="Range Values" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="RangeValues"  />
+      <TreeViewNode Header="Axis Annotations" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="CustomAxisAnnotation"  />
+    </TreeViewNode>
+  
+    <TreeViewNode Header="Bar and Column Charts" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="3D Rounded Block Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartRoundedBlock"  />
+      <TreeViewNode Header="3D Cylinder Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="CylinderChart3D"  />
+      <TreeViewNode Header="3D Block Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartBlock3D"  />
+      <TreeViewNode Header="2D Rectangle Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartRectangle2D"  />
+      <TreeViewNode Header="Multi-Series Bar Charts" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MultiSeriesBar"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Pie and Doughnut Charts" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="3D Pie Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartPie3D"  />
+      <TreeViewNode Header="3D Doughnut Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartDoughnut3D"  />
+      <TreeViewNode Header="2D Pie Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartPie2D"  />
+      <TreeViewNode Header="2D Doughnut Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartDoughnut2D"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Line and Area Charts" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="3D Area: Smooth" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="AreaSmooth3D"  />
+      <TreeViewNode Header="3D Area: Polygon" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="AreaPolygon3D"  />
+      <TreeViewNode Header="3D Area: Step" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="AreaStep3D"  />
+      <TreeViewNode Header="2D Area: Smooth" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="AreaSmooth2D"  />
+      <TreeViewNode Header="2D Area: Polygon" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="AreaPolygon2D"  />
+      <TreeViewNode Header="2D Area: Step" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="AreaStep2D"  />
+      <TreeViewNode Header="2D Line: Smooth" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="LineSmooth2D"  />
+      <TreeViewNode Header="2D Line: Polygon" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="LinePolygon2D"  />
+      <TreeViewNode Header="2D Line: Step" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="LineStep2D"  />
+      <TreeViewNode Header="2D Lines With Markers" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="Lines2DMarkers"  />
+      <TreeViewNode Header="Multi-Series Area Charts" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MultiSeriesAreas"  />
+      <TreeViewNode Header="Multi-Series Line Charts" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="MultiSeriesLines"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Bubble and Marker Charts" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="3D Bubble Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartBubble3D"  />
+      <TreeViewNode Header="2D Bubble Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartBubble2D"  />
+      <TreeViewNode Header="3D Marker Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartMarker3D"  />
+      <TreeViewNode Header="2D Marker Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartMarker2D"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Financial and Stock Charts" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Open-Low-High-Close Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="OpenLowHighClose"  />
+      <TreeViewNode Header="Candlestick Chart" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="Candlestick"  />
+    </TreeViewNode>
+
+    <TreeViewNode Header="Combination Charts" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+      <TreeViewNode Header="Stacked Bars With Marker Line" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="StackedBarsMarkerLine"  />
+      <TreeViewNode Header="2D Area with Merged Bars" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="Area2DWithMergedBars"  />
+      <TreeViewNode Header="Open-Low-High-Close Chart With Volume" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="OpenLowHighCloseVolume"  />
+      <TreeViewNode Header="Candlestick Chart With Volume" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="CandlestickVolume"  />
+    </TreeViewNode>
+
+  <TreeViewNode Header="Programming" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-features.png" Margin="-2,0,0,0" FontSize="11" FontWeight="SemiBold" FontStretch="Condensed" Padding="0">
+    <TreeViewNode Header="Connecting to a Web Service" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartWebService"  />
+    <TreeViewNode Header="Web Service with WcfServiceDataProvider" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="ChartWcfDataServiceProvider"  />
+    <TreeViewNode Header="Chart Drilldown" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="DrilldownChart"  />
+    <TreeViewNode Header="Custom Legend" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="CustomLegend"  />
+    <TreeViewNode Header="Standalone Legend" IconSource="/ComponentArt.Win.Demos;component/Assets/Demo/TreeViewImages/node-demo.png" FontSize="10"  FontWeight="ExtraLight" Padding="0,1,0,2" Tag="StandaloneLegend"  />
+  </TreeViewNode>
+
+</TreeView>
+<!-- /Chart -->

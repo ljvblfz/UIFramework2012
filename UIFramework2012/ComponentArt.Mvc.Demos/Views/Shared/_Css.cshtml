@@ -1,0 +1,10 @@
+﻿
+@{
+  // Control-specific CSS
+  
+  if (ViewData["ControlCssPath"] != null && ViewData["ControlCssPath"].ToString() != "")
+  {
+    Response.Write("<link href=\"" + (ViewContext.HttpContext.Request.ApplicationPath + ViewData["ControlCssPath"].ToString().Substring(1)).Replace("//", "/") + "\" type=\"text/css\" rel=\"stylesheet\" />");
+  } 
+}
+

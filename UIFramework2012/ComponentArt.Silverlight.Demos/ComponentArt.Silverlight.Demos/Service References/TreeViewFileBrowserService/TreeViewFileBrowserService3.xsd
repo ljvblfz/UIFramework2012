@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ComponentArt.SOA.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SoaTreeViewDeleteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Node" nillable="true" type="tns:SoaTreeViewNode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewDeleteRequest" nillable="true" type="tns:SoaTreeViewDeleteRequest" />
+  <xs:complexType name="SoaTreeViewRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewRequest" nillable="true" type="tns:SoaTreeViewRequest" />
+  <xs:complexType name="SoaTreeViewNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowDrag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AllowDrop" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AllowNodeEditing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CheckBoxMode" type="tns:SoaTreeViewNodeCheckBoxModes" />
+      <xs:element minOccurs="0" name="ExpandedIconSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IconSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="IsChecked" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDisabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsExpanded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsLoadOnDemandEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSelected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfSoaTreeViewNode" />
+      <xs:element minOccurs="0" name="ParentNode" nillable="true" type="tns:SoaTreeViewNode" />
+      <xs:element minOccurs="0" name="ParentTreeView" nillable="true" type="tns:SoaTreeView" />
+      <xs:element minOccurs="0" name="SoaServiceUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewNode" nillable="true" type="tns:SoaTreeViewNode" />
+  <xs:simpleType name="SoaTreeViewNodeCheckBoxModes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="TwoState" />
+      <xs:enumeration value="AutoThreeState" />
+      <xs:enumeration value="UserSelectableThreeState" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SoaTreeViewNodeCheckBoxModes" nillable="true" type="tns:SoaTreeViewNodeCheckBoxModes" />
+  <xs:complexType name="ArrayOfSoaTreeViewNode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SoaTreeViewNode" nillable="true" type="tns:SoaTreeViewNode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSoaTreeViewNode" nillable="true" type="tns:ArrayOfSoaTreeViewNode" />
+  <xs:complexType name="SoaTreeView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowDrag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AllowDrop" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AllowNodeEditing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BaseIconSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CollapseNodeOnSelect" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExpandNodeOnSelect" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExpandSinglePath" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ExpanderClosedIconSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpanderLoadOnDemandIconSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpanderOpenIconSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeaderText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeaderVisibility" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MultiSelect" type="tns:SoaTreeViewMultiSelectModes" />
+      <xs:element minOccurs="0" name="SoaServiceUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaTreeView" nillable="true" type="tns:SoaTreeView" />
+  <xs:simpleType name="SoaTreeViewMultiSelectModes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="ControlClick" />
+      <xs:enumeration value="Click" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SoaTreeViewMultiSelectModes" nillable="true" type="tns:SoaTreeViewMultiSelectModes" />
+  <xs:complexType name="SoaTreeViewDeleteResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewCancelResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewDeleteResponse" nillable="true" type="tns:SoaTreeViewDeleteResponse" />
+  <xs:complexType name="SoaTreeViewCancelResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cancel" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewCancelResponse" nillable="true" type="tns:SoaTreeViewCancelResponse" />
+  <xs:complexType name="SoaTreeViewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tag" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewResponse" nillable="true" type="tns:SoaTreeViewResponse" />
+  <xs:complexType name="SoaTreeViewAddRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Node" nillable="true" type="tns:SoaTreeViewNode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewAddRequest" nillable="true" type="tns:SoaTreeViewAddRequest" />
+  <xs:complexType name="SoaTreeViewAddResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewCancelResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewAddResponse" nillable="true" type="tns:SoaTreeViewAddResponse" />
+  <xs:complexType name="SoaTreeViewGetNodesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ParentNode" nillable="true" type="tns:SoaTreeViewNode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewGetNodesRequest" nillable="true" type="tns:SoaTreeViewGetNodesRequest" />
+  <xs:complexType name="SoaTreeViewGetNodesResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Nodes" nillable="true" type="tns:ArrayOfSoaTreeViewNode" />
+          <xs:element minOccurs="0" name="ParentNode" nillable="true" type="tns:SoaTreeViewNode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewGetNodesResponse" nillable="true" type="tns:SoaTreeViewGetNodesResponse" />
+  <xs:complexType name="SoaTreeViewMoveRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MovedNode" nillable="true" type="tns:SoaTreeViewNode" />
+          <xs:element minOccurs="0" name="OldItemsIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="OldParentNode" nillable="true" type="tns:SoaTreeViewNode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewMoveRequest" nillable="true" type="tns:SoaTreeViewMoveRequest" />
+  <xs:complexType name="SoaTreeViewMoveResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewCancelResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewMoveResponse" nillable="true" type="tns:SoaTreeViewMoveResponse" />
+  <xs:complexType name="SoaTreeViewEditRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EditedNode" nillable="true" type="tns:SoaTreeViewNode" />
+          <xs:element minOccurs="0" name="OldValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewEditRequest" nillable="true" type="tns:SoaTreeViewEditRequest" />
+  <xs:complexType name="SoaTreeViewEditResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SoaTreeViewCancelResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SoaTreeViewEditResponse" nillable="true" type="tns:SoaTreeViewEditResponse" />
+</xs:schema>

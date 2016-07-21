@@ -1,0 +1,74 @@
+<Nodes>
+  <TreeViewNode ID="N0" Text="Mailbox" ImageUrl="root.gif" Expanded="true">
+    <TreeViewNode ID="N1" ImageUrl="calendar.gif" Text="Calendar" />
+    <TreeViewNode ID="N2" Text="Contacts" ImageUrl="contacts.gif" />
+    <TreeViewNode ID="N3" MarginImageUrl="margin_x.gif" Text="Deleted Items" ImageUrl="deleted.gif" UnreadItems="121" ClientTemplateId="UnreadItemsTemplate" Expanded="false" EditingEnabled="false">
+      <TreeViewNode ID="N4" ImageUrl="deletedFolder.gif" Text="Today" CssClass="GrayedTreeNode" />
+      <TreeViewNode ID="N5" ImageUrl="deletedFolder.gif" Text="Last Week" CssClass="GrayedTreeNode" />
+      <TreeViewNode ID="N6" ImageUrl="deletedFolder.gif" Text="Last Month" CssClass="GrayedTreeNode" />
+    </TreeViewNode>
+    <TreeViewNode ID="N7" Text="Drafts" ImageUrl="drafts.gif" />
+    <TreeViewNode ID="N8" MarginImageUrl="margin_flag.gif" Text="Inbox" ImageUrl="inbox.gif" UnreadItems="1" ClientTemplateId="UnreadItemsTemplate" Expanded="false"  EditingEnabled="false">
+      <TreeViewNode ID="N9" Text="ComponentArt">
+        <TreeViewNode ID="N10" MarginImageUrl="margin_flag.gif" Text="Admin" />
+        <TreeViewNode ID="N11" Text="Alpha" />
+        <TreeViewNode ID="N12" Text="Branding" />
+        <TreeViewNode ID="N13" Text="Business Planning" />
+        <TreeViewNode ID="N14" Text="Corporate" />
+        <TreeViewNode ID="N15" Text="Finance" />
+        <TreeViewNode ID="N16" Text="Other" />
+        <TreeViewNode ID="N17" Text="Projects" />
+      </TreeViewNode>
+      <TreeViewNode ID="N18" Text="Personal">
+        <TreeViewNode ID="N19" Text="Admin" />
+        <TreeViewNode ID="N20" Text="Alpha" />
+        <TreeViewNode ID="N21" Text="Branding" />
+        <TreeViewNode ID="N22" MarginImageUrl="margin_clip.gif" Text="Business Planning" />
+        <TreeViewNode ID="N23" Text="Corporate" />
+        <TreeViewNode ID="N24" Text="Finance" />
+        <TreeViewNode ID="N25" Text="Other" />
+        <TreeViewNode ID="N26" MarginImageUrl="margin_flag.gif" Text="Projects" />
+      </TreeViewNode>
+      <TreeViewNode ID="N27" Text="Miscellaneous">
+        <TreeViewNode ID="N28" Text="Admin" />
+        <TreeViewNode ID="N29" Text="Alpha" />
+        <TreeViewNode ID="N30" Text="Branding" />
+        <TreeViewNode ID="N31" Text="Business Planning" />
+        <TreeViewNode ID="N32" Text="Corporate" />
+        <TreeViewNode ID="N33" MarginImageUrl="margin_exclaim.gif" Text="Finance" />
+        <TreeViewNode ID="N34" Text="Other" />
+        <TreeViewNode ID="N35" Text="Projects" />
+      </TreeViewNode>
+    </TreeViewNode>
+    <TreeViewNode ID="N36" MarginImageUrl="margin_down.gif" Text="Junk E-mail" ImageUrl="junk.gif" InfoItems="17" ClientTemplateId="InfoItemsTemplate"  EditingEnabled="false"/>
+    <TreeViewNode ID="N37" MarginImageUrl="margin_exclaim.gif"  Text="Notes" ImageUrl="notes.gif" />
+    <TreeViewNode ID="N38" Text="Outbox" ImageUrl="outbox.gif" />
+    <TreeViewNode ID="N39" Text="Sent Items" ImageUrl="sentItems.gif" />
+    <TreeViewNode ID="N40" MarginImageUrl="margin_up.gif" Text="Tasks" ImageUrl="tasks.gif" />
+    <TreeViewNode ID="N41" Text="Search Folders" ImageUrl="search.gif">
+      <TreeViewNode ID="N42" ImageUrl="searchFolder.gif" Text="For Follow Up" CssClass="GrayedTreeNode" />
+      <TreeViewNode ID="N43" ImageUrl="searchFolder.gif" Text="Large Mail" CssClass="GrayedTreeNode" />
+      <TreeViewNode ID="N44" ImageUrl="searchFolder.gif" Text="Unread Mail" CssClass="GrayedTreeNode" />
+    </TreeViewNode>
+  </TreeViewNode>
+  <TreeViewNode ID="N45" MarginImageUrl="margin_clip.gif" Text="Mailbox - News">
+    <TreeViewNode ID="N46" Text="World" />
+    <TreeViewNode ID="N47" Text="Business" />
+    <TreeViewNode ID="N48" Text="Science" />
+    <TreeViewNode ID="N49" Text="Weather" />
+  </TreeViewNode>
+  <TreeViewNode ID="N50" Text="Mailbox - Support">
+    <TreeViewNode ID="N51" Text="Tech" />
+    <TreeViewNode ID="N52" Text="Clients" />
+    <TreeViewNode ID="N53" Text="Corporate" />
+    <TreeViewNode ID="N54" Text="Misc" />
+  </TreeViewNode>
+  <TreeViewNode ID="N55" Text="Public Folders">
+    <TreeViewNode ID="N56" Text="Sales" />
+    <TreeViewNode ID="N57" Text="Hiring" />
+    <TreeViewNode ID="N58" Text="HR" />
+    <TreeViewNode ID="N59" Text="Projects" />
+    <TreeViewNode ID="N60" Text="Legal" />
+    <TreeViewNode ID="N61" Text="Marketing" />
+  </TreeViewNode>
+</Nodes>

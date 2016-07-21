@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.MenuBoundaryDetection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Navigation;assembly=ComponentArt.Win.UI.Navigation"
+    xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    Width="760" Height="450">
+    <Canvas x:Name="LayoutRoot" VerticalAlignment="Top">
+		<TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="Menu" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="Boundary Detection" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="This demo shows vertical and horizontal boundary detection." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\menu\MenuBoundaryDetection.xaml,
+            \source\controls\menu\MenuBoundaryDetection.xaml.cs"/>
+        <Border x:Name="boundary" Width="0" Height="0" Background="Transparent" >
+            <Rectangle x:Name="thumb" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="20" Height="20" Fill="IndianRed" MouseLeftButtonDown="thumb_MouseLeftButtonDown" MouseLeftButtonUp="thumb_MouseLeftButtonUp"/>
+        </Border>
+        <ComponentArt:Menu x:Name="muDemo"
+                                  Width="730"
+                                  Initialized="muDemo_Initialized"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Top"
+                                  Canvas.ZIndex="3" >
+            <ComponentArt:MenuItem Text="File" IsChecked="False">
+                <ComponentArt:MenuItem Text="New..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/New.png" />
+                <ComponentArt:MenuItem Text="Open..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Open.png"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Send To" >
+                    <ComponentArt:MenuItem Text="Mail Recipient" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Send.png"/>
+                    <ComponentArt:MenuItem Text="Mail Recipient (for Review)..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/RedFlagMail.png"/>
+                    <ComponentArt:MenuItem Text="Mail Recipient (As Attachment)..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Attachment.png"/>
+                    <ComponentArt:MenuItem Text="Routing Recipient..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/ToDoListEnvelope.png"/>
+                    <ComponentArt:MenuItem Text="Exchange Folder..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/StickyPin.png"/>
+                    <ComponentArt:MenuItem IsSeparator="True"/>
+                    <ComponentArt:MenuItem Text="Microsoft Office PowerPoint..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/PaperAndPictures.png"/>
+                </ComponentArt:MenuItem>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Save" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Save.png"/>
+                <ComponentArt:MenuItem Text="Save As" />
+                <ComponentArt:MenuItem Text="Save as Web Page" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/SaveAsWebPage.png"/>
+                <ComponentArt:MenuItem Text="File Search" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/FileSearch.png"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Page Setup..." />
+                <ComponentArt:MenuItem Text="Print Preview" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/PrintPreview.png"/>
+                <ComponentArt:MenuItem Text="Print..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Print.png"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Exit"/>
+            </ComponentArt:MenuItem>
+            <ComponentArt:MenuItem Text="Edit" IsOpened="False">
+                <ComponentArt:MenuItem Text="Cut" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Cut.png"/>
+                <ComponentArt:MenuItem Text="Copy" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Copy.png"/>
+                <ComponentArt:MenuItem Text="Office Clipboard..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/OfficeClipboard.png"/>
+                <ComponentArt:MenuItem Text="Paste" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Paste.png"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Find..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/Find.png"/>
+                <ComponentArt:MenuItem Text="Clear" >
+                    <ComponentArt:MenuItem Text="Formats"/>
+                    <ComponentArt:MenuItem Text="Contents"/>
+                </ComponentArt:MenuItem>
+            </ComponentArt:MenuItem>
+            <ComponentArt:MenuItem Text="View" IsChecked="False">
+                <ComponentArt:MenuItem Text="Normal" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/ViewNormal.png"/>
+                <ComponentArt:MenuItem Text="Web Layout" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/ViewWebLayout.png"/>
+                <ComponentArt:MenuItem Text="Outline" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/ViewOutline.png"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Encoding" >
+                    <ComponentArt:MenuItem Text="Auto Select"/>
+                    <ComponentArt:MenuItem IsSeparator="True"/>
+                    <ComponentArt:MenuItem Text="Western European (Windows)"/>
+                    <ComponentArt:MenuItem Text="Western European (ISO)"/>
+                    <ComponentArt:MenuItem Text="Unicode (UTF-8)"/>
+                    <ComponentArt:MenuItem IsSeparator="True"/>
+                    <ComponentArt:MenuItem Text="More">
+                        <ComponentArt:MenuItem Text="Auto Select"/>
+                        <ComponentArt:MenuItem IsSeparator="True"/>
+                        <ComponentArt:MenuItem Text="Western European (Windows)"/>
+                        <ComponentArt:MenuItem Text="Western European (ISO)"/>
+                        <ComponentArt:MenuItem Text="Unicode (UTF-8)"/>
+                        <ComponentArt:MenuItem IsSeparator="True"/>
+                        <ComponentArt:MenuItem Text="Arabic (ASMO 708)"/>
+                        <ComponentArt:MenuItem Text="Arabic (DOS)"/>
+                        <ComponentArt:MenuItem Text="Arabic (ISO)"/>
+                        <ComponentArt:MenuItem Text="Arabic (Windows)"/>
+                        <ComponentArt:MenuItem Text="Baltic (DOS)"/>
+                        <ComponentArt:MenuItem Text="Baltic (ISO)"/>
+                        <ComponentArt:MenuItem Text="..."/>
+                    </ComponentArt:MenuItem>
+                    <ComponentArt:MenuItem IsSeparator="True"/>
+                    <ComponentArt:MenuItem Text="Left-To-Right Document"/>
+                    <ComponentArt:MenuItem Text="Right-To-Left Document"/>
+                </ComponentArt:MenuItem>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Document Map" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/ViewDocumentMap.png"/>
+                <ComponentArt:MenuItem Text="Thumbnails" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/ViewThumbnails.png"/>
+                <ComponentArt:MenuItem Text="Header and Footer" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/ViewHeaderAndFooter.png"/>
+            </ComponentArt:MenuItem>
+            <ComponentArt:MenuItem Text="Format" IsOpened="False">
+                <ComponentArt:MenuItem Text="Font..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/FormatFont.png"/>
+                <ComponentArt:MenuItem Text="Paragraph..." />
+                <ComponentArt:MenuItem Text="Bullets and Numbering..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/List.png"/>
+                <ComponentArt:MenuItem Text="Borders and Shading..." />
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Frames">
+                    <ComponentArt:MenuItem Text="Table of Contents in Frame" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/TableOfContents.png"/>
+                    <ComponentArt:MenuItem Text="New Frames Page"/>
+                </ComponentArt:MenuItem>
+                <ComponentArt:MenuItem Text="Auto Format..."/>
+                <ComponentArt:MenuItem Text="Styles and Formatting..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/StylesAndFormatting.png"/>
+                <ComponentArt:MenuItem Text="Reveal Formatting..." IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/RevealFormatting.png"/>
+            </ComponentArt:MenuItem>
+            <ComponentArt:MenuItem Text="Help" IsChecked="False">
+                <ComponentArt:MenuItem Text="Microsoft Office Word Help" IconSource="/ComponentArt.Win.Demos;component/Assets/Menu/QuestionMark.png"/>
+                <ComponentArt:MenuItem Text="Show the Office Assistant"/>
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Microsoft Office Online"/>
+                <ComponentArt:MenuItem Text="Contact Us" />
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Word Perfect Help" />
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="Check for Updates" />
+                <ComponentArt:MenuItem Text="Detect and Repair" />
+                <ComponentArt:MenuItem Text="Activate Product..." />
+                <ComponentArt:MenuItem IsSeparator="True"/>
+                <ComponentArt:MenuItem Text="About Microsoft Office Word" />
+            </ComponentArt:MenuItem>
+        </ComponentArt:Menu>
+        <TextBlock Canvas.ZIndex="1" Margin="5,260,0,0" Text="Drag the red square to resize boundaries."/>
+        <CheckBox Canvas.ZIndex="4" x:Name="cb_option" Content="Use native boundaries" Margin="5,278,0,0" Checked="cb_option_Checked" Unchecked="cb_option_Unchecked" IsChecked="false" />
+    </Canvas>
+</UserControl>

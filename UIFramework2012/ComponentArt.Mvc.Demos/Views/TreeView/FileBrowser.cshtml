@@ -1,0 +1,40 @@
+﻿@using ComponentArt.Web.UI
+@{
+  ViewData["DemoTitle"] = "AJAX File Browser";
+  ViewData["DemoType"] = "TreeView";
+  ViewData["CodeFiles"] = "/Views/TreeView/FileBrowser.aspx,/Controllers/TreeViewController.cs,/Controllers/TreeView/FileBrowserController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+  <li>Content of each folder is loaded from the server on demand when the user expands the appropriate node - without reposting the entire page.</li>
+  <li>We use the TreeView's load client-event to automatically load the root node's children.</li>  
+</ul>
+";  
+}
+@section HeadContent {
+  <script type="text/javascript">
+    function TreeView1_onLoad(sender, e)
+    {
+      sender.findNodeById("nDemos").expand();
+    }
+  </script>
+  <link href="@Url.Content("~/Content/TreeView/FileBrowser/treeStyle.css")" rel="stylesheet" type="text/css" />
+}
+@(Html.ComponentArt().TreeView()
+  .ID("TreeView1")
+  .ParentNodeImageUrl("~/Content/TreeView/FileBrowser/images/folder.gif")
+  .LeafNodeImageUrl("~/Content/TreeView/FileBrowser/images/file.gif")
+  .LineImagesFolderUrl("~/Content/TreeView/FileBrowser/images/lines/")
+  .ImagesBaseUrl("~/Content/TreeView/FileBrowser/images/")
+  .Height(410)
+  .Width(360)
+  .CssClass("TreeView")
+  .ShowLines(true)
+  .Nodes(n =>
+  {
+    n.Add().Text("Demos").ContentCallbackUrl("~/TreeView/XmlFromFileSystem/?dir=" + Server.MapPath("~")).ID("nDemos");
+  })
+  .ClientEvents(ce =>
+  {
+    ce.Load("TreeView1_onLoad");
+  })
+)

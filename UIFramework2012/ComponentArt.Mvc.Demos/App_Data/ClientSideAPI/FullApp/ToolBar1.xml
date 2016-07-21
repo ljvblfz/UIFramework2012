@@ -1,0 +1,11 @@
+<SiteMap>
+  <item IconUrl="addroot.gif" ID="AddRootNode" ClientSideCommand="Command_AddTopNode();" ToolTip="Add New Root Node" />
+  <item IconCssClass="cart-icon-custom-addnode" ID="AddChildNode" ClientSideCommand="Command_AddChildNode();" ToolTip="Add New Child Node" />
+  <item ItemType="Separator" />
+  <item IconCssClass="cart-icon-custom-rename" ID="EditNode" ClientSideCommand="Command_EditNode();" ToolTip="Edit Node Text" />
+  <item IconCssClass="cart-icon-custom-delete" ID="RemoveNode" ClientSideCommand="Command_RemoveNode();" ToolTip="Remove Node" />
+  <item ItemType="Separator" />
+  <item IconCssClass="icon-outlook-mailbox" ToolTip="Select Node Icon" ItemType="DropDown" DropDownId="Menu1" ID="SetNodeIcon" />
+  <item ItemType="Separator" />
+  <item IconUrl="properties.gif" ClientSideCommand="Command_TogglePropertyGrid();" ToolTip="Show / Hide Property Grid" />
+</SiteMap>

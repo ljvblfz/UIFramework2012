@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="ComponentArt.Silverlight.Demos.ContextMenuAPIControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Navigation;assembly=ComponentArt.Silverlight.UI.Navigation"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Silverlight.UI;assembly=ComponentArt.Silverlight.UI.Common">
+    <StackPanel x:Name="LayoutRoot"  Width="150">
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ContextMenu" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="ContextMenu API" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Change the X,Y values and click the button to show a context menu at that point." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\contextmenu\ContextMenuAPIControl.xaml,
+            \source\controls\contextmenu\ContextMenuAPIControl.xaml.cs" />
+        <ComponentArt:ContextMenu
+			x:Name="ApiContextMenu"
+			Orientation="Vertical"
+            ShowType="FlyLine"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+            Initialized="ApiContextMenu_Initialized"
+            MenuClick="ApiContextMenu_MenuClick"
+            ContextType="Custom">
+            <ComponentArt:MenuItem Text="New..." IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/New.png" />
+            <ComponentArt:MenuItem Text="Open..." IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/Open.png" />
+            <ComponentArt:MenuItem IsSeparator="True" />
+            <ComponentArt:MenuItem Text="Send To">
+                <ComponentArt:MenuItem Text="Mail Recipient" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/Send.png" />
+                <ComponentArt:MenuItem Text="Mail Recipient (for Review)..." IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/RedFlagMail.png" />
+                <ComponentArt:MenuItem Text="Routing Recipient..." IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/ToDoListEnvelope.png" />
+                <ComponentArt:MenuItem Text="Exchange Folder..." IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/StickyPin.png" />
+                <ComponentArt:MenuItem IsSeparator="True" />
+                <ComponentArt:MenuItem Text="Microsoft PowerPoint..." IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/PaperAndPictures.png" />
+            </ComponentArt:MenuItem>
+            <ComponentArt:MenuItem IsSeparator="True" />
+            <ComponentArt:MenuItem Text="Save" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/Save.png" />
+            <ComponentArt:MenuItem Text="Save As" />
+            <ComponentArt:MenuItem Text="Save as Web Page" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/SaveAsWebPage.png" />
+            <ComponentArt:MenuItem Text="File Search" IconSource="/ComponentArt.Silverlight.Demos;component/Assets/Menu/FileSearch.png" />
+            <ComponentArt:MenuItem IsSeparator="True" />
+            <ComponentArt:MenuItem Text="Exit" />
+        </ComponentArt:ContextMenu>
+
+        <TextBlock>Show at X:</TextBlock>
+        <TextBox InputMethod.IsInputMethodEnabled="True" x:Name="cx" Text="466"/>
+        <TextBlock>Show at Y:</TextBlock>
+        <TextBox InputMethod.IsInputMethodEnabled="True" x:Name="cy" Text="110"/>
+        <Button Margin="0,20,0,0" Content="Show Context Menu" x:Name="ShowButton" Click="ShowButton_Click"/>
+    </StackPanel>
+</UserControl>

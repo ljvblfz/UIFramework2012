@@ -1,0 +1,50 @@
+﻿@using ComponentArt.Web.UI
+
+@{ 
+  ViewData["DemoType"] = "DataGrid";
+  ViewData["DemoTitle"] = "Theme Switching";
+  ViewData["CodeFiles"] = "/Views/DataGrid/ThemeSwitching.aspx,/Controllers/DataGridController.cs,/Controllers/ThemeSwitchingController.cs,/Views/Shared/ThemeSwitchingCss.ascx,/Views/Shared/ThemeSwitchingInterface.ascx";
+  ViewData["AboutText"] = @"
+<ul>
+<li>DataGrid's theming functionality is showcased here, which is activated via its AutoTheming property.</li>
+<li>The changing of the CSS definitions is done by resetting the active stylesheet.</li>
+</ul>
+";  
+}
+
+@section HeadContent {
+  @Html.Partial("~/Views/Shared/_ThemeSwitchingCss.cshtml")
+}
+
+<table>
+  <tr valign="top">
+    <td>@(Html
+  .ComponentArt().DataGrid()
+  .ID("Grid1")
+  .Width(600)
+  .Height(445)
+  .PageSize(13)
+  .ShowHeader(true)
+  .RunningMode(GridRunningMode.Client)
+  .PreExpandOnGroup(true)
+  .GroupingMode(GridGroupingMode.ConstantRows)
+  .AutoTheming(true)
+  .Levels(l =>
+  {
+    l.Add()
+      .Columns(c =>
+      {
+        c.Add().DataField("Subject").Width(300);
+        c.Add().DataField("LastPostDate").DataType(typeof(DateTime)).HeadingText("Received");
+        c.Add().DataField("StartedBy").Width(80);
+        c.Add().DataField("TotalViews").Width(80);
+        c.Add().DataField("PostId").Visible(false);
+      });
+  })
+)
+    </td>
+    <td>
+      @Html.Partial("~/Views/Shared/_ThemeSwitchingInterface.cshtml")
+    </td>
+  </tr>
+</table>

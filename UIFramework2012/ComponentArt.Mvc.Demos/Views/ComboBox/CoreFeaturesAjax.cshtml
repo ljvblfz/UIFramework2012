@@ -1,0 +1,37 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+
+@{ 
+  ViewData["DemoType"] = "ComboBox";
+  ViewData["DemoTitle"] = "Core Features: CallBack Running Mode";
+  ViewData["ControlCssPath"] = "";
+  ViewData["CodeFiles"] = "/Views/ComboBox/CoreFeaturesAjax.aspx,/Controllers/ComboBoxController.cs,/Controllers/ComboBox/CoreFeaturesAjaxController.cs";
+  ViewData["AboutText"] = @"
+<ul>
+<li>This sample demonstrates ComboBox's built-in AJAX functionality.</li>
+<li>Filtering is performed via asynchronous callbacks, with filter info sent in an ComboBoxActionRequest object.</li>
+<li>Additional items are loaded on-demand as the user scrolls to the bottom of the loaded set.</li>
+</ul>
+";   
+}
+
+@section HeadContent {
+  <link href="@Url.Content("~/Content/Themes/Office2010Blue/theme.css")" rel="stylesheet" type="text/css" />
+}
+
+@(Html.ComponentArt().ComboBox()
+	.RunningMode(ComboBoxRunningMode.CallBack)  
+  .ID("ComboBox1")
+  .Width(192)
+  .Height(18)
+  .AutoHighlight(false)
+  .AutoComplete(true)
+  .AutoFilter(true)
+	.AutoTheming(true)   
+  .DataTextField("CountryName")
+  .DataValueField("CountryCode")
+)
+
+
+
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b2d28e40-1fa1-4558-8785-4d3db73d915b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1337/Services/SalesDataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesDataService.wsdl" MetadataType="Wsdl" ID="4d312c09-fee5-4639-bf14-5527c968553d" SourceId="1" SourceUrl="http://localhost:1337/Services/SalesDataService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SalesDataService.xsd" MetadataType="Schema" ID="b034981b-81af-4328-836e-76ffc2f903d3" SourceId="1" SourceUrl="http://localhost:1337/Services/SalesDataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SalesDataService1.xsd" MetadataType="Schema" ID="c4e2149c-75e6-466e-925b-8e072f2760a8" SourceId="1" SourceUrl="http://localhost:1337/Services/SalesDataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SalesDataService1.wsdl" MetadataType="Wsdl" ID="583d7ce0-6655-4f09-8975-66264a493efb" SourceId="1" SourceUrl="http://localhost:1337/Services/SalesDataService.svc?wsdl" />
+    <MetadataFile FileName="SalesDataService2.xsd" MetadataType="Schema" ID="855f41a7-7d18-400e-8ac2-97038f30a743" SourceId="1" SourceUrl="http://localhost:1337/Services/SalesDataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SalesDataService.disco" MetadataType="Disco" ID="78a31aa9-89a9-4dc0-b407-d8c512921a33" SourceId="1" SourceUrl="http://localhost:1337/Services/SalesDataService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

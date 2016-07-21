@@ -1,0 +1,139 @@
+.FolderGrid 
+{ 
+  border: 1px solid #57566F; 
+  border-bottom: 2px solid #57566F; 
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+.FolderGridData
+{
+  border: 0px;
+  height: 337px;
+  background-color: #ffffff;
+}
+
+.FolderGridFooter
+{
+  cursor: default; 
+  padding: 5px;
+  height: 40px;
+  vertical-align: bottom;
+  border: 0px;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.FolderGridFooterText
+{
+  color: #000000;  
+  font-family: verdana; 
+  font-size: 11px;
+}
+
+.FolderGridHeadingRow 
+{ 
+  background-color: #E9E9EB; 
+  background-image: url(folder_grid_images/header_rowBg.gif);   
+}
+
+.FolderGridHeadingCell 
+{ 
+  background-image: url(folder_grid_images/header_bg.gif);   
+  background-color: #E9E9EB; 
+  padding: 0px;
+  padding-left: 5px;
+  border-bottom: 1px solid #6593CF; 
+}
+
+.FolderGridHeadingCellHover
+{ 
+  background-image: url(folder_grid_images/header_hoverBg.gif);   
+  background-color: #F6F6F7; 
+}
+
+.FolderGridHeadingCellActive
+{ 
+  background-image: url(folder_grid_images/header_activeBg.gif);   
+  background-color: #F6F6F7;  
+}
+
+.FolderGridHeadingRow td.FirstHeadingCell
+{ 
+  background-image: url(folder_grid_images/header1stCell_bg.gif); 
+}
+
+.FolderGridHeadingCellText
+{
+  font-family: verdana; 
+  font-size: 11px; 
+  text-align: left;
+  color: #000000;
+  padding-top: 3px;
+  padding-bottom: 2px;
+}
+
+.FolderGridRow 
+{ 
+  background-color: #FFFFFF; 
+  cursor: default;
+}
+
+.FolderGridDataCell 
+{ 
+  padding: 3px; 
+  padding-top: 2px; 
+  padding-bottom: 1px; 
+  border-bottom: 1px solid #E3EFFF; 
+  font-family: verdana; 
+  font-size: 11px;
+  color: #000000;
+} 
+
+.FolderGridSortedDataCell 
+{ 
+  background-color: #F5F5F5; 
+} 
+
+.FolderGridSelectedRow 
+{ 
+  background-color: #A7CDF0; 
+  cursor: default;
+}
+
+.FolderGridSelectedRow td.DataCell 
+{ 
+  background-color: #A7CDF0; 
+  padding: 2px; 
+  padding-left: 3px; 
+  padding-top: 2px; 
+  padding-bottom: 1px; 
+  font-family: verdana; 
+  font-size: 11px;
+  color: #000000;
+  border-bottom: 1px solid #BFDBF5; 
+  border-right: 0px; 
+}
+
+.FolderGridSelectedRow td.FirstDataCell 
+{ 
+  border-left: 1px solid #4B4B6F; 
+  border-right: 0px; 
+  padding-left: 2px; 
+  padding-right: 3px; 
+}
+
+.FolderGridSelectedRow td.LastDataCell 
+{ 
+  border-right: 1px solid #4B4B6F; 
+}
+
+.FolderGridScrollBar
+{
+  background-image: url(folder_grid_images/scroller/scroller_bg.gif); 
+}
+
+.FolderGridScrollGrip
+{
+  background-image: url(folder_grid_images/scroller/scroll_gripBg.gif); 
+}

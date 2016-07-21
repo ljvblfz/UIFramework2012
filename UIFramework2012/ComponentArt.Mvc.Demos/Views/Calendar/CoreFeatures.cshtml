@@ -1,0 +1,79 @@
+﻿@using ComponentArt.Web.UI
+@using System.Web.UI.WebControls
+@{ 
+  ViewData["DemoType"] = "Calendar";
+  ViewData["DemoTitle"] = "Core Features";
+  ViewData["CodeFiles"] = "/Views/Calendar/CoreFeatures.aspx,/Controllers/CalendarController.cs,/Controllers/Calendar/CoreFeaturesController.cs";
+  ViewData["AboutText"] = @"
+  <ul>
+    <li>This demo contains a ComponentArt Calendar instance with customized <b>HeaderClientTemplate</b> and <b>FooterClientTemplate</b>.</li>
+    <li>There is also a ComponentArt Calendar instance set to act as a time picker.</li>
+  </ul>
+";
+}
+@section HeadContent
+{
+  <link href="@Url.Content("~/Content/Calendar/BlackIce/style.css")" rel="stylesheet" type="text/css" />
+}
+Calendar:<br />
+<br />
+@(Html.ComponentArt().Calendar(Model).ID("Calendar1")
+  .AllowMultipleSelection(false)
+  .AllowMonthSelection(true)
+  .AllowWeekSelection(true)
+  .DayNameFormat(DayNameFormat.FirstTwoLetters)
+  .SwapSlide(SlideType.Linear)
+  .SwapDuration(250)
+  .VisibleDate(DateTime.Parse("2007-10-15"))
+  .SelectedDate(DateTime.Parse("2007-10-15"))
+  .ShowCalendarTitle(false)
+  .MonthPadding(0)
+  .CellPadding(0)
+  .Width(300)
+  .Height(150)
+  .CalendarCssClass("cal")
+  .DayCssClass("day")
+  .DayHoverCssClass("day-h")
+  .SelectedDayCssClass("day-s")
+  .SelectedDayHoverCssClass("day-s-h")
+  .OtherMonthDayCssClass("other")
+  .OtherMonthDayHoverCssClass("other-h")
+  .DayHeaderCssClass("day-hdr")
+  .SelectMonthCssClass("select-month")
+  .SelectWeekCssClass("select-week")
+  .SelectMonthText("&curren;")
+  .SelectWeekText("&raquo;")
+  .MonthCssClass("con")
+  .HeaderClientTemplate(@"
+      <div class=""hdr"">
+        <div class=""hdr-d"">
+          <div class=""day"">## Calendar1.formatDate(Calendar1.getSelectedDate(),""ddd"").toUpperCase() ##</div>
+          <div class=""date"">## Calendar1.formatDate(Calendar1.getSelectedDate(),""d"") ##</div>
+        </div>
+        <div class=""hdr-m"">
+          <a href=""javascript:void(0);"" onclick=""Calendar1.goPrevMonth();"" class=""prev"" title=""Previous month""></a>
+          <div class=""month"">## Calendar1.formatDate(Calendar1.get_visibleDate(),""MMMM"").toUpperCase() ##</div>
+          <a href=""javascript:void(0);"" onclick=""Calendar1.goNextMonth();"" class=""next"" title=""Next month""></a>
+        </div>
+        <div class=""hdr-y"">
+          <div class=""year"">## Calendar1.formatDate(Calendar1.get_visibleDate(),""yyyy"") ##</div>
+          <div class=""btns"">
+            <a href=""javascript:void(0);"" onclick=""Calendar1.goNextYear();"" class=""next"" title=""Next year""></a>
+            <a href=""javascript:void(0);"" onclick=""Calendar1.goPrevYear();"" class=""prev"" title=""Previous year""></a>
+          </div>
+        </div>
+      </div>
+  ")
+  .FooterClientTemplate(@"
+  <div class=""ftr""></div>
+  "))
+<br />
+<br />
+Picker:<br />
+<br />
+@(Html.ComponentArt().Calendar(Model).ID("Picker1")
+  .ControlType(CalendarControlType.Picker)
+  .PickerFormat(DateTimeFormatType.Custom)
+  .PickerCustomFormat("h:mm tt")
+  .PickerCssClass("picker")
+)

@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" 
+	xmlns:ComponentArt="clr-namespace:ComponentArt.Silverlight.UI.Layout;assembly=ComponentArt.Silverlight.UI.Layout"
+	xmlns:ComponentArtCommon="clr-namespace:ComponentArt.Silverlight.UI.Utils;assembly=ComponentArt.Silverlight.UI.Common"
+>
+	<!-- BEGIN SPLITTER -->
+	<!--<sys:String x:Key="ComponentArt_Splitter_CollapseArrowLeft">M5,0 L0,3 5,5 M5,10 L0,13 5,15</sys:String>
+    <sys:String x:Key="ComponentArt_Splitter_CollapseArrowRight">M0,0 L5,3 0,5 M0,10 L5,13 0,15</sys:String>
+    <sys:String x:Key="ComponentArt_Splitter_CollapseArrowUp">M0,5 L3,0 5,5 M10,5 L13,0 15,5</sys:String>
+    <sys:String x:Key="ComponentArt_Splitter_CollapseArrowDown">M0,0 L3,5 5,5 M10,0 L13,5 15,0</sys:String>-->
+	<SolidColorBrush x:Key="ComponentArt_Splitter_CollapseArrowForeground" Color="White"/>
+	<!--<Style x:Key="SplitterButtonStyle" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Rectangle Stretch="Fill" Fill="{TemplateBinding Background}"/>
+                        <Border Background="Gray" Opacity="0.5" CornerRadius="4"/>
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="1">-->
+	<!--<Path x:Name="LeftArrow" Data="{StaticResource ComponentArt_Splitter_CollapseArrowLeft}" Fill="{StaticResource ComponentArt_Splitter_CollapseArrowForeground}" Visibility="Collapsed" Stretch="None"/>
+                            <Path x:Name="RightArrow" Data="{StaticResource ComponentArt_Splitter_CollapseArrowRight}" Fill="{StaticResource ComponentArt_Splitter_CollapseArrowForeground}" Visibility="Collapsed" Stretch="None">
+                            </Path>
+                            <Path x:Name="UpArrow" Data="{StaticResource ComponentArt_Splitter_CollapseArrowUp}" Fill="{StaticResource ComponentArt_Splitter_CollapseArrowForeground}" Visibility="Collapsed" Stretch="None">
+                            </Path>
+                            <Path x:Name="DownArrow" Data="{StaticResource ComponentArt_Splitter_CollapseArrowDown}" Fill="{StaticResource ComponentArt_Splitter_CollapseArrowForeground}" Visibility="Collapsed" Stretch="None">
+                            </Path>-->
+	<!--<ContentPresenter/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+	<Style x:Key="ComponentArt_Splitter_SplitterHorizontalButtonStyle" TargetType="Button">
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="Width" Value="50"/>
+		<Setter Property="Height" Value="50"/>
+		<Setter Property="Background" Value="#FF1F3B53"/>
+		<Setter Property="Foreground" Value="#FF000000"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Margin" Value="-1" />
+		<Setter Property="BorderBrush" Value="#7c7c94" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid>
+						<vsm:VisualStateManager.VisualStateGroups>
+							<vsm:VisualStateGroup x:Name="CommonStates">
+								<vsm:VisualState x:Name="Normal"/>
+								<vsm:VisualState x:Name="MouseOver">
+									<Storyboard>
+										<!--
+										<GradientStop Color="#ecf5fe" Offset="0" />
+										<GradientStop Color="#e2f0ff" Offset="0.35" />
+										<GradientStop Color="#caecff" Offset="0.35" />
+										<GradientStop Color="#b5e2ff" Offset="1" />
+										-->
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="BackgroundAnimation" Storyboard.TargetProperty="Opacity">
+											<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+										</DoubleAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#ecf5fe"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#e2f0ff"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#caecff"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#b5e2ff"/>
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Pressed">
+									<Storyboard>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="BackgroundAnimation" Storyboard.TargetProperty="Opacity">
+											<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+										</DoubleAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#c4e4f5"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#c4e4f5"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#afd8f1"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#93c8ed"/>
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Disabled">
+									<Storyboard>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="Opacity">
+											<SplineDoubleKeyFrame KeyTime="0" Value=".55"/>
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+							</vsm:VisualStateGroup>
+							<vsm:VisualStateGroup x:Name="FocusStates">
+								<vsm:VisualState x:Name="Focused">
+									<Storyboard>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="FocusVisualElement" Storyboard.TargetProperty="Opacity">
+											<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Unfocused"/>
+							</vsm:VisualStateGroup>
+						</vsm:VisualStateManager.VisualStateGroups>
+						<Border x:Name="Background" Background="White" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
+							<Grid Margin="1" Background="{TemplateBinding Background}">
+								<Border x:Name="BackgroundAnimation" Opacity="0" Background="#cccccc"/>
+								<Rectangle x:Name="BackgroundGradient">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+											<GradientStop Color="#eaf2fa" Offset="0" />
+											<GradientStop Color="#dcecfd" Offset="0.35" />
+											<GradientStop Color="#c0e5fa" Offset="0.35" />
+											<GradientStop Color="#aad7f4" Offset="1" />
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+							</Grid>
+						</Border>
+						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" x:Name="contentPresenter" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+						<Rectangle x:Name="DisabledVisualElement" IsHitTestVisible="false" Opacity="0" Fill="#FFFFFFFF" RadiusX="2" RadiusY="2"/>
+						<Rectangle Margin="1" x:Name="FocusVisualElement" IsHitTestVisible="false" Opacity="0" Stroke="#45ffffff" StrokeThickness="1" RadiusX="2" RadiusY="2"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ComponentArt_Splitter_SplitterVerticalButtonStyle" TargetType="Button">
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="Width" Value="50"/>
+		<Setter Property="Height" Value="50"/>
+		<Setter Property="Background" Value="#FF1F3B53"/>
+		<Setter Property="Foreground" Value="#FF000000"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Margin" Value="-1" />
+		<Setter Property="BorderBrush" Value="#7c7c94" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Button">
+					<Grid>
+						<vsm:VisualStateManager.VisualStateGroups>
+							<vsm:VisualStateGroup x:Name="CommonStates">
+								<vsm:VisualState x:Name="Normal"/>
+								<vsm:VisualState x:Name="MouseOver">
+									<Storyboard>
+										<!--
+										<GradientStop Color="#ecf5fe" Offset="0" />
+										<GradientStop Color="#e2f0ff" Offset="0.35" />
+										<GradientStop Color="#caecff" Offset="0.35" />
+										<GradientStop Color="#b5e2ff" Offset="1" />
+										-->
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="BackgroundAnimation" Storyboard.TargetProperty="Opacity">
+											<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+										</DoubleAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#ecf5fe"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#e2f0ff"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#caecff"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#b5e2ff"/>
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Pressed">
+									<Storyboard>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="BackgroundAnimation" Storyboard.TargetProperty="Opacity">
+											<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+										</DoubleAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#c4e4f5"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#c4e4f5"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#afd8f1"/>
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Rectangle.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)">
+											<SplineColorKeyFrame KeyTime="0" Value="#93c8ed"/>
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Disabled">
+									<Storyboard>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="Opacity">
+											<SplineDoubleKeyFrame KeyTime="0" Value=".55"/>
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+							</vsm:VisualStateGroup>
+							<vsm:VisualStateGroup x:Name="FocusStates">
+								<vsm:VisualState x:Name="Focused">
+									<Storyboard>
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetName="FocusVisualElement" Storyboard.TargetProperty="Opacity">
+											<SplineDoubleKeyFrame KeyTime="0" Value="1"/>
+										</DoubleAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Unfocused"/>
+							</vsm:VisualStateGroup>
+						</vsm:VisualStateManager.VisualStateGroups>
+						<Border x:Name="Background" Background="White" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
+							<Grid Margin="1" Background="{TemplateBinding Background}">
+								<Border x:Name="BackgroundAnimation" Opacity="0" Background="#cccccc"/>
+								<Rectangle x:Name="BackgroundGradient">
+									<Rectangle.Fill>
+										<LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+											<GradientStop Color="#eaf2fa" Offset="0" />
+											<GradientStop Color="#dcecfd" Offset="0.35" />
+											<GradientStop Color="#c0e5fa" Offset="0.35" />
+											<GradientStop Color="#aad7f4" Offset="1" />
+										</LinearGradientBrush>
+									</Rectangle.Fill>
+								</Rectangle>
+							</Grid>
+						</Border>
+						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" x:Name="contentPresenter" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+						<Rectangle x:Name="DisabledVisualElement" IsHitTestVisible="false" Opacity="0" Fill="#FFFFFFFF" RadiusX="2" RadiusY="2"/>
+						<Rectangle Margin="1" x:Name="FocusVisualElement" IsHitTestVisible="false" Opacity="0" Stroke="#45ffffff" StrokeThickness="1" RadiusX="2" RadiusY="2"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="ComponentArt_Splitter_PreviewStyle" TargetType="Control">
+		<Setter Property="Background" Value="#FF868686"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="Control">
+					<Grid x:Name="Root" Opacity=".5">
+						<!-- Background -->
+						<Rectangle Fill="{TemplateBinding Background}" />
+						<!-- Horizontal Template -->
+						<Grid x:Name="HorizontalTemplate" Height="{TemplateBinding Height}" Visibility="Collapsed">
+							<!-- Just show the faint gray grid splitter rectangle with no other details -->
+						</Grid>
+						<!-- Vertical Template -->
+						<Grid x:Name="VerticalTemplate" Visibility="Collapsed" Width="{TemplateBinding Width}">
+							<!-- Just show the faint gray grid splitter rectangle with no other details -->
+						</Grid>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<SolidColorBrush x:Key="ComponentArt_Splitter_Background" Color="White" Opacity="1"/>
+	<!-- default collapse button arrows -->
+	<DataTemplate x:Key="ComponentArt_Splitter_ButtonContent_LeftArrow">
+		<Path Data="M4,0 L0,5 4,9" Fill="Black" Stretch="None" Margin="1"/>
+	</DataTemplate>
+	<DataTemplate x:Key="ComponentArt_Splitter_ButtonContent_RightArrow">
+		<Path Data="M0,0 L4,5 0,9 Z" Fill="Black" Stretch="None" Margin="1"/>
+	</DataTemplate>
+	<DataTemplate x:Key="ComponentArt_Splitter_ButtonContent_UpArrow">
+		<Path Data="M0,4 L5,0 9,4 Z" Fill="Black" Stretch="None" Margin="1"/>
+	</DataTemplate>
+	<DataTemplate x:Key="ComponentArt_Splitter_ButtonContent_DownArrow">
+		<Path Data="M0,0 L5,4 9,0 Z" Fill="Black" Stretch="None" Margin="1"/>
+	</DataTemplate>
+	<!-- NO THEMING BELOW THIS LINE -->
+	<Style TargetType="ComponentArt:Splitter">
+		<Setter Property="Background" Value="{StaticResource ComponentArt_Splitter_Background}"/>
+		<Setter Property="IsTabStop" Value="True"/>
+		<Setter Property="PreviewStyle" Value="{StaticResource ComponentArt_Splitter_PreviewStyle}"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<!--<Setter Property="CollapseButtonStyle" Value="{StaticResource ComponentArt_Splitter_SplitterButtonStyle}"/>-->
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ComponentArt:Splitter">
+					<Grid x:Name="LayoutRoot" IsHitTestVisible="{TemplateBinding IsEnabled}">
+						<Grid.Resources>
+							<!-- default collapse button arrows -->
+							<ContentControl x:Key="LeftArrow" ContentTemplate="{StaticResource ComponentArt_Splitter_ButtonContent_LeftArrow}"/>
+							<ContentControl x:Key="RightArrow" ContentTemplate="{StaticResource ComponentArt_Splitter_ButtonContent_RightArrow}"/>
+							<ContentControl x:Key="UpArrow" ContentTemplate="{StaticResource ComponentArt_Splitter_ButtonContent_UpArrow}"/>
+							<ContentControl x:Key="DownArrow" ContentTemplate="{StaticResource ComponentArt_Splitter_ButtonContent_DownArrow}"/>
+						</Grid.Resources>
+						<!-- VSM -->
+						<vsm:VisualStateManager.VisualStateGroups>
+							<vsm:VisualStateGroup x:Name="CommonStates">
+								<vsm:VisualState x:Name="Normal" />
+								<vsm:VisualState x:Name="MouseOver" />
+								<vsm:VisualState x:Name="Disabled">
+									<Storyboard>
+										<DoubleAnimation Storyboard.TargetName="Root" Storyboard.TargetProperty="Opacity" To="0.5" Duration="0" />
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="HorizontalCollapseButton" Storyboard.TargetProperty="Enabled" Duration="0">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="False"/>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Storyboard.TargetName="VerticalCollapseButton" Storyboard.TargetProperty="Enabled" Duration="0">
+											<DiscreteObjectKeyFrame KeyTime="0" Value="False"/>
+										</ObjectAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+							</vsm:VisualStateGroup>
+						</vsm:VisualStateManager.VisualStateGroups>
+						<!-- Background -->
+						<Rectangle Fill="{TemplateBinding Background}" StrokeThickness="0" />
+						<!-- Horizontal Template -->
+						<Grid x:Name="HorizontalTemplate">
+							<Button x:Name="HorizontalCollapseButton" Background="{TemplateBinding Background}"
+                                Style="{StaticResource ComponentArt_Splitter_SplitterHorizontalButtonStyle}" Height="{TemplateBinding Height}" IsHitTestVisible="{TemplateBinding IsEnabled}"/>
+						</Grid>
+						<!-- Vertical Template -->
+						<Grid x:Name="VerticalTemplate" Visibility="Collapsed">
+							<Button x:Name="VerticalCollapseButton" Background="{TemplateBinding Background}"
+                                Style="{StaticResource ComponentArt_Splitter_SplitterVerticalButtonStyle}" Width="{TemplateBinding Width}" IsHitTestVisible="{TemplateBinding IsEnabled}"/>
+						</Grid>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!-- END SPLITTER -->
+</ResourceDictionary>

@@ -1,0 +1,193 @@
+﻿<UserControl x:Class="ComponentArt.Win.Demos.ComboBoxCoreFeatures"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:ComponentArt="clr-namespace:ComponentArt.Win.UI.Input;assembly=ComponentArt.Win.UI.Input"
+    xmlns:ComponentArtTheming="clr-namespace:ComponentArt.Win.UI;assembly=ComponentArt.Win.UI.Common"             
+    xmlns:ComponentArtUtils="clr-namespace:ComponentArt.Win.UI.Utils;assembly=ComponentArt.Win.UI.Common"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:basics="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"  
+    xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows" >
+    <Grid x:Name="LayoutRoot" VerticalAlignment="Top">
+        
+        <TextBlock x:Name="DemoCategory" Visibility="Collapsed" Text="ComboBox" />
+        <TextBlock x:Name="DemoTitle" Visibility="Collapsed" Text="ComboBox Core Features" />
+        <TextBlock x:Name="DemoDescription" Visibility="Collapsed" Text="Click on the ComboBox to begin." />
+        <TextBlock 
+            x:Name="DemoCodeFiles" 
+            Visibility = "Collapsed"
+            Text="\source\controls\combobox\ComboBoxCoreFeatures.xaml,
+            \source\controls\combobox\ComboBoxCoreFeatures.xaml.cs"/>
+        
+        <Border Width="800" Height="600" Background="#eeeeee" CornerRadius="3" BorderBrush="#666666" BorderThickness="1"/>
+        
+        <Grid Margin="20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="142"/>
+                <RowDefinition Height="24"/>
+            </Grid.RowDefinitions>
+            
+            <ComponentArt:ComboBox x:Name="MyComboBox" MaxPopupHeight="350" IsResizable="True"
+                                   SelectionChanged="MyComboBox_SelectionChanged">
+                <ComponentArt:ComboBoxItem Text="Abarth" />
+                <ComponentArt:ComboBoxItem Text="Acura" />
+                <ComponentArt:ComboBoxItem Text="Alfa Romeo" />
+                <ComponentArt:ComboBoxItem Text="Alpina" />
+                <ComponentArt:ComboBoxItem Text="AMC" />
+                <ComponentArt:ComboBoxItem Text="ASR" />
+                <ComponentArt:ComboBoxItem Text="Aston Martin" />
+                <ComponentArt:ComboBoxItem Text="Audi" />
+                <ComponentArt:ComboBoxItem Text="Bentley" />
+                <ComponentArt:ComboBoxItem Text="BMW" />
+                <ComponentArt:ComboBoxItem Text="Brilliance" />
+                <ComponentArt:ComboBoxItem Text="Bugatti" />
+                <ComponentArt:ComboBoxItem Text="Buick" />
+                <ComponentArt:ComboBoxItem Text="Cadillac" />
+                <ComponentArt:ComboBoxItem Text="Chery" />
+                <ComponentArt:ComboBoxItem Text="Chevrolet" />
+                <ComponentArt:ComboBoxItem Text="Chrysler" />
+                <ComponentArt:ComboBoxItem Text="Citroën" />
+                <ComponentArt:ComboBoxItem Text="Cizeta" />
+                <ComponentArt:ComboBoxItem Text="Corvette" />
+                <ComponentArt:ComboBoxItem Text="Covini" />
+                <ComponentArt:ComboBoxItem Text="Dacia" />
+                <ComponentArt:ComboBoxItem Text="Daewoo" />
+                <ComponentArt:ComboBoxItem Text="Daihatsu" />
+                <ComponentArt:ComboBoxItem Text="Datsun" />
+                <ComponentArt:ComboBoxItem Text="DKW" />
+                <ComponentArt:ComboBoxItem Text="Dodge" />
+                <ComponentArt:ComboBoxItem Text="Eagle" />
+                <ComponentArt:ComboBoxItem Text="Farbio" />
+                <ComponentArt:ComboBoxItem Text="Ferrari" />
+                <ComponentArt:ComboBoxItem Text="Fiat" />
+                <ComponentArt:ComboBoxItem Text="Fisker" />
+                <ComponentArt:ComboBoxItem Text="Ford" />
+                <ComponentArt:ComboBoxItem Text="Geely" />
+                <ComponentArt:ComboBoxItem Text="Geo" />
+                <ComponentArt:ComboBoxItem Text="GMC" />
+                <ComponentArt:ComboBoxItem Text="Great Wall" />
+                <ComponentArt:ComboBoxItem x:Name="SelectMe" Text="Holden" />
+                <ComponentArt:ComboBoxItem Text="Honda" />
+                <ComponentArt:ComboBoxItem Text="Horch" />
+                <ComponentArt:ComboBoxItem Text="HUMMER" />
+                <ComponentArt:ComboBoxItem Text="Hyundai" />
+                <ComponentArt:ComboBoxItem Text="Infiniti" />
+                <ComponentArt:ComboBoxItem Text="Isuzu" />
+                <ComponentArt:ComboBoxItem Text="Jaguar" />
+                <ComponentArt:ComboBoxItem Text="Jeep" />
+                <ComponentArt:ComboBoxItem Text="Kia" />
+                <ComponentArt:ComboBoxItem Text="Koenigsegg" />
+                <ComponentArt:ComboBoxItem Text="Lada" />
+                <ComponentArt:ComboBoxItem Text="Lamborghini" />
+                <ComponentArt:ComboBoxItem Text="Lancia" />
+                <ComponentArt:ComboBoxItem Text="Land Rover" />
+                <ComponentArt:ComboBoxItem Text="Leblanc" />
+                <ComponentArt:ComboBoxItem Text="Lexus" />
+                <ComponentArt:ComboBoxItem Text="Lincoln" />
+                <ComponentArt:ComboBoxItem Text="Lotus" />
+                <ComponentArt:ComboBoxItem Text="Mahindra and Mahindra" />
+                <ComponentArt:ComboBoxItem Text="Maruti" />
+                <ComponentArt:ComboBoxItem Text="Maserati" />
+                <ComponentArt:ComboBoxItem Text="Maybach" />
+                <ComponentArt:ComboBoxItem Text="Mazda" />
+                <ComponentArt:ComboBoxItem Text="Mercedes-Benz" />
+                <ComponentArt:ComboBoxItem Text="MG" />
+                <ComponentArt:ComboBoxItem Text="MINI" />
+                <ComponentArt:ComboBoxItem Text="Mitsubishi" />
+                <ComponentArt:ComboBoxItem Text="Morgan" />
+                <ComponentArt:ComboBoxItem Text="Moskvich" />
+                <ComponentArt:ComboBoxItem Text="Nanjing" />
+                <ComponentArt:ComboBoxItem Text="Naza" />
+                <ComponentArt:ComboBoxItem Text="Nissan" />
+                <ComponentArt:ComboBoxItem Text="Noble" />
+                <ComponentArt:ComboBoxItem Text="Oldsmobile" />
+                <ComponentArt:ComboBoxItem Text="Opel" />
+                <ComponentArt:ComboBoxItem Text="Pagani" />
+                <ComponentArt:ComboBoxItem Text="Panoz" />
+                <ComponentArt:ComboBoxItem Text="Peugeot" />
+                <ComponentArt:ComboBoxItem Text="Piaggio" />
+                <ComponentArt:ComboBoxItem Text="Plymouth" />
+                <ComponentArt:ComboBoxItem Text="Pontiac" />
+                <ComponentArt:ComboBoxItem Text="Porsche" />
+                <ComponentArt:ComboBoxItem Text="Perodua" />
+                <ComponentArt:ComboBoxItem Text="Proton" />
+                <ComponentArt:ComboBoxItem Text="Rapp Moternwerke" />
+                <ComponentArt:ComboBoxItem Text="Renault" />
+                <ComponentArt:ComboBoxItem Text="Roewe" />
+                <ComponentArt:ComboBoxItem Text="Rolls-Royce" />
+                <ComponentArt:ComboBoxItem Text="Rover" />
+                <ComponentArt:ComboBoxItem Text="Rossion" />
+                <ComponentArt:ComboBoxItem Text="Saab" />
+                <ComponentArt:ComboBoxItem Text="Saturn" />
+                <ComponentArt:ComboBoxItem Text="Scion" />
+                <ComponentArt:ComboBoxItem Text="SEAT" />
+                <ComponentArt:ComboBoxItem Text="Skoda" />
+                <ComponentArt:ComboBoxItem Text="Smart" />
+                <ComponentArt:ComboBoxItem Text="Spyker" />
+                <ComponentArt:ComboBoxItem Text="SsangYong" />
+                <ComponentArt:ComboBoxItem Text="Subaru" />
+                <ComponentArt:ComboBoxItem Text="Suzuki" />
+                <ComponentArt:ComboBoxItem Text="Tata" />
+                <ComponentArt:ComboBoxItem Text="Tesla" />
+                <ComponentArt:ComboBoxItem Text="Toyota" />
+                <ComponentArt:ComboBoxItem Text="Toniq" />
+                <ComponentArt:ComboBoxItem Text="Trabant" />
+                <ComponentArt:ComboBoxItem Text="Vauxhall" />
+                <ComponentArt:ComboBoxItem Text="Vector" />
+                <ComponentArt:ComboBoxItem Text="Venturi" />
+                <ComponentArt:ComboBoxItem Text="Volkswagen" />
+                <ComponentArt:ComboBoxItem Text="Volvo" />
+                <ComponentArt:ComboBoxItem Text="Wanderer" />
+                <ComponentArt:ComboBoxItem Text="Wartburg" />
+                <ComponentArt:ComboBoxItem Text="Westfield" />
+                <ComponentArt:ComboBoxItem Text="Zastava" />
+            </ComponentArt:ComboBox>
+
+            <Border Grid.Column="2" Grid.RowSpan="9">
+                <StackPanel>
+                    <TextBlock FontWeight="Bold" Text="Filtering Type:"/>
+                    <RadioButton IsChecked="True" x:Name="StartsWith" 
+                         Checked="StartsWith_Checked" 
+                         Content="Starts With" GroupName="FilteringType"/>
+                    <RadioButton IsChecked="False" x:Name="Contains" 
+                         Checked="Contains_Checked" 
+                         Content="Contains" GroupName="FilteringType"/>
+                    <TextBlock FontWeight="Bold" Text="String Comparison:" Margin="0,15,0,0" />
+                    <ListBox x:Name="ComparisonType" SelectionChanged="ComparisonType_SelectionChanged" >
+                        <ListBoxItem Content="CurrentCulture" />
+                        <ListBoxItem Content="CurrentCultureIgnoreCase" IsSelected="True" />
+                        <ListBoxItem Content="InvariantCulture" />
+                        <ListBoxItem Content="InvariantCultureIgnoreCase" />
+                        <ListBoxItem Content="Ordinal" />
+                        <ListBoxItem Content="OrdinalIgnoreCase" />
+                    </ListBox>
+                    <CheckBox x:Name="AutoFilter" Content="AutoFilter" IsChecked="True" Checked="AutoFilter_Checked"
+                              Unchecked="AutoFilter_Unchecked" Margin="0,15,0,0"/>
+                    <CheckBox x:Name="AutoComplete" Content="AutoComplete" IsChecked="True" Checked="AutoComplete_Checked"
+                              Unchecked="AutoComplete_Unchecked" Margin="0,15,0,0" IsEnabled="True" />
+                    <CheckBox x:Name="AutoHighlight" Content="AutoHighlight" IsChecked="True" Margin="0,15,0,0"
+                              Checked="AutoHighlight_Checked" Unchecked="AutoHighlight_Unchecked" IsEnabled="True" />
+                    <CheckBox x:Name="IsResizable" Content="IsResizable" IsChecked="True" Margin="0,15,0,0"
+                              Checked="IsResizable_Checked" Unchecked="IsResizable_Unchecked" IsEnabled="True" />
+                    <CheckBox x:Name="IsReadOnly" Content="IsReadOnly" IsChecked="False" Margin="0,15,0,0"
+                              Checked="IsReadOnly_Checked" Unchecked="IsReadOnly_Unchecked" IsEnabled="True" />
+                </StackPanel>
+            </Border>
+        </Grid>
+
+    </Grid>
+</UserControl>
